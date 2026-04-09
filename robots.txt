@@ -1,0 +1,9 @@
+# Widde — robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+
+# Sitemap
+Sitemap: https://widde.io/sitemap.xml
