@@ -1,0 +1,48 @@
+import AnimatedButton from './AnimatedButton'
+
+export default function Problema() {
+  return (
+    <section
+      className="rounded-[20px] px-11 py-10 mt-14 flex gap-12 items-center"
+      style={{ background: '#1A3EAF' }}
+      aria-labelledby="problema-heading"
+    >
+      {/* Left */}
+      <div className="flex-1">
+        <span className="block text-[11px] font-bold text-white/50 uppercase tracking-[2px] mb-3">
+          O problema
+        </span>
+        <h2 id="problema-heading" className="text-[24px] font-black text-white leading-[1.25] mb-[10px]">
+          A experiência online ainda afasta o consumidor
+        </h2>
+        <p className="text-[13px] text-white/55 leading-[1.65] mb-[22px]">
+          Lojas que não investem em experiência perdem vendas todos os dias para o medo, a dúvida e a má apresentação do produto.
+        </p>
+        <AnimatedButton
+          href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+          className="inline-block bg-white text-[#1A3EAF] text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline"
+        >
+          Falar com vendas →
+        </AnimatedButton>
+      </div>
+
+      {/* Numbers */}
+      <div
+        className="flex flex-col border-l border-white/15 pl-10 flex-shrink-0"
+      >
+        <div className="py-[14px]">
+          <div className="text-[36px] font-black text-white leading-none mb-1">84%</div>
+          <div className="text-[12px] text-white/55 leading-[1.4] max-w-[220px]">deixam de comprar por medo do produto não ser como descrito</div>
+        </div>
+        <div className="py-[14px] border-t border-white/15">
+          <div className="text-[36px] font-black text-white leading-none mb-1">65%</div>
+          <div className="text-[12px] text-white/55 leading-[1.4] max-w-[220px]">desistem por más experiências no e-commerce</div>
+        </div>
+        <div className="py-[14px] border-t border-white/15">
+          <div className="text-[36px] font-black text-white leading-none mb-1">2x</div>
+          <div className="text-[12px] text-white/55 leading-[1.4] max-w-[220px]">mais conversão em lojas com vídeo na jornada</div>
+        </div>
+      </div>
+    </section>
+  )
+}
