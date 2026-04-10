@@ -14,7 +14,7 @@ export default function LetterButton({ href, children, className = '', onClick }
   const animate = useCallback((direction: 'in' | 'out') => {
     letterRefs.current.forEach((span, i) => {
       if (!span) return
-      span.style.transition = `transform 0.5s cubic-bezier(0.76,0,0.24,1) ${i * 30}ms`
+      span.style.transition = `transform 0.4s cubic-bezier(0.76,0,0.24,1) ${i * 30}ms`
       span.style.transform = direction === 'out' ? 'translateY(-50%)' : 'translateY(0%)'
     })
   }, [])
