@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2667F8;
+  --color-brand-dark: #1A3EAF;
+  --color-ink: #0A0A0A;
+  --font-sans: 'Lato', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Animação do logo ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Animação do carrossel de integrações */
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-ticker {
+  animation: ticker 90s linear infinite;
+}
+
+@utility animate-scroll-logos {
+  animation: scroll-logos 18s linear infinite;
+}
+
+/* Staggering button char animation */
+.btn-animate-chars [data-button-animate-chars] {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.btn-animate-chars [data-button-animate-chars] span {
+  display: inline-block;
+  position: relative;
+  text-shadow: 0px 1.3em currentColor;
+  transform: translateY(0em) rotate(0.001deg);
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.btn-animate-chars:hover [data-button-animate-chars] span {
+  transform: translateY(-1.3em) rotate(0.001deg);
+}
