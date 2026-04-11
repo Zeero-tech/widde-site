@@ -6,6 +6,159 @@ import { getLenis } from '../lib/lenis'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const solucoes = [
+  {
+    label: 'Video Commerce',
+    elementId: "#video-commerce",
+    tag: 'Produto principal',
+    desc: 'Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="5 3 19 12 5 21 5 3" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Live Commerce',
+    elementId: "#live-commerce",
+    tag: 'Novo',
+    desc: 'Transmissões ao vivo com carrinho em tempo real e engajamento direto',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ overflow: 'visible' }}>
+        <circle cx="12" cy="12" r="2" /><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 7.76a6 6 0 0 0 0 8.49M20.49 3.51a12 12 0 0 1 0 16.97M3.51 3.51a12 12 0 0 0 0 16.97" />
+      </svg>
+    ),
+  },
+  {
+    label: 'TryOn',
+    elementId: "#try-on",
+    tag: 'Novo',
+    desc: 'Experiência de experimentação virtual que elimina a principal objeção de compra',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" />
+      </svg>
+    ),
+  },
+]
+
+function SolucoesDropdown({ onClose }: { onClose: () => void }) {
+  const [hovered, setHovered] = useState(false)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const letterRefs = useRef<HTMLSpanElement[]>([])
+  const label = 'Soluções'
+  const letters = label.split('')
+
+  const animateLetters = useCallback((direction: 'in' | 'out') => {
+    letterRefs.current.forEach((span, i) => {
+      if (!span) return
+      span.style.transition = `transform 0.5s cubic-bezier(0.76,0,0.24,1) ${i * 30}ms`
+      span.style.transform = direction === 'out' ? 'translateY(-50%)' : 'translateY(0%)'
+    })
+  }, [])
+
+  function handleMouseEnter() {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setHovered(true)
+    animateLetters('out')
+  }
+
+  function handleMouseLeave() {
+    timeoutRef.current = setTimeout(() => setHovered(false), 120)
+    animateLetters('in')
+  }
+
+  function handleClick(elementId: string, e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault()
+    onClose()
+    setHovered(false)
+    getLenis().scrollTo(elementId, { duration: 2.4, offset: -70 })
+  }
+
+  return (
+    <div className="relative -top-[3px]" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <a
+        href="#solucoes"
+        onClick={(e) => handleClick('#solucoes', e)}
+        className="text-[16px] text-[#000] no-underline inline-flex"
+      >
+        {letters.map((char, i) => (
+          <span key={i} style={{ display: 'inline-block', overflow: 'hidden', height: '1.2em', verticalAlign: 'middle' }}>
+            <span
+              ref={(el) => { if (el) letterRefs.current[i] = el }}
+              style={{ display: 'flex', flexDirection: 'column', height: '200%' }}
+            >
+              <span style={{ height: '50%', display: 'flex', alignItems: 'center' }}>{char === ' ' ? '\u00A0' : char}</span>
+              <span style={{ height: '50%', display: 'flex', alignItems: 'center' }} aria-hidden="true">{char === ' ' ? '\u00A0' : char}</span>
+            </span>
+          </span>
+        ))}
+      </a>
+
+      {/* Dropdown */}
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          position: 'absolute',
+          top: 'calc(100% + 16px)',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 750,
+          background: '#fff',
+          borderRadius: 18,
+          boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
+          padding: '20px',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          gap: 20,
+          opacity: hovered ? 1 : 0,
+          pointerEvents: hovered ? 'all' : 'none',
+          transition: 'opacity 0.18s ease',
+          zIndex: 100,
+        }}
+      >
+        {solucoes.map((s, i) => (
+          <a
+            key={i}
+            href={s.elementId}
+            onClick={(e) => handleClick(s.elementId, e)}
+            className="no-underline"
+            style={{
+              background: '#f6f6f6',
+              borderRadius: 12,
+              padding: '18px 16px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 10,
+              transition: 'background 0.15s',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#efefef')}
+            onMouseLeave={e => (e.currentTarget.style.background = '#f6f6f6')}
+          >
+            <div style={{ color: '#2667F8', height: 28, display: 'flex', alignItems: 'center' }}>{s.icon}</div>
+            <div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 5, marginBottom: 8, minHeight: 48 }}>
+                <span style={{ fontSize: 14, fontWeight: 800, color: '#000', lineHeight: 1.2 }}>{s.label}</span>
+                {s.tag && (
+                  <span style={{
+                    fontSize: 9, fontWeight: 700, color: '#fff',
+                    background: '#2667F8', borderRadius: 999,
+                    padding: '2px 7px', lineHeight: 1.4,
+                    alignSelf: 'flex-start',
+                  }}>{s.tag}</span>
+                )}
+              </div>
+              <p style={{ fontSize: 12, color: '#666', lineHeight: 1.55, margin: 0 }}>{s.desc}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function NavLink({ href, label, onClose }: { href: string; label: string; onClose: () => void }) {
   const letters = label.split('')
   const letterRefs = useRef<HTMLSpanElement[]>([])
@@ -22,7 +175,7 @@ function NavLink({ href, label, onClose }: { href: string; label: string; onClos
     if (href.includes('http')) return
     e.preventDefault()
     onClose()
-    getLenis().scrollTo(href, { duration: 2.4 })
+    getLenis().scrollTo(href, { duration: 2.4, offset: -50 })
   }
 
   return (
@@ -116,7 +269,7 @@ export default function Nav() {
               z-50
             `}
           >
-            <NavLink href="#solucoes" label="Soluções" onClose={handleNav} />
+            <SolucoesDropdown onClose={handleNav} />
             <NavLink href="https://widde.io/cases" label="Resultados" onClose={handleNav} />
             <NavLink href="#planos" label="Planos" onClose={handleNav} />
             <NavLink href="https://widde.io/blog" label="Blog" onClose={handleNav} />
