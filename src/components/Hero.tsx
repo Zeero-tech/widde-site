@@ -2,7 +2,7 @@ import AnimatedButton from './AnimatedButton'
 
 export default function Hero() {
   return (
-    <section className="bg-white px-8 pt-4 pb-8 max-w-[1440px] mx-auto">
+    <section className="bg-[#f6f6f6] px-8 pt-4 pb-8 max-w-[1440px] mx-auto">
       <div className="flex items-center min-h-[460px] relative">
         {/* Content */}
         <div className="flex-[0_0_52%] pb-15 z-[2]" style={{ paddingBottom: '60px' }}>
@@ -42,7 +42,7 @@ export default function Hero() {
           <div
             className="absolute inset-0 z-[1] pointer-events-none rounded-tl-2xl rounded-tr-2xl"
             style={{
-              background: 'linear-gradient(to right,#fff 0%,transparent 28%),linear-gradient(to bottom,transparent 60%,#fff 100%),linear-gradient(to top,transparent 80%,#fff 100%)',
+              background: 'linear-gradient(to right,#f6f6f6 0%,transparent 28%),linear-gradient(to bottom,transparent 60%,#f6f6f6 100%),linear-gradient(to top,transparent 80%,#f6f6f6 100%)',
             }}
           />
           <video

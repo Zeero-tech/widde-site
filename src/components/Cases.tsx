@@ -32,7 +32,7 @@ export default function Cases() {
               </span>
             </div>
             {/* Body */}
-            <div className="p-4 bg-white">
+            <div className="p-4 bg-[#f6f6f6]">
               <p className="text-[13px] font-bold text-black mb-[6px] leading-[1.4]">{c.title}</p>
               <p className="text-[12px] text-[#888] leading-[1.5] mb-[14px]">{c.desc}</p>
               <a
