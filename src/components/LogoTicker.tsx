@@ -5,7 +5,7 @@ export default function LogoTicker() {
 
   return (
     <section
-      className="bg-white py-7 overflow-hidden border-t border-b border-[#E9E9E9]"
+      className="bg-[#f6f6f6] py-7 overflow-hidden border-t border-b border-[#E9E9E9]"
       aria-label="Marcas que usam Widde"
     >
       <div className="flex">

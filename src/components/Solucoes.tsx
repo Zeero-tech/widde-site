@@ -13,7 +13,7 @@ export default function Solucoes() {
       <div className="flex flex-col gap-4">
 
         {/* VIDEO COMMERCE */}
-        <article className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-white min-h-[320px]">
+        <article className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
           <div className="flex-1 p-10 flex flex-col justify-center">
             <span className="inline-block bg-brand/10 text-brand text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-[14px]">
               Produto principal
@@ -74,7 +74,7 @@ export default function Solucoes() {
         </article>
 
         {/* LIVE COMMERCE */}
-        <article className="flex flex-row-reverse rounded-2xl overflow-hidden border border-[#E9E9E9] bg-white min-h-[320px]">
+        <article className="flex flex-row-reverse rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
           <div className="flex-1 p-10 flex flex-col justify-center">
             <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-[14px]">
               Novo
@@ -134,7 +134,7 @@ export default function Solucoes() {
         </article>
 
         {/* TRYON */}
-        <article className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-white min-h-[320px]">
+        <article className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
           <div className="flex-1 p-10 flex flex-col justify-center">
             <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-[14px]">
               Novo

@@ -19,6 +19,7 @@ function NavLink({ href, label, onClose }: { href: string; label: string; onClos
   }, [])
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (href.includes('http')) return
     e.preventDefault()
     onClose()
     getLenis().scrollTo(href, { duration: 2.4 })
@@ -49,6 +50,15 @@ function NavLink({ href, label, onClose }: { href: string; label: string; onClos
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 0)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     ScrollTrigger.defaults({ markers: false })
@@ -70,9 +80,12 @@ export default function Nav() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white sticky">
-      <div className="px-8 max-w-[1440px] mx-auto">
-        <nav className="flex justify-between items-center p-3 relative">
+    <header
+      className="sticky top-0 z-50 transition-colors duration-300"
+      style={{ backgroundColor: scrolled ? '#ffffff' : '#f6f6f6' }}
+    >
+      <div className="px-8 max-w-[1440px] mx-auto ">
+        <nav className="flex justify-between items-center p-3 relative min-h-[4.5rem]">
           <a href="/" aria-current="page" className="no-underline flex items-center text-black" style={{ overflow: 'hidden', display: 'inline-flex' }} onClick={(e) => { e.preventDefault(); getLenis().scrollTo(0, { duration: 2 }) }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 159 39" fill="none" style={{ overflow: 'hidden', display: 'block' }} stroke="currentColor" strokeWidth="1" strokeLinejoin="round" paintOrder="stroke fill">
               <path className="logo-path" d="M19.8154 0.0253654H25.6846C25.7097 0.0883317 25.7634 0.124069 25.812 0.161508C25.9847 0.294248 26.0987 0.46613 26.1524 0.682257C26.6639 2.73633 27.177 4.78869 27.6884 6.84105C28.4581 9.9247 29.2278 13.0067 29.9992 16.0903C30.8041 19.3101 31.609 22.5299 32.4139 25.7514C32.4357 25.8399 32.4626 25.9301 32.4944 26.0152C32.5229 26.0883 32.5649 26.1649 32.6554 26.1615C32.7493 26.1581 32.7778 26.0781 32.798 25.9999C32.8483 25.8007 32.8986 25.6016 32.9472 25.4025C33.841 21.7011 34.7348 18.0014 35.6286 14.3C36.4502 10.8947 37.2736 7.48944 38.0969 4.08415C38.3703 2.95586 38.6453 1.82927 38.9153 0.699275C38.979 0.42869 39.0947 0.209159 39.363 0.100244C39.3915 0.0883317 39.4116 0.0525941 39.4351 0.0270672C41.335 0.0270672 43.2366 0.0270672 45.1366 0.0270672C45.1634 0.0594012 45.1835 0.101946 45.2187 0.122367C45.4501 0.263616 45.5088 0.461024 45.4501 0.7231C45.3613 1.11622 45.2489 1.50423 45.15 1.89394C44.3635 4.99461 43.5787 8.09527 42.7973 11.196C41.4323 16.6094 40.0707 22.0245 38.709 27.4379C37.8035 31.0338 36.9013 34.6296 35.9991 38.2255C35.9321 38.4927 35.8465 38.7412 35.595 38.8926C35.5564 38.9148 35.533 38.9505 35.538 38.9982H29.7108C29.7158 38.9488 29.6873 38.9165 29.6487 38.896C29.4106 38.7718 29.2999 38.5591 29.2429 38.3072C29.1775 38.0179 29.1172 37.7252 29.0484 37.4376C27.9182 32.7509 26.7863 28.0658 25.6544 23.3808C24.7421 19.6028 23.8266 15.8265 22.911 12.0503C22.8825 11.9311 22.8858 11.7609 22.7248 11.7575C22.5555 11.7541 22.5655 11.9311 22.5387 12.0468C22.0993 13.9205 21.665 15.7959 21.229 17.6713C20.4191 21.16 19.6075 24.6486 18.7992 28.1373C18.0178 31.5171 17.2397 34.8968 16.4583 38.2749C16.4029 38.5165 16.3359 38.7565 16.0944 38.8926C15.9787 38.959 16.1078 38.9641 16.1296 38.9965H10.4281C10.4466 38.9658 10.4684 38.9267 10.4332 38.9012C10.1548 38.7054 10.0894 38.394 10.0106 38.0945C9.49246 36.1459 8.97933 34.1957 8.46284 32.2454C7.0576 26.9375 5.65069 21.6296 4.24712 16.3218C2.86872 11.1313 1.49869 5.9391 0.125309 0.746925C0.10854 0.685661 0.125309 0.595466 0.028048 0.578448C0.028048 0.394654 -0.0423816 0.141087 0.0481708 0.0474887C0.13537 -0.0444082 0.388581 0.0253654 0.569686 0.0253654C2.51321 0.0253654 4.45674 0.0253654 6.40026 0.0253654C6.40026 0.0747174 6.42877 0.101946 6.46901 0.124069C6.70042 0.253405 6.80775 0.462726 6.86979 0.716293C7.49527 3.26729 8.12914 5.81487 8.7563 8.36416C10.1883 14.1775 11.6187 19.9925 13.0491 25.8076C13.0626 25.862 13.076 25.9182 13.0961 25.9709C13.1212 26.039 13.1581 26.1037 13.242 26.102C13.3191 26.102 13.3493 26.0373 13.3677 25.9777C13.4063 25.8569 13.4415 25.7344 13.4717 25.6101C13.8943 23.813 14.3152 22.0143 14.7378 20.2155C15.4001 17.4041 16.0625 14.5944 16.7249 11.7831C17.565 8.22121 18.4035 4.65935 19.2419 1.0975C19.3392 0.685661 19.3895 0.253405 19.8154 0.0236636V0.0253654Z" fill="currentColor" />
@@ -104,9 +117,9 @@ export default function Nav() {
             `}
           >
             <NavLink href="#solucoes" label="Soluções" onClose={handleNav} />
-            <NavLink href="#cases" label="Resultados" onClose={handleNav} />
+            <NavLink href="https://widde.io/cases" label="Resultados" onClose={handleNav} />
             <NavLink href="#planos" label="Planos" onClose={handleNav} />
-            <NavLink href="#blog" label="Blog" onClose={handleNav} />
+            <NavLink href="https://widde.io/blog" label="Blog" onClose={handleNav} />
           </div>
 
           <LetterButton

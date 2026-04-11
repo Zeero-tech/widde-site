@@ -20,7 +20,7 @@ export default function Planos() {
       <div className="grid gap-4" style={{ gridTemplateColumns: '1fr 2fr' }}>
 
         {/* Starter */}
-        <article className="bg-[#F5F5F5] border border-[#E9E9E9] rounded-[18px] p-7 relative">
+        <article className="bg-[#f6f6f6] border border-[#E9E9E9] rounded-[18px] p-7 relative">
           <span className="block text-[10px] font-bold text-brand uppercase tracking-[1px] mb-[10px]">Starter</span>
           <h3 className="text-[16px] font-black text-black mb-[6px]">Starter</h3>
           <div className="text-[32px] font-black text-black mb-1 leading-none">
@@ -44,7 +44,7 @@ export default function Planos() {
           </ul>
           <AnimatedButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block bg-[#F5F5F5] text-black text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
+            className="inline-block bg-[#f6f6f6] text-black text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
           >
             Começar agora
           </AnimatedButton>
