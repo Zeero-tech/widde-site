@@ -42,7 +42,7 @@
 }
 
 @utility animate-scroll-logos {
-  animation: scroll-logos 18s linear infinite;
+  animation: scroll-logos 60s linear infinite;
 }
 
 /* Staggering button char animation */

@@ -2,7 +2,7 @@ import AnimatedButton from "./AnimatedButton";
 
 export default function Solucoes() {
   return (
-    <section id="solucoes" className="pt-14" aria-labelledby="sol-heading">
+    <section id="solucoes" className="pt-30" aria-labelledby="sol-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         O que a Widde faz
       </span>
