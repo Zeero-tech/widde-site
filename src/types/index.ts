@@ -23,4 +23,5 @@ export interface IntegrationLogo {
 export interface TickerLogo {
   name: string
   url: string
+  img?: string
 }

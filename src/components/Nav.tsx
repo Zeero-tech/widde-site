@@ -10,7 +10,7 @@ const solucoes = [
   {
     label: 'Video Commerce',
     elementId: "#video-commerce",
-    tag: 'Produto principal',
+    tag: null,
     desc: 'Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -113,8 +113,9 @@ function SolucoesDropdown({ onClose }: { onClose: () => void }) {
           gridTemplateColumns: '1fr 1fr 1fr',
           gap: 20,
           opacity: hovered ? 1 : 0,
+          transform: hovered ? 'translateX(-50%) translateY(0px)' : 'translateX(-50%) translateY(-8px)',
           pointerEvents: hovered ? 'all' : 'none',
-          transition: 'opacity 0.18s ease',
+          transition: 'opacity 0.22s ease, transform 0.22s cubic-bezier(0.16,1,0.3,1)',
           zIndex: 100,
         }}
       >

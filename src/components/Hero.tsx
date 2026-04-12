@@ -2,11 +2,12 @@ import AnimatedButton from './AnimatedButton'
 
 export default function Hero() {
   return (
-    <section className="bg-[#f6f6f6] overflow-hidden" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <section className="bg-[#f6f6f6] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 72px)' }}>
+
       <div className="max-w-[1440px] mx-auto px-8 h-full flex items-center" style={{ minHeight: 'inherit' }}>
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
           {/* Content */}
-          <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(40vh)' }}>
+          <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(20vh)' }}>
             <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-5">
               Plataforma de conversão para e-commerce
             </span>
@@ -64,6 +65,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
     </section>
   )
 }
