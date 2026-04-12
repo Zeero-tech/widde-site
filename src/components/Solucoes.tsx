@@ -3,10 +3,10 @@ import AnimatedButton from './AnimatedButton'
 export default function Solucoes() {
   return (
     <section id="solucoes" className="pt-14" aria-labelledby="sol-heading">
-      <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-[10px]">
+      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         O que a Widde faz
       </span>
-      <h2 id="sol-heading" className="text-[28px] font-black text-black leading-[1.25] mb-10">
+      <h2 id="sol-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-10">
         Conheça nossas soluções
       </h2>
 
@@ -15,9 +15,6 @@ export default function Solucoes() {
         {/* VIDEO COMMERCE */}
         <article id="video-commerce" className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
           <div className="flex-1 p-10 flex flex-col justify-center">
-            <span className="inline-block bg-brand/10 text-brand text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-[14px]">
-              Produto principal
-            </span>
             <h3 className="text-[22px] font-black text-black mb-[10px] leading-[1.2]">Video Commerce</h3>
             <p className="text-[13px] text-[#666] leading-[1.65] mb-6">
               Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce. O consumidor descobre, confia e compra sem sair da sua loja.
