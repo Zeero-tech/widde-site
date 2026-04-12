@@ -4,10 +4,10 @@ import AnimatedButton from './AnimatedButton'
 export default function Cases() {
   return (
     <section id="cases" className="pt-14" aria-labelledby="cases-heading">
-      <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-[10px]">
+      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         Resultados reais
       </span>
-      <h2 id="cases-heading" className="text-[28px] font-black text-black leading-[1.25] mb-2">
+      <h2 id="cases-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-2">
         Quem usa já converte mais
       </h2>
       <p className="text-[14px] text-[#666] leading-[1.6] max-w-[520px] mb-8">

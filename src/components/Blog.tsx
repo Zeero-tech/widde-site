@@ -3,10 +3,10 @@ import { blogPosts } from '@/data/blog'
 export default function Blog() {
   return (
     <section id="blog" className="pt-14" aria-labelledby="blog-heading">
-      <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-3">
+      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
         Conteúdo
       </span>
-      <h2 id="blog-heading" className="text-[28px] font-black text-black leading-[1.25] mb-6">
+      <h2 id="blog-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-6">
         Conheça nosso blog
       </h2>
 

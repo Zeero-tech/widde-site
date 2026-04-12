@@ -103,7 +103,6 @@ function SolucoesDropdown({ onClose }: { onClose: () => void }) {
           position: 'absolute',
           top: 'calc(100% + 16px)',
           left: '50%',
-          transform: 'translateX(-50%)',
           width: 750,
           background: '#fff',
           borderRadius: 18,

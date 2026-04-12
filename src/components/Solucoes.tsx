@@ -1,4 +1,4 @@
-import AnimatedButton from './AnimatedButton'
+import AnimatedButton from "./AnimatedButton";
 
 export default function Solucoes() {
   return (
@@ -6,43 +6,16 @@ export default function Solucoes() {
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         O que a Widde faz
       </span>
-      <h2 id="sol-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-10">
+      <h2 id="sol-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-16">
         Conheça nossas soluções
       </h2>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-24">
 
         {/* VIDEO COMMERCE */}
-        <article id="video-commerce" className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
-          <div className="flex-1 p-10 flex flex-col justify-center">
-            <h3 className="text-[22px] font-black text-black mb-[10px] leading-[1.2]">Video Commerce</h3>
-            <p className="text-[13px] text-[#666] leading-[1.65] mb-6">
-              Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce. O consumidor descobre, confia e compra sem sair da sua loja.
-            </p>
-            <div className="flex border-t border-[#E9E9E9] pt-5 mt-1">
-              <div className="flex-1 pr-4">
-                <div className="text-[28px] font-black text-black leading-none mb-1">
-                  <span className="text-brand">3x</span>
-                </div>
-                <div className="text-[11px] text-[#888] leading-[1.4]">Mais tempo na página com vídeo</div>
-              </div>
-              <div className="flex-1 border-l border-[#E9E9E9] pl-4">
-                <div className="text-[28px] font-black text-black leading-none mb-1">
-                  <span className="text-brand">+40%</span>
-                </div>
-                <div className="text-[11px] text-[#888] leading-[1.4]">Taxa de adição ao carrinho</div>
-              </div>
-            </div>
-            <AnimatedButton
-              href="#"
-              className="inline-block bg-brand text-white text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline w-fit mt-5"
-            >
-              Saiba mais →
-            </AnimatedButton>
-          </div>
-
-          {/* Mock Video Commerce */}
-          <div className="w-[48%] bg-[#F5F5F5] flex items-center justify-center overflow-hidden" aria-hidden="true">
+        <article id="video-commerce" className="flex gap-16 items-center">
+          {/* Visual */}
+          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[320px]" aria-hidden="true">
             <div className="p-6 flex flex-col gap-2 w-full">
               <div className="flex gap-[7px] justify-center items-end">
                 <div className="rounded-[10px] bg-brand/25 relative overflow-hidden flex-shrink-0 w-[54px] h-[96px]">
@@ -68,38 +41,41 @@ export default function Solucoes() {
               </div>
             </div>
           </div>
+
+          {/* Content */}
+          <div className="flex flex-col">
+            <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Video Commerce</h3>
+            <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mb-8 max-w-[460px]">
+              Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce. O consumidor descobre, confia e compra sem sair da sua loja.
+            </p>
+            <div className="flex gap-8 mb-8">
+              <div className="flex flex-col gap-1">
+                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">3x</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais tempo na página com vídeo</span>
+              </div>
+              <div className="w-px bg-[#E9E9E9]" />
+              <div className="flex flex-col gap-1">
+                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">+40%</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Taxa de adição ao carrinho</span>
+              </div>
+            </div>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 text-[14px] font-bold text-[#010b15] no-underline w-fit py-[11px] rounded-full hover:border-black transition-colors"
+            >
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                <path d="M8.11667 6H0V4.66667H8.11667L4.38333 0.933333L5.33333 0L10.6667 5.33333L5.33333 10.6667L4.38333 9.73333L8.11667 6Z" fill="black" />
+              </svg>
+            </a>
+          </div>
         </article>
 
         {/* LIVE COMMERCE */}
-        <article id="live-commerce" className="flex flex-row-reverse rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
-          <div className="flex-1 p-10 flex flex-col justify-center">
-            <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-[14px]">
-              Novo
-            </span>
-            <h3 className="text-[22px] font-black text-black mb-[10px] leading-[1.2]">Live Commerce</h3>
-            <p className="text-[13px] text-[#666] leading-[1.65] mb-6">
-              Transmissões ao vivo com carrinho em tempo real e engajamento direto dentro da sua loja. O consumidor assiste, interage e compra sem sair do site.
-            </p>
-            <div className="flex border-t border-[#E9E9E9] pt-5 mt-1">
-              <div className="flex-1 pr-4">
-                <div className="text-[28px] font-black text-black leading-none mb-1">
-                  <span className="text-brand">5x</span>
-                </div>
-                <div className="text-[11px] text-[#888] leading-[1.4]">Maior engajamento em lives vs. redes sociais</div>
-              </div>
-              <div className="flex-1 border-l border-[#E9E9E9] pl-4">
-                <div className="text-[28px] font-black text-black leading-none mb-1">
-                  <span className="text-brand">+60%</span>
-                </div>
-                <div className="text-[11px] text-[#888] leading-[1.4]">Conversão em sessões com live ativa</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mock Live Commerce */}
-          <div className="w-[48%] bg-[#0A0A0A] flex items-center justify-center overflow-hidden" aria-hidden="true">
+        <article id="live-commerce" className="flex flex-row-reverse gap-16 items-center">
+          {/* Visual */}
+          <div className="w-[48%] flex-shrink-0 bg-[#1a1a1a] rounded-2xl flex items-center justify-center overflow-hidden min-h-[320px]" aria-hidden="true">
             <div className="flex items-end gap-[10px] p-5">
-              {/* Screen */}
               <div className="w-[110px] h-[196px] rounded-[14px] bg-[#0A0A0A] overflow-hidden relative flex-shrink-0">
                 <div className="absolute inset-0 opacity-75" style={{ background: 'linear-gradient(160deg,#003AB9,#2667F8)' }} />
                 <span className="absolute top-[9px] left-[9px] bg-[#FF3B30] text-white text-[8px] font-black px-[7px] py-[2px] rounded-full">AO VIVO</span>
@@ -112,7 +88,6 @@ export default function Solucoes() {
                   Adicionar ao carrinho
                 </div>
               </div>
-              {/* Info */}
               <div className="flex flex-col gap-[7px]">
                 <div className="bg-white/90 border border-[#eee] rounded-[8px] p-2 flex items-center gap-[7px]">
                   <div className="w-[30px] h-[30px] rounded-[5px] bg-brand/20 flex-shrink-0" />
@@ -128,38 +103,35 @@ export default function Solucoes() {
               </div>
             </div>
           </div>
-        </article>
 
-        {/* TRYON */}
-        <article id="try-on" className="flex rounded-2xl overflow-hidden border border-[#E9E9E9] bg-[#f6f6f6] min-h-[320px]">
-          <div className="flex-1 p-10 flex flex-col justify-center">
-            <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-[14px]">
+          {/* Content */}
+          <div className="flex flex-col">
+            <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
               Novo
             </span>
-            <h3 className="text-[22px] font-black text-black mb-[10px] leading-[1.2]">TryOn</h3>
-            <p className="text-[13px] text-[#666] leading-[1.65] mb-6">
-              Experiência de experimentação virtual que elimina a principal objeção de compra. O consumidor visualiza como o produto fica antes de decidir — sem sair do site.
+            <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Live Commerce</h3>
+            <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mb-8 max-w-[460px]">
+              Transmissões ao vivo com carrinho em tempo real e engajamento direto dentro da sua loja. O consumidor assiste, interage e compra sem sair do site.
             </p>
-            <div className="flex border-t border-[#E9E9E9] pt-5 mt-1">
-              <div className="flex-1 pr-4">
-                <div className="text-[28px] font-black text-black leading-none mb-1">
-                  <span className="text-brand">708%</span>
-                </div>
-                <div className="text-[11px] text-[#888] leading-[1.4]">ROI com TryOn (Cajubrasil)</div>
+            <div className="flex gap-8 mb-8">
+              <div className="flex flex-col gap-1">
+                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">5x</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior engajamento em lives vs. redes sociais</span>
               </div>
-              <div className="flex-1 border-l border-[#E9E9E9] pl-4">
-                <div className="text-[28px] font-black text-black leading-none mb-1">
-                  <span className="text-brand">-35%</span>
-                </div>
-                <div className="text-[11px] text-[#888] leading-[1.4]">Redução na taxa de devolução</div>
+              <div className="w-px bg-[#E9E9E9]" />
+              <div className="flex flex-col gap-1">
+                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">+60%</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Conversão em sessões com live ativa</span>
               </div>
             </div>
           </div>
+        </article>
 
-          {/* Mock TryOn */}
-          <div className="w-[48%] bg-[#F5F5F5] flex items-center justify-center overflow-hidden" aria-hidden="true">
+        {/* TRYON */}
+        <article id="try-on" className="flex gap-16 items-center">
+          {/* Visual */}
+          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[320px]" aria-hidden="true">
             <div className="flex gap-[10px] p-5 items-end">
-              {/* Phone */}
               <div className="w-[100px] h-[188px] rounded-2xl bg-brand/[0.08] border border-brand/20 overflow-hidden flex flex-col flex-shrink-0">
                 <div className="flex-1 relative" style={{ background: 'linear-gradient(160deg,rgba(38,103,248,0.25),rgba(0,58,185,0.15))' }}>
                   <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[44px] h-[76px] bg-brand/30 rounded-t-[7px]" />
@@ -171,11 +143,32 @@ export default function Solucoes() {
                   <div className="w-[14px] h-[14px] rounded-full" style={{ background: '#2C2C2C' }} />
                 </div>
               </div>
-              {/* Panel */}
               <div className="flex flex-col gap-[6px]">
                 <div className="w-[56px] h-[56px] rounded-[9px] bg-brand/[0.15] border border-brand" />
                 <div className="w-[56px] h-[56px] rounded-[9px] bg-brand/[0.07] border border-brand/15" />
                 <div className="w-[56px] h-[56px] rounded-[9px] bg-brand/[0.07] border border-brand/15" />
+              </div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col">
+            <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
+              Novo
+            </span>
+            <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">TryOn</h3>
+            <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mb-8 max-w-[460px]">
+              Experiência de experimentação virtual que elimina a principal objeção de compra. O consumidor visualiza como o produto fica antes de decidir — sem sair do site.
+            </p>
+            <div className="flex gap-8 mb-8">
+              <div className="flex flex-col gap-1">
+                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">708%</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">ROI com TryOn (Cajubrasil)</span>
+              </div>
+              <div className="w-px bg-[#E9E9E9]" />
+              <div className="flex flex-col gap-1">
+                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">-35%</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Redução na taxa de devolução</span>
               </div>
             </div>
           </div>

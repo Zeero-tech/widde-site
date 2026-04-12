@@ -6,8 +6,8 @@ export default function Planos() {
       {/* Header */}
       <div className="flex justify-between items-end mb-7 flex-wrap gap-3">
         <div>
-          <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-3">Planos</span>
-          <h2 id="planos-heading" className="text-[28px] font-black text-black leading-[1.25]">
+          <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">Planos</span>
+          <h2 id="planos-heading" className="text-[28px] font-normal text-black leading-[1.25]">
             Escolha como começar
           </h2>
         </div>
