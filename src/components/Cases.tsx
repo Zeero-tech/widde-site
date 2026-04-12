@@ -3,14 +3,14 @@ import AnimatedButton from './AnimatedButton'
 
 export default function Cases() {
   return (
-    <section id="cases" className="pt-14" aria-labelledby="cases-heading">
+    <section id="cases" className="pt-30" aria-labelledby="cases-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         Resultados reais
       </span>
       <h2 id="cases-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-2">
         Quem usa já converte mais
       </h2>
-      <p className="text-[14px] text-[#666] leading-[1.6] max-w-[520px] mb-8">
+      <p className="text-[14px] text-[#5d5d5d] leading-[1.6] max-w-[520px] mb-8">
         Cases de marcas que transformaram a experiência de compra com a Widde.
       </p>
 
@@ -19,7 +19,7 @@ export default function Cases() {
           <div
             key={i}
             role="listitem"
-            className="rounded-[14px] overflow-hidden border border-[#E9E9E9] cursor-pointer transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+            className="rounded-[14px] overflow-hidden cursor-pointer transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
           >
             {/* Thumbnail */}
             <div
@@ -33,11 +33,11 @@ export default function Cases() {
             </div>
             {/* Body */}
             <div className="p-4 bg-[#f6f6f6]">
-              <p className="text-[13px] font-bold text-black mb-[6px] leading-[1.4]">{c.title}</p>
-              <p className="text-[12px] text-[#888] leading-[1.5] mb-[14px]">{c.desc}</p>
+              <p className="text-[16px] font-normal text-[#1d1d1d] mb-[6px] leading-[1.4]">{c.title}</p>
+              <p className="text-[14px] text-[#5d5d5d] leading-[1.5] mb-[14px]">{c.desc}</p>
               <a
                 href={c.link}
-                className="text-[12px] font-bold text-brand no-underline flex items-center gap-1 hover:underline"
+                className="text-[14px] font-bold text-[#010b15] no-underline flex items-center gap-1 hover:underline"
               >
                 Saiba mais →
               </a>

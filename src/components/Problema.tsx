@@ -3,7 +3,7 @@ import AnimatedButton from './AnimatedButton'
 export default function Problema() {
   return (
     <section
-      className="rounded-[20px] px-11 py-10 mt-14 flex gap-12 items-center"
+      className="rounded-[20px] px-16 py-20 flex gap-20 items-center"
       style={{ background: '#003ab9ff' }}
       aria-labelledby="problema-heading"
     >
@@ -30,16 +30,16 @@ export default function Problema() {
       <div
         className="flex flex-col border-l border-white/15 pl-10 flex-shrink-0"
       >
-        <div className="py-[14px]">
-          <div className="text-[36px] font-normal text-white leading-none mb-1">84%</div>
+        <div className="py-6">
+          <div className="text-[40px] font-normal text-white leading-none mb-2">84%</div>
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">deixam de comprar por medo do produto não ser como descrito</div>
         </div>
-        <div className="py-[14px] border-t border-white/15">
-          <div className="text-[36px] font-normal text-white leading-none mb-1">65%</div>
+        <div className="py-6 border-t border-white/15">
+          <div className="text-[40px] font-normal text-white leading-none mb-2">65%</div>
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">desistem por más experiências no e-commerce</div>
         </div>
-        <div className="py-[14px] border-t border-white/15">
-          <div className="text-[36px] font-normal text-white leading-none mb-1">2x</div>
+        <div className="py-6 border-t border-white/15">
+          <div className="text-[40px] font-normal text-white leading-none mb-2">2x</div>
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">mais conversão em lojas com vídeo na jornada</div>
         </div>
       </div>
