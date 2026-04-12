@@ -3,6 +3,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import LogoTicker from '@/components/LogoTicker'
 import Solucoes from '@/components/Solucoes'
+import Demo from '@/components/Demo'
 import Problema from '@/components/Problema'
 import Cases from '@/components/Cases'
 import Integracoes from '@/components/Integracoes'
@@ -22,6 +23,7 @@ export default function App() {
       <LogoTicker />
       <main className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20">
         <Solucoes />
+        <Demo />
         <Problema />
         <Cases />
         <Integracoes />

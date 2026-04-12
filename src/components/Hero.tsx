@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="max-w-[1440px] mx-auto px-8 h-full flex items-center" style={{ minHeight: 'inherit' }}>
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
           {/* Content */}
-          <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(20vh)' }}>
+          <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
             <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-5">
               Plataforma de conversão para e-commerce
             </span>
@@ -64,6 +64,17 @@ export default function Hero() {
             </video>
           </div>
         </div>
+      </div>
+
+      {/* Double chevron — bottom center of left half */}
+      <div
+        className="absolute bottom-10 z-10"
+        style={{ left: '25%', transform: 'translateX(-50%)' }}
+        aria-hidden="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style={{ width: 28, height: 28, fill: '#1a1a2e', opacity: 0.4 }}>
+          <path d="M342.6 534.6C330.1 547.1 309.8 547.1 297.3 534.6L137.3 374.6C124.8 362.1 124.8 341.8 137.3 329.3C149.8 316.8 170.1 316.8 182.6 329.3L320 466.7L457.4 329.4C469.9 316.9 490.2 316.9 502.7 329.4C515.2 341.9 515.2 362.2 502.7 374.7L342.7 534.7zM502.6 182.6L342.6 342.6C330.1 355.1 309.8 355.1 297.3 342.6L137.3 182.6C124.8 170.1 124.8 149.8 137.3 137.3C149.8 124.8 170.1 124.8 182.6 137.3L320 274.7L457.4 137.4C469.9 124.9 490.2 124.9 502.7 137.4C515.2 149.9 515.2 170.2 502.7 182.7z" />
+        </svg>
       </div>
 
     </section>
