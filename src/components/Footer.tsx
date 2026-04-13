@@ -35,7 +35,7 @@ export default function Footer() {
         }
       `}</style>
 
-      <div className="px-8 max-w-[1440px] mx-auto pt-20 pb-10">
+      <div className="px-8 max-w-[1440px] mx-auto pt-40 pb-10">
 
         {/* Top: logo + socials */}
         <div className="flex justify-between items-start mb-12">
