@@ -11,6 +11,7 @@ const solucoes = [
   {
     label: 'Video Commerce',
     elementId: "#video-commerce",
+    href: '/video-commerce',
     tag: null,
     desc: 'Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce',
     icon: (
@@ -43,7 +44,7 @@ const solucoes = [
   },
 ]
 
-function SolucoesDropdown({ onClose }: { onClose: () => void }) {
+function SolucoesDropdown({ onClose, navigate, location }: { onClose: () => void; navigate: ReturnType<typeof useNavigate>; location: ReturnType<typeof useLocation> }) {
   const [hovered, setHovered] = useState(false)
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const letterRefs = useRef<HTMLSpanElement[]>([])
@@ -69,11 +70,19 @@ function SolucoesDropdown({ onClose }: { onClose: () => void }) {
     animateLetters('in')
   }
 
-  function handleClick(elementId: string, e: React.MouseEvent<HTMLAnchorElement>) {
+  function handleClick(elementId: string, e: React.MouseEvent<HTMLAnchorElement>, href?: string) {
     e.preventDefault()
     onClose()
     setHovered(false)
-    getLenis().scrollTo(elementId, { duration: 3, offset: -70, easing: (t) => 1 - Math.pow(1 - t, 5) })
+    if (href) {
+      window.location.href = href
+      return
+    }
+    if (location.pathname !== '/') {
+      navigate(`/?scrollTo=${elementId.replace('#', '')}`)
+    } else {
+      getLenis().scrollTo(elementId, { duration: 3, offset: -70, easing: (t) => 1 - Math.pow(1 - t, 5) })
+    }
   }
 
   return (
@@ -81,7 +90,7 @@ function SolucoesDropdown({ onClose }: { onClose: () => void }) {
       <a
         href="#solucoes"
         onClick={(e) => handleClick('#solucoes', e)}
-        className="text-[16px] text-[#000] no-underline inline-flex"
+        className="text-[16px] text-[#000] no-underline inline-flex items-center"
       >
         {letters.map((char, i) => (
           <span key={i} style={{ display: 'inline-block', overflow: 'hidden', height: '1.2em', verticalAlign: 'middle' }}>
@@ -94,6 +103,18 @@ function SolucoesDropdown({ onClose }: { onClose: () => void }) {
             </span>
           </span>
         ))}
+        <svg
+          className='ml-1'
+          width="12" height="12" viewBox="0 0 12 12" fill="none"
+          aria-hidden="true"
+          style={{
+            transition: 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1)',
+            transform: hovered ? 'rotate(180deg)' : 'rotate(0deg)',
+            flexShrink: 0,
+          }}
+        >
+          <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </a>
 
       {/* Dropdown */}
@@ -122,8 +143,8 @@ function SolucoesDropdown({ onClose }: { onClose: () => void }) {
         {solucoes.map((s, i) => (
           <a
             key={i}
-            href={s.elementId}
-            onClick={(e) => handleClick(s.elementId, e)}
+            href={(s as any).href ?? s.elementId}
+            onClick={(e) => handleClick(s.elementId, e, (s as any).href)}
             className="no-underline"
             style={{
               background: '#f6f6f6',
@@ -272,7 +293,7 @@ export default function Nav() {
               z-50
             `}
           >
-            <SolucoesDropdown onClose={handleNav} />
+            <SolucoesDropdown onClose={handleNav} navigate={navigate} location={location} />
             <NavLink href="https://widde.io/cases" label="Resultados" onClose={handleNav} />
             <NavLink href="#planos" label="Planos" onClose={handleNav} />
             <NavLink href="https://widde.io/blog" label="Blog" onClose={handleNav} />

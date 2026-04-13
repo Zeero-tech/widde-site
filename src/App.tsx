@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route, useSearchParams } from 'react-router-dom'
 import { useLenis } from '@/lib/useLenis'
 import { getLenis } from '@/lib/lenis'
+import { useRevealOnScroll } from '@/hooks/useRevealOnScroll'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import LogoTicker from '@/components/LogoTicker'
@@ -19,6 +20,7 @@ import VideoCommerce from '@/pages/VideoCommerce'
 
 function Home() {
   useLenis()
+  useRevealOnScroll()
   const [searchParams, setSearchParams] = useSearchParams()
 
   useEffect(() => {
@@ -36,14 +38,14 @@ function Home() {
       <Nav />
       <Hero />
       <LogoTicker />
-      <main className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20">
-        <Solucoes />
-        <Demo />
-        <Problema />
-        <Cases />
-        <Integracoes />
-        <Planos />
-        <Blog />
+      <main className="max-w-[1740px] mx-auto px-5 md:px-10 lg:px-20">
+        <div data-reveal><Solucoes /></div>
+        <div data-reveal><Demo /></div>
+        <div data-reveal><Problema /></div>
+        <div data-reveal><Cases /></div>
+        <div data-reveal><Integracoes /></div>
+        <div data-reveal><Planos /></div>
+        <div data-reveal><Blog /></div>
       </main>
       <CtaFullWidth />
       <Newsletter />

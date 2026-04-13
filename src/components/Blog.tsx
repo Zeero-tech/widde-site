@@ -23,7 +23,7 @@ export default function Blog() {
             style={{ display: 'grid', gridRow: 'span 5', gridTemplateRows: 'subgrid', rowGap: '4px' }}
           >
             <div
-              className="w-full h-[180px] relative"
+              className="w-full h-[220px] relative"
               style={post.image ? {} : { background: post.bg }}
             >
               {post.image && (

@@ -24,7 +24,7 @@ export default function Cases() {
           >
             {/* Thumbnail */}
             <div
-              className="w-full h-[240px] relative flex items-end"
+              className="w-full h-[290px] relative flex items-end"
               style={c.image ? {} : { background: c.bg }}
             >
               {c.image && (

@@ -5,7 +5,7 @@ export default function Problema() {
   return (
     <section
       className="rounded-[20px] px-16 py-20 flex gap-20 items-center"
-      style={{ background: '#003ab9ff' }}
+      style={{ background: '#000' }}
       aria-labelledby="problema-heading"
     >
       {/* Left */}
@@ -21,7 +21,7 @@ export default function Problema() {
         </p>
         <AnimatedButton
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-          className="inline-block bg-white text-[#1A3EAF] text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline"
+          className="inline-block bg-white text-[#1D1D1D] text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline"
         >
           Falar com vendas →
         </AnimatedButton>
