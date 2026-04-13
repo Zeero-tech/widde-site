@@ -4,7 +4,7 @@ const formatos = [
     desc: 'Conteúdo vertical em tela cheia. Alta imersão e engajamento — o formato que o consumidor já conhece.',
     onde: ['Home', 'PDP'],
     thumb: (
-      <div className="h-[150px] flex items-center justify-center bg-gradient-to-br from-[#EEF3FF] to-[#C8D9FF]">
+      <div className="h-[190px] flex items-center justify-center bg-gradient-to-br from-[#EEF3FF] to-[#C8D9FF]">
         <div className="flex flex-col items-center gap-2">
           <div className="flex gap-[6px]">
             {[1, 2, 3].map((n) => (
@@ -30,7 +30,7 @@ const formatos = [
     desc: 'Mostre múltiplos produtos em sequência. O visitante descobre mais itens sem sair da página.',
     onde: ['Home', 'Categorias'],
     thumb: (
-      <div className="h-[150px] flex items-center justify-center bg-gradient-to-br from-[#E0F2FE] to-[#BAE6FD]">
+      <div className="h-[190px] flex items-center justify-center bg-gradient-to-br from-[#E0F2FE] to-[#BAE6FD]">
         <div className="flex gap-1 items-end px-3">
           <div className="w-[32px] h-[58px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(14,165,233,0.25)' }} />
           <div className="w-[42px] h-[78px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(14,165,233,0.25)' }} />
@@ -46,7 +46,7 @@ const formatos = [
     desc: 'Feed estilo rede social para campanhas, lançamentos e coleções. Imersivo e direto.',
     onde: ['Home', 'Categorias'],
     thumb: (
-      <div className="h-[150px] flex items-center justify-center bg-gradient-to-br from-[#EFF6FF] to-[#BFDBFE]">
+      <div className="h-[190px] flex items-center justify-center bg-gradient-to-br from-[#EFF6FF] to-[#BFDBFE]">
         <div className="flex flex-col gap-[6px] px-3 w-full">
           <div className="rounded-lg h-[60px] flex items-center px-[10px]" style={{ background: '#3B82F6' }}>
             <span className="text-[10px] font-black text-white">Festival Jaquetas · R$ 99</span>
@@ -65,7 +65,7 @@ const formatos = [
     desc: 'Vídeos organizados por tema na PDP — modo de uso, materiais, looks. O cliente tira todas as objeções antes de comprar.',
     onde: ['PDP'],
     thumb: (
-      <div className="h-[150px] flex items-center justify-center bg-gradient-to-br from-[#EEF2FF] to-[#C7D2FE]">
+      <div className="h-[190px] flex items-center justify-center bg-gradient-to-br from-[#EEF2FF] to-[#C7D2FE]">
         <div className="flex flex-col gap-[6px] px-[10px] py-[10px] w-full">
           <div className="flex gap-2">
             <div className="w-[60px] h-[80px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(99,102,241,0.25)' }} />
@@ -90,7 +90,7 @@ const formatos = [
     desc: 'Página 100% dedicada a vídeos — o TikTok da sua loja. Máximo engajamento e descoberta de produtos.',
     onde: ['Página exclusiva'],
     thumb: (
-      <div className="h-[150px] bg-gradient-to-br from-[#E8F0FF] to-[#B8CCFF] px-[10px] py-[8px] flex flex-col gap-[4px]">
+      <div className="h-[190px] bg-gradient-to-br from-[#E8F0FF] to-[#B8CCFF] px-[10px] py-[8px] flex flex-col gap-[4px]">
         {/* Search bar */}
         <div className="rounded-full h-[10px] w-full" style={{ background: 'rgba(38,103,248,0.12)' }} />
         {/* Tags */}

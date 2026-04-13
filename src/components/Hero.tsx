@@ -24,15 +24,18 @@ export default function Hero() {
       <div className="max-w-full mx-auto px-30 h-full flex items-center" style={{ minHeight: 'inherit' }}>
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
           {/* Content */}
-          <div ref={contentRef} className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
+          <div ref={contentRef} className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
             <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-5">
-              Plataforma de conversão para e-commerce
+              A experiência do físico para o online
             </span>
             <h1 className="text-[48px] font-black leading-[1.15] mb-6 text-black">
-              Acelere a decisão de compra<br />do seu <span className="text-brand">consumidor.</span>
+              Impulsione as vendas gerando confiança na experiência do <span className="text-brand">consumidor.</span>
             </h1>
-            <p className="text-[15px] text-[#666] leading-[1.7] mb-10 max-w-[420px]">
-              Transformamos a jornada de compra com experiências que convencem — não apenas informam. Somos o parceiro que dita a tendência.
+            <p className="text-[14px] text-[#666] leading-[1.7] mb-1 max-w-[620px]">
+              Se o consumidor não entender o valor do seu produto, ele vai comprar em outro lugar.
+            </p>
+            <p className="font-bold text-[14px] text-[#666] leading-[1.7] mb-10 max-w-[620px]">
+              Por isso, com a Widde você ajuda o visitante a sentir, entender, escolher e comprar no seu site.
             </p>
             <div className="flex gap-3 flex-wrap">
               <AnimatedButton
@@ -46,7 +49,7 @@ export default function Hero() {
                 onClick={handleVerDemo}
                 className="inline-block bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
-                Ver demonstração
+                Conhecer mais
               </AnimatedButton>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Solucoes() {
         {/* VIDEO COMMERCE */}
         <article id="video-commerce" className="flex gap-16 items-center">
           {/* Visual */}
-          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[320px]" aria-hidden="true">
+          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
             <div className="p-6 flex flex-col gap-2 w-full">
               <div className="flex gap-[7px] justify-center items-end">
                 <div className="rounded-[10px] bg-brand/25 relative overflow-hidden flex-shrink-0 w-[54px] h-[96px]">
@@ -49,7 +49,7 @@ export default function Solucoes() {
             <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mb-8 max-w-[460px]">
               Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce. O consumidor descobre, confia e compra sem sair da sua loja.
             </p>
-            <div className="flex gap-8 mb-8">
+            <div className="flex gap-8 mb-10">
               <div className="flex flex-col gap-1">
                 <CountUp target={3} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais tempo na página com vídeo</span>
@@ -62,7 +62,7 @@ export default function Solucoes() {
             </div>
             <a
               href="/video-commerce"
-              className="inline-flex items-center gap-2 text-[14px] font-bold text-[#010b15] no-underline w-fit py-[11px] rounded-full hover:border-black transition-colors"
+              className="inline-flex items-center gap-2 text-[14px] font-bold text-[#010b15] no-underline w-fit px-7 py-[11px] border border-black/20 rounded-full hover:border-black transition-colors"
             >
               Saiba mais
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
@@ -75,13 +75,13 @@ export default function Solucoes() {
         {/* LIVE COMMERCE */}
         <article id="live-commerce" className="flex flex-row-reverse gap-16 items-center">
           {/* Visual */}
-          <div className="w-[48%] flex-shrink-0 bg-[#1a1a1a] rounded-2xl flex items-center justify-center overflow-hidden min-h-[320px]" aria-hidden="true">
+          <div className="w-[48%] flex-shrink-0 bg-[#1a1a1a] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
             <div className="flex items-end gap-[10px] p-5">
               <div className="w-[110px] h-[196px] rounded-[14px] bg-[#0A0A0A] overflow-hidden relative flex-shrink-0">
                 <div className="absolute inset-0 opacity-75" style={{ background: 'linear-gradient(160deg,#003AB9,#2667F8)' }} />
                 <span className="absolute top-[9px] left-[9px] bg-[#FF3B30] text-white text-[8px] font-black px-[7px] py-[2px] rounded-full">AO VIVO</span>
                 <span className="absolute top-[9px] right-[9px] bg-black/50 text-white text-[8px] font-bold px-[6px] py-[2px] rounded-full">1.2k</span>
-                <div className="absolute bottom-[38px] left-[6px] right-[6px] flex flex-col gap-[3px]">
+                <div className="absolute bottom-[55px] left-[6px] right-[6px] flex flex-col gap-[3px]">
                   <div className="bg-black/50 rounded-[6px] px-[6px] py-[3px] text-[8px] text-white">Ana: qual o tamanho? 👀</div>
                   <div className="bg-black/50 rounded-[6px] px-[6px] py-[3px] text-[8px] text-white">Carol: amei essa peça!</div>
                 </div>
@@ -107,7 +107,7 @@ export default function Solucoes() {
 
           {/* Content */}
           <div className="flex flex-col">
-            <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
+            <span className="inline-block bg-[#1D1D1D] text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
               Novo
             </span>
             <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Live Commerce</h3>
@@ -131,7 +131,7 @@ export default function Solucoes() {
         {/* TRYON */}
         <article id="try-on" className="flex gap-16 items-center">
           {/* Visual */}
-          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[320px]" aria-hidden="true">
+          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
             <div className="flex gap-[10px] p-5 items-end">
               <div className="w-[100px] h-[188px] rounded-2xl bg-brand/[0.08] border border-brand/20 overflow-hidden flex flex-col flex-shrink-0">
                 <div className="flex-1 relative" style={{ background: 'linear-gradient(160deg,rgba(38,103,248,0.25),rgba(0,58,185,0.15))' }}>
@@ -154,7 +154,7 @@ export default function Solucoes() {
 
           {/* Content */}
           <div className="flex flex-col">
-            <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
+            <span className="inline-block bg-[#1D1D1D] text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
               Novo
             </span>
             <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">TryOn</h3>

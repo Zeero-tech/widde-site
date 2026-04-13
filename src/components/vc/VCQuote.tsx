@@ -19,8 +19,8 @@ export default function VCQuote() {
       </div>
 
       {/* Right: phone mock with video */}
-      <div className="flex-shrink-0 w-[300px] mx-auto">
-        <div className="relative rounded-[24px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)] w-[240px]" style={{ aspectRatio: '9/16' }}>
+      <div className="flex-shrink-0 w-[340px] mx-auto">
+        <div className="relative rounded-[24px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)] w-[280px]" style={{ aspectRatio: '9/16' }}>
           <video
             className="w-full h-full object-cover"
             autoPlay

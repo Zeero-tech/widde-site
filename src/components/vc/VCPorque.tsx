@@ -8,14 +8,14 @@ const stats = [
 
 export default function VCPorque() {
   return (
-    <div className="bg-[#0A0A0A] rounded-[20px] px-25 py-30 my-30">
+    <div className="bg-[#003ab9] rounded-[20px] px-25 py-30 my-30">
       {/* Top row: title left, paragraph right */}
       <div className="grid grid-cols-2 gap-14 mb-16">
         <div>
           <span className="block text-[11px] font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
             Por que video commerce
           </span>
-          <h2 className="text-[28px] font-normal text-white leading-[1.25]">
+          <h2 className="text-[26px] font-normal text-white leading-[1.25]">
             Vídeo é o formato que mais converte no e-commerce
           </h2>
         </div>

@@ -20,7 +20,7 @@ export default function Planos() {
       <div className="grid gap-4" style={{ gridTemplateColumns: '1fr 2fr' }}>
 
         {/* Starter */}
-        <article className="bg-[#f6f6f6] border border-[#E9E9E9] rounded-[18px] p-7 relative">
+        <article className="bg-[#f6f6f6] border border-[#E9E9E9] rounded-[18px] p-9 relative">
           <h3 className="text-[18px] font-normal text-black mb-[6px]">Starter</h3>
           <div className="text-[32px] font-normal text-black mb-1 leading-none">
             R$399<sub className="text-[14px] font-normal text-[#888]">/mês</sub>
@@ -50,7 +50,7 @@ export default function Planos() {
         </article>
 
         {/* Pro */}
-        <article className="bg-[#0A0A0A] border border-[#0A0A0A] rounded-[18px] p-7 relative overflow-visible">
+        <article className="bg-[#0A0A0A] border border-[#0A0A0A] rounded-[18px] p-9 relative overflow-visible">
           {/* Decorative SVG circles */}
           <svg
             className="absolute top-7 right-7 opacity-20"

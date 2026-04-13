@@ -35,7 +35,7 @@ export default function VCCta() {
             className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
           >
             <span data-button-animate-chars="" className="btn-animate-chars__text">
-              {'Ver Demonstração'.split('').map((char, i) => (
+              {'Conhecer mais'.split('').map((char, i) => (
                 <span key={i} style={{ transitionDelay: `${(i * 0.01).toFixed(2)}s`, whiteSpace: char === ' ' ? 'pre' : undefined }}>{char}</span>
               ))}
             </span>
