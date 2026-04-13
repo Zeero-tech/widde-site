@@ -60,7 +60,7 @@ export default function Solucoes() {
               </div>
             </div>
             <a
-              href="#"
+              href="/solucoes/video-commerce"
               className="inline-flex items-center gap-2 text-[14px] font-bold text-[#010b15] no-underline w-fit py-[11px] rounded-full hover:border-black transition-colors"
             >
               Saiba mais
