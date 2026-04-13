@@ -25,6 +25,22 @@
   }
 }
 
+/* Widde circle */
+.widde-cicle {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  inset: -60px -60px auto auto;
+}
+
+.widde-cicle.is--large {
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
+  inset: auto -80px -60px auto;
+}
+
 /* Animação do logo ticker */
 @keyframes ticker {
   0% { transform: translateX(0); }
