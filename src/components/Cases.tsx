@@ -16,37 +16,38 @@ export default function Cases() {
 
       <div className="grid grid-cols-3 gap-[18px]" role="list">
         {cases.map((c, i) => (
-          <div
+          <a
             key={i}
+            href={c.link}
             role="listitem"
-            className="rounded-[14px] overflow-hidden cursor-pointer transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+            className="rounded-[14px] overflow-hidden cursor-pointer flex flex-col no-underline transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.13)]"
           >
             {/* Thumbnail */}
             <div
-              className="w-full h-[180px] relative flex items-end"
-              style={{ background: c.bg }}
+              className="w-full h-[240px] relative flex items-end"
+              style={c.image ? {} : { background: c.bg }}
             >
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg,rgba(0,0,0,0.55) 0%,transparent 60%)' }} />
+              {c.image && (
+                <img src={c.image} alt={c.title} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              )}
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(5deg,rgba(0,0,0,1) 0%,rgba(0,0,0, 0.9) 20%,transparent 50%)' }} />
               <span className="relative z-[1] text-[10px] font-bold text-white uppercase tracking-[1px] px-4 pb-[14px]">
                 {c.category}
               </span>
             </div>
             {/* Body */}
-            <div className="p-4 bg-[#f6f6f6]">
+            <div className="p-4 bg-[#f6f6f6] flex flex-col flex-1">
               <p className="text-[16px] font-normal text-[#1d1d1d] mb-[6px] leading-[1.4]">{c.title}</p>
-              <p className="text-[14px] text-[#5d5d5d] leading-[1.5] mb-[14px]">{c.desc}</p>
-              <a
-                href={c.link}
-                className="text-[14px] font-bold text-[#010b15] no-underline flex items-center gap-1 hover:underline"
-              >
+              <p className="text-[14px] text-[#5d5d5d] leading-[1.5] mb-[14px] flex-1">{c.desc}</p>
+              <span className="text-[14px] font-bold text-[#010b15] flex items-center gap-1">
                 Saiba mais →
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 
-      <div className="text-center mt-7">
+      <div className="text-center mt-15">
         <AnimatedButton
           href="https://widde.io/cases?utm_medium=cpc&utm_source=google&utm_campaign=01"
           className="inline-block bg-transparent text-black text-[13px] font-bold px-[26px] py-[11px] rounded-full no-underline border-[1.5px] border-black hover:bg-black hover:text-white transition-colors"

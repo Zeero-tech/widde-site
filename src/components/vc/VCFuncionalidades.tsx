@@ -44,7 +44,7 @@ export default function VCFuncionalidades() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] mt-8">
         {cards.map((card) => (
-          <div key={card.title} className="bg-[#E8E8E8] rounded-[14px] p-7 flex gap-5 items-start">
+          <div key={card.title} className="bg-[#F2F2F2] rounded-[14px] p-7 flex gap-5 items-start">
             <div className={`w-[100px] h-[100px] rounded-[10px] flex-shrink-0 flex items-center justify-center ${card.bg}`}>
               <span className="text-[28px]">{card.emoji}</span>
             </div>
