@@ -24,14 +24,14 @@ export default function Integracoes() {
           {doubled.map((logo, i) => (
             <div
               key={i}
-              className={`flex-shrink-0 rounded-[8px] px-[14px] h-11 flex items-center justify-center min-w-[90px]`}
+              className={`flex-shrink-0 rounded-[8px] px-[14px] h-11 flex items-center justify-center min-w-[90px] pb-1`}
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
                 className="w-auto object-contain"
-                style={{ opacity: 0.8, maxHeight: 18, ...(logo.width ? { width: logo.width } : {}) }}
+                style={{ opacity: 0.8, height: logo.height ?? 18 }}
               />
             </div>
           ))}
