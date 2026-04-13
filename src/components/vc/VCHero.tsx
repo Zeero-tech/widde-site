@@ -1,18 +1,30 @@
+import { useNavigate } from 'react-router-dom'
 import AnimatedButton from '@/components/AnimatedButton'
 
 export default function VCHero() {
+  const navigate = useNavigate()
+
+  function handleVerPlanos(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault()
+    navigate('/?scrollTo=planos')
+  }
+
   return (
     <section className="bg-[#f6f6f6] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 72px)' }}>
+      {/* Breadcrumb — fixed to top of section */}
+      <div className="absolute top-0 left-0 right-0 z-10 max-w-[1440px] mx-auto px-8 pt-5">
+        <div className="text-[12px] text-[#aaa]">
+          <a href="/" className="text-brand no-underline">Home</a>
+          <span className="mx-[6px]">/</span>
+          <strong className="text-[#444]">Video Commerce</strong>
+        </div>
+      </div>
+
       <div className="max-w-[1440px] mx-auto px-8 h-full flex items-center" style={{ minHeight: 'inherit' }}>
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
 
           {/* Left — content */}
           <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
-            <div className="text-[12px] text-[#aaa] mb-5">
-              <a href="/" className="text-brand no-underline">Home</a>
-              <span className="mx-[6px]">/</span>
-              <strong className="text-[#444]">Video Commerce</strong>
-            </div>
             <h1 className="text-[48px] font-black leading-[1.15] mb-6 text-black">
               Acelere a decisão<br />de compra com <span className="text-brand">vídeo.</span>
             </h1>
@@ -38,12 +50,17 @@ export default function VCHero() {
               >
                 Falar com vendas
               </AnimatedButton>
-              <AnimatedButton
+              <a
                 href="/#planos"
-                className="inline-block bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+                onClick={handleVerPlanos}
+                className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
-                Ver planos
-              </AnimatedButton>
+                <span data-button-animate-chars="" className="btn-animate-chars__text">
+                  {'Ver planos'.split('').map((char, i) => (
+                    <span key={i} style={{ transitionDelay: `${(i * 0.01).toFixed(2)}s`, whiteSpace: char === ' ' ? 'pre' : undefined }}>{char}</span>
+                  ))}
+                </span>
+              </a>
             </div>
           </div>
 

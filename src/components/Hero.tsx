@@ -1,6 +1,13 @@
+import React from 'react'
 import AnimatedButton from './AnimatedButton'
+import { getLenis } from '../lib/lenis'
 
 export default function Hero() {
+  function handleVerDemo(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault()
+    getLenis().scrollTo('#demo', { duration: 3, offset: -70, easing: (t) => 1 - Math.pow(1 - t, 5) })
+  }
+
   return (
     <section className="bg-[#f6f6f6] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 72px)' }}>
 
@@ -26,6 +33,7 @@ export default function Hero() {
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
+                onClick={handleVerDemo}
                 className="inline-block bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
                 Ver demonstração

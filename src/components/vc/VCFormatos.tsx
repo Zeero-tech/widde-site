@@ -108,10 +108,10 @@ const formatos = [
 export default function VCFormatos() {
   return (
     <section aria-labelledby="formatos-heading">
-      <div className="text-[11px] font-bold text-brand uppercase tracking-[2px] mb-3">
+      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         Formatos
-      </div>
-      <h2 id="formatos-heading" className="text-[30px] font-black text-black leading-[1.2] mb-9 max-w-[560px]">
+      </span>
+      <h2 id="formatos-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-9 max-w-[560px]">
         Todos os formatos de vídeo que sua loja precisa
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

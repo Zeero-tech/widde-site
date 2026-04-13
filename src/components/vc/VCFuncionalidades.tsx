@@ -35,11 +35,11 @@ const cards = [
 
 export default function VCFuncionalidades() {
   return (
-    <section aria-labelledby="func-heading" className="bg-[#F2F2F2] rounded-[20px] mt-14 px-10 py-11">
-      <div className="text-[11px] font-bold text-brand uppercase tracking-[2px] mb-3">
+    <section aria-labelledby="func-heading" className="bg-[#F2F2F2] rounded-[20px] mt-30 px-10 py-11">
+      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         Funcionalidades
-      </div>
-      <h2 id="func-heading" className="text-[30px] font-black text-black leading-[1.2] max-w-[560px]">
+      </span>
+      <h2 id="func-heading" className="text-[28px] font-normal text-black leading-[1.25] max-w-[560px]">
         Tudo que você precisa para converter com vídeo
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] mt-8">

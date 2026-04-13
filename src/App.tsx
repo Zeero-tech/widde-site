@@ -1,5 +1,7 @@
-import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Routes, Route, useSearchParams } from 'react-router-dom'
 import { useLenis } from '@/lib/useLenis'
+import { getLenis } from '@/lib/lenis'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import LogoTicker from '@/components/LogoTicker'
@@ -17,6 +19,17 @@ import VideoCommerce from '@/pages/VideoCommerce'
 
 function Home() {
   useLenis()
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  useEffect(() => {
+    const scrollTo = searchParams.get('scrollTo')
+    if (!scrollTo) return
+    const timer = setTimeout(() => {
+      getLenis().scrollTo(`#${scrollTo}`, { duration: 3.5, offset: -70, easing: (t) => 1 - Math.pow(1 - t, 5) })
+      setSearchParams({}, { replace: true })
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
@@ -43,7 +56,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/solucoes/video-commerce" element={<VideoCommerce />} />
+      <Route path="/video-commerce" element={<VideoCommerce />} />
     </Routes>
   )
 }

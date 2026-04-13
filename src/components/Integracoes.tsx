@@ -5,7 +5,7 @@ export default function Integracoes() {
 
   return (
     <section
-      className="rounded-[20px] px-11 py-10 mt-30 overflow-hidden"
+      className="rounded-[20px] p-15 mt-30 overflow-hidden"
       style={{ background: '#003ab9ff' }}
       aria-labelledby="int-heading"
     >
