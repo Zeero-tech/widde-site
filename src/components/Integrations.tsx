@@ -1,6 +1,8 @@
 import { integracoes } from '@/data/integracoes'
+import { useTranslation } from 'react-i18next'
 
 export default function Integrations() {
+  const { t } = useTranslation()
   const doubled = [...integracoes, ...integracoes]
 
   return (
@@ -10,15 +12,15 @@ export default function Integrations() {
       aria-labelledby="int-heading"
     >
       <h2 id="int-heading" className="text-[18px] md:text-[24px] font-normal text-white leading-[1.25] mb-[10px] max-w-[440px]">
-        Integre facilmente com a plataforma que você utiliza
+        {t('integrations.title')}
       </h2>
       <p className="text-[14px] text-white/50 leading-[1.6] mb-7">
-        Sem precisar de desenvolvimento. A Widde está presente nas principais plataformas de e-commerce do Brasil.
+        {t('integrations.description')}
       </p>
 
       <div
         className="overflow-hidden -mx-4 md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
-        aria-label="Integrated platforms"
+        aria-label={t('integrations.ariaLabel')}
       >
         <div className="flex gap-[10px] animate-scroll-logos">
           {doubled.map((logo, i) => (

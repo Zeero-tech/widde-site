@@ -1,0 +1,233 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "results": "Results",
+    "plans": "Plans",
+    "blog": "Blog",
+    "startNow": "Start now",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "tagNew": "New",
+    "videoCommerceDesc": "Stories, carousel and product highlights with shoppable video — across your entire e-commerce store",
+    "liveCommerceDesc": "Live streams with a real-time cart and direct audience engagement",
+    "tryOnDesc": "Virtual try-on experience that removes the #1 barrier to purchase"
+  },
+  "hero": {
+    "tagline": "The in-store experience, brought online",
+    "title": "Drive sales by building confidence in the",
+    "titleHighlight": "shopper experience.",
+    "description": "If shoppers don't understand the value of your product, they'll buy somewhere else.",
+    "descriptionBold": "That's why with Widde you help every visitor feel, understand, choose and buy on your site.",
+    "ctaSales": "Talk to sales",
+    "ctaLearnMore": "Learn more"
+  },
+  "demo": {
+    "heading": "How does Widde work?"
+  },
+  "problem": {
+    "label": "The problem",
+    "title": "The online experience is still pushing shoppers away",
+    "description": "Stores that don't invest in experience lose sales every day to fear, doubt and poor product presentation.",
+    "cta": "Talk to sales →",
+    "stat1Label": "abandon their cart fearing the product won't match the description",
+    "stat2Label": "give up due to poor e-commerce experiences",
+    "stat3Label": "higher conversion in stores with video in the shopping journey"
+  },
+  "solutions": {
+    "label": "What Widde does",
+    "title": "Explore our solutions",
+    "new": "New",
+    "learnMore": "Learn more",
+    "videoCommerce": {
+      "descBold": "Go beyond static images with videos in Carousels, Highlights and Stories",
+      "desc": "throughout your e-commerce pages. Shoppers see the product in action, grasp every detail and resolve their objections just by watching.",
+      "desc2": "With an in-video cart to",
+      "desc2Bold": "speed up the purchase.",
+      "stat1": "More time on page with video",
+      "stat2": "Higher sales conversion",
+      "formatStories": "Stories",
+      "formatCarousel": "Carousel",
+      "formatExplore": "Explore"
+    },
+    "liveCommerce": {
+      "title": "Live Commerce",
+      "descBold": "A live stream where the sale actually happens.",
+      "desc": "Shoppers watch, engage, ask questions in real time, see product details live and buy during the stream — without ever leaving your site.",
+      "desc2Bold": "Creates urgency, connection and brand trust.",
+      "stat1": "Higher engagement vs. social media",
+      "stat2": "Higher average order value during live sessions",
+      "mockLive": "LIVE",
+      "mockMessage1": "Ana: what size is this? 👀",
+      "mockMessage2": "Carol: I love this piece!",
+      "mockAddToCart": "Add to cart",
+      "mockProduct": "Premium Denim Jacket",
+      "mockPrice": "R$ 349,90",
+      "mockSales": "💰 R$ 18.400 in sales",
+      "mockSpectators": "👁 1,240 viewers"
+    },
+    "tryOn": {
+      "title": "AI Try-On",
+      "desc": "Your customer tries the product on their own body through a photo, just like being in a physical store — but right on your site.",
+      "descBold": "For clothing and footwear: they see how it looks before deciding.",
+      "desc2Bold": "Less hesitation at checkout, fewer returns afterward.",
+      "stat1": "Shopper satisfaction with the try-on result"
+    }
+  },
+  "integrations": {
+    "title": "Integrate seamlessly with the platform you already use",
+    "description": "No development required. Widde works with the leading e-commerce platforms.",
+    "ariaLabel": "Integrated platforms"
+  },
+  "plans": {
+    "label": "Plans",
+    "title": "Choose how to get started",
+    "discountBadge": "💰 15% off on the annual plan",
+    "starterDesc": "For stores in the early stages of content",
+    "starterFeature1": "Stories format",
+    "starterFeature2": "Up to 75 active videos",
+    "starterFeature3": "Up to 10K views/month",
+    "starterFeature4": "Google Analytics integration",
+    "starterFeature5": "Color and button customization",
+    "starterFeature6": "WhatsApp and Chat support",
+    "starterCta": "Start now",
+    "proRecommended": "Recommended for mid-size and large brands",
+    "proTagline": "Tailored to your business",
+    "proDesc": "Talk to sales to build the ideal plan",
+    "proFeature1": "Unlimited videos",
+    "proFeature2": "40K views or more",
+    "proFeature3": "Video Commerce + Live Commerce + TryOn",
+    "proFeature4": "Dedicated account manager",
+    "proFeature5": "In-video cart",
+    "proFeature6": "Widde AI for comments",
+    "proCardTitle": "For brands that want to grow for real",
+    "proCardDesc": "Large retailers have unique challenges. The Pro plan is designed alongside you — volume, integrations, SLA and training included.",
+    "proCta": "Talk to sales →"
+  },
+  "cases": {
+    "label": "Real results",
+    "title": "Those who use it are already converting more",
+    "description": "Case studies from brands that transformed the shopping experience with Widde.",
+    "readMore": "Learn more →",
+    "viewAll": "View all case studies →"
+  },
+  "blog": {
+    "label": "Content",
+    "title": "Check out our blog"
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "cta": "Subscribe",
+    "imageAlt": "Widde Team",
+    "ariaLabel": "Newsletter form"
+  },
+  "footer": {
+    "plansAndPricing": "Plans & Pricing",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "helpCenter": "Help Center",
+    "privacyPolicy": "Privacy policy",
+    "copyright": "© 2025 Widde | all rights reserved",
+    "socialMedia": "Social media",
+    "footerLinks": "Footer links"
+  },
+  "vc": {
+    "breadcrumb": {
+      "home": "Home",
+      "page": "Video Commerce"
+    },
+    "hero": {
+      "title": "Accelerate purchase decisions with",
+      "titleHighlight": "video.",
+      "description": "Turn any video content into an immersive shopping experience, directly on your e-commerce store — without leaving the site.",
+      "feature1": "Stories, carousel, highlights and explore across the entire site",
+      "feature2": "Dev-free integration — live in less than 1 day",
+      "feature3": "In-video cart, without interrupting the experience",
+      "ctaSales": "Talk to sales",
+      "ctaPlans": "See plans"
+    },
+    "why": {
+      "label": "Why video commerce",
+      "title": "Video is the highest-converting format in e-commerce",
+      "description": "Shoppers who watch a product video are far more likely to buy. Video removes objections, builds trust and brings the product closer to the customer's reality.",
+      "stat1": "of shoppers prefer watching a video to reading about a product",
+      "stat2": "more time on page in sessions that include video",
+      "stat3": "lift in add-to-cart rate with shoppable video"
+    },
+    "formats": {
+      "label": "Formats",
+      "title": "Every video format your store needs",
+      "appearsIn": "Appears on:",
+      "stories": {
+        "name": "Stories",
+        "description": "Full-screen vertical content. High immersion and engagement — the format shoppers already know.",
+        "locations": ["Home", "PDP"],
+        "button": "View product"
+      },
+      "carousel": {
+        "name": "Video Carousel",
+        "description": "Showcase multiple products in sequence. Visitors discover more items without leaving the page.",
+        "locations": ["Home", "Categories"]
+      },
+      "highlights": {
+        "name": "Store Highlights",
+        "description": "Social-feed style layout for campaigns, launches and collections. Immersive and to the point.",
+        "locations": ["Home", "Categories"],
+        "example": "Jacket Festival · R$ 99"
+      },
+      "productHighlights": {
+        "name": "Product Highlights",
+        "description": "Videos organized by theme on the PDP — how to use, materials, looks. Customers resolve every objection before buying.",
+        "locations": ["PDP"],
+        "productName": "Sunscreen SPF 90",
+        "price": "R$ 89,90",
+        "tab1": "How to use",
+        "tab2": "Ingredients"
+      },
+      "explore": {
+        "name": "Explore",
+        "description": "A page dedicated entirely to video — your store's own TikTok. Maximum engagement and product discovery.",
+        "locations": ["Dedicated page"]
+      }
+    },
+    "features": {
+      "label": "Features",
+      "title": "Everything you need to convert with video",
+      "card1": {
+        "badge": "Conversion",
+        "title": "In-video cart",
+        "description": "Shoppers add to cart without leaving the video. Zero friction between discovery and purchase."
+      },
+      "card2": {
+        "badge": "Analytics",
+        "title": "Per-video data",
+        "description": "Views, engagement, clicks and conversions per video. Understand exactly which content drives the most sales."
+      },
+      "card3": {
+        "badge": "Performance",
+        "title": "Zero speed impact",
+        "description": "Proprietary streaming infrastructure. Videos don't slow down your store — Core Web Vitals fully preserved."
+      },
+      "card4": {
+        "badge": "Engagement",
+        "title": "Video comments",
+        "description": "Receive and respond to customer questions directly on your videos. Widde AI filters and organizes them automatically."
+      }
+    },
+    "cta": {
+      "label": "Talk to sales",
+      "title": "Ready to transform your e-commerce with video?",
+      "description": "Our team responds within 24 hours and puts together a custom proposal for your business.",
+      "ctaSales": "Talk to sales",
+      "ctaLearnMore": "Learn more"
+    },
+    "quote": {
+      "text": "\"Since we started working with Widde, the experience on our e-commerce has reached a whole new level of interactivity.\"",
+      "author": "E-commerce Team",
+      "company": "John John",
+      "cta": "Start now"
+    }
+  }
+}

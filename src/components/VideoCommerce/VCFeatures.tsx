@@ -1,47 +1,51 @@
-const cards = [
-  {
-    bg: 'bg-brand/[0.15]',
-    emoji: '🛒',
-    badge: 'Conversão',
-    badgeClass: 'bg-brand/[0.10] text-brand',
-    title: 'Carrinho dentro do vídeo',
-    desc: 'O consumidor adiciona ao carrinho sem sair do vídeo. Zero fricção entre descoberta e compra.',
-  },
-  {
-    bg: 'bg-black/[0.12]',
-    emoji: '📊',
-    badge: 'Analytics',
-    badgeClass: 'bg-black/[0.06] text-[#444]',
-    title: 'Dados por vídeo',
-    desc: 'Views, engajamento, cliques e conversões por vídeo. Entenda exatamente qual conteúdo vende mais.',
-  },
-  {
-    bg: 'bg-[rgba(26,158,92,0.15)]',
-    emoji: '⚡',
-    badge: 'Performance',
-    badgeClass: 'bg-[rgba(26,158,92,0.1)] text-[#1A9E5C]',
-    title: 'Zero impacto na velocidade',
-    desc: 'Infraestrutura própria de streaming. Os vídeos não pesam no carregamento da loja — Core Web Vitals preservados.',
-  },
-  {
-    bg: 'bg-[rgba(155,68,248,0.15)]',
-    emoji: '💬',
-    badge: 'Engajamento',
-    badgeClass: 'bg-[rgba(155,68,248,0.1)] text-[#9B44F8]',
-    title: 'Comentários nos vídeos',
-    desc: 'Receba e responda dúvidas dos clientes diretamente nos vídeos. IA da Widde filtra e organiza automaticamente.',
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 export default function VCFeatures() {
+  const { t } = useTranslation()
+
+  const cards = [
+    {
+      bg: 'bg-brand/[0.15]',
+      emoji: '🛒',
+      badge: t('vc.features.card1.badge'),
+      badgeClass: 'bg-brand/[0.10] text-brand',
+      title: t('vc.features.card1.title'),
+      desc: t('vc.features.card1.description'),
+    },
+    {
+      bg: 'bg-black/[0.12]',
+      emoji: '📊',
+      badge: t('vc.features.card2.badge'),
+      badgeClass: 'bg-black/[0.06] text-[#444]',
+      title: t('vc.features.card2.title'),
+      desc: t('vc.features.card2.description'),
+    },
+    {
+      bg: 'bg-[rgba(26,158,92,0.15)]',
+      emoji: '⚡',
+      badge: t('vc.features.card3.badge'),
+      badgeClass: 'bg-[rgba(26,158,92,0.1)] text-[#1A9E5C]',
+      title: t('vc.features.card3.title'),
+      desc: t('vc.features.card3.description'),
+    },
+    {
+      bg: 'bg-[rgba(155,68,248,0.15)]',
+      emoji: '💬',
+      badge: t('vc.features.card4.badge'),
+      badgeClass: 'bg-[rgba(155,68,248,0.1)] text-[#9B44F8]',
+      title: t('vc.features.card4.title'),
+      desc: t('vc.features.card4.description'),
+    },
+  ]
+
   return (
     <section aria-labelledby="func-heading" className="bg-[#e5e5e5] py-8 md:py-16">
       <div className="max-w-[1740px] mx-auto px-5 md:px-10 lg:px-20">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
-        Funcionalidades
+        {t('vc.features.label')}
       </span>
       <h2 id="func-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] max-w-[560px]">
-        Tudo que você precisa para converter com vídeo
+        {t('vc.features.title')}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] mt-8">
         {cards.map((card) => (

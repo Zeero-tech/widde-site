@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 import AnimatedButton from './AnimatedButton'
 import { getLenis } from '../lib/lenis'
 import { easeOutQuint } from '../lib/easing'
 
 export default function Hero() {
+  const { t } = useTranslation()
   const contentRef = useRef<HTMLDivElement>(null)
   const videoInnerRef = useRef<HTMLDivElement>(null)
 
@@ -27,30 +29,30 @@ export default function Hero() {
           {/* Content */}
           <div ref={contentRef} className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
             <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-5">
-              A experiência do físico para o online
+              {t('hero.tagline')}
             </span>
             <h1 className="text-[32px] md:text-[48px] font-black leading-[1.15] mb-6 text-black">
-              Impulsione as vendas gerando confiança na experiência do <span className="text-brand">consumidor.</span>
+              {t('hero.title')} <span className="text-brand">{t('hero.titleHighlight')}</span>
             </h1>
             <p className="text-[14px] text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
-              Se o consumidor não entender o valor do seu produto, ele vai comprar em outro lugar.
+              {t('hero.description')}
             </p>
             <p className="font-bold text-[14px] text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
-              Por isso, com a Widde você ajuda o visitante a sentir, entender, escolher e comprar no seu site.
+              {t('hero.descriptionBold')}
             </p>
             <div className="flex gap-3 flex-wrap">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
                 className="inline-block bg-brand text-white text-[14px] font-bold px-7 py-[13px] rounded-full no-underline"
               >
-                Falar com vendas
+                {t('hero.ctaSales')}
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
                 onClick={handleVerDemo}
                 className="inline-block bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
-                Conhecer mais
+                {t('hero.ctaLearnMore')}
               </AnimatedButton>
             </div>
           </div>

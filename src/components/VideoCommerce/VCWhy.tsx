@@ -1,27 +1,30 @@
+import { useTranslation } from 'react-i18next'
 import CountUp from '@/components/CountUp'
 
 const stats = [
-  { target: 80, prefix: '', suffix: '%', label: 'dos consumidores preferem assistir a um vídeo a ler sobre um produto' },
-  { target: 3, prefix: '', suffix: 'x', label: 'mais tempo na página em sessões com vídeo' },
-  { target: 40, prefix: '+', suffix: '%', label: 'na taxa de adição ao carrinho com vídeo shoppable' },
+  { target: 80, prefix: '', suffix: '%' },
+  { target: 3, prefix: '', suffix: 'x' },
+  { target: 40, prefix: '+', suffix: '%' },
 ]
 
 export default function VCWhy() {
+  const { t } = useTranslation()
+
   return (
     <div className="bg-[#003ab9] rounded-[12px] md:rounded-[20px] px-6 py-10 md:px-25 md:py-30 my-30">
       {/* Top row: title left, paragraph right */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14 mb-16">
         <div>
           <span className="block text-[11px] font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
-            Por que video commerce
+            {t('vc.why.label')}
           </span>
           <h2 className="text-[20px] md:text-[26px] font-normal text-white leading-[1.25]">
-            Vídeo é o formato que mais converte no e-commerce
+            {t('vc.why.title')}
           </h2>
         </div>
         <div className="flex items-center">
           <p className="text-[14px] text-white/50 leading-[1.6]">
-            Consumidores que assistem a um vídeo de produto têm muito mais probabilidade de comprar. O vídeo reduz objeções, transmite confiança e aproxima o produto da realidade do cliente.
+            {t('vc.why.description')}
           </p>
         </div>
       </div>
@@ -36,7 +39,7 @@ export default function VCWhy() {
               suffix={stat.suffix}
               className="block text-[36px] md:text-[52px] font-light text-white leading-none mb-3"
             />
-            <span className="text-[13px] text-white/50 leading-[1.4]">{stat.label}</span>
+            <span className="text-[13px] text-white/50 leading-[1.4]">{t(`vc.why.stat${i + 1}`)}</span>
           </div>
         ))}
       </div>
