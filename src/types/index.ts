@@ -20,10 +20,12 @@ export interface IntegrationLogo {
   src: string
   alt: string
   featured?: boolean
+  width?: number
 }
 
 export interface TickerLogo {
   name: string
   url: string
   img?: string
+  width?: number
 }

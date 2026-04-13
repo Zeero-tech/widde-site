@@ -1,7 +1,7 @@
 import { tickerLogos } from '@/data/logos'
 
 export default function LogoTicker() {
-  const doubled = [...tickerLogos]
+  const doubled = [...tickerLogos, ...tickerLogos, ...tickerLogos, ...tickerLogos, ...tickerLogos]
 
   return (
     <section
@@ -20,7 +20,7 @@ export default function LogoTicker() {
               className="inline-flex items-center justify-center px-8 border-r border-[#eee] flex-shrink-0 h-10 no-underline opacity-50 hover:opacity-100 transition-opacity"
             >
               {logo.img
-                ? <img src={logo.img} alt={logo.name} className="h-6 w-auto object-contain" />
+                ? <img src={logo.img} alt={logo.name} className="h-6 w-auto object-contain" style={logo.width ? { width: logo.width, height: 'auto' } : {}} />
                 : <span className="text-[13px] font-black text-[#bbb] uppercase tracking-[1px]">{logo.name}</span>
               }
             </a>
