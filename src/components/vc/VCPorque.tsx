@@ -6,8 +6,9 @@ const stats = [
 
 export default function VCPorque() {
   return (
-    <div className="bg-[#0A0A0A] rounded-[20px] px-10 py-16 my-30">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-14 max-w-[820px] mx-auto items-start">
+    <div className="bg-[#0A0A0A] rounded-[20px] px-25 py-30 my-30">
+      {/* Top row: title left, paragraph right */}
+      <div className="grid grid-cols-2 gap-14 mb-16">
         <div>
           <span className="block text-[11px] font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
             Por que video commerce
@@ -16,19 +17,21 @@ export default function VCPorque() {
             Vídeo é o formato que mais converte no e-commerce
           </h2>
         </div>
-        <div className="pt-2">
-          <p className="text-[14px] text-white/50 leading-[1.6] mb-10">
+        <div className="flex items-center">
+          <p className="text-[14px] text-white/50 leading-[1.6]">
             Consumidores que assistem a um vídeo de produto têm muito mais probabilidade de comprar. O vídeo reduz objeções, transmite confiança e aproxima o produto da realidade do cliente.
           </p>
-          <div className="flex flex-col">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex items-center gap-4 py-5 border-t border-white/10">
-                <span className="text-[48px] font-normal text-white leading-none flex-shrink-0">{stat.num}</span>
-                <span className="text-[13px] text-white/50 leading-[1.4]">{stat.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
+      </div>
+
+      {/* Stats row: 3 columns with left border */}
+      <div className="grid grid-cols-3 gap-10">
+        {stats.map((stat, i) => (
+          <div key={i} className="border-l border-white/20 pl-6">
+            <span className="block text-[52px] font-light text-white leading-none mb-3">{stat.num}</span>
+            <span className="text-[13px] text-white/50 leading-[1.4]">{stat.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   )
