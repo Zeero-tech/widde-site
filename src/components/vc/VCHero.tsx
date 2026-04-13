@@ -42,8 +42,8 @@ const slides = [
   },
   {
     label: 'Stories',
-    color: '#5B4CF5',
-    bg: 'linear-gradient(135deg, #EEEEFF 0%, #C8C0FF 100%)',
+    color: '#4F46E5',
+    bg: 'linear-gradient(135deg, #EEEEFF 0%, #C7C0FF 100%)',
     content: (
       <div className="h-[150px] flex items-center justify-center">
         <div className="flex flex-col items-center gap-2">
@@ -66,34 +66,34 @@ const slides = [
   },
   {
     label: 'Carrossel',
-    color: '#1a9e5c',
-    bg: 'linear-gradient(135deg, #E8F5EE 0%, #BBE0CC 100%)',
+    color: '#0EA5E9',
+    bg: 'linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%)',
     content: (
       <div className="h-[150px] flex items-center justify-center">
         <div className="flex gap-1 items-end px-3">
-          <div className="w-[32px] h-[58px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(26,158,92,0.25)' }} />
-          <div className="w-[42px] h-[78px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(26,158,92,0.25)' }} />
-          <div className="w-[56px] h-[100px] rounded-[7px] flex-shrink-0" style={{ background: 'rgb(26,158,92)' }} />
-          <div className="w-[42px] h-[78px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(26,158,92,0.55)' }} />
-          <div className="w-[32px] h-[58px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(26,158,92,0.25)' }} />
+          <div className="w-[32px] h-[58px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(14,165,233,0.25)' }} />
+          <div className="w-[42px] h-[78px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(14,165,233,0.25)' }} />
+          <div className="w-[56px] h-[100px] rounded-[7px] flex-shrink-0" style={{ background: 'rgb(14,165,233)' }} />
+          <div className="w-[42px] h-[78px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(14,165,233,0.55)' }} />
+          <div className="w-[32px] h-[58px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(14,165,233,0.25)' }} />
         </div>
       </div>
     ),
   },
   {
     label: 'Destaques da Loja',
-    color: '#f5a623',
-    scale: 1.4,
-    bg: 'linear-gradient(135deg, #FFF5E8 0%, #FFDEB5 100%)',
+    color: '#3B82F6',
+    scale: 1.2,
+    bg: 'linear-gradient(135deg, #EFF6FF 0%, #BFDBFE 100%)',
     content: (
       <div className="h-[150px] flex items-center justify-center">
         <div className="flex flex-col gap-[6px] px-3 w-full">
-          <div className="rounded-lg h-[60px] flex items-center px-[10px]" style={{ background: 'rgb(245,166,35)' }}>
+          <div className="rounded-lg h-[60px] flex items-center px-[10px]" style={{ background: 'rgb(59,130,246)' }}>
             <span className="text-[10px] font-black text-white">Festival Jaquetas · R$ 99</span>
           </div>
           <div className="flex gap-[5px]">
             {[1, 2, 3, 4].map(i => (
-              <div key={i} className="w-[26px] h-[26px] rounded-full border" style={{ background: 'rgba(245,166,35,0.25)', borderColor: 'rgba(245,166,35,0.5)' }} />
+              <div key={i} className="w-[26px] h-[26px] rounded-full border" style={{ background: 'rgba(59,130,246,0.25)', borderColor: 'rgba(59,130,246,0.5)' }} />
             ))}
           </div>
         </div>
@@ -102,22 +102,56 @@ const slides = [
   },
   {
     label: 'Destaques de Produto',
-    color: '#9b44f8',
-    bg: 'linear-gradient(135deg, #F5E8FF 0%, #DFBBFF 100%)',
+    color: '#6366F1',
+    bg: 'linear-gradient(135deg, #EEF2FF 0%, #C7D2FE 100%)',
     content: (
       <div className="h-[150px] flex items-center justify-center">
         <div className="flex flex-col gap-[6px] px-[10px] py-[10px]">
           <div className="flex gap-2">
-            <div className="w-[60px] h-[80px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(155,68,248,0.25)' }} />
+            <div className="w-[60px] h-[80px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(99,102,241,0.25)' }} />
             <div className="flex-1">
               <div className="text-[8px] font-bold text-[#333] mb-[3px]">Protetor Solar FPS 90</div>
-              <div className="text-[11px] font-black mb-[5px]" style={{ color: 'rgb(155,68,248)' }}>R$ 89,90</div>
+              <div className="text-[11px] font-black mb-[5px]" style={{ color: 'rgb(99,102,241)' }}>R$ 89,90</div>
               <div className="flex gap-[3px] flex-wrap">
-                <span className="text-[7px] font-bold rounded-full px-[5px] py-[2px]" style={{ background: 'rgba(155,68,248,0.1)', color: 'rgb(155,68,248)' }}>Como usar</span>
-                <span className="text-[7px] font-bold rounded-full px-[5px] py-[2px]" style={{ background: 'rgba(155,68,248,0.1)', color: 'rgb(155,68,248)' }}>Ingredientes</span>
+                <span className="text-[7px] font-bold rounded-full px-[5px] py-[2px]" style={{ background: 'rgba(99,102,241,0.1)', color: 'rgb(99,102,241)' }}>Como usar</span>
+                <span className="text-[7px] font-bold rounded-full px-[5px] py-[2px]" style={{ background: 'rgba(99,102,241,0.1)', color: 'rgb(99,102,241)' }}>Ingredientes</span>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    label: 'Explorar',
+    color: '#0891b2',
+    scale: 1.3,
+    bg: 'linear-gradient(135deg, #E0F7FA 0%, #A5D8E6 100%)',
+    content: (
+      <div className="h-[150px] flex flex-col gap-[4px] px-[10px] py-[8px]">
+        {/* Search bar */}
+        <div className="rounded-full h-[10px] w-full" style={{ background: 'rgba(38,103,248,0.12)' }} />
+        {/* Tags */}
+        <div className="flex gap-[3px]">
+          {[20, 14, 16, 18, 12].map((w, i) => (
+            <div key={i} className="h-[5px] rounded-full" style={{ width: w, background: i === 0 ? 'rgba(38,103,248,0.7)' : 'rgba(38,103,248,0.2)' }} />
+          ))}
+        </div>
+        {/* Main grid: 4 equal columns, first video spans 2 rows */}
+        <div className="grid gap-[3px] flex-1" style={{ gridTemplateColumns: 'repeat(4, 1fr)', gridTemplateRows: 'repeat(2, 1fr)' }}>
+          <div className="rounded-[4px]" style={{ gridColumn: '1', gridRow: '1 / 3', background: 'rgba(38,103,248,0.7)' }} />
+          <div className="rounded-[4px]" style={{ gridColumn: '2', gridRow: '1', background: 'rgba(38,103,248,0.5)' }} />
+          <div className="rounded-[4px]" style={{ gridColumn: '3', gridRow: '1', background: 'rgba(38,103,248,0.25)' }} />
+          <div className="rounded-[4px]" style={{ gridColumn: '4', gridRow: '1', background: 'rgba(38,103,248,0.35)' }} />
+          <div className="rounded-[4px]" style={{ gridColumn: '2', gridRow: '2', background: 'rgba(38,103,248,0.2)' }} />
+          <div className="rounded-[4px]" style={{ gridColumn: '3', gridRow: '2', background: 'rgba(38,103,248,0.4)' }} />
+          <div className="rounded-[4px]" style={{ gridColumn: '4', gridRow: '2', background: 'rgba(38,103,248,0.2)' }} />
+        </div>
+        {/* Bottom row: 4 equal squares */}
+        <div className="grid gap-[3px]" style={{ gridTemplateColumns: 'repeat(4, 1fr)', height: 16 }}>
+          {[0.18, 0.18, 0.45, 0.18].map((op, i) => (
+            <div key={i} className="rounded-[4px]" style={{ background: `rgba(38,103,248,${op})` }} />
+          ))}
         </div>
       </div>
     ),
