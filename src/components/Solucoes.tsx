@@ -1,4 +1,5 @@
 import AnimatedButton from "./AnimatedButton";
+import CountUp from "./CountUp";
 
 export default function Solucoes() {
   return (
@@ -50,12 +51,12 @@ export default function Solucoes() {
             </p>
             <div className="flex gap-8 mb-8">
               <div className="flex flex-col gap-1">
-                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">3x</span>
+                <CountUp target={3} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais tempo na página com vídeo</span>
               </div>
               <div className="w-px bg-[#E9E9E9]" />
               <div className="flex flex-col gap-1">
-                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">+40%</span>
+                <CountUp target={40} prefix="+" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Taxa de adição ao carrinho</span>
               </div>
             </div>
@@ -115,12 +116,12 @@ export default function Solucoes() {
             </p>
             <div className="flex gap-8 mb-8">
               <div className="flex flex-col gap-1">
-                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">5x</span>
+                <CountUp target={5} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior engajamento em lives vs. redes sociais</span>
               </div>
               <div className="w-px bg-[#E9E9E9]" />
               <div className="flex flex-col gap-1">
-                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">+60%</span>
+                <CountUp target={60} prefix="+" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Conversão em sessões com live ativa</span>
               </div>
             </div>
@@ -162,12 +163,12 @@ export default function Solucoes() {
             </p>
             <div className="flex gap-8 mb-8">
               <div className="flex flex-col gap-1">
-                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">708%</span>
+                <CountUp target={708} suffix="%" duration={1800} className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">ROI com TryOn (Cajubrasil)</span>
               </div>
               <div className="w-px bg-[#E9E9E9]" />
               <div className="flex flex-col gap-1">
-                <span className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1">-35%</span>
+                <CountUp target={35} prefix="-" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Redução na taxa de devolução</span>
               </div>
             </div>

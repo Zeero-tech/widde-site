@@ -1,7 +1,9 @@
+import CountUp from '@/components/CountUp'
+
 const stats = [
-  { num: '80%', label: 'dos consumidores preferem assistir a um vídeo a ler sobre um produto' },
-  { num: '3x', label: 'mais tempo na página em sessões com vídeo' },
-  { num: '+40%', label: 'na taxa de adição ao carrinho com vídeo shoppable' },
+  { target: 80, prefix: '', suffix: '%', label: 'dos consumidores preferem assistir a um vídeo a ler sobre um produto' },
+  { target: 3, prefix: '', suffix: 'x', label: 'mais tempo na página em sessões com vídeo' },
+  { target: 40, prefix: '+', suffix: '%', label: 'na taxa de adição ao carrinho com vídeo shoppable' },
 ]
 
 export default function VCPorque() {
@@ -28,7 +30,12 @@ export default function VCPorque() {
       <div className="grid grid-cols-3 gap-10">
         {stats.map((stat, i) => (
           <div key={i} className="border-l border-white/20 pl-6">
-            <span className="block text-[52px] font-light text-white leading-none mb-3">{stat.num}</span>
+            <CountUp
+              target={stat.target}
+              prefix={stat.prefix}
+              suffix={stat.suffix}
+              className="block text-[52px] font-light text-white leading-none mb-3"
+            />
             <span className="text-[13px] text-white/50 leading-[1.4]">{stat.label}</span>
           </div>
         ))}

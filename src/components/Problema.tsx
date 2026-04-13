@@ -1,4 +1,5 @@
 import AnimatedButton from './AnimatedButton'
+import CountUp from './CountUp'
 
 export default function Problema() {
   return (
@@ -31,15 +32,15 @@ export default function Problema() {
         className="flex flex-col border-l border-white/15 pl-10 flex-shrink-0"
       >
         <div className="py-6">
-          <div className="text-[40px] font-normal text-white leading-none mb-2">84%</div>
+          <CountUp target={84} suffix="%" className="text-[40px] font-normal text-white leading-none mb-2" />
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">deixam de comprar por medo do produto não ser como descrito</div>
         </div>
         <div className="py-6 border-t border-white/15">
-          <div className="text-[40px] font-normal text-white leading-none mb-2">65%</div>
+          <CountUp target={65} suffix="%" className="text-[40px] font-normal text-white leading-none mb-2" />
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">desistem por más experiências no e-commerce</div>
         </div>
         <div className="py-6 border-t border-white/15">
-          <div className="text-[40px] font-normal text-white leading-none mb-2">2x</div>
+          <CountUp target={2} suffix="x" className="text-[40px] font-normal text-white leading-none mb-2" />
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">mais conversão em lojas com vídeo na jornada</div>
         </div>
       </div>

@@ -1,8 +1,18 @@
+import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import gsap from 'gsap'
 import AnimatedButton from '@/components/AnimatedButton'
 
 export default function VCHero() {
   const navigate = useNavigate()
+  const contentRef = useRef<HTMLDivElement>(null)
+  const mockInnerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } })
+    tl.fromTo(contentRef.current, { x: -160, opacity: 0 }, { x: 0, opacity: 1, duration: 2 })
+    tl.fromTo(mockInnerRef.current, { opacity: 0, filter: 'blur(16px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1.4 }, '<0.15')
+  }, [])
 
   function handleVerPlanos(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault()
@@ -24,7 +34,7 @@ export default function VCHero() {
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
 
           {/* Left — content */}
-          <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
+          <div ref={contentRef} className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
             <h1 className="text-[48px] font-black leading-[1.15] mb-6 text-black">
               Acelere a decisão<br />de compra com <span className="text-brand">vídeo.</span>
             </h1>
@@ -72,55 +82,56 @@ export default function VCHero() {
               left: '48%',
               right: 'calc(-50vw + 50%)',
               marginRight: '-2rem',
-              background: 'linear-gradient(135deg, #EEF3FF 0%, #C8D9FF 100%)',
             }}
           >
-            <div
-              className="absolute inset-0 z-[1] pointer-events-none"
-              style={{
-                background: 'linear-gradient(to right,#f6f6f6 0%,transparent 20%),linear-gradient(to bottom,transparent 60%,#f6f6f6 100%),linear-gradient(to top,transparent 80%,#f6f6f6 100%)',
-              }}
-            />
-            <div className="absolute inset-0 z-0 flex items-center justify-center">
-              <div className="flex items-end gap-6">
-                <div className="w-[110px] h-[196px] rounded-3xl bg-brand/20 flex-shrink-0 relative overflow-hidden">
-                  <div className="flex gap-[3px] p-[10px]">
-                    {[1, 2, 3].map((d) => (
-                      <div key={d} className="h-[3px] flex-1 rounded-full bg-white/40" />
-                    ))}
-                  </div>
-                </div>
-                <div className="w-[176px] h-[320px] rounded-[32px] bg-brand flex-shrink-0 relative overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-b from-brand to-[#003ab9]" />
-                  <div className="absolute inset-0 flex flex-col">
-                    <div className="flex gap-[3px] p-[12px]">
-                      {[1, 2, 3, 4].map((d) => (
-                        <div key={d} className={`h-[3px] flex-1 rounded-full ${d === 1 ? 'bg-white' : 'bg-white/30'}`} />
+            <div ref={mockInnerRef} className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #EEF3FF 0%, #C8D9FF 100%)' }}>
+              <div
+                className="absolute inset-0 z-[1] pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to right,#f6f6f6 0%,transparent 20%),linear-gradient(to bottom,transparent 60%,#f6f6f6 100%),linear-gradient(to top,transparent 80%,#f6f6f6 100%)',
+                }}
+              />
+              <div className="absolute inset-0 z-0 flex items-center justify-center">
+                <div className="flex items-end gap-6">
+                  <div className="w-[110px] h-[196px] rounded-3xl bg-brand/20 flex-shrink-0 relative overflow-hidden">
+                    <div className="flex gap-[3px] p-[10px]">
+                      {[1, 2, 3].map((d) => (
+                        <div key={d} className="h-[3px] flex-1 rounded-full bg-white/40" />
                       ))}
                     </div>
-                    <div className="absolute bottom-6 left-[10px] right-[10px] bg-white/90 rounded-2xl px-[12px] py-[10px] flex items-center gap-[8px]">
-                      <span className="text-[16px] font-black text-brand leading-none">🛒</span>
-                      <div>
-                        <div className="text-[12px] font-bold text-[#333] leading-none">Adicionar ao carrinho</div>
-                        <div className="text-[14px] font-black text-brand leading-none mt-[3px]">R$ 89,90</div>
+                  </div>
+                  <div className="w-[176px] h-[320px] rounded-[32px] bg-brand flex-shrink-0 relative overflow-hidden shadow-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-b from-brand to-[#003ab9]" />
+                    <div className="absolute inset-0 flex flex-col">
+                      <div className="flex gap-[3px] p-[12px]">
+                        {[1, 2, 3, 4].map((d) => (
+                          <div key={d} className={`h-[3px] flex-1 rounded-full ${d === 1 ? 'bg-white' : 'bg-white/30'}`} />
+                        ))}
+                      </div>
+                      <div className="absolute bottom-6 left-[10px] right-[10px] bg-white/90 rounded-2xl px-[12px] py-[10px] flex items-center gap-[8px]">
+                        <span className="text-[16px] font-black text-brand leading-none">🛒</span>
+                        <div>
+                          <div className="text-[12px] font-bold text-[#333] leading-none">Adicionar ao carrinho</div>
+                          <div className="text-[14px] font-black text-brand leading-none mt-[3px]">R$ 89,90</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="w-[110px] h-[196px] rounded-3xl bg-brand/35 flex-shrink-0 relative overflow-hidden">
-                  <div className="flex gap-[3px] p-[10px]">
-                    {[1, 2].map((d) => (
-                      <div key={d} className="h-[3px] flex-1 rounded-full bg-white/40" />
-                    ))}
+                  <div className="w-[110px] h-[196px] rounded-3xl bg-brand/35 flex-shrink-0 relative overflow-hidden">
+                    <div className="flex gap-[3px] p-[10px]">
+                      {[1, 2].map((d) => (
+                        <div key={d} className="h-[3px] flex-1 rounded-full bg-white/40" />
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="absolute bottom-16 left-0 right-0 flex gap-[10px] justify-center">
-                {['Stories', 'Carrossel', 'Explorar'].map((tag) => (
-                  <span key={tag} className="bg-brand/[0.15] text-brand text-[13px] font-bold px-[14px] py-[6px] rounded-full">
-                    {tag}
-                  </span>
-                ))}
+                <div className="absolute bottom-16 left-0 right-0 flex gap-[10px] justify-center">
+                  {['Stories', 'Carrossel', 'Explorar'].map((tag) => (
+                    <span key={tag} className="bg-brand/[0.15] text-brand text-[13px] font-bold px-[14px] py-[6px] rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
