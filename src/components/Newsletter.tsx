@@ -1,10 +1,31 @@
+import { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+
 export default function Newsletter() {
+  const circleRef = useRef<HTMLImageElement>(null)
+  const [hovered, setHovered] = useState(false)
+
+  useEffect(() => {
+    if (!circleRef.current) return
+    gsap.to(circleRef.current, {
+      rotation: 360,
+      duration: 15,
+      ease: 'none',
+      repeat: -1,
+    })
+  }, [])
+
   return (
     <section
       className="overflow-hidden bg-[#0A0A0A]"
       aria-labelledby="newsletter-heading"
     >
-      <div className="relative flex items-stretch min-h-[480px] bg-white/15 rounded-3xl my-12 mx-auto max-w-[1200px] overflow-hidden">
+      <div
+        className="relative flex items-stretch min-h-[480px] rounded-3xl my-12 mx-auto max-w-[1200px] overflow-hidden transition-colors duration-300"
+        style={{ backgroundColor: hovered ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.25)' }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         {/* Left: Form */}
         <div className="relative z-[2] flex flex-col justify-center px-12 py-16 w-1/2 shrink-0">
           <h2 id="newsletter-heading" className="text-[32px] font-normal text-white leading-[1.25] mb-6">
@@ -64,6 +85,16 @@ export default function Newsletter() {
         <div
           className="absolute inset-0 sm:hidden"
           style={{ background: 'rgba(0,0,0,0.65)' }}
+        />
+
+        {/* Widde circle — rotating, bottom-right */}
+        <img
+          ref={circleRef}
+          src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/680a51736c23104ce2446416_widde%20circle%20white.avif"
+          alt=""
+          aria-hidden="true"
+          className="widde-cicle is--large absolute z-[3] object-contain pointer-events-none"
+          style={{ width: 250, height: 250, bottom: -60, right: -80, opacity: hovered ? 1 : 0, transition: 'opacity 0.4s ease' }}
         />
       </div>
     </section>
