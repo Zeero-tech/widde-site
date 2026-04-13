@@ -5,7 +5,7 @@ import AnimatedButton from '@/components/AnimatedButton'
 export default function VCCta() {
   const navigate = useNavigate()
 
-  function handleVerDemonstracao(e: React.MouseEvent<HTMLAnchorElement>) {
+  function handleViewDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault()
     navigate('/?scrollTo=demo')
   }
@@ -31,7 +31,7 @@ export default function VCCta() {
           </AnimatedButton>
           <a
             href="/#demo"
-            onClick={handleVerDemonstracao}
+            onClick={handleViewDemo}
             className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
           >
             <span data-button-animate-chars="" className="btn-animate-chars__text">

@@ -7,7 +7,7 @@ export default function LogoTicker() {
     <section
       id="logo-ticker"
       className="bg-[#f6f6f6] py-7 overflow-hidden border-t border-b border-[#E9E9E9]"
-      aria-label="Marcas que usam Widde"
+      aria-label="Brands using Widde"
     >
       <div className="flex">
         <div className="flex animate-ticker whitespace-nowrap">

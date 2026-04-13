@@ -15,9 +15,9 @@ export default function Blog() {
         style={{ gridTemplateRows: 'auto auto auto auto auto', rowGap: 0 }}
         role="list"
       >
-        {blogPosts.map((post, i) => (
+        {blogPosts.map((post) => (
           <div
-            key={i}
+            key={post.title}
             role="listitem"
             className="rounded-[14px] overflow-hidden transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
             style={{ display: 'grid', gridRow: 'span 5', gridTemplateRows: 'subgrid', rowGap: '4px' }}

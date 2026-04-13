@@ -6,7 +6,7 @@ const stats = [
   { target: 40, prefix: '+', suffix: '%', label: 'na taxa de adição ao carrinho com vídeo shoppable' },
 ]
 
-export default function VCPorque() {
+export default function VCWhy() {
   return (
     <div className="bg-[#003ab9] rounded-[12px] md:rounded-[20px] px-6 py-10 md:px-25 md:py-30 my-30">
       {/* Top row: title left, paragraph right */}

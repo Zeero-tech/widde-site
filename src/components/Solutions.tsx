@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import AnimatedButton from "./AnimatedButton";
 import CountUp from "./CountUp";
-import React from "react";
 
 function useArticleReveal(direction: 'left' | 'right') {
   const ref = useRef<HTMLElement>(null)
@@ -28,7 +27,7 @@ function useArticleReveal(direction: 'left' | 'right') {
   return ref
 }
 
-export default function Solucoes() {
+export default function Solutions() {
   const vcRef = useArticleReveal('left')
   const liveRef = useArticleReveal('right')
   const tryonRef = useArticleReveal('left')

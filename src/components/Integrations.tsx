@@ -1,6 +1,6 @@
 import { integracoes } from '@/data/integracoes'
 
-export default function Integracoes() {
+export default function Integrations() {
   const doubled = [...integracoes, ...integracoes]
 
   return (
@@ -18,7 +18,7 @@ export default function Integracoes() {
 
       <div
         className="overflow-hidden -mx-4 md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
-        aria-label="Plataformas integradas"
+        aria-label="Integrated platforms"
       >
         <div className="flex gap-[10px] animate-scroll-logos">
           {doubled.map((logo, i) => (
