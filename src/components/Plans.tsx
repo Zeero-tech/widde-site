@@ -1,6 +1,6 @@
 import AnimatedButton from './AnimatedButton'
 
-export default function Planos() {
+export default function Plans() {
   return (
     <section id="planos" className="pt-10 md:pt-30" aria-labelledby="planos-heading">
       {/* Header */}

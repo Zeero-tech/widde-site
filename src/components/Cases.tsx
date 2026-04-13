@@ -15,9 +15,9 @@ export default function Cases() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]" role="list">
-        {cases.map((c, i) => (
+        {cases.map((c) => (
           <a
-            key={i}
+            key={c.title}
             href={c.link}
             role="listitem"
             className="rounded-[14px] overflow-hidden cursor-pointer flex flex-col no-underline transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.13)]"

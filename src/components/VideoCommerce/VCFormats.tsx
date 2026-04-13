@@ -1,4 +1,4 @@
-const formatos = [
+const formats = [
   {
     name: 'Stories',
     desc: 'Conteúdo vertical em tela cheia. Alta imersão e engajamento — o formato que o consumidor já conhece.',
@@ -123,7 +123,7 @@ const formatos = [
   },
 ]
 
-export default function VCFormatos() {
+export default function VCFormats() {
   return (
     <section aria-labelledby="formatos-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
@@ -133,7 +133,7 @@ export default function VCFormatos() {
         Todos os formatos de vídeo que sua loja precisa
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {formatos.map((f) => (
+        {formats.map((f) => (
           <div key={f.name} className="bg-[#F5F5F5] border border-[#E9E9E9]/70 rounded-2xl overflow-hidden">
             {f.thumb}
             <div className="p-4">

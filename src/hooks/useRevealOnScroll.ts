@@ -30,5 +30,5 @@ export function useRevealOnScroll(selector = '[data-reveal]') {
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill())
     }
-  }, [])
+  }, [selector])
 }

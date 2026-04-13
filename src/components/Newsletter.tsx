@@ -34,7 +34,7 @@ export default function Newsletter() {
           <form
             action="https://cta-redirect.rdstation.com/v2/conversions"
             className="flex flex-col gap-[10px]"
-            aria-label="Formulário de newsletter"
+            aria-label="Newsletter form"
           >
             <label htmlFor="nl-name" className="sr-only">Seu nome</label>
             <input

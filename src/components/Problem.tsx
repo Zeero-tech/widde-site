@@ -1,7 +1,7 @@
 import AnimatedButton from './AnimatedButton'
 import CountUp from './CountUp'
 
-export default function Problema() {
+export default function Problem() {
   return (
     <section
       className="rounded-[20px] px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"

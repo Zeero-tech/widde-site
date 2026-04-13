@@ -14,7 +14,7 @@ export default function VCHero() {
     tl.fromTo(mockInnerRef.current, { opacity: 0, filter: 'blur(16px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1.4 }, '<0.15')
   }, [])
 
-  function handleVerPlanos(e: React.MouseEvent<HTMLAnchorElement>) {
+  function handleViewPlans(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault()
     navigate('/?scrollTo=planos')
   }
@@ -62,7 +62,7 @@ export default function VCHero() {
               </AnimatedButton>
               <a
                 href="/#planos"
-                onClick={handleVerPlanos}
+                onClick={handleViewPlans}
                 className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
               >
                 <span data-button-animate-chars="" className="btn-animate-chars__text">

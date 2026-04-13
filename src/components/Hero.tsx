@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import AnimatedButton from './AnimatedButton'
 import { getLenis } from '../lib/lenis'
+import { easeOutQuint } from '../lib/easing'
 
 export default function Hero() {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -15,7 +16,7 @@ export default function Hero() {
 
   function handleVerDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault()
-    getLenis().scrollTo('#demo', { duration: 3, offset: -70, easing: (t) => 1 - Math.pow(1 - t, 5) })
+    getLenis().scrollTo('#demo', { duration: 3, offset: -70, easing: easeOutQuint })
   }
 
   return (

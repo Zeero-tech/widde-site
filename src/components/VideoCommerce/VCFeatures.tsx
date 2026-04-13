@@ -33,7 +33,7 @@ const cards = [
   },
 ]
 
-export default function VCFuncionalidades() {
+export default function VCFeatures() {
   return (
     <section aria-labelledby="func-heading" className="bg-[#e5e5e5] py-8 md:py-16">
       <div className="max-w-[1740px] mx-auto px-5 md:px-10 lg:px-20">
