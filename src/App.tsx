@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import { useLenis } from '@/lib/useLenis'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
@@ -12,8 +13,9 @@ import Blog from '@/components/Blog'
 import CtaFullWidth from '@/components/CtaFullWidth'
 import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
+import VideoCommerce from '@/pages/VideoCommerce'
 
-export default function App() {
+function Home() {
   useLenis()
 
   return (
@@ -34,5 +36,14 @@ export default function App() {
       <Newsletter />
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/solucoes/video-commerce" element={<VideoCommerce />} />
+    </Routes>
   )
 }
