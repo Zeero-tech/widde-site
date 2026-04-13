@@ -33,20 +33,20 @@ export default function Solucoes() {
   const tryonRef = useArticleReveal('left')
 
   return (
-    <section id="solucoes" className="pt-30" aria-labelledby="sol-heading">
+    <section id="solucoes" className="pt-10 md:pt-30" aria-labelledby="sol-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         O que a Widde faz
       </span>
-      <h2 id="sol-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-16">
+      <h2 id="sol-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-16">
         Conheça nossas soluções
       </h2>
 
-      <div className="flex flex-col gap-24 overflow-hidden">
+      <div className="flex flex-col gap-14 md:gap-24 overflow-hidden">
 
         {/* VIDEO COMMERCE */}
-        <article ref={vcRef} id="video-commerce" className="flex gap-16 items-stretch w-full">
+        <article ref={vcRef} id="video-commerce" className="flex flex-col md:flex-row gap-8 md:gap-16 items-stretch w-full">
           {/* Visual */}
-          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
+          <div className="w-full md:w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[260px] md:min-h-[400px]" aria-hidden="true">
             <div className="p-6 flex flex-col gap-2 w-full">
               <div className="flex gap-[7px] justify-center items-end">
                 <div className="rounded-[10px] bg-brand/25 relative overflow-hidden flex-shrink-0 w-[54px] h-[96px]">
@@ -74,9 +74,9 @@ export default function Solucoes() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col flex-1 justify-between py-8">
+          <div className="flex flex-col flex-1 justify-between py-0 md:py-8">
             <div>
-              <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Video Commerce</h3>
+              <h3 className="text-[22px] md:text-[32px] font-normal text-black mb-4 leading-[1.15]">Video Commerce</h3>
               <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
                 <strong>Saia do estático e tenha vídeos em Carrosséis, Destaques e Stories</strong> nas páginas do e-commerce. O consumidor vê o produto sendo usado, entende os detalhes e soluciona as objeções assistindo aos conteúdos.
               </p>
@@ -87,12 +87,12 @@ export default function Solucoes() {
             <div>
               <div className="flex gap-8 mb-10">
                 <div className="flex flex-col gap-1">
-                  <CountUp target={5} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                  <CountUp target={5} suffix="x" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                   <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais tempo na página com vídeo</span>
                 </div>
                 <div className="w-px bg-[#E9E9E9]" />
                 <div className="flex flex-col gap-1">
-                  <CountUp target={4} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                  <CountUp target={4} suffix="x" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                   <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais conversão de vendas</span>
                 </div>
               </div>
@@ -110,9 +110,9 @@ export default function Solucoes() {
         </article>
 
         {/* LIVE COMMERCE */}
-        <article ref={liveRef} id="live-commerce" className="flex flex-row-reverse gap-16 items-stretch w-full">
+        <article ref={liveRef} id="live-commerce" className="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-stretch w-full">
           {/* Visual */}
-          <div className="w-[48%] flex-shrink-0 bg-[#1a1a1a] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
+          <div className="w-full md:w-[48%] flex-shrink-0 bg-[#1a1a1a] rounded-2xl flex items-center justify-center overflow-hidden min-h-[260px] md:min-h-[400px]" aria-hidden="true">
             <div className="flex items-end gap-[10px] p-5">
               <div className="w-[110px] h-[196px] rounded-[14px] bg-[#0A0A0A] overflow-hidden relative flex-shrink-0">
                 <div className="absolute inset-0 opacity-75" style={{ background: 'linear-gradient(160deg,#003AB9,#2667F8)' }} />
@@ -143,12 +143,12 @@ export default function Solucoes() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col flex-1 justify-between py-8">
+          <div className="flex flex-col flex-1 justify-between py-0 md:py-8">
             <div>
               <span className="inline-block bg-[#1D1D1D] text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
                 Novo
               </span>
-              <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Live Commerce</h3>
+              <h3 className="text-[22px] md:text-[32px] font-normal text-black mb-4 leading-[1.15]">Live Commerce</h3>
               <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
                 <strong>Transmissão ao vivo onde a venda acontece.</strong> O consumidor assiste, engaja, tira dúvidas em tempo real, vê detalhes do produto ao vivo e compra durante a live, sem sair do seu site.
               </p>
@@ -158,12 +158,12 @@ export default function Solucoes() {
             </div>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <CountUp target={5} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                <CountUp target={5} suffix="x" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior engajamento vs. redes sociais</span>
               </div>
               <div className="w-px bg-[#E9E9E9]" />
               <div className="flex flex-col gap-1">
-                <CountUp target={60} prefix="+" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                <CountUp target={60} prefix="+" suffix="%" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior ticket médio durante a live</span>
               </div>
             </div>
@@ -171,9 +171,9 @@ export default function Solucoes() {
         </article>
 
         {/* TRYON */}
-        <article ref={tryonRef} id="provador-ia" className="flex gap-16 items-stretch w-full">
+        <article ref={tryonRef} id="provador-ia" className="flex flex-col md:flex-row gap-8 md:gap-16 items-stretch w-full">
           {/* Visual */}
-          <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
+          <div className="w-full md:w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[260px] md:min-h-[400px]" aria-hidden="true">
             <div className="flex gap-[10px] p-5 items-end">
               <div className="w-[100px] h-[188px] rounded-2xl bg-brand/[0.08] border border-brand/20 overflow-hidden flex flex-col flex-shrink-0">
                 <div className="flex-1 relative" style={{ background: 'linear-gradient(160deg,rgba(38,103,248,0.25),rgba(0,58,185,0.15))' }}>
@@ -195,12 +195,12 @@ export default function Solucoes() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col flex-1 justify-between py-8">
+          <div className="flex flex-col flex-1 justify-between py-0 md:py-8">
             <div>
               <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
                 Novo
               </span>
-              <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Provador IA</h3>
+              <h3 className="text-[22px] md:text-[32px] font-normal text-black mb-4 leading-[1.15]">Provador IA</h3>
               <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
                 Seu cliente prova o produto no próprio corpo, através de uma foto, como se estivesse na loja física, mas no seu site. <strong>Para vestuário e calçados: ele vê como fica antes de decidir.</strong>
               </p>
@@ -210,7 +210,7 @@ export default function Solucoes() {
             </div>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <CountUp target={93} suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                <CountUp target={93} suffix="%" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                 <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Satisfação dos consumidores com o resultado</span>
               </div>
             </div>

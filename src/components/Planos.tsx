@@ -2,12 +2,12 @@ import AnimatedButton from './AnimatedButton'
 
 export default function Planos() {
   return (
-    <section id="planos" className="pt-30" aria-labelledby="planos-heading">
+    <section id="planos" className="pt-10 md:pt-30" aria-labelledby="planos-heading">
       {/* Header */}
       <div className="flex justify-between items-end mb-7 flex-wrap gap-3">
         <div>
           <span className="block text-[12px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">Planos</span>
-          <h2 id="planos-heading" className="text-[28px] font-normal text-black leading-[1.25]">
+          <h2 id="planos-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25]">
             Escolha como começar
           </h2>
         </div>
@@ -17,7 +17,7 @@ export default function Planos() {
       </div>
 
       {/* Grid */}
-      <div className="grid gap-4" style={{ gridTemplateColumns: '1fr 2fr' }}>
+      <div className="grid gap-4 grid-cols-1 lg:grid-cols-[1fr_2fr]">
 
         {/* Starter */}
         <article className="bg-[#f6f6f6] border border-[#E9E9E9] rounded-[18px] p-9 relative">

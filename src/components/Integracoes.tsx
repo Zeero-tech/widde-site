@@ -5,11 +5,11 @@ export default function Integracoes() {
 
   return (
     <section
-      className="rounded-[20px] p-15 mt-30 overflow-hidden"
+      className="rounded-[20px] p-6 md:p-15 mt-30 overflow-hidden"
       style={{ background: '#003ab9ff' }}
       aria-labelledby="int-heading"
     >
-      <h2 id="int-heading" className="text-[24px] font-normal text-white leading-[1.25] mb-[10px] max-w-[440px]">
+      <h2 id="int-heading" className="text-[18px] md:text-[24px] font-normal text-white leading-[1.25] mb-[10px] max-w-[440px]">
         Integre facilmente com a plataforma que você utiliza
       </h2>
       <p className="text-[14px] text-white/50 leading-[1.6] mb-7">
@@ -17,7 +17,7 @@ export default function Integracoes() {
       </p>
 
       <div
-        className="overflow-hidden -mx-11 -mb-10 px-0 py-5"
+        className="overflow-hidden -mx-4 md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
         aria-label="Plataformas integradas"
       >
         <div className="flex gap-[10px] animate-scroll-logos">

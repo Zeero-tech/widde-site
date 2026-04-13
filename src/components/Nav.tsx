@@ -126,7 +126,7 @@ function SolucoesDropdown({ onClose, navigate, location, dark }: { onClose: () =
           position: 'absolute',
           top: 'calc(100% + 16px)',
           left: '50%',
-          width: 750,
+          width: 'min(90vw, 750px)',
           background: '#fff',
           borderRadius: 18,
           boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
@@ -265,7 +265,7 @@ export default function Nav() {
       className="sticky top-0 z-50 transition-colors duration-300"
       style={{ backgroundColor: isDark ? '#1a1a1a' : (scrolled ? '#ffffff' : '#f6f6f6') }}
     >
-      <div className="px-8 max-w-[1440px] mx-auto ">
+      <div className="px-4 md:px-8 max-w-[1440px] mx-auto ">
         <nav className="flex justify-between items-center p-3 relative min-h-[4.5rem]">
           <a href="/" aria-current="page" className="no-underline flex items-center" style={{ overflow: 'hidden', display: 'inline-flex', color: isDark ? 'white' : 'black' }} onClick={(e) => { e.preventDefault(); if (location.pathname === '/') { getLenis().scrollTo(0, { duration: 3, easing: (t) => 1 - Math.pow(1 - t, 5) }) } else { navigate('/') } }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 159 39" fill="none" style={{ overflow: 'hidden', display: 'block' }} stroke="currentColor" strokeWidth="1" strokeLinejoin="round" paintOrder="stroke fill">

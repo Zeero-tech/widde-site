@@ -22,7 +22,7 @@ export default function VCHero() {
   return (
     <section className="bg-[#1a1a1a] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 120px)' }}>
       {/* Breadcrumb */}
-      <div className="absolute top-0 left-0 right-0 z-10 max-w-[1440px] mx-auto px-8 pt-5">
+      <div className="absolute top-0 left-0 right-0 z-10 max-w-[1440px] mx-auto px-4 md:px-8 pt-5">
         <div className="text-[12px] text-[#aaa]">
           <a href="/" className="text-brand no-underline">Home</a>
           <span className="mx-[6px]">/</span>
@@ -30,15 +30,15 @@ export default function VCHero() {
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-8 h-full flex items-center" style={{ minHeight: 'inherit' }}>
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 h-full flex items-center" style={{ minHeight: 'inherit' }}>
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
 
           {/* Left — content */}
-          <div ref={contentRef} className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
-            <h1 className="text-[48px] font-black leading-[1.15] mb-6 text-white">
+          <div ref={contentRef} className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
+            <h1 className="text-[30px] md:text-[48px] font-black leading-[1.15] mb-6 text-white">
               Acelere a decisão<br />de compra com <span className="text-brand">vídeo.</span>
             </h1>
-            <p className="text-[15px] text-[#aaa] leading-[1.7] mb-8 max-w-[420px]">
+            <p className="text-[15px] text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
               Transforme qualquer conteúdo de vídeo em uma experiência de compra envolvente, diretamente no seu e-commerce — sem sair da loja.
             </p>
             <ul className="list-none flex flex-col gap-[10px] mb-10 p-0">
@@ -76,7 +76,7 @@ export default function VCHero() {
 
           {/* Right — static image */}
           <div
-            className="absolute top-0 bottom-0 overflow-hidden"
+            className="hidden md:block absolute top-0 bottom-0 overflow-hidden"
             aria-hidden="true"
             style={{ left: '48%', right: 'calc(-50vw + 50%)', marginRight: '-2rem' }}
           >

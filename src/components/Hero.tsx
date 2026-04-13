@@ -21,20 +21,20 @@ export default function Hero() {
   return (
     <section className="bg-[#f6f6f6] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 120px)' }}>
 
-      <div className="max-w-full mx-auto px-30 h-full flex items-center" style={{ minHeight: 'inherit' }}>
-        <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
+      <div className="max-w-full mx-auto px-5 md:px-30 h-full flex items-center" style={{ minHeight: 'inherit' }}>
+        <div className="relative flex flex-col md:flex-row items-stretch w-full" style={{ minHeight: 'inherit' }}>
           {/* Content */}
-          <div ref={contentRef} className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
+          <div ref={contentRef} className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
             <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-5">
               A experiência do físico para o online
             </span>
-            <h1 className="text-[48px] font-black leading-[1.15] mb-6 text-black">
+            <h1 className="text-[32px] md:text-[48px] font-black leading-[1.15] mb-6 text-black">
               Impulsione as vendas gerando confiança na experiência do <span className="text-brand">consumidor.</span>
             </h1>
-            <p className="text-[14px] text-[#666] leading-[1.7] mb-1 max-w-[620px]">
+            <p className="text-[14px] text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
               Se o consumidor não entender o valor do seu produto, ele vai comprar em outro lugar.
             </p>
-            <p className="font-bold text-[14px] text-[#666] leading-[1.7] mb-10 max-w-[620px]">
+            <p className="font-bold text-[14px] text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
               Por isso, com a Widde você ajuda o visitante a sentir, entender, escolher e comprar no seu site.
             </p>
             <div className="flex gap-3 flex-wrap">
@@ -56,7 +56,7 @@ export default function Hero() {
 
           {/* Video — stretches to right edge of viewport */}
           <div
-            className="absolute top-0 bottom-0 overflow-hidden"
+            className="hidden md:block absolute top-0 bottom-0 overflow-hidden"
             aria-hidden="true"
             style={{
               left: '48%',
