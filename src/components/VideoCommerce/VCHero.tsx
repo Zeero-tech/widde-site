@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 import AnimatedButton from '@/components/AnimatedButton'
 
 export default function VCHero() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
   const contentRef = useRef<HTMLDivElement>(null)
   const mockInnerRef = useRef<HTMLDivElement>(null)
 
@@ -24,9 +26,9 @@ export default function VCHero() {
       {/* Breadcrumb */}
       <div className="absolute top-0 left-0 right-0 z-10 max-w-[1440px] mx-auto px-4 md:px-8 pt-5">
         <div className="text-[12px] text-[#aaa]">
-          <a href="/" className="text-brand no-underline">Home</a>
+          <a href="/" className="text-brand no-underline">{t('vc.breadcrumb.home')}</a>
           <span className="mx-[6px]">/</span>
-          <strong className="text-[#ccc]">Video Commerce</strong>
+          <strong className="text-[#ccc]">{t('vc.breadcrumb.page')}</strong>
         </div>
       </div>
 
@@ -36,16 +38,16 @@ export default function VCHero() {
           {/* Left — content */}
           <div ref={contentRef} className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(10vh)' }}>
             <h1 className="text-[30px] md:text-[48px] font-black leading-[1.15] mb-6 text-white">
-              Acelere a decisão<br />de compra com <span className="text-brand">vídeo.</span>
+              {t('vc.hero.title')} <span className="text-brand">{t('vc.hero.titleHighlight')}</span>
             </h1>
             <p className="text-[15px] text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
-              Transforme qualquer conteúdo de vídeo em uma experiência de compra envolvente, diretamente no seu e-commerce — sem sair da loja.
+              {t('vc.hero.description')}
             </p>
             <ul className="list-none flex flex-col gap-[10px] mb-10 p-0">
               {[
-                'Stories, carrossel, destaques e explorar em todo o site',
-                'Integração sem dev — ativo em menos de 1 dia',
-                'Carrinho dentro do vídeo, sem interromper a experiência',
+                t('vc.hero.feature1'),
+                t('vc.hero.feature2'),
+                t('vc.hero.feature3'),
               ].map((item) => (
                 <li key={item} className="text-[14px] text-[#ccc] flex items-start gap-[10px]">
                   <span className="w-[18px] h-[18px] rounded-full flex items-center justify-center flex-shrink-0 mt-[1px] text-[10px] font-black bg-brand/[0.12] text-brand">✓</span>
@@ -58,7 +60,7 @@ export default function VCHero() {
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
                 className="inline-block bg-brand text-white text-[14px] font-bold px-7 py-[13px] rounded-full no-underline"
               >
-                Falar com vendas
+                {t('vc.hero.ctaSales')}
               </AnimatedButton>
               <a
                 href="/#planos"
@@ -66,7 +68,7 @@ export default function VCHero() {
                 className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
               >
                 <span data-button-animate-chars="" className="btn-animate-chars__text">
-                  {'Ver planos'.split('').map((char, i) => (
+                  {t('vc.hero.ctaPlans').split('').map((char, i) => (
                     <span key={i} style={{ transitionDelay: `${(i * 0.01).toFixed(2)}s`, whiteSpace: char === ' ' ? 'pre' : undefined }}>{char}</span>
                   ))}
                 </span>

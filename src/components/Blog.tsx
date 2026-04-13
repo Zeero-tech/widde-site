@@ -1,13 +1,15 @@
+import { useTranslation } from 'react-i18next'
 import { blogPosts } from '@/data/blog'
 
 export default function Blog() {
+  const { t } = useTranslation()
   return (
     <section id="blog" className="py-10 md:py-30" aria-labelledby="blog-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
-        Conteúdo
+        {t('blog.label')}
       </span>
       <h2 id="blog-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-6">
-        Conheça nosso blog
+        {t('blog.title')}
       </h2>
 
       <div

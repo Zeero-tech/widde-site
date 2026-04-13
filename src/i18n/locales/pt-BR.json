@@ -1,0 +1,233 @@
+{
+  "nav": {
+    "solutions": "Soluções",
+    "results": "Resultados",
+    "plans": "Planos",
+    "blog": "Blog",
+    "startNow": "Começar agora",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "tagNew": "Novo",
+    "videoCommerceDesc": "Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce",
+    "liveCommerceDesc": "Transmissões ao vivo com carrinho em tempo real e engajamento direto",
+    "tryOnDesc": "Experiência de experimentação virtual que elimina a principal objeção de compra"
+  },
+  "hero": {
+    "tagline": "A experiência do físico para o online",
+    "title": "Impulsione as vendas gerando confiança na experiência do",
+    "titleHighlight": "consumidor.",
+    "description": "Se o consumidor não entender o valor do seu produto, ele vai comprar em outro lugar.",
+    "descriptionBold": "Por isso, com a Widde você ajuda o visitante a sentir, entender, escolher e comprar no seu site.",
+    "ctaSales": "Falar com vendas",
+    "ctaLearnMore": "Conhecer mais"
+  },
+  "demo": {
+    "heading": "Como a Widde funciona?"
+  },
+  "problem": {
+    "label": "O problema",
+    "title": "A experiência online ainda afasta o consumidor",
+    "description": "Lojas que não investem em experiência perdem vendas todos os dias para o medo, a dúvida e a má apresentação do produto.",
+    "cta": "Falar com vendas →",
+    "stat1Label": "deixam de comprar por medo do produto não ser como descrito",
+    "stat2Label": "desistem por más experiências no e-commerce",
+    "stat3Label": "mais conversão em lojas com vídeo na jornada"
+  },
+  "solutions": {
+    "label": "O que a Widde faz",
+    "title": "Conheça nossas soluções",
+    "new": "Novo",
+    "learnMore": "Saiba mais",
+    "videoCommerce": {
+      "descBold": "Saia do estático e tenha vídeos em Carrosséis, Destaques e Stories",
+      "desc": "nas páginas do e-commerce. O consumidor vê o produto sendo usado, entende os detalhes e soluciona as objeções assistindo aos conteúdos.",
+      "desc2": "Com carrinho dentro do vídeo para",
+      "desc2Bold": "acelerar a compra.",
+      "stat1": "Mais tempo na página com vídeo",
+      "stat2": "Mais conversão de vendas",
+      "formatStories": "Stories",
+      "formatCarousel": "Carrossel",
+      "formatExplore": "Explorar"
+    },
+    "liveCommerce": {
+      "title": "Live Commerce",
+      "descBold": "Transmissão ao vivo onde a venda acontece.",
+      "desc": "O consumidor assiste, engaja, tira dúvidas em tempo real, vê detalhes do produto ao vivo e compra durante a live, sem sair do seu site.",
+      "desc2Bold": "Cria urgência, conexão e confiança na marca.",
+      "stat1": "Maior engajamento vs. redes sociais",
+      "stat2": "Maior ticket médio durante a live",
+      "mockLive": "AO VIVO",
+      "mockMessage1": "Ana: qual o tamanho? 👀",
+      "mockMessage2": "Carol: amei essa peça!",
+      "mockAddToCart": "Adicionar ao carrinho",
+      "mockProduct": "Jaqueta Jeans Premium",
+      "mockPrice": "R$ 349,90",
+      "mockSales": "💰 R$ 18.400 em vendas",
+      "mockSpectators": "👁 1.240 espectadores"
+    },
+    "tryOn": {
+      "title": "Provador IA",
+      "desc": "Seu cliente prova o produto no próprio corpo, através de uma foto, como se estivesse na loja física, mas no seu site.",
+      "descBold": "Para vestuário e calçados: ele vê como fica antes de decidir.",
+      "desc2Bold": "Menos dúvida na compra, menos devolução depois.",
+      "stat1": "Satisfação dos consumidores com o resultado"
+    }
+  },
+  "integrations": {
+    "title": "Integre facilmente com a plataforma que você utiliza",
+    "description": "Sem precisar de desenvolvimento. A Widde está presente nas principais plataformas de e-commerce do Brasil.",
+    "ariaLabel": "Integrated platforms"
+  },
+  "plans": {
+    "label": "Planos",
+    "title": "Escolha como começar",
+    "discountBadge": "💰 15% de desconto no plano anual",
+    "starterDesc": "Para lojas em fase inicial de conteúdo",
+    "starterFeature1": "Formato Stories",
+    "starterFeature2": "Até 75 vídeos ativos",
+    "starterFeature3": "Até 10K views/mês",
+    "starterFeature4": "Integração com Google Analytics",
+    "starterFeature5": "Personalização de cores e botões",
+    "starterFeature6": "Suporte via WhatsApp e Chat",
+    "starterCta": "Começar agora",
+    "proRecommended": "Recomendado para médias e grandes marcas",
+    "proTagline": "Sob medida para o seu negócio",
+    "proDesc": "Fale com vendas para montar o plano ideal",
+    "proFeature1": "Vídeos ilimitados",
+    "proFeature2": "40K views ou mais",
+    "proFeature3": "Video Commerce + Live Commerce + TryOn",
+    "proFeature4": "Gerente de contas dedicado",
+    "proFeature5": "Carrinho dentro do vídeo",
+    "proFeature6": "Widde IA para comentários",
+    "proCardTitle": "Para marcas que querem crescer de verdade",
+    "proCardDesc": "Grandes varejistas têm desafios únicos. O plano Pro é desenhado junto com você — volume, integrações, SLA e treinamento incluídos.",
+    "proCta": "Falar com vendas →"
+  },
+  "cases": {
+    "label": "Resultados reais",
+    "title": "Quem usa já converte mais",
+    "description": "Cases de marcas que transformaram a experiência de compra com a Widde.",
+    "readMore": "Saiba mais →",
+    "viewAll": "Ver todos os cases →"
+  },
+  "blog": {
+    "label": "Conteúdo",
+    "title": "Conheça nosso blog"
+  },
+  "newsletter": {
+    "title": "Assine a nossa newsletter",
+    "namePlaceholder": "Nome",
+    "emailPlaceholder": "Email",
+    "cta": "Realizar inscrição",
+    "imageAlt": "Time Widde",
+    "ariaLabel": "Newsletter form"
+  },
+  "footer": {
+    "plansAndPricing": "Planos e Preços",
+    "aboutUs": "Quem Somos",
+    "careers": "Portal de Vagas",
+    "blog": "Blog",
+    "helpCenter": "Central de Ajuda",
+    "privacyPolicy": "Política de privacidade",
+    "copyright": "© 2025 Widde | todos os direitos reservados",
+    "socialMedia": "Social media",
+    "footerLinks": "Footer links"
+  },
+  "vc": {
+    "breadcrumb": {
+      "home": "Home",
+      "page": "Video Commerce"
+    },
+    "hero": {
+      "title": "Acelere a decisão de compra com",
+      "titleHighlight": "vídeo.",
+      "description": "Transforme qualquer conteúdo de vídeo em uma experiência de compra envolvente, diretamente no seu e-commerce — sem sair da loja.",
+      "feature1": "Stories, carrossel, destaques e explorar em todo o site",
+      "feature2": "Integração sem dev — ativo em menos de 1 dia",
+      "feature3": "Carrinho dentro do vídeo, sem interromper a experiência",
+      "ctaSales": "Falar com vendas",
+      "ctaPlans": "Ver planos"
+    },
+    "why": {
+      "label": "Por que video commerce",
+      "title": "Vídeo é o formato que mais converte no e-commerce",
+      "description": "Consumidores que assistem a um vídeo de produto têm muito mais probabilidade de comprar. O vídeo reduz objeções, transmite confiança e aproxima o produto da realidade do cliente.",
+      "stat1": "dos consumidores preferem assistir a um vídeo a ler sobre um produto",
+      "stat2": "mais tempo na página em sessões com vídeo",
+      "stat3": "na taxa de adição ao carrinho com vídeo shoppable"
+    },
+    "formats": {
+      "label": "Formatos",
+      "title": "Todos os formatos de vídeo que sua loja precisa",
+      "appearsIn": "Aparece em:",
+      "stories": {
+        "name": "Stories",
+        "description": "Conteúdo vertical em tela cheia. Alta imersão e engajamento — o formato que o consumidor já conhece.",
+        "locations": ["Home", "PDP"],
+        "button": "Ver produto"
+      },
+      "carousel": {
+        "name": "Carrossel de Vídeos",
+        "description": "Mostre múltiplos produtos em sequência. O visitante descobre mais itens sem sair da página.",
+        "locations": ["Home", "Categorias"]
+      },
+      "highlights": {
+        "name": "Destaques da Loja",
+        "description": "Feed estilo rede social para campanhas, lançamentos e coleções. Imersivo e direto.",
+        "locations": ["Home", "Categorias"],
+        "example": "Festival Jaquetas · R$ 99"
+      },
+      "productHighlights": {
+        "name": "Destaques de Produto",
+        "description": "Vídeos organizados por tema na PDP — modo de uso, materiais, looks. O cliente tira todas as objeções antes de comprar.",
+        "locations": ["PDP"],
+        "productName": "Protetor Solar FPS 90",
+        "price": "R$ 89,90",
+        "tab1": "Como usar",
+        "tab2": "Ingredientes"
+      },
+      "explore": {
+        "name": "Explorar",
+        "description": "Página 100% dedicada a vídeos — o TikTok da sua loja. Máximo engajamento e descoberta de produtos.",
+        "locations": ["Página exclusiva"]
+      }
+    },
+    "features": {
+      "label": "Funcionalidades",
+      "title": "Tudo que você precisa para converter com vídeo",
+      "card1": {
+        "badge": "Conversão",
+        "title": "Carrinho dentro do vídeo",
+        "description": "O consumidor adiciona ao carrinho sem sair do vídeo. Zero fricção entre descoberta e compra."
+      },
+      "card2": {
+        "badge": "Analytics",
+        "title": "Dados por vídeo",
+        "description": "Views, engajamento, cliques e conversões por vídeo. Entenda exatamente qual conteúdo vende mais."
+      },
+      "card3": {
+        "badge": "Performance",
+        "title": "Zero impacto na velocidade",
+        "description": "Infraestrutura própria de streaming. Os vídeos não pesam no carregamento da loja — Core Web Vitals preservados."
+      },
+      "card4": {
+        "badge": "Engajamento",
+        "title": "Comentários nos vídeos",
+        "description": "Receba e responda dúvidas dos clientes diretamente nos vídeos. IA da Widde filtra e organiza automaticamente."
+      }
+    },
+    "cta": {
+      "label": "Falar com vendas",
+      "title": "Pronto para transformar seu e-commerce com vídeo?",
+      "description": "Nossa equipe responde em até 24h e monta uma proposta sob medida para o seu negócio.",
+      "ctaSales": "Falar com vendas",
+      "ctaLearnMore": "Conhecer mais"
+    },
+    "quote": {
+      "text": "\"Desde que começamos a trabalhar com a Widde, a experiência em nosso e-commerce alcançou um novo nível de interatividade.\"",
+      "author": "Time de E-commerce",
+      "company": "John John",
+      "cta": "Começar agora"
+    }
+  }
+}
