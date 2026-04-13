@@ -20,7 +20,7 @@ export interface IntegrationLogo {
   src: string
   alt: string
   featured?: boolean
-  width?: number
+  height?: number
 }
 
 export interface TickerLogo {
