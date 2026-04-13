@@ -1,12 +1,39 @@
+import AnimatedButton from '@/components/AnimatedButton'
+
 export default function VCQuote() {
   return (
-    <div className="bg-brand rounded-[20px] px-16 py-[96px] mt-30 text-center">
-      <div className="text-[22px] font-black text-white/60 tracking-[3px] mb-6">JOHN JOHN</div>
-      <p className="text-[20px] text-white leading-[1.6] max-w-[600px] mx-auto mb-5 italic font-normal">
-        "Com a Widde recebemos comentários dos clientes e fomos formatando o conteúdo que trazia mais engajamento. Os vídeos viraram o principal canal de dúvidas na PDP."
-      </p>
-      <div className="text-[13px] font-bold text-white/70">Time de E-commerce</div>
-      <div className="text-[12px] text-white/45 mt-[2px]">John John</div>
+    <div className="bg-[#0A0A0A] rounded-[20px] px-20 py-15 mt-30 flex items-center gap-25">
+      {/* Left: quote */}
+      <div className="flex-1">
+        <p className="text-[28px] text-white leading-[1.4] font-normal mb-6">
+          "Desde que começamos a trabalhar com a Widde, a experiência em nosso e-commerce alcançou um novo nível de interatividade."
+        </p>
+        <div className="text-[15px] font-bold text-white mb-[2px]">Time de E-commerce</div>
+        <div className="text-[13px] text-white/50 mb-8">John John</div>
+        <AnimatedButton
+          href="https://widde.io/demo"
+          className="inline-block bg-brand text-white text-[14px] font-bold px-6 py-3 rounded-full no-underline hover:opacity-90 transition-opacity"
+        >
+          Começar agora
+        </AnimatedButton>
+      </div>
+
+      {/* Right: phone mock with video */}
+      <div className="flex-shrink-0 w-[300px] mx-auto">
+        <div className="relative rounded-[24px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)] w-[240px]" style={{ aspectRatio: '9/16' }}>
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.png"
+          >
+            <source src="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.webm" type="video/webm" />
+            <source src="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
     </div>
   )
 }

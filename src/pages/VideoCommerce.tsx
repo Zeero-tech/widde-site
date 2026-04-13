@@ -2,7 +2,7 @@ import Nav from '@/components/Nav'
 import LogoTicker from '@/components/LogoTicker'
 import Cases from '@/components/Cases'
 import Integracoes from '@/components/Integracoes'
-import CtaFullWidth from '@/components/CtaFullWidth'
+import VCCta from '@/components/vc/VCCta'
 import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
 import VCHero from '@/components/vc/VCHero'
@@ -25,7 +25,7 @@ export default function VideoCommerce() {
         <Cases />
         <Integracoes />
       </main>
-      <CtaFullWidth />
+      <VCCta />
       <Footer />
     </>
   )
