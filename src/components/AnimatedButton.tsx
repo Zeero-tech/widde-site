@@ -4,7 +4,7 @@ interface AnimatedButtonProps {
   href: string
   children: string
   className?: string
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
 }
 
 function splitToSpans(text: string) {
