@@ -10,27 +10,34 @@ export default function Blog() {
         Conheça nosso blog
       </h2>
 
-      <div className="grid grid-cols-3 gap-[18px]" role="list">
+      <div
+        className="grid grid-cols-3 gap-x-[18px] gap-y-0"
+        style={{ gridTemplateRows: 'auto auto auto auto auto', rowGap: 0 }}
+        role="list"
+      >
         {blogPosts.map((post, i) => (
           <div
             key={i}
             role="listitem"
-            className="rounded-[14px] overflow-hidden transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col"
+            className="rounded-[14px] overflow-hidden transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+            style={{ display: 'grid', gridRow: 'span 5', gridTemplateRows: 'subgrid', rowGap: '4px' }}
           >
             <div
-              className="w-full h-[140px] flex-shrink-0"
-              style={{ background: post.bg }}
-            />
-            <div className="p-4 flex flex-col flex-1">
-              <p className="text-[10px] font-bold text-[#5d5d5d] uppercase tracking-[1px] mb-[7px]">
-                {post.category}
-              </p>
-              <p className="text-[16px] font-normal text-[#1d1d1d] leading-[1.4] mb-2 flex-1">{post.title}</p>
-              <p className="text-[14px] text-[#5d5d5d] leading-[1.5] mb-6">{post.desc}</p>
-              <a href={post.link} className="text-[14px] font-bold text-[#010b15] no-underline hover:underline">
-                Saiba mais →
-              </a>
+              className="w-full h-[180px] relative"
+              style={post.image ? {} : { background: post.bg }}
+            >
+              {post.image && (
+                <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              )}
             </div>
+            <p className="text-[10px] font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
+              {post.category}
+            </p>
+            <p className="text-[16px] font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">{post.title}</p>
+            <p className="text-[14px] text-[#5d5d5d] leading-[1.5] px-4 pt-1">{post.desc}</p>
+            <a href={post.link} className="text-[14px] font-bold text-[#010b15] no-underline hover:underline px-4 py-4 self-end">
+              Saiba mais →
+            </a>
           </div>
         ))}
       </div>

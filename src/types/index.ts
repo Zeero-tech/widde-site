@@ -9,6 +9,7 @@ export interface CasePost {
 
 export interface BlogPost {
   bg: string
+  image?: string
   category: string
   title: string
   desc: string

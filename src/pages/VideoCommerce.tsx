@@ -26,7 +26,6 @@ export default function VideoCommerce() {
         <Integracoes />
       </main>
       <CtaFullWidth />
-      <Newsletter />
       <Footer />
     </>
   )
