@@ -74,23 +74,26 @@ export default function Solucoes() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col flex-1 justify-between py-12">
+          <div className="flex flex-col flex-1 justify-between py-8">
             <div>
               <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Video Commerce</h3>
               <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
-                Stories, carrossel e destaque de produto com vídeo shoppable — em todo o seu e-commerce. O consumidor descobre, confia e compra sem sair da sua loja.
+                <strong>Saia do estático e tenha vídeos em Carrosséis, Destaques e Stories</strong> nas páginas do e-commerce. O consumidor vê o produto sendo usado, entende os detalhes e soluciona as objeções assistindo aos conteúdos.
+              </p>
+              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
+                Com carrinho dentro do vídeo para <strong>acelerar a compra.</strong>
               </p>
             </div>
             <div>
               <div className="flex gap-8 mb-10">
                 <div className="flex flex-col gap-1">
-                  <CountUp target={3} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                  <CountUp target={5} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
                   <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais tempo na página com vídeo</span>
                 </div>
                 <div className="w-px bg-[#E9E9E9]" />
                 <div className="flex flex-col gap-1">
-                  <CountUp target={40} prefix="+" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Taxa de adição ao carrinho</span>
+                  <CountUp target={4} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                  <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Mais conversão de vendas</span>
                 </div>
               </div>
               <a
@@ -140,32 +143,35 @@ export default function Solucoes() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col flex-1 justify-between py-12">
+          <div className="flex flex-col flex-1 justify-between py-8">
             <div>
               <span className="inline-block bg-[#1D1D1D] text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
                 Novo
               </span>
               <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Live Commerce</h3>
               <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
-                Transmissões ao vivo com carrinho em tempo real e engajamento direto dentro da sua loja. O consumidor assiste, interage e compra sem sair do site.
+                <strong>Transmissão ao vivo onde a venda acontece.</strong> O consumidor assiste, engaja, tira dúvidas em tempo real, vê detalhes do produto ao vivo e compra durante a live, sem sair do seu site.
+              </p>
+              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
+                <strong>Cria urgência, conexão e confiança na marca.</strong>
               </p>
             </div>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
                 <CountUp target={5} suffix="x" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior engajamento em lives vs. redes sociais</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior engajamento vs. redes sociais</span>
               </div>
               <div className="w-px bg-[#E9E9E9]" />
               <div className="flex flex-col gap-1">
                 <CountUp target={60} prefix="+" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Conversão em sessões com live ativa</span>
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Maior ticket médio durante a live</span>
               </div>
             </div>
           </div>
         </article>
 
         {/* TRYON */}
-        <article ref={tryonRef} id="try-on" className="flex gap-16 items-stretch w-full">
+        <article ref={tryonRef} id="provador-ia" className="flex gap-16 items-stretch w-full">
           {/* Visual */}
           <div className="w-[48%] flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden min-h-[400px]" aria-hidden="true">
             <div className="flex gap-[10px] p-5 items-end">
@@ -189,25 +195,23 @@ export default function Solucoes() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col flex-1 justify-between py-12">
+          <div className="flex flex-col flex-1 justify-between py-8">
             <div>
-              <span className="inline-block bg-[#1D1D1D] text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
+              <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
                 Novo
               </span>
-              <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">TryOn</h3>
+              <h3 className="text-[32px] font-normal text-black mb-4 leading-[1.15]">Provador IA</h3>
               <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
-                Experiência de experimentação virtual que elimina a principal objeção de compra. O consumidor visualiza como o produto fica antes de decidir — sem sair do site.
+                Seu cliente prova o produto no próprio corpo, através de uma foto, como se estivesse na loja física, mas no seu site. <strong>Para vestuário e calçados: ele vê como fica antes de decidir.</strong>
+              </p>
+              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
+                <strong>Menos dúvida na compra, menos devolução depois.</strong>
               </p>
             </div>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <CountUp target={708} suffix="%" duration={1800} className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">ROI com TryOn (Cajubrasil)</span>
-              </div>
-              <div className="w-px bg-[#E9E9E9]" />
-              <div className="flex flex-col gap-1">
-                <CountUp target={35} prefix="-" suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Redução na taxa de devolução</span>
+                <CountUp target={93} suffix="%" className="text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
+                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">Satisfação dos consumidores com o resultado</span>
               </div>
             </div>
           </div>
