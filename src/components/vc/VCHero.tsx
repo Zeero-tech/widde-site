@@ -10,7 +10,7 @@ export default function VCHero() {
   }
 
   return (
-    <section className="bg-[#f6f6f6] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <section className="bg-[#f6f6f6] overflow-hidden relative" style={{ minHeight: 'calc(100vh - 120px)' }}>
       {/* Breadcrumb — fixed to top of section */}
       <div className="absolute top-0 left-0 right-0 z-10 max-w-[1440px] mx-auto px-8 pt-5">
         <div className="text-[12px] text-[#aaa]">
