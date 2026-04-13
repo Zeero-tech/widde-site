@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 import AnimatedButton from './AnimatedButton'
 import { getLenis } from '../lib/lenis'
 
 export default function Hero() {
+  const contentRef = useRef<HTMLDivElement>(null)
+  const videoInnerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } })
+    tl.fromTo(contentRef.current, { x: -160, opacity: 0 }, { x: 0, opacity: 1, duration: 2 })
+    tl.fromTo(videoInnerRef.current, { opacity: 0, filter: 'blur(16px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1.4 }, '<0.15')
+  }, [])
+
   function handleVerDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault()
     getLenis().scrollTo('#demo', { duration: 3, offset: -70, easing: (t) => 1 - Math.pow(1 - t, 5) })
@@ -14,7 +24,7 @@ export default function Hero() {
       <div className="max-w-full mx-auto px-30 h-full flex items-center" style={{ minHeight: 'inherit' }}>
         <div className="relative flex items-stretch w-full" style={{ minHeight: 'inherit' }}>
           {/* Content */}
-          <div className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
+          <div ref={contentRef} className="flex-[0_0_50%] z-[2] flex flex-col py-20" style={{ justifyContent: 'center', paddingBottom: 'calc(30vh)' }}>
             <span className="block text-[11px] font-bold text-brand uppercase tracking-[2px] mb-5">
               Plataforma de conversão para e-commerce
             </span>
@@ -51,39 +61,30 @@ export default function Hero() {
               marginRight: '-2rem',
             }}
           >
-            <div
-              className="absolute inset-0 z-[1] pointer-events-none"
-              style={{
-                background: 'linear-gradient(to right,#f6f6f6 0%,transparent 20%),linear-gradient(to bottom,transparent 60%,#f6f6f6 100%),linear-gradient(to top,transparent 80%,#f6f6f6 100%)',
-              }}
-            />
-            <video
-              className="w-full h-full object-cover object-top"
-              style={{ display: 'block' }}
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source
-                src="https://videos.widde.io/widde-bucket-sp/335ad64a-0820-4ad1-bda6-b44474ed45fe/videos/79a89f7b-b9be-493f-ba6f-d070941150a3-1752673555899-1916263/video.mp4"
-                type="video/mp4"
+            <div ref={videoInnerRef} className="absolute inset-0">
+              <div
+                className="absolute inset-0 z-[1] pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to right,#f6f6f6 0%,#f6f6f6 8%,transparent 30%),linear-gradient(to bottom,transparent 60%,#f6f6f6 100%),linear-gradient(to top,transparent 80%,#f6f6f6 100%)',
+                }}
               />
-            </video>
+              <video
+                className="w-full h-full object-cover object-top"
+                style={{ display: 'block' }}
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source
+                  src="https://videos.widde.io/widde-bucket-sp/335ad64a-0820-4ad1-bda6-b44474ed45fe/videos/79a89f7b-b9be-493f-ba6f-d070941150a3-1752673555899-1916263/video.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Double chevron — bottom center of left half */}
-      {/* <div
-        className="absolute bottom-10 z-10"
-        style={{ left: '25%', transform: 'translateX(-50%)' }}
-        aria-hidden="true"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style={{ width: 28, height: 28, fill: '#1a1a2e', opacity: 0.4 }}>
-          <path d="M342.6 534.6C330.1 547.1 309.8 547.1 297.3 534.6L137.3 374.6C124.8 362.1 124.8 341.8 137.3 329.3C149.8 316.8 170.1 316.8 182.6 329.3L320 466.7L457.4 329.4C469.9 316.9 490.2 316.9 502.7 329.4C515.2 341.9 515.2 362.2 502.7 374.7L342.7 534.7zM502.6 182.6L342.6 342.6C330.1 355.1 309.8 355.1 297.3 342.6L137.3 182.6C124.8 170.1 124.8 149.8 137.3 137.3C149.8 124.8 170.1 124.8 182.6 137.3L320 274.7L457.4 137.4C469.9 124.9 490.2 124.9 502.7 137.4C515.2 149.9 515.2 170.2 502.7 182.7z" />
-        </svg>
-      </div> */}
 
     </section>
   )
