@@ -4,6 +4,7 @@ interface AnimatedButtonProps {
   href: string
   children: string
   className?: string
+  style?: React.CSSProperties
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
 }
 
@@ -21,9 +22,9 @@ function splitToSpans(text: string) {
   ))
 }
 
-export default function AnimatedButton({ href, children, className = '', onClick }: AnimatedButtonProps) {
+export default function AnimatedButton({ href, children, className = '', style, onClick }: AnimatedButtonProps) {
   return (
-    <a href={href} className={`btn-animate-chars ${className}`} onClick={onClick} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+    <a href={href} className={`btn-animate-chars ${className}`} onClick={onClick} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style }}>
       <span data-button-animate-chars="" className="btn-animate-chars__text">
         {splitToSpans(children)}
       </span>
