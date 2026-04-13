@@ -4,7 +4,7 @@ import CountUp from './CountUp'
 export default function Problema() {
   return (
     <section
-      className="rounded-[20px] px-16 py-20 flex gap-20 items-center"
+      className="rounded-[20px] px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
       style={{ background: '#000' }}
       aria-labelledby="problema-heading"
     >
@@ -13,7 +13,7 @@ export default function Problema() {
         <span className="block text-[12px] font-normal text-white/50 uppercase tracking-[2px] mb-3">
           O problema
         </span>
-        <h2 id="problema-heading" className="text-[26px] font-normal text-white leading-[1.25] mb-[10px]">
+        <h2 id="problema-heading" className="text-[20px] md:text-[26px] font-normal text-white leading-[1.25] mb-[10px]">
           A experiência online ainda afasta o consumidor
         </h2>
         <p className="text-[14px] text-white/55 leading-[1.65] mb-[22px]">
@@ -29,18 +29,18 @@ export default function Problema() {
 
       {/* Numbers */}
       <div
-        className="flex flex-col border-l border-white/15 pl-10 flex-shrink-0"
+        className="flex flex-col border-l border-white/15 pl-4 md:pl-10 flex-shrink-0"
       >
         <div className="py-6">
-          <CountUp target={84} suffix="%" className="text-[40px] font-normal text-white leading-none mb-2" />
+          <CountUp target={84} suffix="%" className="text-[28px] md:text-[40px] font-normal text-white leading-none mb-2" />
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">deixam de comprar por medo do produto não ser como descrito</div>
         </div>
         <div className="py-6 border-t border-white/15">
-          <CountUp target={65} suffix="%" className="text-[40px] font-normal text-white leading-none mb-2" />
+          <CountUp target={65} suffix="%" className="text-[28px] md:text-[40px] font-normal text-white leading-none mb-2" />
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">desistem por más experiências no e-commerce</div>
         </div>
         <div className="py-6 border-t border-white/15">
-          <CountUp target={2} suffix="x" className="text-[40px] font-normal text-white leading-none mb-2" />
+          <CountUp target={2} suffix="x" className="text-[28px] md:text-[40px] font-normal text-white leading-none mb-2" />
           <div className="text-[14px] text-white/55 leading-[1.4] max-w-[400px]">mais conversão em lojas com vídeo na jornada</div>
         </div>
       </div>

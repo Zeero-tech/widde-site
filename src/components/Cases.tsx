@@ -3,18 +3,18 @@ import AnimatedButton from './AnimatedButton'
 
 export default function Cases() {
   return (
-    <section id="cases" className="pt-30" aria-labelledby="cases-heading">
+    <section id="cases" className="pt-10 md:pt-30" aria-labelledby="cases-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         Resultados reais
       </span>
-      <h2 id="cases-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-2">
+      <h2 id="cases-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-2">
         Quem usa já converte mais
       </h2>
       <p className="text-[14px] text-[#5d5d5d] leading-[1.6] max-w-[520px] mb-8">
         Cases de marcas que transformaram a experiência de compra com a Widde.
       </p>
 
-      <div className="grid grid-cols-3 gap-[18px]" role="list">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]" role="list">
         {cases.map((c, i) => (
           <a
             key={i}
@@ -24,7 +24,7 @@ export default function Cases() {
           >
             {/* Thumbnail */}
             <div
-              className="w-full h-[290px] relative flex items-end"
+              className="w-full h-[200px] md:h-[290px] relative flex items-end"
               style={c.image ? {} : { background: c.bg }}
             >
               {c.image && (

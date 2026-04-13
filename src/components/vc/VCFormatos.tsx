@@ -129,7 +129,7 @@ export default function VCFormatos() {
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         Formatos
       </span>
-      <h2 id="formatos-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-9 max-w-[560px]">
+      <h2 id="formatos-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-9 max-w-[560px]">
         Todos os formatos de vídeo que sua loja precisa
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

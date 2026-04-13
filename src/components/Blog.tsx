@@ -2,16 +2,16 @@ import { blogPosts } from '@/data/blog'
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-30" aria-labelledby="blog-heading">
+    <section id="blog" className="py-10 md:py-30" aria-labelledby="blog-heading">
       <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
         Conteúdo
       </span>
-      <h2 id="blog-heading" className="text-[28px] font-normal text-black leading-[1.25] mb-6">
+      <h2 id="blog-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-6">
         Conheça nosso blog
       </h2>
 
       <div
-        className="grid grid-cols-3 gap-x-[18px] gap-y-0"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[18px] gap-y-0"
         style={{ gridTemplateRows: 'auto auto auto auto auto', rowGap: 0 }}
         role="list"
       >
@@ -23,7 +23,7 @@ export default function Blog() {
             style={{ display: 'grid', gridRow: 'span 5', gridTemplateRows: 'subgrid', rowGap: '4px' }}
           >
             <div
-              className="w-full h-[220px] relative"
+              className="w-full h-[180px] md:h-[220px] relative"
               style={post.image ? {} : { background: post.bg }}
             >
               {post.image && (
