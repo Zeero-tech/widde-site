@@ -30,8 +30,8 @@ export default function Integracoes() {
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="max-h-[18px] w-auto object-contain"
-                style={{ opacity: 0.8 }}
+                className="w-auto object-contain"
+                style={{ opacity: 0.8, maxHeight: 18, ...(logo.width ? { width: logo.width } : {}) }}
               />
             </div>
           ))}
