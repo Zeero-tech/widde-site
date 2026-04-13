@@ -80,7 +80,7 @@ export default function VCHero() {
             aria-hidden="true"
             style={{ left: '48%', right: 'calc(-50vw + 50%)', marginRight: '-2rem' }}
           >
-            <div ref={mockInnerRef} className="absolute inset-0">
+            <div ref={mockInnerRef} className="absolute inset-0" style={{ opacity: 0, filter: 'blur(16px)' }}>
               <div
                 className="absolute inset-0 z-[1] pointer-events-none"
                 style={{ background: 'linear-gradient(to right,#1a1a1a 0%,#1a1a1a 8%,transparent 30%),linear-gradient(to bottom,transparent 60%,#1a1a1a 100%),linear-gradient(to top,transparent 80%,#1a1a1a 100%)' }}
