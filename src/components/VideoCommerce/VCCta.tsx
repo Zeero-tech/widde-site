@@ -14,7 +14,7 @@ export default function VCCta() {
 
   return (
     <section className="py-10 md:py-20 relative overflow-hidden bg-[#E5E5E5]">
-      <div className="max-w-[1450px] mx-auto rounded-[16px] md:rounded-[24px] px-6 py-10 md:px-16 md:py-14 text-center relative z-10">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-2 text-center relative z-10">
         <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-4">
           {t("vc.cta.label")}
         </span>
