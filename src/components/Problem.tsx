@@ -6,7 +6,7 @@ export default function Problem() {
   const { t } = useTranslation()
   return (
     <section
-      className="rounded-[20px] px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
+      className="rounded-[20px] px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center shadow-[0_0_0_1px_rgb(233,233,233)]"
       style={{ background: '#000' }}
       aria-labelledby="problema-heading"
     >

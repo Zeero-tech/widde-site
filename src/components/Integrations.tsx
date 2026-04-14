@@ -7,7 +7,7 @@ export default function Integrations() {
 
   return (
     <section
-      className="rounded-[20px] p-6 md:p-15 mt-30 overflow-hidden"
+      className="rounded-[20px] p-6 md:p-15 mt-30 overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)]"
       style={{ background: '#003ab9ff' }}
       aria-labelledby="int-heading"
     >
