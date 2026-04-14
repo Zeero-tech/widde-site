@@ -19,10 +19,14 @@ import CasesCarousel from "@/components/CasesCarousel";
 import Integrations from "@/components/Integrations";
 import Plans from "@/components/Plans";
 import Blog from "@/components/Blog";
+import Blog2 from "@/components/Blog2";
+import Blog3 from "@/components/Blog3";
 import CtaFullWidth from "@/components/CtaFullWidth";
 import Newsletter from "@/components/Newsletter";
 import Newsletter2 from "@/components/Newsletter2";
 import Footer from "@/components/Footer";
+import Footer2 from "@/components/Footer2";
+import Footer3 from "@/components/Footer3";
 import VideoCommerce from "@/pages/VideoCommerce";
 
 function Home() {
@@ -83,11 +87,19 @@ function Home() {
         <div data-reveal>
           <Blog />
         </div>
+        <div data-reveal>
+          <Blog2 />
+        </div>
+        <div data-reveal>
+          <Blog3 />
+        </div>
       </main>
       <CtaFullWidth />
       <Newsletter />
       <Newsletter2 />
       <Footer />
+      <Footer2 />
+      <Footer3 />
     </>
   );
 }
