@@ -56,27 +56,27 @@ export default function Hero() {
             <span className="block text-xs font-bold text-brand uppercase tracking-[2px] mb-5">
               {t("hero.tagline")}
             </span>
-            <h1 className="text-3xl md:text-6xl font-black leading-[1.15] mb-6 text-black">
+            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-6 text-black">
               {t("hero.title")}{" "}
               <span className="text-brand">{t("hero.titleHighlight")}</span>
             </h1>
-            <p className="text-sm text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
+            <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
               {t("hero.description")}
             </p>
-            <p className="font-bold text-sm text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
+            <p className="font-bold text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
               {t("hero.descriptionBold")}
             </p>
             <div className="flex gap-3 flex-wrap">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block bg-brand text-white text-sm font-bold px-7 py-[13px] rounded-full no-underline"
+                className="inline-block bg-brand text-white  font-bold px-7 py-[13px] rounded-full no-underline"
               >
                 {t("hero.ctaSales")}
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
                 onClick={handleVerDemo}
-                className="inline-block bg-transparent text-black text-sm font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+                className="inline-block bg-transparent text-black  font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
                 {t("hero.ctaLearnMore")}
               </AnimatedButton>

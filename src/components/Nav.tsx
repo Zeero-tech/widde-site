@@ -150,7 +150,7 @@ function SolutionsDropdown({
 
   return (
     <div
-      className="relative -top-[3px]"
+      className="relative "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -283,7 +283,7 @@ function SolutionsDropdown({
                 }}
               >
                 <span
-                  className="text-sm"
+                  className=""
                   style={{
                     fontWeight: 800,
                     color: "#000",
@@ -490,7 +490,7 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
             <button
               key={code}
               onClick={() => select(code)}
-              className="text-sm"
+              className=""
               style={{
                 display: "block",
                 width: "100%",

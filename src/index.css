@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #2667F8;
-  --color-brand-dark: #1A3EAF;
-  --color-ink: #0A0A0A;
-  --font-sans: 'Lato', sans-serif;
+  --color-brand: #2667f8;
+  --color-brand-dark: #1a3eaf;
+  --color-ink: #0a0a0a;
+  --font-sans: "Lato", sans-serif;
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.75rem;
 }
 
 @layer base {
   html {
+    font-size: 16px;
     scroll-behavior: smooth;
   }
 
@@ -19,13 +22,14 @@
     will-change: opacity, transform, filter;
   }
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     background: #f6f6f6;
     color: #000;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
     display: block;
@@ -50,14 +54,22 @@
 
 /* Animação do logo ticker */
 @keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Animação do carrossel de integrações */
 @keyframes scroll-logos {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @utility animate-ticker {
@@ -66,6 +78,14 @@
 
 @utility animate-scroll-logos {
   animation: scroll-logos 60s linear infinite;
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Staggering button char animation */

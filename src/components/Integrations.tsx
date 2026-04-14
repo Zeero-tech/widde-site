@@ -1,26 +1,27 @@
-import { integracoes } from '@/data/integracoes'
-import { useTranslation } from 'react-i18next'
+import { integracoes } from "@/data/integracoes";
+import { useTranslation } from "react-i18next";
 
 export default function Integrations() {
-  const { t } = useTranslation()
-  const doubled = [...integracoes, ...integracoes]
+  const { t } = useTranslation();
+  const doubled = [...integracoes, ...integracoes];
 
   return (
     <section
       className="rounded-[20px] p-6 md:p-15 mt-30 overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)]"
-      style={{ background: '#003ab9ff' }}
+      style={{ background: "#003ab9ff" }}
       aria-labelledby="int-heading"
     >
-      <h2 id="int-heading" className="text-base md:text-xl font-normal text-white leading-[1.25] mb-[10px] max-w-[440px]">
-        {t('integrations.title')}
+      <h2
+        id="int-heading"
+        className="text-base md:text-4xl font-normal text-white mb-4 max-w-[440px]"
+      >
+        {t("integrations.title")}
       </h2>
-      <p className="text-sm text-white/50 leading-[1.6] mb-7">
-        {t('integrations.description')}
-      </p>
+      <p className=" text-white/50 mb-7">{t("integrations.description")}</p>
 
       <div
         className="overflow-hidden -mx-4 md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
-        aria-label={t('integrations.ariaLabel')}
+        aria-label={t("integrations.ariaLabel")}
       >
         <div className="flex gap-[10px] animate-scroll-logos">
           {doubled.map((logo, i) => (
@@ -40,5 +41,5 @@ export default function Integrations() {
         </div>
       </div>
     </section>
-  )
+  );
 }
