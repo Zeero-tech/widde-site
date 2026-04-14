@@ -22,7 +22,7 @@ export default function VCFormats() {
                   <div key={d} className={`h-[2px] flex-1 rounded-full ${i === 0 ? 'bg-white' : 'bg-white/35'}`} />
                 ))}
               </div>
-              <div className="absolute bottom-[8px] left-[5px] right-[5px] bg-white/20 rounded text-[7px] text-white font-bold text-center py-[3px]">
+              <div className="absolute bottom-[8px] left-[5px] right-[5px] bg-white/20 rounded text-xs text-white font-bold text-center py-[3px]">
                 {t('vc.formats.stories.button')}
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function VCFormats() {
         <div className="h-[190px] flex items-center justify-center bg-gradient-to-br from-[#EFF6FF] to-[#BFDBFE]">
           <div className="flex flex-col gap-[6px] px-3 w-full">
             <div className="rounded-lg h-[60px] flex items-center px-[10px]" style={{ background: '#3B82F6' }}>
-              <span className="text-[10px] font-black text-white">Festival Jaquetas · R$ 99</span>
+              <span className="text-xs font-black text-white">Festival Jaquetas · R$ 99</span>
             </div>
             <div className="flex gap-[5px]">
               {[1, 2, 3, 4].map((n) => (
@@ -75,11 +75,11 @@ export default function VCFormats() {
             <div className="flex gap-2">
               <div className="w-[60px] h-[80px] rounded-[7px] flex-shrink-0" style={{ background: 'rgba(99,102,241,0.25)' }} />
               <div className="flex-1">
-                <div className="text-[8px] font-bold text-[#333] mb-[3px]">Protetor Solar FPS 90</div>
-                <div className="text-[11px] font-black mb-[5px]" style={{ color: '#6366F1' }}>R$ 89,90</div>
+                <div className="text-xs font-bold text-[#333] mb-[3px]">Protetor Solar FPS 90</div>
+                <div className="text-xs font-black mb-[5px]" style={{ color: '#6366F1' }}>R$ 89,90</div>
                 <div className="flex gap-[3px] flex-wrap">
                   {['Como usar', 'Ingredientes'].map((tab) => (
-                    <span key={tab} className="text-[7px] font-bold rounded-full px-[5px] py-[2px]" style={{ background: 'rgba(99,102,241,0.1)', color: '#6366F1' }}>
+                    <span key={tab} className="text-xs font-bold rounded-full px-[5px] py-[2px]" style={{ background: 'rgba(99,102,241,0.1)', color: '#6366F1' }}>
                       {tab}
                     </span>
                   ))}
@@ -130,10 +130,10 @@ export default function VCFormats() {
 
   return (
     <section aria-labelledby="formatos-heading">
-      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
+      <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         {t('vc.formats.label')}
       </span>
-      <h2 id="formatos-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-9 max-w-[560px]">
+      <h2 id="formatos-heading" className="text-xl md:text-2xl font-normal text-black leading-[1.25] mb-9 max-w-[560px]">
         {t('vc.formats.title')}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -141,12 +141,12 @@ export default function VCFormats() {
           <div key={f.name} className="bg-[#F5F5F5] border border-[#E9E9E9]/70 rounded-2xl overflow-hidden">
             {f.thumb}
             <div className="p-4">
-              <div className="text-[14px] font-black text-black mb-[5px]">{f.name}</div>
-              <div className="text-[12px] text-[#777] leading-[1.5]">{f.desc}</div>
-              <div className="text-[11px] text-[#aaa] mt-2">
+              <div className="text-sm font-black text-black mb-[5px]">{f.name}</div>
+              <div className="text-xs text-[#777] leading-[1.5]">{f.desc}</div>
+              <div className="text-xs text-[#aaa] mt-2">
                 {t('vc.formats.appearsIn')}
                 {f.onde.map((lugar) => (
-                  <span key={lugar} className="bg-[#F0F0F0] rounded text-[10px] font-bold text-[#555] px-[7px] py-[2px] ml-1">{lugar}</span>
+                  <span key={lugar} className="bg-[#F0F0F0] rounded text-xs font-bold text-[#555] px-[7px] py-[2px] ml-1">{lugar}</span>
                 ))}
               </div>
             </div>

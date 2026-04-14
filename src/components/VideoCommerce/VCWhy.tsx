@@ -15,15 +15,15 @@ export default function VCWhy() {
       {/* Top row: title left, paragraph right */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14 mb-16">
         <div>
-          <span className="block text-[11px] font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
+          <span className="block text-xs font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
             {t('vc.why.label')}
           </span>
-          <h2 className="text-[20px] md:text-[26px] font-normal text-white leading-[1.25]">
+          <h2 className="text-lg md:text-2xl font-normal text-white leading-[1.25]">
             {t('vc.why.title')}
           </h2>
         </div>
         <div className="flex items-center">
-          <p className="text-[14px] text-white/50 leading-[1.6]">
+          <p className="text-sm text-white/50 leading-[1.6]">
             {t('vc.why.description')}
           </p>
         </div>
@@ -37,9 +37,9 @@ export default function VCWhy() {
               target={stat.target}
               prefix={stat.prefix}
               suffix={stat.suffix}
-              className="block text-[36px] md:text-[52px] font-light text-white leading-none mb-3"
+              className="block text-4xl md:text-7xl font-light text-white leading-none mb-3"
             />
-            <span className="text-[13px] text-white/50 leading-[1.4]">{t(`vc.why.stat${i + 1}`)}</span>
+            <span className="text-sm text-white/50 leading-[1.4]">{t(`vc.why.stat${i + 1}`)}</span>
           </div>
         ))}
       </div>
