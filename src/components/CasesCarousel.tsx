@@ -1,7 +1,16 @@
+import { useRef } from "react";
 import { cases } from "@/data/cases";
 import SectionTitle from "./SectionTitle";
 
 export default function CasesCarousel() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  function scroll(direction: "left" | "right") {
+    if (!scrollRef.current) return;
+    const amount = scrollRef.current.clientWidth * 0.6;
+    scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  }
+
   return (
     <section className="max-w-screen-xl mx-auto px-2">
       <SectionTitle
@@ -9,10 +18,22 @@ export default function CasesCarousel() {
         title="Histórias de sucesso a Widde"
         className="mb-8"
       />
-      {/* Horizontal scroll container */}
-      <div className="relative">
+
+      <div className="flex gap-3 items-stretch">
+        {/* Left arrow */}
+        <button
+          onClick={() => scroll("left")}
+          aria-label="Scroll para esquerda"
+          className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#f0f0f0] hover:bg-[#e4e4e4] transition-colors"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
         <div
-          className="flex gap-5 overflow-x-auto px-4 md:px-6 lg:px-8 pb-6 snap-x snap-mandatory scrollbar-hide"
+          ref={scrollRef}
+          className="flex flex-1 gap-5 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {cases.map((c) => (
@@ -62,6 +83,17 @@ export default function CasesCarousel() {
             </a>
           ))}
         </div>
+
+        {/* Right arrow */}
+        <button
+          onClick={() => scroll("right")}
+          aria-label="Scroll para direita"
+          className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#f0f0f0] hover:bg-[#e4e4e4] transition-colors"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
       </div>
     </section>
   );

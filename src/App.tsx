@@ -66,21 +66,21 @@ function Home() {
         <div data-reveal className="pb-30">
           <Solutions />
         </div>
-        <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-30">
           <Demo />
-        </div>
+        </div> */}
         <div data-reveal className="pb-30">
           <Demo2 />
         </div>
-        <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-30">
           <Problem />
-        </div>
+        </div> */}
         <div data-reveal className="pb-30">
           <Problem2 />
         </div>
-        <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-30">
           <Cases />
-        </div>
+        </div> */}
         <div data-reveal className="pb-30">
           <CasesCarousel />
         </div>
@@ -90,15 +90,15 @@ function Home() {
         <div data-reveal className="pb-30">
           <Plans />
         </div>
-        {/* <div data-reveal className="pb-30">
+        <div data-reveal className="pb-30">
           <Blog />
-        </div> */}
+        </div>
         {/* <div data-reveal className="pb-30">
           <Blog2 />
         </div> */}
-        <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-30">
           <Blog3 />
-        </div>
+        </div> */}
       </main>
       <CtaFullWidth />
       {/* <Newsletter /> */}
