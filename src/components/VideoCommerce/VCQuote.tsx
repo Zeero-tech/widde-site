@@ -8,14 +8,14 @@ export default function VCQuote() {
     <div className="bg-[#0A0A0A] rounded-[12px] md:rounded-[20px] px-6 py-8 md:px-20 md:py-15 mt-30 flex flex-col md:flex-row items-center gap-6 md:gap-25">
       {/* Left: quote */}
       <div className="flex-1">
-        <p className="text-[20px] md:text-[28px] text-white leading-[1.4] font-normal mb-6">
+        <p className="text-lg md:text-2xl text-white leading-[1.4] font-normal mb-6">
           {t('vc.quote.text')}
         </p>
-        <div className="text-[15px] font-bold text-white mb-[2px]">{t('vc.quote.author')}</div>
-        <div className="text-[13px] text-white/50 mb-8">{t('vc.quote.company')}</div>
+        <div className="text-sm font-bold text-white mb-[2px]">{t('vc.quote.author')}</div>
+        <div className="text-sm text-white/50 mb-8">{t('vc.quote.company')}</div>
         <AnimatedButton
           href="https://widde.io/demo"
-          className="inline-block bg-brand text-white text-[14px] font-bold px-6 py-3 rounded-full no-underline hover:opacity-90 transition-opacity"
+          className="inline-block bg-brand text-white text-sm font-bold px-6 py-3 rounded-full no-underline hover:opacity-90 transition-opacity"
         >
           {t('vc.quote.cta')}
         </AnimatedButton>
