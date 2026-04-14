@@ -185,7 +185,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-10 pt-6 border-t border-white/[0.08]">
-          <em className="text-[12px] text-white/35 not-italic">
+          <em className="text-xs text-white/35 not-italic">
             {t("footer.copyright")}
           </em>
         </div>

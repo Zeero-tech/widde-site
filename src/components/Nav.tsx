@@ -157,7 +157,7 @@ function SolutionsDropdown({
       <a
         href="#solucoes"
         onClick={(e) => handleClick("#solucoes", e)}
-        className="text-[16px] no-underline inline-flex items-center"
+        className="text-base no-underline inline-flex items-center"
         style={{ color: dark ? "white" : "#000" }}
       >
         {letters.map((char, i) => (
@@ -283,8 +283,8 @@ function SolutionsDropdown({
                 }}
               >
                 <span
+                  className="text-sm"
                   style={{
-                    fontSize: 14,
                     fontWeight: 800,
                     color: "#000",
                     lineHeight: 1.2,
@@ -294,8 +294,8 @@ function SolutionsDropdown({
                 </span>
                 {s.tag && (
                   <span
+                    className="text-xs"
                     style={{
-                      fontSize: 9,
                       fontWeight: 700,
                       color: "#fff",
                       background: "#2667F8",
@@ -310,8 +310,8 @@ function SolutionsDropdown({
                 )}
               </div>
               <p
+                className="text-xs"
                 style={{
-                  fontSize: 12,
                   color: "#666",
                   lineHeight: 1.55,
                   margin: 0,
@@ -367,7 +367,7 @@ function NavLink({
       onClick={handleClick}
       onMouseEnter={() => animate("out")}
       onMouseLeave={() => animate("in")}
-      className="text-[16px] no-underline inline-flex"
+      className="text-base no-underline inline-flex"
       style={{ color: dark ? "white" : "#000" }}
     >
       {letters.map((char, i) => (
@@ -490,6 +490,7 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
             <button
               key={code}
               onClick={() => select(code)}
+              className="text-sm"
               style={{
                 display: "block",
                 width: "100%",
@@ -498,7 +499,6 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
                 background: current === code ? "#f0f4ff" : "transparent",
                 border: "none",
                 cursor: "pointer",
-                fontSize: 13,
                 fontWeight: current === code ? 700 : 400,
                 color: "#000",
               }}
@@ -637,7 +637,7 @@ export default function Nav() {
 
           <LetterButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="hidden md:inline-flex bg-brand text-white text-[16px] font-bold px-5 py-[10px] rounded-full"
+            className="hidden md:inline-flex bg-brand text-white text-base font-bold px-5 py-[10px] rounded-full"
           >
             {t("nav.startNow")}
           </LetterButton>
