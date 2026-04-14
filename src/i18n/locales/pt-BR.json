@@ -27,12 +27,12 @@
   },
   "problem": {
     "label": "O problema",
-    "title": "A experiência online ainda afasta o consumidor",
-    "description": "Lojas que não investem em experiência perdem vendas todos os dias para o medo, a dúvida e a má apresentação do produto.",
+    "title": "A experiência online ainda afasta o cliente",
+    "description": "O consumidor não sabe como o produto funciona, como fica no corpo, se vale o investimento.",
     "cta": "Falar com vendas →",
     "stat1Label": "deixam de comprar por medo do produto não ser como descrito",
-    "stat2Label": "desistem por más experiências no e-commerce",
-    "stat3Label": "mais conversão em lojas com vídeo na jornada"
+    "stat2Label": "buscam vídeos antes de uma compra",
+    "stat3Label": "desistem por más experiências no e-commerce"
   },
   "solutions": {
     "label": "O que a Widde faz",
@@ -95,13 +95,14 @@
     "proTagline": "Sob medida para o seu negócio",
     "proDesc": "Fale com vendas para montar o plano ideal",
     "proFeature1": "Vídeos ilimitados",
-    "proFeature2": "40K views ou mais",
-    "proFeature3": "Video Commerce + Live Commerce + TryOn",
-    "proFeature4": "Gerente de contas dedicado",
-    "proFeature5": "Carrinho dentro do vídeo",
-    "proFeature6": "Widde IA para comentários",
+    "proFeature2": "Views customizados",
+    "proFeature3": "Video Commerce",
+    "proFeature4": "Live Commerce",
+    "proFeature5": "Provador IA",
+    "proFeature6": "Widde IA para análise de comentários",
+    "proFeature7": "Gerente de contas dedicado",
     "proCardTitle": "Para marcas que querem crescer de verdade",
-    "proCardDesc": "Grandes varejistas têm desafios únicos. O plano Pro é desenhado junto com você — volume, integrações, SLA e treinamento incluídos.",
+    "proCardDesc": "Grandes varejistas têm desafios únicos. O plano PRO é desenhado para o seu cenário: volume, soluções e integrações.",
     "proCta": "Falar com vendas →"
   },
   "cases": {

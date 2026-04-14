@@ -279,7 +279,7 @@ export default function Solutions() {
           {/* Content */}
           <div className="flex flex-col flex-1 px-8 justify-between py-0 md:py-8">
             <div>
-              <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
+              <span className="inline-block bg-[#1D1D1D] text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
                 {t("solutions.new")}
               </span>
               <h3 className="text-xl md:text-5xl font-normal text-black mb-4 leading-tight">
