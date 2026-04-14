@@ -21,7 +21,7 @@ export default function Blog() {
           <div
             key={post.title}
             role="listitem"
-            className="rounded-[14px] overflow-hidden transition-shadow hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+            className="rounded-[14px] overflow-hidden transition-shadow shadow-[0_0_0_1px_rgb(233,233,233)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
             style={{ display: 'grid', gridRow: 'span 5', gridTemplateRows: 'subgrid', rowGap: '4px' }}
           >
             <div
