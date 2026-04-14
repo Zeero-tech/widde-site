@@ -99,14 +99,6 @@ export default function LogoTicker2() {
                               </span>
                             )}
                           </div>
-                          <a
-                            href={logo.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs font-bold cursor-pointer text-white no-underline hover:underline"
-                          >
-                            Ir para o site →
-                          </a>
                         </div>
                       </div>
                     </div>

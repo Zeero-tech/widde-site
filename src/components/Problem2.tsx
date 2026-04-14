@@ -1,31 +1,79 @@
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
 import AnimatedButton from "./AnimatedButton";
 import CountUp from "./CountUp";
-import HighlightText from "./ui/highlight-text";
+
+const videos = [
+  "/problem-video/7679832-uhd_4096_2160_25fps.mp4",
+  "/problem-video/7680111-uhd_4096_2160_25fps.mp4",
+  "/problem-video/8126811-hd_1920_1080_25fps.mp4",
+];
+
+const DISPLAY_DURATION = 6000; // ms each video stays visible
+const FADE_DURATION = 1000;    // ms crossfade
 
 export default function Problem2() {
   const { t } = useTranslation();
+  const [current, setCurrent] = useState(0);
+  const [next, setNext] = useState<number | null>(null);
+  const [fading, setFading] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    timerRef.current = setTimeout(function advance() {
+      const nextIdx = (current + 1) % videos.length;
+      setNext(nextIdx);
+      setFading(true);
+
+      setTimeout(() => {
+        setCurrent(nextIdx);
+        setNext(null);
+        setFading(false);
+        timerRef.current = setTimeout(advance, DISPLAY_DURATION);
+      }, FADE_DURATION);
+    }, DISPLAY_DURATION);
+
+    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
+  }, [current]);
+
   return (
     <section
-      className="relative rounded-[20px] overflow-hidden px-5 md:px-16 mt-10 md:mt-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
+      className="relative rounded-[20px] overflow-hidden px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
       aria-labelledby="problema2-heading"
     >
-      {/* Video background */}
+      {/* Current video */}
       <video
+        key={current}
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
         loop
         playsInline
+        style={{ opacity: 1, transition: `opacity ${FADE_DURATION}ms ease` }}
       >
-        <source
-          src="https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4"
-          type="video/mp4"
-        />
+        <source src={videos[current]} type="video/mp4" />
       </video>
 
+      {/* Next video fading in */}
+      {next !== null && (
+        <video
+          key={`next-${next}`}
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            opacity: fading ? 1 : 0,
+            transition: `opacity ${FADE_DURATION}ms ease`,
+          }}
+        >
+          <source src={videos[next]} type="video/mp4" />
+        </video>
+      )}
+
       {/* Glass overlay */}
-      <div className="absolute inset-0 bg-black/55 backdrop-blur-md" />
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-md" />
 
       {/* Left */}
       <div className="relative z-10 flex-1">
@@ -36,9 +84,7 @@ export default function Problem2() {
           id="problema2-heading"
           className="text-lg md:text-2xl font-normal text-white leading-[1.25] mb-[10px]"
         >
-          <HighlightText highlightColor="var(--color-brand)" delay={0.2} duration={0.8}>
-            {t("problem.title")}
-          </HighlightText>
+          {t("problem.title")}
         </h2>
         <p className="text-white/55 leading-[1.65] mb-[22px]">
           {t("problem.description")}
