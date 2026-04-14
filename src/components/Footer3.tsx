@@ -1,3 +1,4 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
@@ -7,9 +8,9 @@ const footerColumns = [
     title: "Produto",
     links: [
       { label: "Video Commerce", href: "/video-commerce" },
-      { label: "Live Commerce", href: "#live-commerce" },
-      { label: "Provador IA", href: "#provador-ia" },
-      { label: "Planos", href: "/#planos" },
+      { label: "Live Commerce", href: "#live-commerce", scrollTo: "live-commerce" },
+      { label: "Provador IA", href: "#provador-ia", scrollTo: "provador-ia" },
+      { label: "Planos", href: "#planos", scrollTo: "planos" },
     ],
   },
   {
@@ -45,17 +46,27 @@ const footerColumns = [
   },
 ];
 
-function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
-  if (!href.startsWith("#")) return;
-  e.preventDefault();
-  getLenis().scrollTo(href, {
-    duration: 3.5,
-    offset: -70,
-    easing: easeOutQuint,
-  });
-}
-
 export default function Footer3() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>, link: { href: string; scrollTo?: string }) {
+    if (!link.scrollTo) return;
+    e.preventDefault();
+
+    if (location.pathname === "/") {
+      // Already on home — scroll directly with Lenis
+      getLenis().scrollTo(`#${link.scrollTo}`, {
+        duration: 3.5,
+        offset: -70,
+        easing: easeOutQuint,
+      });
+    } else {
+      // Navigate to home with scrollTo param — App.tsx handles the scroll
+      navigate(`/?scrollTo=${link.scrollTo}`);
+    }
+  }
+
   return (
     <footer className="bg-[#0A0A0A] text-white" role="contentinfo">
       <div className="px-5 md:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
@@ -83,7 +94,7 @@ export default function Footer3() {
                       className="text-sm text-white/50 no-underline hover:text-white transition-colors"
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                       rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      onClick={(e) => handleAnchorClick(e, link.href)}
+                      onClick={(e) => handleClick(e, link)}
                     >
                       {link.label}
                     </a>

@@ -30,7 +30,7 @@ export default function CasesCarousel() {
 
       <div className="flex gap-3 items-stretch">
         {/* Left arrow */}
-        <button
+        {/* <button
           onClick={() => scroll("left")}
           aria-label="Scroll para esquerda"
           className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#ebebeb] hover:bg-[#e4e4e4] transition-colors"
@@ -38,7 +38,7 @@ export default function CasesCarousel() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="15 18 9 12 15 6" />
           </svg>
-        </button>
+        </button> */}
 
         <div
           ref={scrollRef}
@@ -95,7 +95,7 @@ export default function CasesCarousel() {
         </div>
 
         {/* Right arrow */}
-        <button
+        {/* <button
           onClick={() => scroll("right")}
           aria-label="Scroll para direita"
           className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#ebebeb] hover:bg-[#e4e4e4] transition-colors"
@@ -103,7 +103,7 @@ export default function CasesCarousel() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="9 6 15 12 9 18" />
           </svg>
-        </button>
+        </button> */}
       </div>
     </section>
   );

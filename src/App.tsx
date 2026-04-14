@@ -67,12 +67,12 @@ function Home() {
         <div data-reveal className="pb-30">
           <Solutions />
         </div>
-        {/* <div data-reveal className="pb-30">
-          <Demo />
-        </div> */}
-        <div data-reveal className="pb-30">
-          <Demo2 />
-        </div>
+      </main>
+      {/* <div className="pb-30"><Demo /></div> */}
+      <div data-reveal className="pb-30">
+        <Demo2 />
+      </div>
+      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
         {/* <div data-reveal className="pb-30">
           <Problem />
         </div> */}

@@ -6,7 +6,8 @@ import AnimatedButton from "./AnimatedButton";
 export default function Demo2() {
   const { t } = useTranslation();
   return (
-    <section id="demo2">
+    <section id="demo2" className="bg-[#e5e5e5] py-10 md:py-16">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-2">
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
         {/* Video */}
         <div className="w-full md:w-[58%] rounded-2xl overflow-hidden">
@@ -40,6 +41,7 @@ export default function Demo2() {
             {t("demo.cta", "Falar com vendas")}
           </AnimatedButton>
         </div>
+      </div>
       </div>
     </section>
   );
