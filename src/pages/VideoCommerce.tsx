@@ -13,6 +13,8 @@ import VCFormats from '@/components/VideoCommerce/VCFormats'
 import VCFeatures from '@/components/VideoCommerce/VCFeatures'
 import VCQuote from '@/components/VideoCommerce/VCQuote'
 import LogoTicker2 from '@/components/LogoTicker2'
+import Footer3 from '@/components/Footer3'
+import CasesCarousel from '@/components/CasesCarousel'
 
 export default function VideoCommerce() {
   useLenis()
@@ -37,12 +39,14 @@ export default function VideoCommerce() {
       </main>
       <div data-reveal><VCFeatures /></div>
       <main className="max-w-screen-xl mx-auto px-5 md:px-2 mb-12 md:mb-30">
-        <div data-reveal><VCQuote /></div>
-        <div data-reveal><Cases /></div>
+        <div data-reveal className='pb-30'><VCQuote /></div>
+        <div data-reveal className="pb-30">
+          <CasesCarousel />
+        </div>
         <div data-reveal><Integrations /></div>
       </main>
       <VCCta />
-      <Footer />
+      <Footer3 />
     </>
   )
 }

@@ -57,15 +57,18 @@ export default function VCHero() {
           {/* Left — content */}
           <div
             ref={contentRef}
-            className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20"
+            className="w-full md:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-20"
             style={{ justifyContent: "center", paddingBottom: "calc(10vh)" }}
           >
-            <h1 className="text-3xl md:text-6xl font-black leading-[1.15] mb-6 text-white">
+            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-6 text-white">
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
-            <p className=" text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
+            <p className="text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
               {t("vc.hero.description")}
+            </p>
+            <p className="text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[560px]">
+              {t("vc.hero.description2")}
             </p>
             <ul className="list-none flex flex-col gap-[10px] mb-10 p-0">
               {[
@@ -123,7 +126,7 @@ export default function VCHero() {
             className="hidden md:block absolute top-0 bottom-0 overflow-hidden"
             aria-hidden="true"
             style={{
-              left: "48%",
+              left: "55%",
               right: "calc(-50vw + 50%)",
               marginRight: "-2rem",
             }}
