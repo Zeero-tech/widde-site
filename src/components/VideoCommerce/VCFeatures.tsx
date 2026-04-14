@@ -43,7 +43,7 @@ export default function VCFeatures() {
       aria-labelledby="func-heading"
       className="bg-[#e5e5e5] py-8 md:py-16"
     >
-      <div className="max-w-[1740px] mx-auto px-5 md:px-10 lg:px-20">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-2">
         <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
           {t("vc.features.label")}
         </span>

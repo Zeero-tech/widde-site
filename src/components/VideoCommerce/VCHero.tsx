@@ -36,7 +36,7 @@ export default function VCHero() {
       style={{ minHeight: "calc(100vh - 120px)" }}
     >
       {/* Breadcrumb */}
-      <div className="absolute top-0 left-0 right-0 z-10 max-w-screen-xl mx-auto px-4 md:px-8 pt-5">
+      <div className="absolute top-0 left-0 right-0 z-10 max-w-screen-xl mx-auto px-5 md:px-2 pt-5">
         <div className="text-xs text-[#aaa]">
           <a href="/" className="text-brand no-underline">
             {t("vc.breadcrumb.home")}
@@ -47,7 +47,7 @@ export default function VCHero() {
       </div>
 
       <div
-        className="max-w-screen-xl mx-auto px-4 md:px-8 h-full flex items-center"
+        className="max-w-screen-xl mx-auto px-5 md:px-2 h-full flex items-center"
         style={{ minHeight: "inherit" }}
       >
         <div

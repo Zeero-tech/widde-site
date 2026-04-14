@@ -2,11 +2,8 @@ import { Helmet } from 'react-helmet-async'
 import { useLenis } from '@/lib/useLenis'
 import { useRevealOnScroll } from '@/hooks/useRevealOnScroll'
 import Nav from '@/components/Nav'
-import LogoTicker from '@/components/LogoTicker'
-import Cases from '@/components/Cases'
 import Integrations from '@/components/Integrations'
 import VCCta from '@/components/VideoCommerce/VCCta'
-import Footer from '@/components/Footer'
 import VCHero from '@/components/VideoCommerce/VCHero'
 import VCWhy from '@/components/VideoCommerce/VCWhy'
 import VCFormats from '@/components/VideoCommerce/VCFormats'
@@ -32,18 +29,16 @@ export default function VideoCommerce() {
       </Helmet>
       <Nav />
       <VCHero />
-      <LogoTicker2 />
-      <main className="max-w-screen-xl mx-auto px-5 md:px-2 mb-12 md:mb-30">
-        <div data-reveal><VCWhy /></div>
-        <div data-reveal><VCFormats /></div>
+      <div className="pb-30"><LogoTicker2 /></div>
+      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
+        <div data-reveal className="pb-30"><VCWhy /></div>
+        <div data-reveal className="pb-30"><VCFormats /></div>
       </main>
-      <div data-reveal><VCFeatures /></div>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-2 mb-12 md:mb-30">
-        <div data-reveal className='pb-30'><VCQuote /></div>
-        <div data-reveal className="pb-30">
-          <CasesCarousel />
-        </div>
-        <div data-reveal><Integrations /></div>
+      <div className="pb-30"><VCFeatures /></div>
+      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
+        <div data-reveal className="pb-30"><VCQuote /></div>
+        <div data-reveal className="pb-30"><CasesCarousel /></div>
+        <div data-reveal className="pb-30"><Integrations /></div>
       </main>
       <VCCta />
       <Footer3 />
