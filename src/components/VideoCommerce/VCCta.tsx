@@ -1,15 +1,26 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AnimatedButton from "@/components/AnimatedButton";
+import { getLenis } from "@/lib/lenis";
+import { easeOutQuint } from "@/lib/easing";
 
 export default function VCCta() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { t } = useTranslation();
 
   function handleViewDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
-    navigate("/?scrollTo=demo");
+    if (location.pathname === "/") {
+      getLenis().scrollTo("#demo2", {
+        duration: 3.5,
+        offset: -70,
+        easing: easeOutQuint,
+      });
+    } else {
+      navigate("/?scrollTo=demo2");
+    }
   }
 
   return (
@@ -32,7 +43,7 @@ export default function VCCta() {
             {t("vc.cta.ctaSales")}
           </AnimatedButton>
           <a
-            href="/#demo"
+            href="/#demo2"
             onClick={handleViewDemo}
             className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black  font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
           >
