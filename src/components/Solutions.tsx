@@ -36,10 +36,10 @@ export default function Solutions() {
 
   return (
     <section id="solucoes" className="pt-10 md:pt-30" aria-labelledby="sol-heading">
-      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
+      <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
         {t('solutions.label')}
       </span>
-      <h2 id="sol-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-16">
+      <h2 id="sol-heading" className="text-xl md:text-2xl font-normal text-black leading-[1.25] mb-16">
         {t('solutions.title')}
       </h2>
 
@@ -52,25 +52,25 @@ export default function Solutions() {
             <div className="p-6 flex flex-col gap-2 w-full">
               <div className="flex gap-[7px] justify-center items-end">
                 <div className="rounded-[10px] bg-brand/25 relative overflow-hidden flex-shrink-0 w-[54px] h-[96px]">
-                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-[8px] text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">A</span>
+                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-xs text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">A</span>
                 </div>
                 <div className="rounded-[10px] bg-brand/50 relative overflow-hidden flex-shrink-0 w-[68px] h-[124px]">
-                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-[8px] text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">B</span>
+                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-xs text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">B</span>
                 </div>
                 <div className="rounded-[10px] bg-brand relative overflow-hidden flex-shrink-0 w-[90px] h-[158px]">
-                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-[8px] text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">{t('solutions.videoCommerce.formatCarousel')}</span>
+                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-xs text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">{t('solutions.videoCommerce.formatCarousel')}</span>
                 </div>
                 <div className="rounded-[10px] bg-brand/50 relative overflow-hidden flex-shrink-0 w-[68px] h-[124px]">
-                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-[8px] text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">C</span>
+                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-xs text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">C</span>
                 </div>
                 <div className="rounded-[10px] bg-brand/25 relative overflow-hidden flex-shrink-0 w-[54px] h-[96px]">
-                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-[8px] text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">D</span>
+                  <span className="absolute bottom-[6px] left-[5px] right-[5px] text-xs text-white bg-black/45 rounded px-[5px] py-[2px] font-bold">D</span>
                 </div>
               </div>
               <div className="flex gap-[6px] justify-center">
-                <span className="bg-brand/[0.12] text-brand text-[9px] font-bold px-[9px] py-[3px] rounded-full">{t('solutions.videoCommerce.formatStories')}</span>
-                <span className="bg-brand/[0.12] text-brand text-[9px] font-bold px-[9px] py-[3px] rounded-full">{t('solutions.videoCommerce.formatCarousel')}</span>
-                <span className="bg-brand/[0.12] text-brand text-[9px] font-bold px-[9px] py-[3px] rounded-full">{t('solutions.videoCommerce.formatExplore')}</span>
+                <span className="bg-brand/[0.12] text-brand text-xs font-bold px-[9px] py-[3px] rounded-full">{t('solutions.videoCommerce.formatStories')}</span>
+                <span className="bg-brand/[0.12] text-brand text-xs font-bold px-[9px] py-[3px] rounded-full">{t('solutions.videoCommerce.formatCarousel')}</span>
+                <span className="bg-brand/[0.12] text-brand text-xs font-bold px-[9px] py-[3px] rounded-full">{t('solutions.videoCommerce.formatExplore')}</span>
               </div>
             </div>
           </div>
@@ -78,29 +78,29 @@ export default function Solutions() {
           {/* Content */}
           <div className="flex flex-col flex-1 justify-between py-0 md:py-8">
             <div>
-              <h3 className="text-[22px] md:text-[32px] font-normal text-black mb-4 leading-[1.15]">Video Commerce</h3>
-              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
+              <h3 className="text-xl md:text-3xl font-normal text-black mb-4 leading-[1.15]">Video Commerce</h3>
+              <p className="text-sm text-[#2d2d2d] leading-[1.7] max-w-full">
                 <strong>{t('solutions.videoCommerce.descBold')}</strong> {t('solutions.videoCommerce.desc')}
               </p>
-              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
+              <p className="text-sm text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
                 {t('solutions.videoCommerce.desc2')} <strong>{t('solutions.videoCommerce.desc2Bold')}</strong>
               </p>
             </div>
             <div>
               <div className="flex gap-8 mb-10">
                 <div className="flex flex-col gap-1">
-                  <CountUp target={5} suffix="x" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">{t('solutions.videoCommerce.stat1')}</span>
+                  <CountUp target={5} suffix="x" className="text-3xl md:text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
+                  <span className="text-sm text-[#5d5d5d] leading-[1.4]">{t('solutions.videoCommerce.stat1')}</span>
                 </div>
                 <div className="w-px bg-[#E9E9E9]" />
                 <div className="flex flex-col gap-1">
-                  <CountUp target={4} suffix="x" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">{t('solutions.videoCommerce.stat2')}</span>
+                  <CountUp target={4} suffix="x" className="text-3xl md:text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
+                  <span className="text-sm text-[#5d5d5d] leading-[1.4]">{t('solutions.videoCommerce.stat2')}</span>
                 </div>
               </div>
               <a
                 href="/video-commerce"
-                className="inline-flex items-center gap-2 text-[14px] font-bold text-[#010b15] no-underline w-fit px-7 py-[11px] border border-black/20 rounded-full hover:border-black transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#010b15] no-underline w-fit px-7 py-[11px] border border-black/20 rounded-full hover:border-black transition-colors"
               >
                 {t('solutions.learnMore')}
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
@@ -118,13 +118,13 @@ export default function Solutions() {
             <div className="flex items-end gap-[10px] p-5">
               <div className="w-[110px] h-[196px] rounded-[14px] bg-[#0A0A0A] overflow-hidden relative flex-shrink-0">
                 <div className="absolute inset-0 opacity-75" style={{ background: 'linear-gradient(160deg,#003AB9,#2667F8)' }} />
-                <span className="absolute top-[9px] left-[9px] bg-[#FF3B30] text-white text-[8px] font-black px-[7px] py-[2px] rounded-full">{t('solutions.liveCommerce.mockLive')}</span>
-                <span className="absolute top-[9px] right-[9px] bg-black/50 text-white text-[8px] font-bold px-[6px] py-[2px] rounded-full">1.2k</span>
+                <span className="absolute top-[9px] left-[9px] bg-[#FF3B30] text-white text-xs font-black px-[7px] py-[2px] rounded-full">{t('solutions.liveCommerce.mockLive')}</span>
+                <span className="absolute top-[9px] right-[9px] bg-black/50 text-white text-xs font-bold px-[6px] py-[2px] rounded-full">1.2k</span>
                 <div className="absolute bottom-[55px] left-[6px] right-[6px] flex flex-col gap-[3px]">
-                  <div className="bg-black/50 rounded-[6px] px-[6px] py-[3px] text-[8px] text-white">{t('solutions.liveCommerce.mockMessage1')}</div>
-                  <div className="bg-black/50 rounded-[6px] px-[6px] py-[3px] text-[8px] text-white">{t('solutions.liveCommerce.mockMessage2')}</div>
+                  <div className="bg-black/50 rounded-[6px] px-[6px] py-[3px] text-xs text-white">{t('solutions.liveCommerce.mockMessage1')}</div>
+                  <div className="bg-black/50 rounded-[6px] px-[6px] py-[3px] text-xs text-white">{t('solutions.liveCommerce.mockMessage2')}</div>
                 </div>
-                <div className="absolute bottom-[7px] left-[7px] right-[7px] bg-brand rounded-[8px] px-2 py-[6px] text-[9px] font-bold text-white text-center">
+                <div className="absolute bottom-[7px] left-[7px] right-[7px] bg-brand rounded-[8px] px-2 py-[6px] text-xs font-bold text-white text-center">
                   {t('solutions.liveCommerce.mockAddToCart')}
                 </div>
               </div>
@@ -132,13 +132,13 @@ export default function Solutions() {
                 <div className="bg-white/90 border border-[#eee] rounded-[8px] p-2 flex items-center gap-[7px]">
                   <div className="w-[30px] h-[30px] rounded-[5px] bg-brand/20 flex-shrink-0" />
                   <div>
-                    <div className="text-[9px] font-bold text-black">{t('solutions.liveCommerce.mockProduct')}</div>
-                    <div className="text-[10px] font-black text-brand">{t('solutions.liveCommerce.mockPrice')}</div>
+                    <div className="text-xs font-bold text-black">{t('solutions.liveCommerce.mockProduct')}</div>
+                    <div className="text-xs font-black text-brand">{t('solutions.liveCommerce.mockPrice')}</div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-[5px]">
-                  <div className="bg-brand/[0.08] rounded-[6px] px-[10px] py-[6px] text-[9px] text-brand font-bold">{t('solutions.liveCommerce.mockSales')}</div>
-                  <div className="bg-brand/[0.08] rounded-[6px] px-[10px] py-[6px] text-[9px] text-brand font-bold">{t('solutions.liveCommerce.mockSpectators')}</div>
+                  <div className="bg-brand/[0.08] rounded-[6px] px-[10px] py-[6px] text-xs text-brand font-bold">{t('solutions.liveCommerce.mockSales')}</div>
+                  <div className="bg-brand/[0.08] rounded-[6px] px-[10px] py-[6px] text-xs text-brand font-bold">{t('solutions.liveCommerce.mockSpectators')}</div>
                 </div>
               </div>
             </div>
@@ -147,26 +147,26 @@ export default function Solutions() {
           {/* Content */}
           <div className="flex flex-col flex-1 justify-between py-0 md:py-8">
             <div>
-              <span className="inline-block bg-[#1D1D1D] text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
+              <span className="inline-block bg-[#1D1D1D] text-white text-xs font-bold px-3 py-[3px] rounded-full w-fit mb-4">
                 {t('solutions.new')}
               </span>
-              <h3 className="text-[22px] md:text-[32px] font-normal text-black mb-4 leading-[1.15]">{t('solutions.liveCommerce.title')}</h3>
-              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
+              <h3 className="text-xl md:text-3xl font-normal text-black mb-4 leading-[1.15]">{t('solutions.liveCommerce.title')}</h3>
+              <p className="text-sm text-[#2d2d2d] leading-[1.7] max-w-full">
                 <strong>{t('solutions.liveCommerce.descBold')}</strong> {t('solutions.liveCommerce.desc')}
               </p>
-              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
+              <p className="text-sm text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
                 <strong>{t('solutions.liveCommerce.desc2Bold')}</strong>
               </p>
             </div>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <CountUp target={5} suffix="x" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">{t('solutions.liveCommerce.stat1')}</span>
+                <CountUp target={5} suffix="x" className="text-3xl md:text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
+                <span className="text-sm text-[#5d5d5d] leading-[1.4]">{t('solutions.liveCommerce.stat1')}</span>
               </div>
               <div className="w-px bg-[#E9E9E9]" />
               <div className="flex flex-col gap-1">
-                <CountUp target={60} prefix="+" suffix="%" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">{t('solutions.liveCommerce.stat2')}</span>
+                <CountUp target={60} prefix="+" suffix="%" className="text-3xl md:text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
+                <span className="text-sm text-[#5d5d5d] leading-[1.4]">{t('solutions.liveCommerce.stat2')}</span>
               </div>
             </div>
           </div>
@@ -199,21 +199,21 @@ export default function Solutions() {
           {/* Content */}
           <div className="flex flex-col flex-1 justify-between py-0 md:py-8">
             <div>
-              <span className="inline-block bg-brand text-white text-[10px] font-bold px-3 py-[3px] rounded-full w-fit mb-4">
+              <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-[3px] rounded-full w-fit mb-4">
                 {t('solutions.new')}
               </span>
-              <h3 className="text-[22px] md:text-[32px] font-normal text-black mb-4 leading-[1.15]">{t('solutions.tryOn.title')}</h3>
-              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] max-w-full">
+              <h3 className="text-xl md:text-3xl font-normal text-black mb-4 leading-[1.15]">{t('solutions.tryOn.title')}</h3>
+              <p className="text-sm text-[#2d2d2d] leading-[1.7] max-w-full">
                 {t('solutions.tryOn.desc')} <strong>{t('solutions.tryOn.descBold')}</strong>
               </p>
-              <p className="text-[15px] text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
+              <p className="text-sm text-[#2d2d2d] leading-[1.7] mt-4 max-w-full">
                 <strong>{t('solutions.tryOn.desc2Bold')}</strong>
               </p>
             </div>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <CountUp target={93} suffix="%" className="text-[32px] md:text-[40px] font-normal text-[#1d1d1d] leading-none mb-1" />
-                <span className="text-[14px] text-[#5d5d5d] leading-[1.4]">{t('solutions.tryOn.stat1')}</span>
+                <CountUp target={93} suffix="%" className="text-3xl md:text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
+                <span className="text-sm text-[#5d5d5d] leading-[1.4]">{t('solutions.tryOn.stat1')}</span>
               </div>
             </div>
           </div>
