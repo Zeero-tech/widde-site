@@ -19,11 +19,11 @@ export default function Newsletter() {
 
   return (
     <section
-      className="overflow-hidden bg-[#0A0A0A]"
+      className="overflow-hidden bg-[#0A0A0A] px-5 md:px-2"
       aria-labelledby="newsletter-heading"
     >
       <div
-        className="relative flex items-stretch min-h-[480px] rounded-3xl my-12 mx-auto max-w-[1200px] overflow-hidden transition-colors duration-300"
+        className="relative flex items-stretch min-h-[480px] rounded-3xl my-12 mx-auto max-w-screen-xl overflow-hidden transition-colors duration-300"
         style={{ backgroundColor: hovered ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.25)' }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}

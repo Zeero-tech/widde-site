@@ -22,7 +22,7 @@ export default function Plans() {
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-[1fr_2fr]">
 
         {/* Starter */}
-        <article className="bg-[#f6f6f6] border border-[#E9E9E9] rounded-[18px] p-9 relative">
+        <article className="bg-[#f6f6f6] rounded-[18px] p-9 relative shadow-[0_0_0_1px_rgb(233,233,233)]">
           <h3 className="text-base font-normal text-black mb-[6px]">Starter</h3>
           <div className="text-3xl font-normal text-black mb-1 leading-none">
             R$399<sub className="text-sm font-normal text-[#888]">/mês</sub>
@@ -52,7 +52,7 @@ export default function Plans() {
         </article>
 
         {/* Pro */}
-        <article className="bg-[#0A0A0A] border border-[#0A0A0A] rounded-[18px] p-9 relative overflow-visible">
+        <article className="bg-[#0A0A0A] rounded-[18px] p-9 relative overflow-visible shadow-[0_0_0_1px_rgb(233,233,233)]">
           {/* Decorative SVG circles */}
           <svg
             className="absolute top-7 right-7 opacity-20"
