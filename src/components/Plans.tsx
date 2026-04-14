@@ -122,7 +122,7 @@ export default function Plans() {
                 </p>
               </div>
               <AnimatedButton
-                href="#contato"
+                href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
                 className="inline-block bg-brand text-white  font-bold px-[22px] py-[11px] rounded-full no-underline border border-brand w-fit"
               >
                 {t("plans.proCta")}

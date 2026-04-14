@@ -13,7 +13,7 @@ export default function Integrations() {
     >
       <h2
         id="int-heading"
-        className="text-base md:text-3xl leading-normal font-normal text-white mb-4 max-w-[440px]"
+        className="text-base md:text-3xl leading-normal font-normal text-white mb-4 max-w-[740px]"
       >
         {t("integrations.title")}
       </h2>
