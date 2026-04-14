@@ -5,10 +5,10 @@ export default function Blog() {
   const { t } = useTranslation()
   return (
     <section id="blog" className="py-10 md:py-30" aria-labelledby="blog-heading">
-      <span className="block text-[11px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
+      <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
         {t('blog.label')}
       </span>
-      <h2 id="blog-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25] mb-6">
+      <h2 id="blog-heading" className="text-xl md:text-2xl font-normal text-black leading-[1.25] mb-6">
         {t('blog.title')}
       </h2>
 
@@ -32,12 +32,12 @@ export default function Blog() {
                 <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               )}
             </div>
-            <p className="text-[10px] font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
+            <p className="text-xs font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
               {post.category}
             </p>
-            <p className="text-[16px] font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">{post.title}</p>
-            <p className="text-[14px] text-[#5d5d5d] leading-[1.5] px-4 pt-1">{post.desc}</p>
-            <a href={post.link} className="text-[14px] font-bold text-[#010b15] no-underline hover:underline px-4 py-4 self-end">
+            <p className="text-base font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">{post.title}</p>
+            <p className="text-sm text-[#5d5d5d] leading-[1.5] px-4 pt-1">{post.desc}</p>
+            <a href={post.link} className="text-sm font-bold text-[#010b15] no-underline hover:underline px-4 py-4 self-end">
               Saiba mais →
             </a>
           </div>
