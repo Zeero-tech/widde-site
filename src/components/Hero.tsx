@@ -63,8 +63,11 @@ export default function Hero() {
             <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
               {t("hero.description")}
             </p>
-            <p className="font-bold text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
+            <p className="font-bold text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
               {t("hero.descriptionBold")}
+            </p>
+            <p className="font-bold text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
+              {t("hero.descriptionProducts")}
             </p>
             <div className="flex gap-3 flex-wrap">
               <AnimatedButton
