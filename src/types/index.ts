@@ -28,4 +28,7 @@ export interface TickerLogo {
   url: string
   img?: string
   width?: number
+  platform?: string
+  segment?: string
+  demoUrl?: string
 }
