@@ -42,15 +42,22 @@ function MapImage() {
 
 export default function Hero2() {
   const cardRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const [mapOpen, setMapOpen] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
+    tl.fromTo(
+      contentRef.current!.children,
+      { x: -160, opacity: 0 },
+      { x: 0, opacity: 1, duration: 2, stagger: 0.12 },
+    );
     tl.fromTo(
       cardRef.current,
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2 },
+      { opacity: 0, filter: "blur(16px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 1.4 },
+      "<0.15",
     );
   }, []);
 
@@ -78,6 +85,7 @@ export default function Hero2() {
 
           {/* Content */}
           <div
+            ref={contentRef}
             className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 py-20 md:py-28"
             style={{ minHeight: "inherit" }}
           >

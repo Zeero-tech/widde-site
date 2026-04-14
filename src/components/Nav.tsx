@@ -35,10 +35,7 @@ function VideoCommerceIcon() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
-      <rect x="8" y="14" width="24" height="20" rx="4" fill="#222" />
-      <path d="M32 20l8-5v18l-8-5V20z" fill="#222" />
-      <circle cx="20" cy="24" r="5" fill="white" opacity="0.15" />
-      <path d="M18 21.5v5l4.5-2.5L18 21.5z" fill="white" />
+      <path d="M20 17l11 7-11 7V17z" stroke="var(--color-brand)" strokeWidth="2" strokeLinejoin="round" fill="none" />
     </svg>
   );
 }
@@ -47,13 +44,11 @@ function LiveCommerceIcon() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
-      <circle cx="24" cy="24" r="12" stroke="#222" strokeWidth="2.5" fill="none" />
-      <circle cx="24" cy="24" r="5" fill="#222" />
-      <circle cx="24" cy="24" r="2.5" fill="white" />
-      <path d="M15 14.5A13.9 13.9 0 0 1 24 11" stroke="#222" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M33 14.5A13.9 13.9 0 0 0 24 11" stroke="#222" strokeWidth="2.5" strokeLinecap="round" />
-      <rect x="19" y="34" width="10" height="3" rx="1.5" fill="#222" />
-      <rect x="22" y="37" width="4" height="2" rx="1" fill="#222" />
+      <circle cx="24" cy="24" r="3" fill="var(--color-brand)" />
+      <path d="M17 24a7 7 0 0 1 7-7" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M31 24a7 7 0 0 1-7 7" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M13 24a11 11 0 0 1 11-11" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M35 24a11 11 0 0 1-11 11" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
     </svg>
   );
 }
@@ -63,18 +58,18 @@ function TryOnIcon() {
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
       {/* Mirror frame */}
-      <rect x="17" y="10" width="14" height="22" rx="7" stroke="#222" strokeWidth="2.2" fill="none" />
+      <rect x="17" y="10" width="14" height="22" rx="7" stroke="var(--color-brand)" strokeWidth="2.2" fill="none" />
       {/* Person inside mirror */}
-      <circle cx="24" cy="18" r="2.5" fill="#222" />
-      <path d="M20 28c0-3 1.8-5 4-5s4 2 4 5" stroke="#222" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <circle cx="24" cy="18" r="2.5" fill="var(--color-brand)" />
+      <path d="M20 28c0-3 1.8-5 4-5s4 2 4 5" stroke="var(--color-brand)" strokeWidth="1.8" strokeLinecap="round" fill="none" />
       {/* Mirror stand */}
-      <path d="M24 32v4" stroke="#222" strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M20 36h8" stroke="#222" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M24 32v4" stroke="var(--color-brand)" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M20 36h8" stroke="var(--color-brand)" strokeWidth="2.2" strokeLinecap="round" />
       {/* Person outside mirror (left side) */}
-      <circle cx="10" cy="20" r="2.2" fill="#222" opacity="0.45" />
-      <path d="M7 29c0-2.5 1.3-4 3-4s3 1.5 3 4" stroke="#222" strokeWidth="1.6" strokeLinecap="round" fill="none" opacity="0.45" />
+      <circle cx="10" cy="20" r="2.2" fill="var(--color-brand)" opacity="0.45" />
+      <path d="M7 29c0-2.5 1.3-4 3-4s3 1.5 3 4" stroke="var(--color-brand)" strokeWidth="1.6" strokeLinecap="round" fill="none" opacity="0.45" />
       {/* Reflection arrows */}
-      <path d="M14 22h3" stroke="#222" strokeWidth="1.5" strokeLinecap="round" markerEnd="url(#arrow)" opacity="0.5" />
+      <path d="M14 22h3" stroke="var(--color-brand)" strokeWidth="1.5" strokeLinecap="round" markerEnd="url(#arrow)" opacity="0.5" />
     </svg>
   );
 }
