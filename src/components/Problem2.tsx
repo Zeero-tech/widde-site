@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import AnimatedButton from "./AnimatedButton";
 import CountUp from "./CountUp";
+import HighlightText from "./ui/highlight-text";
 
 export default function Problem2() {
   const { t } = useTranslation();
@@ -35,7 +36,9 @@ export default function Problem2() {
           id="problema2-heading"
           className="text-lg md:text-2xl font-normal text-white leading-[1.25] mb-[10px]"
         >
-          <span className="bg-brand px-2 py-1">{t("problem.title")}</span>
+          <HighlightText highlightColor="var(--color-brand)" delay={0.2} duration={0.8}>
+            {t("problem.title")}
+          </HighlightText>
         </h2>
         <p className="text-white/55 leading-[1.65] mb-[22px]">
           {t("problem.description")}
