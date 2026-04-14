@@ -2,8 +2,8 @@ import AnimatedButton from './AnimatedButton'
 
 export default function CtaFullWidth() {
   return (
-    <section id="contato" className="bg-[#0A0A0A] pt-30 pb-20 px-10 text-center" aria-labelledby="cta-heading">
-      <div className="max-w-[900px] mx-auto">
+    <section id="contato" className="bg-[#0A0A0A] pt-30 pb-20 px-5 md:px-2 text-center" aria-labelledby="cta-heading">
+      <div className="max-w-screen-xl mx-auto">
         <h2 id="cta-heading" className="text-2xl font-black text-white mb-9 leading-[1.3]">
           Vamos começar a transformação<br />do seu e-commerce?
         </h2>
