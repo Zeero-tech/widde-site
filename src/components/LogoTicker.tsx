@@ -1,7 +1,13 @@
-import { tickerLogos } from '@/data/logos'
+import { tickerLogos } from "@/data/logos";
 
 export default function LogoTicker() {
-  const doubled = [...tickerLogos, ...tickerLogos, ...tickerLogos, ...tickerLogos, ...tickerLogos]
+  const doubled = [
+    ...tickerLogos,
+    ...tickerLogos,
+    ...tickerLogos,
+    ...tickerLogos,
+    ...tickerLogos,
+  ];
 
   return (
     <section
@@ -19,14 +25,24 @@ export default function LogoTicker() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 border-r border-[#eee] flex-shrink-0 h-10 no-underline opacity-50 hover:opacity-100 transition-opacity"
             >
-              {logo.img
-                ? <img src={logo.img} alt={logo.name} className="h-6 w-auto object-contain" style={logo.width ? { width: logo.width, height: 'auto' } : {}} />
-                : <span className="text-sm font-black text-[#bbb] uppercase tracking-[1px]">{logo.name}</span>
-              }
+              {logo.img ? (
+                <img
+                  src={logo.img}
+                  alt={logo.name}
+                  className="h-6 w-auto object-contain"
+                  style={
+                    logo.width ? { width: logo.width, height: "auto" } : {}
+                  }
+                />
+              ) : (
+                <span className=" font-black text-[#bbb] uppercase tracking-[1px]">
+                  {logo.name}
+                </span>
+              )}
             </a>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

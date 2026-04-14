@@ -11,8 +11,11 @@ import Showcase from "@/components/Showcase";
 import LogoTicker from "@/components/LogoTicker";
 import Solutions from "@/components/Solutions";
 import Demo from "@/components/Demo";
+import Demo2 from "@/components/Demo2";
 import Problem from "@/components/Problem";
+import Problem2 from "@/components/Problem2";
 import Cases from "@/components/Cases";
+import CasesCarousel from "@/components/CasesCarousel";
 import Integrations from "@/components/Integrations";
 import Plans from "@/components/Plans";
 import Blog from "@/components/Blog";
@@ -56,10 +59,19 @@ function Home() {
           <Demo />
         </div>
         <div data-reveal>
+          <Demo2 />
+        </div>
+        <div data-reveal>
           <Problem />
         </div>
         <div data-reveal>
+          <Problem2 />
+        </div>
+        <div data-reveal>
           <Cases />
+        </div>
+        <div data-reveal>
+          <CasesCarousel />
         </div>
         <div data-reveal>
           <Integrations />

@@ -64,7 +64,7 @@ export default function VCHero() {
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
-            <p className="text-sm text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
+            <p className=" text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
               {t("vc.hero.description")}
             </p>
             <ul className="list-none flex flex-col gap-[10px] mb-10 p-0">
@@ -75,7 +75,7 @@ export default function VCHero() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="text-sm text-[#ccc] flex items-start gap-[10px]"
+                  className=" text-[#ccc] flex items-start gap-[10px]"
                 >
                   <span className="w-[18px] h-[18px] rounded-full flex items-center justify-center flex-shrink-0 mt-[1px] text-xs font-black bg-brand/[0.12] text-brand">
                     ✓
@@ -87,14 +87,14 @@ export default function VCHero() {
             <div className="flex gap-3 flex-wrap">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block bg-brand text-white text-sm font-bold px-7 py-[13px] rounded-full no-underline"
+                className="inline-block bg-brand text-white  font-bold px-7 py-[13px] rounded-full no-underline"
               >
                 {t("vc.hero.ctaSales")}
               </AnimatedButton>
               <a
                 href="/#planos"
                 onClick={handleViewPlans}
-                className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white text-sm font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
+                className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white  font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
               >
                 <span
                   data-button-animate-chars=""
