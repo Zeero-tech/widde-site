@@ -5,7 +5,7 @@ export default function SectionTitle({
   className,
 }: {
   label: string;
-  title: string;
+  title?: string;
   id?: string;
   className?: string;
 }) {
@@ -14,12 +14,14 @@ export default function SectionTitle({
       <span className="block font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
         {label}
       </span>
-      <h2
-        id={id}
-        className="text-xl md:text-2xl font-normal text-black leading-[1.25]"
-      >
-        {title}
-      </h2>
+      {title && (
+        <h2
+          id={id}
+          className="text-xl md:text-2xl font-normal text-black leading-[1.25]"
+        >
+          {title}
+        </h2>
+      )}
     </div>
   );
 }

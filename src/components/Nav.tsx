@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
@@ -28,7 +28,56 @@ type Solution = {
   tag: string | null;
   desc: string;
   video: string;
+  icon: React.ReactNode;
 };
+
+function VideoCommerceIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="48" rx="14" fill="#F0F0F0" />
+      <rect x="8" y="14" width="24" height="20" rx="4" fill="#222" />
+      <path d="M32 20l8-5v18l-8-5V20z" fill="#222" />
+      <circle cx="20" cy="24" r="5" fill="white" opacity="0.15" />
+      <path d="M18 21.5v5l4.5-2.5L18 21.5z" fill="white" />
+    </svg>
+  );
+}
+
+function LiveCommerceIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="48" rx="14" fill="#F0F0F0" />
+      <circle cx="24" cy="24" r="12" stroke="#222" strokeWidth="2.5" fill="none" />
+      <circle cx="24" cy="24" r="5" fill="#222" />
+      <circle cx="24" cy="24" r="2.5" fill="white" />
+      <path d="M15 14.5A13.9 13.9 0 0 1 24 11" stroke="#222" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M33 14.5A13.9 13.9 0 0 0 24 11" stroke="#222" strokeWidth="2.5" strokeLinecap="round" />
+      <rect x="19" y="34" width="10" height="3" rx="1.5" fill="#222" />
+      <rect x="22" y="37" width="4" height="2" rx="1" fill="#222" />
+    </svg>
+  );
+}
+
+function TryOnIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="48" rx="14" fill="#F0F0F0" />
+      {/* Mirror frame */}
+      <rect x="17" y="10" width="14" height="22" rx="7" stroke="#222" strokeWidth="2.2" fill="none" />
+      {/* Person inside mirror */}
+      <circle cx="24" cy="18" r="2.5" fill="#222" />
+      <path d="M20 28c0-3 1.8-5 4-5s4 2 4 5" stroke="#222" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Mirror stand */}
+      <path d="M24 32v4" stroke="#222" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M20 36h8" stroke="#222" strokeWidth="2.2" strokeLinecap="round" />
+      {/* Person outside mirror (left side) */}
+      <circle cx="10" cy="20" r="2.2" fill="#222" opacity="0.45" />
+      <path d="M7 29c0-2.5 1.3-4 3-4s3 1.5 3 4" stroke="#222" strokeWidth="1.6" strokeLinecap="round" fill="none" opacity="0.45" />
+      {/* Reflection arrows */}
+      <path d="M14 22h3" stroke="#222" strokeWidth="1.5" strokeLinecap="round" markerEnd="url(#arrow)" opacity="0.5" />
+    </svg>
+  );
+}
 
 function LanguageSwitcher({ dark }: { dark?: boolean }) {
   const { i18n: i18nInstance } = useTranslation();
@@ -164,6 +213,7 @@ export default function Nav() {
       tag: null,
       desc: t("nav.videoCommerceDesc"),
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+      icon: <VideoCommerceIcon />,
     },
     {
       label: "Live Commerce",
@@ -171,6 +221,7 @@ export default function Nav() {
       tag: "Novo",
       desc: t("nav.liveCommerceDesc"),
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+      icon: <LiveCommerceIcon />,
     },
     {
       label: "Provador IA",
@@ -178,6 +229,7 @@ export default function Nav() {
       tag: "Novo",
       desc: t("nav.tryOnDesc"),
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+      icon: <TryOnIcon />,
     },
   ];
 
@@ -306,8 +358,8 @@ export default function Nav() {
                             }
                             className="no-underline flex flex-col rounded-xl bg-[#f6f6f6] overflow-hidden transition-colors hover:bg-[#efefef]"
                           >
-                            <div className="w-full h-[110px] object-cover">
-                              <img />
+                            <div className="w-full h-[110px] flex items-center justify-center bg-[#ebebeb] rounded-t-xl">
+                              {s.icon}
                             </div>
                             <div className="p-3 flex flex-col gap-1">
                               <div className="flex items-center gap-2">
@@ -389,9 +441,9 @@ export default function Nav() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <div className="ml-4">
+            {/* <div className="ml-4">
               <LanguageSwitcher dark={isDark} />
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile menu */}
@@ -437,7 +489,7 @@ export default function Nav() {
               >
                 {t("nav.blog")}
               </a>
-              <LanguageSwitcher />
+              {/* <LanguageSwitcher /> */}
             </div>
           )}
 

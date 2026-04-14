@@ -55,7 +55,7 @@ export default function Hero2() {
   }, []);
 
   return (
-    <section className="bg-[#f6f6f6] py-10 md:py-16">
+    <section className="bg-[#f6f6f6]">
       <div className="max-w-screen-xl mx-auto px-2">
         <div
           ref={cardRef}

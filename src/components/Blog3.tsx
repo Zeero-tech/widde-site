@@ -5,8 +5,8 @@ export default function Blog3() {
   const [featured, ...rest] = blogPosts;
 
   return (
-    <section className="py-10 md:py-20">
-      <SectionTitle label="Blog" title="Últimos artigos" className="mb-8" />
+    <section>
+      <SectionTitle label="Blog" className="mb-8" />
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Left: featured large card */}

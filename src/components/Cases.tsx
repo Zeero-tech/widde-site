@@ -8,7 +8,6 @@ export default function Cases() {
   return (
     <section
       id="cases"
-      className="pt-10 md:pt-30"
       aria-labelledby="cases-heading"
     >
       <SectionTitle

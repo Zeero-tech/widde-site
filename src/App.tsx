@@ -8,7 +8,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Hero2 from "@/components/Hero2";
 import Showcase from "@/components/Showcase";
-import LogoTicker from "@/components/LogoTicker";
 import LogoTicker2 from "@/components/LogoTicker2";
 import Solutions from "@/components/Solutions";
 import Demo from "@/components/Demo";
@@ -53,53 +52,53 @@ function Home() {
     <>
       <Nav />
       <Hero />
-      <LogoTicker />
-      <LogoTicker2 />
-      <Hero2 />
-      <Showcase />
+      {/* <LogoTicker /> */}
+      <div className="pb-30"><LogoTicker2 /></div>
+      <div className="pb-30"><Hero2 /></div>
+      <div className="pb-30"><Showcase /></div>
       <main className="max-w-screen-xl mx-auto px-5 md:px-2">
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Solutions />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Demo />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Demo2 />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Problem />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Problem2 />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Cases />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <CasesCarousel />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Integrations />
         </div>
-        <div data-reveal>
+        <div data-reveal className="pb-30">
           <Plans />
         </div>
-        <div data-reveal>
+        {/* <div data-reveal className="pb-30">
           <Blog />
-        </div>
-        <div data-reveal>
+        </div> */}
+        {/* <div data-reveal className="pb-30">
           <Blog2 />
-        </div>
-        <div data-reveal>
+        </div> */}
+        <div data-reveal className="pb-30">
           <Blog3 />
         </div>
       </main>
       <CtaFullWidth />
-      <Newsletter />
-      <Newsletter2 />
-      <Footer />
-      <Footer2 />
+      {/* <Newsletter /> */}
+      <div className="pb-30 bg-[#0A0A0A]"><Newsletter2 /></div>
+      {/* <Footer /> */}
+      {/* <Footer2 /> */}
       <Footer3 />
     </>
   );

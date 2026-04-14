@@ -4,7 +4,7 @@ import MuxPlayer from '@mux/mux-player-react'
 export default function Demo() {
   const { t } = useTranslation()
   return (
-    <section id="demo" className="bg-[#f6f6f6] py-10 md:py-30">
+    <section id="demo" className="bg-[#f6f6f6]">
       <div className="mx-auto">
         <h2 className="text-center text-xl md:text-4xl font-normal text-black leading-[1.2] mb-10">
           {t('demo.heading')}

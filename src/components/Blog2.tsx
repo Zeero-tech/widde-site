@@ -14,7 +14,7 @@ export default function Blog2() {
   const [featured, ...rest] = blogPosts;
 
   return (
-    <section className="py-10 md:py-20">
+    <section>
       <SectionTitle label="Blog" title="Insights e tendências" className="mb-8" />
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">

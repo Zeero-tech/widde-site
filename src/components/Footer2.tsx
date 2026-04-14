@@ -48,6 +48,15 @@ export default function Footer2() {
   return (
     <footer className="bg-[#f6f6f6] text-black" role="contentinfo">
       <div className="px-5 md:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
+        {/* Logo */}
+        <a
+          href="/"
+          className="no-underline inline-flex mb-10"
+          style={{ color: "black" }}
+        >
+          <Logo />
+        </a>
+
         {/* Link columns */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 py-10">
           {footerColumns.map((col) => (
@@ -74,14 +83,7 @@ export default function Footer2() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-black/10">
-          <a
-            href="/"
-            className="no-underline inline-flex"
-            style={{ color: "black" }}
-          >
-            <Logo />
-          </a>
+        <div className="flex items-center pt-6 border-t border-black/10">
           <p className="text-xs text-[#999]">
             &copy;2026 Widde. Todos os direitos reservados.
           </p>

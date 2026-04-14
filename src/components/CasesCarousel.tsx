@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function CasesCarousel() {
   return (
-    <section className="pt-10 md:pt-20 max-w-screen-xl mx-auto px-2">
+    <section className="max-w-screen-xl mx-auto px-2">
       <SectionTitle
         label="Cases"
         title="Histórias de sucesso a Widde"

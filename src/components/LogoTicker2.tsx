@@ -1,7 +1,21 @@
 import * as HoverCard from "@radix-ui/react-hover-card";
+import { useState, useRef } from "react";
 import { tickerLogos } from "@/data/logos";
 
 export default function LogoTicker2() {
+  const [paused, setPaused] = useState(false);
+  const openCards = useRef(0);
+
+  function onEnter() {
+    openCards.current += 1;
+    setPaused(true);
+  }
+
+  function onLeave() {
+    openCards.current = Math.max(0, openCards.current - 1);
+    if (openCards.current === 0) setPaused(false);
+  }
+
   const doubled = [
     ...tickerLogos,
     ...tickerLogos,
@@ -16,11 +30,22 @@ export default function LogoTicker2() {
       aria-label="Marcas que usam Widde"
     >
       <div className="flex">
-        <div className="flex animate-ticker whitespace-nowrap">
+        <div
+          className="flex animate-ticker whitespace-nowrap"
+          style={{ animationPlayState: paused ? "paused" : "running" }}
+        >
           {doubled.map((logo, i) => (
-            <HoverCard.Root key={i} openDelay={1000} closeDelay={100}>
+            <HoverCard.Root
+              key={i}
+              openDelay={300}
+              closeDelay={100}
+              onOpenChange={(open) => (open ? onEnter() : onLeave())}
+            >
               <HoverCard.Trigger asChild>
-                <div className="inline-flex items-center justify-center gap-2 px-8 border-r border-[#eee] flex-shrink-0 h-10 opacity-50 hover:opacity-100 transition-opacity cursor-default">
+                <div
+                  className="inline-flex items-center justify-center gap-2 px-8 border-r border-[#eee] flex-shrink-0 h-10 opacity-50 hover:opacity-100 transition-opacity cursor-default"
+                  onMouseEnter={() => setPaused(true)}
+                >
                   {logo.img ? (
                     <img
                       src={logo.img}
@@ -45,7 +70,6 @@ export default function LogoTicker2() {
                   className="w-[240px] rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden z-[999] whitespace-normal animate-in fade-in-0 zoom-in-95"
                 >
                   <div className="relative">
-                    {/* Video determines height */}
                     {logo.demoUrl && (
                       <video
                         className="w-full block"

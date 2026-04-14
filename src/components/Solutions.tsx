@@ -9,7 +9,6 @@ export default function Solutions() {
   return (
     <section
       id="solucoes"
-      className="pt-10 md:pt-30"
       aria-labelledby="sol-heading"
     >
       <SectionTitle
