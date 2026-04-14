@@ -97,6 +97,7 @@ function Home() {
       </main>
       <CtaFullWidth />
       <Newsletter />
+      <Newsletter2 />
       <Footer />
       <Footer2 />
       <Footer3 />
