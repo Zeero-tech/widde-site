@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route, useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { useLenis } from "@/lib/useLenis";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
@@ -50,6 +51,11 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Video Commerce para E-commerce | Widde</title>
+        <meta name="description" content="Acelere a decisão de compra do seu consumidor com Video Commerce, Live Commerce e TryOn. Plataforma líder para e-commerces no Brasil. Comece agora." />
+        <link rel="canonical" href="https://widde.io/" />
+      </Helmet>
       <Nav />
       <Hero />
       {/* <LogoTicker /> */}

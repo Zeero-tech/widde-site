@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useLenis } from '@/lib/useLenis'
 import { useRevealOnScroll } from '@/hooks/useRevealOnScroll'
 import Nav from '@/components/Nav'
@@ -19,6 +20,14 @@ export default function VideoCommerce() {
 
   return (
     <>
+      <Helmet>
+        <title>Video Commerce | Widde</title>
+        <meta name="description" content="Transforme seus vídeos em vendas. Plataforma de Video Commerce líder para e-commerces no Brasil. Shoppable videos, stories e carrosséis integrados à sua loja." />
+        <link rel="canonical" href="https://widde.io/video-commerce" />
+        <meta property="og:title" content="Video Commerce | Widde" />
+        <meta property="og:description" content="Transforme seus vídeos em vendas. Plataforma de Video Commerce líder para e-commerces no Brasil." />
+        <meta property="og:url" content="https://widde.io/video-commerce" />
+      </Helmet>
       <Nav />
       <VCHero />
       <LogoTicker2 />
