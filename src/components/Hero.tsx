@@ -50,7 +50,7 @@ export default function Hero() {
           {/* Content */}
           <div
             ref={contentRef}
-            className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20"
+            className="w-full md:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-20"
             style={{ justifyContent: "center", paddingBottom: "calc(10vh)" }}
           >
             <span className="block text-xs font-bold text-brand uppercase tracking-[2px] mb-5">
@@ -60,13 +60,13 @@ export default function Hero() {
               {t("hero.title")}{" "}
               <span className="text-brand">{t("hero.titleHighlight")}</span>
             </h1>
-            <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
+            <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[820px]">
               {t("hero.description")}
             </p>
-            <p className="font-bold text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[620px]">
-              {t("hero.descriptionBold")}
+            <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[1100px]">
+              Por isso, com a Widde você ajuda o visitante a <strong>sentir, entender, escolher e comprar no seu site.</strong>
             </p>
-            <p className="font-bold text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[620px]">
+            <p className="font-bold text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[720px]">
               {t("hero.descriptionProducts")}
             </p>
             <div className="flex gap-3 flex-wrap">
