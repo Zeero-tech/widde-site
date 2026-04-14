@@ -225,7 +225,10 @@ export default function Nav() {
     }
   }
 
-  function handleNavClick(href: string, e: React.MouseEvent<HTMLAnchorElement>) {
+  function handleNavClick(
+    href: string,
+    e: React.MouseEvent<HTMLAnchorElement>,
+  ) {
     if (href.includes("http")) return;
     e.preventDefault();
     setMobileOpen(false);
@@ -284,30 +287,28 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     className={cn(
-                      "bg-transparent text-base font-normal",
-                      isDark ? "text-white hover:bg-white/10 data-[state=open]:bg-white/10" : "text-black hover:bg-black/5 data-[state=open]:bg-black/5",
+                      "bg-transparent text-[16px] font-normal",
+                      isDark
+                        ? "text-white hover:bg-white/10 data-[state=open]:bg-white/10"
+                        : "text-black hover:bg-black/5 data-[state=open]:bg-black/5",
                     )}
                   >
                     {t("nav.solutions")}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[680px] grid-cols-3 gap-3 p-4">
+                    <div className="grid w-[680px]  grid-cols-3 gap-3 p-2">
                       {solutions.map((s) => (
                         <NavigationMenuLink key={s.label} asChild>
                           <a
                             href={s.href ?? s.elementId}
-                            onClick={(e) => handleSolutionClick(s.elementId, e, s.href)}
+                            onClick={(e) =>
+                              handleSolutionClick(s.elementId, e, s.href)
+                            }
                             className="no-underline flex flex-col rounded-xl bg-[#f6f6f6] overflow-hidden transition-colors hover:bg-[#efefef]"
                           >
-                            <video
-                              className="w-full h-[110px] object-cover"
-                              autoPlay
-                              muted
-                              loop
-                              playsInline
-                            >
-                              <source src={s.video} type="video/mp4" />
-                            </video>
+                            <div className="w-full h-[110px] object-cover">
+                              <img />
+                            </div>
                             <div className="p-3 flex flex-col gap-1">
                               <div className="flex items-center gap-2">
                                 <span className="font-extrabold text-black leading-tight">
@@ -335,10 +336,14 @@ export default function Nav() {
                   <NavigationMenuLink asChild>
                     <a
                       href="https://widde.io/cases"
-                      onClick={(e) => handleNavClick("https://widde.io/cases", e)}
+                      onClick={(e) =>
+                        handleNavClick("https://widde.io/cases", e)
+                      }
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        isDark ? "text-white hover:bg-white/10" : "text-black hover:bg-black/5",
+                        isDark
+                          ? "text-white hover:bg-white/10"
+                          : "text-black hover:bg-black/5",
                       )}
                     >
                       {t("nav.results")}
@@ -353,7 +358,9 @@ export default function Nav() {
                       onClick={(e) => handleNavClick("#planos", e)}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        isDark ? "text-white hover:bg-white/10" : "text-black hover:bg-black/5",
+                        isDark
+                          ? "text-white hover:bg-white/10"
+                          : "text-black hover:bg-black/5",
                       )}
                     >
                       {t("nav.plans")}
@@ -365,10 +372,14 @@ export default function Nav() {
                   <NavigationMenuLink asChild>
                     <a
                       href="https://widde.io/blog"
-                      onClick={(e) => handleNavClick("https://widde.io/blog", e)}
+                      onClick={(e) =>
+                        handleNavClick("https://widde.io/blog", e)
+                      }
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        isDark ? "text-white hover:bg-white/10" : "text-black hover:bg-black/5",
+                        isDark
+                          ? "text-white hover:bg-white/10"
+                          : "text-black hover:bg-black/5",
                       )}
                     >
                       {t("nav.blog")}

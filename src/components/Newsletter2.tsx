@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useTranslation } from "react-i18next";
+import HighlightText from "./ui/highlight-text";
 
 export default function Newsletter2() {
   const { t } = useTranslation();
@@ -50,7 +51,9 @@ export default function Newsletter2() {
             id="newsletter2-heading"
             className="text-3xl font-normal text-white leading-[1.25] mb-6"
           >
-            <span className="bg-brand px-2 py-1">{t("newsletter.title")}</span>
+            <HighlightText highlightColor="var(--color-brand)" delay={0.2} duration={0.8}>
+              {t("newsletter.title")}
+            </HighlightText>
           </h2>
           <p className="text-white/60 leading-[1.6] mb-6 max-w-[440px]">
             Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais. Direto no seu e-mail, sem spam.
