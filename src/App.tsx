@@ -46,9 +46,9 @@ function Home() {
         easing: easeOutQuint,
       });
       setSearchParams({}, { replace: true });
-    }, 100);
+    }, 300);
     return () => clearTimeout(timer);
-  }, []);
+  }, [searchParams]);
 
   return (
     <>

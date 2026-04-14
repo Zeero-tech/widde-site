@@ -7,6 +7,9 @@ export default function Newsletter2() {
   const { t } = useTranslation();
   const circleRef = useRef<HTMLImageElement>(null);
   const [hovered, setHovered] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   useEffect(() => {
     if (!circleRef.current) return;
@@ -17,6 +20,28 @@ export default function Newsletter2() {
       repeat: -1,
     });
   }, []);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const body = new URLSearchParams({
+        token_rdstation: "992ba116e4725f4dd0bd5709b2a6549f",
+        conversion_identifier: "inscricao-newsletter-site-novo",
+        internal_source: "6",
+        name,
+        email,
+      });
+      await fetch("https://cta-redirect.rdstation.com/v2/conversions", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section
@@ -61,40 +86,55 @@ export default function Newsletter2() {
           <p className="text-white/60 leading-[1.6] mb-6 max-w-[840px]">
             Direto no seu e-mail, sem spam.
           </p>
-          <form
-            action="https://cta-redirect.rdstation.com/v2/conversions"
-            className="flex flex-col gap-[10px] w-[520px]"
-            aria-label={t("newsletter.ariaLabel")}
-          >
-            <label htmlFor="nl2-name" className="sr-only">
-              {t("newsletter.namePlaceholder")}
-            </label>
-            <input
-              id="nl2-name"
-              type="text"
-              placeholder={t("newsletter.namePlaceholder")}
-              autoComplete="name"
-              required
-              className="w-full bg-white/10 border border-white/20 rounded-[8px] px-4 py-3 text-white placeholder-white/40 outline-none focus:border-brand/70 transition-colors"
-            />
-            <label htmlFor="nl2-email" className="sr-only">
-              {t("newsletter.emailPlaceholder")}
-            </label>
-            <input
-              id="nl2-email"
-              type="email"
-              placeholder={t("newsletter.emailPlaceholder")}
-              autoComplete="email"
-              required
-              className="w-full bg-white/10 border border-white/20 rounded-[8px] px-4 py-3 text-white placeholder-white/40 outline-none focus:border-brand/70 transition-colors"
-            />
-            <button
-              type="submit"
-              className="bg-brand text-white text-base font-bold px-7 py-[14px] rounded-[9px] border-none cursor-pointer w-full mt-2 hover:opacity-90 transition-opacity"
+          {status === "success" ? (
+            <div className="text-white text-center py-6">
+              <p className="text-xl font-bold mb-2">Inscrição realizada! 🎉</p>
+              <p className="text-white/60">Obrigado! Em breve você receberá nossos conteúdos.</p>
+            </div>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-[10px] w-full max-w-[520px]"
+              aria-label={t("newsletter.ariaLabel")}
             >
-              {t("newsletter.cta")}
-            </button>
-          </form>
+              <label htmlFor="nl2-name" className="sr-only">
+                {t("newsletter.namePlaceholder")}
+              </label>
+              <input
+                id="nl2-name"
+                type="text"
+                placeholder={t("newsletter.namePlaceholder")}
+                autoComplete="name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full bg-white/10 border border-white/20 rounded-[8px] px-4 py-3 text-white placeholder-white/40 outline-none focus:border-brand/70 transition-colors"
+              />
+              <label htmlFor="nl2-email" className="sr-only">
+                {t("newsletter.emailPlaceholder")}
+              </label>
+              <input
+                id="nl2-email"
+                type="email"
+                placeholder={t("newsletter.emailPlaceholder")}
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full bg-white/10 border border-white/20 rounded-[8px] px-4 py-3 text-white placeholder-white/40 outline-none focus:border-brand/70 transition-colors"
+              />
+              {status === "error" && (
+                <p className="text-red-400 text-sm">Ocorreu um erro. Tente novamente.</p>
+              )}
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="bg-brand text-white text-base font-bold px-7 py-[14px] rounded-[9px] border-none cursor-pointer w-full mt-2 hover:opacity-90 transition-opacity disabled:opacity-60"
+              >
+                {status === "loading" ? "Enviando..." : t("newsletter.cta")}
+              </button>
+            </form>
+          )}
         </div>
 
         {/* Widde circle — rotating, bottom-right */}
