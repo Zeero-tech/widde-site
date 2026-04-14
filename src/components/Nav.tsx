@@ -44,11 +44,14 @@ function LiveCommerceIcon() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
-      <circle cx="24" cy="24" r="3" fill="var(--color-brand)" />
-      <path d="M17 24a7 7 0 0 1 7-7" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M31 24a7 7 0 0 1-7 7" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M13 24a11 11 0 0 1 11-11" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M35 24a11 11 0 0 1-11 11" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Center dot */}
+      <circle cx="24" cy="24" r="2.5" fill="var(--color-brand)" />
+      {/* Inner arcs — left and right */}
+      <path d="M19 19a7.07 7.07 0 0 0 0 10" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M29 19a7.07 7.07 0 0 1 0 10" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Outer arcs — left and right */}
+      <path d="M14 15a13.07 13.07 0 0 0 0 18" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M34 15a13.07 13.07 0 0 1 0 18" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
     </svg>
   );
 }
