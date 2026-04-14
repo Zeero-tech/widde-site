@@ -46,7 +46,7 @@ export default function Newsletter2() {
         <div className="absolute inset-0 bg-black/65 backdrop-blur-sm" />
 
         {/* Centered form */}
-        <div className="relative z-[2] flex flex-col items-center text-center px-6 py-16 w-full max-w-[520px]">
+        <div className="relative z-[2] flex flex-col items-center text-center px-6 py-16 w-full max-w-[820px]">
           <h2
             id="newsletter2-heading"
             className="text-3xl font-normal text-white leading-[1.25] mb-6"
@@ -55,12 +55,15 @@ export default function Newsletter2() {
               {t("newsletter.title")}
             </HighlightText>
           </h2>
-          <p className="text-white/60 leading-[1.6] mb-6 max-w-[440px]">
-            Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais. Direto no seu e-mail, sem spam.
+          <p className="text-white/60 leading-[1.6] max-w-[840px]">
+            Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais.
+          </p>
+          <p className="text-white/60 leading-[1.6] mb-6 max-w-[840px]">
+            Direto no seu e-mail, sem spam.
           </p>
           <form
             action="https://cta-redirect.rdstation.com/v2/conversions"
-            className="flex flex-col gap-[10px] w-full"
+            className="flex flex-col gap-[10px] w-[520px]"
             aria-label={t("newsletter.ariaLabel")}
           >
             <label htmlFor="nl2-name" className="sr-only">

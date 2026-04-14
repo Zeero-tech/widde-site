@@ -7,7 +7,7 @@ export default function Problem2() {
   const { t } = useTranslation();
   return (
     <section
-      className="relative rounded-[20px] overflow-hidden px-5 py-10 md:px-16 md:py-20 mt-10 md:mt-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
+      className="relative rounded-[20px] overflow-hidden px-5 md:px-16 mt-10 md:mt-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
       aria-labelledby="problema2-heading"
     >
       {/* Video background */}

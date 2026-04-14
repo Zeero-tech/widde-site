@@ -6,7 +6,7 @@ export default function Blog() {
   return (
     <section
       id="blog"
-      className="py-10 md:py-30"
+      className=""
       aria-labelledby="blog-heading"
     >
       <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
