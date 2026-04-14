@@ -6,7 +6,7 @@ export default function Demo() {
   return (
     <section id="demo" className="bg-[#f6f6f6] py-10 md:py-30">
       <div className="mx-auto">
-        <h2 className="text-center text-[24px] md:text-[36px] font-normal text-black leading-[1.2] mb-10">
+        <h2 className="text-center text-xl md:text-4xl font-normal text-black leading-[1.2] mb-10">
           {t('demo.heading')}
         </h2>
         <div className="rounded-2xl overflow-hidden shadow-lg">

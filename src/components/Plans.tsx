@@ -8,12 +8,12 @@ export default function Plans() {
       {/* Header */}
       <div className="flex justify-between items-end mb-7 flex-wrap gap-3">
         <div>
-          <span className="block text-[12px] font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">{t('plans.label')}</span>
-          <h2 id="planos-heading" className="text-[22px] md:text-[28px] font-normal text-black leading-[1.25]">
+          <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">{t('plans.label')}</span>
+          <h2 id="planos-heading" className="text-xl md:text-2xl font-normal text-black leading-[1.25]">
             {t('plans.title')}
           </h2>
         </div>
-        <div className="text-[12px] text-brand font-bold bg-brand/[0.08] px-[14px] py-[6px] rounded-full">
+        <div className="text-xs text-brand font-bold bg-brand/[0.08] px-[14px] py-[6px] rounded-full">
           💰 {t('plans.discountBadge')}
         </div>
       </div>
@@ -23,11 +23,11 @@ export default function Plans() {
 
         {/* Starter */}
         <article className="bg-[#f6f6f6] border border-[#E9E9E9] rounded-[18px] p-9 relative">
-          <h3 className="text-[18px] font-normal text-black mb-[6px]">Starter</h3>
-          <div className="text-[32px] font-normal text-black mb-1 leading-none">
-            R$399<sub className="text-[14px] font-normal text-[#888]">/mês</sub>
+          <h3 className="text-base font-normal text-black mb-[6px]">Starter</h3>
+          <div className="text-3xl font-normal text-black mb-1 leading-none">
+            R$399<sub className="text-sm font-normal text-[#888]">/mês</sub>
           </div>
-          <p className="text-[14px] text-[#888] mb-4">{t('plans.starterDesc')}</p>
+          <p className="text-sm text-[#888] mb-4">{t('plans.starterDesc')}</p>
           <ul className="list-none flex flex-col gap-2 mb-5">
             {([
               t('plans.starterFeature1'),
@@ -37,7 +37,7 @@ export default function Plans() {
               t('plans.starterFeature5'),
               t('plans.starterFeature6'),
             ]).map((f) => (
-              <li key={f} className="text-[14px] text-[#5d5d5d] flex items-start gap-2 leading-[1.4]">
+              <li key={f} className="text-sm text-[#5d5d5d] flex items-start gap-2 leading-[1.4]">
                 <span className="text-brand font-black flex-shrink-0">&#10003;</span>
                 {f}
               </li>
@@ -45,7 +45,7 @@ export default function Plans() {
           </ul>
           <AnimatedButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block bg-[#f6f6f6] text-black text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
+            className="inline-block bg-[#f6f6f6] text-black text-sm font-bold px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
           >
             {t('plans.starterCta')}
           </AnimatedButton>
@@ -67,12 +67,12 @@ export default function Plans() {
             <circle cx="40" cy="40" r="18" stroke="white" strokeWidth="1" />
           </svg>
 
-          <span className="inline-block bg-brand text-white text-[10px] font-bold px-[10px] py-[2px] rounded-full mb-3">
+          <span className="inline-block bg-brand text-white text-xs font-bold px-[10px] py-[2px] rounded-full mb-3">
             {t('plans.proRecommended')}
           </span>
-          <h3 className="text-[18px] font-normal text-white">Pro</h3>
-          <div className="text-[32px] font-normal text-white mb-1">{t('plans.proTagline')}</div>
-          <p className="text-[14px] text-white/45 mb-4">{t('plans.proDesc')}</p>
+          <h3 className="text-base font-normal text-white">Pro</h3>
+          <div className="text-3xl font-normal text-white mb-1">{t('plans.proTagline')}</div>
+          <p className="text-sm text-white/45 mb-4">{t('plans.proDesc')}</p>
 
           <div className="flex gap-8">
             {/* Left */}
@@ -86,7 +86,7 @@ export default function Plans() {
                   t('plans.proFeature5'),
                   t('plans.proFeature6'),
                 ]).map((f) => (
-                  <li key={f} className="text-[14px] text-white/60 flex items-start gap-2 leading-[1.4]">
+                  <li key={f} className="text-sm text-white/60 flex items-start gap-2 leading-[1.4]">
                     <span className="text-[#6090FF] font-black flex-shrink-0">&#10003;</span>
                     {f}
                   </li>
@@ -97,14 +97,14 @@ export default function Plans() {
             {/* Right */}
             <div className="flex-1 flex flex-col">
               <div className="bg-brand/20 rounded-[12px] p-4 mb-4">
-                <h4 className="text-[14px] font-black text-white mb-1">{t('plans.proCardTitle')}</h4>
-                <p className="text-[14px] text-white/55 leading-[1.5]">
+                <h4 className="text-sm font-black text-white mb-1">{t('plans.proCardTitle')}</h4>
+                <p className="text-sm text-white/55 leading-[1.5]">
                   {t('plans.proCardDesc')}
                 </p>
               </div>
               <AnimatedButton
                 href="#contato"
-                className="inline-block bg-brand text-white text-[13px] font-bold px-[22px] py-[11px] rounded-full no-underline border border-brand w-fit"
+                className="inline-block bg-brand text-white text-sm font-bold px-[22px] py-[11px] rounded-full no-underline border border-brand w-fit"
               >
                 {t('plans.proCta')}
               </AnimatedButton>

@@ -11,10 +11,10 @@ export default function Integrations() {
       style={{ background: '#003ab9ff' }}
       aria-labelledby="int-heading"
     >
-      <h2 id="int-heading" className="text-[18px] md:text-[24px] font-normal text-white leading-[1.25] mb-[10px] max-w-[440px]">
+      <h2 id="int-heading" className="text-base md:text-xl font-normal text-white leading-[1.25] mb-[10px] max-w-[440px]">
         {t('integrations.title')}
       </h2>
-      <p className="text-[14px] text-white/50 leading-[1.6] mb-7">
+      <p className="text-sm text-white/50 leading-[1.6] mb-7">
         {t('integrations.description')}
       </p>
 

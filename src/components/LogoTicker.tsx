@@ -21,7 +21,7 @@ export default function LogoTicker() {
             >
               {logo.img
                 ? <img src={logo.img} alt={logo.name} className="h-6 w-auto object-contain" style={logo.width ? { width: logo.width, height: 'auto' } : {}} />
-                : <span className="text-[13px] font-black text-[#bbb] uppercase tracking-[1px]">{logo.name}</span>
+                : <span className="text-sm font-black text-[#bbb] uppercase tracking-[1px]">{logo.name}</span>
               }
             </a>
           ))}
