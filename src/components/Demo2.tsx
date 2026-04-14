@@ -23,21 +23,21 @@ export default function Demo2() {
         {/* Text */}
         <div className="w-full md:w-[42%] flex flex-col">
           <SectionTitle
-            label="Demonstração"
+            label="Conheça"
             title={t("demo.heading")}
             className="mb-4"
           />
           <p className="text-[#5d5d5d] leading-[1.6] mb-8 max-w-[440px]">
             {t(
               "demo.description",
-              "Veja como a Widde transforma a experiência de compra online com vídeos interativos diretamente na sua loja."
+              "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca."
             )}
           </p>
           <AnimatedButton
-            href="https://widde.io?utm_medium=cpc&utm_source=google&utm_campaign=01"
+            href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
             className="inline-block w-fit bg-black text-white font-bold px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors"
           >
-            {t("demo.cta", "Agendar demonstração")}
+            {t("demo.cta", "Falar com vendas")}
           </AnimatedButton>
         </div>
       </div>

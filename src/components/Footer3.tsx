@@ -1,4 +1,6 @@
 import Logo from "./Logo";
+import { getLenis } from "@/lib/lenis";
+import { easeOutQuint } from "@/lib/easing";
 
 const footerColumns = [
   {
@@ -6,7 +8,7 @@ const footerColumns = [
     links: [
       { label: "Video Commerce", href: "/video-commerce" },
       { label: "Live Commerce", href: "#live-commerce" },
-      { label: "Provador IA", href: "#try-on" },
+      { label: "Provador IA", href: "#provador-ia" },
       { label: "Planos", href: "/#planos" },
     ],
   },
@@ -38,11 +40,20 @@ const footerColumns = [
   {
     title: "Legal",
     links: [
-      { label: "Privacidade", href: "https://widde.io/politica-de-privacidade?utm_medium=cpc&utm_source=google&utm_campaign=01" },
-      { label: "Termos de Uso", href: "https://widde.io/termos-de-uso" },
+      { label: "Privacidade", href: "https://widde.io/politica-de-privacidade?utm_medium=cpc&utm_source=google&utm_campaign=01" }
     ],
   },
 ];
+
+function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  if (!href.startsWith("#")) return;
+  e.preventDefault();
+  getLenis().scrollTo(href, {
+    duration: 3.5,
+    offset: -70,
+    easing: easeOutQuint,
+  });
+}
 
 export default function Footer3() {
   return (
@@ -72,6 +83,7 @@ export default function Footer3() {
                       className="text-sm text-white/50 no-underline hover:text-white transition-colors"
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                       rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      onClick={(e) => handleAnchorClick(e, link.href)}
                     >
                       {link.label}
                     </a>

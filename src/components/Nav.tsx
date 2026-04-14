@@ -223,7 +223,7 @@ export default function Nav() {
     },
     {
       label: "Provador IA",
-      elementId: "#try-on",
+      elementId: "#provador-ia",
       tag: "Novo",
       desc: t("nav.tryOnDesc"),
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",

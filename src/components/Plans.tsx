@@ -96,6 +96,7 @@ export default function Plans() {
                   t("plans.proFeature4"),
                   t("plans.proFeature5"),
                   t("plans.proFeature6"),
+                  t("plans.proFeature7"),
                 ].map((f) => (
                   <li
                     key={f}

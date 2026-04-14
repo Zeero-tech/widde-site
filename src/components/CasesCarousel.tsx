@@ -11,6 +11,15 @@ export default function CasesCarousel() {
     scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
   }
 
+  function handleWheel(e: React.WheelEvent<HTMLDivElement>) {
+    if (!scrollRef.current) return;
+    // If there's horizontal delta (native touchpad swipe), use it directly
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    // Otherwise redirect vertical scroll to horizontal
+    e.preventDefault();
+    scrollRef.current.scrollLeft += e.deltaY;
+  }
+
   return (
     <section className="max-w-screen-xl mx-auto px-2">
       <SectionTitle
@@ -24,15 +33,16 @@ export default function CasesCarousel() {
         <button
           onClick={() => scroll("left")}
           aria-label="Scroll para esquerda"
-          className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#f0f0f0] hover:bg-[#e4e4e4] transition-colors"
+          className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#ebebeb] hover:bg-[#e4e4e4] transition-colors"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
 
         <div
           ref={scrollRef}
+          onWheel={handleWheel}
           className="flex flex-1 gap-5 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
@@ -40,7 +50,7 @@ export default function CasesCarousel() {
             <a
               key={c.title}
               href={c.link}
-              className="group flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[50%] cursor-pointer flex flex-col no-underline snap-start"
+              className="group flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[calc(50%-60px)] cursor-pointer flex flex-col no-underline snap-start"
             >
               {/* Thumbnail */}
               <div className="w-full h-[240px] md:h-[300px] relative overflow-hidden rounded-md">
@@ -88,7 +98,7 @@ export default function CasesCarousel() {
         <button
           onClick={() => scroll("right")}
           aria-label="Scroll para direita"
-          className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#f0f0f0] hover:bg-[#e4e4e4] transition-colors"
+          className="flex-shrink-0 w-10 self-stretch flex items-center justify-center rounded-lg bg-[#ebebeb] hover:bg-[#e4e4e4] transition-colors"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="9 6 15 12 9 18" />

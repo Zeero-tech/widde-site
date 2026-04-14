@@ -76,19 +76,24 @@ export default function Problem2() {
       <div className="absolute inset-0 bg-black/70 backdrop-blur-md" />
 
       {/* Left */}
-      <div className="relative z-10 flex-1">
-        <span className="block text-xs font-normal text-white/50 uppercase tracking-[2px] mb-3">
+      <div className="relative z-10 flex-[2.5]">
+        <span className="block text-xs font-normal text-white/50 uppercase tracking-[2px] mb-6">
           {t("problem.label")}
         </span>
         <h2
           id="problema2-heading"
-          className="text-lg md:text-2xl font-normal text-white leading-[1.25] mb-[10px]"
+          className="text-lg md:text-2xl font-normal text-white leading-[1.25] mb-8"
         >
           {t("problem.title")}
         </h2>
-        <p className="text-white/55 leading-[1.65] mb-[22px]">
-          {t("problem.description")}
-        </p>
+        <div className="mb-8">
+          <p className="text-white/55 leading-[1.65] mb-[14px]">
+            {t("problem.description")}
+          </p>
+          <p className="text-white/55 leading-[1.65]">
+            Com <strong className="text-white font-bold">Video Commerce</strong>, <strong className="text-white font-bold">Provador Virtual</strong> e <strong className="text-white font-bold">Live Commerce</strong>, a Widde faz o consumidor ver, experimentar e sentir o seu produto antes de comprar.
+          </p>
+        </div>
         <AnimatedButton
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
           className="inline-block bg-white text-[#1D1D1D] font-bold px-[22px] py-[11px] rounded-full no-underline"
@@ -111,7 +116,7 @@ export default function Problem2() {
         </div>
         <div className="py-6 border-t border-white/15">
           <CountUp
-            target={65}
+            target={63}
             suffix="%"
             className="text-2xl md:text-5xl font-normal text-white leading-none mb-2"
           />
@@ -121,8 +126,8 @@ export default function Problem2() {
         </div>
         <div className="py-6 border-t border-white/15">
           <CountUp
-            target={2}
-            suffix="x"
+            target={65}
+            suffix="%"
             className="text-2xl md:text-5xl font-normal text-white leading-none mb-2"
           />
           <div className="text-white/55 leading-[1.4] max-w-[400px]">
