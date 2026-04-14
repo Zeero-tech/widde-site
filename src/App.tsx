@@ -29,6 +29,7 @@ import Footer from "@/components/Footer";
 import Footer2 from "@/components/Footer2";
 import Footer3 from "@/components/Footer3";
 import VideoCommerce from "@/pages/VideoCommerce";
+import VCCta from "./components/VideoCommerce/VCCta";
 
 function Home() {
   useLenis();
@@ -100,9 +101,9 @@ function Home() {
           <Blog3 />
         </div> */}
       </main>
-      <CtaFullWidth />
+      <VCCta />
       {/* <Newsletter /> */}
-      <div className="pb-30 bg-[#0A0A0A]"><Newsletter2 /></div>
+      <div className="pb-30 pt-20 bg-[#0A0A0A]"><Newsletter2 /></div>
       {/* <Footer /> */}
       {/* <Footer2 /> */}
       <Footer3 />
