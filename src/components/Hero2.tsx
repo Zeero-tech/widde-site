@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import AnimatedButton from "./AnimatedButton";
+import { getLenis } from "@/lib/lenis";
 import {
   Dialog,
   DialogContent,
@@ -30,11 +34,12 @@ function useIsMobile() {
 
 function MapImage() {
   return (
-    <div className="overflow-auto">
+    <div className=" py-2">
       <img
         src="/assets/vtex-como-chegar.jpg"
-        alt="Como chegar no stand da Widde no VTEX Day"
-        className="w-full h-auto object-contain"
+        alt="Como chegar no estande da Widde no VTEX Day"
+        className="w-full h-auto block rounded-lg"
+        style={{ maxHeight: "85vh", objectFit: "contain" }}
       />
     </div>
   );
@@ -42,22 +47,54 @@ function MapImage() {
 
 export default function Hero2() {
   const cardRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
+  const badgeBgRef = useRef<HTMLSpanElement>(null);
   const [mapOpen, setMapOpen] = useState(false);
+
+  function handleMapOpen(open: boolean) {
+    setMapOpen(open);
+    if (open) {
+      getLenis().stop();
+      document.body.style.overflow = "hidden";
+    } else {
+      getLenis().start();
+      document.body.style.overflow = "";
+    }
+  }
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
-    tl.fromTo(
-      contentRef.current!.children,
-      { x: -160, opacity: 0 },
-      { x: 0, opacity: 1, duration: 2, stagger: 0.12 },
-    );
-    tl.fromTo(
+    // Card inteiro: blur + opacity ao entrar na tela
+    gsap.fromTo(
       cardRef.current,
       { opacity: 0, filter: "blur(16px)" },
-      { opacity: 1, filter: "blur(0px)", duration: 1.4 },
-      "<0.15",
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top 90%",
+          once: true,
+        },
+      }
+    );
+
+    // Badge background: revelação da direita para a esquerda
+    gsap.fromTo(
+      badgeBgRef.current,
+      { clipPath: "inset(0 100% 0 0 round 4px)" },
+      {
+        clipPath: "inset(0 0% 0 0 round 4px)",
+        duration: 0.8,
+        ease: "power3.out",
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top 90%",
+          once: true,
+        },
+      }
     );
   }, []);
 
@@ -85,13 +122,19 @@ export default function Hero2() {
 
           {/* Content */}
           <div
-            ref={contentRef}
             className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 py-20 md:py-28"
             style={{ minHeight: "inherit" }}
           >
-            <span className="block text-base font-bold bg-brand text-white px-3 py-1 uppercase tracking-[2.5px] mb-6 rounded">
-              VTEX DAY 2026
-            </span>
+            {/* Badge com background animado */}
+            <div className="relative inline-block mb-6">
+              <span
+                ref={badgeBgRef}
+                className="absolute inset-0 bg-brand rounded"
+              />
+              <span className="relative block text-base font-bold text-white px-3 py-1 uppercase tracking-[2.5px]">
+                VTEX DAY 2026
+              </span>
+            </div>
 
             <h1 className="text-white text-4xl md:text-5xl lg:text-5xl font-black leading-[1.1] mb-6 max-w-[800px]">
               Estamos no VTEX Day!
@@ -113,11 +156,11 @@ export default function Hero2() {
                 href="#"
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                   e.preventDefault();
-                  setMapOpen(true);
+                  handleMapOpen(true);
                 }}
                 className="inline-block bg-brand text-white font-bold px-7 py-[13px] rounded-full no-underline"
               >
-                Como chegar no nosso stand
+                Como chegar no nosso estande
               </AnimatedButton>
             </div>
           </div>
@@ -126,11 +169,11 @@ export default function Hero2() {
 
       {/* Desktop: Dialog / Mobile: Drawer */}
       {isMobile ? (
-        <Drawer open={mapOpen} onOpenChange={setMapOpen}>
+        <Drawer open={mapOpen} onOpenChange={handleMapOpen}>
           <DrawerContent>
             <DrawerHeader>
               <DrawerTitle className="text-lg font-bold text-black">
-                Como chegar no nosso stand
+                Como chegar no nosso estande
               </DrawerTitle>
               <DrawerDescription className="text-sm text-[#666]">
                 Mapa do VTEX Day 2026
@@ -140,10 +183,10 @@ export default function Hero2() {
           </DrawerContent>
         </Drawer>
       ) : (
-        <Dialog open={mapOpen} onOpenChange={setMapOpen}>
+        <Dialog open={mapOpen} onOpenChange={handleMapOpen}>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Como chegar no nosso stand</DialogTitle>
+              <DialogTitle>Como chegar no nosso estande</DialogTitle>
               <DialogDescription>Mapa do VTEX Day 2026</DialogDescription>
             </DialogHeader>
             <MapImage />

@@ -27,7 +27,7 @@ export default function Hero() {
 
   function handleVerDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
-    getLenis().scrollTo("#demo", {
+    getLenis().scrollTo("#demo2", {
       duration: 3,
       offset: -70,
       easing: easeOutQuint,

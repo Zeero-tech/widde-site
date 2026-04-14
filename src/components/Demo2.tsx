@@ -6,7 +6,7 @@ import AnimatedButton from "./AnimatedButton";
 export default function Demo2() {
   const { t } = useTranslation();
   return (
-    <section>
+    <section id="demo2">
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
         {/* Video */}
         <div className="w-full md:w-[58%] rounded-2xl overflow-hidden">
