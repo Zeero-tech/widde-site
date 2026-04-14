@@ -37,7 +37,7 @@ export default function VCHero() {
     >
       {/* Breadcrumb */}
       <div className="absolute top-0 left-0 right-0 z-10 max-w-screen-xl mx-auto px-4 md:px-8 pt-5">
-        <div className="text-[12px] text-[#aaa]">
+        <div className="text-xs text-[#aaa]">
           <a href="/" className="text-brand no-underline">
             {t("vc.breadcrumb.home")}
           </a>
@@ -60,11 +60,11 @@ export default function VCHero() {
             className="w-full md:flex-[0_0_50%] z-[2] flex flex-col py-10 md:py-20"
             style={{ justifyContent: "center", paddingBottom: "calc(10vh)" }}
           >
-            <h1 className="text-[30px] md:text-[48px] font-black leading-[1.15] mb-6 text-white">
+            <h1 className="text-3xl md:text-6xl font-black leading-[1.15] mb-6 text-white">
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
-            <p className="text-[15px] text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
+            <p className="text-sm text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[420px]">
               {t("vc.hero.description")}
             </p>
             <ul className="list-none flex flex-col gap-[10px] mb-10 p-0">
@@ -75,9 +75,9 @@ export default function VCHero() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="text-[14px] text-[#ccc] flex items-start gap-[10px]"
+                  className="text-sm text-[#ccc] flex items-start gap-[10px]"
                 >
-                  <span className="w-[18px] h-[18px] rounded-full flex items-center justify-center flex-shrink-0 mt-[1px] text-[10px] font-black bg-brand/[0.12] text-brand">
+                  <span className="w-[18px] h-[18px] rounded-full flex items-center justify-center flex-shrink-0 mt-[1px] text-xs font-black bg-brand/[0.12] text-brand">
                     ✓
                   </span>
                   {item}
@@ -87,14 +87,14 @@ export default function VCHero() {
             <div className="flex gap-3 flex-wrap">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block bg-brand text-white text-[14px] font-bold px-7 py-[13px] rounded-full no-underline"
+                className="inline-block bg-brand text-white text-sm font-bold px-7 py-[13px] rounded-full no-underline"
               >
                 {t("vc.hero.ctaSales")}
               </AnimatedButton>
               <a
                 href="/#planos"
                 onClick={handleViewPlans}
-                className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white text-[14px] font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
+                className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white text-sm font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
               >
                 <span
                   data-button-animate-chars=""
