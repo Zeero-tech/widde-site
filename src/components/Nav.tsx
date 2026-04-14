@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
@@ -8,6 +8,16 @@ import LetterButton from "./LetterButton";
 import { getLenis } from "../lib/lenis";
 import { easeOutQuint } from "../lib/easing";
 import Logo from "./Logo";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "./ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,392 +27,8 @@ type Solution = {
   href?: string;
   tag: string | null;
   desc: string;
-  icon: React.ReactNode;
+  video: string;
 };
-
-function SolutionsDropdown({
-  onClose,
-  navigate,
-  location,
-  dark,
-}: {
-  onClose: () => void;
-  navigate: ReturnType<typeof useNavigate>;
-  location: ReturnType<typeof useLocation>;
-  dark?: boolean;
-}) {
-  const { t } = useTranslation();
-  const [hovered, setHovered] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const letterRefs = useRef<HTMLSpanElement[]>([]);
-  const label = t("nav.solutions");
-  const letters = label.split("");
-
-  const solutions: Solution[] = [
-    {
-      label: "Video Commerce",
-      elementId: "#video-commerce",
-      href: "/video-commerce",
-      tag: null,
-      desc: t("nav.videoCommerceDesc"),
-      icon: (
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polygon points="5 3 19 12 5 21 5 3" />
-        </svg>
-      ),
-    },
-    {
-      label: "Live Commerce",
-      elementId: "#live-commerce",
-      tag: t("nav.tagNew"),
-      desc: t("nav.liveCommerceDesc"),
-      icon: (
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          style={{ overflow: "visible" }}
-        >
-          <circle cx="12" cy="12" r="2" />
-          <path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 7.76a6 6 0 0 0 0 8.49M20.49 3.51a12 12 0 0 1 0 16.97M3.51 3.51a12 12 0 0 0 0 16.97" />
-        </svg>
-      ),
-    },
-    {
-      label: "TryOn",
-      elementId: "#try-on",
-      tag: t("nav.tagNew"),
-      desc: t("nav.tryOnDesc"),
-      icon: (
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
-          <circle cx="12" cy="12" r="3" />
-        </svg>
-      ),
-    },
-  ];
-
-  const animateLetters = useCallback((direction: "in" | "out") => {
-    letterRefs.current.forEach((span, i) => {
-      if (!span) return;
-      span.style.transition = `transform 0.5s cubic-bezier(0.76,0,0.24,1) ${i * 30}ms`;
-      span.style.transform =
-        direction === "out" ? "translateY(-50%)" : "translateY(0%)";
-    });
-  }, []);
-
-  function handleMouseEnter() {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setHovered(true);
-    animateLetters("out");
-  }
-
-  function handleMouseLeave() {
-    timeoutRef.current = setTimeout(() => setHovered(false), 120);
-    animateLetters("in");
-  }
-
-  function handleClick(
-    elementId: string,
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href?: string,
-  ) {
-    e.preventDefault();
-    onClose();
-    setHovered(false);
-    if (href) {
-      window.location.href = href;
-      return;
-    }
-    if (location.pathname !== "/") {
-      navigate(`/?scrollTo=${elementId.replace("#", "")}`);
-    } else {
-      getLenis().scrollTo(elementId, {
-        duration: 3,
-        offset: -70,
-        easing: easeOutQuint,
-      });
-    }
-  }
-
-  return (
-    <div
-      className="relative "
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <a
-        href="#solucoes"
-        onClick={(e) => handleClick("#solucoes", e)}
-        className="text-base no-underline inline-flex items-center"
-        style={{ color: dark ? "white" : "#000" }}
-      >
-        {letters.map((char, i) => (
-          <span
-            key={i}
-            style={{
-              display: "inline-block",
-              overflow: "hidden",
-              height: "1.2em",
-              verticalAlign: "middle",
-            }}
-          >
-            <span
-              ref={(el) => {
-                if (el) letterRefs.current[i] = el;
-              }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                height: "200%",
-              }}
-            >
-              <span
-                style={{ height: "50%", display: "flex", alignItems: "center" }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-              <span
-                style={{ height: "50%", display: "flex", alignItems: "center" }}
-                aria-hidden="true"
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-            </span>
-          </span>
-        ))}
-        <svg
-          className="ml-1"
-          width="12"
-          height="12"
-          viewBox="0 0 12 12"
-          fill="none"
-          aria-hidden="true"
-          style={{
-            transition: "transform 0.5s cubic-bezier(0.34,1.56,0.64,1)",
-            transform: hovered ? "rotate(180deg)" : "rotate(0deg)",
-            flexShrink: 0,
-          }}
-        >
-          <path
-            d="M2 4L6 8L10 4"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
-
-      {/* Dropdown */}
-      <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          position: "absolute",
-          top: "calc(100% + 16px)",
-          left: "50%",
-          width: "min(90vw, 750px)",
-          background: "#fff",
-          borderRadius: 18,
-          boxShadow: "0 8px 40px rgba(0,0,0,0.12)",
-          padding: "20px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: 20,
-          opacity: hovered ? 1 : 0,
-          transform: hovered
-            ? "translateX(-50%) translateY(0px)"
-            : "translateX(-50%) translateY(-8px)",
-          pointerEvents: hovered ? "all" : "none",
-          transition:
-            "opacity 0.22s ease, transform 0.22s cubic-bezier(0.16,1,0.3,1)",
-          zIndex: 100,
-        }}
-      >
-        {solutions.map((s) => (
-          <a
-            key={s.label}
-            href={s.href ?? s.elementId}
-            onClick={(e) => handleClick(s.elementId, e, s.href)}
-            className="no-underline"
-            style={{
-              background: "#f6f6f6",
-              borderRadius: 12,
-              padding: "18px 16px",
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-              transition: "background 0.15s",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#efefef")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#f6f6f6")}
-          >
-            <div
-              style={{
-                color: "#2667F8",
-                height: 28,
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {s.icon}
-            </div>
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 5,
-                  marginBottom: 8,
-                  minHeight: 48,
-                }}
-              >
-                <span
-                  className=""
-                  style={{
-                    fontWeight: 800,
-                    color: "#000",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  {s.label}
-                </span>
-                {s.tag && (
-                  <span
-                    className="text-xs"
-                    style={{
-                      fontWeight: 700,
-                      color: "#fff",
-                      background: "#2667F8",
-                      borderRadius: 999,
-                      padding: "2px 7px",
-                      lineHeight: 1.4,
-                      alignSelf: "flex-start",
-                    }}
-                  >
-                    {s.tag}
-                  </span>
-                )}
-              </div>
-              <p
-                className="text-xs"
-                style={{
-                  color: "#666",
-                  lineHeight: 1.55,
-                  margin: 0,
-                }}
-              >
-                {s.desc}
-              </p>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function NavLink({
-  href,
-  label,
-  onClose,
-  dark,
-}: {
-  href: string;
-  label: string;
-  onClose: () => void;
-  dark?: boolean;
-}) {
-  const letters = label.split("");
-  const letterRefs = useRef<HTMLSpanElement[]>([]);
-
-  const animate = useCallback((direction: "in" | "out") => {
-    letterRefs.current.forEach((span, i) => {
-      if (!span) return;
-      span.style.transition = `transform 0.5s cubic-bezier(0.76,0,0.24,1) ${i * 30}ms`;
-      span.style.transform =
-        direction === "out" ? "translateY(-50%)" : "translateY(0%)";
-    });
-  }, []);
-
-  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
-    if (href.includes("http")) return;
-    e.preventDefault();
-    onClose();
-    getLenis().scrollTo(href, {
-      duration: 3,
-      offset: -50,
-      easing: easeOutQuint,
-    });
-  }
-
-  return (
-    <a
-      href={href}
-      onClick={handleClick}
-      onMouseEnter={() => animate("out")}
-      onMouseLeave={() => animate("in")}
-      className="text-base no-underline inline-flex"
-      style={{ color: dark ? "white" : "#000" }}
-    >
-      {letters.map((char, i) => (
-        <span
-          key={i}
-          style={{
-            display: "inline-block",
-            overflow: "hidden",
-            height: "1.2em",
-            verticalAlign: "middle",
-          }}
-        >
-          <span
-            ref={(el) => {
-              if (el) letterRefs.current[i] = el;
-            }}
-            style={{ display: "flex", flexDirection: "column", height: "200%" }}
-          >
-            <span
-              style={{ height: "50%", display: "flex", alignItems: "center" }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </span>
-            <span
-              style={{ height: "50%", display: "flex", alignItems: "center" }}
-              aria-hidden="true"
-            >
-              {char === " " ? "\u00A0" : char}
-            </span>
-          </span>
-        </span>
-      ))}
-    </a>
-  );
-}
 
 function LanguageSwitcher({ dark }: { dark?: boolean }) {
   const { i18n: i18nInstance } = useTranslation();
@@ -490,7 +116,6 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
             <button
               key={code}
               onClick={() => select(code)}
-              className=""
               style={{
                 display: "block",
                 width: "100%",
@@ -524,10 +149,37 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
 
 export default function Nav() {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const isDark = location.pathname === "/video-commerce";
+
+  const solutions: Solution[] = [
+    {
+      label: "Video Commerce",
+      elementId: "#video-commerce",
+      href: "/video-commerce",
+      tag: null,
+      desc: t("nav.videoCommerceDesc"),
+      video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+    },
+    {
+      label: "Live Commerce",
+      elementId: "#live-commerce",
+      tag: "Novo",
+      desc: t("nav.liveCommerceDesc"),
+      video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+    },
+    {
+      label: "Provador IA",
+      elementId: "#try-on",
+      tag: "Novo",
+      desc: t("nav.tryOnDesc"),
+      video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+    },
+  ];
 
   useEffect(() => {
     function onScroll() {
@@ -539,7 +191,6 @@ export default function Nav() {
 
   useEffect(() => {
     ScrollTrigger.defaults({ markers: false });
-
     gsap.set(".logo-path", { y: 50 });
     gsap.to(".logo-path", {
       y: 0,
@@ -552,11 +203,38 @@ export default function Nav() {
     });
   }, []);
 
-  function handleNav() {
-    setOpen(false);
+  function handleSolutionClick(
+    elementId: string,
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href?: string,
+  ) {
+    e.preventDefault();
+    setMobileOpen(false);
+    if (href) {
+      window.location.href = href;
+      return;
+    }
+    if (location.pathname !== "/") {
+      navigate(`/?scrollTo=${elementId.replace("#", "")}`);
+    } else {
+      getLenis().scrollTo(elementId, {
+        duration: 3,
+        offset: -70,
+        easing: easeOutQuint,
+      });
+    }
   }
 
-  const isDark = location.pathname === "/video-commerce";
+  function handleNavClick(href: string, e: React.MouseEvent<HTMLAnchorElement>) {
+    if (href.includes("http")) return;
+    e.preventDefault();
+    setMobileOpen(false);
+    getLenis().scrollTo(href, {
+      duration: 3,
+      offset: -50,
+      easing: easeOutQuint,
+    });
+  }
 
   return (
     <header
@@ -588,52 +266,169 @@ export default function Nav() {
             <Logo />
           </a>
 
+          {/* Mobile hamburger */}
           <button
             className={`md:hidden bg-transparent border-none text-2xl cursor-pointer p-2 ${isDark ? "text-white" : "text-black"}`}
-            aria-label={open ? t("nav.menuClose") : t("nav.menuOpen")}
-            aria-expanded={open}
-            onClick={() => setOpen(!open)}
+            aria-label={mobileOpen ? t("nav.menuClose") : t("nav.menuOpen")}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen(!mobileOpen)}
           >
             &#9776;
           </button>
 
-          <div
-            className={`
-              md:flex md:gap-6 md:static md:bg-transparent md:shadow-none md:p-0 md:border-none
-              ${open ? "flex" : "hidden"}
-              flex-col md:flex-row
-              absolute md:relative top-[60px] md:top-auto left-0 right-0
-              bg-white px-6 py-5 gap-4
-              border-b border-gray-100 shadow-[0_8px_20px_rgba(0,0,0,0.08)]
-              z-50
-            `}
-          >
-            <SolutionsDropdown
-              onClose={handleNav}
-              navigate={navigate}
-              location={location}
-              dark={isDark}
-            />
-            <NavLink
-              href="https://widde.io/cases"
-              label={t("nav.results")}
-              onClose={handleNav}
-              dark={isDark}
-            />
-            <NavLink
-              href="#planos"
-              label={t("nav.plans")}
-              onClose={handleNav}
-              dark={isDark}
-            />
-            <NavLink
-              href="https://widde.io/blog"
-              label={t("nav.blog")}
-              onClose={handleNav}
-              dark={isDark}
-            />
-            <LanguageSwitcher dark={isDark} />
+          {/* Desktop Navigation Menu */}
+          <div className="hidden md:flex items-center">
+            <NavigationMenu>
+              <NavigationMenuList className="gap-1">
+                {/* Solutions dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger
+                    className={cn(
+                      "bg-transparent text-base font-normal",
+                      isDark ? "text-white hover:bg-white/10 data-[state=open]:bg-white/10" : "text-black hover:bg-black/5 data-[state=open]:bg-black/5",
+                    )}
+                  >
+                    {t("nav.solutions")}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[680px] grid-cols-3 gap-3 p-4">
+                      {solutions.map((s) => (
+                        <NavigationMenuLink key={s.label} asChild>
+                          <a
+                            href={s.href ?? s.elementId}
+                            onClick={(e) => handleSolutionClick(s.elementId, e, s.href)}
+                            className="no-underline flex flex-col rounded-xl bg-[#f6f6f6] overflow-hidden transition-colors hover:bg-[#efefef]"
+                          >
+                            <video
+                              className="w-full h-[110px] object-cover"
+                              autoPlay
+                              muted
+                              loop
+                              playsInline
+                            >
+                              <source src={s.video} type="video/mp4" />
+                            </video>
+                            <div className="p-3 flex flex-col gap-1">
+                              <div className="flex items-center gap-2">
+                                <span className="font-extrabold text-black leading-tight">
+                                  {s.label}
+                                </span>
+                                {s.tag && (
+                                  <span className="text-[10px] font-bold text-brand bg-brand/10 rounded px-1.5 py-0.5 uppercase tracking-wide leading-tight">
+                                    {s.tag}
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-xs text-[#666] leading-[1.55] m-0">
+                                {s.desc}
+                              </p>
+                            </div>
+                          </a>
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Regular links */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <a
+                      href="https://widde.io/cases"
+                      onClick={(e) => handleNavClick("https://widde.io/cases", e)}
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        isDark ? "text-white hover:bg-white/10" : "text-black hover:bg-black/5",
+                      )}
+                    >
+                      {t("nav.results")}
+                    </a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <a
+                      href="#planos"
+                      onClick={(e) => handleNavClick("#planos", e)}
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        isDark ? "text-white hover:bg-white/10" : "text-black hover:bg-black/5",
+                      )}
+                    >
+                      {t("nav.plans")}
+                    </a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <a
+                      href="https://widde.io/blog"
+                      onClick={(e) => handleNavClick("https://widde.io/blog", e)}
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        isDark ? "text-white hover:bg-white/10" : "text-black hover:bg-black/5",
+                      )}
+                    >
+                      {t("nav.blog")}
+                    </a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <div className="ml-4">
+              <LanguageSwitcher dark={isDark} />
+            </div>
           </div>
+
+          {/* Mobile menu */}
+          {mobileOpen && (
+            <div className="md:hidden absolute top-[60px] left-0 right-0 bg-white px-6 py-5 flex flex-col gap-4 border-b border-gray-100 shadow-[0_8px_20px_rgba(0,0,0,0.08)] z-50">
+              <span className="text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px]">
+                {t("nav.solutions")}
+              </span>
+              {solutions.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href ?? s.elementId}
+                  onClick={(e) => handleSolutionClick(s.elementId, e, s.href)}
+                  className="no-underline text-black text-base flex items-center gap-2"
+                >
+                  {s.label}
+                  {s.tag && (
+                    <span className="text-[10px] font-bold text-brand bg-brand/10 rounded px-1.5 py-0.5 uppercase tracking-wide">
+                      {s.tag}
+                    </span>
+                  )}
+                </a>
+              ))}
+              <hr className="border-gray-100" />
+              <a
+                href="https://widde.io/cases"
+                onClick={(e) => handleNavClick("https://widde.io/cases", e)}
+                className="no-underline text-black text-base"
+              >
+                {t("nav.results")}
+              </a>
+              <a
+                href="#planos"
+                onClick={(e) => handleNavClick("#planos", e)}
+                className="no-underline text-black text-base"
+              >
+                {t("nav.plans")}
+              </a>
+              <a
+                href="https://widde.io/blog"
+                onClick={(e) => handleNavClick("https://widde.io/blog", e)}
+                className="no-underline text-black text-base"
+              >
+                {t("nav.blog")}
+              </a>
+              <LanguageSwitcher />
+            </div>
+          )}
 
           <LetterButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"

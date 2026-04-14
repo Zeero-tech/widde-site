@@ -21,6 +21,7 @@ import Plans from "@/components/Plans";
 import Blog from "@/components/Blog";
 import CtaFullWidth from "@/components/CtaFullWidth";
 import Newsletter from "@/components/Newsletter";
+import Newsletter2 from "@/components/Newsletter2";
 import Footer from "@/components/Footer";
 import VideoCommerce from "@/pages/VideoCommerce";
 
@@ -85,6 +86,7 @@ function Home() {
       </main>
       <CtaFullWidth />
       <Newsletter />
+      <Newsletter2 />
       <Footer />
     </>
   );
