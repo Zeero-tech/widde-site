@@ -9,6 +9,7 @@ import Hero from "@/components/Hero";
 import Hero2 from "@/components/Hero2";
 import Showcase from "@/components/Showcase";
 import LogoTicker from "@/components/LogoTicker";
+import LogoTicker2 from "@/components/LogoTicker2";
 import Solutions from "@/components/Solutions";
 import Demo from "@/components/Demo";
 import Demo2 from "@/components/Demo2";
@@ -53,9 +54,9 @@ function Home() {
       <Nav />
       <Hero />
       <LogoTicker />
+      <LogoTicker2 />
       <Hero2 />
       <Showcase />
-      <LogoTicker />
       <main className="max-w-screen-xl mx-auto px-5 md:px-2">
         <div data-reveal>
           <Solutions />
