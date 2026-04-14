@@ -104,7 +104,7 @@ function SolutionsDropdown({ onClose, navigate, location, dark }: { onClose: () 
       <a
         href="#solucoes"
         onClick={(e) => handleClick('#solucoes', e)}
-        className="text-[16px] no-underline inline-flex items-center"
+        className="text-base no-underline inline-flex items-center"
         style={{ color: dark ? 'white' : '#000' }}
       >
         {letters.map((char, i) => (
@@ -177,17 +177,17 @@ function SolutionsDropdown({ onClose, navigate, location, dark }: { onClose: () 
             <div style={{ color: '#2667F8', height: 28, display: 'flex', alignItems: 'center' }}>{s.icon}</div>
             <div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 5, marginBottom: 8, minHeight: 48 }}>
-                <span style={{ fontSize: 14, fontWeight: 800, color: '#000', lineHeight: 1.2 }}>{s.label}</span>
+                <span className="text-sm" style={{ fontWeight: 800, color: '#000', lineHeight: 1.2 }}>{s.label}</span>
                 {s.tag && (
-                  <span style={{
-                    fontSize: 9, fontWeight: 700, color: '#fff',
+                  <span className="text-xs" style={{
+                    fontWeight: 700, color: '#fff',
                     background: '#2667F8', borderRadius: 999,
                     padding: '2px 7px', lineHeight: 1.4,
                     alignSelf: 'flex-start',
                   }}>{s.tag}</span>
                 )}
               </div>
-              <p style={{ fontSize: 12, color: '#666', lineHeight: 1.55, margin: 0 }}>{s.desc}</p>
+              <p className="text-xs" style={{ color: '#666', lineHeight: 1.55, margin: 0 }}>{s.desc}</p>
             </div>
           </a>
         ))}
@@ -221,7 +221,7 @@ function NavLink({ href, label, onClose, dark }: { href: string; label: string; 
       onClick={handleClick}
       onMouseEnter={() => animate('out')}
       onMouseLeave={() => animate('in')}
-      className="text-[16px] no-underline inline-flex"
+      className="text-base no-underline inline-flex"
       style={{ color: dark ? 'white' : '#000' }}
     >
       {letters.map((char, i) => (
@@ -301,6 +301,7 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
             <button
               key={code}
               onClick={() => select(code)}
+              className="text-sm"
               style={{
                 display: 'block',
                 width: '100%',
@@ -309,7 +310,6 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
                 background: current === code ? '#f0f4ff' : 'transparent',
                 border: 'none',
                 cursor: 'pointer',
-                fontSize: 13,
                 fontWeight: current === code ? 700 : 400,
                 color: '#000',
               }}
@@ -401,7 +401,7 @@ export default function Nav() {
 
           <LetterButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="hidden md:inline-flex bg-brand text-white text-[16px] font-bold px-5 py-[10px] rounded-full"
+            className="hidden md:inline-flex bg-brand text-white text-base font-bold px-5 py-[10px] rounded-full"
           >
             {t('nav.startNow')}
           </LetterButton>
