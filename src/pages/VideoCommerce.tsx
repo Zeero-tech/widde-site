@@ -21,12 +21,12 @@ export default function VideoCommerce() {
       <Nav />
       <VCHero />
       <LogoTicker />
-      <main className="max-w-[1740px] mx-auto px-5 md:px-10 lg:px-20 mb-12 md:mb-30">
+      <main className="max-w-screen-xl mx-auto px-5 md:px-2 mb-12 md:mb-30">
         <div data-reveal><VCWhy /></div>
         <div data-reveal><VCFormats /></div>
       </main>
       <div data-reveal><VCFeatures /></div>
-      <main className="max-w-[1740px] mx-auto px-5 md:px-10 lg:px-20 mb-12 md:mb-30">
+      <main className="max-w-screen-xl mx-auto px-5 md:px-2 mb-12 md:mb-30">
         <div data-reveal><VCQuote /></div>
         <div data-reveal><Cases /></div>
         <div data-reveal><Integrations /></div>
