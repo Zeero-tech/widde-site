@@ -22,7 +22,7 @@ export default function Cases() {
             key={c.title}
             href={c.link}
             role="listitem"
-            className="rounded-[14px] overflow-hidden cursor-pointer flex flex-col no-underline transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.13)]"
+            className="rounded-[14px] overflow-hidden cursor-pointer flex flex-col no-underline transition-all duration-300 ease-out shadow-[0_0_0_1px_rgb(233,233,233)] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.13)]"
           >
             {/* Thumbnail */}
             <div
