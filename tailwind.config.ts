@@ -16,6 +16,9 @@ export default {
       fontFamily: {
         sans: ['Lato', 'sans-serif'],
       },
+      fontSize: {
+        '9xl': ['4.5rem', { lineHeight: '1' }],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
