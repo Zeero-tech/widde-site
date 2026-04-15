@@ -268,7 +268,7 @@ export default function VCFormats() {
       </span>
       <h2
         id="formatos-heading"
-        className="text-xl md:text-2xl font-normal text-black leading-[1.25] mb-9 max-w-[560px]"
+        className="text-2xl font-normal text-black leading-[1.25] mb-9 max-w-[560px]"
       >
         {t("vc.formats.title")}
       </h2>
@@ -284,14 +284,14 @@ export default function VCFormats() {
           >
             {f.thumb}
             <div className="p-4">
-              <div className="font-black text-black mb-[5px]">{f.name}</div>
-              <div className="text-xs text-[#777] leading-[1.5]">{f.desc}</div>
-              <div className="text-xs text-[#aaa] mt-2">
+              <div className="text-2xl font-black text-black mb-[5px]">{f.name}</div>
+              <div className="text-base text-[#777] leading-[1.5]">{f.desc}</div>
+              <div className="text-sm text-[#aaa] mt-2">
                 {t("vc.formats.appearsIn")}
                 {f.onde.map((lugar) => (
                   <span
                     key={lugar}
-                    className="bg-[#F0F0F0] rounded text-xs font-bold text-[#555] px-[7px] py-[2px] ml-1"
+                    className="bg-[#F0F0F0] rounded text-sm font-bold text-[#555] px-[7px] py-[2px] ml-1"
                   >
                     {lugar}
                   </span>

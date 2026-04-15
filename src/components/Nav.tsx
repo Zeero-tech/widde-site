@@ -479,7 +479,7 @@ export default function Nav() {
               <div className="flex-1 flex flex-col px-5 pt-4 overflow-y-auto">
                 {/* Soluções accordion */}
                 <button
-                  className="bg-transparent text-left text-black text-base font-normal py-4 flex items-center justify-between cursor-pointer p-0 w-full border-0 border-b border-black/10"
+                  className="bg-transparent text-left text-black text-lg font-normal py-4 flex items-center justify-between cursor-pointer p-0 w-full border-0 border-b border-black/10"
                   onClick={() => setMobileSolutionsOpen((o) => !o)}
                 >
                   {t("nav.solutions")}
@@ -497,7 +497,7 @@ export default function Nav() {
                         key={s.label}
                         href={s.href ?? s.elementId}
                         onClick={(e) => { setMobileSolutionsOpen(false); handleSolutionClick(s.elementId, e, s.href); }}
-                        className="no-underline text-black text-base font-normal py-3 border-b border-black/5 last:border-b-0 flex items-center gap-2"
+                        className="no-underline text-black text-lg font-normal py-3 border-b border-black/5 last:border-b-0 flex items-center gap-2"
                       >
                         {s.label}
                         {s.tag && (
@@ -512,21 +512,21 @@ export default function Nav() {
                 <a
                   href="https://widde.io/cases"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases", e); }}
-                  className="no-underline text-black text-base font-normal py-4 border-b border-black/10"
+                  className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.results")}
                 </a>
                 <a
                   href="#planos"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("#planos", e); }}
-                  className="no-underline text-black text-base font-normal py-4 border-b border-black/10"
+                  className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.plans")}
                 </a>
                 <a
                   href="https://widde.io/blog"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog", e); }}
-                  className="no-underline text-black text-base font-normal py-4 border-b border-black/10"
+                  className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.blog")}
                 </a>
@@ -536,20 +536,20 @@ export default function Nav() {
               <div className="px-5 pb-8 pt-4 flex flex-col gap-3">
                 <a
                   href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                  className="w-full text-center bg-brand text-white font-bold text-base px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline"
+                  className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline"
                 >
                   Falar com vendas
                 </a>
                 <a
                   href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                  className="w-full text-center bg-brand text-white font-bold text-base px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
+                  className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
                 >
                   Começar agora
                 </a>
                 <a
                   href="#demo2"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("#demo2", e); }}
-                  className="w-full text-center bg-transparent text-black font-bold text-base px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
+                  className="w-full text-center bg-transparent text-black font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
                 >
                   Conhecer mais
                 </a>
