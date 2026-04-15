@@ -1,19 +1,65 @@
 name: Deploy to Firebase
+
 on:
   push:
     branches: [main]
+
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Arquivar Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+
+      - name: Arquivar Configurações Firebase
+        uses: actions/upload-artifact@v4
+        with:
+          name: firebase-config
+          path: |
+            ./firebase.json
+            ./.firebaserc
+
   deploy:
+    name: Deploy Production
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Download Build
+        uses: actions/download-artifact@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run build
-      - run: npm install -g firebase-tools
-      - run: firebase deploy --only hosting --token "$FIREBASE_TOKEN"
+          name: dist
+          path: dist
+
+      - name: Download Configurações Firebase
+        uses: actions/download-artifact@v4
+        with:
+          name: firebase-config
+          path: .
+
+      - name: Deploy para Firebase
+        uses: w9jds/firebase-action@v13.0.3
+        with:
+          args: deploy --only hosting --project ${{ secrets.FIREBASE_PROJECT_ID }} --config ./firebase.json
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
