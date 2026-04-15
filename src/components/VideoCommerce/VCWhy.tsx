@@ -37,7 +37,7 @@ export default function VCWhy() {
               target={stat.target}
               prefix={stat.prefix}
               suffix={stat.suffix}
-              className="block text-3xl md:text-7xl font-light text-white leading-none md:mb-3 flex-shrink-0 w-[80px]"
+              className="block text-3xl md:text-5xl font-light text-white leading-none md:mb-3 flex-shrink-0 w-[80px]"
             />
             <span className="text-base md:text-lg text-white/50 leading-[1.4]">
               {t(`vc.why.stat${i + 1}`)}

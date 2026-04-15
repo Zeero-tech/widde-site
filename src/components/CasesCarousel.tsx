@@ -64,7 +64,7 @@ export default function CasesCarousel() {
 
               {/* Body */}
               <div className="py-5 md:py-6 flex flex-col flex-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-[#1d1d1d] mb-3 leading-[1.3] tracking-[-0.01em]">
+                <h3 className="text-2xl md:text-2xl font-bold text-[#1d1d1d] mb-3 leading-[1.3] tracking-[-0.01em]">
                   {c.title}
                 </h3>
                 <p className="text-base md:text-lg text-[#5d5d5d] leading-[1.6] mb-5 flex-1">

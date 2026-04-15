@@ -311,7 +311,7 @@ export default function VCFormats() {
           >
             {f.thumb}
             <div className="p-4 md:p-7">
-              <div className="font-normal md:text-[32px] text-black mb-2 md:mb-4">{f.name}</div>
+              <div className="font-normal md:text-2xl text-black mb-2 md:mb-4">{f.name}</div>
               <div className="text-xs md:text-lg text-[#777] leading-[1.5] mb-2 md:mb-4">{f.desc}</div>
               <div className="text-xs md:text-base text-[#aaa]">
                 {t("vc.formats.appearsIn")}

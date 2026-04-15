@@ -72,14 +72,14 @@ export default function Hero() {
             <div className="mt-8 md:mt-0 flex flex-col items-stretch md:flex-row md:items-center gap-3 md:justify-start">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block text-center bg-brand text-white font-bold text-lg md:text-2xl px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"
+                className="inline-block text-center bg-brand text-white font-bold text-lg md:text-lg px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"
               >
                 {t("hero.ctaSales")}
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
                 onClick={handleVerDemo}
-                className="inline-block text-center bg-transparent text-black font-bold text-lg md:text-2xl px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+                className="inline-block text-center bg-transparent text-black font-bold text-lg md:text-lg px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
                 {t("hero.ctaLearnMore")}
               </AnimatedButton>

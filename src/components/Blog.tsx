@@ -94,10 +94,10 @@ export default function Blog() {
                 />
               )}
             </div>
-            <p className="text-xs md:text-base font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
+            <p className="text-xs md:text-sm font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
               {post.category}
             </p>
-            <p className="text-base md:text-3xl font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">
+            <p className="text-base md:text-2xl font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">
               {post.title}
             </p>
             <p className="text-sm md:text-lg text-[#5d5d5d] leading-[1.5] px-4 pt-1">

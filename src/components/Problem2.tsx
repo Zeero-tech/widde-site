@@ -96,7 +96,7 @@ export default function Problem2() {
         </div>
         <AnimatedButton
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-2xl px-[22px] py-[11px] rounded-full no-underline"
+          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-lg px-[22px] py-[11px] rounded-full no-underline"
         >
           {t("problem.cta")}
         </AnimatedButton>
@@ -108,7 +108,7 @@ export default function Problem2() {
           <CountUp
             target={84}
             suffix="%"
-            className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat1Label")}
@@ -118,9 +118,9 @@ export default function Problem2() {
           <CountUp
             target={63}
             suffix="%"
-            className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat2Label")}
           </div>
         </div>
@@ -128,9 +128,9 @@ export default function Problem2() {
           <CountUp
             target={65}
             suffix="%"
-            className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat3Label")}
           </div>
         </div>

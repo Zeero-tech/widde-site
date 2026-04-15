@@ -38,7 +38,7 @@ export default function Demo2() {
             </p>
             <AnimatedButton
               href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-              className="inline-block w-full md:w-fit text-center bg-black text-white font-bold text-lg md:text-2xl px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
+              className="inline-block w-full md:w-fit text-center bg-black text-white font-bold text-lg md:text-lg px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
             >
               {t("demo.cta", "Falar com vendas")}
             </AnimatedButton>

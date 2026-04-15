@@ -42,14 +42,14 @@ export default function VCCta() {
         <div className="flex flex-col items-stretch sm:flex-row sm:items-center justify-center gap-3">
           <AnimatedButton
             href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block text-center bg-brand text-white font-bold text-lg md:text-2xl px-7 py-[13px] rounded-full no-underline"
+            className="inline-block text-center bg-brand text-white font-bold text-lg md:text-lg px-7 py-[13px] rounded-full no-underline"
           >
             {t("vc.cta.ctaSales")}
           </AnimatedButton>
           <a
             href="/#demo2"
             onClick={handleViewDemo}
-            className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black font-bold text-lg md:text-2xl px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+            className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black font-bold text-lg md:text-lg px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
           >
             <span
               data-button-animate-chars=""

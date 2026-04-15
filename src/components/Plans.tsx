@@ -54,7 +54,7 @@ export default function Plans() {
           </ul>
           <AnimatedButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block w-full md:w-fit text-center bg-[#f6f6f6] text-black font-bold text-lg md:text-2xl px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
+            className="inline-block w-full md:w-fit text-center bg-[#f6f6f6] text-black font-bold text-lg md:text-lg px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
           >
             {t("plans.starterCta")}
           </AnimatedButton>
@@ -163,7 +163,7 @@ export default function Plans() {
               </div>
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="text-2xl inline-block bg-brand text-white font-bold px-[22px] py-[11px] rounded-full no-underline border border-brand w-fit"
+                className="text-lg inline-block bg-brand text-white font-bold px-[22px] py-[11px] rounded-full no-underline border border-brand w-fit"
               >
                 {t("plans.proCta")}
               </AnimatedButton>
