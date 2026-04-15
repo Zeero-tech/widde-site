@@ -28,7 +28,7 @@ export default function Demo2() {
             title={t("demo.heading")}
             className="mb-4"
           />
-          <p className="text-sm md:text-base text-[#5d5d5d] leading-[1.6] mb-8 max-w-[440px]">
+          <p className="text-base md:text-base text-[#5d5d5d] leading-[1.6] mb-8 max-w-[440px]">
             {t(
               "demo.description",
               "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca."
@@ -36,7 +36,7 @@ export default function Demo2() {
           </p>
           <AnimatedButton
             href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block w-full md:w-fit text-center bg-black text-white font-bold px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
+            className="inline-block w-full md:w-fit text-center bg-black text-white font-bold text-lg md:text-base px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
           >
             {t("demo.cta", "Falar com vendas")}
           </AnimatedButton>
