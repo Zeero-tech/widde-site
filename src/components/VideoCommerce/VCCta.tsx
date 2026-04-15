@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AnimatedButton from "@/components/AnimatedButton";
+import SectionTitle from "@/components/SectionTitle";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
 
@@ -26,26 +27,29 @@ export default function VCCta() {
   return (
     <section className="py-10 md:py-20 relative overflow-hidden bg-[#E5E5E5]">
       <div className="max-w-screen-xl mx-auto px-3 md:px-2 text-center relative z-10">
-        <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-4">
+        <span className="md:hidden block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-4">
           {t("vc.cta.label")}
         </span>
+        <div className="hidden md:flex justify-center mb-4">
+          <SectionTitle label={t("vc.cta.label")} />
+        </div>
         <h2 className="text-2xl md:text-4xl font-black text-black leading-[1.2] mb-4">
           {t("vc.cta.title")}
         </h2>
-        <p className="text-base md:text-base text-[#5d5d5d] leading-[1.6] mb-8">
+        <p className="text-base md:text-lg text-[#5d5d5d] leading-[1.6] mb-8">
           {t("vc.cta.description")}
         </p>
         <div className="flex flex-col items-stretch sm:flex-row sm:items-center justify-center gap-3">
           <AnimatedButton
             href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block text-center bg-brand text-white font-bold text-lg md:text-base px-7 py-[13px] rounded-full no-underline"
+            className="inline-block text-center bg-brand text-white font-bold text-lg md:text-2xl px-7 py-[13px] rounded-full no-underline"
           >
             {t("vc.cta.ctaSales")}
           </AnimatedButton>
           <a
             href="/#demo2"
             onClick={handleViewDemo}
-            className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black font-bold text-lg md:text-base px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+            className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-black font-bold text-lg md:text-2xl px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
           >
             <span
               data-button-animate-chars=""

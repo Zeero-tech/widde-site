@@ -76,10 +76,10 @@ export default function Newsletter2() {
         <div className="absolute inset-0 bg-black/65 backdrop-blur-sm" />
 
         {/* Centered form */}
-        <div className="relative z-[5] flex flex-col items-center text-center px-6 py-16 w-full max-w-[820px]">
+        <div className="relative z-[5] flex flex-col items-center text-center px-6 py-16 w-full max-w-[920px]">
           <h2
             id="newsletter2-heading"
-            className="text-2xl md:text-3xl font-normal text-white leading-[1.25] mb-6"
+            className="text-2xl md:text-4xl font-normal text-white leading-[1.25] mb-6"
           >
             <HighlightText
               highlightColor="var(--color-brand)"
@@ -90,10 +90,10 @@ export default function Newsletter2() {
               {t("newsletter.title")}
             </HighlightText>
           </h2>
-          <p className="text-base md:text-base text-white/60 leading-[1.6] max-w-[840px]">
+          <p className="text-base md:text-lg text-white/60 leading-[1.6] max-w-[940px]">
             Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais.
           </p>
-          <p className="text-base md:text-base text-white/60 leading-[1.6] mb-6 max-w-[840px]">
+          <p className="text-base md:text-lg text-white/60 leading-[1.6] mb-6 max-w-[940px]">
             Direto no seu e-mail, sem spam.
           </p>
 
