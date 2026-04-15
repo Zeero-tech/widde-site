@@ -88,7 +88,7 @@ export default function VCHero() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 md:mt-0  flex flex-col items-stretch md:flex-row md:items-center gap-3">
+            <div className="mt-6 md:mt-0  flex flex-col items-stretch md:flex-row md:items-center gap-3">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
                 className="inline-block text-center bg-brand text-white font-bold text-lg md:text-base px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"

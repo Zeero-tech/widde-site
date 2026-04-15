@@ -66,7 +66,7 @@ export default function Hero() {
             <p className="text-base md:text-base text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[1100px]">
               Por isso, com a Widde você ajuda o visitante a <strong>sentir, entender, escolher e comprar no seu site.</strong>
             </p>
-            <p className="text-base md:text-base font-bold text-[#666] leading-[1.7] mb-8 md:mb-10 max-w-full md:max-w-[720px]">
+            <p className="text-base md:text-base font-bold text-[#666] leading-[1.7] mb-6 md:mb-10 max-w-full md:max-w-[720px]">
               {t("hero.descriptionProducts")}
             </p>
             <div className="mt-8 md:mt-0 flex flex-col items-stretch md:flex-row md:items-center gap-3 md:justify-start">
