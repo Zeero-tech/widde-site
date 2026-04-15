@@ -19,9 +19,9 @@ export default function Hero() {
     );
     tl.fromTo(
       videoInnerRef.current,
-      { opacity: 0, filter: "blur(16px)" },
-      { opacity: 1, filter: "blur(0px)", duration: 1.4 },
-      "<0.15",
+      { opacity: 0, filter: "blur(40px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 2.5, ease: "power3.out" },
+      "<0.1",
     );
   }, []);
 
@@ -113,7 +113,7 @@ export default function Hero() {
                 playsInline
               >
                 <source
-                  src="https://videos.widde.io/widde-bucket-sp/335ad64a-0820-4ad1-bda6-b44474ed45fe/videos/79a89f7b-b9be-493f-ba6f-d070941150a3-1752673555899-1916263/video.mp4"
+                  src="/Video-inicio-site.mp4"
                   type="video/mp4"
                 />
               </video>

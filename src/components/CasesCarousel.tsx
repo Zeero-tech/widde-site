@@ -56,6 +56,8 @@ export default function CasesCarousel() {
               <div className="w-full h-[240px] md:h-[300px] relative overflow-hidden rounded-md">
                 <img
                   src={c.image}
+                  srcSet={c.image?.endsWith('.avif') ? undefined : `${c.image?.replace(/(\.[^.]+)$/, '-p-500$1')} 500w, ${c.image?.replace(/(\.[^.]+)$/, '-p-800$1')} 800w, ${c.image?.replace(/(\.[^.]+)$/, '-p-1080$1')} 1080w, ${c.image} 2560w`}
+                  sizes={c.image?.endsWith('.avif') ? undefined : "(max-width: 640px) 85vw, 600px"}
                   alt={c.title}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"

@@ -34,6 +34,8 @@ export default function Blog() {
               {post.image && (
                 <img
                   src={post.image}
+                  srcSet={`${post.image.replace(/(\.[^.]+)$/, '-p-500$1')} 500w, ${post.image.replace(/(\.[^.]+)$/, '-p-800$1')} 800w, ${post.image.replace(/(\.[^.]+)$/, '-p-1080$1')} 1080w, ${post.image} 1600w`}
+                  sizes="90vw"
                   alt={post.title}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
@@ -88,6 +90,8 @@ export default function Blog() {
               {post.image && (
                 <img
                   src={post.image}
+                  srcSet={`${post.image.replace(/(\.[^.]+)$/, '-p-500$1')} 500w, ${post.image.replace(/(\.[^.]+)$/, '-p-800$1')} 800w, ${post.image.replace(/(\.[^.]+)$/, '-p-1080$1')} 1080w, ${post.image} 1600w`}
+                  sizes="(max-width: 1024px) 50vw, 33vw"
                   alt={post.title}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"

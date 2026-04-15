@@ -1,19 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-
-const items: {
-  src: string;
-  alt: string;
-  colSpan: number;
-  rowSpan: number;
-}[] = [
-    { src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600", alt: "Fashion store", colSpan: 2, rowSpan: 2 },
-    { src: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600", alt: "Brand showcase", colSpan: 1, rowSpan: 1 },
-    { src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600", alt: "E-commerce", colSpan: 1, rowSpan: 1 },
-    { src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600", alt: "Shopping", colSpan: 1, rowSpan: 1 },
-    { src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600", alt: "Product display", colSpan: 1, rowSpan: 1 },
-    { src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600", alt: "Product shot", colSpan: 1, rowSpan: 1 },
-  ];
+import { showcaseVideos } from "@/data/showcase";
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(false);
@@ -27,7 +14,46 @@ function useIsMobile() {
   return mobile;
 }
 
+// Retorna src da lista pelo índice, voltando ao início se necessário
+function pick(list: string[], index: number): string {
+  if (!list.length) return '';
+  return list[index % list.length];
+}
+
+type BlockItem = {
+  src: string
+  colSpan: number
+  rowSpan: number
+}
+
+function buildItems(isMobile: boolean, blockIndex: number): BlockItem[] {
+  const l = blockIndex // large index
+  const s = blockIndex * 5 // small index base — 5 slots por bloco
+  const m = blockIndex * 2 // medium index base — 2 slots por bloco
+
+  if (isMobile) {
+    return [
+      { src: pick(showcaseVideos.mobile_large, l), colSpan: 2, rowSpan: 2 },
+      { src: pick(showcaseVideos.mobile_medium, m), colSpan: 1, rowSpan: 1 },
+      { src: pick(showcaseVideos.mobile_medium, m + 1), colSpan: 1, rowSpan: 1 },
+      { src: pick(showcaseVideos.mobile_small, s), colSpan: 1, rowSpan: 1 },
+      { src: pick(showcaseVideos.mobile_small, s + 1), colSpan: 1, rowSpan: 1 },
+      { src: pick(showcaseVideos.mobile_small, s + 2), colSpan: 1, rowSpan: 1 },
+    ]
+  }
+  return [
+    { src: pick(showcaseVideos.desktop_large, l), colSpan: 2, rowSpan: 2 },
+    { src: pick(showcaseVideos.desktop_small, s), colSpan: 1, rowSpan: 1 },
+    { src: pick(showcaseVideos.desktop_small, s + 1), colSpan: 1, rowSpan: 1 },
+    { src: pick(showcaseVideos.desktop_small, s + 2), colSpan: 1, rowSpan: 1 },
+    { src: pick(showcaseVideos.desktop_small, s + 3), colSpan: 1, rowSpan: 1 },
+    { src: pick(showcaseVideos.desktop_small, s + 4), colSpan: 1, rowSpan: 1 },
+  ]
+}
+
 function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; colSize: number; rowSize: number; isMobile: boolean }) {
+  const items = buildItems(isMobile, offset)
+
   const gridTemplateRows = isMobile
     ? "180px 180px 100px"
     : `repeat(3, ${rowSize}px)`;
@@ -44,18 +70,22 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
       {items.map((item, i) => (
         <div
           key={`${offset}-${i}`}
-          className="relative rounded-2xl overflow-hidden bg-amber-700"
+          className="relative rounded-2xl overflow-hidden bg-[#e0e0e0]"
           style={{
             gridColumn: `span ${item.colSpan}`,
             gridRow: `span ${item.rowSpan}`,
           }}
         >
-          <img
-            className="absolute inset-0 w-full h-full object-cover"
-            src={item.src}
-            alt={item.alt}
-            loading="lazy"
-          />
+          {item.src && (
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              src={item.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          )}
         </div>
       ))}
     </div>

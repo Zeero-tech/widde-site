@@ -24,33 +24,12 @@ export default function Solutions() {
         {/* VIDEO COMMERCE */}
         <SolutionArticle direction="left" id="video-commerce" mobileCarousel>
           <div
-            className="flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden h-[230px]"
+            className="flex-shrink-0 rounded-2xl overflow-hidden h-[230px]"
             aria-hidden="true"
           >
-            <div className="p-4 flex flex-col gap-2 w-full">
-              <div className="flex gap-1.5 justify-center items-end">
-                <div className="rounded-lg bg-brand/25 relative overflow-hidden flex-shrink-0 w-10 h-16">
-                  <span className="absolute bottom-1 left-1 right-1 text-[10px] text-white bg-black/45 rounded px-1 py-0.5 font-bold">A</span>
-                </div>
-                <div className="rounded-lg bg-brand/50 relative overflow-hidden flex-shrink-0 w-12 h-20">
-                  <span className="absolute bottom-1 left-1 right-1 text-[10px] text-white bg-black/45 rounded px-1 py-0.5 font-bold">B</span>
-                </div>
-                <div className="rounded-lg bg-brand relative overflow-hidden flex-shrink-0 w-16 h-28">
-                  <span className="absolute bottom-1 left-1 right-1 text-[10px] text-white bg-black/45 rounded px-1 py-0.5 font-bold">{t("solutions.videoCommerce.formatCarousel")}</span>
-                </div>
-                <div className="rounded-lg bg-brand/50 relative overflow-hidden flex-shrink-0 w-12 h-20">
-                  <span className="absolute bottom-1 left-1 right-1 text-[10px] text-white bg-black/45 rounded px-1 py-0.5 font-bold">C</span>
-                </div>
-                <div className="rounded-lg bg-brand/25 relative overflow-hidden flex-shrink-0 w-10 h-16">
-                  <span className="absolute bottom-1 left-1 right-1 text-[10px] text-white bg-black/45 rounded px-1 py-0.5 font-bold">D</span>
-                </div>
-              </div>
-              <div className="flex gap-1 justify-center flex-wrap">
-                <span className="bg-brand/[0.12] text-brand text-[10px] font-bold px-2 py-0.5 rounded-full">{t("solutions.videoCommerce.formatStories")}</span>
-                <span className="bg-brand/[0.12] text-brand text-[10px] font-bold px-2 py-0.5 rounded-full">{t("solutions.videoCommerce.formatCarousel")}</span>
-                <span className="bg-brand/[0.12] text-brand text-[10px] font-bold px-2 py-0.5 rounded-full">{t("solutions.videoCommerce.formatExplore")}</span>
-              </div>
-            </div>
+            <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
+              <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
+            </video>
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
             <div>
@@ -144,27 +123,15 @@ export default function Solutions() {
         {/* TRYON */}
         <SolutionArticle direction="left" id="provador-ia-mobile" mobileCarousel>
           <div
-            className="flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden h-[230px]"
+            className="flex-shrink-0 rounded-2xl overflow-hidden h-[230px] relative"
             aria-hidden="true"
           >
-            <div className="flex gap-2 p-4 items-end">
-              <div className="w-16 h-36 rounded-xl bg-brand/[0.08] border border-brand/20 overflow-hidden flex flex-col flex-shrink-0">
-                <div className="flex-1 relative" style={{ background: "linear-gradient(160deg,rgba(38,103,248,0.25),rgba(0,58,185,0.15))" }}>
-                  <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-8 h-14 bg-brand/30 rounded-t-md" />
-                </div>
-                <div className="bg-brand/[0.06] px-1.5 py-1.5 flex gap-1 justify-center">
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#E8C4A0" }} />
-                  <div className="w-2.5 h-2.5 rounded-full border border-brand" style={{ background: "#6B4C3B" }} />
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#F5E6D3" }} />
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#2C2C2C" }} />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="w-10 h-10 rounded-lg bg-brand/[0.15] border border-brand" />
-                <div className="w-10 h-10 rounded-lg bg-brand/[0.07] border border-brand/15" />
-                <div className="w-10 h-10 rounded-lg bg-brand/[0.07] border border-brand/15" />
-              </div>
-            </div>
+            <video
+              autoPlay muted loop playsInline
+              className="absolute inset-0 w-full h-full object-cover object-right"
+            >
+              <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
+            </video>
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
             <div>
@@ -192,33 +159,18 @@ export default function Solutions() {
         {/* VIDEO COMMERCE */}
         <SolutionArticle direction="left" id="video-commerce">
           <div
-            className="flex-1 flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden md:min-h-96"
+            className="flex-1 flex-shrink-0 rounded-2xl overflow-hidden md:min-h-96"
             aria-hidden="true"
           >
-            <div className="p-6 flex flex-col gap-2 w-full">
-              <div className="flex gap-2 justify-center items-end">
-                <div className="rounded-xl bg-brand/25 relative overflow-hidden flex-shrink-0 w-14 h-24">
-                  <span className="absolute bottom-1.5 left-1.5 right-1.5 text-xs text-white bg-black/45 rounded px-1.5 py-0.5 font-bold">A</span>
-                </div>
-                <div className="rounded-xl bg-brand/50 relative overflow-hidden flex-shrink-0 w-16 h-32">
-                  <span className="absolute bottom-1.5 left-1.5 right-1.5 text-xs text-white bg-black/45 rounded px-1.5 py-0.5 font-bold">B</span>
-                </div>
-                <div className="rounded-xl bg-brand relative overflow-hidden flex-shrink-0 w-24 h-40">
-                  <span className="absolute bottom-1.5 left-1.5 right-1.5 text-xs text-white bg-black/45 rounded px-1.5 py-0.5 font-bold">{t("solutions.videoCommerce.formatCarousel")}</span>
-                </div>
-                <div className="rounded-xl bg-brand/50 relative overflow-hidden flex-shrink-0 w-16 h-32">
-                  <span className="absolute bottom-1.5 left-1.5 right-1.5 text-xs text-white bg-black/45 rounded px-1.5 py-0.5 font-bold">C</span>
-                </div>
-                <div className="rounded-xl bg-brand/25 relative overflow-hidden flex-shrink-0 w-14 h-24">
-                  <span className="absolute bottom-1.5 left-1.5 right-1.5 text-xs text-white bg-black/45 rounded px-1.5 py-0.5 font-bold">D</span>
-                </div>
-              </div>
-              <div className="flex gap-1.5 justify-center">
-                <span className="bg-brand/[0.12] text-brand text-xs font-bold px-2.5 py-1 rounded-full">{t("solutions.videoCommerce.formatStories")}</span>
-                <span className="bg-brand/[0.12] text-brand text-xs font-bold px-2.5 py-1 rounded-full">{t("solutions.videoCommerce.formatCarousel")}</span>
-                <span className="bg-brand/[0.12] text-brand text-xs font-bold px-2.5 py-1 rounded-full">{t("solutions.videoCommerce.formatExplore")}</span>
-              </div>
-            </div>
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
+            </video>
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
             <div>
@@ -314,27 +266,18 @@ export default function Solutions() {
         {/* TRYON */}
         <SolutionArticle direction="left" id="provador-ia">
           <div
-            className="flex-1 flex-shrink-0 bg-[#e5e5e5] rounded-2xl flex items-center justify-center overflow-hidden md:min-h-96"
+            className="flex-1 flex-shrink-0 rounded-2xl overflow-hidden md:min-h-96 relative self-stretch"
             aria-hidden="true"
           >
-            <div className="flex gap-2.5 p-5 items-end">
-              <div className="w-24 h-48 rounded-2xl bg-brand/[0.08] border border-brand/20 overflow-hidden flex flex-col flex-shrink-0">
-                <div className="flex-1 relative" style={{ background: "linear-gradient(160deg,rgba(38,103,248,0.25),rgba(0,58,185,0.15))" }}>
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-11 h-20 bg-brand/30 rounded-t-lg" />
-                </div>
-                <div className="bg-brand/[0.06] px-2 py-2 flex gap-1.5 justify-center">
-                  <div className="w-3.5 h-3.5 rounded-full" style={{ background: "#E8C4A0" }} />
-                  <div className="w-3.5 h-3.5 rounded-full border-2 border-brand" style={{ background: "#6B4C3B" }} />
-                  <div className="w-3.5 h-3.5 rounded-full" style={{ background: "#F5E6D3" }} />
-                  <div className="w-3.5 h-3.5 rounded-full" style={{ background: "#2C2C2C" }} />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <div className="w-14 h-14 rounded-lg bg-brand/[0.15] border border-brand" />
-                <div className="w-14 h-14 rounded-lg bg-brand/[0.07] border border-brand/15" />
-                <div className="w-14 h-14 rounded-lg bg-brand/[0.07] border border-brand/15" />
-              </div>
-            </div>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover object-right"
+            >
+              <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
+            </video>
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
             <div>
