@@ -21,7 +21,7 @@ export default function CasesCarousel() {
   }
 
   return (
-    <section className="max-w-screen-xl mx-auto px-2">
+    <section className="max-w-screen-xl mx-auto px-2 -mr-5 md:mr-0 pr-0 md:pr-2">
       <SectionTitle
         label="Cases"
         title="Histórias de sucesso a Widde"
@@ -43,7 +43,7 @@ export default function CasesCarousel() {
         <div
           ref={scrollRef}
           onWheel={handleWheel}
-          className="flex flex-1 gap-5 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide"
+          className="flex flex-1 gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {cases.map((c) => (
@@ -92,6 +92,8 @@ export default function CasesCarousel() {
               </div>
             </a>
           ))}
+          {/* Mobile trailing spacer — 12px page padding */}
+          <div className="md:hidden flex-shrink-0" />
         </div>
 
         {/* Right arrow */}

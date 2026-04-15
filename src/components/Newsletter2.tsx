@@ -7,9 +7,7 @@ export default function Newsletter2() {
   const { t } = useTranslation();
   const circleRef = useRef<HTMLImageElement>(null);
   const [hovered, setHovered] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   useEffect(() => {
     if (!circleRef.current) return;
@@ -21,31 +19,38 @@ export default function Newsletter2() {
     });
   }, []);
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("loading");
-    try {
-      const body = new URLSearchParams({
-        token_rdstation: "992ba116e4725f4dd0bd5709b2a6549f",
-        conversion_identifier: "inscricao-newsletter-site-novo",
-        internal_source: "6",
-        name,
-        email,
-      });
-      await fetch("https://cta-redirect.rdstation.com/v2/conversions", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
-      });
-      setStatus("success");
-    } catch {
-      setStatus("error");
+  useEffect(() => {
+    const containerId = "inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e";
+    const flagKey = "__rdform_created__" + containerId;
+
+    if ((window as any)[flagKey]) return;
+
+    const tryInit = () => {
+      // @ts-ignore
+      if (typeof window.RDStationForms !== "function") return;
+      if ((window as any)[flagKey]) return;
+      (window as any)[flagKey] = true;
+      // @ts-ignore
+      new window.RDStationForms(containerId, "null").createForm();
+    };
+
+    // Script loaded in index.html — may already be ready or still loading
+    // @ts-ignore
+    if (typeof window.RDStationForms === "function") {
+      tryInit();
+    } else {
+      const script = document.querySelector(
+        `script[src*="rdstation-forms"]`
+      );
+      if (script) {
+        script.addEventListener("load", tryInit, { once: true });
+      }
     }
-  }
+  }, []);
 
   return (
     <section
-      className="overflow-hidden bg-[#0A0A0A] px-5 md:px-2"
+      className="overflow-hidden bg-[#0A0A0A] px-3 md:px-2"
       aria-labelledby="newsletter2-heading"
     >
       <div
@@ -71,70 +76,63 @@ export default function Newsletter2() {
         <div className="absolute inset-0 bg-black/65 backdrop-blur-sm" />
 
         {/* Centered form */}
-        <div className="relative z-[2] flex flex-col items-center text-center px-6 py-16 w-full max-w-[820px]">
+        <div className="relative z-[5] flex flex-col items-center text-center px-6 py-16 w-full max-w-[820px]">
           <h2
             id="newsletter2-heading"
-            className="text-3xl font-normal text-white leading-[1.25] mb-6"
+            className="text-2xl md:text-3xl font-normal text-white leading-[1.25] mb-6"
           >
-            <HighlightText highlightColor="var(--color-brand)" delay={0.2} duration={0.8}>
+            <HighlightText
+              highlightColor="var(--color-brand)"
+              delay={0.2}
+              duration={0.8}
+              className="px-2 py-1 md:px-4 md:py-1"
+            >
               {t("newsletter.title")}
             </HighlightText>
           </h2>
-          <p className="text-white/60 leading-[1.6] max-w-[840px]">
+          <p className="text-sm md:text-base text-white/60 leading-[1.6] max-w-[840px]">
             Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais.
           </p>
-          <p className="text-white/60 leading-[1.6] mb-6 max-w-[840px]">
+          <p className="text-sm md:text-base text-white/60 leading-[1.6] mb-6 max-w-[840px]">
             Direto no seu e-mail, sem spam.
           </p>
-          {status === "success" ? (
-            <div className="text-white text-center py-6">
-              <p className="text-xl font-bold mb-2">Inscrição realizada! 🎉</p>
-              <p className="text-white/60">Obrigado! Em breve você receberá nossos conteúdos.</p>
-            </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col gap-[10px] w-full max-w-[520px]"
-              aria-label={t("newsletter.ariaLabel")}
-            >
-              <label htmlFor="nl2-name" className="sr-only">
-                {t("newsletter.namePlaceholder")}
-              </label>
-              <input
-                id="nl2-name"
-                type="text"
-                placeholder={t("newsletter.namePlaceholder")}
-                autoComplete="name"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full bg-white/10 border border-white/20 rounded-[8px] px-4 py-3 text-white placeholder-white/40 outline-none focus:border-brand/70 transition-colors"
-              />
-              <label htmlFor="nl2-email" className="sr-only">
-                {t("newsletter.emailPlaceholder")}
-              </label>
-              <input
-                id="nl2-email"
-                type="email"
-                placeholder={t("newsletter.emailPlaceholder")}
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-white/10 border border-white/20 rounded-[8px] px-4 py-3 text-white placeholder-white/40 outline-none focus:border-brand/70 transition-colors"
-              />
-              {status === "error" && (
-                <p className="text-red-400 text-sm">Ocorreu um erro. Tente novamente.</p>
-              )}
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="bg-brand text-white text-base font-bold px-7 py-[14px] rounded-[9px] border-none cursor-pointer w-full mt-2 hover:opacity-90 transition-opacity disabled:opacity-60"
-              >
-                {status === "loading" ? "Enviando..." : t("newsletter.cta")}
-              </button>
-            </form>
-          )}
+
+          {/* RD Station form — SDK injects into this div */}
+          <style>{`
+            #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e input {
+              background-color: rgba(255,255,255,0.1) !important;
+              color: white !important;
+              border: 1px solid rgba(255,255,255,0.2) !important;
+              box-shadow: none !important;
+              padding: 12px 16px !important;
+            }
+            #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e input::placeholder {
+              color: rgba(255,255,255,0.4) !important;
+            }
+            #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e button[type=submit] {
+              padding: 12px 16px !important;
+            }
+            @media (min-width: 768px) {
+              #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e input,
+              #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e button[type=submit] {
+                width: 550px !important;
+                height: 50px !important;
+              }
+              #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e form,
+              #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e form > * {
+                gap: 8px !important;
+              }
+              #inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e form > *:last-child {
+                margin-bottom: 0 !important;
+              }
+            }
+          `}</style>
+          <div
+            role="main"
+            className="w-full max-w-[520px] [&_form]:flex [&_form]:flex-col [&_form]:gap-[10px] [&_input]:w-full [&_input]:rounded-[8px] [&_input]:px-4 [&_input]:py-3 [&_input]:outline-none [&_button[type=submit]]:bg-brand [&_button[type=submit]]:text-white [&_button[type=submit]]:font-bold [&_button[type=submit]]:px-7 [&_button[type=submit]]:py-[14px] md:[&_button[type=submit]]:px-4 md:[&_button[type=submit]]:py-3 [&_button[type=submit]]:rounded-[9px] [&_button[type=submit]]:w-full [&_button[type=submit]]:cursor-pointer [&_button[type=submit]]:border-none"
+          >
+            <div id="inscricao-newsletter-site-novo-b627ab8cfdec2f7ade6e" />
+          </div>
         </div>
 
         {/* Widde circle — rotating, bottom-right */}
@@ -145,11 +143,11 @@ export default function Newsletter2() {
           aria-hidden="true"
           className="widde-cicle is--large absolute z-[3] object-contain pointer-events-none"
           style={{
-            width: 250,
-            height: 250,
-            bottom: -60,
-            right: -80,
-            opacity: hovered ? 1 : 0,
+            width: isMobile ? 200 : 250,
+            height: isMobile ? 200 : 250,
+            bottom: isMobile ? -120 : -60,
+            right: isMobile ? -110 : -80,
+            opacity: isMobile ? 0.6 : (hovered ? 1 : 0),
             transition: "opacity 0.4s ease",
           }}
         />

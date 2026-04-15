@@ -40,7 +40,7 @@ export default function Footer() {
         }
       `}</style>
 
-      <div className="px-5 md:px-2 max-w-screen-xl mx-auto pt-16 md:pt-40 pb-6 md:pb-10">
+      <div className="px-3 md:px-2 max-w-screen-xl mx-auto pt-16 md:pt-40 pb-6 md:pb-10">
         {/* Top: logo + socials */}
         <div className="flex justify-between items-start flex-wrap gap-6 mb-8 md:mb-12">
           <a

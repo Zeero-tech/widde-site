@@ -40,7 +40,7 @@ export default function Hero() {
       style={{ minHeight: "calc(100vh - 120px)" }}
     >
       <div
-        className="mx-auto px-5 md:px-2 max-w-screen-xl h-full flex items-center"
+        className="mx-auto px-3 md:px-2 max-w-screen-xl h-full flex items-center"
         style={{ minHeight: "inherit" }}
       >
         <div
@@ -51,35 +51,35 @@ export default function Hero() {
           <div
             ref={contentRef}
             className="w-full md:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-20"
-            style={{ justifyContent: "center", paddingBottom: "calc(10vh)" }}
+            style={{ justifyContent: "center" }}
           >
-            <span className="block text-xs font-bold text-brand uppercase tracking-[2px] mb-5">
+            <span className="block text-[10px] md:text-xs font-bold text-brand uppercase tracking-[2px] mb-4 md:mb-5">
               {t("hero.tagline")}
             </span>
-            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-6 text-black">
+            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-4 md:mb-6 text-black">
               {t("hero.title")}{" "}
               <span className="text-brand">{t("hero.titleHighlight")}</span>
             </h1>
-            <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[820px]">
+            <p className="text-sm md:text-base text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[820px]">
               {t("hero.description")}
             </p>
-            <p className="text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[1100px]">
+            <p className="text-sm md:text-base text-[#666] leading-[1.7] mb-1 max-w-full md:max-w-[1100px]">
               Por isso, com a Widde você ajuda o visitante a <strong>sentir, entender, escolher e comprar no seu site.</strong>
             </p>
-            <p className="font-bold text-[#666] leading-[1.7] mb-10 max-w-full md:max-w-[720px]">
+            <p className="text-sm md:text-base font-bold text-[#666] leading-[1.7] mb-8 md:mb-10 max-w-full md:max-w-[720px]">
               {t("hero.descriptionProducts")}
             </p>
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex flex-col items-stretch md:flex-row md:items-center gap-3 md:justify-start">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block bg-brand text-white  font-bold px-7 py-[13px] rounded-full no-underline"
+                className="inline-block text-center bg-brand text-white font-bold text-base px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"
               >
                 {t("hero.ctaSales")}
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
                 onClick={handleVerDemo}
-                className="inline-block bg-transparent text-black  font-bold px-7 py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+                className="inline-block text-center bg-transparent text-black font-bold text-base px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
                 {t("hero.ctaLearnMore")}
               </AnimatedButton>

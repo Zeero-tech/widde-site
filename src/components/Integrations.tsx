@@ -7,7 +7,7 @@ export default function Integrations() {
 
   return (
     <section
-      className="rounded-[20px] p-6 md:p-15 overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)]"
+      className="rounded-[20px] p-6 pt-14 md:p-15 overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)]"
       style={{ background: "#003ab9ff" }}
       aria-labelledby="int-heading"
     >
@@ -17,24 +17,24 @@ export default function Integrations() {
       >
         {t("integrations.title")}
       </h2>
-      <p className=" text-white/50 mb-7">{t("integrations.description")}</p>
+      <p className="text-sm md:text-base text-white/50 mb-7">{t("integrations.description")}</p>
 
       <div
-        className="overflow-hidden -mx-4 md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
+        className="overflow-hidden md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
         aria-label={t("integrations.ariaLabel")}
       >
-        <div className="flex gap-[10px] animate-scroll-logos">
+        <div className="flex gap-[10px] animate-scroll-logos-fast md:animate-scroll-logos">
           {doubled.map((logo, i) => (
             <div
               key={i}
-              className={`flex-shrink-0 rounded-[8px] px-[14px] h-11 flex items-center justify-center min-w-[90px] pb-1`}
+              className="flex-shrink-0 rounded-[8px] px-[14px] h-11 flex items-center justify-center min-w-[90px] pb-1"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
                 className="w-auto object-contain"
-                style={{ opacity: 0.8, height: logo.height ?? 18 }}
+                style={{ opacity: 0.8, height: logo.height ? logo.height * 0.75 : 14 }}
               />
             </div>
           ))}

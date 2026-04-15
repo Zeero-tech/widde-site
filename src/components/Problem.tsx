@@ -21,7 +21,7 @@ export default function Problem() {
         >
           {t("problem.title")}
         </h2>
-        <p className=" text-white/55 leading-[1.65] mb-[22px]">
+        <p className="text-sm md:text-base text-white/55 leading-[1.65] mb-[22px]">
           {t("problem.description")}
         </p>
         <AnimatedButton

@@ -33,21 +33,23 @@ export default function VCHero() {
   return (
     <section
       className="bg-[#1a1a1a] overflow-hidden relative"
-      style={{ minHeight: "calc(100svh - 70px)" }}
+      style={{ minHeight: "calc(100svh - 120px)" }}
     >
       {/* Breadcrumb */}
-      <div className="absolute top-0 left-0 right-0 z-10 max-w-screen-xl mx-auto px-5 md:px-2 pt-5">
-        <div className="text-xs text-[#aaa]">
-          <a href="/" className="text-brand no-underline">
-            {t("vc.breadcrumb.home")}
-          </a>
-          <span className="mx-[6px]">/</span>
-          <strong className="text-[#ccc]">{t("vc.breadcrumb.page")}</strong>
+      <div className="absolute top-3 md:top-5 left-0 right-0 h-[60px] z-10 flex">
+        <div className="w-full max-w-screen-xl mx-auto px-3 md:px-2 flex">
+          <div className="text-xs md:text-sm text-[#aaa]">
+            <a href="/" className="text-brand no-underline">
+              {t("vc.breadcrumb.home")}
+            </a>
+            <span className="mx-[6px]">/</span>
+            <strong className="text-[#ccc]">{t("vc.breadcrumb.page")}</strong>
+          </div>
         </div>
       </div>
 
       <div
-        className="max-w-screen-xl mx-auto px-5 md:px-2 h-full flex items-center"
+        className="max-w-screen-xl mx-auto px-3 md:px-2 h-full flex items-center"
         style={{ minHeight: "inherit" }}
       >
         <div
@@ -58,19 +60,19 @@ export default function VCHero() {
           <div
             ref={contentRef}
             className="w-full md:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-20"
-            style={{ justifyContent: "center", paddingBottom: "calc(10vh)" }}
+            style={{ justifyContent: "center" }}
           >
-            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-6 text-white">
+            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-4 md:mb-6 text-white">
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
-            <p className="text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
+            <p className="hidden md:block text-[14px] md:text-base text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
               {t("vc.hero.description")}
             </p>
-            <p className="text-[#aaa] leading-[1.7] mb-8 max-w-full md:max-w-[560px]">
+            <p className="text-[14px] md:text-base text-[#aaa] leading-[1.7] mb-4 md:mb-8 max-w-full md:max-w-[560px]">
               {t("vc.hero.description2")}
             </p>
-            <ul className="list-none flex flex-col gap-[10px] mb-10 p-0">
+            <ul className="list-none flex flex-col gap-[8px] md:gap-[10px] mb-8 md:mb-10 p-0">
               {[
                 t("vc.hero.feature1"),
                 t("vc.hero.feature2"),
@@ -78,7 +80,7 @@ export default function VCHero() {
               ].map((item) => (
                 <li
                   key={item}
-                  className=" text-[#ccc] flex items-start gap-[10px]"
+                  className="text-[14px] md:text-base text-[#ccc] flex items-start gap-[10px]"
                 >
                   <span className="w-[18px] h-[18px] rounded-full flex items-center justify-center flex-shrink-0 mt-[1px] text-xs font-black bg-brand/[0.12] text-brand">
                     ✓
@@ -87,17 +89,17 @@ export default function VCHero() {
                 </li>
               ))}
             </ul>
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex flex-col items-stretch md:flex-row md:items-center gap-3">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block bg-brand text-white  font-bold px-7 py-[13px] rounded-full no-underline"
+                className="inline-block text-center bg-brand text-white font-bold px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"
               >
                 {t("vc.hero.ctaSales")}
               </AnimatedButton>
               <a
                 href="/#planos"
                 onClick={handleViewPlans}
-                className="btn-animate-chars inline-flex items-center justify-center bg-transparent text-white  font-bold px-7 py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
+                className="btn-animate-chars inline-flex items-center justify-center text-center bg-transparent text-white font-bold px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
               >
                 <span
                   data-button-animate-chars=""

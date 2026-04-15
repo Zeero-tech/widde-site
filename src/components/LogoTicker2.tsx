@@ -1,10 +1,23 @@
 import * as HoverCard from "@radix-ui/react-hover-card";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { tickerLogos } from "@/data/logos";
+
+function useIsMobile() {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+  return mobile;
+}
 
 export default function LogoTicker2() {
   const [paused, setPaused] = useState(false);
   const openCards = useRef(0);
+  const isMobile = useIsMobile();
 
   function onEnter() {
     openCards.current += 1;
@@ -37,14 +50,14 @@ export default function LogoTicker2() {
           {doubled.map((logo, i) => (
             <HoverCard.Root
               key={i}
-              openDelay={300}
+              openDelay={isMobile ? Infinity : 300}
               closeDelay={100}
               onOpenChange={(open) => (open ? onEnter() : onLeave())}
             >
               <HoverCard.Trigger asChild>
                 <div
                   className="inline-flex items-center justify-center gap-2 px-8 border-r border-[#eee] flex-shrink-0 h-10 opacity-50 hover:opacity-100 transition-opacity cursor-default"
-                  onMouseEnter={() => setPaused(true)}
+                  onMouseEnter={() => !isMobile && setPaused(true)}
                 >
                   {logo.img ? (
                     <img

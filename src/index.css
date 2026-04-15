@@ -5,8 +5,8 @@
   --color-brand-dark: #1a3eaf;
   --color-ink: #0a0a0a;
   --font-sans: "Lato", sans-serif;
-  --text-base: 1.125rem;
-  --text-base--line-height: 1.75rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
 }
 
 @layer base {
@@ -76,8 +76,24 @@
   animation: ticker 45s linear infinite;
 }
 
+@utility animate-ticker-slow {
+  animation: ticker 90s linear infinite;
+}
+
 @utility animate-scroll-logos {
   animation: scroll-logos 60s linear infinite;
+}
+
+@utility animate-scroll-logos-reverse {
+  animation: scroll-logos 60s linear infinite reverse;
+}
+
+@utility animate-scroll-logos-fast {
+  animation: scroll-logos 8s linear infinite;
+}
+
+@utility animate-scroll-logos-fast-reverse {
+  animation: scroll-logos 12s linear infinite reverse;
 }
 
 /* tailwindcss-animate keyframes */

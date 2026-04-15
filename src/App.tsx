@@ -60,50 +60,50 @@ function Home() {
       <Nav />
       <Hero />
       {/* <LogoTicker /> */}
-      <div className="pb-30"><LogoTicker2 /></div>
-      <div className="pb-30"><Hero2 /></div>
-      <div className="pb-30"><Showcase /></div>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
-        <div data-reveal className="pb-30">
+      <div className="pb-15 md:pb-30"><LogoTicker2 /></div>
+      <div className="pb-15 md:pb-30"><Hero2 /></div>
+      <div className="pb-15 md:pb-30"><Showcase /></div>
+      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+        <div data-reveal className="pb-15 md:pb-30">
           <Solutions />
         </div>
       </main>
-      {/* <div className="pb-30"><Demo /></div> */}
-      <div data-reveal className="pb-30">
+      {/* <div className="pb-15 md:pb-30"><Demo /></div> */}
+      <div data-reveal className="pb-15 md:pb-30">
         <Demo2 />
       </div>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
-        {/* <div data-reveal className="pb-30">
+      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+        {/* <div data-reveal className="pb-15 md:pb-30">
           <Problem />
         </div> */}
-        <div data-reveal className="pb-30">
+        <div data-reveal className="pb-15 md:pb-30">
           <Problem2 />
         </div>
-        {/* <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-15 md:pb-30">
           <Cases />
         </div> */}
-        <div data-reveal className="pb-30">
+        <div data-reveal className="pb-15 md:pb-30">
           <CasesCarousel />
         </div>
-        <div data-reveal className="pb-30">
+        <div data-reveal className="pb-15 md:pb-30">
           <Integrations />
         </div>
-        <div data-reveal className="pb-30">
+        <div data-reveal className="pb-15 md:pb-30">
           <Plans />
         </div>
-        <div data-reveal className="pb-30">
+        <div data-reveal className="pb-15 md:pb-30">
           <Blog />
         </div>
-        {/* <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-15 md:pb-30">
           <Blog2 />
         </div> */}
-        {/* <div data-reveal className="pb-30">
+        {/* <div data-reveal className="pb-15 md:pb-30">
           <Blog3 />
         </div> */}
       </main>
       <VCCta />
       {/* <Newsletter /> */}
-      <div className="pb-30 pt-20 bg-[#0A0A0A]"><Newsletter2 /></div>
+      <div className="pb-15 md:pb-30 pt-15 md:pt-20 bg-[#0A0A0A]"><Newsletter2 /></div>
       {/* <Footer /> */}
       {/* <Footer2 /> */}
       <Footer3 />

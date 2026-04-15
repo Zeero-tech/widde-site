@@ -16,7 +16,7 @@ export default function Cases() {
         id="cases-heading"
         className="mb-2"
       />
-      <p className=" text-[#5d5d5d] leading-[1.6] max-w-[520px] mb-8">
+      <p className="text-sm md:text-base text-[#5d5d5d] leading-[1.6] max-w-[520px] mb-8">
         {t("cases.description")}
       </p>
 
@@ -60,7 +60,7 @@ export default function Cases() {
               <p className="text-base font-normal text-[#1d1d1d] mb-[6px] leading-[1.4]">
                 {c.title}
               </p>
-              <p className=" text-[#5d5d5d] leading-[1.5] mb-[14px] flex-1">
+              <p className="text-sm md:text-base text-[#5d5d5d] leading-[1.5] mb-[14px] flex-1">
                 {c.desc}
               </p>
               <span className=" font-bold text-[#010b15] flex items-center gap-1">
