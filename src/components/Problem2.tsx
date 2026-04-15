@@ -82,55 +82,55 @@ export default function Problem2() {
         </span>
         <h2
           id="problema2-heading"
-          className="text-lg md:text-2xl font-normal text-white leading-[1.25] mb-8"
+          className="text-base md:text-2xl font-normal text-white leading-[1.25] mb-6 md:mb-8"
         >
           {t("problem.title")}
         </h2>
         <div className="mb-8">
-          <p className="text-white/55 leading-[1.65] mb-[14px]">
+          <p className="text-sm md:text-base text-white/55 leading-[1.65] mb-[14px]">
             {t("problem.description")}
           </p>
-          <p className="text-white/55 leading-[1.65]">
+          <p className="text-sm md:text-base text-white/55 leading-[1.65]">
             Com <strong className="text-white font-bold">Video Commerce</strong>, <strong className="text-white font-bold">Provador Virtual</strong> e <strong className="text-white font-bold">Live Commerce</strong>, a Widde faz o consumidor ver, experimentar e sentir o seu produto antes de comprar.
           </p>
         </div>
         <AnimatedButton
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-          className="inline-block bg-white text-[#1D1D1D] font-bold px-[22px] py-[11px] rounded-full no-underline"
+          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold px-[22px] py-[11px] rounded-full no-underline"
         >
           {t("problem.cta")}
         </AnimatedButton>
       </div>
 
       {/* Numbers */}
-      <div className="relative z-10 flex flex-col border-l border-white/15 pl-4 md:pl-10 flex-shrink-0">
-        <div className="py-6">
+      <div className="relative z-10 flex flex-col md:border-l border-white/15 md:pl-10 flex-shrink-0 w-full md:w-auto">
+        <div className="py-4 md:py-6 flex md:block items-center gap-4">
           <CountUp
             target={84}
             suffix="%"
-            className="text-2xl md:text-5xl font-normal text-white leading-none mb-2"
+            className="text-xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-sm md:text-base text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat1Label")}
           </div>
         </div>
-        <div className="py-6 border-t border-white/15">
+        <div className="py-4 md:py-6 border-t border-white/15 flex md:block items-center gap-4">
           <CountUp
             target={63}
             suffix="%"
-            className="text-2xl md:text-5xl font-normal text-white leading-none mb-2"
+            className="text-xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-sm md:text-base text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat2Label")}
           </div>
         </div>
-        <div className="py-6 border-t border-white/15">
+        <div className="py-4 md:py-6 border-t border-white/15 flex md:block items-center gap-4">
           <CountUp
             target={65}
             suffix="%"
-            className="text-2xl md:text-5xl font-normal text-white leading-none mb-2"
+            className="text-xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-sm md:text-base text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat3Label")}
           </div>
         </div>

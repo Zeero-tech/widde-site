@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const items: {
@@ -15,13 +15,29 @@ const items: {
     { src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600", alt: "Product shot", colSpan: 1, rowSpan: 1 },
   ];
 
-function BoardBlock({ offset }: { offset: number }) {
+function useIsMobile() {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+  return mobile;
+}
+
+function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; colSize: number; rowSize: number; isMobile: boolean }) {
+  const gridTemplateRows = isMobile
+    ? "180px 180px 100px"
+    : `repeat(3, ${rowSize}px)`;
+
   return (
     <div
       className="grid flex-shrink-0 gap-3"
       style={{
-        gridTemplateColumns: "repeat(3, 280px)",
-        gridTemplateRows: "repeat(3, 180px)",
+        gridTemplateColumns: `repeat(3, ${colSize}px)`,
+        gridTemplateRows,
         gridAutoFlow: "dense",
       }}
     >
@@ -48,6 +64,10 @@ function BoardBlock({ offset }: { offset: number }) {
 
 export default function Showcase() {
   const ref = useRef<HTMLElement>(null);
+  const isMobile = useIsMobile();
+
+  const colSize = isMobile ? 150 : 280;
+  const rowSize = isMobile ? 100 : 180;
 
   useEffect(() => {
     if (!ref.current) return;
@@ -59,11 +79,11 @@ export default function Showcase() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#f6f6f6]overflow-hidden">
+    <section ref={ref} className="bg-[#f6f6f6] overflow-hidden">
       <div className="flex">
-        <div className="flex gap-3 animate-ticker">
+        <div className="flex gap-3 animate-ticker-slow">
           {Array.from({ length: 6 }).map((_, i) => (
-            <BoardBlock key={i} offset={i} />
+            <BoardBlock key={i} offset={i} colSize={colSize} rowSize={rowSize} isMobile={isMobile} />
           ))}
         </div>
       </div>

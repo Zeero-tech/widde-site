@@ -12,25 +12,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from "./ui/dialog";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-} from "./ui/drawer";
-
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-  return mobile;
-}
 
 function MapImage() {
   return (
@@ -39,7 +20,7 @@ function MapImage() {
         src="/assets/vtex-como-chegar.jpg"
         alt="Como chegar no estande da Widde no VTEX Day"
         className="w-full h-auto block rounded-lg"
-        style={{ maxHeight: "85vh", objectFit: "contain" }}
+        style={{ maxHeight: "60vh", objectFit: "contain" }}
       />
     </div>
   );
@@ -60,8 +41,6 @@ export default function Hero2() {
       document.body.style.overflow = "";
     }
   }
-  const isMobile = useIsMobile();
-
   useEffect(() => {
     // Card inteiro: blur + opacity ao entrar na tela
     gsap.fromTo(
@@ -131,22 +110,22 @@ export default function Hero2() {
                 ref={badgeBgRef}
                 className="absolute inset-0 bg-brand rounded"
               />
-              <span className="relative block text-base font-bold text-white px-3 py-1 uppercase tracking-[2.5px]">
+              <span className="relative block text-sm md:text-lg font-bold text-white px-3 py-1 uppercase tracking-[2.5px]">
                 VTEX DAY 2026
               </span>
             </div>
 
-            <h1 className="text-white text-4xl md:text-5xl lg:text-5xl font-black leading-[1.1] mb-6 max-w-[800px]">
+            <h1 className="text-white text-2xl md:text-5xl lg:text-5xl font-black leading-[1.1] mb-4 md:mb-6 max-w-[800px]">
               Estamos no VTEX Day!
               <br />
               <span className="text-brand">16 e 17 de Abril</span>
             </h1>
 
-            <p className="text-white/70 text-lg md:text-base leading-[1.7] mb-1 max-w-[720px]">
+            <p className="text-white/70 text-sm md:text-lg leading-[1.7] mb-1 max-w-[720px]">
               Venha conhecer as novidades da Widde no maior evento de digital
               commerce do mundo.
             </p>
-            <p className="font-bold text-white/80 md:text-base leading-[1.7] mb-10 max-w-[720px]">
+            <p className="font-bold text-sm text-white/80 md:text-lg leading-[1.7] mb-8 md:mb-10 max-w-[720px]">
               Estamos mostrando novidades que vão transformar a experiência de
               compra online.
             </p>
@@ -167,32 +146,15 @@ export default function Hero2() {
         </div>
       </div>
 
-      {/* Desktop: Dialog / Mobile: Drawer */}
-      {isMobile ? (
-        <Drawer open={mapOpen} onOpenChange={handleMapOpen}>
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle className="text-lg font-bold text-black">
-                Como chegar no nosso estande
-              </DrawerTitle>
-              <DrawerDescription className="text-sm text-[#666]">
-                Mapa do VTEX Day 2026
-              </DrawerDescription>
-            </DrawerHeader>
-            <MapImage />
-          </DrawerContent>
-        </Drawer>
-      ) : (
-        <Dialog open={mapOpen} onOpenChange={handleMapOpen}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Como chegar no nosso estande</DialogTitle>
-              <DialogDescription>Mapa do VTEX Day 2026</DialogDescription>
-            </DialogHeader>
-            <MapImage />
-          </DialogContent>
-        </Dialog>
-      )}
+      <Dialog open={mapOpen} onOpenChange={handleMapOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Como chegar no nosso estande</DialogTitle>
+            <DialogDescription>Mapa do VTEX Day 2026</DialogDescription>
+          </DialogHeader>
+          <MapImage />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

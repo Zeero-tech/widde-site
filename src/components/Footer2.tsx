@@ -47,7 +47,7 @@ const footerColumns = [
 export default function Footer2() {
   return (
     <footer className="bg-[#f6f6f6] text-black" role="contentinfo">
-      <div className="px-5 md:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
+      <div className="px-3 md:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
         {/* Logo */}
         <a
           href="/"

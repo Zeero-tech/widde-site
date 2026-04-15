@@ -7,7 +7,7 @@ export default function Demo2() {
   const { t } = useTranslation();
   return (
     <section id="demo2" className="bg-[#e5e5e5] py-10 md:py-16">
-      <div className="max-w-screen-xl mx-auto px-5 md:px-2">
+      <div className="max-w-screen-xl mx-auto px-3 md:px-2">
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
         {/* Video */}
         <div className="w-full md:w-[58%] rounded-2xl overflow-hidden">
@@ -28,7 +28,7 @@ export default function Demo2() {
             title={t("demo.heading")}
             className="mb-4"
           />
-          <p className="text-[#5d5d5d] leading-[1.6] mb-8 max-w-[440px]">
+          <p className="text-sm md:text-base text-[#5d5d5d] leading-[1.6] mb-8 max-w-[440px]">
             {t(
               "demo.description",
               "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca."
@@ -36,7 +36,7 @@ export default function Demo2() {
           </p>
           <AnimatedButton
             href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block w-fit bg-black text-white font-bold px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors"
+            className="inline-block w-full md:w-fit text-center bg-black text-white font-bold px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
           >
             {t("demo.cta", "Falar com vendas")}
           </AnimatedButton>

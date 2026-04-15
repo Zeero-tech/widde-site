@@ -197,6 +197,7 @@ function LanguageSwitcher({ dark }: { dark?: boolean }) {
 export default function Nav() {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -296,8 +297,8 @@ export default function Nav() {
         backgroundColor: isDark ? "#1a1a1a" : scrolled ? "#ffffff" : "#f6f6f6",
       }}
     >
-      <div className="px-5 md:px-2 max-w-screen-xl mx-auto">
-        <nav className="flex justify-between items-center md:px-0 p-3 relative min-h-8">
+      <div className="px-3 md:px-2 max-w-screen-xl mx-auto">
+        <nav className="flex justify-between items-center md:px-0 py-3 relative min-h-8">
           <a
             href="/"
             aria-current="page"
@@ -444,59 +445,126 @@ export default function Nav() {
             </div> */}
           </div>
 
-          {/* Mobile menu */}
+          {/* Mobile menu — fullscreen overlay */}
           {mobileOpen && (
-            <div className="md:hidden absolute top-[60px] left-0 right-0 bg-white px-6 py-5 flex flex-col gap-4 border-b border-gray-100 shadow-[0_8px_20px_rgba(0,0,0,0.08)] z-50">
-              <span className="text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px]">
-                {t("nav.solutions")}
-              </span>
-              {solutions.map((s) => (
+            <div className="md:hidden fixed inset-0 bg-[#f6f6f6] z-50 flex flex-col">
+              {/* Header */}
+              <div className="flex justify-between items-center px-5 pt-8 pb-4 min-h-[60px]">
                 <a
-                  key={s.label}
-                  href={s.href ?? s.elementId}
-                  onClick={(e) => handleSolutionClick(s.elementId, e, s.href)}
-                  className="no-underline text-black text-base flex items-center gap-2"
+                  href="/"
+                  className="no-underline flex items-center"
+                  style={{ color: "black" }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileOpen(false);
+                    if (location.pathname === "/") {
+                      getLenis().scrollTo(0, { duration: 3, easing: easeOutQuint });
+                    } else {
+                      navigate("/");
+                    }
+                  }}
                 >
-                  {s.label}
-                  {s.tag && (
-                    <span className="text-[10px] font-bold text-brand bg-brand/10 rounded px-1.5 py-0.5 uppercase tracking-wide">
-                      {s.tag}
-                    </span>
-                  )}
+                  <Logo />
                 </a>
-              ))}
-              <hr className="border-gray-100" />
-              <a
-                href="https://widde.io/cases"
-                onClick={(e) => handleNavClick("https://widde.io/cases", e)}
-                className="no-underline text-black text-base"
-              >
-                {t("nav.results")}
-              </a>
-              <a
-                href="#planos"
-                onClick={(e) => handleNavClick("#planos", e)}
-                className="no-underline text-black text-base"
-              >
-                {t("nav.plans")}
-              </a>
-              <a
-                href="https://widde.io/blog"
-                onClick={(e) => handleNavClick("https://widde.io/blog", e)}
-                className="no-underline text-black text-base"
-              >
-                {t("nav.blog")}
-              </a>
-              {/* <LanguageSwitcher /> */}
+                <button
+                  className="bg-transparent border-none text-2xl cursor-pointer p-2 text-black"
+                  aria-label={t("nav.menuClose")}
+                  onClick={() => { setMobileOpen(false); setMobileSolutionsOpen(false); }}
+                >
+                  ✕
+                </button>
+              </div>
+
+              {/* Nav links */}
+              <div className="flex-1 flex flex-col px-5 pt-4 overflow-y-auto">
+                {/* Soluções accordion */}
+                <button
+                  className="bg-transparent text-left text-black text-base font-normal py-4 flex items-center justify-between cursor-pointer p-0 w-full border-0 border-b border-black/10"
+                  onClick={() => setMobileSolutionsOpen((o) => !o)}
+                >
+                  {t("nav.solutions")}
+                  <svg
+                    width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    style={{ transition: "transform 0.25s", transform: mobileSolutionsOpen ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }}
+                  >
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="black" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {mobileSolutionsOpen && (
+                  <div className="flex flex-col pl-4 border-b border-black/10">
+                    {solutions.map((s) => (
+                      <a
+                        key={s.label}
+                        href={s.href ?? s.elementId}
+                        onClick={(e) => { setMobileSolutionsOpen(false); handleSolutionClick(s.elementId, e, s.href); }}
+                        className="no-underline text-black text-base font-normal py-3 border-b border-black/5 last:border-b-0 flex items-center gap-2"
+                      >
+                        {s.label}
+                        {s.tag && (
+                          <span className="text-[10px] font-bold text-brand bg-brand/10 rounded px-1.5 py-0.5 uppercase tracking-wide">
+                            {s.tag}
+                          </span>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                )}
+                <a
+                  href="https://widde.io/cases"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases", e); }}
+                  className="no-underline text-black text-base font-normal py-4 border-b border-black/10"
+                >
+                  {t("nav.results")}
+                </a>
+                <a
+                  href="#planos"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("#planos", e); }}
+                  className="no-underline text-black text-base font-normal py-4 border-b border-black/10"
+                >
+                  {t("nav.plans")}
+                </a>
+                <a
+                  href="https://widde.io/blog"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog", e); }}
+                  className="no-underline text-black text-base font-normal py-4 border-b border-black/10"
+                >
+                  {t("nav.blog")}
+                </a>
+              </div>
+
+              {/* Bottom CTAs */}
+              <div className="px-5 pb-8 pt-4 flex flex-col gap-3">
+                <a
+                  href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                  className="w-full text-center bg-brand text-white font-bold text-base px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline"
+                >
+                  Falar com vendas
+                </a>
+                <a
+                  href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                  className="w-full text-center bg-brand text-white font-bold text-base px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
+                >
+                  Começar agora
+                </a>
+                <a
+                  href="#demo2"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("#demo2", e); }}
+                  className="w-full text-center bg-transparent text-black font-bold text-base px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
+                >
+                  Conhecer mais
+                </a>
+              </div>
             </div>
           )}
 
-          <LetterButton
-            href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="hidden md:inline-flex bg-brand text-white text-base font-bold px-5 py-[10px] rounded-full"
-          >
-            {t("nav.startNow")}
-          </LetterButton>
+          <div className="hidden md:block">
+            <LetterButton
+              href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
+              className="bg-brand text-white text-lg font-bold px-5 py-[10px] rounded-full"
+            >
+              {t("nav.startNow")}
+            </LetterButton>
+          </div>
         </nav>
       </div>
     </header>

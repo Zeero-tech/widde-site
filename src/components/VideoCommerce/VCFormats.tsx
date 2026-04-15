@@ -272,7 +272,40 @@ export default function VCFormats() {
       >
         {t("vc.formats.title")}
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* Mobile: horizontal carousel */}
+      <div
+        className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mr-5 pr-0"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        {formats.map((f) => (
+          <div
+            key={f.name}
+            className="flex-shrink-0 w-[80vw] snap-start bg-[#F5F5F5] border border-[#E9E9E9]/70 rounded-2xl overflow-hidden"
+          >
+            {f.thumb}
+            <div className="p-4">
+              <div className="font-black text-black mb-[5px]">{f.name}</div>
+              <div className="text-xs text-[#777] leading-[1.5]">{f.desc}</div>
+              <div className="text-xs text-[#aaa] mt-2">
+                {t("vc.formats.appearsIn")}
+                {f.onde.map((lugar) => (
+                  <span
+                    key={lugar}
+                    className="bg-[#F0F0F0] rounded text-xs font-bold text-[#555] px-[7px] py-[2px] ml-1"
+                  >
+                    {lugar}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* Mobile trailing spacer */}
+        <div className="flex-shrink-0 w-3" />
+      </div>
+
+      {/* Desktop: grid */}
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {formats.map((f) => (
           <div
             key={f.name}
@@ -280,7 +313,7 @@ export default function VCFormats() {
           >
             {f.thumb}
             <div className="p-4">
-              <div className=" font-black text-black mb-[5px]">{f.name}</div>
+              <div className="font-black text-black mb-[5px]">{f.name}</div>
               <div className="text-xs text-[#777] leading-[1.5]">{f.desc}</div>
               <div className="text-xs text-[#aaa] mt-2">
                 {t("vc.formats.appearsIn")}

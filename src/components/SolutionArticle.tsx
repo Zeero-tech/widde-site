@@ -4,6 +4,7 @@ import gsap from "gsap";
 interface SolutionArticleProps {
   direction: "left" | "right";
   id?: string;
+  mobileCarousel?: boolean;
   children: React.ReactNode;
 }
 
@@ -40,6 +41,7 @@ function useArticleReveal(direction: "left" | "right") {
 export default function SolutionArticle({
   direction,
   id,
+  mobileCarousel,
   children,
 }: SolutionArticleProps) {
   const ref = useArticleReveal(direction);
@@ -48,7 +50,11 @@ export default function SolutionArticle({
     <article
       ref={ref}
       id={id}
-      className={`flex flex-col ${direction === "right" ? "md:flex-row-reverse" : "md:flex-row"} gap-4 md:gap-2 items-stretch w-full`}
+      className={
+        mobileCarousel
+          ? "flex flex-col gap-4 flex-shrink-0 w-[95%] snap-start"
+          : `flex flex-col ${direction === "right" ? "md:flex-row-reverse" : "md:flex-row"} gap-4 md:gap-2 items-stretch w-full`
+      }
     >
       {children}
     </article>

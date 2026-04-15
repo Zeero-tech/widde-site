@@ -29,16 +29,16 @@ export default function VideoCommerce() {
       </Helmet>
       <Nav />
       <VCHero />
-      <div className="pb-30"><LogoTicker2 /></div>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
-        <div data-reveal className="pb-30"><VCWhy /></div>
-        <div data-reveal className="pb-30"><VCFormats /></div>
+      <div className="pb-15 md:pb-30"><LogoTicker2 /></div>
+      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+        <div data-reveal className="pb-15 md:pb-30"><VCWhy /></div>
+        <div data-reveal className="pb-15 md:pb-30"><VCFormats /></div>
       </main>
-      <div className="pb-30"><VCFeatures /></div>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-2">
-        <div data-reveal className="pb-30"><VCQuote /></div>
-        <div data-reveal className="pb-30"><CasesCarousel /></div>
-        <div data-reveal className="pb-30"><Integrations /></div>
+      <div className="pb-15 md:pb-30"><VCFeatures /></div>
+      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+        <div data-reveal className="pb-15 md:pb-30"><VCQuote /></div>
+        <div data-reveal className="pb-15 md:pb-30"><CasesCarousel /></div>
+        <div data-reveal className="pb-15 md:pb-30"><Integrations /></div>
       </main>
       <VCCta />
       <Footer3 />
