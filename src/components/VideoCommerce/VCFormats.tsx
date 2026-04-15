@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function VCFormats() {
   const { t } = useTranslation();
@@ -263,15 +264,12 @@ export default function VCFormats() {
 
   return (
     <section aria-labelledby="formatos-heading">
-      <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
-        {t("vc.formats.label")}
-      </span>
-      <h2
+      <SectionTitle
+        label={t("vc.formats.label")}
+        title={t("vc.formats.title")}
         id="formatos-heading"
-        className="text-2xl font-normal text-black leading-[1.25] mb-9 max-w-[560px]"
-      >
-        {t("vc.formats.title")}
-      </h2>
+        className="mb-9"
+      />
       {/* Mobile: horizontal carousel */}
       <div
         className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mr-5 pr-0"
@@ -312,15 +310,15 @@ export default function VCFormats() {
             className="bg-[#F5F5F5] border border-[#E9E9E9]/70 rounded-2xl overflow-hidden"
           >
             {f.thumb}
-            <div className="p-4">
-              <div className="font-black text-black mb-[5px]">{f.name}</div>
-              <div className="text-xs text-[#777] leading-[1.5]">{f.desc}</div>
-              <div className="text-xs text-[#aaa] mt-2">
+            <div className="p-4 md:p-7">
+              <div className="font-normal md:text-[32px] text-black mb-2 md:mb-4">{f.name}</div>
+              <div className="text-xs md:text-lg text-[#777] leading-[1.5] mb-2 md:mb-4">{f.desc}</div>
+              <div className="text-xs md:text-base text-[#aaa]">
                 {t("vc.formats.appearsIn")}
                 {f.onde.map((lugar) => (
                   <span
                     key={lugar}
-                    className="bg-[#F0F0F0] rounded text-xs font-bold text-[#555] px-[7px] py-[2px] ml-1"
+                    className="bg-[#F0F0F0] rounded text-xs md:text-base font-bold text-[#555] px-[7px] py-[2px] ml-1"
                   >
                     {lugar}
                   </span>

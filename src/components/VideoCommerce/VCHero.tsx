@@ -65,10 +65,10 @@ export default function VCHero() {
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
-            <p className="hidden md:block text-base md:text-base text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
+            <p className="hidden md:block text-base md:text-lg text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
               {t("vc.hero.description")}
             </p>
-            <p className="text-base md:text-base text-[#aaa] leading-[1.7] mb-4 md:mb-8 max-w-full md:max-w-[560px]">
+            <p className="text-base md:text-lg text-[#aaa] leading-[1.7] mb-4 md:mb-8 max-w-full md:max-w-[560px]">
               {t("vc.hero.description2")}
             </p>
             <ul className="list-none flex flex-col gap-[8px] md:gap-[10px] mb-8 md:mb-10 p-0">
@@ -79,7 +79,7 @@ export default function VCHero() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="text-base md:text-base text-[#ccc] flex items-start gap-[10px]"
+                  className="text-base md:text-lg text-[#ccc] flex items-start gap-[10px]"
                 >
                   <span className="w-[18px] h-[18px] rounded-full flex items-center justify-center flex-shrink-0 mt-[1px] text-xs font-black bg-brand/[0.12] text-brand">
                     ✓
@@ -91,14 +91,14 @@ export default function VCHero() {
             <div className="mt-6 md:mt-0  flex flex-col items-stretch md:flex-row md:items-center gap-3">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block text-center bg-brand text-white font-bold text-lg md:text-base px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"
+                className="inline-block text-center bg-brand text-white font-bold text-lg md:text-2xl px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline"
               >
                 {t("vc.hero.ctaSales")}
               </AnimatedButton>
               <a
                 href="/#planos"
                 onClick={handleViewPlans}
-                className="btn-animate-chars inline-flex items-center justify-center text-center bg-transparent text-white font-bold text-lg md:text-base px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
+                className="btn-animate-chars inline-flex items-center justify-center text-center bg-transparent text-white font-bold text-lg md:text-2xl px-5 md:px-7 py-[10px] md:py-[13px] rounded-full no-underline border border-white/20 hover:border-white transition-colors"
               >
                 <span
                   data-button-animate-chars=""

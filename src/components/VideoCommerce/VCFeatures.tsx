@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function VCFeatures() {
   const { t } = useTranslation();
@@ -44,15 +45,12 @@ export default function VCFeatures() {
       className="bg-[#e5e5e5] py-8 md:py-16"
     >
       <div className="max-w-screen-xl mx-auto px-3 md:px-2">
-        <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-[10px]">
-          {t("vc.features.label")}
-        </span>
-        <h2
+        <SectionTitle
+          label={t("vc.features.label")}
+          title={t("vc.features.title")}
           id="func-heading"
-          className="text-2xl md:text-2xl font-normal text-black leading-[1.25] max-w-[560px]"
-        >
-          {t("vc.features.title")}
-        </h2>
+          className="mb-8"
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-8">
           {cards.map((card) => (
             <div
@@ -70,10 +68,10 @@ export default function VCFeatures() {
                 >
                   {card.badge}
                 </span>
-                <div className="text-lg md:text-base font-black text-black mb-[6px]">
+                <div className="text-lg md:text-[32px] font-normal text-black mb-[6px]">
                   {card.title}
                 </div>
-                <div className="text-base md:text-xs text-[#777] leading-[1.55]">
+                <div className="text-base md:text-lg text-[#777] leading-[1.55]">
                   {card.desc}
                 </div>
               </div>

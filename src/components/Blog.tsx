@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { blogPosts } from "@/data/blog";
+import SectionTitle from "./SectionTitle";
 
 export default function Blog() {
   const { t } = useTranslation();
@@ -9,15 +10,12 @@ export default function Blog() {
       className=""
       aria-labelledby="blog-heading"
     >
-      <span className="block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
-        {t("blog.label")}
-      </span>
-      <h2
+      <SectionTitle
+        label={t("blog.label")}
+        title={t("blog.title")}
         id="blog-heading"
-        className="text-xl md:text-2xl font-normal text-black leading-[1.25] mb-6"
-      >
-        {t("blog.title")}
-      </h2>
+        className="mb-6"
+      />
 
       {/* Mobile: horizontal carousel */}
       <div
@@ -96,18 +94,18 @@ export default function Blog() {
                 />
               )}
             </div>
-            <p className="text-xs font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
+            <p className="text-xs md:text-base font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
               {post.category}
             </p>
-            <p className="text-base md:text-lg font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">
+            <p className="text-base md:text-3xl font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">
               {post.title}
             </p>
-            <p className="text-sm md:text-base text-[#5d5d5d] leading-[1.5] px-4 pt-1">
+            <p className="text-sm md:text-lg text-[#5d5d5d] leading-[1.5] px-4 pt-1">
               {post.desc}
             </p>
             <a
               href={post.link}
-              className="font-bold text-[#010b15] no-underline hover:underline px-4 py-4 self-end"
+              className="text-base md:text-lg font-bold text-[#010b15] no-underline hover:underline px-4 py-4 self-end"
             >
               Saiba mais →
             </a>

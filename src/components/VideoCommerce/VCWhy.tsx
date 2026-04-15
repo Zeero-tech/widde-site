@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import CountUp from "@/components/CountUp";
+import SectionTitle from "@/components/SectionTitle";
 
 const stats = [
   { target: 80, prefix: "", suffix: "%" },
@@ -15,15 +16,14 @@ export default function VCWhy() {
       {/* Top row: title left, paragraph right */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14 mb-10 md:mb-16">
         <div>
-          <span className="block text-xs font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
-            {t("vc.why.label")}
-          </span>
-          <h2 className="text-2xl md:text-2xl font-normal text-white leading-[1.25]">
-            {t("vc.why.title")}
-          </h2>
+          <SectionTitle
+            label="Porque vídeo"
+            title={t("vc.why.title")}
+            className="[&_span]:text-white/40 [&_h2]:text-white"
+          />
         </div>
         <div className="flex items-center">
-          <p className="text-base md:text-base text-white/50 leading-[1.6]">
+          <p className="text-base md:text-lg text-white/50 leading-[1.6]">
             {t("vc.why.description")}
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function VCWhy() {
               suffix={stat.suffix}
               className="block text-3xl md:text-7xl font-light text-white leading-none md:mb-3 flex-shrink-0 w-[80px]"
             />
-            <span className="text-base md:text-base text-white/50 leading-[1.4]">
+            <span className="text-base md:text-lg text-white/50 leading-[1.4]">
               {t(`vc.why.stat${i + 1}`)}
             </span>
           </div>
