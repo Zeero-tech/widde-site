@@ -13,11 +13,11 @@ export default function Integrations() {
     >
       <h2
         id="int-heading"
-        className="text-base md:text-3xl leading-normal font-normal text-white mb-4 max-w-[740px]"
+        className="text-2xl md:text-3xl leading-normal font-normal text-white mb-4 max-w-[740px]"
       >
         {t("integrations.title")}
       </h2>
-      <p className="text-sm md:text-base text-white/50 mb-7">{t("integrations.description")}</p>
+      <p className="text-base md:text-base text-white/50 mb-7">{t("integrations.description")}</p>
 
       <div
         className="overflow-hidden md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
