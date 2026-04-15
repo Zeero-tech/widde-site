@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "widde-site-novo",
     "public": "dist",
     "ignore": [
       "firebase.json",
