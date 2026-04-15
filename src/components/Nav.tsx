@@ -202,7 +202,7 @@ export default function Nav() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isDark = location.pathname === "/video-commerce";
+  const isDark = location.pathname.replace(/\/$/, "") === "/video-commerce";
 
   const solutions: Solution[] = [
     {
