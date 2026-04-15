@@ -40,7 +40,7 @@ function NavigationMenuList({
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = () =>
-  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[16px] font-normal transition-colors hover:bg-black/5 focus:bg-black/5 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-black/5";
+  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[16px] md:text-[18px] font-normal transition-colors hover:bg-black/5 focus:bg-black/5 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-black/5";
 
 function NavigationMenuTrigger({
   className,
