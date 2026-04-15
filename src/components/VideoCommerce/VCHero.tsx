@@ -65,7 +65,7 @@ export default function VCHero() {
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
-            <p className="text-base md:text-base text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
+            <p className="hidden md:block text-base md:text-base text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
               {t("vc.hero.description")}
             </p>
             <p className="text-base md:text-base text-[#aaa] leading-[1.7] mb-4 md:mb-8 max-w-full md:max-w-[560px]">
