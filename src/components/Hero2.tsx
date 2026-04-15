@@ -110,22 +110,22 @@ export default function Hero2() {
                 ref={badgeBgRef}
                 className="absolute inset-0 bg-brand rounded"
               />
-              <span className="relative block text-sm md:text-lg font-bold text-white px-3 py-1 uppercase tracking-[2.5px]">
+              <span className="relative block text-base md:text-lg font-bold text-white px-3 py-1 uppercase tracking-[2.5px]">
                 VTEX DAY 2026
               </span>
             </div>
 
-            <h1 className="text-white text-2xl md:text-5xl lg:text-5xl font-black leading-[1.1] mb-4 md:mb-6 max-w-[800px]">
+            <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-black leading-[1.1] mb-4 md:mb-6 max-w-[800px]">
               Estamos no VTEX Day!
               <br />
               <span className="text-brand">16 e 17 de Abril</span>
             </h1>
 
-            <p className="text-white/70 text-sm md:text-lg leading-[1.7] mb-1 max-w-[720px]">
+            <p className="text-white/70 text-base md:text-lg leading-[1.7] mb-1 max-w-[720px]">
               Venha conhecer as novidades da Widde no maior evento de digital
               commerce do mundo.
             </p>
-            <p className="font-bold text-sm text-white/80 md:text-lg leading-[1.7] mb-8 md:mb-10 max-w-[720px]">
+            <p className="font-bold text-base text-white/80 md:text-lg leading-[1.7] mb-8 md:mb-10 max-w-[720px]">
               Estamos mostrando novidades que vão transformar a experiência de
               compra online.
             </p>
@@ -137,7 +137,7 @@ export default function Hero2() {
                   e.preventDefault();
                   handleMapOpen(true);
                 }}
-                className="inline-block bg-brand text-white font-bold px-7 py-[13px] rounded-full no-underline"
+                className="inline-block bg-brand text-white font-bold text-lg md:text-base px-7 py-[13px] rounded-full no-underline"
               >
                 Como chegar no nosso estande
               </AnimatedButton>
