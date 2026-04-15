@@ -4,20 +4,20 @@ import SectionTitle from "@/components/SectionTitle";
 
 const stats = [
   { target: 80, prefix: "", suffix: "%" },
-  { target: 3, prefix: "", suffix: "x" },
-  { target: 40, prefix: "+", suffix: "%" },
+  { target: 5, prefix: "", suffix: "x" },
+  { target: 4, prefix: "", suffix: "x" },
 ];
 
 export default function VCWhy() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-[#003ab9] rounded-[12px] md:rounded-[20px] px-6 py-10 md:px-16">
+    <div className="bg-[#003ab9] rounded-[12px] md:rounded-[20px] px-6 py-10 md:py-24 md:px-16">
       {/* Top row: title left, paragraph right */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14 mb-10 md:mb-16">
         <div>
           <SectionTitle
-            label="Porque vídeo"
+            label={t("vc.why.label")}
             title={t("vc.why.title")}
             className="[&_span]:text-white/40 [&_h2]:text-white"
           />
