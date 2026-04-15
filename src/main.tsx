@@ -19,5 +19,5 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 )
 
-// Sinaliza ao prerenderer que o app terminou de renderizar
+// Sinaliza ao prerenderer que o app terminou de renderizar.
 document.dispatchEvent(new Event('app-rendered'))
