@@ -82,21 +82,21 @@ export default function Problem2() {
         </span>
         <h2
           id="problema2-heading"
-          className="text-base md:text-2xl font-normal text-white leading-[1.25] mb-6 md:mb-8"
+          className="text-2xl md:text-2xl font-normal text-white leading-[1.25] mb-6 md:mb-8"
         >
           {t("problem.title")}
         </h2>
         <div className="mb-8">
-          <p className="text-sm md:text-base text-white/55 leading-[1.65] mb-[14px]">
+          <p className="text-base md:text-base text-white/55 leading-[1.65] mb-[14px]">
             {t("problem.description")}
           </p>
-          <p className="text-sm md:text-base text-white/55 leading-[1.65]">
+          <p className="text-base md:text-base text-white/55 leading-[1.65]">
             Com <strong className="text-white font-bold">Video Commerce</strong>, <strong className="text-white font-bold">Provador Virtual</strong> e <strong className="text-white font-bold">Live Commerce</strong>, a Widde faz o consumidor ver, experimentar e sentir o seu produto antes de comprar.
           </p>
         </div>
         <AnimatedButton
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold px-[22px] py-[11px] rounded-full no-underline"
+          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-base px-[22px] py-[11px] rounded-full no-underline"
         >
           {t("problem.cta")}
         </AnimatedButton>
@@ -108,9 +108,9 @@ export default function Problem2() {
           <CountUp
             target={84}
             suffix="%"
-            className="text-xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-sm md:text-base text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-base text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat1Label")}
           </div>
         </div>
@@ -118,9 +118,9 @@ export default function Problem2() {
           <CountUp
             target={63}
             suffix="%"
-            className="text-xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-sm md:text-base text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-base text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat2Label")}
           </div>
         </div>
@@ -128,9 +128,9 @@ export default function Problem2() {
           <CountUp
             target={65}
             suffix="%"
-            className="text-xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-sm md:text-base text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-base text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat3Label")}
           </div>
         </div>

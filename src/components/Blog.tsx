@@ -46,10 +46,10 @@ export default function Blog() {
               <p className="text-xs font-bold text-[#5d5d5d] uppercase tracking-[1px]">
                 {post.category}
               </p>
-              <p className="text-base font-normal text-[#1d1d1d] leading-[1.4]">
+              <p className="text-lg font-normal text-[#1d1d1d] leading-[1.4]">
                 {post.title}
               </p>
-              <p className="text-sm text-[#5d5d5d] leading-[1.5]">
+              <p className="text-base text-[#5d5d5d] leading-[1.5]">
                 {post.desc}
               </p>
               <a

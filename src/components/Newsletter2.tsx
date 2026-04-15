@@ -90,10 +90,10 @@ export default function Newsletter2() {
               {t("newsletter.title")}
             </HighlightText>
           </h2>
-          <p className="text-sm md:text-base text-white/60 leading-[1.6] max-w-[840px]">
+          <p className="text-base md:text-base text-white/60 leading-[1.6] max-w-[840px]">
             Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais.
           </p>
-          <p className="text-sm md:text-base text-white/60 leading-[1.6] mb-6 max-w-[840px]">
+          <p className="text-base md:text-base text-white/60 leading-[1.6] mb-6 max-w-[840px]">
             Direto no seu e-mail, sem spam.
           </p>
 
