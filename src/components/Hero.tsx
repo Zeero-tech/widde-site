@@ -56,7 +56,7 @@ export default function Hero() {
             <span className="block text-[10px] md:text-xs font-bold text-brand uppercase tracking-[2px] mb-4 md:mb-5">
               {t("hero.tagline")}
             </span>
-            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-4 md:mb-6 text-black">
+            <h1 className="text-4xl md:text-5xl font-black leading-[1.15] mb-4 md:mb-6 text-black">
               {t("hero.title")}{" "}
               <span className="text-brand">{t("hero.titleHighlight")}</span>
             </h1>

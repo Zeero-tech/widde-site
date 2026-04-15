@@ -62,7 +62,7 @@ export default function VCHero() {
             className="w-full md:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-20"
             style={{ justifyContent: "center" }}
           >
-            <h1 className="text-3xl md:text-5xl font-black leading-[1.15] mb-4 md:mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl font-black leading-[1.15] mb-4 md:mb-6 text-white">
               {t("vc.hero.title")}{" "}
               <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
             </h1>
