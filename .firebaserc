@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "widde-site"
+  },
+  "targets": {
+    "widde-33fd1": {
+      "hosting": {
+        "widde-site-novo": [
+          "widde-site-novo"
+        ]
+      }
+    }
   }
 }

@@ -16,6 +16,36 @@ export interface BlogPost {
   link: string
 }
 
+export interface BlogPostMeta {
+  slug: string
+  title: string
+  date: string
+  category: string
+  description: string
+  image?: string
+}
+
+export interface BlogPostFull extends BlogPostMeta {
+  content: string
+}
+
+export interface CasePostMeta {
+  slug: string
+  title: string
+  brand: string
+  date: string
+  category: string
+  description: string
+  image?: string
+  quote?: string
+  quoteAuthor?: string
+  metrics?: { label: string; value: string }[]
+}
+
+export interface CasePostFull extends CasePostMeta {
+  content: string
+}
+
 export interface IntegrationLogo {
   src: string
   alt: string

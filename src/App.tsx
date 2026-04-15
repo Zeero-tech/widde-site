@@ -29,6 +29,8 @@ import Footer from "@/components/Footer";
 import Footer2 from "@/components/Footer2";
 import Footer3 from "@/components/Footer3";
 import VideoCommerce from "@/pages/VideoCommerce";
+import BlogPost from "@/pages/BlogPost";
+import CasePost from "@/pages/CasePost";
 import VCCta from "./components/VideoCommerce/VCCta";
 
 function Home() {
@@ -116,6 +118,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/video-commerce" element={<VideoCommerce />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+      <Route path="/case/:slug" element={<CasePost />} />
     </Routes>
   );
 }
