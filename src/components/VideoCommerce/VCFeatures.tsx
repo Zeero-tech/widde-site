@@ -49,7 +49,7 @@ export default function VCFeatures() {
         </span>
         <h2
           id="func-heading"
-          className="text-xl md:text-2xl font-normal text-black leading-[1.25] max-w-[560px]"
+          className="text-2xl md:text-2xl font-normal text-black leading-[1.25] max-w-[560px]"
         >
           {t("vc.features.title")}
         </h2>
@@ -66,14 +66,14 @@ export default function VCFeatures() {
               </div>
               <div>
                 <span
-                  className={`inline-block text-xs font-black px-[9px] py-[3px] rounded mb-2 uppercase tracking-[1px] ${card.badgeClass}`}
+                  className={`inline-block text-sm md:text-xs font-black px-[9px] py-[3px] rounded mb-2 uppercase tracking-[1px] ${card.badgeClass}`}
                 >
                   {card.badge}
                 </span>
-                <div className=" font-black text-black mb-[6px]">
+                <div className="text-lg md:text-base font-black text-black mb-[6px]">
                   {card.title}
                 </div>
-                <div className="text-xs text-[#777] leading-[1.55]">
+                <div className="text-base md:text-xs text-[#777] leading-[1.55]">
                   {card.desc}
                 </div>
               </div>

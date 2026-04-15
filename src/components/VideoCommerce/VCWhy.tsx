@@ -18,12 +18,12 @@ export default function VCWhy() {
           <span className="block text-xs font-bold text-white/40 uppercase tracking-[2px] mb-[10px]">
             {t("vc.why.label")}
           </span>
-          <h2 className="text-lg md:text-2xl font-normal text-white leading-[1.25]">
+          <h2 className="text-2xl md:text-2xl font-normal text-white leading-[1.25]">
             {t("vc.why.title")}
           </h2>
         </div>
         <div className="flex items-center">
-          <p className="text-[14px] md:text-base text-white/50 leading-[1.6]">
+          <p className="text-base md:text-base text-white/50 leading-[1.6]">
             {t("vc.why.description")}
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function VCWhy() {
               suffix={stat.suffix}
               className="block text-3xl md:text-7xl font-light text-white leading-none md:mb-3 flex-shrink-0 w-[80px]"
             />
-            <span className="text-[14px] md:text-base text-white/50 leading-[1.4]">
+            <span className="text-base md:text-base text-white/50 leading-[1.4]">
               {t(`vc.why.stat${i + 1}`)}
             </span>
           </div>
