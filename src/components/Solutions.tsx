@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Solutions() {
   const { t } = useTranslation();
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
     <section
@@ -221,11 +222,11 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
             <div>
-              <h3 className="text-5xl font-normal text-black mb-4 leading-tight">Video Commerce</h3>
-              <p className="text-[#2d2d2d] max-w-full">
+              <h3 className="text-2xl md:text-4xl font-normal text-black mb-4 leading-tight">Video Commerce</h3>
+              <p className="text-[#2d2d2d] md:text-lg max-w-full">
                 <strong>{t("solutions.videoCommerce.descBold")}</strong>{" "}{t("solutions.videoCommerce.desc")}
               </p>
-              <p className="text-[#2d2d2d] mt-4 max-w-full">
+              <p className="text-[#2d2d2d] md:text-lg mt-4 max-w-full">
                 {t("solutions.videoCommerce.desc2")}{" "}<strong>{t("solutions.videoCommerce.desc2Bold")}</strong>
               </p>
             </div>
@@ -233,17 +234,17 @@ export default function Solutions() {
               <div className="flex gap-8 mb-8 mt-8">
                 <div className="flex flex-col gap-1">
                   <CountUp target={5} suffix="x" className="text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[#5d5d5d] leading-snug">{t("solutions.videoCommerce.stat1")}</span>
+                  <span className="text-[#5d5d5d] md:text-lg leading-snug">{t("solutions.videoCommerce.stat1")}</span>
                 </div>
                 <div className="w-px bg-[#E9E9E9]" />
                 <div className="flex flex-col gap-1">
                   <CountUp target={4} suffix="x" className="text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[#5d5d5d] leading-snug">{t("solutions.videoCommerce.stat2")}</span>
+                  <span className="text-[#5d5d5d] md:text-lg leading-snug">{t("solutions.videoCommerce.stat2")}</span>
                 </div>
               </div>
-              <a href="/video-commerce" className="inline-flex items-center gap-2 font-bold text-[#010b15] no-underline w-fit px-7 py-3 border border-black/20 rounded-full hover:border-black transition-colors">
+              <a href="/video-commerce" className="inline-flex items-center gap-2 md:text-2xl font-bold text-[#010b15] no-underline w-fit px-7 py-3 border border-black/20 rounded-full hover:border-black transition-colors">
                 {t("solutions.learnMore")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                <svg xmlns="http://www.w3.org/2000/svg" width={isMobile ? "11" : "16"} height={isMobile ? "11" : "16"} viewBox="0 0 11 11">
                   <path d="M8.11667 6H0V4.66667H8.11667L4.38333 0.933333L5.33333 0L10.6667 5.33333L5.33333 10.6667L4.38333 9.73333L8.11667 6Z" fill="black" />
                 </svg>
               </a>
@@ -260,8 +261,8 @@ export default function Solutions() {
             <div className="flex items-end gap-2.5 p-5">
               <div className="w-28 h-48 rounded-2xl bg-[#0A0A0A] overflow-hidden relative flex-shrink-0">
                 <div className="absolute inset-0 opacity-75" style={{ background: "linear-gradient(160deg,#003AB9,#2667F8)" }} />
-                <span className="absolute top-2.5 left-2.5 bg-[#FF3B30] text-white text-xs font-black px-2 py-0.5 rounded-full">{t("solutions.liveCommerce.mockLive")}</span>
-                <span className="absolute top-2.5 right-2.5 bg-black/50 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">1.2k</span>
+                <span className="absolute top-2.5 left-2.5 bg-[#FF3B30] text-white text-[9px] font-black px-2 py-0.5 rounded-full">{t("solutions.liveCommerce.mockLive")}</span>
+                <span className="absolute top-2.5 right-2.5 bg-black/50 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">1.2k</span>
                 <div className="absolute bottom-14 left-1.5 right-1.5 flex flex-col gap-1">
                   <div className="bg-black/50 rounded-md px-1.5 py-1 text-xs text-white">{t("solutions.liveCommerce.mockMessage1")}</div>
                   <div className="bg-black/50 rounded-md px-1.5 py-1 text-xs text-white">{t("solutions.liveCommerce.mockMessage2")}</div>
@@ -285,12 +286,12 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
             <div>
-              <span className="inline-block bg-[#1D1D1D] text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">{t("solutions.new")}</span>
-              <h3 className="text-5xl font-normal text-black mb-4 leading-tight">{t("solutions.liveCommerce.title")}</h3>
-              <p className="text-[#2d2d2d] max-w-full">
+              <span className="inline-block bg-[#1D1D1D] text-white text-xs md:text-base font-bold px-3 py-1 rounded-full w-fit mb-4">{t("solutions.new")}</span>
+              <h3 className="text-4xl font-normal text-black mb-4 leading-tight">{t("solutions.liveCommerce.title")}</h3>
+              <p className="text-[#2d2d2d] md:text-lg max-w-full">
                 <strong>{t("solutions.liveCommerce.descBold")}</strong>{" "}{t("solutions.liveCommerce.desc")}
               </p>
-              <p className="text-[#2d2d2d] mt-4 max-w-full">
+              <p className="text-[#2d2d2d] md:text-lg mt-4 max-w-full">
                 <strong>{t("solutions.liveCommerce.desc2Bold")}</strong>
               </p>
             </div>
@@ -298,12 +299,12 @@ export default function Solutions() {
               <div className="flex gap-8 mb-8 mt-8">
                 <div className="flex flex-col gap-1">
                   <CountUp target={5} suffix="x" className="text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[#5d5d5d] leading-snug">{t("solutions.liveCommerce.stat1")}</span>
+                  <span className="text-[#5d5d5d] md:text-lg leading-snug">{t("solutions.liveCommerce.stat1")}</span>
                 </div>
                 <div className="w-px bg-[#E9E9E9]" />
                 <div className="flex flex-col gap-1">
                   <CountUp target={60} prefix="+" suffix="%" className="text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[#5d5d5d] leading-snug">{t("solutions.liveCommerce.stat2")}</span>
+                  <span className="text-[#5d5d5d] md:text-lg leading-snug">{t("solutions.liveCommerce.stat2")}</span>
                 </div>
               </div>
             </div>
@@ -338,11 +339,11 @@ export default function Solutions() {
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
             <div>
               <span className="inline-block bg-[#1D1D1D] text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">{t("solutions.new")}</span>
-              <h3 className="text-5xl font-normal text-black mb-4 leading-tight">{t("solutions.tryOn.title")}</h3>
-              <p className="text-[#2d2d2d] max-w-full">
+              <h3 className="text-4xl font-normal text-black mb-4 leading-tight">{t("solutions.tryOn.title")}</h3>
+              <p className="text-[#2d2d2d] md:text-lg max-w-full">
                 {t("solutions.tryOn.desc")}{" "}<strong>{t("solutions.tryOn.descBold")}</strong>
               </p>
-              <p className="text-[#2d2d2d] mt-4 max-w-full">
+              <p className="text-[#2d2d2d] md:text-lg mt-4 max-w-full">
                 <strong>{t("solutions.tryOn.desc2Bold")}</strong>
               </p>
             </div>
@@ -350,7 +351,7 @@ export default function Solutions() {
               <div className="flex gap-8 mb-8 mt-8">
                 <div className="flex flex-col gap-1">
                   <CountUp target={93} suffix="%" className="text-5xl font-normal text-[#1d1d1d] leading-none mb-1" />
-                  <span className="text-[#5d5d5d] leading-snug">{t("solutions.tryOn.stat1")}</span>
+                  <span className="text-[#5d5d5d] md:text-lg leading-snug">{t("solutions.tryOn.stat1")}</span>
                 </div>
               </div>
             </div>

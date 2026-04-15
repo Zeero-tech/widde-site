@@ -338,7 +338,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     className={cn(
-                      "bg-transparent text-[16px] font-normal",
+                      "bg-transparent text-base md:text-lg font-normal",
                       isDark
                         ? "text-white hover:bg-white/10 data-[state=open]:bg-white/10"
                         : "text-black hover:bg-black/5 data-[state=open]:bg-black/5",

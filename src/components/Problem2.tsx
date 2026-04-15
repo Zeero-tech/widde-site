@@ -77,26 +77,26 @@ export default function Problem2() {
 
       {/* Left */}
       <div className="relative z-10 flex-[2.5]">
-        <span className="block text-xs font-normal text-white/50 uppercase tracking-[2px] mb-6">
+        <span className="block text-xs md:text-base font-normal text-white/50 uppercase tracking-[2px] mb-6">
           {t("problem.label")}
         </span>
         <h2
           id="problema2-heading"
-          className="text-2xl md:text-2xl font-normal text-white leading-[1.25] mb-6 md:mb-8"
+          className="text-2xl md:text-4xl font-normal text-white leading-[1.25] mb-6 md:mb-7"
         >
           {t("problem.title")}
         </h2>
-        <div className="mb-8">
-          <p className="text-base md:text-base text-white/55 leading-[1.65] mb-[14px]">
-            {t("problem.description")}
+        <div className="mb-7">
+          <p className="text-base md:text-lg text-white/55 leading-[1.65] mb-4">
+            {t("problem.desciption")}
           </p>
-          <p className="text-base md:text-base text-white/55 leading-[1.65]">
+          <p className="text-base md:text-lg text-white/55 leading-[1.65]">
             Com <strong className="text-white font-bold">Video Commerce</strong>, <strong className="text-white font-bold">Provador Virtual</strong> e <strong className="text-white font-bold">Live Commerce</strong>, a Widde faz o consumidor ver, experimentar e sentir o seu produto antes de comprar.
           </p>
         </div>
         <AnimatedButton
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-base px-[22px] py-[11px] rounded-full no-underline"
+          className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-2xl px-[22px] py-[11px] rounded-full no-underline"
         >
           {t("problem.cta")}
         </AnimatedButton>
@@ -110,7 +110,7 @@ export default function Problem2() {
             suffix="%"
             className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-base md:text-base text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat1Label")}
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Problem2() {
             suffix="%"
             className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-base md:text-base text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat2Label")}
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function Problem2() {
             suffix="%"
             className="text-2xl md:text-5xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
-          <div className="text-base md:text-base text-white/55 leading-[1.4] max-w-[400px]">
+          <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px]">
             {t("problem.stat3Label")}
           </div>
         </div>

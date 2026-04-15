@@ -137,7 +137,7 @@ export default function Hero2() {
                   e.preventDefault();
                   handleMapOpen(true);
                 }}
-                className="inline-block bg-brand text-white font-bold text-lg md:text-base px-7 py-[13px] rounded-full no-underline"
+                className="inline-block bg-brand text-white font-bold text-lg md:text-2xl px-7 py-[13px] rounded-full no-underline"
               >
                 Como chegar no nosso estande
               </AnimatedButton>
