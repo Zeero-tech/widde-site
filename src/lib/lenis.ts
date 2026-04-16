@@ -12,6 +12,7 @@ export function getLenis(): Lenis {
       duration: 2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      gestureOrientation: 'vertical',
     })
     instance.on('scroll', ScrollTrigger.update)
     gsap.ticker.add((time) => instance!.raf(time * 1000))
