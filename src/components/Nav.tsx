@@ -391,8 +391,8 @@ export default function Nav() {
                   <NavigationMenuLink asChild>
                     <a
                       href="https://widde.io/cases?"
-                      target="_self"
-                      rel="external"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) =>
                         handleNavClick("https://widde.io/cases?", e)
                       }
@@ -429,8 +429,8 @@ export default function Nav() {
                   <NavigationMenuLink asChild>
                     <a
                       href="https://widde.io/blog?"
-                      target="_self"
-                      rel="external"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) =>
                         handleNavClick("https://widde.io/blog?", e)
                       }
@@ -518,8 +518,8 @@ export default function Nav() {
                 )}
                 <a
                   href="https://widde.io/cases?"
-                  target="_self"
-                  rel="external"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases?", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
@@ -534,8 +534,8 @@ export default function Nav() {
                 </a>
                 <a
                   href="https://widde.io/blog?"
-                  target="_self"
-                  rel="external"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog?", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
@@ -547,16 +547,16 @@ export default function Nav() {
               <div className="px-5 pb-8 pt-4 flex flex-col gap-3">
                 <a
                   href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                  target="_self"
-                  rel="external"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline"
                 >
                   Falar com vendas
                 </a>
                 <a
                   href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                  target="_self"
-                  rel="external"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
                 >
                   Começar agora

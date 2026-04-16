@@ -30,7 +30,7 @@ export default function AnimatedButton({ href, children, className = '', style, 
       className={`btn-animate-chars ${className}`}
       onClick={onClick}
       style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style }}
-      {...(isExternal ? { target: '_self', rel: 'external' } : {})}
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
     >
       <span data-button-animate-chars="" className="btn-animate-chars__text">
         {splitToSpans(children)}
