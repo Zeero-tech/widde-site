@@ -7,7 +7,7 @@ export type VCFormatVideo = {
 export const vcFormatVideos: VCFormatVideo[] = [
   { src: '/formats/Story.mp4' },
   { src: '/formats/Carrossel.mp4' },
-  { src: '/formats/Destaques-de-categoria.mp4' },
-  { src: '/formats/Destaques-do-produto.mp4' },
+  { src: '/formats/Destaques-de-categori.mp4' },
+  { src: '/formats/Destaques-do-produt.mp4' },
   { src: '/formats/Explorar.mp4' },
 ]
