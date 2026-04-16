@@ -390,9 +390,9 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
-                      href="https://widde.io/cases"
+                      href="https://widde.io/cases?"
                       onClick={(e) =>
-                        handleNavClick("https://widde.io/cases", e)
+                        handleNavClick("https://widde.io/cases?", e)
                       }
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -426,9 +426,9 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
-                      href="https://widde.io/blog"
+                      href="https://widde.io/blog?"
                       onClick={(e) =>
-                        handleNavClick("https://widde.io/blog", e)
+                        handleNavClick("https://widde.io/blog?", e)
                       }
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -513,8 +513,8 @@ export default function Nav() {
                   </div>
                 )}
                 <a
-                  href="https://widde.io/cases"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases", e); }}
+                  href="https://widde.io/cases?"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases?", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.results")}
@@ -527,8 +527,8 @@ export default function Nav() {
                   {t("nav.plans")}
                 </a>
                 <a
-                  href="https://widde.io/blog"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog", e); }}
+                  href="https://widde.io/blog?"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog?", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.blog")}

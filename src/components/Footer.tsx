@@ -24,7 +24,7 @@ const footerColumns = [
     title: "Recursos",
     links: [
       { label: "Blog", href: "https://widde.io/blog?utm_medium=cpc&utm_source=google&utm_campaign=01" },
-      { label: "Cases", href: "https://widde.io/cases" },
+      { label: "Cases", href: "https://widde.io/cases?" },
       { label: "Central de Ajuda", href: "https://intercom.help/widde/pt-BR/" },
     ],
   },

@@ -31,13 +31,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://widde.io/blog</loc>
+    <loc>https://widde.io/blog?</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://widde.io/cases</loc>
+    <loc>https://widde.io/cases?</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
