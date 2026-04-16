@@ -2,10 +2,17 @@ import CountUp from "./CountUp";
 import SolutionArticle from "./SolutionArticle";
 import SectionTitle from "./SectionTitle";
 import { useTranslation } from "react-i18next";
+import { useInViewVideo } from "@/hooks/useInViewVideo";
 
 export default function Solutions() {
   const { t } = useTranslation();
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const videoVC = useInViewVideo();
+  const videoLC = useInViewVideo();
+  const videoTryOn = useInViewVideo();
+  const videoVCMobile = useInViewVideo();
+  const videoLCMobile = useInViewVideo();
+  const videoTryOnMobile = useInViewVideo();
 
   return (
     <section
@@ -27,9 +34,9 @@ export default function Solutions() {
             className="flex-shrink-0 rounded-2xl overflow-hidden h-[230px]"
             aria-hidden="true"
           >
-            <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
-              <source src="/solution/Ferracini Carrossel aberto.webm" type="video/webm" />
-              <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
+            <video ref={videoVCMobile} className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
+              <source data-src="/solution/Ferracini Carrossel aberto.webm" type="video/webm" />
+              <source data-src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
@@ -70,9 +77,9 @@ export default function Solutions() {
             className="flex-shrink-0 rounded-2xl overflow-hidden h-[230px]"
             aria-hidden="true"
           >
-            <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
-              <source src="/solution/Live Commerce - Desktop.webm" type="video/webm" />
-              <source src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
+            <video ref={videoLCMobile} className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
+              <source data-src="/solution/Live Commerce - Desktop.webm" type="video/webm" />
+              <source data-src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
@@ -107,11 +114,12 @@ export default function Solutions() {
             aria-hidden="true"
           >
             <video
+              ref={videoTryOnMobile}
               autoPlay muted loop playsInline
               className="absolute inset-0 w-full h-full object-cover object-right"
             >
-              <source src="/solution/Provador IA Chart.webm" type="video/webm" />
-              <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
+              <source data-src="/solution/Provador IA Chart.webm" type="video/webm" />
+              <source data-src="/solution/Provador IA Chart.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
@@ -144,6 +152,7 @@ export default function Solutions() {
             aria-hidden="true"
           >
             <video
+              ref={videoVC}
               className="w-full h-full object-cover"
               autoPlay
               muted
@@ -151,8 +160,8 @@ export default function Solutions() {
               playsInline
               preload="none"
             >
-              <source src="/solution/Ferracini Carrossel aberto.webm" type="video/webm" />
-              <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
+              <source data-src="/solution/Ferracini Carrossel aberto.webm" type="video/webm" />
+              <source data-src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
@@ -193,9 +202,9 @@ export default function Solutions() {
             className="flex-1 flex-shrink-0 rounded-2xl overflow-hidden md:min-h-96"
             aria-hidden="true"
           >
-            <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
-              <source src="/solution/Live Commerce - Desktop.webm" type="video/webm" />
-              <source src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
+            <video ref={videoLC} className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
+              <source data-src="/solution/Live Commerce - Desktop.webm" type="video/webm" />
+              <source data-src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">
@@ -232,6 +241,7 @@ export default function Solutions() {
             aria-hidden="true"
           >
             <video
+              ref={videoTryOn}
               autoPlay
               muted
               loop
@@ -239,8 +249,8 @@ export default function Solutions() {
               preload="none"
               className="absolute inset-0 w-full h-full object-cover object-right"
             >
-              <source src="/solution/Provador IA Chart.webm" type="video/webm" />
-              <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
+              <source data-src="/solution/Provador IA Chart.webm" type="video/webm" />
+              <source data-src="/solution/Provador IA Chart.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col flex-1 px-8 justify-between py-8">

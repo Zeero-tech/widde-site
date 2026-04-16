@@ -17,9 +17,24 @@ export default function Problem() {
   const [current, setCurrent] = useState(0);
   const [next, setNext] = useState<number | null>(null);
   const [fading, setFading] = useState(false);
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Start crossfade timer only when section enters viewport
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setInView(true); observer.disconnect(); } },
+      { rootMargin: '200px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return;
     timerRef.current = setTimeout(function advance() {
       const nextIdx = (current + 1) % videos.length;
       setNext(nextIdx);
@@ -38,26 +53,29 @@ export default function Problem() {
 
   return (
     <section
+      ref={sectionRef}
       className="relative rounded-[20px] overflow-hidden px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
       aria-labelledby="problema2-heading"
     >
       {/* Current video */}
-      <video
-        key={current}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-        style={{ opacity: 1, transition: `opacity ${FADE_DURATION}ms ease` }}
-      >
-        <source src={videos[current].webm} type="video/webm" />
-        <source src={videos[current].mp4} type="video/mp4" />
-      </video>
+      {inView && (
+        <video
+          key={current}
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          style={{ opacity: 1, transition: `opacity ${FADE_DURATION}ms ease` }}
+        >
+          <source src={videos[current].webm} type="video/webm" />
+          <source src={videos[current].mp4} type="video/mp4" />
+        </video>
+      )}
 
       {/* Next video fading in */}
-      {next !== null && (
+      {inView && next !== null && (
         <video
           key={`next-${next}`}
           className="absolute inset-0 w-full h-full object-cover"
