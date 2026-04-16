@@ -110,7 +110,7 @@ export default function Problem() {
         </h2>
         <div className="mb-7">
           <p className="text-base md:text-lg text-white/55 leading-[1.65] mb-4">
-            {t("problem.desciption")}
+            O consumidor não sabe como o produto funciona, como fica no corpo, se vale o investimento.
           </p>
           <p className="text-base md:text-lg text-white/55 leading-[1.65]">
             Com <strong className="text-white font-bold">Video Commerce</strong>, <strong className="text-white font-bold">Provador Virtual</strong> e <strong className="text-white font-bold">Live Commerce</strong>, a Widde faz o consumidor ver, experimentar e sentir o seu produto antes de comprar.
