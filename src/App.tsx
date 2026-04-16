@@ -2,11 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
 import VideoCommerce from "@/pages/VideoCommerce";
 
-// Reload the page once if a lazy chunk fails to load (stale cache after deploy)
+// Reload with cache-bust if a lazy chunk 404s (stale JS after deploy)
 window.addEventListener("vite:preloadError", () => {
-  if (!sessionStorage.getItem("chunk-reload")) {
-    sessionStorage.setItem("chunk-reload", "1");
-    window.location.reload();
+  const url = new URL(window.location.href);
+  if (!url.searchParams.get("v")) {
+    url.searchParams.set("v", Date.now().toString());
+    window.location.replace(url.toString());
   }
 });
 
