@@ -57,7 +57,6 @@ export default function LogoTicker2() {
               <HoverCard.Trigger asChild>
                 <div
                   className="inline-flex items-center justify-center gap-2 px-8 border-r border-[#eee] flex-shrink-0 h-10 opacity-50 hover:opacity-100 transition-opacity cursor-default"
-                  onMouseEnter={() => !isMobile && setPaused(true)}
                 >
                   {logo.img ? (
                     <img
