@@ -7,6 +7,7 @@ import { useRevealOnScroll } from '@/hooks/useRevealOnScroll'
 import Nav from '@/components/Nav'
 import VCHero from '@/components/VideoCommerce/VCHero'
 import LogoTicker from '@/components/LogoTicker'
+import Banner from '@/components/Banner'
 
 // Below-the-fold — lazy
 const VCWhy = lazy(() => import('@/components/VideoCommerce/VCWhy'))
@@ -33,6 +34,12 @@ export default function VideoCommerce() {
         <meta property="og:url" content="https://widde.io/video-commerce" />
       </Helmet>
       <Nav />
+      <Banner
+        id="vtex-day-2025"
+        content={<>🎉 Estamos no <strong>VTEX Day!</strong> Venha nos visitar e conhecer nossas soluções de Video Commerce.</>}
+        ctaLabel="Saiba mais"
+        ctaHref="https://widde.io/contato-vendas"
+      />
       <VCHero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
       <Suspense fallback={null}>
