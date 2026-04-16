@@ -1,23 +1,40 @@
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
 import MuxPlayer from "@mux/mux-player-react";
 import AnimatedButton from "./AnimatedButton";
 
 export default function DemoSection() {
   const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="demo2" className="bg-surface-dark py-10 md:py-16">
       <div className="max-w-screen-xl mx-auto px-3 md:px-2">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
           {/* Video */}
-          <div className="w-full md:w-[58%] rounded-2xl overflow-hidden">
-            <MuxPlayer
-              playbackId="ud86wbc5uESjjIPpJ421FK02uZtEYPpezDXvQnMg02SfI"
-              metadataVideoTitle="Demonstração da Widde"
-              thumbnailTime={20.2}
-              accentColor="#2667F8"
-              style={{ width: "100%", aspectRatio: "16/9" }}
-              streamType="on-demand"
-            />
+          <div ref={containerRef} className="w-full md:w-[58%] rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+            {visible && (
+              <MuxPlayer
+                playbackId="ud86wbc5uESjjIPpJ421FK02uZtEYPpezDXvQnMg02SfI"
+                metadataVideoTitle="Demonstração da Widde"
+                thumbnailTime={20.2}
+                accentColor="#2667F8"
+                style={{ width: "100%", aspectRatio: "16/9" }}
+                streamType="on-demand"
+              />
+            )}
           </div>
 
           {/* Text */}
