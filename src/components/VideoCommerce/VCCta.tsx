@@ -11,6 +11,9 @@ export default function VCCta() {
   const location = useLocation();
   const { t } = useTranslation();
 
+  const isVCPage = location.pathname === "/video-commerce";
+  const prefix = isVCPage ? "vc.cta" : "homeCta";
+
   function handleViewDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     if (location.pathname === "/") {
@@ -28,23 +31,23 @@ export default function VCCta() {
     <section className="py-10 md:py-20 relative overflow-hidden bg-[#E5E5E5]">
       <div className="max-w-screen-xl mx-auto px-3 md:px-2 text-center relative z-10">
         <span className="md:hidden block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-4">
-          {t("vc.cta.label")}
+          {t(`${prefix}.label`)}
         </span>
         <div className="hidden md:flex justify-center mb-4">
-          <SectionTitle label={t("vc.cta.label")} />
+          <SectionTitle label={t(`${prefix}.label`)} />
         </div>
         <h2 className="text-2xl md:text-4xl font-black text-black leading-[1.2] mb-4">
-          {t("vc.cta.title")}
+          {t(`${prefix}.title`)}
         </h2>
         <p className="text-base md:text-lg text-[#5d5d5d] leading-[1.6] mb-8">
-          {t("vc.cta.description")}
+          {t(`${prefix}.description`)}
         </p>
         <div className="flex flex-col items-stretch sm:flex-row sm:items-center justify-center gap-3">
           <AnimatedButton
             href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block text-center bg-brand text-white font-bold text-lg md:text-lg px-7 py-[13px] rounded-full no-underline"
+            className={`inline-block text-center text-white font-bold text-lg md:text-lg px-7 py-[13px] rounded-full no-underline ${isVCPage ? "bg-black" : "bg-brand"}`}
           >
-            {t("vc.cta.ctaSales")}
+            {t(`${prefix}.ctaSales`)}
           </AnimatedButton>
           <a
             href="/#demo2"
@@ -55,7 +58,7 @@ export default function VCCta() {
               data-button-animate-chars=""
               className="btn-animate-chars__text"
             >
-              {t("vc.cta.ctaLearnMore")
+              {t(`${prefix}.ctaLearnMore`)
                 .split("")
                 .map((char, i) => (
                   <span

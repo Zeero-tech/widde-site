@@ -1,13 +1,13 @@
-export type VCFormatImage = {
+export type VCFormatVideo = {
   src: string
 }
 
-// Uma imagem por formato, na mesma ordem do VCFormats.tsx:
+// Um vídeo por formato, na mesma ordem do VCFormats.tsx:
 // Stories | Carousel | Highlights | Product Highlights | Explore
-export const vcFormatVideos: VCFormatImage[] = [
-  { src: '/formats/Stories.png' }, // Stories
-  { src: '/formats/Carrossel-de-Videos.png' }, // Carousel
-  { src: '/formats/Destaques-da-Loja.png' }, // Highlights
-  { src: '/formats/Destaques-de-Produto.png' }, // Product Highlights
-  { src: '/formats/Explorar.png' }, // Explore
+export const vcFormatVideos: VCFormatVideo[] = [
+  { src: '/formats/Story.mp4' },
+  { src: '/formats/Carrossel.mp4' },
+  { src: '/formats/Destaques-de-categoria.mp4' },
+  { src: '/formats/Destaques-do-produto.mp4' },
+  { src: '/formats/Explorar.mp4' },
 ]

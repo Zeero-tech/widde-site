@@ -74,6 +74,13 @@
       "stat1": "Satisfação dos consumidores com o resultado"
     }
   },
+  "homeCta": {
+    "label": "Falar com vendas",
+    "title": "Pronto para transformar seu e-commerce com vídeo?",
+    "description": "Nossa equipe responde em até 24h e monta uma proposta sob medida para o seu negócio.",
+    "ctaSales": "Falar com vendas",
+    "ctaLearnMore": "Conhecer mais"
+  },
   "integrations": {
     "title": "Integre facilmente com a plataforma que você utiliza",
     "description": "Sem precisar de desenvolvimento. A Widde está presente nas principais plataformas de e-commerce do Brasil.",
@@ -197,34 +204,34 @@
     },
     "features": {
       "label": "Funcionalidades",
-      "title": "Tudo que você precisa para converter com vídeo",
+      "title": "Tudo que você precisa para converter com Video Commerce",
       "card1": {
         "badge": "Conversão",
         "title": "Carrinho dentro do vídeo",
-        "description": "O consumidor adiciona ao carrinho sem sair do vídeo. Zero fricção entre descoberta e compra."
+        "description": "O consumidor adiciona ao carrinho sem sair do vídeo, acelerando o processo de compra. Zero fricção entre descoberta e finalização do pedido."
       },
       "card2": {
         "badge": "Analytics",
         "title": "Dados por vídeo",
-        "description": "Views, engajamento, cliques e conversões por vídeo. Entenda exatamente qual conteúdo vende mais."
+        "description": "Views, engajamento, ticket médio e conversões por vídeo. Entenda exatamente qual conteúdo vende mais."
       },
       "card3": {
         "badge": "Performance",
         "title": "Zero impacto na velocidade",
-        "description": "Infraestrutura própria de streaming. Os vídeos não pesam no carregamento da loja — Core Web Vitals preservados."
+        "description": "Infraestrutura própria da Widde. Os conteúdos não pesam no carregamento da loja, não importa quantos vídeos tenham no seu site."
       },
       "card4": {
         "badge": "Engajamento",
         "title": "Comentários nos vídeos",
-        "description": "Receba e responda dúvidas dos clientes diretamente nos vídeos. IA da Widde filtra e organiza automaticamente."
+        "description": "Receba e responda dúvidas dos clientes diretamente nos vídeos. IA da Widde filtra e categoriza automaticamente."
       }
     },
     "cta": {
-      "label": "Falar com vendas",
-      "title": "Pronto para transformar seu e-commerce com vídeo?",
-      "description": "Nossa equipe responde em até 24h e monta uma proposta sob medida para o seu negócio.",
-      "ctaSales": "Falar com vendas",
-      "ctaLearnMore": "Conhecer mais"
+      "label": "Agende uma demonstração",
+      "title": "Quer conhecer tudo?",
+      "description": "Nosso time de vendas está pronto para entender seu cenário e te ajudar a começar.",
+      "ctaSales": "Falar com Vendas →",
+      "ctaLearnMore": "Começar agora →"
     },
     "quote": {
       "text": "\"Desde que começamos a trabalhar com a Widde, a experiência em nosso e-commerce alcançou um novo nível de interatividade.\"",

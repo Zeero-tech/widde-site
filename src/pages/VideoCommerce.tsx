@@ -32,7 +32,7 @@ export default function VideoCommerce() {
       <div className="pb-15 md:pb-30"><LogoTicker2 /></div>
       <main className="max-w-screen-xl mx-auto px-3 md:px-2">
         <div data-reveal className="pb-15 md:pb-30"><VCWhy /></div>
-        <div data-reveal className="pb-15 md:pb-30"><VCFormats /></div>
+        <div data-reveal className="pb-20 md:pb-30"><VCFormats /></div>
       </main>
       <div className="pb-15 md:pb-30"><VCFeatures /></div>
       <main className="max-w-screen-xl mx-auto px-3 md:px-2">
