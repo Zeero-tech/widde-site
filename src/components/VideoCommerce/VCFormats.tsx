@@ -3,33 +3,6 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "@/components/SectionTitle";
 import { vcFormatVideos } from "@/data/vcFormats";
 
-function FormatThumb({ src, webm }: { src: string; webm: string }) {
-  if (!src) {
-    return (
-      <div className="h-[190px] flex flex-col items-center justify-center bg-[#f0f0f0] gap-2">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#aaa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" />
-          <line x1="12" y1="8" x2="12" y2="12" />
-          <line x1="12" y1="16" x2="12.01" y2="16" />
-        </svg>
-        <span className="text-xs text-[#aaa]">Vídeo não disponível</span>
-      </div>
-    );
-  }
-  return (
-    <video
-      className="w-full h-[190px] object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      {webm && <source src={webm} type="video/webm" />}
-      <source src={src} type="video/mp4" />
-    </video>
-  );
-}
-
 export default function VCFormats() {
   const { t } = useTranslation();
 
@@ -91,7 +64,7 @@ export default function VCFormats() {
               muted
               loop
               playsInline
-              preload="none"
+              preload="metadata"
             >
               {vcFormatVideos[current.videoIdx]?.webm && (
                 <source src={vcFormatVideos[current.videoIdx].webm} type="video/webm" />
