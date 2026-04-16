@@ -53,6 +53,42 @@ function buildItems(isMobile: boolean, blockIndex: number): BlockItem[] {
   ]
 }
 
+function VideoItem({ src }: { src: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      className="absolute inset-0 w-full h-full object-cover"
+      src={src}
+      muted
+      loop
+      playsInline
+      preload="none"
+      onLoadedMetadata={(e) => { (e.currentTarget as HTMLVideoElement).currentTime = 5; }}
+    />
+  );
+}
+
 function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; colSize: number; rowSize: number; isMobile: boolean }) {
   const items = buildItems(isMobile, offset)
 
@@ -81,16 +117,7 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
           {item.src && (
             item.src.match(/\.(png|jpg|jpeg|webp)$/i)
               ? <img className="absolute inset-0 w-full h-full object-cover" src={item.src} alt="" loading="lazy" />
-              : <video
-                className="absolute inset-0 w-full h-full object-cover"
-                src={item.src}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="none"
-                onLoadedMetadata={(e) => { (e.currentTarget as HTMLVideoElement).currentTime = 5; }}
-              />
+              : <VideoItem src={item.src} />
           )}
         </div>
       ))}
