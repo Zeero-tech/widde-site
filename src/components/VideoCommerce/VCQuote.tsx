@@ -8,12 +8,11 @@ export default function VCQuote() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#0A0A0A] rounded-[12px] md:rounded-[20px] px-6 py-6 md:px-16 md:py-16 flex flex-col md:flex-row items-center gap-10 md:gap-40">
+    <div className="bg-ink rounded-[12px] md:rounded-[20px] px-6 py-6 md:px-16 md:py-16 flex flex-col md:flex-row items-center gap-10 md:gap-40">
       {/* Video — top on mobile, right on desktop */}
       <div className="flex-shrink-0 w-full max-w-[250px] md:w-[320px] md:max-w-none mx-auto md:mx-0 md:order-2 md:flex md:items-center md:justify-center">
         <div
-          className="relative rounded-[24px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)] w-full"
-          style={{ aspectRatio: "9/16" }}
+          className="relative rounded-[24px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)] w-full aspect-[9/16]"
         >
           <video
             className="w-full h-full object-cover"

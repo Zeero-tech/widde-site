@@ -11,7 +11,7 @@ export default function SectionTitle({
 }) {
   return (
     <div className={className}>
-      <span className="block text-xs md:text-sm font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
+      <span className="block text-xs md:text-sm font-bold text-text-muted uppercase tracking-[2px] mb-3">
         {label}
       </span>
       {title && (

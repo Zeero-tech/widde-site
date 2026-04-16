@@ -23,7 +23,7 @@ export default function VCWhy() {
           />
         </div>
         <div className="flex items-center">
-          <p className="text-base md:text-lg text-white/50 leading-[1.6]">
+          <p className="text-base md:text-lg text-white/50 leading-relaxed">
             {t("vc.why.description")}
           </p>
         </div>

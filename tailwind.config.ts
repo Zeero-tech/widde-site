@@ -12,6 +12,14 @@ export default {
         brand: '#2667F8',
         'brand-dark': '#1A3EAF',
         ink: '#0A0A0A',
+        surface: '#f6f6f6',
+        'surface-dark': '#e5e5e5',
+        'surface-border': '#E9E9E9',
+        charcoal: '#1d1d1d',
+        'text-body': '#2d2d2d',
+        'text-muted': '#5d5d5d',
+        'text-faint': '#888',
+        navy: '#010b15',
       },
       fontSize: {
         xs:   ['0.75rem',  { lineHeight: '1rem' }],
@@ -26,12 +34,10 @@ export default {
         '6xl': ['3rem',    { lineHeight: '1' }],
         '7xl': ['3.5rem',  { lineHeight: '1' }],
         '8xl': ['4rem',    { lineHeight: '1' }],
+        '9xl': ['4.5rem',  { lineHeight: '1' }],
       },
       fontFamily: {
         sans: ['Lato', 'sans-serif'],
-      },
-      fontSize: {
-        '9xl': ['4.5rem', { lineHeight: '1' }],
       },
       borderRadius: {
         lg: 'var(--radius)',

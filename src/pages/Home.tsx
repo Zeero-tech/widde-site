@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </main>
       <VCCta />
-      <div className="pb-15 md:pb-30 pt-15 md:pt-20 bg-[#0A0A0A]"><Newsletter /></div>
+      <div className="pb-15 md:pb-30 pt-15 md:pt-20 bg-ink"><Newsletter /></div>
       <Footer />
     </>
   );

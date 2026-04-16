@@ -43,18 +43,18 @@ export default function Blog() {
               )}
             </div>
             <div className="flex flex-col flex-1 p-4 gap-1">
-              <p className="text-xs font-bold text-[#5d5d5d] uppercase tracking-[1px]">
+              <p className="text-xs font-bold text-text-muted uppercase tracking-[1px]">
                 {post.category}
               </p>
-              <p className="text-lg font-normal text-[#1d1d1d] leading-[1.4]">
+              <p className="text-lg font-normal text-charcoal leading-[1.4]">
                 {post.title}
               </p>
-              <p className="text-base text-[#5d5d5d] leading-[1.5]">
+              <p className="text-base text-text-muted leading-[1.5]">
                 {post.desc}
               </p>
               <a
                 href={post.link}
-                className="font-bold text-[#010b15] no-underline hover:underline mt-auto pt-3"
+                className="font-bold text-navy no-underline hover:underline mt-auto pt-3"
               >
                 Saiba mais →
               </a>
@@ -98,18 +98,18 @@ export default function Blog() {
                 />
               )}
             </div>
-            <p className="text-xs md:text-sm font-bold text-[#5d5d5d] uppercase tracking-[1px] px-4 pt-3">
+            <p className="text-xs md:text-sm font-bold text-text-muted uppercase tracking-[1px] px-4 pt-3">
               {post.category}
             </p>
-            <p className="text-base md:text-2xl font-normal text-[#1d1d1d] leading-[1.4] px-4 pt-1">
+            <p className="text-base md:text-2xl font-normal text-charcoal leading-[1.4] px-4 pt-1">
               {post.title}
             </p>
-            <p className="text-sm md:text-lg text-[#5d5d5d] leading-[1.5] px-4 pt-1">
+            <p className="text-sm md:text-lg text-text-muted leading-[1.5] px-4 pt-1">
               {post.desc}
             </p>
             <a
               href={post.link}
-              className="text-base md:text-lg font-bold text-[#010b15] no-underline hover:underline px-4 py-4 self-end"
+              className="text-base md:text-lg font-bold text-navy no-underline hover:underline px-4 py-4 self-end"
             >
               Saiba mais →
             </a>

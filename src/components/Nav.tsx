@@ -359,7 +359,7 @@ export default function Nav() {
                             onClick={(e) =>
                               handleSolutionClick(s.elementId, e, s.href)
                             }
-                            className="no-underline flex flex-col rounded-xl bg-[#f6f6f6] overflow-hidden transition-colors hover:bg-[#efefef]"
+                            className="no-underline flex flex-col rounded-xl bg-surface overflow-hidden transition-colors hover:bg-[#efefef]"
                           >
                             <div className="w-full h-[110px] flex items-center justify-center bg-[#ebebeb] rounded-t-xl">
                               {s.icon}
@@ -451,13 +451,12 @@ export default function Nav() {
 
           {/* Mobile menu — fullscreen overlay */}
           {mobileOpen && (
-            <div className="md:hidden fixed inset-0 bg-[#f6f6f6] z-50 flex flex-col">
+            <div className="md:hidden fixed inset-0 bg-surface z-50 flex flex-col">
               {/* Header */}
               <div className="flex justify-between items-center px-5 pt-8 pb-4 min-h-[60px]">
                 <a
                   href="/"
-                  className="no-underline flex items-center"
-                  style={{ color: "black" }}
+                  className="no-underline flex items-center text-black"
                   onClick={(e) => {
                     e.preventDefault();
                     setMobileOpen(false);

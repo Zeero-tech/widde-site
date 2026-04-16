@@ -102,7 +102,7 @@ export default function VCFormats() {
         {/* Text + nav */}
         <div className="w-full flex flex-col gap-2">
           <div className="text-xl font-bold text-black leading-tight">{current.name}</div>
-          <div className="text-sm text-[#555] leading-[1.6]">{current.desc}</div>
+          <div className="text-sm text-[#555] leading-relaxed">{current.desc}</div>
           <div className="text-xs text-[#aaa]">
             {t("vc.formats.appearsIn")}
             {current.onde.map((lugar) => (
@@ -182,7 +182,7 @@ export default function VCFormats() {
         <div className="flex flex-col justify-between flex-1 h-full py-8">
           <div>
             <div className="text-4xl font-bold text-black mb-5 leading-tight">{current.name}</div>
-            <div className="text-lg text-[#555] leading-[1.6] mb-6">{current.desc}</div>
+            <div className="text-lg text-[#555] leading-relaxed mb-6">{current.desc}</div>
             <div className="text-base text-[#aaa]">
               {t("vc.formats.appearsIn")}
               {current.onde.map((lugar) => (

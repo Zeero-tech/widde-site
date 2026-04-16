@@ -36,7 +36,7 @@ export default function Hero() {
 
   return (
     <section
-      className="bg-[#f6f6f6] overflow-hidden relative"
+      className="bg-surface overflow-hidden relative"
       style={{ minHeight: "calc(100vh - 120px)" }}
     >
       <div
@@ -105,8 +105,7 @@ export default function Hero() {
                 }}
               />
               <video
-                className="w-full h-full object-cover object-top"
-                style={{ display: "block" }}
+                className="w-full h-full object-cover object-top block"
                 autoPlay
                 muted
                 loop

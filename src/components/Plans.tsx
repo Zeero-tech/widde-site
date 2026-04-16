@@ -26,7 +26,7 @@ export default function Plans() {
       {/* Grid */}
       <div className="grid gap-5 md:gap-6 grid-cols-1 lg:grid-cols-[1fr_2fr]">
         {/* Starter */}
-        <article className="bg-[#f6f6f6] rounded-[18px] p-7 md:p-12 relative shadow-[0_0_0_1px_rgb(233,233,233)]">
+        <article className="bg-surface rounded-[18px] p-7 md:p-12 relative shadow-[0_0_0_1px_rgb(233,233,233)]">
           <h3 className="text-lg md:text-2xl font-normal text-black mb-2 md:mb-3">Starter</h3>
           <div className="text-[30px] md:text-4xl font-normal text-black mb-2 md:mb-3 leading-none">
             R$399<sub className=" font-normal text-[#888] md:text-[28px]">/mês</sub>
@@ -43,7 +43,7 @@ export default function Plans() {
             ].map((f) => (
               <li
                 key={f}
-                className="text-base md:text-lg text-[#5d5d5d] flex items-start gap-2 leading-[1.4]"
+                className="text-base md:text-lg text-text-muted flex items-start gap-2 leading-[1.4]"
               >
                 <span className="text-brand font-black flex-shrink-0">
                   &#10003;
@@ -54,14 +54,14 @@ export default function Plans() {
           </ul>
           <AnimatedButton
             href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className="inline-block w-full md:w-fit text-center bg-[#f6f6f6] text-black font-bold text-lg md:text-lg px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-[#E9E9E9] hover:bg-[#eee] transition-colors"
+            className="inline-block w-full md:w-fit text-center bg-surface text-black font-bold text-lg md:text-lg px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-surface-border hover:bg-[#eee] transition-colors"
           >
             {t("plans.starterCta")}
           </AnimatedButton>
         </article>
 
         {/* Pro */}
-        <article className="bg-[#0A0A0A] rounded-[18px] p-7 md:p-12 relative overflow-visible shadow-[0_0_0_1px_rgb(233,233,233)]">
+        <article className="bg-ink rounded-[18px] p-7 md:p-12 relative overflow-visible shadow-[0_0_0_1px_rgb(233,233,233)]">
           {/* Decorative SVG circles */}
           <svg
             className="absolute top-3 right-4 md:top-7 md:right-7 opacity-20 w-10 h-10 md:w-20 md:h-20"

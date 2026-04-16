@@ -50,7 +50,7 @@ export default function Newsletter() {
 
   return (
     <section
-      className="overflow-hidden bg-[#0A0A0A] px-3 md:px-2"
+      className="overflow-hidden bg-ink px-3 md:px-2"
       aria-labelledby="newsletter2-heading"
     >
       <div
@@ -90,10 +90,10 @@ export default function Newsletter() {
               {t("newsletter.title")}
             </HighlightText>
           </h2>
-          <p className="text-base md:text-lg text-white/60 leading-[1.6] max-w-[940px]">
+          <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-[940px]">
             Receba tendências de experiência em e-commerce, cases de sucesso e dicas práticas para vender mais.
           </p>
-          <p className="text-base md:text-lg text-white/60 leading-[1.6] mb-6 max-w-[940px]">
+          <p className="text-base md:text-lg text-white/60 leading-relaxed mb-6 max-w-[940px]">
             Direto no seu e-mail, sem spam.
           </p>
 

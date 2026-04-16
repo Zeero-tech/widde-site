@@ -67,13 +67,12 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#0A0A0A] text-white" role="contentinfo">
+    <footer className="bg-ink text-white" role="contentinfo">
       <div className="px-3 md:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
         {/* Logo */}
         <a
           href="/"
-          className="no-underline inline-flex mb-10"
-          style={{ color: "white" }}
+          className="no-underline inline-flex mb-10 text-white"
         >
           <Logo />
         </a>

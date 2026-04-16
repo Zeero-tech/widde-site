@@ -17,7 +17,7 @@ export default function Integrations() {
       >
         {t("integrations.title")}
       </h2>
-      <p className="text-sm md:text-sm text-white/50 mb-7">{t("integrations.description")}</p>
+      <p className="text-base md:text-lg text-white/50 mb-7">{t("integrations.description")}</p>
 
       <div
         className="overflow-hidden md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"

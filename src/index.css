@@ -4,9 +4,15 @@
   --color-brand: #2667f8;
   --color-brand-dark: #1a3eaf;
   --color-ink: #0a0a0a;
+  --color-surface: #f6f6f6;
+  --color-surface-dark: #e5e5e5;
+  --color-surface-border: #e9e9e9;
+  --color-charcoal: #1d1d1d;
+  --color-text-body: #2d2d2d;
+  --color-text-muted: #5d5d5d;
+  --color-text-faint: #888;
+  --color-navy: #010b15;
   --font-sans: "Lato", sans-serif;
-  --text-base: 1rem;
-  --text-base--line-height: 1.5rem;
 }
 
 @layer base {
@@ -21,13 +27,15 @@
     filter: blur(3px);
     will-change: opacity, transform, filter;
   }
+
   body {
     font-family: "Lato", sans-serif;
-    background: #f6f6f6;
+    background: var(--color-surface);
     color: #000;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
+
   img,
   video {
     max-width: 100%;
@@ -37,7 +45,7 @@
 }
 
 /* Widde circle */
-.widde-cicle {
+@utility widde-circle {
   flex: 0 0 auto;
   width: 150px;
   height: 150px;
@@ -45,31 +53,17 @@
   inset: -60px -60px auto auto;
 }
 
-.widde-cicle.is--large {
+@utility widde-circle-large {
   object-fit: contain;
   width: 250px;
   height: 250px;
   inset: auto -80px -60px auto;
 }
 
-/* Animação do logo ticker */
+/* Shared ticker keyframe */
 @keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Animação do carrossel de integrações */
-@keyframes scroll-logos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 @utility animate-ticker {
@@ -81,19 +75,19 @@
 }
 
 @utility animate-scroll-logos {
-  animation: scroll-logos 60s linear infinite;
+  animation: ticker 60s linear infinite;
 }
 
 @utility animate-scroll-logos-reverse {
-  animation: scroll-logos 60s linear infinite reverse;
+  animation: ticker 60s linear infinite reverse;
 }
 
 @utility animate-scroll-logos-fast {
-  animation: scroll-logos 8s linear infinite;
+  animation: ticker 8s linear infinite;
 }
 
 @utility animate-scroll-logos-fast-reverse {
-  animation: scroll-logos 12s linear infinite reverse;
+  animation: ticker 12s linear infinite reverse;
 }
 
 /* tailwindcss-animate keyframes */
@@ -130,39 +124,17 @@
   --tw-exit-translate-x: initial;
   --tw-exit-translate-y: initial;
 }
-@utility fade-in {
-  --tw-enter-opacity: 0;
-}
-@utility fade-in-0 {
-  --tw-enter-opacity: 0;
-}
-@utility fade-out {
-  --tw-exit-opacity: 0;
-}
-@utility fade-out-0 {
-  --tw-exit-opacity: 0;
-}
-@utility zoom-in-90 {
-  --tw-enter-scale: 0.9;
-}
-@utility zoom-in-95 {
-  --tw-enter-scale: 0.95;
-}
-@utility zoom-out-95 {
-  --tw-exit-scale: 0.95;
-}
-@utility slide-in-from-left-52 {
-  --tw-enter-translate-x: -13rem;
-}
-@utility slide-in-from-right-52 {
-  --tw-enter-translate-x: 13rem;
-}
-@utility slide-out-to-left-52 {
-  --tw-exit-translate-x: -13rem;
-}
-@utility slide-out-to-right-52 {
-  --tw-exit-translate-x: 13rem;
-}
+@utility fade-in    { --tw-enter-opacity: 0; }
+@utility fade-in-0  { --tw-enter-opacity: 0; }
+@utility fade-out   { --tw-exit-opacity: 0; }
+@utility fade-out-0 { --tw-exit-opacity: 0; }
+@utility zoom-in-90  { --tw-enter-scale: 0.9; }
+@utility zoom-in-95  { --tw-enter-scale: 0.95; }
+@utility zoom-out-95 { --tw-exit-scale: 0.95; }
+@utility slide-in-from-left-52  { --tw-enter-translate-x: -13rem; }
+@utility slide-in-from-right-52 { --tw-enter-translate-x: 13rem; }
+@utility slide-out-to-left-52   { --tw-exit-translate-x: -13rem; }
+@utility slide-out-to-right-52  { --tw-exit-translate-x: 13rem; }
 
 /* Navigation Menu viewport transition */
 [data-radix-navigation-menu-viewport] {

@@ -113,7 +113,7 @@ export default function Showcase() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#f6f6f6] overflow-hidden">
+    <section ref={ref} className="bg-surface overflow-hidden">
       <div className="flex">
         <div className="flex gap-3 animate-ticker-slow">
           {Array.from({ length: 6 }).map((_, i) => (

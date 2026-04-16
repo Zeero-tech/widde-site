@@ -39,7 +39,7 @@ export default function VCCta() {
         <h2 className="text-2xl md:text-4xl font-normal text-black leading-[1.2] mb-4">
           {t(`${prefix}.title`)}
         </h2>
-        <p className="text-base md:text-lg text-[#5d5d5d] leading-[1.6] mb-8">
+        <p className="text-base md:text-lg text-text-muted leading-relaxed mb-8">
           {t(`${prefix}.description`)}
         </p>
         <div className="flex flex-col items-stretch sm:flex-row sm:items-center justify-center gap-3">

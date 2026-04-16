@@ -5,7 +5,7 @@ import AnimatedButton from "./AnimatedButton";
 export default function DemoSection() {
   const { t } = useTranslation();
   return (
-    <section id="demo2" className="bg-[#e5e5e5] py-10 md:py-16">
+    <section id="demo2" className="bg-surface-dark py-10 md:py-16">
       <div className="max-w-screen-xl mx-auto px-3 md:px-2">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
           {/* Video */}
@@ -23,14 +23,14 @@ export default function DemoSection() {
           {/* Text */}
           <div className="w-full md:w-[42%] flex flex-col">
             <div className="mb-4">
-              <span className="block text-xs md:text-base font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-3">
+              <span className="block text-xs md:text-base font-bold text-text-muted uppercase tracking-[2px] mb-3">
                 Conheça
               </span>
               <h2 className="text-2xl md:text-4xl font-normal text-black leading-[1.25]">
                 {t("demo.heading")}
               </h2>
             </div>
-            <p className="text-base md:text-lg text-[#5d5d5d] leading-[1.6] mb-6 max-w-[440px]">
+            <p className="text-base md:text-lg text-text-muted leading-relaxed mb-6 max-w-[440px]">
               {t(
                 "demo.description",
                 "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca."
