@@ -23,8 +23,15 @@ function splitToSpans(text: string) {
 }
 
 export default function AnimatedButton({ href, children, className = '', style, onClick }: AnimatedButtonProps) {
+  const isExternal = href.startsWith('http://') || href.startsWith('https://')
   return (
-    <a href={href} className={`btn-animate-chars ${className}`} onClick={onClick} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style }}>
+    <a
+      href={href}
+      className={`btn-animate-chars ${className}`}
+      onClick={onClick}
+      style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style }}
+      {...(isExternal ? { target: '_self', rel: 'external' } : {})}
+    >
       <span data-button-animate-chars="" className="btn-animate-chars__text">
         {splitToSpans(children)}
       </span>

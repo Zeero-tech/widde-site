@@ -10,6 +10,7 @@ interface LetterButtonProps {
 export default function LetterButton({ href, children, className = '', onClick }: LetterButtonProps) {
   const letters = children.split('')
   const letterRefs = useRef<HTMLSpanElement[]>([])
+  const isExternal = href.startsWith('http://') || href.startsWith('https://')
 
   const animate = useCallback((direction: 'in' | 'out') => {
     letterRefs.current.forEach((span, i) => {
@@ -26,6 +27,7 @@ export default function LetterButton({ href, children, className = '', onClick }
       onMouseEnter={() => animate('out')}
       onMouseLeave={() => animate('in')}
       className={`inline-flex items-center no-underline ${className}`}
+      {...(isExternal ? { target: '_self', rel: 'external' } : {})}
     >
       {letters.map((char, i) => (
         <span key={i} style={{ display: 'inline-block', overflow: 'hidden', height: '1.2em', verticalAlign: 'middle' }}>
