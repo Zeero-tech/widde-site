@@ -1,9 +1,23 @@
+import { useEffect, useRef } from "react";
 import { integrations } from "@/data/integrations";
 import { useTranslation } from "react-i18next";
 
 export default function Integrations() {
   const { t } = useTranslation();
   const doubled = [...integrations, ...integrations];
+  const tickerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = tickerRef.current;
+    if (!el) return;
+    el.style.animationPlayState = "paused";
+    const observer = new IntersectionObserver(
+      ([entry]) => { el.style.animationPlayState = entry.isIntersecting ? "running" : "paused"; },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -23,7 +37,7 @@ export default function Integrations() {
         className="overflow-hidden md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
         aria-label={t("integrations.ariaLabel")}
       >
-        <div className="flex gap-[10px] animate-scroll-logos-fast md:animate-scroll-logos">
+        <div ref={tickerRef} className="flex gap-[10px] animate-scroll-logos-fast md:animate-scroll-logos">
           {doubled.map((logo, i) => (
             <div
               key={i}

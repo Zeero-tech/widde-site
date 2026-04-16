@@ -15,9 +15,21 @@ function useIsMobile() {
 }
 
 export default function LogoTicker() {
-  const [paused, setPaused] = useState(false);
+  const [paused, setPaused] = useState(true); // start paused until visible
   const openCards = useRef(0);
   const isMobile = useIsMobile();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setPaused(false); },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   function onEnter() {
     openCards.current += 1;
@@ -39,6 +51,7 @@ export default function LogoTicker() {
 
   return (
     <section
+      ref={sectionRef}
       className="bg-[#f6f6f6] py-7 overflow-hidden border-t border-b border-[#E9E9E9]"
       aria-label="Marcas que usam Widde"
     >

@@ -110,6 +110,7 @@ export default function Hero() {
                 muted
                 loop
                 playsInline
+                preload="none"
               >
                 <source
                   src="/Video-inicio-site.mp4"

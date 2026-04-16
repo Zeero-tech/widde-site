@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { showcaseVideos } from "@/data/showcase";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(false);
@@ -14,7 +17,6 @@ function useIsMobile() {
   return mobile;
 }
 
-// Retorna src da lista pelo índice, voltando ao início se necessário
 function pick(list: string[], index: number): string {
   if (!list.length) return '';
   return list[index % list.length];
@@ -27,9 +29,9 @@ type BlockItem = {
 }
 
 function buildItems(isMobile: boolean, blockIndex: number): BlockItem[] {
-  const l = blockIndex // large index
-  const s = blockIndex * 5 // small index base — 5 slots por bloco
-  const m = blockIndex * 2 // medium index base — 2 slots por bloco
+  const l = blockIndex
+  const s = blockIndex * 5
+  const m = blockIndex * 2
 
   if (isMobile) {
     return [
@@ -86,7 +88,7 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="none"
                 onLoadedMetadata={(e) => { (e.currentTarget as HTMLVideoElement).currentTime = 5; }}
               />
           )}
@@ -98,24 +100,42 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
 
 export default function Showcase() {
   const ref = useRef<HTMLElement>(null);
+  const tickerRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
 
   const colSize = isMobile ? 150 : 280;
   const rowSize = isMobile ? 100 : 180;
 
+  // Reveal animation via ScrollTrigger
   useEffect(() => {
     if (!ref.current) return;
     gsap.fromTo(
       ref.current,
       { scale: 0.98, opacity: 0, filter: "blur(3px)" },
-      { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.7, ease: "power1.out" }
+      {
+        scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.7, ease: "power1.out",
+        scrollTrigger: { trigger: ref.current, start: "top 96%", once: true },
+      }
     );
+  }, []);
+
+  // Pause ticker animation until visible
+  useEffect(() => {
+    const el = tickerRef.current;
+    if (!el) return;
+    el.style.animationPlayState = "paused";
+    const observer = new IntersectionObserver(
+      ([entry]) => { el.style.animationPlayState = entry.isIntersecting ? "running" : "paused"; },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section ref={ref} className="bg-surface overflow-hidden">
       <div className="flex">
-        <div className="flex gap-3 animate-ticker-slow">
+        <div ref={tickerRef} className="flex gap-3 animate-ticker-slow">
           {Array.from({ length: 6 }).map((_, i) => (
             <BoardBlock key={i} offset={i} colSize={colSize} rowSize={rowSize} isMobile={isMobile} />
           ))}

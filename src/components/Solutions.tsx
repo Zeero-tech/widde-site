@@ -146,6 +146,7 @@ export default function Solutions() {
               muted
               loop
               playsInline
+              preload="none"
             >
               <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
@@ -230,6 +231,7 @@ export default function Solutions() {
               muted
               loop
               playsInline
+              preload="none"
               className="absolute inset-0 w-full h-full object-cover object-right"
             >
               <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
