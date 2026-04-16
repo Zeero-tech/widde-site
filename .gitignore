@@ -76,3 +76,6 @@ dist/
 
 .omc
 .claude
+
+# Original unoptimized videos (backup)
+public/video-originals/

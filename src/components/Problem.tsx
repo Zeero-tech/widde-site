@@ -4,9 +4,9 @@ import AnimatedButton from "./AnimatedButton";
 import CountUp from "./CountUp";
 
 const videos = [
-  "/problem-video/7679832-uhd_4096_2160_25fps.mp4",
-  "/problem-video/7680111-uhd_4096_2160_25fps.mp4",
-  "/problem-video/8126811-hd_1920_1080_25fps.mp4",
+  { mp4: "/problem-video/7679832-uhd_4096_2160_25fps.mp4", webm: "/problem-video/7679832-uhd_4096_2160_25fps.webm" },
+  { mp4: "/problem-video/7680111-uhd_4096_2160_25fps.mp4", webm: "/problem-video/7680111-uhd_4096_2160_25fps.webm" },
+  { mp4: "/problem-video/8126811-hd_1920_1080_25fps.mp4", webm: "/problem-video/8126811-hd_1920_1080_25fps.webm" },
 ];
 
 const DISPLAY_DURATION = 6000; // ms each video stays visible
@@ -52,7 +52,8 @@ export default function Problem() {
         preload="none"
         style={{ opacity: 1, transition: `opacity ${FADE_DURATION}ms ease` }}
       >
-        <source src={videos[current]} type="video/mp4" />
+        <source src={videos[current].webm} type="video/webm" />
+        <source src={videos[current].mp4} type="video/mp4" />
       </video>
 
       {/* Next video fading in */}
@@ -70,7 +71,8 @@ export default function Problem() {
             transition: `opacity ${FADE_DURATION}ms ease`,
           }}
         >
-          <source src={videos[next]} type="video/mp4" />
+          <source src={videos[next].webm} type="video/webm" />
+          <source src={videos[next].mp4} type="video/mp4" />
         </video>
       )}
 
