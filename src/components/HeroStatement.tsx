@@ -43,6 +43,12 @@ export default function HeroStatement() {
     }
   }
   useEffect(() => {
+    const handler = () => handleMapOpen(true)
+    window.addEventListener('open-vtex-map', handler)
+    return () => window.removeEventListener('open-vtex-map', handler)
+  }, [])
+
+  useEffect(() => {
     // Card inteiro: blur + opacity ao entrar na tela
     gsap.fromTo(
       cardRef.current,

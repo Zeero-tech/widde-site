@@ -146,9 +146,10 @@ export default function VCHero() {
               />
               <img
                 className="w-full h-full object-cover object-top"
-                src="/vc-hero-preview.png"
+                src="/root/vc-hero-preview.png"
                 alt=""
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
           </div>

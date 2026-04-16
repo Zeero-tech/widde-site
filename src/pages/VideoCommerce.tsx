@@ -35,7 +35,7 @@ export default function VideoCommerce() {
       <Nav />
       <VCHero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
-      <Suspense>
+      <Suspense fallback={null}>
         <main className="max-w-screen-xl mx-auto px-3 md:px-2">
           <div data-reveal className="pb-15 md:pb-30"><VCWhy /></div>
           <div data-reveal className="pb-20 md:pb-30"><VCFormats /></div>
