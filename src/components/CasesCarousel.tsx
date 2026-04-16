@@ -1,24 +1,21 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { cases } from "@/data/cases";
 import SectionTitle from "./SectionTitle";
 
 export default function CasesCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  function scroll(direction: "left" | "right") {
-    if (!scrollRef.current) return;
-    const amount = scrollRef.current.clientWidth * 0.6;
-    scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
-  }
-
-  function handleWheel(e: React.WheelEvent<HTMLDivElement>) {
-    if (!scrollRef.current) return;
-    // If there's horizontal delta (native touchpad swipe), use it directly
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-    // Otherwise redirect vertical scroll to horizontal
-    e.preventDefault();
-    scrollRef.current.scrollLeft += e.deltaY;
-  }
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    function handleWheel(e: WheelEvent) {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      el!.scrollLeft += e.deltaY;
+    }
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el.removeEventListener("wheel", handleWheel);
+  }, []);
 
   return (
     <section className="max-w-screen-xl mx-auto px-2 -mr-5 md:mr-0 pr-0 md:pr-2">
@@ -42,8 +39,7 @@ export default function CasesCarousel() {
 
         <div
           ref={scrollRef}
-          onWheel={handleWheel}
-          className="flex flex-1 gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+className="flex flex-1 gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {cases.map((c) => (
