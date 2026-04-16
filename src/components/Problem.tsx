@@ -12,7 +12,7 @@ const videos = [
 const DISPLAY_DURATION = 6000; // ms each video stays visible
 const FADE_DURATION = 1000;    // ms crossfade
 
-export default function Problem2() {
+export default function Problem() {
   const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [next, setNext] = useState<number | null>(null);

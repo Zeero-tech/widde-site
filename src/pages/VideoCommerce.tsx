@@ -9,8 +9,8 @@ import VCWhy from '@/components/VideoCommerce/VCWhy'
 import VCFormats from '@/components/VideoCommerce/VCFormats'
 import VCFeatures from '@/components/VideoCommerce/VCFeatures'
 import VCQuote from '@/components/VideoCommerce/VCQuote'
-import LogoTicker2 from '@/components/LogoTicker2'
-import Footer3 from '@/components/Footer3'
+import LogoTicker from '@/components/LogoTicker'
+import Footer from '@/components/Footer'
 import CasesCarousel from '@/components/CasesCarousel'
 
 export default function VideoCommerce() {
@@ -29,7 +29,7 @@ export default function VideoCommerce() {
       </Helmet>
       <Nav />
       <VCHero />
-      <div className="pb-15 md:pb-30"><LogoTicker2 /></div>
+      <div className="pb-15 md:pb-30"><LogoTicker /></div>
       <main className="max-w-screen-xl mx-auto px-3 md:px-2">
         <div data-reveal className="pb-15 md:pb-30"><VCWhy /></div>
         <div data-reveal className="pb-20 md:pb-30"><VCFormats /></div>
@@ -41,7 +41,7 @@ export default function VideoCommerce() {
         <div data-reveal className="pb-15 md:pb-30"><Integrations /></div>
       </main>
       <VCCta />
-      <Footer3 />
+      <Footer />
     </>
   )
 }

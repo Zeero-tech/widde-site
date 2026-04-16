@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useTranslation } from "react-i18next";
 import HighlightText from "./ui/highlight-text";
 
-export default function Newsletter2() {
+export default function Newsletter() {
   const { t } = useTranslation();
   const circleRef = useRef<HTMLImageElement>(null);
   const [hovered, setHovered] = useState(false);

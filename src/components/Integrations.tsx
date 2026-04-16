@@ -1,9 +1,9 @@
-import { integracoes } from "@/data/integracoes";
+import { integrations } from "@/data/integrations";
 import { useTranslation } from "react-i18next";
 
 export default function Integrations() {
   const { t } = useTranslation();
-  const doubled = [...integracoes, ...integracoes];
+  const doubled = [...integrations, ...integrations];
 
   return (
     <section

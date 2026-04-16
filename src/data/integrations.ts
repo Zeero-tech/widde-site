@@ -1,6 +1,6 @@
 import type { IntegrationLogo } from '@/types'
 
-export const integracoes: IntegrationLogo[] = [
+export const integrations: IntegrationLogo[] = [
   { src: '/plataformas/Nuvemshop-logo-branco.webp', alt: 'Nuvemshop', height: 42 },
   { src: '/plataformas/tray logo branco.webp', alt: 'Tray', height: 33 },
   { src: '/plataformas/logo-mono-white_shopify.svg', alt: 'Shopify', height: 25 },

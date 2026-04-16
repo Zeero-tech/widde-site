@@ -27,7 +27,7 @@ function MapImage() {
   );
 }
 
-export default function Hero2() {
+export default function HeroStatement() {
   const cardRef = useRef<HTMLDivElement>(null);
   const badgeBgRef = useRef<HTMLSpanElement>(null);
   const [mapOpen, setMapOpen] = useState(false);

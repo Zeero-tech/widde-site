@@ -14,7 +14,7 @@ function useIsMobile() {
   return mobile;
 }
 
-export default function LogoTicker2() {
+export default function LogoTicker() {
   const [paused, setPaused] = useState(false);
   const openCards = useRef(0);
   const isMobile = useIsMobile();

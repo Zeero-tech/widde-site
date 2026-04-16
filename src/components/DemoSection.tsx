@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import MuxPlayer from "@mux/mux-player-react";
 import AnimatedButton from "./AnimatedButton";
 
-export default function Demo2() {
+export default function DemoSection() {
   const { t } = useTranslation();
   return (
     <section id="demo2" className="bg-[#e5e5e5] py-10 md:py-16">

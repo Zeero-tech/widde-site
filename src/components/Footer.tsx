@@ -45,7 +45,7 @@ const footerColumns = [
   },
 ];
 
-export default function Footer3() {
+export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
 
