@@ -4,7 +4,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Grupo Hope",
     url: "https://www.hoperesort.com.br/",
-    img: "/logos/grupo-hope.png",
+    img: "/logos/grupo-hope.webp",
     width: 80,
     platform: "Vtex",
     segment: "Moda Íntima",
@@ -22,7 +22,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Boca Rosa",
     url: "https://www.bocarosa.com.br",
-    img: "/logos/logo_bocarosa_preto.png",
+    img: "/logos/logo_bocarosa_preto.webp",
     width: 150,
     platform: "Shopify",
     segment: "Beleza",
@@ -31,7 +31,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Bagaggio",
     url: "https://www.bagaggio.com.br/",
-    img: "/logos/bagaggio-logo-preto.png",
+    img: "/logos/bagaggio-logo-preto.webp",
     width: 135,
     platform: "Vtex",
     segment: "Malas e Acessórios de Viagem",
@@ -40,7 +40,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Dermage",
     url: "https://www.dermage.com.br/",
-    img: "/logos/LOGO_DERMAGE_PRETO.png",
+    img: "/logos/LOGO_DERMAGE_PRETO.webp",
     width: 110,
     platform: "Vtex",
     segment: "Skincare",
@@ -94,7 +94,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Cléa Store",
     url: "https://www.cleastore.com.br/",
-    img: "/logos/clea-store.png",
+    img: "/logos/clea-store.webp",
     width: 130,
     platform: "Vnda",
     segment: "Moda Feminina",
@@ -103,7 +103,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Mascavo",
     url: "https://www.mascavo.com.br/",
-    img: "/logos/mascavo.png",
+    img: "/logos/mascavo.webp",
     width: 130,
     platform: "Vtex",
     segment: "Beleza e Maquiagem",
@@ -130,7 +130,7 @@ export const tickerLogos: TickerLogo[] = [
   {
     name: "Elements",
     url: "https://www.elementsbr.com.br/",
-    img: "/logos/elements.png",
+    img: "/logos/elements.webp",
     width: 180,
     platform: "Shopify",
     segment: "Moda",

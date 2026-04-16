@@ -22,11 +22,11 @@ const v4 = '/show-cases/Majesté (1)-web.mp4'
 const v5 = '/show-cases/Mamô Carrossel (sem zoom)-web.mp4'
 
 // Imagens
-const i1 = '/show-cases/Any Any.png'
-const i2 = '/show-cases/Boca Rosa.png'
-const i3 = '/show-cases/Elements.png'
-const i4 = '/show-cases/Lovlity.png'
-const i5 = '/show-cases/Mascavo.png'
+const i1 = '/show-cases/Any Any.webp'
+const i2 = '/show-cases/Boca Rosa.webp'
+const i3 = '/show-cases/Elements.webp'
+const i4 = '/show-cases/Lovlity.webp'
+const i5 = '/show-cases/Mascavo.webp'
 
 export const showcaseVideos: ShowcaseVideos = {
   desktop_large: [v1, v4, v2, v3, v5],
