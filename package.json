@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
     "build:no-prerender": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize:videos": "bash scripts/optimize-videos.sh"
   },
   "devDependencies": {
     "vite": "^5.4.10"

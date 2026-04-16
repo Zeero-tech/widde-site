@@ -112,10 +112,8 @@ export default function Hero() {
                 playsInline
                 preload="none"
               >
-                <source
-                  src="/Video-inicio-site.mp4"
-                  type="video/mp4"
-                />
+                <source src="/Video-inicio-site.webm" type="video/webm" />
+                <source src="/Video-inicio-site.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

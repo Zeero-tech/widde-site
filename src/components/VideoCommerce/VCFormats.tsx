@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "@/components/SectionTitle";
 import { vcFormatVideos } from "@/data/vcFormats";
 
-function FormatThumb({ src }: { src: string }) {
+function FormatThumb({ src, webm }: { src: string; webm: string }) {
   if (!src) {
     return (
       <div className="h-[190px] flex flex-col items-center justify-center bg-[#f0f0f0] gap-2">
@@ -18,13 +18,15 @@ function FormatThumb({ src }: { src: string }) {
   }
   return (
     <video
-      src={src}
       className="w-full h-[190px] object-cover"
       autoPlay
       muted
       loop
       playsInline
-    />
+    >
+      {webm && <source src={webm} type="video/webm" />}
+      <source src={src} type="video/mp4" />
+    </video>
   );
 }
 
@@ -84,14 +86,18 @@ export default function VCFormats() {
           <div className="absolute inset-[6px] rounded-[30px] overflow-hidden z-0">
             <video
               key={vcFormatVideos[current.videoIdx]?.src}
-              src={vcFormatVideos[current.videoIdx]?.src ?? ""}
               className="w-full h-full object-cover"
               autoPlay
               muted
               loop
               playsInline
               preload="none"
-            />
+            >
+              {vcFormatVideos[current.videoIdx]?.webm && (
+                <source src={vcFormatVideos[current.videoIdx].webm} type="video/webm" />
+              )}
+              <source src={vcFormatVideos[current.videoIdx]?.src ?? ""} type="video/mp4" />
+            </video>
           </div>
           {/* Phone frame */}
           <div className="absolute inset-0 rounded-[36px] border-[6px] border-[#1a1a1a] shadow-[0_32px_80px_rgba(0,0,0,0.55)] z-10 pointer-events-none" />
@@ -163,14 +169,18 @@ export default function VCFormats() {
           <div className="absolute inset-[8px] rounded-[28px] overflow-hidden z-0">
             <video
               key={vcFormatVideos[current.videoIdx]?.src}
-              src={vcFormatVideos[current.videoIdx]?.src ?? ""}
               className="w-full h-full object-cover"
               autoPlay
               muted
               loop
               playsInline
               preload="none"
-            />
+            >
+              {vcFormatVideos[current.videoIdx]?.webm && (
+                <source src={vcFormatVideos[current.videoIdx].webm} type="video/webm" />
+              )}
+              <source src={vcFormatVideos[current.videoIdx]?.src ?? ""} type="video/mp4" />
+            </video>
           </div>
           {/* Phone frame */}
           <div className="absolute inset-0 rounded-[36px] border-[8px] border-[#1a1a1a] shadow-[0_32px_80px_rgba(0,0,0,0.75)] z-10 pointer-events-none" />

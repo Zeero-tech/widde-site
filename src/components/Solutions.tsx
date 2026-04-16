@@ -28,6 +28,7 @@ export default function Solutions() {
             aria-hidden="true"
           >
             <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
+              <source src="/solution/Ferracini Carrossel aberto.webm" type="video/webm" />
               <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
           </div>
@@ -70,6 +71,7 @@ export default function Solutions() {
             aria-hidden="true"
           >
             <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
+              <source src="/solution/Live Commerce - Desktop.webm" type="video/webm" />
               <source src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>
@@ -108,6 +110,7 @@ export default function Solutions() {
               autoPlay muted loop playsInline
               className="absolute inset-0 w-full h-full object-cover object-right"
             >
+              <source src="/solution/Provador IA Chart.webm" type="video/webm" />
               <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
             </video>
           </div>
@@ -148,6 +151,7 @@ export default function Solutions() {
               playsInline
               preload="none"
             >
+              <source src="/solution/Ferracini Carrossel aberto.webm" type="video/webm" />
               <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
           </div>
@@ -190,6 +194,7 @@ export default function Solutions() {
             aria-hidden="true"
           >
             <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
+              <source src="/solution/Live Commerce - Desktop.webm" type="video/webm" />
               <source src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>
@@ -234,6 +239,7 @@ export default function Solutions() {
               preload="none"
               className="absolute inset-0 w-full h-full object-cover object-right"
             >
+              <source src="/solution/Provador IA Chart.webm" type="video/webm" />
               <source src="/solution/Provador IA Chart.mp4" type="video/mp4" />
             </video>
           </div>
