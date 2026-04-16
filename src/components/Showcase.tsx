@@ -1,7 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Component, type ReactNode } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { showcaseVideos } from "@/data/showcase";
+
+class ErrorBoundary extends Component<{ children: ReactNode }, { error: boolean }> {
+  state = { error: false };
+  static getDerivedStateFromError() { return { error: true }; }
+  render() { return this.state.error ? null : this.props.children; }
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,6 +61,7 @@ function buildItems(isMobile: boolean, blockIndex: number): BlockItem[] {
 
 function VideoItem({ src }: { src: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -75,6 +82,8 @@ function VideoItem({ src }: { src: string }) {
     return () => observer.disconnect();
   }, []);
 
+  if (failed) return null;
+
   return (
     <video
       ref={videoRef}
@@ -84,6 +93,7 @@ function VideoItem({ src }: { src: string }) {
       loop
       playsInline
       preload="none"
+      onError={() => setFailed(true)}
       onLoadedMetadata={(e) => { (e.currentTarget as HTMLVideoElement).currentTime = 5; }}
     />
   );
@@ -125,7 +135,7 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
   );
 }
 
-export default function Showcase() {
+function ShowcaseInner() {
   const ref = useRef<HTMLElement>(null);
   const tickerRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
@@ -170,4 +180,8 @@ export default function Showcase() {
       </div>
     </section>
   );
+}
+
+export default function Showcase() {
+  return <ErrorBoundary><ShowcaseInner /></ErrorBoundary>;
 }
