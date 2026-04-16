@@ -57,7 +57,6 @@ export default function Home() {
         id="vtex-day-2025"
         content={<>🎉 Estamos no <strong>VTEX Day!</strong> Venha nos visitar e conhecer nossas soluções de Video Commerce.</>}
         ctaLabel="Saiba mais"
-        ctaHref="https://widde.io/contato-vendas"
       />
       <Hero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
