@@ -4,7 +4,7 @@ export type VCFormatVideo = {
 }
 
 // Um vídeo por formato, na mesma ordem do VCFormats.tsx:
-// Stories | Carousel | Highlights | Product Highlights | Explore
+// Stories | Carousel | Highlights | Product Highlights | Explore.
 export const vcFormatVideos: VCFormatVideo[] = [
   { src: '/formats/Story.mp4', webm: '/formats/Story.webm' },
   { src: '/formats/Carrossel.mp4', webm: '/formats/Carrossel.webm' },
