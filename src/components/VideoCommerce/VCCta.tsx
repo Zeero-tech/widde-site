@@ -36,7 +36,7 @@ export default function VCCta() {
         <div className="hidden md:flex justify-center mb-4">
           <SectionTitle label={t(`${prefix}.label`)} />
         </div>
-        <h2 className="text-2xl md:text-4xl font-black text-black leading-[1.2] mb-4">
+        <h2 className="text-2xl md:text-4xl font-normal text-black leading-[1.2] mb-4">
           {t(`${prefix}.title`)}
         </h2>
         <p className="text-base md:text-lg text-[#5d5d5d] leading-[1.6] mb-8">
@@ -45,7 +45,7 @@ export default function VCCta() {
         <div className="flex flex-col items-stretch sm:flex-row sm:items-center justify-center gap-3">
           <AnimatedButton
             href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-            className={`inline-block text-center text-white font-bold text-lg md:text-lg px-7 py-[13px] rounded-full no-underline ${isVCPage ? "bg-black" : "bg-brand"}`}
+            className="inline-block text-center text-white font-bold text-lg md:text-lg px-7 py-[13px] rounded-full no-underline bg-black"
           >
             {t(`${prefix}.ctaSales`)}
           </AnimatedButton>
