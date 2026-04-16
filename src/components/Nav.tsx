@@ -390,9 +390,9 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
-                      href="https://widde.io/cases"
+                      href="/cases"
                       onClick={(e) =>
-                        handleNavClick("https://widde.io/cases", e)
+                        handleNavClick("/cases", e)
                       }
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -426,9 +426,9 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
-                      href="https://widde.io/blog"
+                      href="/blog"
                       onClick={(e) =>
-                        handleNavClick("https://widde.io/blog", e)
+                        handleNavClick("/blog", e)
                       }
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -513,8 +513,8 @@ export default function Nav() {
                   </div>
                 )}
                 <a
-                  href="https://widde.io/cases"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases", e); }}
+                  href="/cases"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("/cases", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.results")}
@@ -527,8 +527,8 @@ export default function Nav() {
                   {t("nav.plans")}
                 </a>
                 <a
-                  href="https://widde.io/blog"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog", e); }}
+                  href="/blog"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("/blog", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   {t("nav.blog")}

@@ -16,7 +16,7 @@ const footerColumns = [
   {
     title: "Empresa",
     links: [
-      { label: "Sobre nós", href: "https://widde.io/quem-somos?utm_medium=cpc&utm_source=google&utm_campaign=01" },
+      { label: "Sobre nós", href: "/quem-somos" },
       { label: "Carreiras", href: "https://carreirawidde.lovable.app/" },
     ],
   },
