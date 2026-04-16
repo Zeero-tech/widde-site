@@ -1,8 +1,11 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import AnimatedButton from "@/components/AnimatedButton";
 
 export default function VCQuote() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="bg-[#0A0A0A] rounded-[12px] md:rounded-[20px] px-6 py-6 md:px-16 md:py-16 flex flex-col md:flex-row items-center gap-10 md:gap-40">
@@ -18,6 +21,7 @@ export default function VCQuote() {
             muted
             loop
             playsInline
+            preload="none"
             poster="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.png"
           >
             <source
@@ -42,7 +46,8 @@ export default function VCQuote() {
         </div>
         <div className="text-base md:text-lg text-white/50 mb-4 md:mb-6">{t("vc.quote.company")}</div>
         <AnimatedButton
-          href="https://widde.io/demo"
+          href="/?scrollTo=demo2"
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); navigate("/?scrollTo=demo2"); }}
           className="inline-block w-full md:w-auto text-center bg-brand text-white font-bold text-lg md:text-lg px-6 py-3 rounded-full no-underline hover:opacity-90 transition-opacity"
         >
           {t("vc.quote.cta")}

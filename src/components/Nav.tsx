@@ -283,6 +283,10 @@ export default function Nav() {
     if (href.includes("http")) return;
     e.preventDefault();
     setMobileOpen(false);
+    if (location.pathname !== "/") {
+      navigate(`/?scrollTo=${href.replace("#", "")}`);
+      return;
+    }
     getLenis().scrollTo(href, {
       duration: 3,
       offset: -50,

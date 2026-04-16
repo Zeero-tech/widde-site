@@ -49,6 +49,7 @@ export default function Problem2() {
         muted
         loop
         playsInline
+        preload="none"
         style={{ opacity: 1, transition: `opacity ${FADE_DURATION}ms ease` }}
       >
         <source src={videos[current]} type="video/mp4" />
@@ -63,6 +64,7 @@ export default function Problem2() {
           muted
           loop
           playsInline
+          preload="none"
           style={{
             opacity: fading ? 1 : 0,
             transition: `opacity ${FADE_DURATION}ms ease`,

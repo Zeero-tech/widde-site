@@ -21,6 +21,7 @@ function MapImage() {
         alt="Como chegar no estande da Widde no VTEX Day"
         className="w-full h-auto block rounded-lg"
         style={{ maxHeight: "60vh", objectFit: "contain" }}
+        loading="lazy"
       />
     </div>
   );

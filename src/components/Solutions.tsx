@@ -27,7 +27,7 @@ export default function Solutions() {
             className="flex-shrink-0 rounded-2xl overflow-hidden h-[230px]"
             aria-hidden="true"
           >
-            <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
+            <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
               <source src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
           </div>
@@ -69,7 +69,7 @@ export default function Solutions() {
             className="flex-shrink-0 rounded-2xl overflow-hidden h-[230px]"
             aria-hidden="true"
           >
-            <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
+            <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
               <source src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>
@@ -188,7 +188,7 @@ export default function Solutions() {
             className="flex-1 flex-shrink-0 rounded-2xl overflow-hidden md:min-h-96"
             aria-hidden="true"
           >
-            <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
+            <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="none">
               <source src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>

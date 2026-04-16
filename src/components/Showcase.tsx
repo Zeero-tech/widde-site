@@ -79,7 +79,7 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
           {item.src && (
             item.src.match(/\.(png|jpg|jpeg|webp)$/i)
               ? <img className="absolute inset-0 w-full h-full object-cover" src={item.src} alt="" loading="lazy" />
-              : <video className="absolute inset-0 w-full h-full object-cover" src={item.src} autoPlay muted loop playsInline />
+              : <video className="absolute inset-0 w-full h-full object-cover" src={item.src} autoPlay muted loop playsInline preload="none" />
           )}
         </div>
       ))}

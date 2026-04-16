@@ -148,6 +148,7 @@ export default function VCHero() {
                 className="w-full h-full object-cover object-top"
                 src="/vc-hero-preview.png"
                 alt=""
+                loading="lazy"
               />
             </div>
           </div>

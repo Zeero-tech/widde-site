@@ -66,6 +66,7 @@ export default function LogoTicker2() {
                       style={
                         logo.width ? { width: logo.width, height: "auto" } : {}
                       }
+                      loading="lazy"
                     />
                   ) : (
                     <span className="font-black text-[#bbb] uppercase tracking-[1px]">
@@ -89,6 +90,7 @@ export default function LogoTicker2() {
                         muted
                         loop
                         playsInline
+                        preload="none"
                       >
                         <source src={logo.demoUrl} type="video/mp4" />
                       </video>

@@ -11,22 +11,13 @@ import Hero2 from "@/components/Hero2";
 import Showcase from "@/components/Showcase";
 import LogoTicker2 from "@/components/LogoTicker2";
 import Solutions from "@/components/Solutions";
-import Demo from "@/components/Demo";
 import Demo2 from "@/components/Demo2";
-import Problem from "@/components/Problem";
 import Problem2 from "@/components/Problem2";
-import Cases from "@/components/Cases";
 import CasesCarousel from "@/components/CasesCarousel";
 import Integrations from "@/components/Integrations";
 import Plans from "@/components/Plans";
 import Blog from "@/components/Blog";
-import Blog2 from "@/components/Blog2";
-import Blog3 from "@/components/Blog3";
-import CtaFullWidth from "@/components/CtaFullWidth";
-import Newsletter from "@/components/Newsletter";
 import Newsletter2 from "@/components/Newsletter2";
-import Footer from "@/components/Footer";
-import Footer2 from "@/components/Footer2";
 import Footer3 from "@/components/Footer3";
 import VideoCommerce from "@/pages/VideoCommerce";
 import VCCta from "./components/VideoCommerce/VCCta";
@@ -59,7 +50,6 @@ function Home() {
       </Helmet>
       <Nav />
       <Hero />
-      {/* <LogoTicker /> */}
       <div className="pb-15 md:pb-30"><LogoTicker2 /></div>
       <div className="pb-15 md:pb-30"><Hero2 /></div>
       <div className="pb-15 md:pb-30"><Showcase /></div>
@@ -68,20 +58,13 @@ function Home() {
           <Solutions />
         </div>
       </main>
-      {/* <div className="pb-15 md:pb-30"><Demo /></div> */}
       <div data-reveal className="pb-15 md:pb-30">
         <Demo2 />
       </div>
       <main className="max-w-screen-xl mx-auto px-3 md:px-2">
-        {/* <div data-reveal className="pb-15 md:pb-30">
-          <Problem />
-        </div> */}
         <div data-reveal className="pb-15 md:pb-30">
           <Problem2 />
         </div>
-        {/* <div data-reveal className="pb-15 md:pb-30">
-          <Cases />
-        </div> */}
         <div data-reveal className="pb-15 md:pb-30">
           <CasesCarousel />
         </div>
@@ -94,18 +77,9 @@ function Home() {
         <div data-reveal className="pb-15 md:pb-30">
           <Blog />
         </div>
-        {/* <div data-reveal className="pb-15 md:pb-30">
-          <Blog2 />
-        </div> */}
-        {/* <div data-reveal className="pb-15 md:pb-30">
-          <Blog3 />
-        </div> */}
       </main>
       <VCCta />
-      {/* <Newsletter /> */}
       <div className="pb-15 md:pb-30 pt-15 md:pt-20 bg-[#0A0A0A]"><Newsletter2 /></div>
-      {/* <Footer /> */}
-      {/* <Footer2 /> */}
       <Footer3 />
     </>
   );

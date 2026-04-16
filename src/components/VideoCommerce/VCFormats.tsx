@@ -90,6 +90,7 @@ export default function VCFormats() {
               muted
               loop
               playsInline
+              preload="none"
             />
           </div>
           {/* Phone frame */}
@@ -168,6 +169,7 @@ export default function VCFormats() {
               muted
               loop
               playsInline
+              preload="none"
             />
           </div>
           {/* Phone frame */}
