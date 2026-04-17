@@ -99,9 +99,6 @@ export default function Problem() {
 
       {/* Left */}
       <div className="relative z-10 flex-[2.5]">
-        <span className="block text-xs md:text-base font-normal text-white/50 uppercase tracking-[2px] mb-6">
-          {t("problem.label")}
-        </span>
         <h2
           id="problema2-heading"
           className="text-2xl md:text-4xl font-normal text-white leading-[1.25] mb-6 md:mb-7"
