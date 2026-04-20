@@ -67,7 +67,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
-      <div className="pb-15 md:pb-30"><HeroStatement /></div>
+      {/* <div className="pb-15 md:pb-30"><HeroStatement /></div> */}
       <Suspense><div className="pb-15 md:pb-30"><Showcase /></div></Suspense>
       <main className="max-w-screen-xl mx-auto px-3 md:px-2">
         <Suspense><div data-reveal className="pb-15 md:pb-30"><Solutions /></div></Suspense>
