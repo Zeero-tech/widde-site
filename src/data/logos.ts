@@ -133,7 +133,7 @@ export const tickerLogos: TickerLogo[] = [
     img: "/logos/elements.webp",
     width: 180,
     platform: "Shopify",
-    segment: "Moda",
+    segment: "Móveis",
     demoUrl: "https://videos.widde.io/widde-bucket-sp/8ed005b6-40a1-407f-b565-ec0ecd78366b/videos/cd0e60b6-1a6c-49f1-9b71-714f543c9ff7-1763501631991-6933601/video.mp4",
   },
 ];
