@@ -7,7 +7,6 @@ import { useRevealOnScroll } from '@/hooks/useRevealOnScroll'
 import Nav from '@/components/Nav'
 import VCHero from '@/components/VideoCommerce/VCHero'
 import LogoTicker from '@/components/LogoTicker'
-import Banner from '@/components/Banner'
 
 function lazyWithRetry(factory: () => Promise<any>) {
   return lazy(() =>
@@ -46,11 +45,6 @@ export default function VideoCommerce() {
         <meta property="og:url" content="https://widde.io/video-commerce" />
       </Helmet>
       <Nav />
-      <Banner
-        id="vtex-day-2025"
-        content={<>🎉 Estamos no <strong>VTEX Day!</strong> Venha nos visitar e conhecer nossas soluções de Video Commerce.</>}
-        ctaLabel="Saiba mais"
-      />
       <VCHero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
       <main className="max-w-screen-xl mx-auto px-3 md:px-2">

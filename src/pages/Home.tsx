@@ -8,7 +8,6 @@ import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
 // Above-the-fold — eager
 import Nav from "@/components/Nav";
-import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
 import HeroStatement from "@/components/HeroStatement";
 import LogoTicker from "@/components/LogoTicker";
@@ -66,11 +65,6 @@ export default function Home() {
         <link rel="canonical" href="https://widde.io/" />
       </Helmet>
       <Nav />
-      <Banner
-        id="vtex-day-2025"
-        content={<>🎉 Estamos no <strong>VTEX Day!</strong> Venha nos visitar e conhecer nossas soluções de Video Commerce.</>}
-        ctaLabel="Saiba mais"
-      />
       <Hero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
       <div className="pb-15 md:pb-30"><HeroStatement /></div>
