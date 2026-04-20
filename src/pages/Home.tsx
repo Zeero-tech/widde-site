@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Video Commerce para E-commerce | Widde</title>
+        <title>Widde - A experiência do físico na loja on-line</title>
         <meta name="description" content="Acelere a decisão de compra do seu consumidor com Video Commerce, Live Commerce e TryOn. Plataforma líder para e-commerces no Brasil. Comece agora." />
         <link rel="canonical" href="https://widde.io/" />
       </Helmet>

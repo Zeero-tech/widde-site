@@ -9,10 +9,10 @@ const DIST = resolve(__dirname, '..', 'dist')
 const ROUTES = [
   {
     path: '/',
-    title: 'Video Commerce para E-commerce | Widde',
+    title: 'Widde - A experiência do físico na loja on-line',
     description: 'Acelere a decisão de compra do seu consumidor com Video Commerce, Live Commerce e TryOn. Plataforma líder para e-commerces no Brasil. Comece agora.',
     canonical: 'https://widde.io/',
-    ogTitle: 'Video Commerce para E-commerce | Widde',
+    ogTitle: 'Widde - A experiência do físico na loja on-line',
     ogDescription: 'Acelere a decisão de compra do seu consumidor com Video Commerce, Live Commerce e TryOn. Plataforma líder para e-commerces no Brasil.',
   },
   {
