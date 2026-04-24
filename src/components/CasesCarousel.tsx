@@ -18,7 +18,7 @@ export default function CasesCarousel() {
   }, []);
 
   return (
-    <section className="max-w-screen-xl mx-auto px-3 md:px-6 lg:px-8 xl:px-2 -mr-5 md:mr-0 pr-0 md:pr-6 lg:pr-8 xl:pr-2">
+    <section className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-2 -mr-5 md:mr-0 pr-0 md:pr-10 lg:pr-12 xl:pr-2">
       <SectionTitle
         label="Cases"
         title="Histórias de sucesso a Widde"

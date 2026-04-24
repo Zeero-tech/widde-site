@@ -66,7 +66,7 @@ export default function Newsletter() {
 
   return (
     <section
-      className="overflow-hidden bg-ink px-3 md:px-6 lg:px-8 xl:px-2"
+      className="overflow-hidden bg-ink px-5 md:px-10 lg:px-12 xl:px-2"
       aria-labelledby="newsletter2-heading"
     >
       <div
