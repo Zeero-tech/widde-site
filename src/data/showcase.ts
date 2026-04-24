@@ -15,11 +15,11 @@ export type ShowcaseVideos = {
 }
 
 // Vídeos
-const v1 = '/show-cases/Cajubrasil-web.mp4'
-const v2 = '/show-cases/Camys - Story-web.mp4'
-const v3 = '/show-cases/Ferragens floresta - Destaques de produto-web.mp4'
-const v4 = '/show-cases/Majesté (1)-web.mp4'
-const v5 = '/show-cases/Mamô Carrossel (sem zoom)-web.mp4'
+const v1 = '/show-cases/Cajubrasil-web-v2.mp4'
+const v2 = '/show-cases/Camys - Story-web-v2.mp4'
+const v3 = '/show-cases/Ferragens floresta - Destaques de produto-web-v2.mp4'
+const v4 = '/show-cases/Majesté (1)-web-v2.mp4'
+const v5 = '/show-cases/Mamô Carrossel (sem zoom)-web-v2.mp4'
 
 // Imagens
 const i1 = '/show-cases/Any Any.webp'
