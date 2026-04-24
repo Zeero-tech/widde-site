@@ -53,33 +53,33 @@ export default function Hero() {
             className="flex-1 w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-16 lg:py-20"
             style={{ justifyContent: "center" }}
           >
-            <span className="block text-sm md:text-sm font-bold text-brand uppercase tracking-[2px] mb-5 md:mb-5">
+            <span className="block text-xs sm:text-sm md:text-sm font-bold text-brand uppercase tracking-[2px] mb-4 sm:mb-5 md:mb-5">
               {t("hero.tagline")}
             </span>
-            <h1 className="text-[2.625rem] md:text-[2.5rem] lg:text-5xl font-black leading-[1.15] mb-8 md:mb-6 text-black">
+            <h1 className="text-4xl sm:text-[2.625rem] md:text-[2.5rem] lg:text-5xl font-black leading-[1.15] mb-6 sm:mb-8 md:mb-6 text-black">
               {t("hero.title")}{" "}
               <span className="text-brand">{t("hero.titleHighlight")}</span>
             </h1>
-            <p className="text-lg md:text-base lg:text-lg text-[#666] leading-[1.7] mb-3 md:mb-1 max-w-full md:max-w-[820px]">
+            <p className="text-base sm:text-lg md:text-base lg:text-lg text-[#666] leading-[1.7] mb-1 sm:mb-3 md:mb-1 max-w-full md:max-w-[820px]">
               {t("hero.description")}
             </p>
-            <p className="text-lg md:text-base lg:text-lg text-[#666] leading-[1.7] mb-3 md:mb-1 max-w-full md:max-w-[1100px]">
+            <p className="text-base sm:text-lg md:text-base lg:text-lg text-[#666] leading-[1.7] mb-1 sm:mb-3 md:mb-1 max-w-full md:max-w-[1100px]">
               Por isso, com a Widde você ajuda o visitante a <strong>sentir, entender, escolher e comprar no seu site.</strong>
             </p>
-            <p className="text-lg md:text-sm lg:text-base font-bold text-[#666] leading-[1.7] mb-10 md:mb-8 lg:mb-10 max-w-full md:max-w-[720px]">
+            <p className="text-base sm:text-lg md:text-sm lg:text-base font-bold text-[#666] leading-[1.7] mb-6 sm:mb-10 md:mb-8 lg:mb-10 max-w-full md:max-w-[720px]">
               {t("hero.descriptionProducts")}
             </p>
-            <div className="mt-8 md:mt-0 flex flex-col items-stretch md:flex-row md:items-center gap-4 md:gap-3 md:justify-start">
+            <div className="mt-8 md:mt-0 flex flex-col items-stretch md:flex-row md:items-center gap-3 sm:gap-4 md:gap-3 md:justify-start">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
-                className="inline-block text-center bg-brand text-white font-bold text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline"
+                className="inline-block text-center bg-brand text-white font-bold text-base sm:text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[10px] sm:py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline"
               >
                 {t("hero.ctaSales")}
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
                 onClick={handleVerDemo}
-                className="inline-block text-center bg-transparent text-black font-bold text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
+                className="inline-block text-center bg-transparent text-black font-bold text-base sm:text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[10px] sm:py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
                 {t("hero.ctaLearnMore")}
               </AnimatedButton>
