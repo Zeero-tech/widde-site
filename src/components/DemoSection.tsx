@@ -21,7 +21,7 @@ export default function DemoSection() {
 
   return (
     <section id="demo2" className="bg-surface-dark py-10 md:py-12 lg:py-16">
-      <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-2">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-8 lg:gap-14">
           {/* Video */}
           <div ref={containerRef} className="w-full md:w-[55%] lg:w-[58%] rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>

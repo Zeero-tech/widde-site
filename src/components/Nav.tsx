@@ -301,7 +301,7 @@ export default function Nav() {
         backgroundColor: isDark ? "#1a1a1a" : scrolled ? "#ffffff" : "#f6f6f6",
       }}
     >
-      <div className="px-5 md:px-10 lg:px-12 xl:px-2 max-w-screen-xl mx-auto">
+      <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
         <nav className="flex justify-between items-center md:px-0 py-3 relative min-h-8">
           <a
             href="/"

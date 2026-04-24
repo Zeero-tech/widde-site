@@ -68,7 +68,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink text-white" role="contentinfo">
-      <div className="px-5 md:px-10 lg:px-12 xl:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
+      <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto pt-16 pb-8">
         {/* Logo */}
         <a
           href="/"

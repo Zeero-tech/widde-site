@@ -6,7 +6,7 @@ export default function VCFeatures() {
 
   return (
     <section aria-labelledby="func-heading" className="bg-surface-dark py-8 md:py-12 lg:py-16">
-      <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-2">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <SectionTitle
           label={t("vc.features.label")}
           title={t("vc.features.title")}
