@@ -47,12 +47,12 @@ export default function VideoCommerce() {
       <Nav />
       <VCHero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
-      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <Suspense><div data-reveal className="pb-15 md:pb-30"><VCWhy /></div></Suspense>
         <Suspense><div data-reveal className="pb-20 md:pb-30"><VCFormats /></div></Suspense>
       </main>
       <Suspense><div className="pb-15 md:pb-30"><VCFeatures /></div></Suspense>
-      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <Suspense><div data-reveal className="pb-15 md:pb-30"><VCQuote /></div></Suspense>
         <Suspense><div data-reveal className="pb-15 md:pb-30"><CasesCarousel /></div></Suspense>
         <Suspense><div data-reveal className="pb-15 md:pb-30"><Integrations /></div></Suspense>

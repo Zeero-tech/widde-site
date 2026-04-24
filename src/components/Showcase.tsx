@@ -11,16 +11,27 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: boolean 
 
 gsap.registerPlugin(ScrollTrigger);
 
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
+type Breakpoint = "mobile" | "tablet" | "desktop";
+
+function useBreakpoint(): Breakpoint {
+  const [bp, setBp] = useState<Breakpoint>("desktop");
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    const mobileMq = window.matchMedia("(max-width: 767px)");
+    const tabletMq = window.matchMedia("(min-width: 768px) and (max-width: 1279px)");
+    const compute = () => {
+      if (mobileMq.matches) setBp("mobile");
+      else if (tabletMq.matches) setBp("tablet");
+      else setBp("desktop");
+    };
+    compute();
+    mobileMq.addEventListener("change", compute);
+    tabletMq.addEventListener("change", compute);
+    return () => {
+      mobileMq.removeEventListener("change", compute);
+      tabletMq.removeEventListener("change", compute);
+    };
   }, []);
-  return mobile;
+  return bp;
 }
 
 function pick(list: string[], index: number): string {
@@ -102,8 +113,9 @@ function VideoItem({ src }: { src: string }) {
 function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; colSize: number; rowSize: number; isMobile: boolean }) {
   const items = buildItems(isMobile, offset)
 
+  const mobileRows = "180px 180px 100px";
   const gridTemplateRows = isMobile
-    ? "180px 180px 100px"
+    ? mobileRows
     : `repeat(3, ${rowSize}px)`;
 
   return (
@@ -138,10 +150,11 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
 function ShowcaseInner() {
   const ref = useRef<HTMLElement>(null);
   const tickerRef = useRef<HTMLDivElement>(null);
-  const isMobile = useIsMobile();
+  const bp = useBreakpoint();
+  const isMobile = bp === "mobile";
 
-  const colSize = isMobile ? 150 : 280;
-  const rowSize = isMobile ? 100 : 180;
+  const colSize = bp === "mobile" ? 150 : bp === "tablet" ? 220 : 280;
+  const rowSize = bp === "mobile" ? 100 : bp === "tablet" ? 140 : 180;
 
   // Reveal animation via ScrollTrigger
   useEffect(() => {

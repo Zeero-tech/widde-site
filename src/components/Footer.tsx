@@ -68,7 +68,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink text-white" role="contentinfo">
-      <div className="px-3 md:px-2 max-w-screen-xl mx-auto pt-16 pb-8">
+      <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto pt-16 pb-8">
         {/* Logo */}
         <a
           href="/"
@@ -78,7 +78,7 @@ export default function Footer() {
         </a>
 
         {/* Link columns */}
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-8 pt-4 pb-10 md:py-10">
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-6 md:gap-6 lg:gap-8 pt-4 pb-10 md:py-10">
           {footerColumns.map((col) => (
             <div key={col.title}>
               <h4 className="text-sm font-bold text-white mb-4">

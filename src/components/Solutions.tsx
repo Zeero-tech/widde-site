@@ -52,12 +52,12 @@ export default function Solutions() {
             <div>
               <div className="flex mb-4 mt-4">
                 <div className="flex flex-col gap-1 flex-1 items-center text-center">
-                  <CountUp target={5} suffix="x" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={5} suffix="x" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted text-base leading-snug">{t("solutions.videoCommerce.stat1")}</span>
                 </div>
                 <div className="w-px bg-surface-border" />
                 <div className="flex flex-col gap-1 flex-1 items-center text-center">
-                  <CountUp target={4} suffix="x" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={4} suffix="x" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted text-base leading-snug">{t("solutions.videoCommerce.stat2")}</span>
                 </div>
               </div>
@@ -94,12 +94,12 @@ export default function Solutions() {
               </p>
               <div className="flex mt-6">
                 <div className="flex flex-col gap-1 flex-1 items-center text-center">
-                  <CountUp target={5} suffix="x" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={5} suffix="x" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted text-base leading-snug">{t("solutions.liveCommerce.stat1")}</span>
                 </div>
                 <div className="w-px bg-surface-border" />
                 <div className="flex flex-col gap-1 flex-1 items-center text-center">
-                  <CountUp target={60} prefix="+" suffix="%" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={60} prefix="+" suffix="%" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted text-base leading-snug">{t("solutions.liveCommerce.stat2")}</span>
                 </div>
               </div>
@@ -134,7 +134,7 @@ export default function Solutions() {
               </p>
               <div className="flex mt-6">
                 <div className="flex flex-col gap-1 flex-1 items-center text-center">
-                  <CountUp target={93} suffix="%" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={93} suffix="%" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted text-base leading-snug">{t("solutions.tryOn.stat1")}</span>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function Solutions() {
       </div>
 
       {/* Desktop: layout vertical normal */}
-      <div className="hidden md:flex flex-col gap-24 overflow-hidden">
+      <div className="hidden md:flex flex-col gap-16 lg:gap-24 overflow-hidden">
         {/* VIDEO COMMERCE */}
         <SolutionArticle direction="left" id="video-commerce">
           <div
@@ -164,9 +164,9 @@ export default function Solutions() {
               <source data-src="/solution/Ferracini Carrossel aberto.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="flex flex-col flex-1 px-8 justify-between py-8">
+          <div className="flex flex-col flex-1 px-5 md:px-6 lg:px-8 justify-between py-6 md:py-6 lg:py-8">
             <div>
-              <h3 className="text-2xl md:text-3xl font-normal text-black mb-4 leading-tight">Video Commerce</h3>
+              <h3 className="text-2xl md:text-2xl lg:text-3xl font-normal text-black mb-4 leading-tight">Video Commerce</h3>
               <p className="text-text-body md:text-lg max-w-full">
                 <strong>{t("solutions.videoCommerce.descBold")}</strong>{" "}{t("solutions.videoCommerce.desc")}
               </p>
@@ -175,14 +175,14 @@ export default function Solutions() {
               </p>
             </div>
             <div>
-              <div className="flex gap-8 mb-8 mt-8">
+              <div className="flex gap-5 md:gap-6 lg:gap-8 mb-6 md:mb-6 lg:mb-8 mt-6 md:mt-6 lg:mt-8">
                 <div className="flex flex-col gap-1">
-                  <CountUp target={5} suffix="x" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={5} suffix="x" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted md:text-lg leading-snug">{t("solutions.videoCommerce.stat1")}</span>
                 </div>
                 <div className="w-px bg-surface-border" />
                 <div className="flex flex-col gap-1">
-                  <CountUp target={4} suffix="x" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={4} suffix="x" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted md:text-lg leading-snug">{t("solutions.videoCommerce.stat2")}</span>
                 </div>
               </div>
@@ -207,10 +207,10 @@ export default function Solutions() {
               <source data-src="/solution/Live Commerce - Desktop.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="flex flex-col flex-1 px-8 justify-between py-8">
+          <div className="flex flex-col flex-1 px-5 md:px-6 lg:px-8 justify-between py-6 md:py-6 lg:py-8">
             <div>
               <span className="inline-block bg-charcoal text-white text-xs md:text-base font-bold px-3 py-1 rounded-full w-fit mb-4">{t("solutions.new")}</span>
-              <h3 className="text-3xl font-normal text-black mb-4 leading-tight">{t("solutions.liveCommerce.title")}</h3>
+              <h3 className="text-2xl md:text-2xl lg:text-3xl font-normal text-black mb-4 leading-tight">{t("solutions.liveCommerce.title")}</h3>
               <p className="text-text-body md:text-lg max-w-full">
                 <strong>{t("solutions.liveCommerce.descBold")}</strong>{" "}{t("solutions.liveCommerce.desc")}
               </p>
@@ -219,14 +219,14 @@ export default function Solutions() {
               </p>
             </div>
             <div>
-              <div className="flex gap-8 mb-8 mt-8">
+              <div className="flex gap-5 md:gap-6 lg:gap-8 mb-6 md:mb-6 lg:mb-8 mt-6 md:mt-6 lg:mt-8">
                 <div className="flex flex-col gap-1">
-                  <CountUp target={5} suffix="x" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={5} suffix="x" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted md:text-lg leading-snug">{t("solutions.liveCommerce.stat1")}</span>
                 </div>
                 <div className="w-px bg-surface-border" />
                 <div className="flex flex-col gap-1">
-                  <CountUp target={60} prefix="+" suffix="%" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={60} prefix="+" suffix="%" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted md:text-lg leading-snug">{t("solutions.liveCommerce.stat2")}</span>
                 </div>
               </div>
@@ -253,10 +253,10 @@ export default function Solutions() {
               <source data-src="/solution/Provador IA Chart.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="flex flex-col flex-1 px-8 justify-between py-8">
+          <div className="flex flex-col flex-1 px-5 md:px-6 lg:px-8 justify-between py-6 md:py-6 lg:py-8">
             <div>
               <span className="inline-block bg-charcoal text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">{t("solutions.new")}</span>
-              <h3 className="text-3xl font-normal text-black mb-4 leading-tight">{t("solutions.tryOn.title")}</h3>
+              <h3 className="text-2xl md:text-2xl lg:text-3xl font-normal text-black mb-4 leading-tight">{t("solutions.tryOn.title")}</h3>
               <p className="text-text-body md:text-lg max-w-full">
                 {t("solutions.tryOn.desc")}{" "}<strong>{t("solutions.tryOn.descBold")}</strong>
               </p>
@@ -265,9 +265,9 @@ export default function Solutions() {
               </p>
             </div>
             <div>
-              <div className="flex gap-8 mb-8 mt-8">
+              <div className="flex gap-5 md:gap-6 lg:gap-8 mb-6 md:mb-6 lg:mb-8 mt-6 md:mt-6 lg:mt-8">
                 <div className="flex flex-col gap-1">
-                  <CountUp target={93} suffix="%" className="text-4xl font-normal text-charcoal leading-none mb-1" />
+                  <CountUp target={93} suffix="%" className="text-3xl md:text-3xl lg:text-4xl font-normal text-charcoal leading-none mb-1" />
                   <span className="text-text-muted md:text-lg leading-snug">{t("solutions.tryOn.stat1")}</span>
                 </div>
               </div>
