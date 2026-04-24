@@ -9,7 +9,7 @@
     ],
     "headers": [
       {
-        "source": "/index.html",
+        "source": "**/*.html",
         "headers": [
           {
             "key": "Cache-Control",
@@ -67,11 +67,7 @@
         ]
       }
     ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }

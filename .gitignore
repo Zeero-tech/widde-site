@@ -47,8 +47,9 @@ build/Release
 # Dependency directories
 node_modules/
 
-# Vite build output
+# Astro build output
 dist/
+.astro/
 
 # Local npm cache workaround
 .npm-cache/

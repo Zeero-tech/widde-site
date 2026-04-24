@@ -1,0 +1,97 @@
+---
+import '@/index.css'
+
+export interface Props {
+  title: string
+  description: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  noindex?: boolean
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = 'https://widde.io/og-image.jpg',
+  ogType = 'website',
+  noindex = false,
+} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Widde" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      />
+    </noscript>
+
+    <link rel="icon" href="/assets/ico.png" type="image/png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Widde',
+      url: 'https://widde.io',
+      logo: 'https://widde.io/logo.png',
+      description: 'Plataforma de Video Commerce, Live Commerce e TryOn para e-commerces.',
+      sameAs: [
+        'https://www.instagram.com/widde.io',
+        'https://www.linkedin.com/company/widde',
+        'https://www.youtube.com/@widde',
+        'https://www.tiktok.com/@widde.io',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        availableLanguage: 'Portuguese',
+      },
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Widde',
+      url: 'https://widde.io',
+    })} />
+
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+    <script defer src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+  </body>
+</html>

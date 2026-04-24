@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import HomeIsland from '@/islands/HomeIsland'
+---
+
+<BaseLayout
+  title="Widde - A experiência do físico na loja on-line"
+  description="Acelere a decisão de compra do seu consumidor com Video Commerce, Live Commerce e TryOn. Plataforma líder para e-commerces no Brasil. Comece agora."
+  canonical="https://widde.io/"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://widde.io/' },
+      ],
+    })} />
+  </Fragment>
+
+  <HomeIsland client:only="react" />
+</BaseLayout>
