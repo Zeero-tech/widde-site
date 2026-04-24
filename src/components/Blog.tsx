@@ -84,7 +84,7 @@ export default function Blog() {
             }}
           >
             <div
-              className="w-full h-[220px] relative"
+              className="w-full h-[180px] md:h-[200px] lg:h-[220px] relative"
               style={post.image ? {} : { background: post.bg }}
             >
               {post.image && (
@@ -101,15 +101,15 @@ export default function Blog() {
             <p className="text-xs md:text-sm font-bold text-text-muted uppercase tracking-[1px] px-4 pt-3">
               {post.category}
             </p>
-            <p className="text-base md:text-2xl font-normal text-charcoal leading-[1.4] px-4 pt-1">
+            <p className="text-base md:text-xl lg:text-2xl font-normal text-charcoal leading-[1.4] px-4 pt-1">
               {post.title}
             </p>
-            <p className="text-sm md:text-lg text-text-muted leading-[1.5] px-4 pt-1">
+            <p className="text-sm md:text-base lg:text-lg text-text-muted leading-[1.5] px-4 pt-1">
               {post.desc}
             </p>
             <a
               href={post.link}
-              className="text-base md:text-lg font-bold text-navy no-underline hover:underline px-4 py-4 self-end"
+              className="text-base md:text-base lg:text-lg font-bold text-navy no-underline hover:underline px-4 py-4 self-end"
             >
               Saiba mais →
             </a>

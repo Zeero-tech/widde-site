@@ -46,10 +46,10 @@ className="flex flex-1 gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hid
             <a
               key={c.title}
               href={c.link}
-              className="group flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[calc(50%-60px)] cursor-pointer flex flex-col no-underline snap-start"
+              className="group flex-shrink-0 w-[85vw] sm:w-[380px] md:w-[calc(50%-40px)] lg:w-[calc(50%-60px)] cursor-pointer flex flex-col no-underline snap-start"
             >
               {/* Thumbnail */}
-              <div className="w-full h-[240px] md:h-[300px] relative overflow-hidden rounded-md">
+              <div className="w-full h-[240px] md:h-[260px] lg:h-[300px] relative overflow-hidden rounded-md">
                 <img
                   src={c.image}
                   srcSet={c.image?.endsWith('.avif') ? undefined : `${c.image?.replace(/(\.[^.]+)$/, '-p-500$1')} 500w, ${c.image?.replace(/(\.[^.]+)$/, '-p-800$1')} 800w, ${c.image?.replace(/(\.[^.]+)$/, '-p-1080$1')} 1080w, ${c.image} 2560w`}

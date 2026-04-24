@@ -54,7 +54,7 @@ export default function Problem() {
   return (
     <section
       ref={sectionRef}
-      className="relative rounded-[20px] overflow-hidden px-5 py-10 md:px-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center"
+      className="relative rounded-[20px] overflow-hidden px-5 py-10 md:px-10 md:py-14 lg:px-16 lg:py-20 flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 items-center"
       aria-labelledby="problema2-heading"
     >
       {/* Current video */}
@@ -101,7 +101,7 @@ export default function Problem() {
       <div className="relative z-10 flex-[2.5]">
         <h2
           id="problema2-heading"
-          className="text-2xl md:text-4xl font-normal text-white leading-[1.25] mb-6 md:mb-7"
+          className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-[1.25] mb-6 md:mb-7"
         >
           {t("problem.title")}
         </h2>
@@ -122,12 +122,12 @@ export default function Problem() {
       </div>
 
       {/* Numbers */}
-      <div className="relative z-10 flex flex-col md:border-l border-white/15 md:pl-10 flex-shrink-0 w-full md:w-auto">
+      <div className="relative z-10 flex flex-col md:border-l border-white/15 md:pl-6 lg:pl-10 flex-shrink-0 w-full md:w-auto">
         <div className="py-4 md:py-6 flex md:block items-center gap-4">
           <CountUp
             target={84}
             suffix="%"
-            className="text-2xl md:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat1Label")}
@@ -137,7 +137,7 @@ export default function Problem() {
           <CountUp
             target={63}
             suffix="%"
-            className="text-2xl md:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat2Label")}
@@ -147,7 +147,7 @@ export default function Problem() {
           <CountUp
             target={65}
             suffix="%"
-            className="text-2xl md:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
+            className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
             {t("problem.stat3Label")}
