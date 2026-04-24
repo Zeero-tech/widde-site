@@ -50,7 +50,7 @@ export default function Hero() {
           {/* Content */}
           <div
             ref={contentRef}
-            className="w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-16 lg:py-20"
+            className="flex-1 w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-16 lg:py-20"
             style={{ justifyContent: "center" }}
           >
             <span className="block text-xs md:text-sm font-bold text-brand uppercase tracking-[2px] mb-4 md:mb-5">

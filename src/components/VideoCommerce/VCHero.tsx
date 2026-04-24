@@ -59,7 +59,7 @@ export default function VCHero() {
           {/* Left — content */}
           <div
             ref={contentRef}
-            className="w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col py-20 md:py-16 lg:py-20"
+            className="flex-1 w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col justify-center md:justify-start py-20 md:py-16 lg:py-20"
           >
             <h1 className="text-4xl md:text-[2.5rem] lg:text-5xl font-black leading-[1.15] mb-6 md:mb-6 text-white">
               {t("vc.hero.title")}{" "}
