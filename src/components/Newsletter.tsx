@@ -7,7 +7,23 @@ export default function Newsletter() {
   const { t } = useTranslation();
   const circleRef = useRef<HTMLImageElement>(null);
   const [hovered, setHovered] = useState(false);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const [viewport, setViewport] = useState<"mobile" | "tablet" | "desktop">(() => {
+    if (typeof window === "undefined") return "desktop";
+    const w = window.innerWidth;
+    if (w < 768) return "mobile";
+    if (w < 1280) return "tablet";
+    return "desktop";
+  });
+  const isMobile = viewport === "mobile";
+
+  useEffect(() => {
+    function onResize() {
+      const w = window.innerWidth;
+      setViewport(w < 768 ? "mobile" : w < 1280 ? "tablet" : "desktop");
+    }
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   useEffect(() => {
     if (!circleRef.current) return;
@@ -50,7 +66,7 @@ export default function Newsletter() {
 
   return (
     <section
-      className="overflow-hidden bg-ink px-3 md:px-2"
+      className="overflow-hidden bg-ink px-5 md:px-10 lg:px-12 xl:px-6"
       aria-labelledby="newsletter2-heading"
     >
       <div
@@ -79,7 +95,7 @@ export default function Newsletter() {
         <div className="relative z-[5] flex flex-col items-center text-center px-6 py-16 w-full max-w-[920px]">
           <h2
             id="newsletter2-heading"
-            className="text-2xl md:text-4xl font-normal text-white leading-[1.25] mb-6"
+            className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-[1.25] mb-6"
           >
             <HighlightText
               highlightColor="var(--color-brand)"
@@ -143,10 +159,10 @@ export default function Newsletter() {
           aria-hidden="true"
           className="widde-cicle is--large absolute z-[3] object-contain pointer-events-none"
           style={{
-            width: isMobile ? 200 : 250,
-            height: isMobile ? 200 : 250,
-            bottom: isMobile ? -120 : -60,
-            right: isMobile ? -110 : -80,
+            width: viewport === "mobile" ? 200 : viewport === "tablet" ? 220 : 250,
+            height: viewport === "mobile" ? 200 : viewport === "tablet" ? 220 : 250,
+            bottom: viewport === "mobile" ? -120 : viewport === "tablet" ? -70 : -60,
+            right: viewport === "mobile" ? -110 : viewport === "tablet" ? -90 : -80,
             opacity: isMobile ? 0.6 : (hovered ? 1 : 0),
             transition: "opacity 0.4s ease",
           }}

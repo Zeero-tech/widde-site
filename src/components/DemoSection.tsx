@@ -20,11 +20,11 @@ export default function DemoSection() {
   }, []);
 
   return (
-    <section id="demo2" className="bg-surface-dark py-10 md:py-16">
-      <div className="max-w-screen-xl mx-auto px-3 md:px-2">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
+    <section id="demo2" className="bg-surface-dark py-10 md:py-12 lg:py-16">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-8 lg:gap-14">
           {/* Video */}
-          <div ref={containerRef} className="w-full md:w-[58%] rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+          <div ref={containerRef} className="w-full md:w-[55%] lg:w-[58%] rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
             {visible && (
               <MuxPlayer
                 playbackId="ud86wbc5uESjjIPpJ421FK02uZtEYPpezDXvQnMg02SfI"
@@ -38,12 +38,12 @@ export default function DemoSection() {
           </div>
 
           {/* Text */}
-          <div className="w-full md:w-[42%] flex flex-col">
+          <div className="w-full md:w-[45%] lg:w-[42%] flex flex-col">
             <div className="mb-4">
-              <span className="block text-xs md:text-base font-bold text-text-muted uppercase tracking-[2px] mb-3">
+              <span className="block text-xs md:text-sm lg:text-base font-bold text-text-muted uppercase tracking-[2px] mb-3">
                 Conheça
               </span>
-              <h2 className="text-2xl md:text-4xl font-normal text-black leading-[1.25]">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-black leading-[1.25]">
                 {t("demo.heading")}
               </h2>
             </div>

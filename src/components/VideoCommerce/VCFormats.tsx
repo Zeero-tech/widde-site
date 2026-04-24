@@ -135,7 +135,7 @@ export default function VCFormats() {
       </div>
 
       {/* Desktop: phone mockup carousel */}
-      <div className="hidden md:flex items-center gap-24 px-50" style={{ height: "70vh" }}>
+      <div className="hidden md:flex items-center gap-12 lg:gap-20 xl:gap-24 md:px-4 lg:px-10 xl:px-16 md:h-[62vh] lg:h-[68vh] xl:h-[70vh]">
         {/* Phone mockup */}
         <div className="relative flex-shrink-0 h-full" style={{ aspectRatio: "9.2/19.5" }}>
           {/* Video clipped to inner radius */}
@@ -162,16 +162,16 @@ export default function VCFormats() {
         </div>
 
         {/* Right side: text + nav */}
-        <div className="flex flex-col justify-between flex-1 h-full py-8">
+        <div className="flex flex-col justify-between flex-1 h-full py-6 lg:py-8">
           <div>
-            <div className="text-4xl font-bold text-black mb-5 leading-tight">{current.name}</div>
-            <div className="text-lg text-[#555] leading-relaxed mb-6">{current.desc}</div>
-            <div className="text-base text-[#aaa]">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 lg:mb-5 leading-tight">{current.name}</div>
+            <div className="text-base lg:text-lg text-[#555] leading-relaxed mb-5 lg:mb-6">{current.desc}</div>
+            <div className="text-sm lg:text-base text-[#aaa]">
               {t("vc.formats.appearsIn")}
               {current.onde.map((lugar) => (
                 <span
                   key={lugar}
-                  className="bg-[#F0F0F0] rounded text-base font-bold text-[#555] px-[7px] py-[2px] ml-1"
+                  className="bg-[#F0F0F0] rounded text-sm lg:text-base font-bold text-[#555] px-[7px] py-[2px] ml-1"
                 >
                   {lugar}
                 </span>

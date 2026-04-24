@@ -69,11 +69,11 @@ export default function Home() {
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
       {/* <div className="pb-15 md:pb-30"><HeroStatement /></div> */}
       <Suspense><div className="pb-15 md:pb-30"><Showcase /></div></Suspense>
-      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-12">
         <Suspense><div data-reveal className="pb-15 md:pb-30"><Solutions /></div></Suspense>
       </main>
       <Suspense><div data-reveal className="pb-15 md:pb-30"><DemoSection /></div></Suspense>
-      <main className="max-w-screen-xl mx-auto px-3 md:px-2">
+      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-12">
         <Suspense><div data-reveal className="pb-15 md:pb-30"><Problem /></div></Suspense>
         <Suspense><div data-reveal className="pb-15 md:pb-30"><CasesCarousel /></div></Suspense>
         <Suspense><div data-reveal className="pb-15 md:pb-30"><Integrations /></div></Suspense>

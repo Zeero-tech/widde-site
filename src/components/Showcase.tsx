@@ -42,16 +42,27 @@ function releasePlay(video: HTMLVideoElement) {
   }
 }
 
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
+type Breakpoint = "mobile" | "tablet" | "desktop";
+
+function useBreakpoint(): Breakpoint {
+  const [bp, setBp] = useState<Breakpoint>("desktop");
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    const mobileMq = window.matchMedia("(max-width: 767px)");
+    const tabletMq = window.matchMedia("(min-width: 768px) and (max-width: 1279px)");
+    const compute = () => {
+      if (mobileMq.matches) setBp("mobile");
+      else if (tabletMq.matches) setBp("tablet");
+      else setBp("desktop");
+    };
+    compute();
+    mobileMq.addEventListener("change", compute);
+    tabletMq.addEventListener("change", compute);
+    return () => {
+      mobileMq.removeEventListener("change", compute);
+      tabletMq.removeEventListener("change", compute);
+    };
   }, []);
-  return mobile;
+  return bp;
 }
 
 function pick(list: string[], index: number): string {
@@ -144,8 +155,9 @@ function VideoItem({ src }: { src: string }) {
 function BoardBlock({ offset, colSize, rowSize, isMobile, ariaHidden }: { offset: number; colSize: number; rowSize: number; isMobile: boolean; ariaHidden?: boolean }) {
   const items = buildItems(isMobile, offset)
 
+  const mobileRows = "180px 180px 100px";
   const gridTemplateRows = isMobile
-    ? "180px 180px 100px"
+    ? mobileRows
     : `repeat(3, ${rowSize}px)`;
 
   return (
@@ -185,10 +197,11 @@ const UNIQUE_BLOCKS = 3;
 function ShowcaseInner() {
   const ref = useRef<HTMLElement>(null);
   const tickerRef = useRef<HTMLDivElement>(null);
-  const isMobile = useIsMobile();
+  const bp = useBreakpoint();
+  const isMobile = bp === "mobile";
 
-  const colSize = isMobile ? 150 : 280;
-  const rowSize = isMobile ? 100 : 180;
+  const colSize = bp === "mobile" ? 150 : bp === "tablet" ? 220 : 280;
+  const rowSize = bp === "mobile" ? 100 : bp === "tablet" ? 140 : 180;
 
   useEffect(() => {
     if (!ref.current) return;

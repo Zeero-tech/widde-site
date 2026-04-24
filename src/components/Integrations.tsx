@@ -21,7 +21,7 @@ export default function Integrations() {
 
   return (
     <section
-      className="rounded-[20px] p-6 pt-14 md:p-15 overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)]"
+      className="rounded-[20px] p-6 pt-14 md:p-10 lg:p-15 overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)]"
       style={{ background: "#003ab9ff" }}
       aria-labelledby="int-heading"
     >
@@ -34,7 +34,7 @@ export default function Integrations() {
       <p className="text-base md:text-lg text-white/50 mb-7">{t("integrations.description")}</p>
 
       <div
-        className="overflow-hidden md:-mx-11 -mb-5 md:-mb-10 px-0 py-5"
+        className="overflow-hidden md:-mx-7 lg:-mx-11 -mb-5 md:-mb-8 lg:-mb-10 px-0 py-5"
         aria-label={t("integrations.ariaLabel")}
       >
         <div ref={tickerRef} className="flex gap-[10px] animate-scroll-logos-fast md:animate-scroll-logos">
