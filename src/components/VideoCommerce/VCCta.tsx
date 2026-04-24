@@ -29,7 +29,7 @@ export default function VCCta() {
 
   return (
     <section className="py-10 md:py-14 lg:py-20 relative overflow-hidden bg-[#E5E5E5]">
-      <div className="max-w-screen-xl mx-auto px-3 md:px-2 text-center relative z-10">
+      <div className="max-w-screen-xl mx-auto px-3 md:px-6 lg:px-8 xl:px-2 text-center relative z-10">
         <span className="md:hidden block text-xs font-bold text-[#5D5D5D] uppercase tracking-[2px] mb-4">
           {t(`${prefix}.label`)}
         </span>

@@ -40,7 +40,7 @@ export default function Hero() {
       style={{ minHeight: "calc(100vh - 120px)" }}
     >
       <div
-        className="mx-auto px-3 md:px-2 max-w-screen-xl h-full flex items-center"
+        className="mx-auto px-3 md:px-6 lg:px-8 xl:px-2 max-w-screen-xl h-full flex items-center"
         style={{ minHeight: "inherit" }}
       >
         <div
