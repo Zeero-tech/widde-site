@@ -11,6 +11,37 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: boolean 
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Cap simultaneous playing <video> elements — iOS Safari limits concurrent
+// decoders to ~16 per page; Android/Chrome tolerate more but still throttle.
+const MAX_CONCURRENT_PLAYS = 8;
+const playingSet = new Set<HTMLVideoElement>();
+const waitingQueue: HTMLVideoElement[] = [];
+
+function requestPlay(video: HTMLVideoElement) {
+  if (playingSet.has(video)) return;
+  if (playingSet.size < MAX_CONCURRENT_PLAYS) {
+    playingSet.add(video);
+    video.play().catch(() => {});
+    return;
+  }
+  if (!waitingQueue.includes(video)) waitingQueue.push(video);
+}
+
+function releasePlay(video: HTMLVideoElement) {
+  const waitingIdx = waitingQueue.indexOf(video);
+  if (waitingIdx >= 0) waitingQueue.splice(waitingIdx, 1);
+  if (!playingSet.has(video)) return;
+  playingSet.delete(video);
+  try { video.pause(); } catch { /* noop */ }
+  while (waitingQueue.length && playingSet.size < MAX_CONCURRENT_PLAYS) {
+    const next = waitingQueue.shift();
+    if (next && next.isConnected) {
+      playingSet.add(next);
+      next.play().catch(() => {});
+    }
+  }
+}
+
 type Breakpoint = "mobile" | "tablet" | "desktop";
 
 function useBreakpoint(): Breakpoint {
@@ -71,46 +102,57 @@ function buildItems(isMobile: boolean, blockIndex: number): BlockItem[] {
 }
 
 function VideoItem({ src }: { src: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [mounted, setMounted] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [failed, setFailed] = useState(false);
+
+  // Lazy-mount the <video> element only when close to the viewport. Keeps the
+  // live decoder count far below iOS Safari's limit as the ticker scrolls.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setMounted(true);
+        setVisible(entry.isIntersecting);
+      },
+      { rootMargin: "300px", threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
+    if (!video || !mounted) return;
+    if (visible) requestPlay(video);
+    else releasePlay(video);
+    return () => releasePlay(video);
+  }, [mounted, visible]);
 
   if (failed) return null;
 
   return (
-    <video
-      ref={videoRef}
-      className="absolute inset-0 w-full h-full object-cover"
-      src={src}
-      muted
-      loop
-      playsInline
-      preload="none"
-      onError={() => setFailed(true)}
-      onLoadedMetadata={(e) => { (e.currentTarget as HTMLVideoElement).currentTime = 5; }}
-    />
+    <div ref={containerRef} className="absolute inset-0">
+      {mounted && (
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover"
+          src={src}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
   );
 }
 
-function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; colSize: number; rowSize: number; isMobile: boolean }) {
+function BoardBlock({ offset, colSize, rowSize, isMobile, ariaHidden }: { offset: number; colSize: number; rowSize: number; isMobile: boolean; ariaHidden?: boolean }) {
   const items = buildItems(isMobile, offset)
 
   const mobileRows = "180px 180px 100px";
@@ -121,6 +163,7 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
   return (
     <div
       className="grid flex-shrink-0 gap-3"
+      aria-hidden={ariaHidden}
       style={{
         gridTemplateColumns: `repeat(3, ${colSize}px)`,
         gridTemplateRows,
@@ -147,6 +190,10 @@ function BoardBlock({ offset, colSize, rowSize, isMobile }: { offset: number; co
   );
 }
 
+// 3 unique blocks duplicated once — ticker scrolls -50% for a seamless loop
+// while only 3 unique content sets exist in the DOM.
+const UNIQUE_BLOCKS = 3;
+
 function ShowcaseInner() {
   const ref = useRef<HTMLElement>(null);
   const tickerRef = useRef<HTMLDivElement>(null);
@@ -156,7 +203,6 @@ function ShowcaseInner() {
   const colSize = bp === "mobile" ? 150 : bp === "tablet" ? 220 : 280;
   const rowSize = bp === "mobile" ? 100 : bp === "tablet" ? 140 : 180;
 
-  // Reveal animation via ScrollTrigger
   useEffect(() => {
     if (!ref.current) return;
     gsap.fromTo(
@@ -169,7 +215,6 @@ function ShowcaseInner() {
     );
   }, []);
 
-  // Pause ticker animation until visible
   useEffect(() => {
     const el = tickerRef.current;
     if (!el) return;
@@ -186,8 +231,11 @@ function ShowcaseInner() {
     <section ref={ref} className="bg-surface overflow-hidden">
       <div className="flex">
         <div ref={tickerRef} className="flex gap-3 animate-ticker-slow">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <BoardBlock key={i} offset={i} colSize={colSize} rowSize={rowSize} isMobile={isMobile} />
+          {Array.from({ length: UNIQUE_BLOCKS }).map((_, i) => (
+            <BoardBlock key={`a-${i}`} offset={i} colSize={colSize} rowSize={rowSize} isMobile={isMobile} />
+          ))}
+          {Array.from({ length: UNIQUE_BLOCKS }).map((_, i) => (
+            <BoardBlock key={`b-${i}`} offset={i} colSize={colSize} rowSize={rowSize} isMobile={isMobile} ariaHidden />
           ))}
         </div>
       </div>
