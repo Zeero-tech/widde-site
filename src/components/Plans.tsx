@@ -39,7 +39,6 @@ export default function Plans() {
               t("plans.starterFeature3"),
               t("plans.starterFeature4"),
               t("plans.starterFeature5"),
-              t("plans.starterFeature6"),
             ].map((f) => (
               <li
                 key={f}
