@@ -38,7 +38,7 @@ export default function DemoSection() {
               <MuxPlayer
                 playbackId="B9JncrfQ82ZT2v3NdwFL4az6BX02kBmVitC68fdNwOhs"
                 metadataVideoTitle="Demonstração da Widde"
-                thumbnailTime={20.2}
+                poster="/assets/thumbnail-widde-demonstracao.png"
                 accentColor="#2667F8"
                 style={{ width: "100%", aspectRatio: "16/9" }}
                 streamType="on-demand"
