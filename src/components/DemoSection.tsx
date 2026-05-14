@@ -12,8 +12,13 @@ export default function DemoSection() {
     const el = containerRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { rootMargin: "200px" }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -24,10 +29,14 @@ export default function DemoSection() {
       <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-8 lg:gap-14">
           {/* Video */}
-          <div ref={containerRef} className="w-full md:w-[55%] lg:w-[58%] rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+          <div
+            ref={containerRef}
+            className="w-full md:w-[55%] lg:w-[58%] rounded-2xl overflow-hidden"
+            style={{ aspectRatio: "16/9" }}
+          >
             {visible && (
               <MuxPlayer
-                playbackId="ud86wbc5uESjjIPpJ421FK02uZtEYPpezDXvQnMg02SfI"
+                playbackId="B9JncrfQ82ZT2v3NdwFL4az6BX02kBmVitC68fdNwOhs"
                 metadataVideoTitle="Demonstração da Widde"
                 thumbnailTime={20.2}
                 accentColor="#2667F8"
@@ -50,7 +59,7 @@ export default function DemoSection() {
             <p className="text-base md:text-lg text-text-muted leading-relaxed mb-6 max-w-[440px]">
               {t(
                 "demo.description",
-                "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca."
+                "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca.",
               )}
             </p>
             <AnimatedButton
