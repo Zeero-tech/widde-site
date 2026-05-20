@@ -307,8 +307,6 @@ export default function QuemSomosPage() {
               {/* Blog */}
               <a
                 href="/blog"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="relative overflow-hidden rounded-2xl flex flex-col justify-between p-6 lg:p-8 min-h-[420px] group"
                 style={{ background: "#1a1a1a" }}
               >

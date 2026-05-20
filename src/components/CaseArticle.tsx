@@ -305,8 +305,6 @@ export default function CaseArticle({ data }: Props) {
                     <a
                       aria-label="staggering button"
                       href="/quero-comecar"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="btn-animate-chars widde-lp resultados-mam w-inline-block is--small"
                     >
                       <div className="btn-animate-chars__bg is--blue"></div>
@@ -322,8 +320,6 @@ export default function CaseArticle({ data }: Props) {
                     <a
                       aria-label="staggering button"
                       href="/contato-vendas"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="btn-animate-chars widde-lp resultados-mam w-inline-block is--small"
                     >
                       <div className="btn-animate-chars__bg"></div>
@@ -463,8 +459,6 @@ export default function CaseArticle({ data }: Props) {
                   <a
                     aria-label="staggering button"
                     href="/quero-comecar"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="btn-animate-chars is--blog w-inline-block"
                   >
                     <span className="btn-animate-chars__text">

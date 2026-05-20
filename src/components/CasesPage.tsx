@@ -98,8 +98,6 @@ export default function CasesPage() {
 
             <a
               href="/case/mamo"
-              target="_blank"
-              rel="noopener noreferrer"
               className="no-underline flex flex-col md:flex-row overflow-hidden rounded-2xl"
               style={{ minHeight: "520px" }}
             >

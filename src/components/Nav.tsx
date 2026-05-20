@@ -273,8 +273,6 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                   <NavigationMenuLink asChild>
                     <a
                       href="/cases"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={cn(
                         navigationMenuTriggerStyle(),
                         isDark
@@ -308,8 +306,6 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                   <NavigationMenuLink asChild>
                     <a
                       href="/blog"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={cn(
                         navigationMenuTriggerStyle(),
                         isDark
@@ -390,8 +386,6 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 )}
                 <a
                   href="/cases"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
@@ -406,8 +400,6 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 </a>
                 <a
                   href="/blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
@@ -419,16 +411,12 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
               <div className="px-5 pb-8 pt-4 flex flex-col gap-3">
                 <a
                   href="/contato-vendas"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline"
                 >
                   Falar com vendas
                 </a>
                 <a
                   href="/quero-comecar"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
                 >
                   Começar agora

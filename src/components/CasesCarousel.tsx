@@ -46,8 +46,6 @@ export default function CasesCarousel() {
             <a
               key={c.title}
               href={c.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group flex-shrink-0 w-[85vw] sm:w-[380px] md:w-[calc(50%-40px)] lg:w-[calc(50%-60px)] cursor-pointer flex flex-col no-underline snap-start"
             >
               {/* Thumbnail */}

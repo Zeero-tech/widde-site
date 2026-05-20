@@ -23,7 +23,7 @@ function splitToSpans(text: string) {
 }
 
 export default function AnimatedButton({ href, children, className = '', style, onClick }: AnimatedButtonProps) {
-  const isExternal = href.startsWith('http://') || href.startsWith('https://') || (href.startsWith('/') && href !== '/' && href !== '/video-commerce')
+  const isExternal = href.startsWith('http://') || href.startsWith('https://')
   return (
     <a
       href={href}
