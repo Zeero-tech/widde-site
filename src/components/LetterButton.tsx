@@ -10,7 +10,7 @@ interface LetterButtonProps {
 export default function LetterButton({ href, children, className = '', onClick }: LetterButtonProps) {
   const letters = children.split('')
   const letterRefs = useRef<HTMLSpanElement[]>([])
-  const isExternal = href.startsWith('http://') || href.startsWith('https://')
+  const isExternal = href.startsWith('http://') || href.startsWith('https://') || (href.startsWith('/') && href !== '/' && href !== '/video-commerce')
   const animate = useCallback((direction: 'in' | 'out') => {
     letterRefs.current.forEach((span, i) => {
       if (!span) return

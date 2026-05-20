@@ -64,11 +64,12 @@ export default function Newsletter() {
 
   return (
     <section
-      className="overflow-hidden bg-ink px-5 md:px-10 lg:px-12 xl:px-6"
+      className="overflow-hidden bg-ink"
       aria-labelledby="newsletter2-heading"
     >
+      <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
       <div
-        className="relative rounded-3xl my-12 mx-auto max-w-screen-xl overflow-hidden min-h-[480px] flex items-center justify-center"
+        className="relative rounded-3xl my-12 overflow-hidden min-h-[480px] flex items-center justify-center"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -165,6 +166,7 @@ export default function Newsletter() {
             transition: "opacity 0.4s ease",
           }}
         />
+      </div>
       </div>
     </section>
   );

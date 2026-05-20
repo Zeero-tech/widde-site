@@ -54,11 +54,12 @@ export default function DemoSection() {
                 Como a Widde funciona?
               </h2>
             </div>
-            <p className="text-base md:text-lg text-text-muted leading-relaxed mb-6 max-w-[440px]">
-              Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca.
+            <p className="text-base md:text-lg text-text-muted leading-relaxed mb-6">
+              Conheça como a Widde gera mais conversão, menos devolução e mais
+              valor percebido do seu produto e marca.
             </p>
             <AnimatedButton
-              href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+              href="/contato-vendas"
               className="inline-block w-full md:w-fit text-center bg-black text-white font-bold text-lg md:text-lg px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
             >
               Falar com vendas

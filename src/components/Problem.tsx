@@ -112,7 +112,7 @@ export default function Problem() {
           </p>
         </div>
         <AnimatedButton
-          href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+          href="/contato-vendas"
           className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-lg px-[22px] py-[11px] rounded-full no-underline"
         >
           Falar com vendas →

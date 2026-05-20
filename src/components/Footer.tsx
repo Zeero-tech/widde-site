@@ -23,7 +23,7 @@ const footerColumns = [
     title: "Recursos",
     links: [
       { label: "Blog", href: "/blog" },
-      { label: "Cases", href: "https://widde.io/cases?" },
+      { label: "Cases", href: "/cases" },
       { label: "Central de Ajuda", href: "https://intercom.help/widde/pt-BR/" },
     ],
   },
@@ -39,7 +39,7 @@ const footerColumns = [
   {
     title: "Legal",
     links: [
-      { label: "Privacidade", href: "https://widde.io/politica-de-privacidade?utm_medium=cpc&utm_source=google&utm_campaign=01" }
+      { label: "Privacidade", href: "/politica-de-privacidade" }
     ],
   },
 ];
@@ -84,8 +84,8 @@ export default function Footer() {
                     <a
                       href={link.href}
                       className="text-sm text-white/50 no-underline hover:text-white transition-colors"
-                      target={link.href.startsWith("http") ? "_blank" : undefined}
-                      rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      target={link.href.startsWith("http") || (link.href.startsWith("/") && link.href !== "/" && link.href !== "/video-commerce" && !link.href.startsWith("/#") && !link.href.startsWith("#")) ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") || (link.href.startsWith("/") && link.href !== "/" && link.href !== "/video-commerce" && !link.href.startsWith("/#") && !link.href.startsWith("#")) ? "noopener noreferrer" : undefined}
                       onClick={(e) => handleClick(e, link)}
                     >
                       {link.label}

@@ -68,7 +68,7 @@ export default function VCCta() {
         </p>
         <div className="flex flex-col items-stretch sm:flex-row sm:items-center justify-center gap-3">
           <AnimatedButton
-            href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+            href="/contato-vendas"
             className="inline-block text-center text-white font-bold text-base md:text-base lg:text-lg px-7 py-[13px] rounded-full no-underline bg-black"
           >
             {content.ctaSales}

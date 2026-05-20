@@ -19,7 +19,7 @@ function lazyWithRetry(factory: () => Promise<any>) {
         window.location.reload();
       }
       return { default: () => null };
-    })
+    }),
   );
 }
 
@@ -61,23 +61,65 @@ export default function HomePage() {
     <>
       <Nav />
       <Hero />
-      <div className="pb-15 md:pb-30"><LogoTicker /></div>
+      <div className="pb-15 md:pb-30">
+        <LogoTicker />
+      </div>
       {/* <div className="pb-15 md:pb-30"><HeroStatement /></div> */}
-      <Suspense><div className="pb-15 md:pb-30"><Showcase /></div></Suspense>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-12">
-        <Suspense><div data-reveal className="pb-15 md:pb-30"><Solutions /></div></Suspense>
+      <Suspense>
+        <div className="pb-15 md:pb-30">
+          <Showcase />
+        </div>
+      </Suspense>
+      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
+        <Suspense>
+          <div data-reveal className="pb-15 md:pb-30">
+            <Solutions />
+          </div>
+        </Suspense>
       </main>
-      <Suspense><div data-reveal className="pb-15 md:pb-30"><DemoSection /></div></Suspense>
-      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-12">
-        <Suspense><div data-reveal className="pb-15 md:pb-30"><Problem /></div></Suspense>
-        <Suspense><div data-reveal className="pb-15 md:pb-30"><CasesCarousel /></div></Suspense>
-        <Suspense><div data-reveal className="pb-15 md:pb-30"><Integrations /></div></Suspense>
-        <Suspense><div data-reveal className="pb-15 md:pb-30"><Plans /></div></Suspense>
-        <Suspense><div data-reveal className="pb-15 md:pb-30"><Blog /></div></Suspense>
+      <Suspense>
+        <div data-reveal className="pb-15 md:pb-30">
+          <DemoSection />
+        </div>
+      </Suspense>
+      <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
+        <Suspense>
+          <div data-reveal className="pb-15 md:pb-30">
+            <Problem />
+          </div>
+        </Suspense>
+        <Suspense>
+          <div data-reveal className="pb-15 md:pb-30">
+            <CasesCarousel />
+          </div>
+        </Suspense>
+        <Suspense>
+          <div data-reveal className="pb-15 md:pb-30">
+            <Integrations />
+          </div>
+        </Suspense>
+        <Suspense>
+          <div data-reveal className="pb-15 md:pb-30">
+            <Plans />
+          </div>
+        </Suspense>
+        <Suspense>
+          <div data-reveal className="pb-15 md:pb-30">
+            <Blog />
+          </div>
+        </Suspense>
       </main>
-      <Suspense><VCCta /></Suspense>
-      <Suspense><div className="pb-15 md:pb-30 pt-15 md:pt-20 bg-ink"><Newsletter /></div></Suspense>
-      <Suspense><Footer /></Suspense>
+      <Suspense>
+        <VCCta />
+      </Suspense>
+      <Suspense>
+        <div className="pb-15 md:pb-30 pt-15 md:pt-20 bg-ink">
+          <Newsletter />
+        </div>
+      </Suspense>
+      <Suspense>
+        <Footer />
+      </Suspense>
     </>
   );
 }

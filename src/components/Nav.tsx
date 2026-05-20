@@ -74,13 +74,13 @@ function TryOnIcon() {
   );
 }
 
-export default function Nav() {
+export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
-  const isDark = pathname.replace(/\/$/, "") === "/video-commerce";
+  const isDark = isDarkProp ?? pathname.replace(/\/$/, "") === "/video-commerce";
 
   const solutions: Solution[] = [
     {
@@ -273,9 +273,8 @@ export default function Nav() {
                   <NavigationMenuLink asChild>
                     <a
                       href="/cases"
-                      onClick={(e) =>
-                        handleNavClick("/cases", e)
-                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={cn(
                         navigationMenuTriggerStyle(),
                         isDark
@@ -309,6 +308,8 @@ export default function Nav() {
                   <NavigationMenuLink asChild>
                     <a
                       href="/blog"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={cn(
                         navigationMenuTriggerStyle(),
                         isDark
@@ -389,7 +390,9 @@ export default function Nav() {
                 )}
                 <a
                   href="/cases"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("/cases", e); }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   Resultados
@@ -403,6 +406,8 @@ export default function Nav() {
                 </a>
                 <a
                   href="/blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
@@ -413,7 +418,7 @@ export default function Nav() {
               {/* Bottom CTAs */}
               <div className="px-5 pb-8 pt-4 flex flex-col gap-3">
                 <a
-                  href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                  href="/contato-vendas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline"
@@ -421,7 +426,7 @@ export default function Nav() {
                   Falar com vendas
                 </a>
                 <a
-                  href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                  href="/quero-comecar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center bg-brand text-white font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
@@ -441,7 +446,7 @@ export default function Nav() {
 
           <div className="hidden md:block">
             <LetterButton
-              href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
+              href="/quero-comecar"
               className="bg-brand text-white text-lg font-bold px-5 py-[10px] rounded-full"
             >
               Começar agora

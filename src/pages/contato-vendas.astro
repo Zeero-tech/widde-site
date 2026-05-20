@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
+---
+
+<BaseLayout
+  title="Contato - Vendas da Widde"
+  description="Vamos te ajudar a começar com o Video Commerce e transformar a experiência da sua loja."
+  canonical="https://widde.io/contato-vendas"
+>
+  <Nav client:load />
+  <div class="body-modal">
+    <div class="modal-typebot" id="merlin-container">
+      <typebot-standard style="width: 100%; height: 100vh;"></typebot-standard>
+    </div>
+  </div>
+  <Footer client:load />
+</BaseLayout>
+
+<style>
+  .body-modal {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .modal-typebot {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script type="module">
+  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js';
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramsObject = Object.fromEntries(urlParams.entries());
+  Typebot.initStandard({
+    typebot: 'contato-vendas-widde',
+    prefilledVariables: paramsObject,
+    onInit: () => console.log('Teste de Log')
+  });
+</script>

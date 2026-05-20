@@ -90,7 +90,7 @@ export default function VCHero() {
             </ul>
             <div className="mt-6 sm:mt-8 md:mt-0  flex flex-col items-stretch md:flex-row md:items-center gap-3 sm:gap-4 md:gap-3">
               <AnimatedButton
-                href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                href="/contato-vendas"
                 className="inline-block text-center bg-brand text-white font-bold text-base sm:text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[10px] sm:py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline"
               >
                 Falar com vendas

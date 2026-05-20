@@ -12,10 +12,6 @@ export default function Logo({ width = 110, className }: LogoProps) {
       fill="none"
       className={className}
       style={{ overflow: "hidden", display: "block" }}
-      stroke="currentColor"
-      strokeWidth="1"
-      strokeLinejoin="round"
-      paintOrder="stroke fill"
     >
       <path
         className="logo-path"

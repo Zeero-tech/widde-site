@@ -35,7 +35,7 @@ export default function VideoCommercePage() {
 
   return (
     <>
-      <Nav />
+      <Nav isDark={true} />
       <VCHero />
       <div className="pb-15 md:pb-30"><LogoTicker /></div>
       <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">

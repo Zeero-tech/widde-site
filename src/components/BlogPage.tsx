@@ -396,7 +396,8 @@ const posts: Post[] = [
     slug: "evolucao-dos-comentarios-no-video",
     category: "Video Commerce",
     date: "12.05.2025",
-    title: "Evolução dos comentários no vídeo: solução para tirar mais objeções de compra e vender mais",
+    title:
+      "Evolução dos comentários no vídeo: solução para tirar mais objeções de compra e vender mais",
     description:
       "A Widde agora permite responder comentários de clientes nos vídeos de produto. Saiba como essa funcionalidade ajuda a tirar objeções e aumentar as conversões.",
     image:
@@ -480,7 +481,8 @@ const posts: Post[] = [
     slug: "como-colocar-video-na-nuvemsho",
     category: "Video Commerce",
     date: "25.02.2025",
-    title: "Como colocar vídeo na Nuvemshop? Página de produto, home e categorias",
+    title:
+      "Como colocar vídeo na Nuvemshop? Página de produto, home e categorias",
     description:
       "Vídeos na Nuvemshop aumentam a visibilidade da loja e impulsionam as vendas. Veja como adicionar em páginas de produto, home e categorias com a Widde.",
     image:
@@ -636,7 +638,8 @@ const posts: Post[] = [
     slug: "feed-de-videos-no-e-commerce",
     category: "Video Commerce",
     date: "12.05.2025",
-    title: "Feed de Vídeos no e-commerce: O que é e como funciona a novidade de Video Commerce",
+    title:
+      "Feed de Vídeos no e-commerce: O que é e como funciona a novidade de Video Commerce",
     description:
       "O Feed de Vídeos da Widde traz o formato de scroll infinito do TikTok para o e-commerce. Saiba como aumentar retenção, engajamento e conversão na sua loja.",
     image:
@@ -816,7 +819,8 @@ const posts: Post[] = [
     slug: "como-fazer-um-video-review-de-produtos",
     category: "Video Commerce",
     date: "22.10.2025",
-    title: "Como fazer um vídeo review de produtos? As 11 dicas para e-commerce",
+    title:
+      "Como fazer um vídeo review de produtos? As 11 dicas para e-commerce",
     description:
       "Aprenda a fazer vídeo reviews de produtos que aumentam conversão e retenção no e-commerce. 11 dicas sobre roteiro, equipamento, gravação, edição e publicação.",
     image:
@@ -936,7 +940,8 @@ const posts: Post[] = [
     slug: "integracao-facilitada-resultados-do-video-commerce-e-interatividade",
     category: "Video Commerce",
     date: "15.05.2025",
-    title: "Integração facilitada, resultados do Video Commerce e interatividade",
+    title:
+      "Integração facilitada, resultados do Video Commerce e interatividade",
     description:
       "Conheça a integração facilitada da Widde, os resultados mensuráveis do Video Commerce e como a interatividade dos vídeos transforma a experiência de compra.",
     image:
@@ -996,7 +1001,8 @@ const posts: Post[] = [
     slug: "vtex-day-2024-tendencias-da-producao-de-conteudo-retencao-e-atencao",
     category: "Tendências e-commerce",
     date: "12.05.2025",
-    title: "Vtex Day 2024: Tendências da produção de conteúdo, retenção e atenção",
+    title:
+      "Vtex Day 2024: Tendências da produção de conteúdo, retenção e atenção",
     description:
       "Insights do Vtex Day 2024: vídeo representa 82% do consumo de internet, UGC é tendência, atenção humana cai para 8 segundos e como adaptar seu e-commerce.",
     image:
@@ -1008,7 +1014,8 @@ const posts: Post[] = [
     slug: "dia-do-frete-gratis-como-vender-mais-com-videos-na-experiencia-do-cliente",
     category: "Tendências e-commerce",
     date: "12.05.2025",
-    title: "Dia do Frete Grátis: Como vender mais com vídeos na experiência do cliente",
+    title:
+      "Dia do Frete Grátis: Como vender mais com vídeos na experiência do cliente",
     description:
       "Estratégias para o Dia do Frete Grátis: planejamento, comunicação com vídeos, clareza sobre os produtos e como documentar resultados para crescer mais.",
     image:
@@ -1198,6 +1205,7 @@ const CATEGORIES = [
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("Ver Todos");
   const [search, setSearch] = useState("");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered = posts.filter((p) => {
     const matchCat =
@@ -1210,6 +1218,8 @@ export default function BlogPage() {
       p.description.toLowerCase().includes(q);
     return matchCat && matchSearch;
   });
+
+  const visible = showAll ? filtered : filtered.slice(0, 6);
 
   return (
     <>
@@ -1327,11 +1337,11 @@ export default function BlogPage() {
             </p>
 
             {/* Filters */}
-            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4 md:mb-6">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-10 md:mb-10">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => { setActiveCategory(cat); setShowAll(false); }}
                   className={`text-sm font-semibold px-4 py-[7px] rounded-full border transition-colors cursor-pointer ${
                     activeCategory === cat
                       ? "bg-black text-white border-black"
@@ -1345,14 +1355,14 @@ export default function BlogPage() {
                 type="text"
                 placeholder="Faça sua busca"
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => { setSearch(e.target.value); setShowAll(false); }}
                 className="ml-auto text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full md:w-auto md:min-w-[220px]"
               />
             </div>
 
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-              {filtered.map((post) => (
+              {visible.map((post) => (
                 <article key={post.slug} className="flex flex-col">
                   <a
                     href={`/blog/${post.slug}`}
@@ -1390,6 +1400,17 @@ export default function BlogPage() {
                 </article>
               ))}
             </div>
+
+            {!showAll && filtered.length > 6 && (
+              <div className="flex justify-center mt-12">
+                <button
+                  onClick={() => setShowAll(true)}
+                  className="inline-flex items-center gap-2 bg-brand text-white font-bold text-base px-8 py-4 rounded-full cursor-pointer border-none hover:opacity-90 transition-opacity"
+                >
+                  Ver todos os posts
+                </button>
+              </div>
+            )}
 
             {filtered.length === 0 && (
               <p className="text-center text-[#888] py-20 text-lg">

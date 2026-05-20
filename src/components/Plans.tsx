@@ -50,7 +50,7 @@ export default function Plans() {
             ))}
           </ul>
           <AnimatedButton
-            href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
+            href="/quero-comecar"
             className="inline-block w-full md:w-fit text-center bg-surface text-black font-bold text-base md:text-base lg:text-lg px-[22px] py-[11px] rounded-full no-underline border-[1.5px] border-surface-border hover:bg-[#eee] transition-colors"
           >
             Começar agora
@@ -114,7 +114,7 @@ export default function Plans() {
               </p>
             </div>
             <AnimatedButton
-              href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+              href="/contato-vendas"
               className="inline-block w-full text-center bg-brand text-white font-bold text-lg px-[22px] py-[11px] rounded-full no-underline border border-brand"
             >
               Falar com vendas →
@@ -159,7 +159,7 @@ export default function Plans() {
                 </p>
               </div>
               <AnimatedButton
-                href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                href="/contato-vendas"
                 className="text-base lg:text-lg inline-block bg-brand text-white font-bold px-[22px] py-[11px] rounded-full no-underline border border-brand w-fit"
               >
                 Falar com vendas →

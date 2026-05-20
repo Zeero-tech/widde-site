@@ -21,9 +21,12 @@ export default function Blog() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {blogPosts.map((post) => (
-          <div
+          <a
             key={post.title}
-            className="flex-shrink-0 w-[90vw] md:w-[60vw] lg:w-[45vw] snap-start rounded-[14px] overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)] flex flex-col"
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 w-[90vw] md:w-[60vw] lg:w-[45vw] snap-start rounded-[14px] overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)] flex flex-col no-underline"
           >
             <div
               className="w-full h-[180px] md:h-[220px] relative"
@@ -52,12 +55,14 @@ export default function Blog() {
               </p>
               <a
                 href={post.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-bold text-navy no-underline hover:underline mt-auto pt-3"
               >
                 Saiba mais →
               </a>
             </div>
-          </div>
+          </a>
         ))}
         {/* Trailing spacer to match page padding */}
         <div className="flex-shrink-0" />
@@ -70,10 +75,13 @@ export default function Blog() {
         role="list"
       >
         {blogPosts.map((post) => (
-          <div
+          <a
             key={post.title}
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
             role="listitem"
-            className="rounded-[14px] overflow-hidden transition-shadow shadow-[0_0_0_1px_rgb(233,233,233)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+            className="rounded-[14px] overflow-hidden transition-shadow shadow-[0_0_0_1px_rgb(233,233,233)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] no-underline"
             style={{
               display: "grid",
               gridRow: "span 5",
@@ -107,11 +115,13 @@ export default function Blog() {
             </p>
             <a
               href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-base md:text-base lg:text-lg font-bold text-navy no-underline hover:underline px-4 py-4 self-end"
             >
               Saiba mais →
             </a>
-          </div>
+          </a>
         ))}
       </div>
     </section>
