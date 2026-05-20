@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Widde Talks com Sara Lanzini" description="Widde Talks com Sara Lanzini, cofundadora da Vinci Shoes: estratégias de inovação em e-commerce, modelo sem estoque, experiência de unboxing e Video Commerce." canonical="https://widde.io/blog/widdetalks-sara-lanzini">
+  <BlogArticle client:load title="Widde Talks com Sara Lanzini" category="Tendências e-commerce" date="12.05.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d00ebfac62d0e3c5535a0_LIVE-SARA.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Entrevista com Sara Lanzini, cofundadora e diretora criativa da Vinci Shoes, abordando estratégias inovadoras no e-commerce e na moda sustentável. A Vinci Shoes foi fundada em julho de 2013 em Estância Velha, Rio Grande do Sul, e hoje gera 70% da receita pelo e-commerce, com quase 50 colaboradores e 4 lojas físicas.</p>
+
+      <h1><strong>Inovação em mercados tradicionais</strong></h1>
+      <p>Os fundadores disrupcionaram o mercado ao lançar exclusivamente online quando as vendas de calçados no e-commerce eram incomuns. A Vinci Shoes se especializou em calçados sem salto após reconhecer lacunas no mercado, oferecendo mais de 300 SKUs incluindo coleções para noivas.</p>
+      <p>Principais pilares da abordagem:<br />• <strong>Atendimento humanizado:</strong> A equipe responde perguntas sobre numeração e estilo, garantindo que os clientes resolvam seus problemas de forma positiva;<br />• <strong>Experiência de unboxing:</strong> Embalagem diferenciada com aroma exclusivo e brindes, transformando o recebimento do produto em um momento especial.</p>
+
+      <h1><strong>Modelo sem estoque</strong></h1>
+      <p>A Vinci opera sem estoque, reduzindo custos e permitindo lançamentos semanais de produtos. Essa abordagem possibilita a integração rápida do feedback dos clientes. A opção "Meu Vinci" de customização permite que os clientes misturem componentes ou ajustem tamanhos individualmente. Os prazos de produção são de 3 a 5 dias, permitindo entregas em São Paulo em até uma semana.</p>
+
+      <h1><strong>Video Commerce como touchpoint estratégico</strong></h1>
+      <p>Como Lanzini observou, às vezes os clientes preferem ver os produtos usados por pessoas reais em vez de vídeos polidos. Os benefícios da integração de vídeo incluem:<br />• Implantação rápida de conteúdo em layout de formato de story;<br />• Maior confiança na compra e taxas de conversão;<br />• Diferenciação do produto e construção de confiança;<br />• Diversas aplicações de conteúdo (tutoriais, promoções, dicas de estilo).</p>
+
+      <h1><strong>Estratégia de escala</strong></h1>
+      <p>O investimento precoce nas redes sociais pelos três fundadores criou vantagens significativas de crescimento. As parcerias com influenciadores enfatizam o alinhamento acima da contagem de seguidores, com particular sucesso usando microinfluenciadores em Porto Alegre. A lição central de Lanzini: o sucesso sustentado requer cercar-se de colaboradores alinhados e priorizar os insights dos clientes para impulsionar a inovação e a diferenciação.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Formato e personalização do Video Commerce" description="O Video Commerce está mudando a forma como os consumidores interagem com produtos no e-commerce. Conheça os formatos e opções de personalização disponíveis na Widde." canonical="https://widde.io/blog/formato-e-personalizacao-do-video-commerce">
+  <BlogArticle client:load title="Formato e personalização do Video Commerce" category="Video Commerce" date="28.01.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6798dce37777b8c419262fb1_Formatos%20e%20personaliza%C3%A7%C3%A3o%20dos%20v%C3%ADdeos.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Video Commerce vem mudando a forma como os consumidores interagem com produtos no e-commerce. Em vez de depender apenas de imagens e descrições, as lojas online agora aproveitam os vídeos para aumentar as taxas de conversão e criar experiências imersivas para o cliente. A personalização dos vídeos serve como diferencial, tornando a jornada de compra mais interativa, informativa e persuasiva.</p>
+
+      <h1><strong>Formatos de vídeo disponíveis no e-commerce</strong></h1>
+      <p>Existem dois formatos principais:</p>
+      <p>1. <strong>Vídeo em Destaque:</strong> Um vídeo flutuante que se expande ao clicar, permitindo que os visitantes assistam sem sair da página do produto. Mantém a identidade da marca com design personalizável e harmonia visual.<br />2. <strong>Feed de Vídeos:</strong> Uma solução de scroll infinito que se assemelha aos feeds das redes sociais. Essa página dedicada exibe todos os vídeos da loja, incentivando a navegação estendida e a descoberta de produtos, potencialmente aumentando o ticket médio.</p>
+
+      <h1><strong>Opções de personalização</strong></h1>
+      <p>A plataforma oferece sete recursos de personalização:</p>
+      <p>1. <strong>Formatos do Vídeo em Destaque:</strong> Opções incluem Círculo (eficiente em espaço), Ondulado (moderno), Retângulo (exibição detalhada) e Coração (produtos com apelo emocional). As cores das bordas podem ser ajustadas para integração com o design.<br />2. <strong>Texto de Destaque Antes de Abrir:</strong> Frases estratégicas como "Veja como usar na prática!" impulsionam o engajamento e as taxas de clique.<br />3. <strong>Carrinho de Compras Integrado:</strong> Os clientes podem adicionar itens diretamente dos vídeos sem navegação, reduzindo o atrito na compra. A disponibilidade do recurso varia conforme a plataforma de e-commerce.<br />4. <strong>Ajuste de Posição:</strong> O posicionamento flexível dos vídeos otimiza o impacto sem comprometer a usabilidade do site.<br />5. <strong>Configuração de Tabela de Medidas:</strong> Especialmente útil para varejistas de roupas, permite acesso rápido às medidas das peças durante a visualização.<br />6. <strong>Integração com WhatsApp:</strong> Um botão que facilita o suporte direto ao cliente, permitindo perguntas pré-preenchidas antes do redirecionamento.<br />7. <strong>Comentários nos Vídeos:</strong> Mecanismo de feedback dos clientes que fornece insights sobre a recepção e preferências do conteúdo.</p>
+
+      <h1><strong>Sobre a Widde</strong></h1>
+      <p>A plataforma da Widde permite a integração estratégica de vídeos para o e-commerce, oferecendo ferramentas de gestão intuitivas com rastreamento de métricas de performance. A solução enfatiza a funcionalidade interativa do site sem afetar a velocidade de carregamento da página.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import i18n from "../i18n";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LetterButton from "./LetterButton";
@@ -77,132 +74,13 @@ function TryOnIcon() {
   );
 }
 
-function LanguageSwitcher({ dark }: { dark?: boolean }) {
-  const { i18n: i18nInstance } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  const current = i18nInstance.language === "en" ? "en" : "pt-BR";
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  function select(lang: string) {
-    i18n.changeLanguage(lang);
-    setOpen(false);
-  }
-
-  const color = dark ? "white" : "#000";
-
-  return (
-    <div ref={ref} className="relative flex items-center">
-      <button
-        onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1 bg-transparent border-none cursor-pointer p-0"
-        style={{ color }}
-        aria-label="Change language"
-      >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-        </svg>
-        <svg
-          width="10"
-          height="10"
-          viewBox="0 0 12 12"
-          fill="none"
-          style={{
-            transition: "transform 0.2s",
-            transform: open ? "rotate(180deg)" : "rotate(0deg)",
-          }}
-        >
-          <path
-            d="M2 4L6 8L10 4"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
-
-      {open && (
-        <div
-          style={{
-            position: "absolute",
-            top: "calc(100% + 10px)",
-            right: 0,
-            background: "#fff",
-            borderRadius: 10,
-            boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
-            overflow: "hidden",
-            minWidth: 120,
-            zIndex: 100,
-          }}
-        >
-          {[
-            { code: "pt-BR", label: "🇧🇷 Português" },
-            { code: "en", label: "🇺🇸 English" },
-          ].map(({ code, label }) => (
-            <button
-              key={code}
-              onClick={() => select(code)}
-              style={{
-                display: "block",
-                width: "100%",
-                textAlign: "left",
-                padding: "10px 14px",
-                background: current === code ? "#f0f4ff" : "transparent",
-                border: "none",
-                cursor: "pointer",
-                fontWeight: current === code ? 700 : 400,
-                color: "#000",
-              }}
-              onMouseEnter={(e) => {
-                if (current !== code)
-                  (e.currentTarget as HTMLButtonElement).style.background =
-                    "#f6f6f6";
-              }}
-              onMouseLeave={(e) => {
-                if (current !== code)
-                  (e.currentTarget as HTMLButtonElement).style.background =
-                    "transparent";
-              }}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Nav() {
-  const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
 
-  const isDark = location.pathname.replace(/\/$/, "") === "/video-commerce";
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
+  const isDark = pathname.replace(/\/$/, "") === "/video-commerce";
 
   const solutions: Solution[] = [
     {
@@ -210,7 +88,7 @@ export default function Nav() {
       elementId: "#video-commerce",
       href: "/video-commerce",
       tag: null,
-      desc: t("nav.videoCommerceDesc"),
+      desc: "Carrossel, Destaques, Stories e Explorar. Vídeos interativos em todas as páginas do seu e-commerce.",
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
       icon: <VideoCommerceIcon />,
     },
@@ -218,7 +96,7 @@ export default function Nav() {
       label: "Live Commerce",
       elementId: "#live-commerce",
       tag: "Novo",
-      desc: t("nav.liveCommerceDesc"),
+      desc: "Transmissão ao vivo dentro do site, onde o cliente engaja, tira dúvidas e compra o produto com confiança.",
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
       icon: <LiveCommerceIcon />,
     },
@@ -226,7 +104,7 @@ export default function Nav() {
       label: "Provador IA",
       elementId: "#provador-ia",
       tag: "Novo",
-      desc: t("nav.tryOnDesc"),
+      desc: "Provador para Vestuário e Calçados, para seu cliente ver o produto no corpo sem sair de casa.",
       video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
       icon: <TryOnIcon />,
     },
@@ -265,8 +143,8 @@ export default function Nav() {
       window.location.href = href;
       return;
     }
-    if (location.pathname !== "/") {
-      navigate(`/?scrollTo=${elementId.replace("#", "")}`);
+    if (window.location.pathname !== "/") {
+      window.location.href = `/?scrollTo=${elementId.replace("#", "")}`;
     } else {
       getLenis().scrollTo(elementId, {
         duration: 3,
@@ -281,10 +159,14 @@ export default function Nav() {
     e: React.MouseEvent<HTMLAnchorElement>,
   ) {
     if (href.includes("http")) return;
+    if (!href.startsWith("#")) {
+      window.location.href = href;
+      return;
+    }
     e.preventDefault();
     setMobileOpen(false);
-    if (location.pathname !== "/") {
-      navigate(`/?scrollTo=${href.replace("#", "")}`);
+    if (window.location.pathname !== "/") {
+      window.location.href = `/?scrollTo=${href.replace("#", "")}`;
       return;
     }
     getLenis().scrollTo(href, {
@@ -314,10 +196,10 @@ export default function Nav() {
             }}
             onClick={(e) => {
               e.preventDefault();
-              if (location.pathname === "/") {
+              if (window.location.pathname === "/") {
                 getLenis().scrollTo(0, { duration: 3, easing: easeOutQuint });
               } else {
-                navigate("/");
+                window.location.href = "/";
               }
             }}
           >
@@ -327,7 +209,7 @@ export default function Nav() {
           {/* Mobile hamburger */}
           <button
             className={`md:hidden bg-transparent border-none text-2xl cursor-pointer p-2 ${isDark ? "text-white" : "text-black"}`}
-            aria-label={mobileOpen ? t("nav.menuClose") : t("nav.menuOpen")}
+            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen(!mobileOpen)}
           >
@@ -348,7 +230,7 @@ export default function Nav() {
                         : "text-black hover:bg-black/5 data-[state=open]:bg-black/5",
                     )}
                   >
-                    {t("nav.solutions")}
+                    Soluções
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[680px]  grid-cols-3 gap-3 p-2">
@@ -390,11 +272,9 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
-                      href="https://widde.io/cases?"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/cases"
                       onClick={(e) =>
-                        handleNavClick("https://widde.io/cases?", e)
+                        handleNavClick("/cases", e)
                       }
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -403,7 +283,7 @@ export default function Nav() {
                           : "text-black hover:bg-black/5",
                       )}
                     >
-                      {t("nav.results")}
+                      Resultados
                     </a>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -420,7 +300,7 @@ export default function Nav() {
                           : "text-black hover:bg-black/5",
                       )}
                     >
-                      {t("nav.plans")}
+                      Planos
                     </a>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -428,12 +308,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
-                      href="https://widde.io/blog?"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) =>
-                        handleNavClick("https://widde.io/blog?", e)
-                      }
+                      href="/blog"
                       className={cn(
                         navigationMenuTriggerStyle(),
                         isDark
@@ -441,16 +316,12 @@ export default function Nav() {
                           : "text-black hover:bg-black/5",
                       )}
                     >
-                      {t("nav.blog")}
+                      Blog
                     </a>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-
-            {/* <div className="ml-4">
-              <LanguageSwitcher dark={isDark} />
-            </div> */}
           </div>
 
           {/* Mobile menu — fullscreen overlay */}
@@ -464,10 +335,10 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault();
                     setMobileOpen(false);
-                    if (location.pathname === "/") {
+                    if (window.location.pathname === "/") {
                       getLenis().scrollTo(0, { duration: 3, easing: easeOutQuint });
                     } else {
-                      navigate("/");
+                      window.location.href = "/";
                     }
                   }}
                 >
@@ -475,7 +346,7 @@ export default function Nav() {
                 </a>
                 <button
                   className="bg-transparent border-none text-2xl cursor-pointer p-2 text-black"
-                  aria-label={t("nav.menuClose")}
+                  aria-label="Fechar menu"
                   onClick={() => { setMobileOpen(false); setMobileSolutionsOpen(false); }}
                 >
                   ✕
@@ -489,7 +360,7 @@ export default function Nav() {
                   className="bg-transparent text-left text-black text-lg font-normal py-4 flex items-center justify-between cursor-pointer p-0 w-full border-0 border-b border-black/10"
                   onClick={() => setMobileSolutionsOpen((o) => !o)}
                 >
-                  {t("nav.solutions")}
+                  Soluções
                   <svg
                     width="20" height="20" viewBox="0 0 20 20" fill="none"
                     style={{ transition: "transform 0.25s", transform: mobileSolutionsOpen ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }}
@@ -517,29 +388,25 @@ export default function Nav() {
                   </div>
                 )}
                 <a
-                  href="https://widde.io/cases?"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/cases?", e); }}
+                  href="/cases"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("/cases", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
-                  {t("nav.results")}
+                  Resultados
                 </a>
                 <a
                   href="#planos"
                   onClick={(e) => { setMobileOpen(false); handleNavClick("#planos", e); }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
-                  {t("nav.plans")}
+                  Planos
                 </a>
                 <a
-                  href="https://widde.io/blog?"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("https://widde.io/blog?", e); }}
+                  href="/blog"
+                  onClick={() => setMobileOpen(false)}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
-                  {t("nav.blog")}
+                  Blog
                 </a>
               </div>
 
@@ -577,7 +444,7 @@ export default function Nav() {
               href="https://widde.io/quero-comecar?utm_medium=cpc&utm_source=google&utm_campaign=01"
               className="bg-brand text-white text-lg font-bold px-5 py-[10px] rounded-full"
             >
-              {t("nav.startNow")}
+              Começar agora
             </LetterButton>
           </div>
         </nav>

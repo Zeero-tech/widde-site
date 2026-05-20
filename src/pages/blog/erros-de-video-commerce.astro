@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Os 08 erros de Video Commerce que você deve evitar" description="Conheça os 8 erros mais comuns no Video Commerce e saiba como evitá-los: iluminação ruim, áudio de baixa qualidade, falta de roteiro, vídeos longos e mais." canonical="https://widde.io/blog/erros-de-video-commerce">
+  <BlogArticle client:load title="Os 08 erros de Video Commerce que você deve evitar" category="Video Commerce" date="15.05.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66df2871f132d504b0b062a4_8%20erros%20com%20o%20Video%20Commerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Video Commerce é uma estratégia que combina elementos de entretenimento e informação para engajar o público, criando uma experiência de compra mais interativa e envolvente. A abordagem geralmente apresenta demonstrações de produto, tutoriais e depoimentos de clientes para construir confiança e destacar os benefícios do produto. O sucesso nessa área depende da autenticidade e de mensagens focadas no cliente — mostrar como um produto resolve problemas reais dos consumidores é fundamental.</p>
+
+      <h1><strong>1. Iluminação ruim</strong></h1>
+      <p>A iluminação inadequada está entre os erros mais comuns. Luz insuficiente cria sombras indesejadas e distorce a aparência do produto, comprometendo a percepção de qualidade. A solução envolve usar fontes de luz adequadas como softboxes ou iluminação natural para garantir que os produtos estejam bem iluminados e com detalhes visíveis.</p>
+
+      <h1><strong>2. Áudio de baixa qualidade</strong></h1>
+      <p>A qualidade do áudio é tão importante quanto a do vídeo. Áudio ruim com ruídos de fundo ou fala inaudível afasta os espectadores rapidamente. Quando o público não consegue entender a mensagem, o impacto do conteúdo e a confiança são perdidos. A solução inclui microfones de qualidade e ambientes silenciosos para gravação.</p>
+
+      <h1><strong>3. Falta de roteiro</strong></h1>
+      <p>Vídeos gravados sem planejamento ficam confusos e sem foco, causando desinteresse nos espectadores. Os roteiros definem os pontos principais, estabelecem o sequenciamento lógico das informações e incluem chamadas para ação necessárias, melhorando a clareza da mensagem e agilizando a produção.</p>
+
+      <h1><strong>4. Vídeos longos e sem objetividade</strong></h1>
+      <p>O público online tem um tempo de atenção limitado. Vídeos excessivamente longos sem objetividade perdem os espectadores. O conteúdo deve ser curto, direto e focado nos benefícios do produto para manter o engajamento e impulsionar as decisões de compra.</p>
+
+      <h1><strong>5. Espaços desorganizados ou com distrações</strong></h1>
+      <p>Os ambientes de gravação impactam significativamente a mensagem. Espaços desorganizados, cores conflitantes ou movimentos ao fundo distraem os espectadores dos produtos. Cenários limpos e simples alinhados com a identidade da marca mantêm o foco onde deve estar: no produto sendo promovido.</p>
+
+      <h1><strong>6. Ignorar a importância do enquadramento</strong></h1>
+      <p>O enquadramento inadequado desvaloriza os produtos e reduz o apelo visual. O enquadramento correto exige centralizar os produtos para destacar suas melhores características e transmitir profissionalismo. Um bom enquadramento deve evitar espaços vazios ou cortes inadequados que desviam a atenção do que importa.</p>
+
+      <h1><strong>7. Ausência de chamadas para ação</strong></h1>
+      <p>CTAs ausentes ou pouco claros deixam os espectadores incertos sobre os próximos passos, reduzindo as taxas de conversão. Exemplos incluem frases como "Compre agora" ou "Clique para saber mais", que devem aparecer em momentos estratégicos do vídeo — tanto visualmente quanto verbalmente — para guiar a progressão da jornada do cliente.</p>
+
+      <h1><strong>8. Não analisar os resultados dos vídeos</strong></h1>
+      <p>Produzir vídeos sem monitorar sua performance impede a otimização da estratégia. Analise métricas como taxa de visualização, tempo médio de visualização, cliques e conversões para entender o que está funcionando e o que precisa ser melhorado. Usar dashboards de análise permite ajustar o conteúdo com base em dados reais do comportamento dos clientes.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

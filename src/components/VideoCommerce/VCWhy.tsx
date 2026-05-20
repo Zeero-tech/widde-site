@@ -1,15 +1,13 @@
-import { useTranslation } from "react-i18next";
 import CountUp from "@/components/CountUp";
 import SectionTitle from "@/components/SectionTitle";
 
 const stats = [
-  { target: 80, prefix: "", suffix: "%" },
-  { target: 5, prefix: "", suffix: "x" },
-  { target: 4, prefix: "", suffix: "x" },
+  { target: 80, prefix: "", suffix: "%", label: "dos consumidores preferem assistir a um vídeo a ler sobre um produto" },
+  { target: 5, prefix: "", suffix: "x", label: "mais tempo na página em sessões com vídeo" },
+  { target: 4, prefix: "", suffix: "x", label: "mais conversão de vendas ao interagir com os vídeos" },
 ];
 
 export default function VCWhy() {
-  const { t } = useTranslation();
 
   return (
     <div className="bg-[#003ab9] rounded-[12px] md:rounded-[20px] px-6 py-10 md:py-16 md:px-10 lg:py-24 lg:px-16">
@@ -17,14 +15,14 @@ export default function VCWhy() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14 mb-10 md:mb-12 lg:mb-16">
         <div>
           <SectionTitle
-            label={t("vc.why.label")}
-            title={t("vc.why.title")}
+            label="Por que video commerce"
+            title="Vídeo é o que mais converte no e-commerce e chama a atenção da nova geração"
             className="[&_span]:text-white/40 [&_h2]:text-white"
           />
         </div>
         <div className="flex items-center">
           <p className="text-base md:text-lg text-white/50 leading-relaxed">
-            {t("vc.why.description")}
+            Consumidores que assistem a um vídeo de produto têm muito mais probabilidade de comprar. O vídeo reduz objeções, transmite confiança e aproxima o produto da realidade do cliente.
           </p>
         </div>
       </div>
@@ -40,7 +38,7 @@ export default function VCWhy() {
               className="block text-3xl md:text-4xl lg:text-5xl font-light text-white leading-none md:mb-3 flex-shrink-0 w-[80px]"
             />
             <span className="text-base md:text-base lg:text-lg text-white/50 leading-[1.4]">
-              {t(`vc.why.stat${i + 1}`)}
+              {stat.label}
             </span>
           </div>
         ))}

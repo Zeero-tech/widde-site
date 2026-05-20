@@ -1,12 +1,7 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import AnimatedButton from "@/components/AnimatedButton";
 
 export default function VCQuote() {
-  const { t } = useTranslation();
-  const navigate = useNavigate();
-
   return (
     <div className="bg-ink rounded-[12px] md:rounded-[20px] px-6 py-6 md:pl-[3.5rem] md:pr-[3.5rem] md:py-[3rem] lg:pl-[5rem] lg:pr-[5rem] lg:py-[3.5rem] flex flex-col md:flex-row items-center gap-10 md:gap-12 lg:gap-20">
       {/* Video — top on mobile, right on desktop */}
@@ -38,18 +33,21 @@ export default function VCQuote() {
       {/* Quote content — below video on mobile, left on desktop */}
       <div className="flex-1 md:max-w-[45vw] lg:max-w-[40vw] md:order-1">
         <p className="text-xl md:text-2xl lg:text-[28px] text-white leading-[1.4] font-normal mb-4 md:mb-5 lg:mb-6">
-          {t("vc.quote.text")}
+          "Desde que começamos a trabalhar com a Widde, a experiência em nosso e-commerce alcançou um novo nível de interatividade."
         </p>
         <div className="font-black text-base md:text-lg lg:text-xl text-white mb-[2px] md:mb-1">
-          {t("vc.quote.author")}
+          Natalia Figols
         </div>
-        <div className="text-base md:text-lg lg:text-xl text-white/50 mb-4 md:mb-5 lg:mb-6">{t("vc.quote.company")}</div>
+        <div className="text-base md:text-lg lg:text-xl text-white/50 mb-4 md:mb-5 lg:mb-6">Brinquedos Estrela</div>
         <AnimatedButton
           href="/?scrollTo=demo2"
-          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); navigate("/?scrollTo=demo2"); }}
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
+            window.location.href = "/?scrollTo=demo2";
+          }}
           className="inline-block w-full md:w-auto text-center bg-brand text-white font-bold text-base md:text-base lg:text-lg px-6 py-3 rounded-full no-underline hover:opacity-90 transition-opacity"
         >
-          {t("vc.quote.cta")}
+          Começar agora
         </AnimatedButton>
       </div>
     </div>

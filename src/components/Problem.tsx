@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import AnimatedButton from "./AnimatedButton";
 import CountUp from "./CountUp";
@@ -13,7 +12,6 @@ const DISPLAY_DURATION = 6000; // ms each video stays visible
 const FADE_DURATION = 1000;    // ms crossfade
 
 export default function Problem() {
-  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [next, setNext] = useState<number | null>(null);
   const [fading, setFading] = useState(false);
@@ -103,7 +101,7 @@ export default function Problem() {
           id="problema2-heading"
           className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-[1.25] mb-6 md:mb-7"
         >
-          {t("problem.title")}
+          A experiência online ainda afasta o cliente
         </h2>
         <div className="mb-7">
           <p className="text-base md:text-lg text-white/55 leading-[1.65] mb-4">
@@ -117,7 +115,7 @@ export default function Problem() {
           href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
           className="inline-block w-full md:w-fit text-center bg-white text-[#1D1D1D] font-bold text-lg md:text-lg px-[22px] py-[11px] rounded-full no-underline"
         >
-          {t("problem.cta")}
+          Falar com vendas →
         </AnimatedButton>
       </div>
 
@@ -130,7 +128,7 @@ export default function Problem() {
             className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
-            {t("problem.stat1Label")}
+            deixam de comprar por medo do produto não ser como descrito
           </div>
         </div>
         <div className="py-4 md:py-6 border-t border-white/15 flex md:block items-center gap-4">
@@ -140,7 +138,7 @@ export default function Problem() {
             className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
-            {t("problem.stat2Label")}
+            buscam vídeos antes de uma compra
           </div>
         </div>
         <div className="py-4 md:py-6 border-t border-white/15 flex md:block items-center gap-4">
@@ -150,7 +148,7 @@ export default function Problem() {
             className="text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-none md:mb-2 flex-shrink-0"
           />
           <div className="text-base md:text-lg text-white/55 leading-[1.4] max-w-[400px] mt-2">
-            {t("problem.stat3Label")}
+            desistem por más experiências no e-commerce
           </div>
         </div>
       </div>

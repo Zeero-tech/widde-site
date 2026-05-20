@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="A Widde estará no VTEX Day 2025" description="A Widde, plataforma pioneira e líder em Video Commerce no Brasil, estará presente no VTEX Day 2025 com lançamentos exclusivos focados em interatividade, retenção e conversão." canonical="https://widde.io/blog/a-widde-estara-no-vtex-day">
+  <BlogArticle client:load title="A Widde estará no VTEX Day 2025" category="Novidades" date="20.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682c7d31d90bd3f4ab5aa7a3_Widde%20no%20VTEX%20Day%202025%5B1%5D.avif" recentPosts={recentPosts}>
+    <div>
+      <p>A Widde, plataforma pioneira e líder em Video Commerce no Brasil, estará presente no VTEX Day 2025 — o maior evento de comércio digital do mundo. Esta é a terceira participação consecutiva da empresa no evento.</p>
+      <p>Os visitantes do estande da Widde terão acesso exclusivo aos novos lançamentos da plataforma, com foco em interatividade, retenção e melhoria de conversão.</p>
+
+      <h1><strong>Como a Widde marcou os anos anteriores?</strong></h1>
+      <p>As participações anteriores (2023-2024) contaram com demonstrações ao vivo, interações com lojistas e apresentações das principais marcas que utilizam a plataforma. Este ano incluirá estudos de caso e demonstrações práticas de como os vídeos interativos aumentam a conversão de vendas e o engajamento no e-commerce.</p>
+      <p>A empresa atende clientes como Boca Rosa, Speedo, Estrela, Vinci Shoes, Bagaggio, Muma, Khelf e LV Store.</p>
+
+      <h1><strong>Raísa Bresolin, COO e Fundadora</strong></h1>
+      <p>Segundo a liderança da empresa, "o VTEX Day é uma vitrine estratégica para demonstrar não apenas nossa evolução como solução, mas também a força do Video Commerce". Os vídeos funcionam como "vendedores 24 horas, entregando informação e confiança" aos consumidores online.</p>
+      <p>A plataforma se integra de forma simples com todas as plataformas de e-commerce, atendendo empresas de todos os portes.</p>
+
+      <h1><strong>O que é o Video Commerce?</strong></h1>
+      <p>O Video Commerce representa o uso interativo de vídeos na loja online, permitindo que os consumidores entendam melhor os diferenciais dos produtos e se sintam mais confiantes nas decisões de compra. Essa abordagem humaniza as lojas online e endereça as objeções dos clientes em escala.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

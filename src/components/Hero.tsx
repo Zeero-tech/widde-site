@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import AnimatedButton from "./AnimatedButton";
 import { getLenis } from "../lib/lenis";
 import { easeOutQuint } from "../lib/easing";
 
 export default function Hero() {
-  const { t } = useTranslation();
   const contentRef = useRef<HTMLDivElement>(null);
   const videoInnerRef = useRef<HTMLDivElement>(null);
 
@@ -54,34 +52,34 @@ export default function Hero() {
             style={{ justifyContent: "center" }}
           >
             <span className="block text-xs sm:text-sm md:text-sm font-bold text-brand uppercase tracking-[2px] mb-4 sm:mb-5 md:mb-5">
-              {t("hero.tagline")}
+              A experiência do físico para o online
             </span>
             <h1 className="text-4xl sm:text-[2.625rem] md:text-[2.5rem] lg:text-5xl font-black leading-[1.15] mb-6 sm:mb-8 md:mb-6 text-black">
-              {t("hero.title")}{" "}
-              <span className="text-brand">{t("hero.titleHighlight")}</span>
+              Impulsione as vendas gerando confiança na experiência do{" "}
+              <span className="text-brand">consumidor.</span>
             </h1>
             <p className="text-base sm:text-lg md:text-base lg:text-lg text-[#666] leading-[1.7] mb-1 sm:mb-3 md:mb-1 max-w-full md:max-w-[820px]">
-              {t("hero.description")}
+              Se o consumidor não entender o valor do seu produto, ele vai comprar em outro lugar.
             </p>
             <p className="text-base sm:text-lg md:text-base lg:text-lg text-[#666] leading-[1.7] mb-1 sm:mb-3 md:mb-1 max-w-full md:max-w-[1100px]">
               Por isso, com a Widde você ajuda o visitante a <strong>sentir, entender, escolher e comprar no seu site.</strong>
             </p>
             <p className="text-base sm:text-lg md:text-sm lg:text-base font-bold text-[#666] leading-[1.7] mb-6 sm:mb-10 md:mb-8 lg:mb-10 max-w-full md:max-w-[720px]">
-              {t("hero.descriptionProducts")}
+              Conheça o Video Commerce, Live Commerce e Provador IA.
             </p>
             <div className="mt-8 md:mt-0 flex flex-col items-stretch md:flex-row md:items-center gap-3 sm:gap-4 md:gap-3 md:justify-start">
               <AnimatedButton
                 href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
                 className="inline-block text-center bg-brand text-white font-bold text-base sm:text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[10px] sm:py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline"
               >
-                {t("hero.ctaSales")}
+                Falar com vendas
               </AnimatedButton>
               <AnimatedButton
                 href="#demo"
                 onClick={handleVerDemo}
                 className="inline-block text-center bg-transparent text-black font-bold text-base sm:text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[10px] sm:py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline border border-black/20 hover:border-black transition-colors"
               >
-                {t("hero.ctaLearnMore")}
+                Conhecer mais
               </AnimatedButton>
             </div>
           </div>
@@ -111,7 +109,6 @@ export default function Hero() {
                 playsInline
                 preload="auto"
               >
-                <source src="/root/Video-inicio-site.webm" type="video/webm" />
                 <source src="/root/Video-inicio-site.mp4" type="video/mp4" />
               </video>
             </div>

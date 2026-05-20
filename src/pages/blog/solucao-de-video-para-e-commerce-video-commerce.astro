@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Solução de vídeo para e-commerce | Video Commerce" description="A Widde Video Commerce é a plataforma que transforma sua loja online com vídeos interativos e imersivos. 93% dos consumidores consideram vídeos essenciais para decidir sobre uma compra." canonical="https://widde.io/blog/solucao-de-video-para-e-commerce-video-commerce">
+  <BlogArticle client:load title="Solução de vídeo para e-commerce | Video Commerce" category="Video Commerce" date="18.05.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226b3bc37dbc7c14054d59_Solu%C3%A7%C3%A3o%20de%20v%C3%ADdeo%20para%20e-commerce%20(2).avif" recentPosts={recentPosts}>
+    <div>
+      <p>A Widde Video Commerce é uma plataforma que transforma as compras online por meio de vídeos interativos e imersivos. O Video Commerce se posiciona como essencial para lojistas que querem ir além de fotos e descrições tradicionais.</p>
+      <p>• 93% dos consumidores consideram vídeos necessários para decidir sobre uma compra<br />• 84% abandonam o carrinho por falta de confiança no produto</p>
+
+      <h1><strong>Uma nova forma de vender: vídeos no centro da jornada de compra</strong></h1>
+      <p>A Widde traz para o e-commerce a experiência de vídeo das redes sociais, permitindo decisões rápidas por meio de vídeos curtos e envolventes, sem a necessidade de longas descrições textuais.</p>
+
+      <h1><strong>Vídeo Story em todas as páginas da loja</strong></h1>
+      <p>Os vídeos aparecem em formato flutuante nas páginas de produto, homepage e seções de categoria. Expandem ao clique sem que o cliente saia da página de compra. Personalizável para refletir a identidade da marca. Cria uma experiência familiar e interativa, semelhante aos stories das redes sociais.</p>
+
+      <h1><strong>Feed de Vídeos com scroll infinito</strong></h1>
+      <p>Uma página dedicada com feed de scroll infinito de vídeos, similar à experiência das redes sociais. Incentiva a exploração de mais produtos, pode aumentar o tempo no site e o ticket médio, e oferece uma visão 360° do catálogo da loja.</p>
+
+      <h1><strong>Carrinho dentro do vídeo</strong></h1>
+      <p>Permite que os clientes adicionem itens diretamente a partir do vídeo. 100% integrado com os sistemas da loja. Reduz o atrito na compra e as barreiras do checkout.</p>
+
+      <h1><strong>Comentários nos vídeos com respostas da loja</strong></h1>
+      <p>Permite que a loja responda os comentários nos vídeos. Funciona como avaliações e depoimentos públicos. Responde dúvidas dos clientes em tempo real. Melhora as taxas de conversão e reduz devoluções.</p>
+
+      <h1><strong>Carrossel de Vídeos</strong></h1>
+      <p>Exclusivo do plano Widde Pro. Benefícios incluem exibição de múltiplos vídeos (demonstrações, avaliações, tutoriais), maior engajamento e tempo no site, visibilidade para novos lançamentos, ticket médio mais alto e espaço para conteúdo de influenciadores.</p>
+
+      <h1><strong>Destaques da Home e de Categorias</strong></h1>
+      <p>Recursos de destaque nas páginas de homepage e categorias, similares aos destaques de stories das redes sociais. Exibem informações estratégicas que eliminam dúvidas frequentes, melhoram visibilidade, engajamento e conversões. Ativação simples por tags.</p>
+
+      <h1><strong>Destaques do Produto</strong></h1>
+      <p>Organização estratégica de informações críticas sobre o produto. Cria experiências exclusivas na loja. Diferenciação competitiva. Maiores oportunidades de engajamento.</p>
+
+      <h1><strong>Benefícios da Widde para o e-commerce</strong></h1>
+      <p>• <strong>Experiência imersiva e humanizada:</strong> Substitui descrições frias por interações visuais, criando uma navegação fluida e envolvente.<br />• <strong>Redução nas devoluções e trocas:</strong> A apresentação detalhada do produto (tamanho, textura, caimento, cores reais, funcionalidade) reduz surpresas negativas e constrói confiança na compra.<br />• <strong>Aumento na taxa de conversão:</strong> Vídeos explicativos interativos superam objeções, facilitam a tomada de decisão e aceleram as compras pela funcionalidade de carrinho integrado.<br />• <strong>Prova social e conteúdo gerado pelo usuário:</strong> Comentários nos vídeos funcionam como avaliações públicas; as respostas da loja criam diálogos visíveis que beneficiam outros compradores.</p>
+
+      <h1><strong>Impacto direto no SEO e na performance do site</strong></h1>
+      <p>A Widde hospeda vídeos otimizados sem impactar a velocidade de carregamento da página (ao contrário do YouTube embarcado). Aumenta o tempo no site, um sinal importante para o algoritmo do Google. A redução nas taxas de rejeição fortalece a autoridade da página. O aumento nas interações apoia o ranqueamento orgânico.</p>
+
+      <h1><strong>Integração simples e compatibilidade com todas as plataformas</strong></h1>
+      <p>Compatível com Shopify, Tray, Nuvemshop, Bagy, Wake, VTEX e outras. Implementação simples, sem requisitos técnicos complexos.</p>
+
+      <h1><strong>Cases reais de sucesso</strong></h1>
+      <p>Cases de Alanis Brand, Brinquedos Estrela, Shop Emme e Vinci Shoes mostram resultados como maior tempo no site, redução das devoluções, maior interação dos clientes e taxas de conversão significativamente mais altas.</p>
+      <p>"Desde que começamos a trabalhar com a Widde, a experiência em nosso e-commerce alcançou um novo nível de interatividade" — Natalia Figols, Brinquedos Estrela.</p>
+
+      <h1><strong>Widde: mais que vídeo, é uma revolução na experiência de compra</strong></h1>
+      <p>A Widde é uma ponte completa de comunicação entre a loja e o cliente, por meio de interação, resolução de dúvidas, exibição detalhada e integração de carrinho.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

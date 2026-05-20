@@ -1,4 +1,3 @@
-import { useNavigate, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
@@ -16,14 +15,14 @@ const footerColumns = [
   {
     title: "Empresa",
     links: [
-      { label: "Sobre nós", href: "https://widde.io/quem-somos?utm_medium=cpc&utm_source=google&utm_campaign=01" },
+      { label: "Sobre nós", href: "/quem-somos" },
       { label: "Carreiras", href: "https://carreirawidde.lovable.app/" },
     ],
   },
   {
     title: "Recursos",
     links: [
-      { label: "Blog", href: "https://widde.io/blog?utm_medium=cpc&utm_source=google&utm_campaign=01" },
+      { label: "Blog", href: "/blog" },
       { label: "Cases", href: "https://widde.io/cases?" },
       { label: "Central de Ajuda", href: "https://intercom.help/widde/pt-BR/" },
     ],
@@ -46,23 +45,18 @@ const footerColumns = [
 ];
 
 export default function Footer() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>, link: { href: string; scrollTo?: string }) {
     if (!link.scrollTo) return;
     e.preventDefault();
 
-    if (location.pathname === "/") {
-      // Already on home — scroll directly with Lenis
+    if (window.location.pathname === "/") {
       getLenis().scrollTo(`#${link.scrollTo}`, {
         duration: 3.5,
         offset: -70,
         easing: easeOutQuint,
       });
     } else {
-      // Navigate to home with scrollTo param — App.tsx handles the scroll
-      navigate(`/?scrollTo=${link.scrollTo}`);
+      window.location.href = `/?scrollTo=${link.scrollTo}`;
     }
   }
 

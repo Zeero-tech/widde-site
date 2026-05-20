@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Os 04 formatos de vídeos para seu e-commerce" description="Conheça os 4 principais formatos de vídeo para o seu e-commerce: bastidores, comparativos, unboxing e demonstrativos. Veja como cada um contribui para as vendas." canonical="https://widde.io/blog/formatos-de-videos-para-seu-e-commerce">
+  <BlogArticle client:load title="Os 04 formatos de vídeos para seu e-commerce" category="Video Commerce" date="13.01.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/678537faf754913ec29091a0_formatos%20de%20v%C3%ADdeos%20para%20e-commerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Os vídeos enriquecem o e-commerce criando experiências imersivas. Quatro formatos principais têm finalidades estratégicas: o conteúdo de bastidores constrói a humanidade da marca, os vídeos comparativos facilitam as decisões de compra, o unboxing revela a qualidade do produto e os vídeos demonstrativos destacam a funcionalidade.</p>
+
+      <h1><strong>1. Vídeos de Bastidores</strong></h1>
+      <p>Esse formato mostra as operações da empresa de forma autêntica, revelando processos de produção, membros da equipe e valores da marca. Fomenta conexões emocionais e confiança com os consumidores.</p>
+      <p><strong>Dicas de gravação:</strong> Priorize a autenticidade — evite encenações artificiais; desenvolva narrativas que enfatizem o esforço e a paixão na produção; garanta boa iluminação mesmo com estética casual; mostre os colaboradores demonstrando suas contribuições; mantenha os vídeos entre 1 e 2 minutos.</p>
+
+      <h1><strong>2. Vídeos Comparativos</strong></h1>
+      <p>Ajudam os clientes a distinguir entre produtos similares, destacando características relevantes como desempenho, durabilidade, preço e design.</p>
+      <p><strong>Dicas de gravação:</strong> Foque nos critérios relevantes para o consumidor; apresente vantagens e desvantagens de forma equilibrada; forneça exemplos de cenários de uso; use seções estruturadas e claras; inclua demonstrações práticas; adicione legendas e gráficos comparativos.</p>
+
+      <h1><strong>3. Vídeos de Unboxing</strong></h1>
+      <p>Esse formato popular documenta a experiência de desembalagem do produto, revelando a apresentação da embalagem e os itens incluídos. Constrói antecipação e demonstra o cuidado com o envio.</p>
+      <p><strong>Dicas de gravação:</strong> Use ambientes limpos e bem iluminados; mostre cada estágio do unboxing progressivamente; aproveite elementos de áudio de qualidade; expresse entusiasmo genuíno; inclua informações práticas sobre a embalagem.</p>
+
+      <h1><strong>4. Vídeos Demonstrativos</strong></h1>
+      <p>Explicam a funcionalidade, os detalhes e os benefícios do produto em todas as categorias.</p>
+      <p><strong>Dicas de gravação:</strong> Planeje scripts detalhados priorizando os recursos principais; capture ângulos variados do produto; enfatize os benefícios de resolução de problemas; incorpore elementos visuais e gráficos.</p>
+
+      <h1><strong>Widde para Video Commerce</strong></h1>
+      <p>A Widde transforma a integração de vídeos no e-commerce, permitindo a colocação direta em todas as páginas da loja. As funcionalidades incluem feeds de vídeos, carrinhos de compras dentro dos vídeos e análises — projetados para aumentar as taxas de conversão e o engajamento dos clientes.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="As 07 vantagens de usar vídeos no e-commerce" description="Descubra as 7 vantagens de usar vídeos no e-commerce: mais engajamento, conversão, retenção, confiança e SEO. Conheça o Video Commerce com a Widde." canonical="https://widde.io/blog/vantagens-de-usar-videos-no-e-commerce">
+  <BlogArticle client:load title="As 07 vantagens de usar vídeos no e-commerce" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6720d2a4d1870477e35df5ea_7%20vantagens%20de%20usar%20v%C3%ADdeos%20no%20e-commerce%20(1).avif" recentPosts={recentPosts}>
+    <div>
+      <p>Os vídeos no e-commerce servem como mecanismo para impulsionar a receita de vendas e melhorar a experiência do usuário. Ao integrar vídeos nas lojas online, as marcas podem exibir os produtos de forma dinâmica, fornecendo visualização realista e detalhada além das fotos e descrições tradicionais. Vídeos de demonstração, tutoriais, UGC e depoimentos de clientes ajudam a construir confiança e influenciam as decisões de compra. Essa estratégia aumenta as taxas de conversão, a retenção de clientes e reduz as devoluções ao fornecer expectativas mais claras sobre os produtos.</p>
+
+      <h1><strong>1. Aumenta o engajamento dos clientes</strong></h1>
+      <p>O conteúdo em vídeo é mais atrativo do que textos e imagens estáticas, capturando a atenção dos visitantes e prolongando a duração no site. Quando os clientes assistem a vídeos, eles se engajam mais profundamente durante a navegação, potencialmente aumentando o interesse pelo produto e pela marca. Os vídeos transmitem mensagens emocionais e criam conexões profundas com o público, influenciando positivamente a percepção da marca e incentivando visitas repetidas.</p>
+
+      <h1><strong>2. Melhora a taxa de conversão</strong></h1>
+      <p>Os vídeos de produto permitem que os clientes vejam visualizações detalhadas, aumentando a confiança na compra. Vídeos de demonstração explicam funcionalidade, benefícios e uso diário, facilitando as decisões de compra. Estatísticas de consumidores indicam que aqueles que assistem a vídeos de produto demonstram maior probabilidade de compra em comparação com os não-espectadores. A presença de vídeos também reduz as taxas de abandono de carrinho ao responder visualmente e imediatamente às dúvidas.</p>
+
+      <h1><strong>3. Aumenta o tempo de permanência na página</strong></h1>
+      <p>Os vídeos capturam a atenção dos visitantes por períodos prolongados, aumentando as métricas de tempo na página. Maior duração no site permite que os consumidores absorvam mais informações sobre produtos e marca, influenciando positivamente as decisões de compra. O tempo de página prolongado sinaliza relevância do conteúdo para os motores de busca, contribuindo para melhores posições nos rankings de busca e maior visibilidade orgânica.</p>
+
+      <h1><strong>4. Constrói confiança e credibilidade</strong></h1>
+      <p>A construção de confiança é muito importante no e-commerce, onde os clientes não podem examinar fisicamente os produtos antes de comprar. Os vídeos criam uma sensação de transparência e autenticidade por meio de apresentações honestas e detalhadas dos produtos. Depoimentos de clientes, demonstrações autênticas e conteúdo de bastidores humanizam as marcas e transmitem confiança. Quando as empresas demonstram disposição para mostrar os produtos de forma abrangente e de múltiplos ângulos, os clientes se sentem mais seguros para comprar.</p>
+
+      <h1><strong>5. Reduz dúvidas e objeções de compra</strong></h1>
+      <p>Os vídeos impactam diretamente na redução de dúvidas e objeções ao fornecer visualização do produto e esclarecer a funcionalidade. Vídeos comparativos ajudam os consumidores a escolher entre opções, enquanto vídeos de unboxing demonstram a apresentação da entrega. Isso reduz a hesitação na decisão dos clientes e minimiza as demandas por suporte adicional via chat ao vivo ou e-mail.</p>
+
+      <h1><strong>6. Otimiza o SEO do site</strong></h1>
+      <p>Os vídeos servem como excelentes ferramentas de otimização de SEO para sites de e-commerce. A inserção estratégica aumenta o tempo de permanência dos visitantes na página — um fator que o Google considera favoravelmente ao classificar resultados de busca. Os vídeos geram sinais adicionais de engajamento (cliques, compartilhamentos) indicando relevância do conteúdo para os motores de busca, aumentando a visibilidade nas buscas e ampliando as oportunidades de vendas.</p>
+
+      <h1><strong>7. Explica os produtos de forma mais aprofundada</strong></h1>
+      <p>Os vídeos representam ferramentas eficazes para explicação detalhada de produtos, beneficiando especialmente ofertas complexas ou inovadoras. Em vez de depender apenas de descrições textuais e imagens que podem criar incerteza, os vídeos possibilitam apresentações visuais completas do produto mostrando funcionalidade, aplicações e características distintivas. Isso elimina ambiguidades e fornece compreensão precisa das expectativas de compra, contribuindo para experiências de compra mais satisfatórias e maior probabilidade de recomendações e avaliações positivas.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

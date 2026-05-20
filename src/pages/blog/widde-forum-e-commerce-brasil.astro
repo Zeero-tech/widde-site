@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Widde confirma presença no Fórum E-commerce Brasil 2025" description="Widde confirma presença no Fórum E-commerce Brasil 2025 com soluções inéditas em Video Commerce. Conheça as novidades que serão apresentadas no maior evento de e-commerce do mundo." canonical="https://widde.io/blog/widde-forum-e-commerce-brasil">
+  <BlogArticle client:load title="Widde confirma presença no Fórum E-commerce Brasil 2025 com soluções inéditas em Video Commerce" category="Novidades" date="16.06.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6848554ca0eb76998d83728b_Widde%20no%20f%C3%B3rum%20e-commerce%20brasil.png" recentPosts={recentPosts}>
+    <div>
+      <p>A Widde, plataforma líder em Video Commerce no Brasil, confirma presença pelo terceiro ano consecutivo no Fórum E-commerce Brasil — o maior evento de comércio eletrônico do mundo.</p>
+      <p>Para 2025, a empresa planeja apresentar os avanços mais recentes em video commerce, com foco em engajamento, retenção e aumento de conversão por meio de conteúdos interativos. Após a forte receptividade em 2023 e 2024, a Widde retorna com infraestrutura aprimorada e demonstrações ao vivo.</p>
+
+      <h1><strong>Solução Explorar</strong></h1>
+      <p>Uma oferta proprietária que transforma vitrines em experiências interativas. O recurso oferece uma jornada imersiva com vídeos interativos organizados por categorias e filtros personalizados, projetados para explicar produtos, superar objeções e construir a confiança do consumidor sem que ele precise sair da loja.</p>
+
+      <h1><strong>Plano Widde Pro</strong></h1>
+      <p>Inclui Carrossel de Vídeos, Destaques da Home, Destaques do Produto e Widde AI — uma ferramenta para filtrar comentários e agilizar a análise de feedbacks. Posicionado para e-commerces que buscam vantagem competitiva por meio de engajamento diferenciado com vídeo.</p>
+
+      <h1><strong>Cases de Sucesso</strong></h1>
+      <p>O evento contará com a apresentação de cinco cases de clientes — Vinci Shoes, Shop Emme, Alanis, PA Concept e Majesté — que registraram aumentos significativos nas taxas de conversão com o uso do Video Commerce.</p>
+
+      <h1><strong>O que é o Video Commerce?</strong></h1>
+      <p>O Video Commerce representa o uso dos seus vídeos de forma interativa na loja online, permitindo que os consumidores entendam melhor os diferenciais dos produtos e se sintam mais confiantes nas decisões de compra. Essa abordagem humaniza as lojas online e endereça as objeções dos clientes em escala.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

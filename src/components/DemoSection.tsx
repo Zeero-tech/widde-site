@@ -1,10 +1,8 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import MuxPlayer from "@mux/mux-player-react";
 import AnimatedButton from "./AnimatedButton";
 
 export default function DemoSection() {
-  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -53,20 +51,17 @@ export default function DemoSection() {
                 Conheça
               </span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-black leading-[1.25]">
-                {t("demo.heading")}
+                Como a Widde funciona?
               </h2>
             </div>
             <p className="text-base md:text-lg text-text-muted leading-relaxed mb-6 max-w-[440px]">
-              {t(
-                "demo.description",
-                "Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca.",
-              )}
+              Conheça como a Widde gera mais conversão, menos devolução e mais valor percebido do seu produto e marca.
             </p>
             <AnimatedButton
               href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
               className="inline-block w-full md:w-fit text-center bg-black text-white font-bold text-lg md:text-lg px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
             >
-              {t("demo.cta", "Falar com vendas")}
+              Falar com vendas
             </AnimatedButton>
           </div>
         </div>

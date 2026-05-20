@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Construção de marca, estratégias de venda e e-commerce" description="Widde Talks com Luísa Morato, fundadora da Camys Brand: posicionamento de marca, construção de comunidade, Video Commerce e controle de estoque no e-commerce." canonical="https://widde.io/blog/construcao-de-marca-estrategias-de-venda-e-ecommerce">
+  <BlogArticle client:load title="Construção de marca, estratégias de venda e e-commerce" category="Tendências e-commerce" date="12.05.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d001cc986ee07dd37872d_LIVE-LUISA-2.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Insights de Luísa Morato, fundadora e CEO da Camys Brand, sobre estratégias diárias de vendas e como atingir metas de receita para lojas online — desde construção de marca até e-commerce. A Camys foi lançada em 2018 em Belo Horizonte e hoje opera com quase 40 colaboradores (98% mulheres, 100% de liderança feminina), gerando mais de R$ 7 milhões em receita digital em 2022.</p>
+
+      <h1><strong>Posicionamento de marca</strong></h1>
+      <p>Estabelecer um posicionamento único é essencial para se destacar. A Camys eliminou o termo "básico" de seu vocabulário, desafiando a lógica de mercado de que peças de uso frequente merecem investimento mínimo. A marca enfatiza hábitos sustentáveis — comprar itens de qualidade, cuidar das peças e prolongar sua vida útil — refletido em produtos que combinam qualidade, conforto e design.</p>
+
+      <h1><strong>Construção de comunidade</strong></h1>
+      <p>A centralidade no cliente define a Camys desde o início. Comunidades fortes amplificam o marketing boca a boca e a difusão da experiência de compra pelas redes sociais. A empresa usa grupos focais, convidando clientes para dar feedback durante os lançamentos de coleções, garantindo que "não há concorrência que possa tirar isso."</p>
+
+      <h1><strong>Integração de tecnologia e Video Commerce</strong></h1>
+      <p>A Camys usa o Video Commerce interativo da Widde desde 2022, humanizando a jornada de compra. Os vídeos permitem que os clientes se sintam mais próximos e seguros ao ver outros experimentando os produtos e se comunicando, além de mostrar os detalhes das peças, o caimento, a qualidade e as opções de estilo.</p>
+
+      <h1><strong>Controle de estoque</strong></h1>
+      <p>"Não existe investimento em marketing que supere um estoque saudável e bem planejado." O gerenciamento do estoque representa a base da marca, exigindo metodologias estudadas para cálculos de suprimento e graduação de tamanhos. Analisar o histórico de vendas e a rotatividade de produtos possibilita reabastecimento eficiente e lançamentos de coleções mais tranquilos.</p>
+
+      <h1><strong>Lições essenciais para o e-commerce</strong></h1>
+      <p>• <strong>Flexibilidade:</strong> A adaptabilidade aborda desafios imprevistos;<br />• <strong>Autoconhecimento:</strong> Identificar limitações pessoais e áreas de melhoria;<br />• <strong>Colaboração:</strong> Reconhecer quando buscar ajuda e trabalhar coletivamente;<br />• <strong>Aprendizado contínuo:</strong> Manter-se atualizado em diversas áreas e setores.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  {
+    slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento",
+    title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png",
+  },
+  {
+    slug: "report-video-commerce-brasil-2025",
+    title: "Report Video Commerce Brasil 2025",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png",
+  },
+  {
+    slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva",
+    title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png",
+  },
+  {
+    slug: "como-fidelizar-os-clientes-no-e-commerce",
+    title: "Como fidelizar os clientes no e-commerce",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png",
+  },
+  {
+    slug: "a-nova-era-das-compras-online-como-o-tiktok-shop-se-tornou-o-maior-canal-de-descoberta-do-e-commerce",
+    title: "A nova era das compras online: como o TikTok Shop se tornou o maior canal de descoberta do e-commerce",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6932f3e08775eaf14aea5fcf_Coolab%20com%20Flavio%20B%201.png",
+  },
+]
+---
+
+<BaseLayout
+  title="Sua loja online está pronta para o Discovery Commerce? Aprenda com o TikTok Shop"
+  description="O Discovery Commerce está redefinindo o e-commerce tradicional. Entenda como o TikTok Shop funciona e como aplicar essa lógica na sua loja online."
+  canonical="https://widde.io/blog/sua-loja-online-esta-pronta-para-o-discovery-commerce-aprenda-com-o-tiktok-shop"
+>
+  <BlogArticle
+    client:load
+    title="Sua loja online está pronta para o Discovery Commerce? Aprenda com o TikTok Shop"
+    category="Video Commerce"
+    date="09.10.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68e675e24e75460b85777d33_Blog_%20Sua%20loja%20online%20est%C3%A1%20pronta%20para%20o%20Discovery%20Commerce.png"
+    recentPosts={recentPosts}
+  >
+    <div>
+      <p>Imagine que você está navegando pelas redes sociais quando aparece um vídeo falando de um produto com conteúdo impactante. Minutos antes você não sabia que queria, mas de repente você está interessado e realiza uma compra.</p>
+      <p>Essa é a mecânica central do <strong>Discovery Commerce</strong>, um modelo que impulsiona plataformas como o <strong>TikTok Shop</strong> e está redefinindo o e-commerce tradicional.</p>
+      <p>Enquanto muitas lojas online ainda dependem de tráfego pago e buscas diretas, o TikTok Shop impulsiona vendas por meio de conteúdo, entretenimento e influência. Em vez de esperar que a intenção de compra surja, ele constrói ativamente essa intenção.</p>
+      <p>A Widde explica a mecânica por trás dessa tendência de consumo e como os varejistas podem adaptar suas operações.</p>
+
+      <h1><strong>O que o TikTok Shop entendeu primeiro</strong></h1>
+      <p>O TikTok Shop integra três pilares essenciais que todo e-commerce deveria ter:<br />• Conteúdo em vídeo além da fotografia estática<br />• <strong>Recomendações inteligentes</strong> que entendem o contexto do usuário<br />• <strong>Compra sem fricção</strong> sem troca de ambiente</p>
+      <p>Os usuários visualizam o conteúdo, se identificam com ele, clicam e compram em segundos, tudo sem abrir abas adicionais ou processos longos. Essa abordagem elimina barreiras e converte desejo em transação de forma natural.</p>
+
+      <h1><strong>Implementando a lógica do Discovery Commerce na sua operação</strong></h1>
+      <p>Sua loja não precisa limitar essa estratégia apenas ao TikTok Shop. Aplique soluções de Video Commerce, como:</p>
+      <p><strong>1. Implemente Carrosséis de Vídeo</strong><br />Insira carrosséis na homepage do seu e-commerce para exibir coleções, avaliações ou demonstrações autênticas. Os clientes observam os produtos em uso real e acessam todos os itens do vídeo sem sair da tela por meio de layouts interativos.</p>
+      <p><strong>2. Ative o Explorar</strong><br />Os consumidores esperam o dinamismo dos algoritmos das redes sociais. Melhore as jornadas dos clientes utilizando o Explorar, uma página dedicada ao vídeo que permite navegação contínua como um feed social, onde a descoberta acontece de forma contextual e não por meio de buscas. Prévia na homepage encoraja a adoção.</p>
+      <p><strong>3. Conecte Todos os Produtos dos Vídeos</strong><br />Carrinhos de compras do Video Commerce permitem checkout sem sair do conteúdo. Basta conectar os produtos onde eles aparecem.</p>
+      <p>A John John utilizou essa estratégia, aumentando o ticket médio ao combinar diversas peças em vídeos únicos, expondo produtos que os clientes poderiam não descobrir de outra forma.</p>
+      <p><strong>4. Integre Avaliações e Parcerias com Creators</strong><br />O Discovery Commerce exige resolver rapidamente as dúvidas dos clientes sem que eles saiam do conteúdo ou do site. Adicione <strong>Destaques</strong> diretamente nas páginas de produto. Vídeos curtos e direcionados ou parcerias com influenciadores ajudam os clientes a esclarecer dúvidas e concluir compras com eficiência.</p>
+      <p>A abordagem do TikTok Shop não é apenas tecnológica: é comércio orientado por narrativa e contexto, exigindo adaptação do e-commerce.</p>
+
+      <h1><strong>Quem espera ser encontrado já está ficando para trás</strong></h1>
+      <p>O Discovery Commerce transcende as tendências do TikTok: representa uma lógica de consumo emergente cada vez mais presente no comportamento do consumidor. Os varejistas precisam reconhecer os hábitos dos clientes para se conectar de forma autêntica e prosperar em cenários em evolução.</p>
+      <p>A pergunta muda de "Como faço as pessoas buscarem meu produto?" para: <strong>"Como posiciono meu produto no momento exato certo, com a mensagem precisa, antes mesmo que as buscas comecem?"</strong></p>
+      <p>As soluções da Widde, Carrosséis, Destaques e Explorar, permitem que os varejistas utilizem o Discovery Commerce diretamente em suas lojas.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

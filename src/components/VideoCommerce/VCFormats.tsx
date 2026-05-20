@@ -1,52 +1,49 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import SectionTitle from "@/components/SectionTitle";
 import { vcFormatVideos } from "@/data/vcFormats";
 
+const formats = [
+  {
+    name: "Stories",
+    desc: "Conteúdo vertical em tela cheia. Alta imersão e engajamento — o formato que o consumidor já conhece.",
+    onde: ["Home", "PDP"],
+    videoIdx: 0,
+  },
+  {
+    name: "Carrossel de Vídeos",
+    desc: "Mostre múltiplos produtos em sequência. O visitante descobre mais itens sem sair da página.",
+    onde: ["Home", "Categorias"],
+    videoIdx: 1,
+  },
+  {
+    name: "Destaques da Loja",
+    desc: "Feed estilo rede social para campanhas, lançamentos e coleções. Imersivo e direto.",
+    onde: ["Home", "Categorias"],
+    videoIdx: 2,
+  },
+  {
+    name: "Destaques de Produto",
+    desc: "Vídeos organizados por tema na PDP — modo de uso, materiais, looks. O cliente tira todas as objeções antes de comprar.",
+    onde: ["PDP"],
+    videoIdx: 3,
+  },
+  {
+    name: "Explorar",
+    desc: "Página 100% dedicada a vídeos — o TikTok da sua loja. Máximo engajamento e descoberta de produtos.",
+    onde: ["Página exclusiva"],
+    videoIdx: 4,
+  },
+];
+
 export default function VCFormats() {
-  const { t } = useTranslation();
-
-  const formats = [
-    {
-      name: t("vc.formats.stories.name"),
-      desc: t("vc.formats.stories.description"),
-      onde: t("vc.formats.stories.locations", { returnObjects: true }) as string[],
-      videoIdx: 0,
-    },
-    {
-      name: t("vc.formats.carousel.name"),
-      desc: t("vc.formats.carousel.description"),
-      onde: t("vc.formats.carousel.locations", { returnObjects: true }) as string[],
-      videoIdx: 1,
-    },
-    {
-      name: t("vc.formats.highlights.name"),
-      desc: t("vc.formats.highlights.description"),
-      onde: t("vc.formats.highlights.locations", { returnObjects: true }) as string[],
-      videoIdx: 2,
-    },
-    {
-      name: t("vc.formats.productHighlights.name"),
-      desc: t("vc.formats.productHighlights.description"),
-      onde: t("vc.formats.productHighlights.locations", { returnObjects: true }) as string[],
-      videoIdx: 3,
-    },
-    {
-      name: t("vc.formats.explore.name"),
-      desc: t("vc.formats.explore.description"),
-      onde: t("vc.formats.explore.locations", { returnObjects: true }) as string[],
-      videoIdx: 4,
-    },
-  ];
-
   const [activeIdx, setActiveIdx] = useState(0);
   const current = formats[activeIdx];
 
   return (
     <section aria-labelledby="formatos-heading">
       <SectionTitle
-        label={t("vc.formats.label")}
-        title={t("vc.formats.title")}
+        label="Formatos"
+        title="Todos os formatos de vídeo que sua loja precisa"
         id="formatos-heading"
         className="mb-9"
       />
@@ -83,7 +80,7 @@ export default function VCFormats() {
           <div className="text-xl font-bold text-black leading-tight">{current.name}</div>
           <div className="text-sm text-[#555] leading-relaxed">{current.desc}</div>
           <div className="text-xs text-[#aaa]">
-            {t("vc.formats.appearsIn")}
+            Aparece em:
             {current.onde.map((lugar) => (
               <span
                 key={lugar}
@@ -167,7 +164,7 @@ export default function VCFormats() {
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 lg:mb-5 leading-tight">{current.name}</div>
             <div className="text-base lg:text-lg text-[#555] leading-relaxed mb-5 lg:mb-6">{current.desc}</div>
             <div className="text-sm lg:text-base text-[#aaa]">
-              {t("vc.formats.appearsIn")}
+              Aparece em:
               {current.onde.map((lugar) => (
                 <span
                   key={lugar}

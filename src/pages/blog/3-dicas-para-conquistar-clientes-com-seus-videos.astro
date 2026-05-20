@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="3 dicas para conquistar clientes com seus vídeos" description="3 dicas práticas para conquistar clientes com vídeos no e-commerce: esqueça as grandes produções, mostre todos os detalhes e humanize com opiniões reais." canonical="https://widde.io/blog/3-dicas-para-conquistar-clientes-com-seus-videos">
+  <BlogArticle client:load title="3 dicas para conquistar clientes com seus vídeos" category="Video Commerce" date="12.05.2025" readingTime="3 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655cfde65a0cffbf09468026_post-3%20(1)-1.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Criar vídeos que conquistam clientes no e-commerce não exige grandes orçamentos ou produções elaboradas. As três dicas a seguir, baseadas em práticas reais de lojistas bem-sucedidos, mostram como criar conteúdo autêntico que converte.</p>
+
+      <h1><strong>1. Esqueça as grandes produções</strong></h1>
+      <p>Desmistifique a ideia de precisar de grandes produções e efeitos para fazer seus vídeos. A JJ Modas exemplifica essa abordagem tendo as próprias fundadoras gravando conteúdo diariamente usando apenas um smartphone e boa iluminação em um ambiente tranquilo. Resultados expressivos de conversão e retenção foram alcançados sem câmeras profissionais ou equipes de produção. A autenticidade supera a produção polida no e-commerce.</p>
+
+      <h1><strong>2. E-commerce é diferente de rede social</strong></h1>
+      <p>Os clientes do e-commerce buscam visibilidade autêntica do produto. Os lojistas devem mostrar todos os detalhes do produto — de frente, de trás, a qualidade, o tecido, o caimento — para se diferenciar e atender às expectativas dos clientes por realismo. No e-commerce, o cliente está prestes a gastar dinheiro e precisa de informação precisa, não de entretenimento.</p>
+
+      <h1><strong>3. O que você faria se o cliente estivesse na sua frente?</strong></h1>
+      <p>Os vídeos devem espelhar as interações presenciais ao oferecer opiniões e sugestões. A JJ Modas demonstra isso ao fornecer recomendações de estilo e sugestões de combinações de looks para diversas ocasiões. Pense nos vídeos como uma extensão do atendimento pessoal: ofereça sua opinião genuína sobre o produto, sugira combinações, indique para que tipo de pessoa ou ocasião cada peça é ideal. Esse nível de humanização cria confiança e impulsiona as conversões.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

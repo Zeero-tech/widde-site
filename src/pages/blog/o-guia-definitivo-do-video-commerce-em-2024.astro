@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="O Guia definitivo do Video Commerce em 2024" description="O guia definitivo do Video Commerce em 2024: o que é, benefícios, como funciona, cases de sucesso, melhores práticas e como medir resultados com a Widde." canonical="https://widde.io/blog/o-guia-definitivo-do-video-commerce-em-2024">
+  <BlogArticle client:load title="O Guia definitivo do Video Commerce em 2024" category="Video Commerce" date="15.05.2025" readingTime="15 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66202315047334ba57bd646f_guia.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Video Commerce é uma tecnologia emergente que combina o conteúdo em vídeo com a praticidade do e-commerce para criar experiências de compra humanizadas e interativas. Combinamos a força dos vídeos com a praticidade do online, proporcionando uma experiência envolvente ao cliente. A Widde é pioneira nessa abordagem no Brasil, permitindo que os lojistas aumentem as taxas de conversão e o engajamento dos clientes por meio de demonstrações em vídeo integradas em seus sites.</p>
+
+      <h1><strong>O que é Video Commerce?</strong></h1>
+      <p>O Video Commerce representa a integração de vídeos interativos dentro das plataformas de e-commerce. Os vídeos aparecem como bolhas em formato de story interativas nas páginas do e-commerce, móveis e clicáveis. O conteúdo varia desde boas-vindas ao produto até demonstrações detalhadas, permitindo que os lojistas testem formatos que correspondam às preferências do seu público.</p>
+
+      <h1><strong>Benefícios para os lojistas online</strong></h1>
+      <p>• Diferenciação competitiva em display;<br />• Remoção rápida das objeções dos clientes;<br />• Períodos de retenção no site mais longos;<br />• Mecanismos diretos de feedback do público;<br />• Taxas de devolução reduzidas;<br />• Demandas de suporte diminuídas;<br />• Reaproveitamento de conteúdo das redes sociais.</p>
+
+      <h1><strong>Cases de sucesso</strong></h1>
+      <p><strong>Not-me Shoes:</strong> Uma implementação de oito meses resultou em um aumento de 188% na conversão de vendas, representando aproximadamente R$ 2 milhões em impacto de receita, com melhoras de 3x na retenção e 97% dos clientes afirmando que os vídeos auxiliaram nas decisões de compra.</p>
+      <p><strong>LV Store:</strong> Os resultados da primeira semana demonstraram 2,5x de aumento nas conversões e 300% de ganhos na retenção (de 2 para 8 minutos).</p>
+      <p><strong>Yeesco:</strong> O feedback dos clientes levou à inclusão de modelos plus-size, aumentando significativamente as taxas de conversão para tamanhos maiores.</p>
+
+      <h1><strong>Melhores práticas de implementação</strong></h1>
+      <p>1. <strong>Foco direto:</strong> Aborde imediatamente as incertezas dos clientes, fornecendo medidas, detalhes de caimento e orientação de uso;<br />2. <strong>Apresentação racional:</strong> Enfatize razões concretas de compra baseadas em dados do atendimento ao cliente;<br />3. <strong>Comunicação clara:</strong> Explique detalhes técnicos de forma acessível com demonstrações visuais;<br />4. <strong>Planejamento de tópicos:</strong> Liste as informações essenciais do produto antes de filmar;<br />5. <strong>Feedback dos clientes:</strong> Incentive comentários para identificar preferências e áreas de melhoria;<br />6. <strong>Conteúdo comparativo:</strong> Guie os clientes entre os produtos por meio de conteúdo comparativo e sugestivo.</p>
+
+      <h1><strong>Métricas de sucesso</strong></h1>
+      <p>A plataforma rastreia: taxa de conversão (métricas comparativas entre espectadores de vídeo e tráfego geral), impacto na receita (vendas diretas geradas por meio da exposição ao vídeo), tempo de retenção (duração de navegação estendida) e interações dos clientes (comentários que revelam preferências e sugestões).</p>
+
+      <h1><strong>Aplicabilidade</strong></h1>
+      <p>O Video Commerce é adequado para qualquer segmento de e-commerce — moda, calçados, acessórios, móveis, brinquedos — desde que os lojistas busquem conexões humanizadas com os clientes e entrega de informações detalhadas sobre os produtos.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

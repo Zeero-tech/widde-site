@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  {
+    slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento",
+    title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png",
+  },
+  {
+    slug: "report-video-commerce-brasil-2025",
+    title: "Report Video Commerce Brasil 2025",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png",
+  },
+  {
+    slug: "guia-estrategico-do-video-commerce-as-tendencias-que-vao-permear-em-2026",
+    title: "Guia estratégico do Video Commerce: as tendências que vão permear em 2026",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696141384fe221769b9e530a_Thumbnail.png",
+  },
+  {
+    slug: "como-o-video-se-tornou-o-motor-das-conversoes-na-black-friday",
+    title: "Como o vídeo se tornou o motor das conversões na Black Friday",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69137f6f444d325befaefe49_Como%20o%20v%C3%ADdeo%20se%20tornou%20o%20motor%20das%20convers%C3%B5es.png",
+  },
+  {
+    slug: "sua-loja-online-esta-pronta-para-o-discovery-commerce-aprenda-com-o-tiktok-shop",
+    title: "Sua loja online está pronta para o Discovery Commerce? Aprenda com o TikTok Shop",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68e675e24e75460b85777d33_Blog_%20Sua%20loja%20online%20est%C3%A1%20pronta%20para%20o%20Discovery%20Commerce.png",
+  },
+]
+---
+
+<BaseLayout
+  title="As 5 principais lições que aprendemos com o Video Commerce em 2025"
+  description="2025 marcou o ano em que o Video Commerce saiu da categoria de tendência e se tornou obrigatório. Confira as 5 lições que moldam o e-commerce em 2026."
+  canonical="https://widde.io/blog/as-5-principais-licoes-que-aprendemos-com-o-video-commerce-em-2025"
+>
+  <BlogArticle
+    client:load
+    title="As 5 principais lições que aprendemos com o Video Commerce em 2025"
+    category="Video Commerce"
+    date="26.12.2025"
+    readingTime="7 minutos de leitura"
+    coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/694aa6a3f6d28247ae460cd4_5%20principais%20li%C3%A7%C3%B5es%20de%202025%20(2).png"
+    recentPosts={recentPosts}
+  >
+    <div>
+      <p>2025 marcou o ano em que o Video Commerce saiu da categoria de tendência e se tornou obrigatório. Ao longo de diversas operações e segmentos de mercado, ficou claro que o vídeo representa muito mais do que um formato atrativo: ele responde diretamente à forma como o consumidor se relaciona com conteúdo e toma decisões de compra hoje.</p>
+      <p>Além das grandes viradas estratégicas, foi o foco na experiência do cliente que gerou os impactos mais significativos nas taxas de conversão, no engajamento e na eficiência operacional. Soluções de vídeo alinhadas ao comportamento do consumidor se tornaram grandes diferenciais competitivos.</p>
+
+      <h1><strong>1. O consumidor quer contexto, não excesso de informação</strong></h1>
+      <p>Mais conteúdo não significa melhor conteúdo. Vídeos longos, genéricos ou sem foco performam abaixo de conteúdos concisos, objetivos e contextuais.</p>
+      <p>Esse comportamento vem das mudanças no padrão de consumo de conteúdo. O vídeo curto nas plataformas sociais condicionou o usuário a consumir informação de forma direta, respondendo a uma dúvida por vez. O consumidor busca contexto rápido para tomar uma decisão e só se aprofunda quando reconhece valor.</p>
+      <p>Os Product Highlights funcionam bem porque respeitam esse hábito. Cada vídeo responde a uma pergunta específica no momento certo da jornada, facilitando o entendimento e permitindo que o usuário avance com base na sua intenção. O vídeo deixa de ser narrativa e passa a ser suporte prático à decisão, impactando diretamente o engajamento e a conversão.</p>
+      <p>Essa lógica sinaliza uma tendência forte para 2026: consumo de conteúdo fragmentado, intencional e orientado à decisão.</p>
+
+      <h1><strong>2. A descoberta venceu a busca tradicional</strong></h1>
+      <p>Uma das grandes mudanças observadas foi no comportamento de navegação. Em vez de buscar, o consumidor passou a <strong>descobrir produtos navegando por vídeos,</strong> replicando a lógica das redes sociais.</p>
+      <p>Integrações como o Explorar e os previews na Home fortalecem o engajamento e o tempo de permanência porque se adaptam ao padrão de consumo estabelecido fora do e-commerce: o modelo de compra do TikTok.</p>
+      <p>Isso reforça uma tendência irreversível: em 2026, a compra por descoberta, impulsionada por conteúdo e recomendação, tende a superar jornadas baseadas apenas em menus tradicionais e buscas.</p>
+
+      <h1><strong>3. Comprar sem sair do conteúdo é o novo padrão</strong></h1>
+      <p>Possivelmente a lição mais crítica de 2025: <strong>cada clique adicional reduz a probabilidade de conversão.</strong></p>
+      <p>Carrinhos integrados, links diretos para produtos e soluções de compre junto provaram que jornadas mais fluidas aumentam o ticket médio e reduzem o abandono. O consumidor resiste a trocar de tela, aba ou fluxo. Ele quer decidir e comprar dentro do mesmo ambiente onde descobriu o produto.</p>
+      <p>Em 2026, a expectativa está clara: conteúdo e checkout precisam coexistir na mesma experiência.</p>
+
+      <h1><strong>4. Creators como estratégia contínua, não ação isolada</strong></h1>
+      <p>2025 mostrou que os creators geram maior impacto quando deixam de ser mídia pontual e passam a fazer parte da experiência de compra. Dados da Kantar indicam que o investimento em creators vai crescer em 2026, com uma demanda clara: <strong>conexão genuína com a marca e impacto mensurável.</strong></p>
+      <p>Os micro influenciadores se destacam aqui. Com maior proximidade e confiança, eles resolvem dúvidas e influenciam decisões em momentos críticos, especialmente quando seu conteúdo permanece ativo dentro do e-commerce.</p>
+      <p>Carrosséis e destaques com nome de creator na home, páginas de produto e de categoria permitem essa continuidade. As lojas podem organizar experiências estratégicas como:<br />• Seleções do creator<br />• Looks aprovados por usuários<br />• Avaliações reais da comunidade<br />• Recomendações do creator para coleções</p>
+      <p>O conteúdo do influenciador deixa de competir por atenção nas redes sociais e passa a ser um guia de navegação e decisão de compra dentro do site, com contexto, intenção e fluidez.</p>
+      <p>A lição de 2026 é clara: o valor do creator vai além do alcance, está em como o conteúdo se integra à jornada do consumidor.</p>
+
+      <h1><strong>5. O Video Commerce como respiro digital</strong></h1>
+      <p>Em um cenário de consumo acelerado, a WGSN identifica uma tendência clara: a economia da aura, em que marcas se diferenciam não apenas por produtos, mas pela <strong>forma como fazem o consumidor se sentir.</strong> Lojas que criam sensações positivas constroem memória afetiva, conexão e fidelidade.</p>
+      <p>Diferente de páginas frias e transacionais, vídeos bem contextualizados transformam o e-commerce em um espaço humano e acolhedor, próximo do varejo físico. A curadoria de conteúdo, o ritmo dos vídeos, a narrativa e a organização em carrosséis, destaques e no Explorar comunicam cuidado e intenção, da mesma forma que a iluminação, o atendimento e o layout fazem em lojas físicas.</p>
+      <p>A lição é direta: em 2026, não basta converter rápido; é preciso criar experiências digitais que desaceleram, envolvem e geram lembrança.</p>
+
+      <h1><strong>O que 2025 revelou sobre o e-commerce de 2026</strong></h1>
+      <p>As lições de 2025 mostram que o e-commerce do futuro não será definido por uma inovação isolada, mas por <strong>experiências bem resolvidas ao longo de toda a jornada.</strong> Contexto, fluidez, descoberta, influência e sensação deixaram de ser diferenciais isolados para formar o novo padrão de consumo digital.</p>
+      <p>Marcas que insistirem em experiências frias, baseadas apenas em busca, imagens estáticas e fluxos de compra longos vão perder relevância. As que entenderem o vídeo como <strong>linguagem da experiência</strong> conseguem se aproximar do consumidor, construir conexão e converter de forma mais eficiente.</p>
+      <p>O Video Commerce se consolida como a infraestrutura que conecta conteúdo, comportamento e conversão em ambientes unificados. Isso vai além de vender mais: trata-se de <strong>construir jornadas que fazem sentido para quem compra.</strong></p>
+      <p>É exatamente aqui que a Widde atua: ajudando marcas a transformar vídeos em experiências vivas dentro do e-commerce e se preparar hoje para os padrões de consumo que já definem o amanhã.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

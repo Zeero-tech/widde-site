@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CaseArticle from '../../components/CaseArticle'
+import type { CaseArticleData } from '../../components/CaseArticle'
+
+const data: CaseArticleData = {
+  heroImage: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png",
+  tag: "Case de Sucesso",
+  title: "Mais vendas, menos demanda para o SAC",
+  representanteNome: "William Ferraz",
+  representanteCargo: "Coordenador de Marketing",
+  cliente: "Maximum Boxing",
+  youtubeUrl: "https://youtu.be/S4PKi8Z7xiI",
+
+  conhecaLogo: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de20a53ba073c9a8152b9_maximum%20logo-cortada.png",
+  conhecaTitle: "Conheça a Maximum Boxing",
+  conhecaBody: `<p>A Maximum Boxing surgiu a partir da dor de encontrar produtos de qualidade para o segmento de luta dentro do mercado nacional. Pensado nisso, em 2019, a loja foi criada para vender luvas, capacetes, sacos de pancada, roupas, entre outros equipamentos para academia e diferentes modalidades de combate. Atualmente, a marca continua se expandindo no e-commerce e criando novos canais. Um exemplo é a Maximum Arena, cenário onde William Ferraz, Coordenador de Marketing, recebeu a equipe da Widde para gravação do case.</p>`,
+  conhecaNumbers: [
+    { value: "6 Anos", label: "No mercado" },
+    { value: "3 canais", label: "Arena, loja física e e-commerce" },
+  ],
+
+  depoimento1Img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689dea37ee69d994eab5d72a_William%20perfil%201.png",
+  depoimento1Quote: "Se a pessoa que está dentro do nosso site já é um possível comprador, ela já tem um interesse de compra então, para ela não ter o trabalho de sair do nosso site e buscar em outro lugar informações da marca e do produto, por que não centralizar no nosso site?",
+  depoimento1Nome: "William Ferraz",
+  depoimento1Cargo: "Coordenador de Marketing",
+
+  desafioGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689df51318bfa0b7579437ce_imagem%20lateral%201_2.png",
+  desafioBody: `<p>No primeiro trimestre desse ano, a Maximum tinha uma angústia: a grande quantia de mensagens no SAC do e-commerce. O problema era a quantidade de dúvidas frequentes que os consumidores enviavam. Isso levou William a fazer uma análise do site, verificando as imagens e textos disponíveis nas páginas de cada produto. Apesar de chegar na conclusão que ambos os recursos estavam sendo bem utilizados, ele ainda sentia falta de algo para solucionar as dúvidas dos clientes. Foi então que William conheceu a Widde.</p><p>Após conhecer as soluções de Video Commerce, a estratégia da Maximum foi juntar as principais dúvidas que eles recebiam no SAC e respondê-las em vídeos curtos e objetivos. Esse conteúdo fica disponível na página do produto e, dessa forma, o cliente consegue compreender facilmente qual produto ou opção ele deve escolher, considerando tamanho, modelo e o que melhor atende a necessidade dele.</p><p>Assim, a demanda do serviço de atendimento ao consumidor diminuiu e o consumidor pode finalizar a sua compra mais rapidamente, além de tomar uma decisão mais assertiva.</p>`,
+
+  numeros: [
+    { value: "20%", label: "Receita impactada pelos vídeos" },
+    { value: "8min 04s", label: "Tempo de retenção com os vídeos" },
+    { value: "9%", label: "Retornam após assistir aos vídeos" },
+  ],
+
+  resultadosBody: `<p>Desde março, quando a Maximum começou a utilizar as soluções da Widde, até julho, já foi possível medir o impacto do Video Commerce no e-commerce. Além da diminuição no número de dúvidas enviadas para o SAC, os seguintes resultados também foram atingidos:</p><p><strong>- 20% de receita impactada pelos vídeos;</strong></p><p><strong>- Tempo médio de retenção aumentou de 4min39s para 8min04s</strong> quando as pessoas assistem os vídeos;</p><p><strong>- 9% dos usuários retornam ao site</strong> após assistirem aos vídeos.</p><p>Os números indicam que o engajamento do Video Commerce tem impacto positivo tanto para a experiência de compra do consumidor quanto para os resultados do comerciante, se tornando um aliado essencial e indispensável para o e-commerce.</p>`,
+
+  depoimento2Quote: "Você trouxe alguns dados da Maximum, e as nossas taxas praticamente dobraram. Isso é um dado e contra dados não há argumentos. Vídeo engaja.",
+  depoimento2Nome: "William Ferraz",
+  depoimento2Cargo: "Coordenador de Marketing",
+  depoimento2ImgVertical: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689dec733e580b2c5fbc4e51_William%20perfil%202%20(1).png",
+  depoimento2YoutubeUrl: "https://youtu.be/S4PKi8Z7xiI",
+
+  greyStickyBody: `<h2><strong>De carência do mercado para solução no e-commerce</strong></h2><p>Por ser uma loja em um segmento inovador no país, a Maximum relata uma carência de conteúdos do setor esportivo. As pessoas que procuravam relatos, detalhes e usabilidade dos equipamentos não encontravam esse material com facilidade. Para sanar essa necessidade, eles iniciaram parcerias com influenciadores para a produção destes recursos, porém, ainda residia uma demanda: não perder esse cliente durante a jornada de compra.</p><p>A possibilidade do cliente sair do site para procurar conteúdo sobre os produtos e se perder nesse trajeto era uma dor a ser resolvida e a Widde foi a solução. Ao colocar as reviews dentro do site, diretamente na página de cada produto, a marca facilita a jornada do consumidor, soluciona dúvidas e quebra a resistência para compra, aumentando a conversão.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689df286ba35fc6cddcb41b5_EscolhendoaLuvaPerfeita-ezgif.com-optimize.gif" loading="lazy" /></div></figure><h2><strong>Versatilidade para diferentes estratégias</strong></h2><p>Neste ano de 2025, durante o lançamento de sua primeira coleção de bolsas e mochilas, a Maximum usou o Carrossel de Vídeos na página inicial do site para promover e destacar os novos produtos com conteúdos criados especificamente para o período.</p><p>O resultado foi uma estreia promissora. Apesar da dúvida de como os novos artigos seriam aceitos, as vendas foram altas logo no início, e a nova linha de produtos se mostrou relevante para a marca.</p><p>Além disso, William destaca como as soluções da Widde podem ser usadas para alavancar as vendas até mesmo de mercadorias remanescentes no estoque. Uma das estratégias do Coordenador é usar o Carrossel para expor o produto na home e aumentar a tração. Uma vez que o retorno é rápido, tal estratégia pode ser verificada e modelada pelo time de marketing conforme a necessidade da marca.</p><p>Com pouco mais de quatro meses de uso, William deixa o recado para aqueles que ainda não utilizam o Video Commerce: "Quem não utilizou ainda, está perdendo tempo e, por experiência própria, dá super certo. Se você não está utilizando, está atrasado."</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689df3f432cd864a37afba08_Maximum-Mobile1-ezgif.com-optimize.gif" loading="lazy" /></div></figure>`,
+  greyStickyYoutubeUrl: "https://youtu.be/S4PKi8Z7xiI",
+
+  outrosCases: [
+    { href: "/case/mamo", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2d0b1016c8df8923096d_capa%20youtube%201.png", title: "Construindo narrativas com Video Commerce" },
+    { href: "/case/john-john", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png", title: "Agregando valor ao produto com o Video Commerce" },
+    { href: "/case/majeste", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif", title: "Desafios da Moda Festa no E-commerce" },
+    { href: "/case/lv-store", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f79295c6f9c8a6fa9eeaa_lvstore.avif", title: "Video Commerce em Moda Feminina" },
+  ],
+}
+---
+
+<BaseLayout
+  title="Maximum Boxing: Mais vendas, menos demanda para o SAC | Widde"
+  description="Veja como a Maximum Boxing usou o Video Commerce da Widde para impactar 20% da receita, aumentar o tempo de retenção e reduzir demandas no SAC."
+  canonical="https://widde.io/case/maximum-boxing"
+>
+  <CaseArticle client:load data={data} />
+</BaseLayout>

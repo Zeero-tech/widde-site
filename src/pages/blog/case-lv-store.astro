@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Case LV Store - As redes sociais dentro do e-commerce" description="Como a LV Store usou Video Commerce para aumentar 2,5x a conversão e 300% o tempo de retenção em uma semana, integrando conteúdo das redes sociais no e-commerce." canonical="https://widde.io/blog/case-lv-store">
+  <BlogArticle client:load title="Case LV Store - As redes sociais dentro do e-commerce" category="Cases" date="12.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/660af4b4ac1296cf294d6c23_lvstore-case-2.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Letícia Vaz fundou a LV Store em 2015 com apenas R$ 500 e duas máquinas de costura enquanto estudava jornalismo. A marca hoje gera mais de R$ 10 milhões anuais. No início de 2023, ela fez parceria com a Widde para implementar o Video Commerce, integrando conteúdo das redes sociais diretamente em seu site de e-commerce.</p>
+
+      <h1><strong>Os desafios</strong></h1>
+      <p>Apesar da presença estabelecida no mercado e do significativo volume de vendas, Letícia buscava aprimorar a experiência de compra e aumentar a confiança dos clientes. Ela queria transformar seu site em uma plataforma social, incorporando reels e conteúdo de clientes experimentando as peças, para aumentar a retenção e as taxas de conversão.</p>
+
+      <h1><strong>A solução: Widde + LV Store</strong></h1>
+      <p>A parceria permitiu que a LV Store reutilizasse o conteúdo do Instagram nas páginas de produto. Os vídeos agora mostram detalhes das peças, movimento, decotes e recortes — respondendo às perguntas mais frequentes dos clientes. Eduardo Garcia (Gerente de Atendimento ao Cliente) observou: "Antes, os clientes só viam fotos. Agora eles entendem melhor como as peças ficam quando usadas e se movimentam."</p>
+      <p>A solução de vídeo respondeu diretamente às preocupações mais comuns. Com os vídeos, os compradores podem ver que o tecido não é transparente, que é de dupla camada, eliminando dúvidas sem respostas manuais de atendimento.</p>
+
+      <h1><strong>Resultados</strong></h1>
+      <p>As métricas da primeira semana demonstraram um impacto significativo:<br />• <strong>Conversão de vendas:</strong> Aumento de 2,5 vezes;<br />• <strong>Tempo de retenção no site:</strong> Aumento de 300% (de 2 para 8 minutos).</p>
+      <p>A performance continuou melhorando à medida que Letícia produzia mais conteúdo de experimentação alinhado com os interesses dos clientes, construindo confiança e humanizando a marca ao longo de toda a jornada de compra.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

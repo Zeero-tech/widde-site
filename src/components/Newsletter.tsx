@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { useTranslation } from "react-i18next";
 import HighlightText from "./ui/highlight-text";
 
 export default function Newsletter() {
-  const { t } = useTranslation();
   const circleRef = useRef<HTMLImageElement>(null);
   const [hovered, setHovered] = useState(false);
   const [viewport, setViewport] = useState<"mobile" | "tablet" | "desktop">(() => {
@@ -103,7 +101,7 @@ export default function Newsletter() {
               duration={0.8}
               className="px-2 py-1 md:px-4 md:py-1"
             >
-              {t("newsletter.title")}
+              Assine a nossa newsletter
             </HighlightText>
           </h2>
           <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-[940px]">

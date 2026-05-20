@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Impacto das redes sociais no e-commerce" description="As plataformas sociais transformam fundamentalmente o e-commerce, mudando a descoberta de produtos e os comportamentos de compra. Saiba como usar isso a seu favor." canonical="https://widde.io/blog/impacto-das-redes-sociais-no-e-commerce">
+  <BlogArticle client:load title="Impacto das redes sociais no e-commerce" category="Tendências e-commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67fd3f6a05a2b256749e4a64_impacto%20de%20redes%20sociais%20ecommerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>As plataformas sociais transformam fundamentalmente o e-commerce ao mudar a descoberta de produtos e os comportamentos de compra. Instagram, TikTok e Facebook funcionam como canais influentes onde os lojistas estabelecem relacionamentos diretos com clientes, aumentam o reconhecimento de marca e impulsionam o crescimento da receita.</p>
+
+      <h1><strong>Principais impactos das redes sociais no e-commerce</strong></h1>
+      <p>• <strong>Engajamento aprimorado e descoberta de produtos:</strong> Recomendações algorítmicas aumentam a visibilidade dos produtos. O investimento em conteúdo audiovisual fortalece a atenção do público.<br />• <strong>Influência nas decisões de compra:</strong> A confiança dos consumidores em avaliações e endorsements de influenciadores valida a qualidade dos produtos, acelerando o momentum de vendas.<br />• <strong>Experiência visual interativa:</strong> O conteúdo em vídeo de formato curto permite uma exploração detalhada dos produtos sem precisar navegar por várias páginas do e-commerce.<br />• <strong>Maior tempo de navegação e retenção:</strong> Os padrões de scroll contínuo observados no TikTok e Instagram podem ser replicados no e-commerce para aumentar o tempo do cliente no site.<br />• <strong>Conversão e fidelização:</strong> As plataformas sociais facilitam compras recorrentes por meio de iniciativas de fidelidade e estratégias de engajamento contínuo.</p>
+
+      <h1><strong>Video Commerce e dados relevantes</strong></h1>
+      <p>O Video Commerce representa uma estratégia primária de otimização de conversão. Pesquisas do setor indicam que "93% dos consumidores consideram os vídeos decisivos nas decisões de compra online", tornando o conteúdo visual indispensável.</p>
+      <p><strong>Case de sucesso:</strong> A Alanis Brand alcançou um aumento de 25% no ticket médio, 11% de impacto na receita e ampliou o tempo de sessão de 3:08 minutos para 8:12 minutos no segundo mês de implementação.</p>
+
+      <h1><strong>Solução Feed de Vídeos da Widde</strong></h1>
+      <p>A Widde desenvolveu um feed de vídeos inspirado no Instagram Reels e TikTok, permitindo o consumo contínuo de vídeos de produtos dentro de páginas dedicadas do e-commerce. Isso facilita a descoberta enquanto reduz as taxas de devolução por meio da visualização detalhada dos produtos.</p>
+      <p>Benefícios: maior retenção, ticket médio mais alto, redução de devoluções, interface familiar, melhores taxas de conversão e integração perfeita.</p>
+
+      <h1><strong>Como implementar</strong></h1>
+      <p>1. Instale a Widde e escolha um plano;<br />2. Faça upload dos vídeos de produto;<br />3. Ative o feed de vídeos.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/BlogArticle'
+import type { RecentPost } from '../../components/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Vídeos na Home: Formatos e benefícios" description="Incorporar vídeos na homepage do e-commerce melhora o engajamento, aumenta as conversões e fortalece a presença da marca. Conheça os formatos e benefícios." canonical="https://widde.io/blog/videos-na-home-formatos-e-beneficios">
+  <BlogArticle client:load title="Vídeos na Home: Formatos e benefícios" category="Video Commerce" date="18.03.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67d98d9e7ca3d36cdc09bedb_Conhe%C3%A7a%20os%20v%C3%ADdeos%20na%20Home.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Incorporar conteúdo em vídeo nas homepages de e-commerce tornou-se uma estratégia eficaz para melhorar o engajamento do usuário, aumentar as métricas de conversão e fortalecer a presença da marca. O Video Commerce cria experiências interativas e imersivas que apoiam o processo de decisão de compra do consumidor.</p>
+
+      <h1><strong>Como usar o Video Commerce na homepage do e-commerce</strong></h1>
+      <p>A homepage serve como ponto de contato inicial para os visitantes e precisa ser visualmente atraente e intuitiva. A implementação de vídeos permite aos lojistas comunicar mensagens rapidamente e capturar atenção em segundos.</p>
+      <p>Práticas essenciais: mostrar os produtos principais com recursos e benefícios detalhados; desenvolver narrativas com ressonância emocional; incorporar CTAs estratégicos para promoções; monitorar métricas de performance pelos dashboards analíticos.</p>
+
+      <h1><strong>Formatos de vídeo para homepages de e-commerce</strong></h1>
+      <p>• <strong>Vídeos Institucionais:</strong> Apresentam os valores, missão e vantagens competitivas da marca. Incluem storytelling da marca, impacto nos clientes e depoimentos para construir confiança.<br />• <strong>Vídeos Demonstrativos:</strong> Detalham a funcionalidade do produto e as soluções oferecidas. Destacam diferenciais por meio de animações e demonstrações de uso real.<br />• <strong>Vídeos de Unboxing:</strong> Exibem a embalagem e a qualidade do produto para gerar antecipação e definir expectativas realistas sobre a apresentação na entrega.<br />• <strong>Vídeos Comparativos:</strong> Ajudam os consumidores a escolher entre opções de produtos destacando especificações, preços e vantagens com comparações visuais e transparência.<br />• <strong>Vídeos de Bastidores:</strong> Humanizam a marca ao mostrar membros da equipe, processos de produção, cultura da empresa e valores.<br />• <strong>Vídeos de Depoimentos:</strong> Aproveitam a prova social por meio de experiências autênticas de clientes, enfatizando resolução de problemas e resultados com legendas acessíveis.<br />• <strong>Vídeos Informativos:</strong> Abordam perguntas frequentes sobre opções de pagamento, envio, devoluções e políticas para reduzir consultas ao suporte.</p>
+
+      <h1><strong>Benefícios de vídeos na homepage</strong></h1>
+      <p>• <strong>Aumento da taxa de conversão:</strong> Páginas com vídeos convertem até 80% mais que páginas sem vídeos.<br />• <strong>Maior engajamento no site:</strong> Os vídeos mantêm a atenção e compreensão do visitante, aumentando a probabilidade de compra.<br />• <strong>Melhor experiência do usuário:</strong> A navegação dinâmica e interativa supera os layouts tradicionais de texto e imagem.<br />• <strong>Redução de devoluções:</strong> Demonstrações abrangentes dos produtos e conteúdo de unboxing fornecem expectativas realistas.<br />• <strong>Fortalecimento da identidade da marca:</strong> O conteúdo em vídeo reforça o branding e as conexões emocionais.<br />• <strong>Melhoria de SEO:</strong> O Google prioriza páginas com maior tempo de permanência do usuário; os vídeos impulsionam o ranqueamento nos mecanismos de busca.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

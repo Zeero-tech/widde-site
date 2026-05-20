@@ -1,9 +1,7 @@
-import { useTranslation } from "react-i18next";
 import { blogPosts } from "@/data/blog";
 import SectionTitle from "./SectionTitle";
 
 export default function Blog() {
-  const { t } = useTranslation();
   return (
     <section
       id="blog"
@@ -11,8 +9,8 @@ export default function Blog() {
       aria-labelledby="blog-heading"
     >
       <SectionTitle
-        label={t("blog.label")}
-        title={t("blog.title")}
+        label="Conteúdo"
+        title="Conheça nosso blog"
         id="blog-heading"
         className="mb-6"
       />
