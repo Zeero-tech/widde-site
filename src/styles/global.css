@@ -292,25 +292,7 @@
 
 @media (max-width: 767px) {
     .grid_videos {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 1rem;
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        scroll-padding-left: 1.5rem;
-        scrollbar-width: none;
-    }
-    .grid_videos::-webkit-scrollbar {
-        display: none;
-    }
-    .grid_videos .video_sobre-container {
-        flex: 0 0 90%;
-        scroll-snap-align: start;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -320,6 +302,7 @@
     gap: 5rem;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 60px;
 }
 
 .founders-image {
@@ -465,7 +448,8 @@
 }
 @media (max-width: 767px) {
     .padding-section-large {
-        padding-bottom: 32px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -698,14 +682,23 @@
 }
 
 .section_all-posts .cases_post-item {
-    background-color: #e5e5e5;
-    border-radius: 1rem;
-    overflow: hidden;
+    background-color: #f6f6f6;
     flex-flow: column;
     height: 100%;
     display: flex;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .section_all-posts .cases_post-item {
+        background-color: #e5e5e5;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    .section_all-posts .cases_post-item .blog_post-content {
+        padding: 0.75rem;
+    }
 }
 
 .blog_post-thumbnail-wrapper {
@@ -729,7 +722,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    padding: 1rem;
+    padding-top: 0.5rem;
     display: flex;
 }
 
@@ -847,24 +840,11 @@
     overflow: hidden;
     background: #f6f6f6;
     min-height: 80vh;
+    margin-bottom: 128px;
 }
 
 .section-hero_case.hero-padding {
     padding-top: 0;
-}
-
-.section-hero_quem-somos.hero-padding {
-    padding-top: 0;
-}
-
-.section-hero_quem-somos .padding-section-large:first-child {
-    padding-top: 128px;
-}
-
-@media (max-width: 767px) {
-    .section-hero_quem-somos .padding-section-large:first-child {
-        padding-top: 80px;
-    }
 }
 
 .hero-cases_background {
@@ -926,7 +906,8 @@
 @media screen and (max-width: 991px) {
     .hero-cases_content {
         grid-template-columns: 1fr;
-        padding-top: 6rem;
+        padding-top: 4rem;
+        padding-bottom: 8rem;
     }
 }
 
@@ -1011,6 +992,12 @@
     .case_grid.is--sticky {
         grid-template-columns: 1fr;
         direction: ltr;
+    }
+    .case_grid > *:first-child {
+        order: 2;
+    }
+    .case_grid > *:last-child {
+        order: 1;
     }
 }
 
@@ -1115,6 +1102,25 @@
 
 .case_depoimento-wrapper.is--reverse {
     flex-direction: row-reverse;
+}
+
+@media (max-width: 767px) {
+    .cases_image-wrapper {
+        display: none;
+    }
+    .section-case_intro h2:first-of-type {
+        text-align: center;
+    }
+    .richt-text_cases h2 {
+        font-size: 2rem;
+    }
+    .numeros-rich-text h3,
+    .numeros-rich-text h4 {
+        font-size: 2rem;
+    }
+    .numeros-rich-text.is--conheca h3 {
+        font-size: 1.75rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1249,6 +1255,12 @@
     gap: 1.5rem;
 }
 
+@media (min-width: 768px) {
+    .section-case_intro.is--grey > div > div > aside.blog-post_aside.is--cases {
+        display: none;
+    }
+}
+
 .blog-post_list-recentes {
     display: flex;
     flex-direction: column;
@@ -1381,8 +1393,31 @@ a.btn-animate-chars .btn-animate-chars__text {
     padding-bottom: 0;
 }
 
-.section-hero_case {
-    margin-bottom: 8rem;
+@media (max-width: 767px) {
+    .section-hero_case {
+        margin-bottom: 0;
+        min-height: unset;
+    }
+    .section-case_intro,
+    .section-case_depoimento,
+    .section-case_numeros {
+        margin-bottom: 4rem !important;
+    }
+    .case-section__inner {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .section-case_depoimento.is--black > div {
+        padding-bottom: 4rem;
+    }
+    .case_button-wrapper.align-left.case-de-sucesso a,
+    .case_button-wrapper.align-left.case-de-sucesso button {
+        width: 100%;
+        justify-content: center;
+    }
+    .section-case_intro.is--grey > div > div > div > aside {
+        display: none;
+    }
 }
 
 .section-case_intro,

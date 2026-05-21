@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { useLenis } from "@/lib/useLenis";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
@@ -76,8 +76,15 @@ export default function CasesPage() {
   useLenis();
   useRevealOnScroll();
   const [showAll, setShowAll] = useState(false);
-  const mobileLimit =
-    typeof window !== "undefined" && window.innerWidth < 768 ? 2 : 4;
+  const [mobileLimit, setMobileLimit] = useState(4);
+
+  useEffect(() => {
+    const update = () => setMobileLimit(window.innerWidth < 768 ? 2 : 4);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   const visible = showAll ? cases : cases.slice(0, mobileLimit);
 
   return (
@@ -85,7 +92,7 @@ export default function CasesPage() {
       <Nav />
       <main style={{ backgroundColor: "#f6f6f6" }}>
         {/* Hero — destaque Mamô */}
-        <section className="pt-16 pb-14">
+        <section className="pt-8 pb-14">
           <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
             <h1
               className="font-normal text-black leading-[1.15] mb-6"
@@ -157,7 +164,7 @@ export default function CasesPage() {
                 </span>
                 <h2
                   className="font-normal text-black leading-[1.2] mb-10"
-                  style={{ fontSize: "2rem" }}
+                  style={{ fontSize: "clamp(2rem, 4vw, 2.5rem)" }}
                 >
                   Construindo narrativas com Video Commerce
                 </h2>

@@ -420,7 +420,7 @@ export default function CaseArticle({ data }: Props) {
                     )}
                   </div>
                 </div>
-                <aside className="blog-post_aside is--cases">
+                <aside className="blog-post_aside is--cases hidden">
                   <h3 className="heading-style-h5">Veja outros cases</h3>
                   <input
                     type="text"
@@ -476,6 +476,40 @@ export default function CaseArticle({ data }: Props) {
                   </a>
                 </aside>
               </div>
+              <aside className="blog-post_aside is--cases md:hidden mt-16">
+                <h3 className="heading-style-h5">Veja outros cases</h3>
+                <input
+                  type="text"
+                  placeholder="Buscar cases"
+                  value={caseSearch}
+                  onChange={(e) => setCaseSearch(e.target.value)}
+                  className="text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full mt-3 mb-2"
+                />
+                <div className="w-dyn-list">
+                  <div role="list" className="blog-post_list-recentes w-dyn-items">
+                    {filteredCases.map((c) => (
+                      <div key={c.href} role="listitem" className="blog-post_list-item w-dyn-item">
+                        <a href={c.href} className="blog-post_recentes w-inline-block">
+                          <img alt="" loading="lazy" src={c.img} className="blog-post_image-recentes" />
+                          <div>{c.title}</div>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <a
+                  aria-label="staggering button"
+                  href="/quero-comecar"
+                  className="btn-animate-chars is--blog w-inline-block"
+                >
+                  <span className="btn-animate-chars__text">Começar agora com a Widde</span>
+                  <div className="icon-embed-xsmall-2 w-embed">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M1.99974 13.0001L1.9996 11.0002L18.1715 11.0002L14.2218 7.05044L15.636 5.63623L22 12.0002L15.636 18.3642L14.2218 16.9499L18.1716 13.0002L1.99974 13.0001Z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </aside>
             </div>
           </div>
         </section>

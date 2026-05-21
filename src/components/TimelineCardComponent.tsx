@@ -18,25 +18,19 @@ export default function TimelineCardComponent({
 }: TimelineCardComponentProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [slideDir, setSlideDir] = useState<"up" | "down" | "left" | "right">("up");
+  const [slideDir, setSlideDir] = useState<"up" | "down">("up");
   const [visible, setVisible] = useState(true);
-
-  const isMobile = () => typeof window !== "undefined" && window.innerWidth < 1024;
 
   const handleTimelineClick = (index: number) => {
     if (index === activeIndex || isAnimating) return;
 
-    const mobile = isMobile();
-    const exitDir = mobile ? "left" : "up";
-    const enterDir = mobile ? "right" : "down";
-
     setIsAnimating(true);
-    setSlideDir(exitDir);
+    setSlideDir("up");
     setVisible(false);
 
     setTimeout(() => {
       setActiveIndex(index);
-      setSlideDir(enterDir);
+      setSlideDir("down");
       setVisible(true);
 
       setTimeout(() => {
@@ -50,25 +44,17 @@ export default function TimelineCardComponent({
     handleTimelineClick(nextIndex);
   };
 
-  const getTransform = () => {
-    if (visible) return "translate(0, 0)";
-    if (slideDir === "up") return "translateY(-60px)";
-    if (slideDir === "down") return "translateY(60px)";
-    if (slideDir === "left") return "translateX(-80px)";
-    return "translateX(80px)";
-  };
-
   const cardStyle: React.CSSProperties = {
     willChange: "transform, opacity",
     transition: `transform ${animationDuration}ms cubic-bezier(0.4, 0, 0.6, 1), opacity ${animationDuration}ms cubic-bezier(0.4, 0, 0.6, 1)`,
-    transform: getTransform(),
+    transform: visible ? "translateY(0)" : slideDir === "up" ? "translateY(-60px)" : "translateY(60px)",
     opacity: visible ? 1 : 0,
   };
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
       {/* Timeline */}
-      <div className="hidden lg:flex w-full lg:w-[30%] flex-col gap-1">
+      <div className="w-full lg:w-[30%] flex flex-col gap-1">
         {items.map((item, index) => {
           const active = index === activeIndex;
           return (

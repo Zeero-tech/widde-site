@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "./Nav";
 import VCCta from "./VideoCommerce/VCCta";
 import Newsletter from "./Newsletter";
@@ -1206,7 +1206,14 @@ export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("Ver Todos");
   const [search, setSearch] = useState("");
   const [showAll, setShowAll] = useState(false);
-  const mobileLimit = typeof window !== "undefined" && window.innerWidth < 768 ? 2 : 6;
+  const [mobileLimit, setMobileLimit] = useState(6);
+
+  useEffect(() => {
+    const update = () => setMobileLimit(window.innerWidth < 768 ? 2 : 6);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   const filtered = posts.filter((p) => {
     const matchCat =
@@ -1255,7 +1262,7 @@ export default function BlogPage() {
                 </span>
                 <h2
                   className="font-normal text-black leading-[1.2] mb-8"
-                  style={{ fontSize: "2rem" }}
+                  style={{ fontSize: "clamp(2rem, 4vw, 2.5rem)" }}
                 >
                   {featuredPost.title}
                 </h2>
@@ -1316,7 +1323,7 @@ export default function BlogPage() {
             <h2
               className="text-black text-center mb-10"
               style={{
-                fontSize: "2.5rem",
+                fontSize: "clamp(2rem, 4vw, 2.5rem)",
                 fontWeight: 400,
                 lineHeight: 1.2,
                 letterSpacing: "-0.03em",
@@ -1364,10 +1371,10 @@ export default function BlogPage() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
               {visible.map((post) => (
-                <article key={post.slug} className="flex flex-col bg-[#e5e5e5] rounded-2xl overflow-hidden p-4">
+                <article key={post.slug} className="flex flex-col md:bg-transparent md:rounded-none bg-[#e5e5e5] rounded-2xl overflow-hidden">
                   <a
                     href={`/blog/${post.slug}`}
-                    className="block rounded-xl overflow-hidden no-underline mb-4 aspect-[361/233] relative"
+                    className="block rounded-xl overflow-hidden no-underline mb-0 md:mb-4 aspect-[361/233] relative"
                   >
                     <img
                       src={post.image}
@@ -1383,7 +1390,7 @@ export default function BlogPage() {
                       </span>
                     </div>
                   </a>
-                  <div className="flex flex-col flex-1">
+                  <div className="flex flex-col flex-1 p-4 md:p-0">
                     <p className="text-xs text-[#888] mb-2">{post.date}</p>
                     <h3 className="text-base md:text-lg font-bold text-black leading-[1.3] mb-2">
                       {post.title}
