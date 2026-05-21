@@ -449,7 +449,7 @@
 @media (max-width: 767px) {
     .padding-section-large {
         padding-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 4rem;
     }
 }
 
@@ -907,7 +907,7 @@
     .hero-cases_content {
         grid-template-columns: 1fr;
         padding-top: 4rem;
-        padding-bottom: 8rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -1013,8 +1013,17 @@
 .richt-text_cases h2 {
     font-size: 2.5rem;
     font-weight: 700;
+    margin-top: 3.5rem;
     margin-bottom: 2rem;
     line-height: 1.2;
+}
+
+.richt-text_cases h2:first-child {
+    margin-top: 0;
+}
+
+.richt-text_cases h2 strong {
+    font-weight: inherit;
 }
 
 .richt-text_cases p {
@@ -1025,7 +1034,8 @@
 }
 
 .richt-text_cases figure {
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
+    width: 80%;
 }
 
 .richt-text_cases figure img {
@@ -1040,9 +1050,11 @@
 }
 
 .cases_numbers-grid:not(.align-left) {
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: stretch;
+    max-width: 58rem;
+    margin: auto;
 }
-
 
 .cases_numbers-grid.align-left {
     justify-items: start;
@@ -1051,6 +1063,7 @@
 .cases_numbers-grid:not(.align-left) > .numeros-rich-text:last-child h3,
 .cases_numbers-grid:not(.align-left) > .numeros-rich-text:last-child h4 {
     text-align: center;
+    font-weight: 400;
 }
 
 .cases_numbers-grid:not(.align-left) > .numeros-rich-text:last-child p {
@@ -1060,7 +1073,6 @@
 .numeros-rich-text h3,
 .numeros-rich-text h4 {
     font-size: 2.5rem;
-    font-weight: 900;
     color: #000;
     line-height: 1;
     margin-bottom: 0.25rem;
@@ -1069,10 +1081,11 @@
 .cases_numbers-grid:not(.align-left) .numeros-rich-text h3,
 .cases_numbers-grid:not(.align-left) .numeros-rich-text h4 {
     text-align: center;
+    font-weight: 400;
 }
 
 .numeros-rich-text p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #555;
     margin: 0;
 }
@@ -1376,8 +1389,8 @@ a.btn-animate-chars .btn-animate-chars__text {
 /* CaseArticle — dedicated inner padding, no shared utility class */
 .case-section__inner {
     width: 100%;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2.825rem;
+    padding-bottom: 2.825rem;
 }
 
 /* Sections com bg #f6f6f6 — sem padding, só margin-bottom */
@@ -1401,7 +1414,7 @@ a.btn-animate-chars .btn-animate-chars__text {
     .section-case_intro,
     .section-case_depoimento,
     .section-case_numeros {
-        margin-bottom: 4rem !important;
+        margin-bottom: 8rem !important;
     }
     .case-section__inner {
         padding-top: 2rem;
@@ -1417,6 +1430,57 @@ a.btn-animate-chars .btn-animate-chars__text {
     }
     .section-case_intro.is--grey > div > div > div > aside {
         display: none;
+    }
+    /* All buttons in caseArticle full width on mobile */
+    .section-hero_case a.btn-animate-chars,
+    .section-case_intro a.btn-animate-chars,
+    .section-case_depoimento a.btn-animate-chars,
+    .section-case_intro.is--grey a.btn-animate-chars {
+        width: 100%;
+        justify-content: center;
+    }
+    /* Números section: stack in column, centered */
+    .section-case_numeros .cases_numbers-grid {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    /* align-left: rich text full width, then image-left + numbers-right */
+    .case_grid:has(.cases_numbers-grid.align-left) {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: auto auto;
+        gap: 1rem 1.5rem;
+        align-items: start;
+    }
+    /* unwrap inner div so its children participate in the parent grid */
+    .case_grid:has(.cases_numbers-grid.align-left) > div:last-child {
+        display: contents;
+    }
+    /* rich text: full width, first row */
+    .case_grid:has(.cases_numbers-grid.align-left) .richt-text_cases {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+    /* logo image: left column, second row */
+    .case_grid:has(.cases_numbers-grid.align-left) .cases_imagem-conheca {
+        grid-column: 1;
+        grid-row: 2;
+        width: 120px;
+        max-width: 120px;
+        align-self: center;
+        order: unset;
+    }
+    /* numbers grid: right column, second row */
+    .case_grid:has(.cases_numbers-grid.align-left)
+        .cases_numbers-grid.align-left {
+        grid-column: 2;
+        grid-row: 2;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 0;
+        display: flex;
     }
 }
 

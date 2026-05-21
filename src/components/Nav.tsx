@@ -272,6 +272,23 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <a
+                      href="#demo2"
+                      onClick={(e) => handleNavClick("#demo2", e)}
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        isDark
+                          ? "text-white hover:bg-white/10"
+                          : "text-black hover:bg-black/5",
+                      )}
+                    >
+                      Como funciona
+                    </a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <a
                       href="/cases"
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -384,6 +401,13 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                     ))}
                   </div>
                 )}
+                <a
+                  href="#demo2"
+                  onClick={(e) => { setMobileOpen(false); handleNavClick("#demo2", e); }}
+                  className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
+                >
+                  Como funciona
+                </a>
                 <a
                   href="/cases"
                   onClick={() => setMobileOpen(false)}
