@@ -231,9 +231,12 @@ export default function QuemSomosPage() {
         <section className="bg-surface-dark py-8 md:py-12 lg:py-16">
           <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
             <div className="mb-8 md:mb-12">
-              <h2 className="heading-style-h2">Manifesto Widde</h2>
+              <h2 className="heading-style-h2">Manifesto</h2>
             </div>
-            <TimelineCardComponent items={manifestoData} animationDuration={400} />
+            <TimelineCardComponent
+              items={manifestoData}
+              animationDuration={400}
+            />
           </div>
         </section>
 
