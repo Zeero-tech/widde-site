@@ -2,24 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import AnimatedButton from "./AnimatedButton";
 import CountUp from "./CountUp";
 
-const videos = [
-  { mp4: "/problem-video/7679832-uhd_4096_2160_25fps.mp4", webm: "/problem-video/7679832-uhd_4096_2160_25fps.webm" },
-  { mp4: "/problem-video/7680111-uhd_4096_2160_25fps.mp4", webm: "/problem-video/7680111-uhd_4096_2160_25fps.webm" },
-  { mp4: "/problem-video/8126811-hd_1920_1080_25fps.mp4", webm: "/problem-video/8126811-hd_1920_1080_25fps.webm" },
-];
-
-const DISPLAY_DURATION = 6000; // ms each video stays visible
-const FADE_DURATION = 1000;    // ms crossfade
-
 export default function Problem() {
-  const [current, setCurrent] = useState(0);
-  const [next, setNext] = useState<number | null>(null);
-  const [fading, setFading] = useState(false);
   const [inView, setInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Start crossfade timer only when section enters viewport
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -31,64 +17,22 @@ export default function Problem() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (!inView) return;
-    timerRef.current = setTimeout(function advance() {
-      const nextIdx = (current + 1) % videos.length;
-      setNext(nextIdx);
-      setFading(true);
-
-      setTimeout(() => {
-        setCurrent(nextIdx);
-        setNext(null);
-        setFading(false);
-        timerRef.current = setTimeout(advance, DISPLAY_DURATION);
-      }, FADE_DURATION);
-    }, DISPLAY_DURATION);
-
-    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-  }, [current]);
-
   return (
     <section
       ref={sectionRef}
       className="relative rounded-[20px] overflow-hidden px-5 py-10 md:px-10 md:py-14 lg:px-16 lg:py-20 flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 items-center"
       aria-labelledby="problema2-heading"
     >
-      {/* Current video */}
       {inView && (
         <video
-          key={current}
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
           preload="none"
-          style={{ opacity: 1, transition: `opacity ${FADE_DURATION}ms ease` }}
         >
-          <source src={videos[current].webm} type="video/webm" />
-          <source src={videos[current].mp4} type="video/mp4" />
-        </video>
-      )}
-
-      {/* Next video fading in */}
-      {inView && next !== null && (
-        <video
-          key={`next-${next}`}
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          style={{
-            opacity: fading ? 1 : 0,
-            transition: `opacity ${FADE_DURATION}ms ease`,
-          }}
-        >
-          <source src={videos[next].webm} type="video/webm" />
-          <source src={videos[next].mp4} type="video/mp4" />
+          <source src="/problem-video/background.mp4" type="video/mp4" />
         </video>
       )}
 
