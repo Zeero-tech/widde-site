@@ -3,6 +3,52 @@ import { useLenis } from "@/lib/useLenis";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
 import Nav from "@/components/Nav";
+import TimelineCardComponent from "@/components/TimelineCardComponent";
+
+const manifestoData = [
+  {
+    id: "1",
+    title: "Somos Widde.",
+    subtitle: "Humanizamos. Inovamos. Conectamos.",
+    content:
+      "Acreditamos que cada e-commerce tem o poder de encantar, conectar e transformar experiências. Em um cenário onde a falta de confiança e competitividade são obstáculos, e a distância digital pode separar, somos o elo que aproxima marcas de pessoas.",
+  },
+  {
+    id: "2",
+    title: "Somos o presente e o futuro do e-commerce.",
+    subtitle: "Transformando experiências",
+    content:
+      "Nosso compromisso é nunca parar de ouvir, de aprender e de melhorar. Estamos aqui para transformar o mundo do e-commerce com experiências memoráveis aos consumidores.",
+  },
+  {
+    id: "3",
+    title: "O que defendemos?",
+    subtitle: "Uma nova visão de comércio",
+    content:
+      "Defendemos um mundo onde e-commerces não sejam apenas catálogos digitais, deixando para trás a experiência tradicional e trazendo verdadeiras experiências de compra, cheias de identidade, conexão e credibilidade. Onde cada cliente encontre o que procura, com assertividade e confiança.",
+  },
+  {
+    id: "4",
+    title: "Usamos a força da inovação.",
+    subtitle: "Tecnologia pioneira",
+    content:
+      "Com soluções pioneiras e tendências globais, desenvolvemos uma plataforma de Video Commerce intuitiva, com design marcante e recursos cruciais.",
+  },
+  {
+    id: "5",
+    title: "Estamos em um cenário desafiador.",
+    subtitle: "Quebrando objeções",
+    content:
+      "Reconhecemos as dificuldades de gerar confiança e convencer o consumidor na loja on-line. Com o custo por aquisição cada vez maior, ajudamos o e-commerce a quebrar objeções através da interatividade e humanização para aumentar as conversões.",
+  },
+  {
+    id: "6",
+    title: "Nascemos para humanizar.",
+    subtitle: "Conexões genuínas",
+    content:
+      "Nossa missão é dar vida aos e-commerces, criando conexões genuínas que transformam visitantes em clientes encantados. Sabemos que por trás de cada e-commerce tem um lojista visionário e que por trás de cada visitante na loja, existe um consumidor buscando identificação, clareza e acolhimento.",
+  },
+];
 
 function lazyWithRetry(factory: () => Promise<any>) {
   return lazy(() =>
@@ -185,79 +231,9 @@ export default function QuemSomosPage() {
         <section className="bg-surface-dark py-8 md:py-12 lg:py-16">
           <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
             <div className="mb-8 md:mb-12">
-              <h2 className="heading-style-h2">Manifesto</h2>
+              <h2 className="heading-style-h2">Manifesto Widde</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8">
-                <h3 className="heading-style-h3 mb-3">Somos Widde.</h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Humanizamos. Inovamos. Conectamos.
-                </p>
-              </div>
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8">
-                <h3 className="heading-style-h3 mb-3">
-                  Somos o presente e o futuro do e-commerce.
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Nosso compromisso é nunca parar de ouvir, de aprender e de
-                  melhorar. Estamos aqui para transformar o mundo do e-commerce
-                  com experiências memoráveis aos consumidores.
-                </p>
-              </div>
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8">
-                <h3 className="heading-style-h3 mb-3">O que defendemos?</h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Defendemos um mundo onde e-commerces não sejam apenas
-                  catálogos digitais, deixando para trás a experiência
-                  tradicional e trazendo verdadeiras experiências de compra,
-                  cheias de identidade, conexão e credibilidade. Onde cada
-                  cliente encontre o que procura, com assertividade e confiança.
-                </p>
-              </div>
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8">
-                <h3 className="heading-style-h3 mb-3">
-                  Usamos a força da inovação.
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Com soluções pioneiras e tendências globais, desenvolvemos uma
-                  plataforma de Video Commerce intuitiva, com design marcante e
-                  recursos cruciais.
-                </p>
-              </div>
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8">
-                <h3 className="heading-style-h3 mb-3">
-                  Estamos em um cenário desafiador.
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Reconhecemos as dificuldades de gerar confiança e convencer o
-                  consumidor na loja on-line. Com o custo por aquisição cada vez
-                  maior, ajudamos o e-commerce a quebrar objeções através da
-                  interatividade e humanização para aumentar as conversões.
-                </p>
-              </div>
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8">
-                <h3 className="heading-style-h3 mb-3">
-                  Nascemos para humanizar.
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Nossa missão é dar vida aos e-commerces, criando conexões
-                  genuínas que transformam visitantes em clientes encantados.
-                  Sabemos que por trás de cada e-commerce tem um lojista
-                  visionário e que por trás de cada visitante na loja, existe um
-                  consumidor buscando identificação, clareza e acolhimento.
-                </p>
-              </div>
-              <div className="bg-surface border border-neutral-200 rounded-2xl p-6 lg:p-8 md:col-span-2">
-                <h3 className="heading-style-h3 mb-3">Somos a Widde.</h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  Acreditamos que cada e-commerce tem o poder de encantar,
-                  conectar e transformar experiências. Em um cenário onde a
-                  falta de confiança e competitividade são obstáculos, e a
-                  distância digital pode separar, somos o elo que aproxima
-                  marcas de pessoas.
-                </p>
-              </div>
-            </div>
+            <TimelineCardComponent items={manifestoData} animationDuration={400} />
           </div>
         </section>
 
