@@ -143,7 +143,7 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
             <div>
-              <span className="inline-block bg-charcoal text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
+              <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
                 Novo
               </span>
               <h3 className="text-2xl font-normal text-black mb-4 leading-tight">
@@ -216,7 +216,7 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col flex-1 px-0 justify-between py-0">
             <div>
-              <span className="inline-block bg-charcoal text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
+              <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
                 Novo
               </span>
               <h3 className="text-2xl font-normal text-black mb-4 leading-tight">
@@ -367,7 +367,7 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col flex-1 pr-5 md:pr-6 lg:pr-8 justify-between py-6 md:py-6 lg:py-8">
             <div>
-              <span className="inline-block bg-charcoal text-white text-xs md:text-base font-bold px-3 py-1 rounded-full w-fit mb-4">
+              <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
                 Novo
               </span>
               <h3 className="text-2xl md:text-2xl lg:text-3xl font-normal text-black mb-4 leading-tight">
@@ -439,7 +439,7 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col flex-1 pl-5 md:pl-6 lg:pl-8 justify-between py-6 md:py-6 lg:py-8">
             <div>
-              <span className="inline-block bg-charcoal text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
+              <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">
                 Novo
               </span>
               <h3 className="text-2xl md:text-2xl lg:text-3xl font-normal text-black mb-4 leading-tight">
