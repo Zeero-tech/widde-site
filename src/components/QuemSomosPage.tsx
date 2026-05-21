@@ -257,7 +257,7 @@ export default function QuemSomosPage() {
                 href="https://www.youtube.com/@widde.videocommerce"
                 target="_blank"
                 rel="noreferrer"
-                className="relative overflow-hidden rounded-2xl flex flex-col justify-between p-6 lg:p-8 min-h-[420px] group"
+                className="relative overflow-hidden rounded-2xl flex flex-col justify-between p-4 lg:p-8 min-h-[160px] md:min-h-[420px] group"
                 style={{ background: "#1a1a1a" }}
               >
                 {/* bg image desfocada */}
@@ -268,25 +268,43 @@ export default function QuemSomosPage() {
                       "url('https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2efad48b0def4f7206e_widde-youtube.avif')",
                   }}
                 />
-                <div className="relative z-10 flex flex-col justify-between h-full">
-                  <h3 className="text-white text-xl font-semibold text-center">
+                <div className="relative z-10 flex flex-col md:flex-col justify-between h-full">
+                  {/* desktop layout */}
+                  <h3 className="hidden md:block text-white text-xl font-semibold text-center">
                     Widde no YouTube
                   </h3>
                   <img
                     src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2efad48b0def4f7206e_widde-youtube.avif"
                     alt="Widde no YouTube"
                     loading="lazy"
-                    className="rounded-xl w-[75%] mx-auto my-4 object-cover aspect-[4/3]"
+                    className="hidden md:block rounded-xl w-[75%] mx-auto my-4 object-cover aspect-[4/3]"
                   />
-                  <p className="text-white font-semibold text-center text-lg">
+                  <p className="hidden md:block text-white font-semibold text-center text-lg">
                     Nosso canal no YouTube &nbsp;→
                   </p>
+                  {/* mobile layout: texts left, image right */}
+                  <div className="flex md:hidden flex-row items-center gap-1 h-full">
+                    <div className="flex flex-col items-center justify-center gap-1 flex-1">
+                      <h3 className="text-white text-base font-semibold text-center">
+                        Widde no YouTube
+                      </h3>
+                      <p className="text-white font-semibold text-center text-sm">
+                        Nosso canal no YouTube &nbsp;→
+                      </p>
+                    </div>
+                    <img
+                      src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2efad48b0def4f7206e_widde-youtube.avif"
+                      alt="Widde no YouTube"
+                      loading="lazy"
+                      className="rounded-xl w-[45%] flex-shrink-0 object-cover aspect-[4/3]"
+                    />
+                  </div>
                 </div>
               </a>
               {/* Blog */}
               <a
                 href="/blog"
-                className="relative overflow-hidden rounded-2xl flex flex-col justify-between p-6 lg:p-8 min-h-[420px] group"
+                className="relative overflow-hidden rounded-2xl flex flex-col justify-between p-4 lg:p-8 min-h-[160px] md:min-h-[420px] group"
                 style={{ background: "#1a1a1a" }}
               >
                 <div
@@ -296,19 +314,37 @@ export default function QuemSomosPage() {
                       "url('https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2ef3ac13dad2197206f_84047ca2255bb7ac52e62eae0892e17a_widde-blog.avif')",
                   }}
                 />
-                <div className="relative z-10 flex flex-col justify-between h-full">
-                  <h3 className="text-white text-xl font-semibold text-center">
+                <div className="relative z-10 flex flex-col md:flex-col justify-between h-full">
+                  {/* desktop layout */}
+                  <h3 className="hidden md:block text-white text-xl font-semibold text-center">
                     Conheça o Blog da Widde
                   </h3>
                   <img
                     src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2ef3ac13dad2197206f_84047ca2255bb7ac52e62eae0892e17a_widde-blog.avif"
                     alt="Blog da Widde"
                     loading="lazy"
-                    className="rounded-xl w-[75%] mx-auto my-4 object-cover aspect-[4/3]"
+                    className="hidden md:block rounded-xl w-[75%] mx-auto my-4 object-cover aspect-[4/3]"
                   />
-                  <p className="text-white font-semibold text-center text-lg">
+                  <p className="hidden md:block text-white font-semibold text-center text-lg">
                     Ir para o blog &nbsp;→
                   </p>
+                  {/* mobile layout: texts left, image right */}
+                  <div className="flex md:hidden flex-row items-center gap-1 h-full">
+                    <div className="flex flex-col items-center justify-center gap-1 flex-1">
+                      <h3 className="text-white text-base font-semibold text-center">
+                        Conheça o Blog da Widde
+                      </h3>
+                      <p className="text-white font-semibold text-center text-sm">
+                        Ir para o blog &nbsp;→
+                      </p>
+                    </div>
+                    <img
+                      src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2ef3ac13dad2197206f_84047ca2255bb7ac52e62eae0892e17a_widde-blog.avif"
+                      alt="Blog da Widde"
+                      loading="lazy"
+                      className="rounded-xl w-[45%] flex-shrink-0 object-cover aspect-[4/3]"
+                    />
+                  </div>
                 </div>
               </a>
             </div>

@@ -292,7 +292,22 @@
 
 @media (max-width: 767px) {
     .grid_videos {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        grid-template-columns: unset;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none;
+    }
+    .grid_videos::-webkit-scrollbar {
+        display: none;
+    }
+    .grid_videos .video_sobre-container {
+        flex: 0 0 90%;
+        scroll-snap-align: start;
     }
 }
 

@@ -44,17 +44,23 @@ export default function TimelineCardComponent({
     handleTimelineClick(nextIndex);
   };
 
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
   const cardStyle: React.CSSProperties = {
     willChange: "transform, opacity",
     transition: `transform ${animationDuration}ms cubic-bezier(0.4, 0, 0.6, 1), opacity ${animationDuration}ms cubic-bezier(0.4, 0, 0.6, 1)`,
-    transform: visible ? "translateY(0)" : slideDir === "up" ? "translateY(-60px)" : "translateY(60px)",
+    transform: visible
+      ? "translate(0, 0)"
+      : isMobile
+        ? slideDir === "up" ? "translateX(-60px)" : "translateX(60px)"
+        : slideDir === "up" ? "translateY(-60px)" : "translateY(60px)",
     opacity: visible ? 1 : 0,
   };
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
       {/* Timeline */}
-      <div className="w-full lg:w-[30%] flex flex-col gap-1">
+      <div className="hidden lg:flex w-full lg:w-[30%] flex-col gap-1">
         {items.map((item, index) => {
           const active = index === activeIndex;
           return (
