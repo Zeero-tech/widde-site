@@ -292,7 +292,25 @@
 
 @media (max-width: 767px) {
     .grid_videos {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        scroll-padding-left: 1.5rem;
+        scrollbar-width: none;
+    }
+    .grid_videos::-webkit-scrollbar {
+        display: none;
+    }
+    .grid_videos .video_sobre-container {
+        flex: 0 0 90%;
+        scroll-snap-align: start;
     }
 }
 
@@ -302,7 +320,6 @@
     gap: 5rem;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 60px;
 }
 
 .founders-image {
@@ -446,6 +463,12 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+@media (max-width: 767px) {
+    .padding-section-large {
+        padding-bottom: 32px;
+    }
+}
+
 .padding-section-large.is--bottom-only {
     padding-top: 0;
 }
@@ -675,7 +698,9 @@
 }
 
 .section_all-posts .cases_post-item {
-    background-color: #f6f6f6;
+    background-color: #e5e5e5;
+    border-radius: 1rem;
+    overflow: hidden;
     flex-flow: column;
     height: 100%;
     display: flex;
@@ -704,7 +729,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    padding-top: 0.5rem;
+    padding: 1rem;
     display: flex;
 }
 
@@ -826,6 +851,20 @@
 
 .section-hero_case.hero-padding {
     padding-top: 0;
+}
+
+.section-hero_quem-somos.hero-padding {
+    padding-top: 0;
+}
+
+.section-hero_quem-somos .padding-section-large:first-child {
+    padding-top: 128px;
+}
+
+@media (max-width: 767px) {
+    .section-hero_quem-somos .padding-section-large:first-child {
+        padding-top: 80px;
+    }
 }
 
 .hero-cases_background {

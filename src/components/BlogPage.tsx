@@ -1206,6 +1206,7 @@ export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("Ver Todos");
   const [search, setSearch] = useState("");
   const [showAll, setShowAll] = useState(false);
+  const mobileLimit = typeof window !== "undefined" && window.innerWidth < 768 ? 2 : 6;
 
   const filtered = posts.filter((p) => {
     const matchCat =
@@ -1219,7 +1220,7 @@ export default function BlogPage() {
     return matchCat && matchSearch;
   });
 
-  const visible = showAll ? filtered : filtered.slice(0, 6);
+  const visible = showAll ? filtered : filtered.slice(0, mobileLimit);
 
   return (
     <>
@@ -1244,7 +1245,7 @@ export default function BlogPage() {
               {/* Left — #f2f2f2 content */}
               <div
                 className="flex flex-col justify-center px-10 py-12 md:py-16"
-                style={{ flex: "0 0 50%", backgroundColor: "#f2f2f2" }}
+                style={{ flex: "0 0 50%", backgroundColor: "#e5e5e5" }}
               >
                 <span
                   className="inline-block border text-xs font-normal px-3 py-1 rounded-full mb-5 w-fit"
@@ -1254,7 +1255,7 @@ export default function BlogPage() {
                 </span>
                 <h2
                   className="font-normal text-black leading-[1.2] mb-8"
-                  style={{ fontSize: "2.5rem" }}
+                  style={{ fontSize: "2rem" }}
                 >
                   {featuredPost.title}
                 </h2>
@@ -1363,7 +1364,7 @@ export default function BlogPage() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
               {visible.map((post) => (
-                <article key={post.slug} className="flex flex-col">
+                <article key={post.slug} className="flex flex-col bg-[#e5e5e5] rounded-2xl overflow-hidden p-4">
                   <a
                     href={`/blog/${post.slug}`}
                     className="block rounded-xl overflow-hidden no-underline mb-4 aspect-[361/233] relative"
@@ -1401,7 +1402,7 @@ export default function BlogPage() {
               ))}
             </div>
 
-            {!showAll && filtered.length > 6 && (
+            {!showAll && filtered.length > mobileLimit && (
               <div className="flex justify-center mt-12">
                 <button
                   onClick={() => setShowAll(true)}

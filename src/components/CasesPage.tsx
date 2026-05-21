@@ -76,14 +76,16 @@ export default function CasesPage() {
   useLenis();
   useRevealOnScroll();
   const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? cases : cases.slice(0, 4);
+  const mobileLimit =
+    typeof window !== "undefined" && window.innerWidth < 768 ? 2 : 4;
+  const visible = showAll ? cases : cases.slice(0, mobileLimit);
 
   return (
     <>
       <Nav />
       <main style={{ backgroundColor: "#f6f6f6" }}>
         {/* Hero — destaque Mamô */}
-        <section className="pt-8 pb-14">
+        <section className="pt-16 pb-14">
           <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
             <h1
               className="font-normal text-black leading-[1.15] mb-6"
@@ -155,7 +157,7 @@ export default function CasesPage() {
                 </span>
                 <h2
                   className="font-normal text-black leading-[1.2] mb-10"
-                  style={{ fontSize: "2.5rem" }}
+                  style={{ fontSize: "2rem" }}
                 >
                   Construindo narrativas com Video Commerce
                 </h2>
@@ -217,7 +219,7 @@ export default function CasesPage() {
                 </div>
               </div>
 
-              {!showAll && cases.length > 4 && (
+              {!showAll && cases.length > mobileLimit && (
                 <div className="flex justify-center mt-12">
                   <button
                     onClick={() => setShowAll(true)}

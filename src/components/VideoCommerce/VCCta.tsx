@@ -4,15 +4,7 @@ import SectionTitle from "@/components/SectionTitle";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
 
-const vcContent = {
-  label: "Agende uma demonstração",
-  title: "Quer conhecer tudo?",
-  description: "Nosso time de vendas está pronto para entender seu cenário e te ajudar a começar.",
-  ctaSales: "Falar com Vendas →",
-  ctaLearnMore: "Começar agora →",
-};
-
-const homeContent = {
+const content = {
   label: "Falar com vendas",
   title: "Pronto para transformar seu e-commerce com vídeo?",
   description: "Nossa equipe responde em até 24h e monta uma proposta sob medida para o seu negócio.",
@@ -21,10 +13,6 @@ const homeContent = {
 };
 
 export default function VCCta() {
-  const isVCPage = typeof window !== "undefined"
-    ? window.location.pathname === "/video-commerce"
-    : false;
-  const content = isVCPage ? vcContent : homeContent;
 
   function handleViewDemo(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
