@@ -82,13 +82,10 @@ export default function Newsletter() {
           playsInline
         >
           <source
-            src="https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4"
+            src="/assets/newsletter-bg.mp4"
             type="video/mp4"
           />
         </video>
-
-        {/* Dark overlay + blur */}
-        <div className="absolute inset-0 bg-black/65 backdrop-blur-sm" />
 
         {/* Centered form */}
         <div className="relative z-[5] flex flex-col items-center text-center px-6 py-16 w-full max-w-[920px]">

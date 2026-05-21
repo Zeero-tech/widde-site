@@ -36,8 +36,6 @@ export default function Problem() {
         </video>
       )}
 
-      {/* Glass overlay */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-md" />
 
       {/* Left */}
       <div className="relative z-10 flex-[2.5]">
