@@ -5,31 +5,31 @@ import { vcFormatVideos } from "@/data/vcFormats";
 const formats = [
   {
     name: "Stories",
-    desc: "Conteúdo vertical em tela cheia. Alta imersão e engajamento — o formato que o consumidor já conhece.",
+    desc: "Ofereça uma experiência interativa em todas as páginas do seu e-commerce com Stories. Em um formato vertical e em tela cheia, os vídeos capturam a atenção do consumidor, aumentam a imersão e ajudam a tirar dúvidas sobre os produtos com mais clareza. Tudo isso em uma experiência dinâmica e familiar, no formato que o consumidor já conhece e consome todos os dias.",
     onde: ["Home", "PDP"],
     videoIdx: 0,
   },
   {
     name: "Carrossel de Vídeos",
-    desc: "Mostre múltiplos produtos em sequência. O visitante descobre mais itens sem sair da página.",
+    desc: "Destaque diferentes produtos em um formato dinâmico e envolvente com o Carrossel de Vídeos. Apresente múltiplos itens em sequência e incentive o visitante a descobrir mais produtos sem sair da página, aumentando a navegação e a exploração do catálogo de forma natural.",
     onde: ["Home", "Categorias"],
     videoIdx: 1,
   },
   {
     name: "Destaques da Loja",
-    desc: "Feed estilo rede social para campanhas, lançamentos e coleções. Imersivo e direto.",
+    desc: "Crie uma experiência semelhante aos Destaques do Instagram. Organize vídeos por categorias e facilite o acesso às informações mais importantes, ajudando o cliente a tirar dúvidas, encontrar o que procura de forma objetiva.",
     onde: ["Home", "Categorias"],
     videoIdx: 2,
   },
   {
     name: "Destaques de Produto",
-    desc: "Vídeos organizados por tema na PDP — modo de uso, materiais, looks. O cliente tira todas as objeções antes de comprar.",
+    desc: "Organize vídeos por tema diretamente na página do produto com os Destaques de Produto. Apresente conteúdos como modo de uso, materiais, diferenciais e inspirações para responder dúvidas de forma mais objetiva, eliminar objeções e dar mais segurança ao cliente antes da compra.",
     onde: ["PDP"],
     videoIdx: 3,
   },
   {
     name: "Explorar",
-    desc: "Página 100% dedicada a vídeos — o TikTok da sua loja. Máximo engajamento e descoberta de produtos.",
+    desc: "Uma página 100% dedicada a vídeos, o \"Explorar\" da sua loja. Reúna todos os vídeos dos seus produtos em uma experiência dinâmica e imersiva, com filtros estratégicos para facilitar a navegação e recursos que incentivam a descoberta e a conversão direta de produtos.",
     onde: ["Página exclusiva"],
     videoIdx: 4,
   },

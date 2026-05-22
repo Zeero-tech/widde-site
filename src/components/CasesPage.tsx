@@ -160,7 +160,7 @@ export default function CasesPage() {
                   className="inline-block border text-xs font-normal px-3 py-1 rounded-full mb-5 w-fit"
                   style={{ color: "#2667f8", borderColor: "#2667f8" }}
                 >
-                  Destaque
+                  Em Destaque
                 </span>
                 <h2
                   className="font-normal text-black leading-[1.2] mb-10"

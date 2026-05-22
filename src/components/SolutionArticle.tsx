@@ -52,7 +52,7 @@ export default function SolutionArticle({
       id={id}
       className={
         mobileCarousel
-          ? "flex flex-col gap-4 flex-shrink-0 w-[95%] snap-start"
+          ? "flex flex-col gap-4 flex-shrink-0 w-[90%] snap-start"
           : `flex flex-col ${direction === "right" ? "md:flex-row-reverse" : "md:flex-row"} gap-4 md:gap-2 items-stretch w-full`
       }
     >

@@ -1258,7 +1258,7 @@ export default function BlogPage() {
                   className="inline-block border text-xs font-normal px-3 py-1 rounded-full mb-5 w-fit"
                   style={{ color: "#2667f8", borderColor: "#2667f8" }}
                 >
-                  Destaque
+                  Em Destaque
                 </span>
                 <h2
                   className="font-normal text-black leading-[1.2] mb-8"
@@ -1349,7 +1349,10 @@ export default function BlogPage() {
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => { setActiveCategory(cat); setShowAll(false); }}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setShowAll(false);
+                  }}
                   className={`text-sm font-semibold px-4 py-[7px] rounded-full border transition-colors cursor-pointer ${
                     activeCategory === cat
                       ? "bg-black text-white border-black"
@@ -1363,7 +1366,10 @@ export default function BlogPage() {
                 type="text"
                 placeholder="Faça sua busca"
                 value={search}
-                onChange={(e) => { setSearch(e.target.value); setShowAll(false); }}
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                  setShowAll(false);
+                }}
                 className="ml-auto text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full md:w-auto md:min-w-[220px]"
               />
             </div>
@@ -1371,7 +1377,10 @@ export default function BlogPage() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
               {visible.map((post) => (
-                <article key={post.slug} className="flex flex-col md:bg-transparent md:rounded-none bg-[#e5e5e5] rounded-2xl overflow-hidden">
+                <article
+                  key={post.slug}
+                  className="flex flex-col md:bg-transparent md:rounded-none bg-[#e5e5e5] rounded-2xl overflow-hidden"
+                >
                   <a
                     href={`/blog/${post.slug}`}
                     className="block rounded-xl overflow-hidden no-underline mb-0 md:mb-4 aspect-[361/233] relative"

@@ -11,7 +11,7 @@ export default function Logo({ width = 110, className }: LogoProps) {
       viewBox="0 0 159 39"
       fill="none"
       className={className}
-      style={{ overflow: "hidden", display: "block" }}
+      style={{ display: "block" }}
     >
       <path
         className="logo-path"

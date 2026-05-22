@@ -116,9 +116,11 @@ export default function TimelineCardComponent({
             <p className="text-lg text-slate-700 leading-relaxed">
               {items[activeIndex].content}
             </p>
-            <p className="text-sm text-slate-500">
-              Próximo →
-            </p>
+            <div className="flex justify-end">
+              <span className="inline-flex items-center gap-1 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors">
+                Próximo →
+              </span>
+            </div>
           </div>
         </div>
       </div>

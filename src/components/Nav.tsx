@@ -30,46 +30,139 @@ type Solution = {
 
 function VideoCommerceIcon() {
   return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
-      <path d="M20 17l11 7-11 7V17z" stroke="var(--color-brand)" strokeWidth="2" strokeLinejoin="round" fill="none" />
+      <path
+        d="M20 17l11 7-11 7V17z"
+        stroke="var(--color-brand)"
+        strokeWidth="2"
+        strokeLinejoin="round"
+        fill="none"
+      />
     </svg>
   );
 }
 
 function LiveCommerceIcon() {
   return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
       {/* Center dot */}
       <circle cx="24" cy="24" r="2.5" fill="var(--color-brand)" />
       {/* Inner arcs — left and right */}
-      <path d="M19 19a7.07 7.07 0 0 0 0 10" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M29 19a7.07 7.07 0 0 1 0 10" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path
+        d="M19 19a7.07 7.07 0 0 0 0 10"
+        stroke="var(--color-brand)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M29 19a7.07 7.07 0 0 1 0 10"
+        stroke="var(--color-brand)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        fill="none"
+      />
       {/* Outer arcs — left and right */}
-      <path d="M14 15a13.07 13.07 0 0 0 0 18" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M34 15a13.07 13.07 0 0 1 0 18" stroke="var(--color-brand)" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path
+        d="M14 15a13.07 13.07 0 0 0 0 18"
+        stroke="var(--color-brand)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M34 15a13.07 13.07 0 0 1 0 18"
+        stroke="var(--color-brand)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        fill="none"
+      />
     </svg>
   );
 }
 
 function TryOnIcon() {
   return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="48" height="48" rx="14" fill="#F0F0F0" />
       {/* Mirror frame */}
-      <rect x="17" y="10" width="14" height="22" rx="7" stroke="var(--color-brand)" strokeWidth="2.2" fill="none" />
+      <rect
+        x="17"
+        y="10"
+        width="14"
+        height="22"
+        rx="7"
+        stroke="var(--color-brand)"
+        strokeWidth="2.2"
+        fill="none"
+      />
       {/* Person inside mirror */}
       <circle cx="24" cy="18" r="2.5" fill="var(--color-brand)" />
-      <path d="M20 28c0-3 1.8-5 4-5s4 2 4 5" stroke="var(--color-brand)" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path
+        d="M20 28c0-3 1.8-5 4-5s4 2 4 5"
+        stroke="var(--color-brand)"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        fill="none"
+      />
       {/* Mirror stand */}
-      <path d="M24 32v4" stroke="var(--color-brand)" strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M20 36h8" stroke="var(--color-brand)" strokeWidth="2.2" strokeLinecap="round" />
+      <path
+        d="M24 32v4"
+        stroke="var(--color-brand)"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 36h8"
+        stroke="var(--color-brand)"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
       {/* Person outside mirror (left side) */}
-      <circle cx="10" cy="20" r="2.2" fill="var(--color-brand)" opacity="0.45" />
-      <path d="M7 29c0-2.5 1.3-4 3-4s3 1.5 3 4" stroke="var(--color-brand)" strokeWidth="1.6" strokeLinecap="round" fill="none" opacity="0.45" />
+      <circle
+        cx="10"
+        cy="20"
+        r="2.2"
+        fill="var(--color-brand)"
+        opacity="0.45"
+      />
+      <path
+        d="M7 29c0-2.5 1.3-4 3-4s3 1.5 3 4"
+        stroke="var(--color-brand)"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        fill="none"
+        opacity="0.45"
+      />
       {/* Reflection arrows */}
-      <path d="M14 22h3" stroke="var(--color-brand)" strokeWidth="1.5" strokeLinecap="round" markerEnd="url(#arrow)" opacity="0.5" />
+      <path
+        d="M14 22h3"
+        stroke="var(--color-brand)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        markerEnd="url(#arrow)"
+        opacity="0.5"
+      />
     </svg>
   );
 }
@@ -79,8 +172,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
-  const isDark = isDarkProp ?? pathname.replace(/\/$/, "") === "/video-commerce";
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/";
+  const isDark =
+    isDarkProp ?? pathname.replace(/\/$/, "") === "/video-commerce";
 
   const solutions: Solution[] = [
     {
@@ -190,7 +285,6 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
             aria-current="page"
             className="no-underline flex items-center"
             style={{
-              overflow: "hidden",
               display: "inline-flex",
               color: isDark ? "white" : "black",
             }}
@@ -297,7 +391,7 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                           : "text-black hover:bg-black/5",
                       )}
                     >
-                      Resultados
+                      Cases
                     </a>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -350,7 +444,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                     e.preventDefault();
                     setMobileOpen(false);
                     if (window.location.pathname === "/") {
-                      getLenis().scrollTo(0, { duration: 3, easing: easeOutQuint });
+                      getLenis().scrollTo(0, {
+                        duration: 3,
+                        easing: easeOutQuint,
+                      });
                     } else {
                       window.location.href = "/";
                     }
@@ -361,7 +458,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 <button
                   className="bg-transparent border-none text-2xl cursor-pointer p-2 text-black"
                   aria-label="Fechar menu"
-                  onClick={() => { setMobileOpen(false); setMobileSolutionsOpen(false); }}
+                  onClick={() => {
+                    setMobileOpen(false);
+                    setMobileSolutionsOpen(false);
+                  }}
                 >
                   ✕
                 </button>
@@ -376,10 +476,25 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 >
                   Soluções
                   <svg
-                    width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    style={{ transition: "transform 0.25s", transform: mobileSolutionsOpen ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }}
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    style={{
+                      transition: "transform 0.25s",
+                      transform: mobileSolutionsOpen
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
+                      flexShrink: 0,
+                    }}
                   >
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="black" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="black"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </button>
                 {mobileSolutionsOpen && (
@@ -388,7 +503,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                       <a
                         key={s.label}
                         href={s.href ?? s.elementId}
-                        onClick={(e) => { setMobileSolutionsOpen(false); handleSolutionClick(s.elementId, e, s.href); }}
+                        onClick={(e) => {
+                          setMobileSolutionsOpen(false);
+                          handleSolutionClick(s.elementId, e, s.href);
+                        }}
                         className="no-underline text-black text-lg font-normal py-3 border-b border-black/5 last:border-b-0 flex items-center gap-2"
                       >
                         {s.label}
@@ -403,7 +521,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 )}
                 <a
                   href="#demo2"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("#demo2", e); }}
+                  onClick={(e) => {
+                    setMobileOpen(false);
+                    handleNavClick("#demo2", e);
+                  }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   Como funciona
@@ -417,7 +538,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 </a>
                 <a
                   href="#planos"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("#planos", e); }}
+                  onClick={(e) => {
+                    setMobileOpen(false);
+                    handleNavClick("#planos", e);
+                  }}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
                   Planos
@@ -447,7 +571,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                 </a>
                 <a
                   href="#demo2"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick("#demo2", e); }}
+                  onClick={(e) => {
+                    setMobileOpen(false);
+                    handleNavClick("#demo2", e);
+                  }}
                   className="w-full text-center bg-transparent text-black font-bold text-lg px-5 py-0 h-[38px] flex items-center justify-center rounded-full no-underline border border-black/20"
                 >
                   Conhecer mais

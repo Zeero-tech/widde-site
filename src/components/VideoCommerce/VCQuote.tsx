@@ -16,14 +16,9 @@ export default function VCQuote() {
             loop
             playsInline
             preload="none"
-            poster="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.png"
           >
             <source
-              src="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.webm"
-              type="video/webm"
-            />
-            <source
-              src="https://videos.widde.io/widde-bucket-sp/site/site-18-09/estrela.mp4"
+              src="/assets/depoimento-elian-opt.mp4"
               type="video/mp4"
             />
           </video>
@@ -33,12 +28,12 @@ export default function VCQuote() {
       {/* Quote content — below video on mobile, left on desktop */}
       <div className="flex-1 md:max-w-[45vw] lg:max-w-[40vw] md:order-1">
         <p className="text-xl md:text-2xl lg:text-[28px] text-white leading-[1.4] font-normal mb-4 md:mb-5 lg:mb-6">
-          "Desde que começamos a trabalhar com a Widde, a experiência em nosso e-commerce alcançou um novo nível de interatividade."
+          "O principal motivo de contratarmos a Widde é trazer essa experiência do vídeo para dentro do site, que a imagem não consegue proporcionar. É uma plataforma super simples de usar, não pesa no site, não atrapalha o tempo de carregamento, tudo flui e os clientes adoram e aumenta a nossa conversão."
         </p>
         <div className="font-black text-base md:text-lg lg:text-xl text-white mb-[2px] md:mb-1">
-          Natalia Figols
+          Mayara Wolf
         </div>
-        <div className="text-base md:text-lg lg:text-xl text-white/50 mb-4 md:mb-5 lg:mb-6">Brinquedos Estrela</div>
+        <div className="text-base md:text-lg lg:text-xl text-white/50 mb-4 md:mb-5 lg:mb-6">Coordenadora de E-commerce</div>
         <AnimatedButton
           href="/?scrollTo=demo2"
           onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {

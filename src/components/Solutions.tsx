@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import CountUp from "./CountUp";
 import SolutionArticle from "./SolutionArticle";
 import SectionTitle from "./SectionTitle";
@@ -5,6 +7,37 @@ import { useInViewVideo } from "@/hooks/useInViewVideo";
 
 export default function Solutions() {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const proxy = { val: 0 };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          gsap.timeline()
+            .to(proxy, {
+              val: 40,
+              duration: 0.35,
+              ease: "power2.out",
+              onUpdate: () => { el.scrollLeft = proxy.val; },
+            })
+            .to(proxy, {
+              val: 0,
+              duration: 0.45,
+              ease: "power2.inOut",
+              onUpdate: () => { el.scrollLeft = proxy.val; },
+            });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const videoVC = useInViewVideo();
   const videoLC = useInViewVideo();
   const videoTryOn = useInViewVideo();
@@ -22,7 +55,7 @@ export default function Solutions() {
       />
 
       {/* Mobile: carrossel horizontal */}
-      <div className="flex md:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
+      <div ref={carouselRef} className="flex md:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
         {/* VIDEO COMMERCE */}
         <SolutionArticle direction="left" id="video-commerce" mobileCarousel>
           <div
