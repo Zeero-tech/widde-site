@@ -146,7 +146,7 @@ export default function VCHero() {
               <img
                 className="w-full h-full object-cover object-top"
                 src="/root/vc-hero-preview.png"
-                alt=""
+                alt="Preview da plataforma de Video Commerce da Widde"
                 loading="eager"
                 fetchPriority="high"
               />
