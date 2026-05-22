@@ -279,14 +279,14 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
       }}
     >
       <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
-        <nav className="flex justify-between items-center md:px-0 py-3 relative min-h-8">
+        <nav className="flex justify-between items-center md:px-0 py-3 relative min-h-8 overflow-visible">
           <a
             href="/"
             aria-current="page"
-            className="no-underline flex items-center"
+            className="no-underline"
             style={{
-              display: "inline-flex",
               color: isDark ? "white" : "black",
+              alignSelf: "center",
             }}
             onClick={(e) => {
               e.preventDefault();
