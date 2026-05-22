@@ -23,6 +23,16 @@
   animation: peekScroll 600ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
+@keyframes gridVideosPeek {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(40px); }
+  100% { transform: translateX(0); }
+}
+
+.grid-videos-peek > * {
+  animation: gridVideosPeek 600ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
 @theme {
     --color-brand: #2667f8;
     --color-brand-dark: #1a3eaf;

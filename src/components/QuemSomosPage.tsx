@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useRef, useEffect } from "react";
 import { useLenis } from "@/lib/useLenis";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
@@ -69,6 +69,129 @@ const Footer = lazyWithRetry(() => import("@/components/Footer"));
 export default function QuemSomosPage() {
   useLenis();
   useRevealOnScroll();
+
+  const gridVideosRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = gridVideosRef.current;
+    if (!el) return;
+
+    el.style.opacity = "0";
+
+    function triggerPeek() {
+      el!.style.scrollSnapType = "none";
+      el!.classList.add("grid-videos-peek");
+      function onPeekEnd(e: Event) {
+        if ((e as AnimationEvent).animationName !== "gridVideosPeek") return;
+        el!.removeEventListener("animationend", onPeekEnd);
+        el!.classList.remove("grid-videos-peek");
+        el!.style.scrollSnapType = "";
+      }
+      el!.addEventListener("animationend", onPeekEnd);
+    }
+
+    function triggerSequence() {
+      el!.style.opacity = "";
+      void el!.offsetWidth;
+      el!.classList.add("carousel-reveal");
+      function onRevealEnd(e: Event) {
+        if ((e as AnimationEvent).animationName !== "revealFadeSlide") return;
+        el!.removeEventListener("animationend", onRevealEnd);
+        el!.classList.remove("carousel-reveal");
+        el!.style.opacity = "1";
+        setTimeout(triggerPeek, 500);
+      }
+      el!.addEventListener("animationend", onRevealEnd);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(triggerSequence, 300);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = gridVideosRef.current;
+    if (!el) return;
+
+    let startX = 0;
+    let startScrollLeft = 0;
+    let isDragging = false;
+    let overshoot = 0;
+    let rafId: number;
+
+    function getMaxScroll() {
+      return el.scrollWidth - el.clientWidth;
+    }
+
+    function springBack() {
+      cancelAnimationFrame(rafId);
+      function step() {
+        overshoot *= 0.75;
+        if (Math.abs(overshoot) < 0.5) {
+          overshoot = 0;
+          el.style.transform = "";
+          return;
+        }
+        el.style.transform = `translateX(${-overshoot}px)`;
+        rafId = requestAnimationFrame(step);
+      }
+      rafId = requestAnimationFrame(step);
+    }
+
+    function onTouchStart(e: TouchEvent) {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      startScrollLeft = el.scrollLeft;
+      overshoot = 0;
+      cancelAnimationFrame(rafId);
+      el.style.transform = "";
+    }
+
+    function onTouchMove(e: TouchEvent) {
+      if (!isDragging) return;
+      const dx = startX - e.touches[0].clientX;
+      const maxScroll = getMaxScroll();
+      const newScroll = startScrollLeft + dx;
+
+      if (newScroll < 0) {
+        el.scrollLeft = 0;
+        overshoot = newScroll * 0.3;
+        el.style.transform = `translateX(${-overshoot}px)`;
+      } else if (newScroll > maxScroll) {
+        el.scrollLeft = maxScroll;
+        overshoot = (newScroll - maxScroll) * 0.3;
+        el.style.transform = `translateX(${-overshoot}px)`;
+      } else {
+        el.scrollLeft = newScroll;
+        overshoot = 0;
+        el.style.transform = "";
+      }
+    }
+
+    function onTouchEnd() {
+      isDragging = false;
+      if (overshoot !== 0) springBack();
+    }
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: true });
+    el.addEventListener("touchend", onTouchEnd);
+
+    return () => {
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
 
   return (
     <>
@@ -148,7 +271,7 @@ export default function QuemSomosPage() {
                   experiências que aproximam marcas e pessoas.
                 </p>
               </div>
-              <div data-reveal className="grid_videos">
+              <div ref={gridVideosRef} className="grid_videos">
                 <div className="video_sobre-container">
                   <div className="video_sobre-embed">
                     <iframe
