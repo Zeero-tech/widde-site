@@ -3,6 +3,8 @@ import Nav from "./Nav";
 import VCCta from "./VideoCommerce/VCCta";
 import Newsletter from "./Newsletter";
 import Footer from "./Footer";
+import { useLenis } from "@/lib/useLenis";
+import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
 type Post = {
   slug: string;
@@ -1203,6 +1205,8 @@ const CATEGORIES = [
 ];
 
 export default function BlogPage() {
+  useLenis();
+  useRevealOnScroll();
   const [activeCategory, setActiveCategory] = useState("Ver Todos");
   const [search, setSearch] = useState("");
   const [showAll, setShowAll] = useState(false);
@@ -1237,6 +1241,7 @@ export default function BlogPage() {
         <section className="bg-surface pt-16 pb-0 md:pt-20 lg:pt-24">
           <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
             <h1
+              data-reveal
               className="font-normal text-black text-center leading-[1.15]"
               style={{ fontSize: "3rem", marginBottom: "24px" }}
             >
@@ -1245,6 +1250,7 @@ export default function BlogPage() {
 
             {/* Featured post card — two halves, no gap */}
             <a
+              data-reveal
               href={`/blog/${featuredPost.slug}`}
               className="no-underline flex flex-col md:flex-row overflow-hidden rounded-2xl"
               style={{ minHeight: 520 }}
@@ -1321,6 +1327,7 @@ export default function BlogPage() {
         <section className="bg-surface pb-20 pt-14 md:pt-16 lg:pt-20">
           <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto ">
             <h2
+              data-reveal
               className="text-black text-center mb-10"
               style={{
                 fontSize: "clamp(2rem, 4vw, 2.5rem)",
@@ -1333,6 +1340,7 @@ export default function BlogPage() {
               Veja mais conteúdos
             </h2>
             <p
+              data-reveal
               className="text-[#666] text-center mb-10"
               style={{
                 fontSize: "1.2rem",
@@ -1345,7 +1353,7 @@ export default function BlogPage() {
             </p>
 
             {/* Filters */}
-            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-10 md:mb-10">
+            <div data-reveal className="flex flex-wrap items-center gap-2 md:gap-3 mb-10 md:mb-10">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
@@ -1379,6 +1387,7 @@ export default function BlogPage() {
               {visible.map((post) => (
                 <article
                   key={post.slug}
+                  data-reveal
                   className="flex flex-col md:bg-transparent md:rounded-none bg-[#e5e5e5] rounded-2xl overflow-hidden"
                 >
                   <a

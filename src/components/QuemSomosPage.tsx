@@ -79,7 +79,7 @@ export default function QuemSomosPage() {
           <div className="nav-scroll-animation"></div>
           <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
             <div className="padding-section-large">
-              <div className="quem-somos_wrapper">
+              <div data-reveal className="quem-somos_wrapper">
                 <img
                   src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/681ca182c50c42c2115d5905_3f73365573698d2d21a17349832dc53c_fundadores-widde.avif"
                   loading="eager"
@@ -115,7 +115,7 @@ export default function QuemSomosPage() {
               </div>
             </div>
             <div className="padding-section-large">
-              <div className="quem-somos_cards-intro">
+              <div data-reveal className="quem-somos_cards-intro">
                 <div className="quem-somos_cards-content">
                   <span className="stat-number">+10 mil</span>
                   <span className="stat-label">
@@ -141,14 +141,14 @@ export default function QuemSomosPage() {
         <section id="cases" className="section_videos">
           <div className="pb-16">
             <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
-              <div className="heading-wrapper max-width-large">
+              <div data-reveal className="heading-wrapper max-width-large">
                 <h2 className="heading-style-h2">Nova era do e-commerce</h2>
                 <p className="text-subheading max-width-medium">
                   Na Widde, nosso propósito é dar vida ao e-commerce, criando
                   experiências que aproximam marcas e pessoas.
                 </p>
               </div>
-              <div className="grid_videos">
+              <div data-reveal className="grid_videos">
                 <div className="video_sobre-container">
                   <div className="video_sobre-embed">
                     <iframe
@@ -230,20 +230,22 @@ export default function QuemSomosPage() {
         {/* Manifesto */}
         <section className="bg-surface-dark py-8 md:py-12 lg:py-16">
           <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
-            <div className="mb-8 md:mb-12">
+            <div data-reveal className="mb-8 md:mb-12">
               <h2 className="heading-style-h2">Manifesto</h2>
             </div>
-            <TimelineCardComponent
-              items={manifestoData}
-              animationDuration={400}
-            />
+            <div data-reveal>
+              <TimelineCardComponent
+                items={manifestoData}
+                animationDuration={400}
+              />
+            </div>
           </div>
         </section>
 
         {/* Veja mais */}
         <section className="py-8 md:py-12 lg:py-20 bg-surface">
           <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
-            <div className="text-center mb-10 md:mb-14">
+            <div data-reveal className="text-center mb-10 md:mb-14">
               <h2 className="heading-style-h2 mb-4">Veja mais conteúdos</h2>
               <p className="text-subheading max-w-xl mx-auto">
                 Acompanhe semanalmente nossos conteúdos no blog e no YouTube
@@ -251,7 +253,7 @@ export default function QuemSomosPage() {
                 e-commerce.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+            <div data-reveal className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
               {/* YouTube */}
               <a
                 href="https://www.youtube.com/@widde.videocommerce"

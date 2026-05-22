@@ -95,17 +95,19 @@ export default function CasesPage() {
         <section className="pt-8 pb-14">
           <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
             <h1
+              data-reveal
               className="font-normal text-black leading-[1.15] mb-6"
               style={{ fontSize: "3rem" }}
             >
               Cases de sucesso
             </h1>
-            <p className="text-[#373739] text-lg mb-8">
+            <p data-reveal className="text-[#373739] text-lg mb-8">
               Veja como tem sido <strong>os resultados</strong> de quem usa as{" "}
               <strong>soluções de Video Commerce</strong> da Widde.
             </p>
 
             <a
+              data-reveal
               href="/case/mamo"
               className="no-underline flex flex-col md:flex-row overflow-hidden rounded-2xl"
               style={{ minHeight: "520px" }}
@@ -180,7 +182,7 @@ export default function CasesPage() {
         <section id="cases" className="section_all-posts">
           <div className="padding-section-large is--bottom-only">
             <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
-              <div className="heading-wrapper align-left">
+              <div data-reveal className="heading-wrapper align-left">
                 <h2 className="heading-style-h2">Todos os cases de sucesso</h2>
               </div>
               <div className="filter-list w-dyn-list">
@@ -191,6 +193,7 @@ export default function CasesPage() {
                   {visible.map((c) => (
                     <div
                       key={c.href}
+                      data-reveal
                       role="listitem"
                       className="blog_post-item-wrapper w-dyn-item"
                     >
