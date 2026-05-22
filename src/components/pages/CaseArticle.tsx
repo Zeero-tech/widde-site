@@ -1,4 +1,4 @@
-import { lazyWithRetry } from "@/lib/lazyWithRetry"
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { Suspense, useState } from "react";
 import { useLenis } from "@/lib/useLenis";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";

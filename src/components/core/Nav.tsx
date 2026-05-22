@@ -536,7 +536,7 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                   onClick={() => setMobileOpen(false)}
                   className="no-underline text-black text-lg font-normal py-4 border-b border-black/10"
                 >
-                  Resultados
+                  Cases
                 </a>
                 <a
                   href="#planos"
