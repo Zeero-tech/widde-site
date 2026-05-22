@@ -3,11 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function Blog() {
   return (
-    <section
-      id="blog"
-      className=""
-      aria-labelledby="blog-heading"
-    >
+    <section id="blog" className="" aria-labelledby="blog-heading">
       <SectionTitle
         label="Conteúdo"
         title="Conheça nosso blog"
@@ -24,7 +20,7 @@ export default function Blog() {
           <a
             key={post.title}
             href={post.link}
-            className="flex-shrink-0 w-[90vw] md:w-[60vw] lg:w-[45vw] snap-start rounded-[14px] overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)] flex flex-col no-underline"
+            className="flex-shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] snap-start rounded-[14px] overflow-hidden shadow-[0_0_0_1px_rgb(233,233,233)] flex flex-col no-underline"
           >
             <div
               className="w-full h-[180px] md:h-[220px] relative"
@@ -33,8 +29,8 @@ export default function Blog() {
               {post.image && (
                 <img
                   src={post.image}
-                  srcSet={`${post.image.replace(/(\.[^.]+)$/, '-p-500$1')} 500w, ${post.image.replace(/(\.[^.]+)$/, '-p-800$1')} 800w, ${post.image.replace(/(\.[^.]+)$/, '-p-1080$1')} 1080w, ${post.image} 1600w`}
-                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 45vw"
+                  srcSet={`${post.image.replace(/(\.[^.]+)$/, "-p-500$1")} 500w, ${post.image.replace(/(\.[^.]+)$/, "-p-800$1")} 800w, ${post.image.replace(/(\.[^.]+)$/, "-p-1080$1")} 1080w, ${post.image} 1600w`}
+                  sizes="(max-width: 768px) 85vw, (max-width: 1024px) 60vw, 45vw"
                   alt={post.title}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
@@ -90,7 +86,7 @@ export default function Blog() {
               {post.image && (
                 <img
                   src={post.image}
-                  srcSet={`${post.image.replace(/(\.[^.]+)$/, '-p-500$1')} 500w, ${post.image.replace(/(\.[^.]+)$/, '-p-800$1')} 800w, ${post.image.replace(/(\.[^.]+)$/, '-p-1080$1')} 1080w, ${post.image} 1600w`}
+                  srcSet={`${post.image.replace(/(\.[^.]+)$/, "-p-500$1")} 500w, ${post.image.replace(/(\.[^.]+)$/, "-p-800$1")} 800w, ${post.image.replace(/(\.[^.]+)$/, "-p-1080$1")} 1080w, ${post.image} 1600w`}
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   alt={post.title}
                   className="absolute inset-0 w-full h-full object-cover"

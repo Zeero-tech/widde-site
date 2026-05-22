@@ -8,33 +8,47 @@ import { useInViewVideo } from "@/hooks/useInViewVideo";
 export default function Solutions() {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const carouselRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (window.innerWidth >= 768) return;
+    const section = sectionRef.current;
     const el = carouselRef.current;
-    if (!el) return;
+    if (!section || !el) return;
+
+    gsap.set(section, { y: 40, opacity: 0, filter: "blur(10px)" });
+
     const proxy = { val: 0 };
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           gsap.timeline()
+            .to(section, {
+              y: 0,
+              opacity: 1,
+              filter: "blur(0px)",
+              duration: 0.75,
+              ease: "power3.out",
+            })
             .to(proxy, {
-              val: 40,
-              duration: 0.35,
+              val: 80,
+              duration: 0.5,
               ease: "power2.out",
+              delay: 2,
               onUpdate: () => { el.scrollLeft = proxy.val; },
             })
             .to(proxy, {
               val: 0,
-              duration: 0.45,
+              duration: 0.55,
               ease: "power2.inOut",
               onUpdate: () => { el.scrollLeft = proxy.val; },
             });
           observer.disconnect();
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.1 },
     );
-    observer.observe(el);
+    observer.observe(section);
     return () => observer.disconnect();
   }, []);
 
@@ -46,7 +60,7 @@ export default function Solutions() {
   const videoTryOnMobile = useInViewVideo();
 
   return (
-    <section id="solucoes" aria-labelledby="sol-heading">
+    <section ref={sectionRef} id="solucoes" aria-labelledby="sol-heading">
       <SectionTitle
         label="O que a Widde faz"
         title="Conheça nossas soluções"

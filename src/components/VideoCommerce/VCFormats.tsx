@@ -29,7 +29,7 @@ const formats = [
   },
   {
     name: "Explorar",
-    desc: "Uma página 100% dedicada a vídeos, o \"Explorar\" da sua loja. Reúna todos os vídeos dos seus produtos em uma experiência dinâmica e imersiva, com filtros estratégicos para facilitar a navegação e recursos que incentivam a descoberta e a conversão direta de produtos.",
+    desc: 'Uma página 100% dedicada a vídeos, o "Explorar" da sua loja. Reúna todos os vídeos dos seus produtos em uma experiência dinâmica e imersiva, com filtros estratégicos para facilitar a navegação e recursos que incentivam a descoberta e a conversão direta de produtos.',
     onde: ["Página exclusiva"],
     videoIdx: 4,
   },
@@ -56,7 +56,11 @@ export default function VCFormats() {
 
   const slideStyle: React.CSSProperties = {
     transition: `transform ${DURATION}ms cubic-bezier(0.4,0,0.2,1), opacity ${DURATION}ms ease`,
-    transform: visible ? "translateX(0)" : dir === "left" ? "translateX(-40px)" : "translateX(40px)",
+    transform: visible
+      ? "translateX(0)"
+      : dir === "left"
+        ? "translateX(-40px)"
+        : "translateX(40px)",
     opacity: visible ? 1 : 0,
   };
 
@@ -72,7 +76,10 @@ export default function VCFormats() {
       {/* Mobile: phone mockup carousel */}
       <div className="md:hidden flex flex-col items-center gap-16 px-4">
         {/* Phone mockup */}
-        <div className="relative w-[60%]" style={{ aspectRatio: "9/19.5", ...slideStyle }}>
+        <div
+          className="relative w-[60%]"
+          style={{ aspectRatio: "9/19.5", ...slideStyle }}
+        >
           {/* Video clipped to inner radius */}
           <div className="absolute inset-[6px] rounded-[30px] overflow-hidden z-0">
             <video
@@ -85,9 +92,15 @@ export default function VCFormats() {
               preload="metadata"
             >
               {vcFormatVideos[current.videoIdx]?.webm && (
-                <source src={vcFormatVideos[current.videoIdx].webm} type="video/webm" />
+                <source
+                  src={vcFormatVideos[current.videoIdx].webm}
+                  type="video/webm"
+                />
               )}
-              <source src={vcFormatVideos[current.videoIdx]?.src ?? ""} type="video/mp4" />
+              <source
+                src={vcFormatVideos[current.videoIdx]?.src ?? ""}
+                type="video/mp4"
+              />
             </video>
           </div>
           {/* Phone frame */}
@@ -98,8 +111,18 @@ export default function VCFormats() {
 
         {/* Text + nav */}
         <div className="w-full flex flex-col gap-2">
-          <div className="text-xl font-bold text-black leading-tight" style={slideStyle}>{current.name}</div>
-          <div className="text-sm text-[#555] leading-relaxed" style={slideStyle}>{current.desc}</div>
+          <div
+            className="text-xl font-bold text-black leading-tight"
+            style={slideStyle}
+          >
+            {current.name}
+          </div>
+          <div
+            className="text-sm text-[#555] leading-relaxed"
+            style={slideStyle}
+          >
+            {current.desc}
+          </div>
           <div className="text-xs text-[#aaa]" style={slideStyle}>
             Aparece em:
             {current.onde.map((lugar) => (
@@ -113,7 +136,7 @@ export default function VCFormats() {
           </div>
 
           {/* Dots + nav buttons */}
-          <div className="flex flex-col gap-2 mt-4">
+          <div className="flex flex-col gap-2 mt-4 items-end">
             <div className="flex gap-1.5">
               {formats.map((_, i) => (
                 <button
@@ -130,7 +153,16 @@ export default function VCFormats() {
                   onClick={() => navigate(activeIdx - 1)}
                   className="flex items-center gap-2 bg-transparent text-black text-sm font-bold px-4 py-2.5 rounded-full w-fit border border-black/20 hover:border-black transition-colors"
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <polyline points="15 6 9 12 15 18" />
                   </svg>
                   Anterior
@@ -142,7 +174,16 @@ export default function VCFormats() {
                   className="flex items-center gap-2 bg-black text-white text-sm font-bold px-4 py-2.5 rounded-full w-fit"
                 >
                   Próximo
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <polyline points="9 6 15 12 9 18" />
                   </svg>
                 </button>
@@ -155,7 +196,10 @@ export default function VCFormats() {
       {/* Desktop: phone mockup carousel */}
       <div className="hidden md:flex items-center gap-12 lg:gap-20 xl:gap-24 md:px-4 lg:px-10 xl:px-16 md:h-[62vh] lg:h-[68vh] xl:h-[70vh]">
         {/* Phone mockup */}
-        <div className="relative flex-shrink-0 h-full" style={{ aspectRatio: "9.2/19.5", ...slideStyle }}>
+        <div
+          className="relative flex-shrink-0 h-full"
+          style={{ aspectRatio: "9.2/19.5", ...slideStyle }}
+        >
           {/* Video clipped to inner radius */}
           <div className="absolute inset-[8px] rounded-[28px] overflow-hidden z-0">
             <video
@@ -168,9 +212,15 @@ export default function VCFormats() {
               preload="none"
             >
               {vcFormatVideos[current.videoIdx]?.webm && (
-                <source src={vcFormatVideos[current.videoIdx].webm} type="video/webm" />
+                <source
+                  src={vcFormatVideos[current.videoIdx].webm}
+                  type="video/webm"
+                />
               )}
-              <source src={vcFormatVideos[current.videoIdx]?.src ?? ""} type="video/mp4" />
+              <source
+                src={vcFormatVideos[current.videoIdx]?.src ?? ""}
+                type="video/mp4"
+              />
             </video>
           </div>
           {/* Phone frame */}
@@ -182,8 +232,12 @@ export default function VCFormats() {
         {/* Right side: text + nav */}
         <div className="flex flex-col justify-between flex-1 h-full py-6 lg:py-8">
           <div style={slideStyle}>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 lg:mb-5 leading-tight">{current.name}</div>
-            <div className="text-base lg:text-lg text-[#555] leading-relaxed mb-5 lg:mb-6">{current.desc}</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 lg:mb-5 leading-tight">
+              {current.name}
+            </div>
+            <div className="text-base lg:text-lg text-[#555] leading-relaxed mb-5 lg:mb-6">
+              {current.desc}
+            </div>
             <div className="text-sm lg:text-base text-[#aaa]">
               Aparece em:
               {current.onde.map((lugar) => (
@@ -215,7 +269,16 @@ export default function VCFormats() {
                   onClick={() => navigate(activeIdx - 1)}
                   className="flex items-center gap-2 bg-transparent text-black text-base font-bold px-5 py-3 rounded-full w-fit border border-black/20 hover:border-black transition-colors"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <polyline points="15 6 9 12 15 18" />
                   </svg>
                   Anterior
@@ -227,7 +290,16 @@ export default function VCFormats() {
                   className="flex items-center gap-2 bg-black text-white text-base font-bold px-5 py-3 rounded-full w-fit"
                 >
                   Próximo
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <polyline points="9 6 15 12 9 18" />
                   </svg>
                 </button>

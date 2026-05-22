@@ -12,6 +12,7 @@ function useArticleReveal(direction: "left" | "right") {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return;
     const el = ref.current;
     if (!el) return;
     const xFrom = direction === "left" ? -60 : 60;
