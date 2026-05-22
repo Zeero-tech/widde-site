@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "widde-site"
+    "default": "widde-33fd1"
   },
   "targets": {
     "widde-33fd1": {
       "hosting": {
-        "widde-site": [
-          "widde-site"
+        "widde-site-novo": [
+          "widde-site-novo"
         ]
       }
     }
