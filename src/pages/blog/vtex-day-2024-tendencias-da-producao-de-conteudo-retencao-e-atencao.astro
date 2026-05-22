@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Vtex Day 2024: Tendências da produção de conteúdo, retenção e atenção" description="Insights do Vtex Day 2024: vídeo representa 82% do consumo de internet, UGC é tendência, atenção humana cai para 8 segundos e como adaptar seu e-commerce." canonical="https://widde.io/blog/vtex-day-2024-tendencias-da-producao-de-conteudo-retencao-e-atencao">
+  <BlogArticle client:load title="Vtex Day 2024: Tendências da produção de conteúdo, retenção e atenção" category="Tendências e-commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6627f39b8fd5d9dde68760f1_vtex-day.avif" recentPosts={recentPosts}>
+    <div>
+      <p>A equipe da Widde participou do Vtex Day, um dos maiores eventos de comércio digital do mundo, e extraiu insights importantes sobre como o conteúdo em vídeo impacta o comportamento do consumidor e as tendências do e-commerce.</p>
+
+      <h1><strong>Content Driven Retail: Tendências futuras da produção</strong></h1>
+      <p>Patricia Chmielewski (TikTok Marketing Solutions Lead) e Pedro Drable (Winnin Strategy Head) apresentaram que o vídeo é consistentemente o formato que entrega melhores resultados no planejamento de mídia, representando agora 82% do consumo de conteúdo na internet. Esse formato captura efetivamente a atenção do público tanto nas redes sociais quanto nas plataformas de e-commerce.</p>
+      <p>O Conteúdo Gerado pelo Usuário (UGC) emergiu como a grande tendência — vídeos espontâneos de clientes mostrando experiências autênticas de produto e avaliações constroem mais confiança do que materiais produzidos profissionalmente pelas marcas.</p>
+
+      <h1><strong>Atenção e retenção: Os maiores ativos do marketing moderno</strong></h1>
+      <p>Neil Patel destacou que os tempos de atenção humana diminuíram para aproximadamente 8 segundos, em comparação com os 9 segundos de um peixe dourado. Um estudo da Microsoft Canada demonstrou esse declínio: de 12 segundos em 2000 para 8 segundos em 2013.</p>
+      <p>Recomendações principais:<br />• Crie vídeos com aberturas atraentes para capturar a atenção imediata;<br />• Vídeos mais simples e menos produzidos frequentemente superam as produções de alto orçamento ao fomentar conexões mais fortes com o público;<br />• Vídeos curtos geram o máximo de engajamento;<br />• Foque em dois formatos comprovados: "how-to" (como fazer) e "listicles" (conteúdo passo a passo).</p>
+
+      <h1><strong>E-commerce pela lente das tendências</strong></h1>
+      <p>Andrea Stroll e Luiz Daviso (NIQ) enfatizaram que os consumidores modernos se engajam em múltiplos canais de vendas, exigindo propostas de valor mais fortes ao longo de toda a jornada de compra.</p>
+      <p>Barreiras de confiança do consumidor identificadas:<br />• 55% citam preocupações com fraudes e golpes como obstáculos;<br />• 68% priorizam as avaliações de produtos;<br />• 48% exigem melhores informações, preços ou condições.</p>
+      <p>O conteúdo em vídeo melhora significativamente as experiências de e-commerce ao humanizar as interações da marca e construir a confiança do cliente — abordando diretamente as principais barreiras identificadas.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

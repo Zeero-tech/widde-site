@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como diversificar seus vídeos para vender mais?" description="Aprenda a diversificar os tipos de vídeos no seu e-commerce: demonstrações, depoimentos, tutoriais, unboxing, bastidores, comparativos e animações para vender mais." canonical="https://widde.io/blog/como-diversificar-seus-videos-para-vender-mais">
+  <BlogArticle client:load title="Como diversificar seus vídeos para vender mais?" category="Video Commerce" date="12.05.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66f1dfdb0ee5a9e9bcf41af1_Como%20diversificar%20seus%20v%C3%ADdeos%20para%20vender%20mais_.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Video Commerce é uma estratégia que integra vídeos diretamente no e-commerce para melhorar a experiência de compra, transformando o conteúdo em vídeo em uma ferramenta de vendas. Os vídeos servem para engajar os consumidores e destacar produtos de forma dinâmica e interativa, funcionando de maneira similar ao Instagram Stories e Reels. Diversificar os tipos de vídeo — incluindo tutoriais, demonstrações de produto, depoimentos de clientes e lives — atende a diferentes etapas da jornada de compra, aumentando o interesse e a confiança do consumidor.</p>
+
+      <h1><strong>Crie vídeos de demonstração de produtos</strong></h1>
+      <p>Os vídeos de demonstração de produto devem mostrar claramente as funcionalidades e os benefícios em situações de uso real. A estratégia envolve enfatizar os detalhes atrativos do produto e usar ângulos variados para destacar os principais recursos, melhorando a confiança do cliente e potencialmente reduzindo as taxas de devolução.</p>
+
+      <h1><strong>Use depoimentos de clientes satisfeitos</strong></h1>
+      <p>Os vídeos de depoimento de clientes fornecem feedback persuasivo e autêntico que estabelece conexões emocionais e credibilidade. Depoimentos espontâneos onde os clientes falam diretamente para a câmera sobre experiências positivas provam ser os mais eficazes, especialmente quando mostram os produtos em uso em diferentes contextos.</p>
+
+      <h1><strong>Produza tutoriais e guias de uso</strong></h1>
+      <p>Os tutoriais educativos ajudam os clientes a maximizar o valor do produto, especialmente para itens multifuncionais. A orientação passo a passo demonstra o valor prático do produto enquanto fomenta a fidelidade do cliente por meio do suporte percebido e das informações confiáveis.</p>
+
+      <h1><strong>Faça vídeos de unboxing</strong></h1>
+      <p>Os vídeos de unboxing capturam a antecipação emocional da abertura do produto, mostrando exatamente o que os clientes recebem, incluindo a qualidade da embalagem. Esses vídeos altamente compartilháveis aumentam o alcance orgânico da marca e atraem novos clientes.</p>
+
+      <h1><strong>Inclua vídeos de bastidores da empresa</strong></h1>
+      <p>O conteúdo de bastidores humaniza as marcas por meio de momentos autênticos da equipe e imagens da criação do produto, construindo conexões emocionais, aumentando a confiança e demonstrando os valores e a dedicação da empresa.</p>
+
+      <h1><strong>Desenvolva vídeos comparativos entre produtos</strong></h1>
+      <p>Os vídeos comparativos ajudam os consumidores indecisos apresentando características, vantagens e desvantagens dos produtos. Comparações transparentes e objetivas reforçam a credibilidade da marca ao mostrar o compromisso com as necessidades dos clientes.</p>
+
+      <h1><strong>Aposte em vídeos explicativos animados</strong></h1>
+      <p>Os vídeos explicativos animados simplificam conceitos complexos, capturando rapidamente a atenção enquanto demonstram claramente como os produtos funcionam. São especialmente eficazes para produtos tecnológicos ou com múltiplos recursos.</p>
+
+      <h1><strong>Utilize vídeos de influenciadores e parceiros</strong></h1>
+      <p>As parcerias com influenciadores expandem o alcance dos vídeos e trazem novos públicos. Recomendações autênticas e alinhadas conferem credibilidade, com vídeos colaborativos em nichos de mercado compartilhados expandindo a presença e a solidificação no mercado.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

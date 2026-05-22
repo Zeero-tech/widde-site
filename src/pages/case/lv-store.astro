@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CaseArticle from '../../components/pages/CaseArticle'
+import type { CaseArticleData } from '../../components/pages/CaseArticle'
+
+const data: CaseArticleData = {
+  heroImage: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f79295c6f9c8a6fa9eeaa_lvstore.avif",
+  tag: "Case de Sucesso",
+  title: "Video Commerce em Moda Feminina",
+  representanteNome: "Letícia Vaz",
+  representanteCargo: "Fundadora LV Store",
+  cliente: "LV Store",
+  youtubeUrl: "https://www.youtube.com/watch?v=3ooIQcjODpU",
+
+  conhecaLogo: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f7dca7579cb31a50b6aa2_lv-sobre.avif",
+  conhecaTitle: "Conheça a LV Store",
+  conhecaBody: `<p>Criada por Letícia Vaz em 2015, a LV Store teve um investimento inicial de apenas R$500, duas máquinas de costura e um sonho. Na época, a empresária ainda cursava jornalismo, mas viu no e-commerce uma oportunidade de renda extra que se tornou muito mais do que ela imaginaria. Hoje, fatura mais de R$10 milhões por ano com sua própria loja on-line.</p>`,
+  conhecaNumbers: [
+    { value: "R$500", label: "Investimento inicial" },
+    { value: "2015", label: "Ano de fundação" },
+  ],
+
+  depoimento1Img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f7a68e0b7e1575c8a9a3a_leticia-vaz.avif",
+  depoimento1Quote: "Imagina se toda vez que alguém quisesse ver um vídeo de uma peça, eu tivesse que gravar e mandar para a cliente ou ficar postando no Instagram? Ainda bem que eu tenho a Widde. Com ela, eu consigo colocar vários vídeos das peças, combinações de looks, detalhes, tudo isso dentro do meu próprio e-commerce, na página do produto. Ter os vídeos dentro do meu site aumentou muito minha conversão de vendas por passar confiança, tirar as dúvidas e humanizar a marca, aumentando o tempo de retenção.",
+  depoimento1Nome: "Letícia Vaz",
+  depoimento1Cargo: "Fundadora LV Store",
+
+  desafioGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f7d110d6ce3cc061089e0_gif-lv.gif",
+  desafioBody: `<p>Já tendo uma marca bem estabelecida e com uma grande escala de vendas, Letícia queria melhorar a experiência de sua loja, para que mais pessoas se sentissem atraídas por seus produtos e entendessem tudo sobre o que estariam comprando.</p><p>Dessa forma, seu objetivo era transformar o site em uma espécie de rede social, esperando que desta forma a retenção e a conversão de vendas da LV Store aumentassem. Os planos da loja incluíam levar vídeos em formato de reels e stories para suas clientes, tendo inclusive conteúdos de provadores criados pelas próprias clientes com as peças da marca.</p>`,
+
+  numeros: [
+    { value: "2,5x", label: "Conversão de vendas" },
+    { value: "300%", label: "Aumento de retenção no site" },
+    { value: "R$10MM", label: "Faturamento anual" },
+  ],
+
+  resultadosGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f82f2e8c5515aecfee363_lv-2.avif",
+
+  resultadosBody: `<p>Para ilustrar qual foi o impacto da plataforma nos resultados de vendas da loja, veja os resultados atingidos logo na primeira semana de uso:</p><p><strong>- Conversão de Vendas: aumento de 2,5 vezes;</strong></p><p><strong>- Tempo de retenção no site: aumento de 300%, de 2 para 8 minutos.</strong></p><p>Os resultados da loja só cresceram ao longo do tempo depois que Letícia começou a trazer mais provadores em seu site, baseados no que as clientes queriam e gostariam de ver sobre suas peças. Assim, a empresária sempre grava novos conteúdos focando no que o público precisa saber para se sentir seguro de sua compra.</p><p>Com os dados disponíveis na própria plataforma da Widde, ficou muito claro para a Letícia e toda sua equipe da LV Store, que o Video Commerce não somente trouxe maior humanização para a jornada de compra, como também aumentou a confiança dos consumidores e isso se refletiu no aumento das vendas.</p>`,
+
+  depoimento2Quote: "Com o aumento do volume de vendas, aumentamos a equipe, começamos a produzir mais peças e entregar mais rápido. Agora queremos mais funcionalidades diferentes do que o mercado está fazendo.",
+  depoimento2Nome: "Letícia Vaz",
+  depoimento2Cargo: "Fundadora LV Store",
+  depoimento2ImgVertical: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f7af506b674a93a4dd696_letici-vaz-2.avif",
+  depoimento2YoutubeUrl: "https://www.youtube.com/watch?v=3ooIQcjODpU",
+
+  greyStickyBody: `<h2><strong>A solução</strong></h2><p>Foi aliada à Widde que a LV Store conseguiu resolver este problema. Como a presença da marca já era muito forte, tanto em seu site, quanto nas redes sociais, Letícia aproveitou os conteúdos que produzia para o perfil no Instagram e os trouxe para o e-commerce. Desta forma, suas clientes conseguiam entender perfeitamente todos os detalhes das roupas que haviam se interessado. Com o Video Commerce, a empresária conseguiu mostrar mais detalhes das peças, respondendo dúvidas frequentes que recebia.</p><p>"Antes, as clientes não tinham como ver a peça, era apenas por foto. Hoje, elas têm uma noção melhor de como fica no corpo, quando a cliente se movimenta, se tem decote ou não, se ela é recortada", disse Eduardo Garcia, Gerente de Atendimento da LV Store.</p><p>"Às vezes elas têm dúvida sobre 'Ah, eu vou abaixar e a peça vai se movimentar, vai mostrar', mas com o vídeo a gente tem um pouco mais de noção disso. Depois que a Widde entrou no nosso site, as vendas aumentaram bastante por conta disso. Elas têm bastante dúvida sobre a transparência da peça, mas com os vídeos da Widde no site, elas conseguem ver que a peça não fica transparente, que o tecido é duplo. Às vezes, elas perguntam e aí a gente manda o link e elas conseguem ver realmente como a peça fica no corpo", completou Eduardo.</p><p>Como muitas clientes costumavam pedir muitas especificações das peças e questionar como elas ficavam no corpo e outros detalhes, a solução do Video Commerce caiu como uma luva no site da LV Store.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f82f2e8c5515aecfee363_lv-2.avif" loading="lazy" /></div></figure>`,
+  greyStickyYoutubeUrl: "https://www.youtube.com/watch?v=3ooIQcjODpU",
+
+  outrosCases: [
+    { href: "/case/mamo", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2d0b1016c8df8923096d_capa%20youtube%201.png", title: "Construindo narrativas com Video Commerce" },
+    { href: "/case/john-john", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png", title: "Agregando valor ao produto com o Video Commerce" },
+    { href: "/case/maximum-boxing", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png", title: "Mais vendas, menos demanda para o SAC" },
+    { href: "/case/majeste", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif", title: "Desafios da Moda Festa no E-commerce" },
+  ],
+}
+---
+
+<BaseLayout
+  title="LV Store: Video Commerce em Moda Feminina | Widde"
+  description="Veja como a LV Store usou o Video Commerce da Widde para aumentar 2,5x a conversão, 300% a retenção no site e alcançar R$10MM de faturamento anual."
+  canonical="https://widde.io/case/lv-store"
+>
+  <CaseArticle client:load data={data} />
+</BaseLayout>

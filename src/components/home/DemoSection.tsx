@@ -1,0 +1,72 @@
+import { useEffect, useRef, useState } from "react";
+import MuxPlayer from "@mux/mux-player-react";
+import AnimatedButton from "@/components/core/AnimatedButton";
+
+export default function DemoSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="demo2" className="bg-surface-dark py-10 md:py-12 lg:py-16">
+      <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-8 lg:gap-14">
+          {/* Video */}
+          <div
+            ref={containerRef}
+            className="w-full md:w-[55%] lg:w-[58%] rounded-2xl overflow-hidden"
+            style={{ aspectRatio: "16/9" }}
+          >
+            {visible && (
+              <MuxPlayer
+                playbackId="B9JncrfQ82ZT2v3NdwFL4az6BX02kBmVitC68fdNwOhs"
+                metadataVideoTitle="Demonstração da Widde"
+                poster="/assets/thumbnail-widde-demonstracao.webp"
+                accentColor="#2667F8"
+                style={{ width: "100%", aspectRatio: "16/9" }}
+                streamType="on-demand"
+              />
+            )}
+          </div>
+
+          {/* Text */}
+          <div className="w-full md:w-[45%] lg:w-[42%] flex flex-col">
+            <div className="mb-4">
+              <span className="block text-xs md:text-sm lg:text-base font-bold text-text-muted uppercase tracking-[2px] mb-3">
+                Conheça
+              </span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-black leading-[1.25]">
+                Como a Widde funciona?
+              </h2>
+            </div>
+            <p className="text-base md:text-lg text-text-muted leading-relaxed mb-6">
+              Conheça como a Widde gera mais conversão, menos devolução e mais
+              valor percebido do seu produto e marca.
+            </p>
+            <AnimatedButton
+              href="/contato-vendas"
+              className="inline-block w-full md:w-fit text-center bg-black text-white font-bold text-lg md:text-lg px-[26px] py-[11px] rounded-full no-underline hover:bg-[#333] transition-colors md:self-start"
+            >
+              Falar com vendas
+            </AnimatedButton>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

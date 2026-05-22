@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Estratégias para ter bons vídeos no seu e-commerce" description="Estratégias práticas para melhorar os vídeos do seu e-commerce: mostrar o que os clientes querem ver, criar identificação, iluminação e humanizar a marca." canonical="https://widde.io/blog/estrategias-para-ter-bons-videos-no-seu-e-commerce">
+  <BlogArticle client:load title="Estratégias para ter bons vídeos no seu e-commerce" category="Video Commerce" date="26.02.2026" readingTime="3 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6654f0bc75826213c844ac6c_Tenha%20bons%20v%C3%ADdeos%20no%20seu%20e-commerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Criar conteúdo em vídeo para lojas online apresenta desafios reais. Este artigo foca em estratégias práticas para aprimorar a performance do Video Commerce na sua plataforma de e-commerce, com base nas experiências de lojistas que já utilizam essa abordagem.</p>
+
+      <h1><strong>Mostre o que os clientes querem ver</strong></h1>
+      <p>Aumente a retenção dos espectadores e a conversão de vendas ao apresentar conteúdo que seu público deseja. Crie vídeos mostrando novidades ou mais vendidos. Para varejistas de roupas especificamente, destaque os detalhes do produto, demonstre combinações de looks com peças complementares e mostre cenários de uso. Responda todas as dúvidas possíveis dos seus clientes por meio dos vídeos.</p>
+
+      <h1><strong>Construa identificação e conexão</strong></h1>
+      <p>Fortaleça a confiança dos clientes por meio de conteúdo humanizado que cria proximidade. Filme vídeos em ambientes de espelho sem produção excessiva para estabelecer conexões genuínas com os consumidores. O conteúdo deve passar a sensação de estar na frente dos clientes, eliminando a distância digital tradicional que existe nas compras online.</p>
+
+      <h1><strong>Iluminação e detalhes importam</strong></h1>
+      <p>Garanta iluminação adequada, seja usando smartphones ou câmeras profissionais. A iluminação adequada destaca os detalhes do produto e melhora o valor percebido. A iluminação ruim cria confusão nos espectadores e gera objeções de compra — os clientes podem duvidar das cores reais ou da qualidade do produto.</p>
+
+      <h1><strong>Mostre o seu negócio</strong></h1>
+      <p>Cada vez mais, as marcas aproveitam o conteúdo "mostre seu negócio" ao filmar processos de produção, tours pelas instalações ou apresentando os membros da equipe. Essa transparência quebra a formalidade e constrói credibilidade. Tours virtuais pela fábrica ou loja ajudam a humanizar sua marca, permitindo que os consumidores vejam quem realmente está por trás do negócio e os valores que guiam a empresa.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

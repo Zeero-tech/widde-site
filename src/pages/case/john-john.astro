@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseArticle from "../../components/pages/CaseArticle";
+import type { CaseArticleData } from "../../components/pages/CaseArticle";
+
+const data: CaseArticleData = {
+    heroImage:
+        "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png",
+    tag: "Case de Sucesso",
+    title: "Agregando valor ao produto com o Video Commerce",
+    representanteNome: "Cyntia Miura",
+    representanteCargo: "Gerente de E-commerce",
+    cliente: "John John",
+    youtubeUrl: "https://youtu.be/rZzyT_YjTW4",
+
+    conhecaLogo:
+        "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cbd8551d5a1773b1bdd7_Logo%20JJ.png",
+    conhecaTitle: "Conheça a John John",
+    conhecaBody: `<p>A marca John John, do grupo Veste S/A, foi criada em 2006. Desde o início, ela ganhou espaço entre os frequentadores de festivais e, no ano passado, a loja passou a adotar também peças que podem ser usadas em outras ocasiões cotidianas.</p><p>Nesse case, Cyntia Miura, Gerente de E-commerce, e Juliana Gomes, Analista de E-commerce Sr, falaram sobre o processo de implementação da Widde na loja on-line e os resultados do Video Commerce na operação.</p>`,
+    conhecaNumbers: [
+        { value: "19", label: "Anos" },
+        { value: "3 canais", label: "Site, 34 lojas físicas e app" },
+    ],
+
+    depoimento1Img:
+        "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc4b28754e9d9b06bf89_Foto%20Cyntia.png",
+    depoimento1Quote:
+        "Com a Widde nós recebemos os comentários dos clientes e usuários do site. A partir deles a gente foi formatando o nosso tipo de conteúdo que trazia mais engajamento. Tem clientes que responderam 'Gosto de vídeos que mostrem mais detalhes das peças ou de looks' e a gente foi adaptando até chegar nesse formato que é o ideal.",
+    depoimento1Nome: "Cyntia Miura",
+    depoimento1Cargo: "Gerente de E-commerce",
+
+    desafioGif:
+        "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png",
+    desafioBody: `<p>A John John iniciou com o Video Commerce no primeiro semestre de 2025. A ideia era mostrar os detalhes dos produtos, seus materiais, caimentos e diferencial de produção que não eram captados apenas com fotos profissionais. Dessa forma, a marca consegue agregar o alto valor da marca à peça.</p><p>Além disso, a equipe de e-commerce também queria mostrar como cada peça fica em diferentes tamanhos e corpos. Com as diferentes soluções da Widde, também foi possível mostrar a mesma roupa em variadas combinações de looks, mostrando a versatilidade da marca. Trazer essa realidade para os clientes foi importante para solucionar dúvidas e aumentar a conversão.</p>`,
+
+    numeros: [
+        { value: "3x", label: "Mais taxa de conversão" },
+        { value: "40%", label: "Aumento ticket médio" },
+        { value: "4x", label: "Mais tempo médio de engajamento" },
+    ],
+
+    resultadosGif:
+        "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2de72f6c4c7e1b9d863b4_0911(1).gif",
+
+    resultadosBody: `<p>Para o case, foram reunidos os dados dos últimos 90 dias de uso do Video Commerce pela John John. Os resultados foram todos positivos:</p><p><strong>- Melhoria de 4x no tempo médio de engajamento;</strong></p><p><strong>- 3x mais conversão;</strong></p><p><strong>- Crescimento de 2x no número de novos compradores;</strong></p><p><strong>- Aumento de 40% no ticket médio.</strong></p><p>Cyntia ressalta que os resultados do Video Commerce são uma consequência da transmissão de segurança na compra que os clientes ganham com os conteúdos. Após ver as peças desejadas em diferentes corpos e em detalhes, o consumidor pode finalizar a compra, dentro do próprio vídeo, tranquilamente.</p><p>Além disso, ao ver as diferentes combinações de roupa dos vídeos, os clientes também tendem a comprar mais peças, o que resulta no aumento do ticket médio.</p>`,
+
+    depoimento2Quote:
+        "Quando a pessoa se depara com o vídeo ela já pensa: 'Eu posso me sentir assim, eu posso ficar bonita que nem esse modelo está bonito', então a experiência de compra com a marca já começa no vídeo.",
+    depoimento2Nome: "Juliana Gomes",
+    depoimento2Cargo: "Especialista em E-commerce",
+    depoimento2ImgVertical:
+        "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2de2c8bec7a1a93663cc2_Foto%20Ju.png",
+    depoimento2YoutubeUrl: "https://youtu.be/rZzyT_YjTW4",
+
+    greyStickyBody: `<h2><strong>Comprovando os resultados do Carrossel</strong></h2><p>Para comprovar a eficácia das atualizações do site, a John John aplica sempre um processo de Teste A/B com o seu time de CRO. A fim de verificar o benefício da Widde, ao longo de 20 dias, a loja testou o uso do Carrossel em sua home page. Os resultados foram significativos: uma diferença de 47% na conversão com o Video Commerce.</p><p>Com base nessas informações, a marca decidiu prosseguir com a solução e adicionar mais vídeos. Atualmente, eles utilizam o Carrossel para destacar produtos em datas sazonais, como festivais de música.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c31b601adf5d95c482e139_gif%204.gif" loading="lazy" /></div></figure><h2><strong>Vantagens do Video Commerce no dia a dia</strong></h2><p>Ademais, Juliana também destaca como um dos principais pontos positivos a praticidade e didática da plataforma da Widde. Através do Dashboard da Widde, os lojistas podem facilmente subir os vídeos no site, responder comentários e analisar os resultados do Video Commerce.</p><p>A rapidez do upload ajuda na adição de vários vídeos simultaneamente, para que a marca possa mostrar o mesmo produto em diferentes páginas. Assim, os resultados podem ser colhidos em um curto prazo.</p>`,
+    greyStickyYoutubeUrl: "https://youtu.be/rZzyT_YjTW4",
+
+    outrosCases: [
+        {
+            href: "/case/mamo",
+            img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2d0b1016c8df8923096d_capa%20youtube%201.png",
+            title: "Construindo narrativas com Video Commerce",
+        },
+        {
+            href: "/case/maximum-boxing",
+            img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png",
+            title: "Mais vendas, menos demanda para o SAC",
+        },
+        {
+            href: "/case/majeste",
+            img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif",
+            title: "Desafios da Moda Festa no E-commerce",
+        },
+        {
+            href: "/case/lv-store",
+            img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f79295c6f9c8a6fa9eeaa_lvstore.avif",
+            title: "Video Commerce em Moda Feminina",
+        },
+    ],
+};
+---
+
+<BaseLayout
+    title="John John: Agregando valor ao produto com o Video Commerce | Widde"
+    description="Veja como a John John usou o Video Commerce da Widde para aumentar 4x o engajamento, 3x a conversão e 40% o ticket médio."
+    canonical="https://widde.io/case/john-john"
+>
+    <CaseArticle client:load data={data} />
+</BaseLayout>

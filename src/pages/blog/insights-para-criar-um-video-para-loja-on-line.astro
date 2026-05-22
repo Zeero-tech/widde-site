@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "video-explicativo-de-produto-como-fazer-e-implementar", title: "Vídeo explicativo de produto: como fazer e implementar?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68d699f6dcb3f438b1cae87c_V%C3%ADdeo%20explicativo%20de%20produto_%20como%20fazer%20e%20implementar_.png" },
+  { slug: "por-que-investir-em-videos-profissionais-para-e-commerce", title: "Por que investir em vídeos profissionais para e-commerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68af0c75cff4353f2393c176_Blog_%20Por%20que%20investir%20em%20v%C3%ADdeos%20profissionais_.png" },
+  { slug: "video-para-e-commerce-de-moda-como-fazer-2", title: "Vídeo para e-commerce de moda: como fazer?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68a488f476190fd295973d7d_Blog_%20V%C3%ADdeo%20para%20e-commerce%20de%20moda_%20como%20fazer_%20(3).png" },
+  { slug: "solucao-de-video-para-e-commerce-video-commerce", title: "Solução de vídeo para e-commerce | Video Commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226b3bc37dbc7c14054d59_Solu%C3%A7%C3%A3o%20de%20v%C3%ADdeo%20para%20e-commerce%20(2).avif" },
+  { slug: "como-converter-visitantes-em-clientes-no-e-commerce", title: "Como converter visitantes em clientes no e-commerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6835f16eb833c7821f92e564_Converta%20visitantes%20em%20clientes%20no%20e-commerce.avif" },
+]
+---
+<BaseLayout title="Insights para criar um vídeo para loja on-line" description="Precisando de dicas para fazer um vídeo para o e-commerce? Confira o guia completo com os principais insights para criar um roteiro para vídeo no e-commerce." canonical="https://widde.io/blog/insights-para-criar-um-video-para-loja-on-line">
+  <BlogArticle client:load title="Insights para criar um vídeo para loja on-line" category="Video Commerce" date="04.09.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68bad74ae4345ad77e5e8e31_Blog_%20Insights%20para%20criar%20um%20v%C3%ADdeo%20para%20loja%20on-line%20(1).png" recentPosts={recentPosts}>
+    <div>
+      <p>Precisando de dicas para fazer um vídeo para o e-commerce? O vídeo é um dos formatos mais recomendados para atrair, engajar e converter clientes no ambiente digital.</p>
+      <p>Mas para que ele realmente funcione, não basta apenas ligar a câmera e começar a falar. É preciso ter um roteiro estratégico e bem estruturado.</p>
+      <p>O roteiro organiza as ideias, conduz o espectador pela jornada de interesse até a decisão de compra e evita que o conteúdo fique genérico ou disperso. Um bom roteiro capta atenção nos primeiros segundos, resolve objeções, destaca diferenciais e leva à ação.</p>
+      <p>Por isso, no conteúdo de hoje, separamos um guia completo com os principais insights para fazer um roteiro para vídeo no e-commerce!</p>
+
+      <h1><strong>Apresente a solução</strong></h1>
+      <p>Mostre que você tem a resposta para o problema do público. Aqui é o momento de apresentar seu produto ou serviço de forma objetiva e visual. Para isso, demonstre o produto em funcionamento real, destacando um ou dois diferenciais de impacto e utilizando uma linguagem direta, sem termos técnicos. O foco aqui é gerar identificação imediata com quem já entrou no seu site e está assistindo o conteúdo.</p>
+
+      <h1><strong>Traga prova social ou resultados concretos</strong></h1>
+      <p>Ganhar credibilidade com os clientes cria uma conexão de longo prazo entre as duas partes e reflete nas vendas. Para atingir esse objetivo, traga depoimentos reais, resultados de antes e depois, números e cases de sucesso para validar a relevância do seu produto e trazer mais segurança para a compra. Alguns exemplos práticos são:</p>
+      <p>• "Mais de 3 mil clientes satisfeitos"<br />• "Notei uma grande diferença desde que comecei a usar."<br />• "A influencer Y mostrou como usa nosso produto no dia a dia"</p>
+      <p>Use prova social como gatilho mental para reforçar a confiança na sua solução.</p>
+
+      <h1><strong>Aborde as principais objeções do cliente</strong></h1>
+      <p>Todo cliente em potencial tem dúvidas. E o seu vídeo precisa antecipar essas objeções e respondê-las com clareza. Essas, por exemplo, são algumas das perguntas que passam pela cabeça do consumidor em e-commerces:</p>
+      <p>• "É difícil de usar?"<br />• "E se eu me arrepender da compra?"<br />• "É melhor do que o da concorrência?"<br />• "Vai funcionar no meu caso?"</p>
+      <p>Durante o vídeo, é possível responder diretamente perguntas como essas enquanto mostra a resolução, na prática. Assim, a dúvida é rapidamente respondida e as objeções de compra eliminadas, aumentando a conversão: "Muita gente pergunta se esse produto é difícil de instalar. A resposta é: leva menos de 3 minutos e não precisa de nenhuma ferramenta."</p>
+
+      <h1><strong>Destaque um benefício principal com clareza</strong></h1>
+      <p>Evite listar todas as características do produto de uma só vez, prefira dividir em mais vídeos para não ficar muita informação. Escolha um benefício central e explore ele de forma estratégica. Quanto mais clara for a promessa, mais fácil será para o espectador lembrar e agir. É possível mencionar desde exclusividade do item, durabilidade e estilo do produto até a economia de tempo ou facilidade de uso.</p>
+
+      <h1><strong>Use uma estrutura de storytelling</strong></h1>
+      <p>Contar histórias prende a atenção e cria conexão emocional com o público. Transforme o vídeo em uma narrativa curta com:</p>
+      <p>• <strong>Início:</strong> o problema que o cliente enfrenta<br />• <strong>Meio:</strong> como ele descobriu que seu produto poderia ajudar<br />• <strong>Fim:</strong> os resultados obtidos</p>
+      <p>Você pode usar a história de um cliente, ou até um cenário fictício representando seu público. Storytelling engaja e humaniza a comunicação.</p>
+
+      <h1><strong>Mantenha o vídeo curto e objetivo</strong></h1>
+      <p>O recomendado é que o vídeo tenha entre 15 segundos a 1 minuto. Mais do que isso, só se o conteúdo realmente for educativo ou for um vídeo de demonstração mais completo, focado para outros canais além do e-commerce.</p>
+      <p>Alguns insights para manter o foco do cliente são cortar falas repetidas, usar frases curtas e diretas, além de ter uma única mensagem no vídeo.</p>
+
+      <h1><strong>Use perguntas retóricas para criar envolvimento</strong></h1>
+      <p>Perguntas retóricas despertam curiosidade e mantêm a atenção. Elas também conduzem o espectador a refletir sobre o problema que enfrenta.</p>
+      <p>• "Está em dúvida de qual modelo escolher? Eu posso te ajudar!"<br />• "Você já tinha reparado nesse detalhe do produto X?"</p>
+
+      <h1><strong>Utilize cortes dinâmicos e elementos visuais</strong></h1>
+      <p>Um roteiro bem estruturado prevê recursos visuais e cortes dinâmicos para manter o ritmo. Os recursos de edição e elementos visuais mais recomendados para ajudar os consumidores são:</p>
+      <p>• Inserir print ou vídeo curto do produto em uso<br />• Zoom em detalhe do material<br />• Tela dividida com "antes e depois"<br />• Textos ou narração de apoio</p>
+
+      <h1><strong>Como a Widde pode ajudar a integrar vídeos de vendas ao e-commerce</strong></h1>
+      <p>Agora que você tem um roteiro pronto e está preparado para gravar vídeos que convertem, vem a próxima etapa: onde e como exibir esses vídeos para gerar resultado de verdade?</p>
+      <p>A resposta está na Widde – a plataforma de Video Commerce que integra vídeos estratégicos ao seu e-commerce, com performance e interatividade.</p>
+      <p>Com a Widde, você pode:<br />• Adicionar vídeos em qualquer página da loja: produto, categoria, home ou institucional<br />• Integrar vídeos com carregamento leve e rápido, sem comprometer a velocidade do site<br />• Incluir botões de chamada para ação dentro do vídeo: o cliente pode clicar e comprar direto enquanto assiste<br />• Ativar comentários nos vídeos, respondendo dúvidas e quebrando objeções em tempo real<br />• Criar um feed de vídeos, onde os visitantes podem navegar em formato de rede social e descobrir novos produtos<br />• Acompanhar métricas de engajamento e conversão: saiba exatamente quais vídeos funcionam mais</p>
+      <p>Nossa plataforma é compatível com Shopify, VTEX, Wake e outras. A integração é simples, o painel é intuitivo e o suporte da Widde te acompanha em todas as etapas.</p>
+      <p>Você se dedica a criar vídeos bem roteirizados e persuasivos — e a Widde garante que eles apareçam no lugar e no momento certo, com os recursos necessários para converter.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

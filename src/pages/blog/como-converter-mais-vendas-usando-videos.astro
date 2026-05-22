@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como converter mais vendas usando vídeos? Dicas criativas" description="Aprenda a aumentar as vendas no e-commerce com vídeos. Conheça as melhores estratégias de Video Commerce para converter mais clientes e aumentar o engajamento." canonical="https://widde.io/blog/como-converter-mais-vendas-usando-videos">
+  <BlogArticle client:load title="Como converter mais vendas usando vídeos? Dicas criativas" category="Video Commerce" date="12.05.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6744a9f607317c15f40f9424_Converta%20mais%20vendas%20usando%20v%C3%ADdeos%20no%20e-commerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Os vídeos no e-commerce permitem que os clientes vejam os produtos em ação, entendam a funcionalidade e observem detalhes que imagens estáticas e textos não conseguem transmitir. Essa abordagem aumenta a confiança e reduz a incerteza, elevando a probabilidade de conclusão da compra enquanto prolonga o tempo de engajamento no site.</p>
+
+      <h1><strong>Por que usar vídeos no e-commerce?</strong></h1>
+      <p>A estratégia de vídeo serve para atrair, engajar e converter visitantes em clientes. Vídeos criam experiências de compra mais ricas e imersivas, especialmente valiosas para produtos visualmente distintivos como roupas, acessórios, eletrônicos e móveis. Além disso, vídeos aumentam o tempo de permanência no site — um sinal positivo para motores de busca como o Google —, melhorando o ranqueamento e gerando mais tráfego orgânico.</p>
+
+      <h1><strong>A importância do Video Commerce</strong></h1>
+      <p>O Video Commerce se tornou cada vez mais essencial no e-commerce, transformando positivamente a experiência de compra online. Integrar vídeos em páginas de produto, homepage, páginas de categoria ou feeds de vídeos dedicados cria jornadas de cliente mais interativas. Quando os lojistas incorporam conteúdo gerado por clientes, os compradores têm perspectivas de pares sobre as experiências. O Video Commerce também permite storytelling e conexões emocionais, com marcas comunicando valores e identidade, fomentando maior fidelidade dos clientes.</p>
+
+      <h1><strong>Conheça seu público-alvo</strong></h1>
+      <p>Entender seu público-alvo — suas necessidades, interesses, dores e desejos — permite criar conteúdo direcionado que atenda ao que os espectadores buscam especificamente. Revisar as consultas ao SAC e os comentários nos vídeos revela as principais objeções dos clientes, permitindo a criação de conteúdo genuinamente valioso. Usar linguagem e exemplos ressonantes enquanto se enfatizam os benefícios do produto aumenta a relevância, fazendo o público se sentir compreendido e mais inclinado a agir.</p>
+
+      <h1><strong>Desenvolva roteiros claros e objetivos</strong></h1>
+      <p>Roteiros estruturados evitam erros comuns na criação de vídeos. Roteiros eficazes mantêm o conteúdo conciso enquanto garantem a entrega de informações completas. Comece com introduções que capturam a atenção, apresente os problemas ou necessidades dos clientes, demonstre como os produtos oferecem soluções e conclua com chamadas para ação claras.</p>
+
+      <h1><strong>Invista na qualidade de produção</strong></h1>
+      <p>A qualidade de produção influencia significativamente a percepção da marca. Vídeos com boa iluminação, áudio claro e edição profissional transmitem credibilidade. Investimentos iniciais altos não são necessários; utilize espaços com iluminação natural (gravando durante o dia perto de janelas) e locais silenciosos evitando ruídos indesejados.</p>
+
+      <h1><strong>Use elementos visuais envolventes</strong></h1>
+      <p>Elementos visuais mantêm o interesse dos espectadores ao longo dos vídeos. Incorpore gráficos, animações, sobreposições de texto e close-ups do produto destacando características e benefícios. Elementos visuais enfatizam pontos importantes e facilitam a compreensão — especialmente ao explicar funcionalidades complexas. Ritmo dinâmico com cortes rápidos mantém o ritmo, criando experiências de visualização mais agradáveis.</p>
+
+      <h1><strong>Inclua legendas e narração</strong></h1>
+      <p>O aumento do uso de smartphones exige otimização dos vídeos para visualização em dispositivos móveis. A implementação garante carregamento rápido, inclui legendas (muitos espectadores assistem sem som) e mantém a legibilidade visual em telas menores. Vídeos responsivos que se adaptam bem a diferentes tamanhos de tela melhoram a experiência do usuário e aumentam a probabilidade de conversão.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

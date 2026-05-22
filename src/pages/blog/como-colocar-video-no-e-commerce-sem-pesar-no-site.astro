@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como colocar vídeo no e-commerce sem pesar no site" description="Aprenda como adicionar vídeos ao seu e-commerce sem comprometer a velocidade do site. Conheça a solução da Widde para Video Commerce com alta performance." canonical="https://widde.io/blog/como-colocar-video-no-e-commerce-sem-pesar-no-site">
+  <BlogArticle client:load title="Como colocar vídeo no e-commerce sem pesar no site" category="Video Commerce" date="12.05.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/670d623cdaadc6b5b6694159_Como%20adicionar%20v%C3%ADdeos%20no%20e-commerce%20sem%20pesar.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Os vídeos no e-commerce melhoram a experiência do cliente e impulsionam o crescimento das vendas. Segundo o relatório "Tendências de Video Commerce Brasil 2024" da Widde, 93% dos consumidores consideram os vídeos fundamentais para as decisões de compra. Vídeos interativos esclarecem dúvidas sobre os produtos, destacam características e benefícios enquanto constroem a confiança do cliente. Eles também aumentam a retenção do usuário e o tempo de navegação, consequentemente melhorando as chances de conversão.</p>
+
+      <h1><strong>O que é Video Commerce?</strong></h1>
+      <p>O Video Commerce integra vídeos interativos ao e-commerce para aprimorar a experiência de compra online. Em vez de descrições estáticas e imagens tradicionais, esse formato possibilita experiências imersivas onde os consumidores veem os produtos em ação e tomam decisões informadas. Os vídeos podem ser colocados em homepages, páginas de categoria ou páginas individuais de produto. Os tipos de conteúdo incluem demonstrações de uso, depoimentos de clientes, comparações de produtos e conteúdo de bastidores que humaniza a experiência de compra.</p>
+
+      <h1><strong>Engajamento e compreensão do produto</strong></h1>
+      <p>Uma das principais vantagens é o aumento do engajamento do usuário. À medida que os clientes passam mais tempo assistindo a vídeos interativos, a retenção aumenta junto com as chances de conversão. Lojas que adotam essa estratégia normalmente veem crescimento significativo nas vendas. O conteúdo em vídeo também reduz as taxas de devolução, pois os consumidores obtêm visões realistas dos produtos, evitando surpresas pós-compra.</p>
+
+      <h1><strong>Humanização da experiência de compra</strong></h1>
+      <p>O Video Commerce humaniza as compras por meio de formatos diversos: demonstrações detalhadas, tutoriais, dicas de uso, unboxing e depoimentos de clientes. Essas abordagens constroem a confiança do consumidor. Conteúdo mostrando as operações nos bastidores conecta os clientes às pessoas e aos valores da marca.</p>
+
+      <h1><strong>Como adicionar vídeo ao e-commerce sem pesar no site</strong></h1>
+      <p>Adicionar vídeos sem comprometer a performance do site é uma preocupação de muitos lojistas. O tempo de carregamento da página é crítico para a experiência do usuário. Quando os sites carregam lentamente ou excedem três segundos, o risco de abandono aumenta significativamente, impactando diretamente as taxas de conversão. A solução especializada da Widde permite integrar vídeos às páginas de produto sem sobrecarregar o site. Os vídeos são armazenados na nuvem e exibidos apenas após o carregamento completo do e-commerce.</p>
+
+      <h1><strong>Benefícios de usar a Widde</strong></h1>
+      <p>• <strong>Engajamento do consumidor:</strong> Aumenta o engajamento por meio de demonstrações, tutoriais e depoimentos de clientes;<br />• <strong>Aumento da retenção:</strong> Os consumidores passam mais tempo no site com vídeos interativos, melhorando as chances de vendas;<br />• <strong>Redução das taxas de devolução:</strong> Permite que os consumidores visualizem melhor os produtos antes da compra;<br />• <strong>Redução do suporte ao cliente:</strong> Vídeos que explicam a funcionalidade do produto reduzem as necessidades de suporte;<br />• <strong>Plataforma fácil de usar:</strong> Integração simples sem necessidade de conhecimento técnico avançado.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

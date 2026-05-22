@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Case JJ Modas - As donas da loja como influenciadoras" description="Como a JJ Modas aumentou 300% a conversão e 354% a retenção em 3 meses usando as próprias fundadoras como influenciadoras no Video Commerce com a Widde." canonical="https://widde.io/blog/case-jj-modas">
+  <BlogArticle client:load title="Case JJ Modas - As donas da loja como influenciadoras" category="Cases" date="12.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/657509d47f832e848a0359af_case--jj.avif" recentPosts={recentPosts}>
+    <div>
+      <p>A JJ Modas é uma loja multimarca de roupas femininas fundada há 10 anos pelas irmãs Jacqueline Galvão e Janaina Gonçalves. Além de buscar maiores taxas de conversão, o negócio precisava de diferenciação em um espaço de e-commerce saturado com chegadas constantes de novos produtos. Seus clientes exigiam itens de valor elevado, frequentemente solicitando vistas mais detalhadas das roupas antes da compra.</p>
+
+      <h1><strong>Os desafios</strong></h1>
+      <p>Embora a loja tivesse investido muito em conteúdo de vídeo nas redes sociais com uma base de seguidores fiéis, sua experiência de compra online permanecia limitada ao formato tradicional de foto, descrição e preço. Os clientes que chegavam pelo e-commerce não tinham acesso ao mesmo nível de informação disponível nas redes sociais.</p>
+
+      <h1><strong>A solução: Widde + JJ Modas</strong></h1>
+      <p>As sócias comprometeram-se a produzir vídeos quase diariamente para sua plataforma de e-commerce usando a Widde. Novas peças chegam em um dia; as gravações começam no dia seguinte. O conteúdo aborda especificamente as preocupações e objeções dos clientes mostrando cada detalhe. As proprietárias monitoram os dados e o feedback dos clientes pela Widde para melhorar continuamente seu conteúdo de vídeo.</p>
+      <p>Usando dois formatos principais — filmar uma à outra ou filmar sozinha pelo espelho — elas produzem conteúdo rapidamente. Como Jacqueline explica: "Assim que eu filmo, minha irmã está experimentando roupas enquanto eu já estou fazendo upload do vídeo."</p>
+
+      <h1><strong>Resultados em 3 meses</strong></h1>
+      <p>• <strong>Conversão de vendas:</strong> Taxa 299,84% mais alta nos produtos com vídeo;<br />• <strong>Tempo de retenção:</strong> Aumento de 354,58% (de 2min 51s para 8min 8s);<br />• <strong>Impacto na receita:</strong> 25% da receita do e-commerce atribuída à Widde;<br />• <strong>Devoluções e trocas:</strong> Já baixas, caíram para quase zero por cento.</p>
+      <p>Jacqueline enfatiza que "o investimento foi baixo, e os lucros superaram em muito as expectativas." Ela sublinha a importância da autenticidade: "O principal é o modelo. Quanto mais genuína a pessoa for, melhor. Precisamos de influenciadores, mas nós mesmas influenciamos mais."</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

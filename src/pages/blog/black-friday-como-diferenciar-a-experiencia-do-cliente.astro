@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Black Friday 2024 | Como diferenciar a experiência do cliente" description="Saiba como diferenciar a experiência do cliente na Black Friday com Video Commerce, prova social, análise de dados e estratégias que aumentam conversão e confiança." canonical="https://widde.io/blog/black-friday-como-diferenciar-a-experiencia-do-cliente">
+  <BlogArticle client:load title="Black Friday 2024 | Como diferenciar a experiência do cliente" category="Tendências e-commerce" date="12.05.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/670434f95b6d840f6c461653_Como%20vender%20mais%20e%20diferenciar%20a%20experi%C3%AAncia%20do%20cliente.avif" recentPosts={recentPosts}>
+    <div>
+      <p>A Black Friday representa um dos períodos de compras mais aguardados e uma das temporadas mais movimentadas para o e-commerce. Para os lojistas online, entregar experiências diferenciadas se torna crucial para se destacar em meio à concorrência e conquistar a confiança do cliente. Experiências de compra superiores transcendem meros descontos promocionais — construir a confiança do cliente é essencial.</p>
+
+      <h1><strong>O medo de fraudes na Black Friday</strong></h1>
+      <p>Pesquisa recente da Convertr revela que 76% dos consumidores temem fraudes durante a Black Friday, o que pode levar ao abandono da compra sem a garantia de segurança. Além disso, 15,9% dos consumidores abandonam compras devido a avaliações negativas, destacando a importância da credibilidade. Aproximadamente 72,1% dos consumidores começam a monitorar preços pelo menos um mês antes, enfatizando a necessidade de estratégias robustas desde o início da jornada.</p>
+
+      <h1><strong>Video Commerce para construir confiança</strong></h1>
+      <p>As soluções de Video Commerce da Widde ajudam os lojistas a construir confiança por meio da integração de vídeos no site, com demonstrações de produtos, tutoriais, imagens dos bastidores, processos de embalagem e depoimentos de clientes. Criar vídeos personalizados para páginas de alto tráfego, especialmente a homepage, é muito eficaz. Vídeos de boas-vindas apresentando a equipe e explicando os procedimentos de pagamento e entrega ajudam a estabelecer conexões imediatas com os clientes, transmitindo segurança e transparência.</p>
+
+      <h1><strong>A importância das avaliações e provas sociais</strong></h1>
+      <p>Muitos e-commerces enfrentam dificuldades com avaliações autênticas e provas sociais limitadas. Os consumidores frequentemente abandonam as compras devido a avaliações negativas ou ausência de feedback. Incentivar os clientes a compartilhar vídeos de depoimentos ou avaliações escritas cria prova social utilizável na loja. Os vídeos reais de depoimentos de clientes representam poderosas ferramentas de conversão, especialmente para sites de e-commerce desconhecidos, pois os consumidores tipicamente confiam nas experiências dos pares mais do que nas mensagens da marca.</p>
+
+      <h1><strong>Vídeos curtos promocionais</strong></h1>
+      <p>Vídeos promocionais curtos que esclarecem as ofertas e condições da Black Friday reduzem as demandas ao atendimento ao cliente ao resolver visualmente as perguntas frequentes. Vídeos dedicados destacando os produtos em promoção melhoram a navegação no site e evitam que as ofertas passem despercebidas.</p>
+
+      <h1><strong>Video Commerce como diferencial competitivo</strong></h1>
+      <p>O Video Commerce permite que os lojistas integrem vídeos interativos nas páginas de produto, aumentando o tempo dos clientes no site e melhorando as métricas de conversão por meio de experiências de compra aprimoradas. Pesquisas recentes indicam que o Video Commerce impactou R$ 3,9 bilhões no e-commerce brasileiro nos últimos 12 meses, afetando 2,5 milhões de consumidores em 6,5 milhões de visualizações de vídeo.</p>
+
+      <h1><strong>Análise de dados para otimizar a experiência</strong></h1>
+      <p>A análise contínua de dados qualitativos — especialmente os comentários dos clientes nos vídeos — fornece insights valiosos sobre estratégias eficazes e melhorias necessárias. A plataforma Widde preserva os comentários internamente, permitindo que os lojistas identifiquem as preferências dos clientes e as necessidades não atendidas, ajustando as estratégias de acordo. Atualizar o conteúdo de vídeo antes da Black Friday é importante, pois muitos consumidores visitam os sites várias vezes antes de tomar decisões de compra.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

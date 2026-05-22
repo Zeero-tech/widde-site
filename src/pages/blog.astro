@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPage from '../components/pages/BlogPage'
+---
+
+<BaseLayout
+  title="Blog da Widde - Video Commerce"
+  description="Artigos com insights, dicas e tendências sobre e-commerce para ajudar você a vender mais e se destacar nesse mercado."
+  canonical="https://widde.io/blog"
+>
+  <BlogPage client:load />
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Feed de Vídeos no e-commerce: O que é e como funciona" description="O Feed de Vídeos da Widde traz o formato de scroll infinito do TikTok para o e-commerce. Saiba como aumentar retenção, engajamento e conversão na sua loja." canonical="https://widde.io/blog/feed-de-videos-no-e-commerce">
+  <BlogArticle client:load title="Feed de Vídeos no e-commerce: O que é e como funciona a novidade de Video Commerce" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/673f7859716e425bdee537b2_Feed%20de%20V%C3%ADdeos.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Feed de Vídeos da Widde representa uma das inovações mais atrativas para o mercado de e-commerce atual, integrando o formato de scroll infinito de vídeos dentro das lojas virtuais. Inspirado nas redes sociais como TikTok e Instagram, permite que os consumidores assistam a vídeos dos produtos da loja sem precisar acessar páginas de produto individuais separadamente. Essa solução proporciona aos clientes uma experiência 360° de todos os produtos do e-commerce por meio de vídeos, o que impulsiona o aumento do tempo de retenção e do ticket médio.</p>
+
+      <h1><strong>O que é o Feed de Vídeos da Widde?</strong></h1>
+      <p>O Feed de Vídeos é uma solução que traz o formato do TikTok e dos Reels para o e-commerce, permitindo que os usuários façam scroll por vídeos infinitamente e explorem mais produtos do que veriam normalmente com facilidade. A Widde desenvolveu esse formato para que os lojistas possam se beneficiar do forte poder de conversão dos vídeos combinado com a interatividade das redes sociais. Essa experiência transcende as fotos e descrições tradicionais, entregando conteúdo envolvente que mantém a atenção do cliente.</p>
+
+      <h1><strong>Como funciona o Feed de Vídeos da Widde?</strong></h1>
+      <p>No Feed de Vídeos da Widde, os consumidores descobrem vídeos de produtos em uma única página — uma nova categoria na sua loja virtual —, facilitando a visualização e estimulando a curiosidade. É similar a navegar pelas redes sociais, com reviews, demonstrações e diferentes aspectos dos produtos em um só lugar. Esse formato é atrativo porque os consumidores não precisam navegar entre páginas; eles simplesmente fazem scroll e continuam assistindo.</p>
+
+      <h1><strong>A experiência visual aumenta a retenção e o engajamento</strong></h1>
+      <p>Pesquisa da Microsoft de 2015 indicou que o tempo médio de atenção humana era de 8 segundos, número que provavelmente diminuiu ainda mais com o tempo. Ao criar o Feed de Vídeos, a Widde trouxe a capacidade de capturar a atenção do consumidor de forma rápida e dinâmica para o e-commerce. O scroll contínuo de vídeos aumenta a probabilidade de os clientes permanecerem mais tempo na loja virtual, melhorando as métricas de engajamento e o tempo de retenção. Dados da Widde demonstram que vídeos interativos em sites multiplicam as taxas de conversão de 3 a 4 vezes e aumentam o tempo de retenção no site em até 5 vezes.</p>
+
+      <h1><strong>Como ativar o Feed de Vídeos no e-commerce</strong></h1>
+      <p>Com a Widde instalada na sua loja, acesse a plataforma e:<br />1. Entre em "Feed de Vídeos" no Menu;<br />2. Clique em "Ativar agora";<br />3. Crie uma página em branco no seu site com a URL: www.seuecommerce.com/video-commerce;<br />4. Ative o Feed de Vídeos na sua loja.<br />Lembre-se de adicionar essa página como uma nova categoria no menu do seu site para que os clientes possam encontrar o Feed.</p>
+
+      <h1><strong>Vantagens de usar o Feed de Vídeos</strong></h1>
+      <p>• <strong>Aumento da taxa de conversão:</strong> A visualização dos produtos em vídeo ajuda os consumidores a entender melhor as ofertas, resultando em decisões de compra mais rápidas e confiantes;<br />• <strong>Melhora do ticket médio:</strong> O Feed permite que os clientes explorem vários produtos em sequência, despertando interesse em itens adicionais ou complementares;<br />• <strong>Aumento do tempo de retenção no site:</strong> Incentiva os clientes a passar mais tempo na loja virtual com scroll infinito e conteúdo envolvente;<br />• <strong>Humanização da experiência de compra:</strong> O vídeo aproxima os consumidores da marca, oferecendo uma comunicação mais pessoal;<br />• <strong>Atração de novos públicos:</strong> O Feed oferece uma experiência estilo TikTok que atrai consumidores acostumados a esse estilo de navegação.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

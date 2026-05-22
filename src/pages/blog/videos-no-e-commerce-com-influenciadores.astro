@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Vídeos no e-commerce com influenciadores" description="Saiba como usar influenciadores e sua própria voz para criar vídeos autênticos no e-commerce. Cases práticos de como humanizar e aumentar as conversões." canonical="https://widde.io/blog/videos-no-e-commerce-com-influenciadores">
+  <BlogArticle client:load title="Vídeos no e-commerce com influenciadores" category="Video Commerce" date="26.02.2026" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/664bbb799f1adca241b97c33_V%C3%ADdeos%20no%20e-commerce%20com%20influenciadores%20(1).avif" recentPosts={recentPosts}>
+    <div>
+      <p>Usar influenciadores no marketing digital constrói credibilidade da marca com os consumidores. Quando essa estratégia é implementada, os usuários desenvolvem maior confiança e se tornam clientes da marca. O uso de vídeos de influenciadores diretamente no e-commerce amplifica ainda mais esse efeito.</p>
+
+      <h1><strong>Aprenda com quem já faz: Inti Brand</strong></h1>
+      <p>A Inti Brand, uma varejista de moda feminina que usa a plataforma de Video Commerce da Widde, demonstra estratégias eficazes com influenciadores. A empresa faz parcerias com influenciadoras digitais que têm aderência com o público e reutiliza o conteúdo das redes sociais para sua loja online.</p>
+      <p>A marca utiliza duas abordagens:<br />1. <strong>Formato profissional em estúdio:</strong> Uma influenciadora apresenta os detalhes do vestido profissionalmente, discutindo tecido, caimento e numeração em um ambiente polido;<br />2. <strong>Formato autêntico no provador:</strong> Outra influenciadora se filma com um smartphone dentro do provador, criando identificação e conexão com os consumidores que se identificam com essa abordagem casual.</p>
+      <p>Empresas que já trabalham com influenciadores devem considerar redirecionar o conteúdo produzido profissionalmente para suas plataformas de e-commerce, maximizando o valor do trabalho contratado.</p>
+
+      <h1><strong>Você também pode ser influenciador do seu e-commerce</strong></h1>
+      <p>Nem todas as vendas dependem de influenciadores externos — as vozes internas da marca provam ser igualmente poderosas. A JJ Modas demonstra esse princípio por meio do envolvimento direto de seus fundadores.</p>
+      <p>Os fundadores da loja desfazem o mito de que apenas vídeos profissionais impulsionam as conversões. Eles filmam conteúdo de provador diariamente usando smartphones em ambientes bem iluminados e confortáveis. Os consumidores no e-commerce querem ver a realidade, tornando as demonstrações genuínas de produto essenciais.</p>
+
+      <h1><strong>Como fazer</strong></h1>
+      <p>Apresente os produtos de forma abrangente: close-ups, vistas completas, detalhes do tecido, ângulos frontais e traseiros — tudo o que aborda as objeções dos clientes. Humanize seu e-commerce por meio de apresentações íntimas em vídeo que estabelecem conexão direta com o consumidor. Inclua opiniões pessoais, sugestões de estilo e recomendações de ocasião de uso.</p>
+      <p>Jacqueline Galvão da JJ Modas enfatiza que a análise detalhada do tecido e a orientação de versatilidade sazonal importam porque a venda online é diferente de estar em uma loja física. Ela observa que os vídeos passam mais segurança aos clientes. Sua conclusão: o principal é o provador — quanto mais real a pessoa for, melhor. Embora os influenciadores agreguem valor, o envolvimento genuíno dos fundadores em última análise impulsiona as conversões.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

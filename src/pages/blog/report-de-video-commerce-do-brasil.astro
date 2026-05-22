@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Tendências de Video Commerce Brasil 2025" description="Conheça as tendências de Video Commerce no Brasil: dados, casos de sucesso e estratégias para impulsionar vendas com vídeos interativos no e-commerce." canonical="https://widde.io/blog/report-de-video-commerce-do-brasil">
+  <BlogArticle client:load title="Tendências de Video Commerce Brasil 2025" category="Video Commerce" date="15.05.2025" readingTime="10 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67057f68532f408663d7ea83_Tend%C3%AAncias%20de%20Video%20Commerce%20Brasil.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Manter-se informado sobre as tendências de Video Commerce no Brasil é essencial para qualquer e-commerce que deseja se destacar e aumentar as vendas. O Video Commerce cria experiências de compra mais interativas, ajudando os consumidores a entender melhor os produtos e aumentando a confiança e a probabilidade de conversão.</p>
+
+      <h1><strong>Cenário atual do Video Commerce no Brasil</strong></h1>
+      <p>O Video Commerce cresceu significativamente no Brasil, impulsionado pela necessidade de humanizar as compras online e pela mudança no comportamento do consumidor. Dados relevantes: 93% dos consumidores consideram os vídeos um fator decisivo na hora de comprar online (Animoto); 65% dos consumidores abandonam compras por problemas na experiência (WGSN); 55% dos consumidores priorizam gastos com experiências (WGSN).</p>
+
+      <h1><strong>Impacto no e-commerce brasileiro</strong></h1>
+      <p>Nos últimos 12 meses, o Video Commerce influenciou dramaticamente o e-commerce brasileiro. Vídeos interativos ajudaram as marcas a humanizar a jornada do cliente, aumentar as taxas de conversão, reduzir devoluções e melhorar a satisfação. Resultados médios: aumento de 3 a 4 vezes nas taxas de conversão; aumento de 4 a 5 vezes no tempo de retenção no site; maior valor médio das transações; maior taxa de retorno dos clientes.</p>
+
+      <h1><strong>Vídeos ao longo da jornada do cliente</strong></h1>
+      <p>O Video Commerce transforma a experiência de compra por meio de abordagens interativas e demonstrativas. Os vídeos podem ser posicionados desde a homepage até as páginas de produto, eliminando as dúvidas dos clientes. Os benefícios incluem diferenciação competitiva, decisões de compra mais rápidas, maior engajamento no site e oportunidades de feedback instantâneo.</p>
+
+      <h1><strong>Caso de sucesso: Not-me Shoes</strong></h1>
+      <p>Com 8 meses de implementação em 2023, a Not-me Shoes obteve: aumento de 188% na taxa de conversão; impacto de quase R$ 2 milhões na receita; 97% dos clientes relataram que os vídeos auxiliaram nas decisões de compra.</p>
+
+      <h1><strong>Caso de sucesso: LV Store</strong></h1>
+      <p>Com implementação no início de 2023, a LV Store alcançou: aumento de 2,5x na conversão em uma semana; aumento de 300% no tempo de retenção (de 2 para 8 minutos).</p>
+
+      <h1><strong>Como criar vídeos que vendem</strong></h1>
+      <p>A criação de vídeos de sucesso requer quatro estratégias:<br />1. <strong>Capturar a atenção imediatamente</strong> (nos primeiros 2 a 5 segundos);<br />2. <strong>Equilibrar apelos racionais e emocionais</strong> com dados técnicos e dores dos clientes;<br />3. <strong>Garantir simplicidade</strong> com explicações claras sobre o produto;<br />4. <strong>Usar formatos populares</strong> como "Como fazer" e Listicles.</p>
+
+      <h1><strong>Sobre a Widde</strong></h1>
+      <p>A Widde é a solução pioneira de Video Commerce no Brasil, permitindo que os lojistas ofereçam experiências de compra online superiores por meio de vídeos interativos com funcionalidade similar a Stories ou Reels. O primeiro Relatório Brasileiro de Video Commerce foi desenvolvido usando pesquisa e dados coletados pela Widde entre agosto de 2023 e agosto de 2024.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

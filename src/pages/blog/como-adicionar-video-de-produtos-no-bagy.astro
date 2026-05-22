@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como adicionar vídeo de produtos no BAGY? Categoria, home +" description="Adicionar vídeos de produtos no BAGY é uma estratégia para aumentar conversões e melhorar a experiência do consumidor. Veja o passo a passo com a Widde." canonical="https://widde.io/blog/como-adicionar-video-de-produtos-no-bagy">
+  <BlogArticle client:load title="Como adicionar vídeo de produtos no BAGY? Categoria, home +" category="Video Commerce" date="07.04.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67f3dc1390bbbc1638f02e9a_Como%20adicionar%20v%C3%ADdeo%20na%20bagy.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Incorporar vídeos de produto na plataforma BAGY é uma estratégia para aumentar as conversões e melhorar a experiência de compra dos consumidores. Os vídeos permitem que os clientes vejam os produtos em ação e entendam as funcionalidades com clareza, reduzindo as dúvidas na compra e criando maior confiança para decisões de compra mais rápidas e assertivas.</p>
+
+      <h1><strong>Benefícios de adicionar vídeos no BAGY</strong></h1>
+      <p>• <strong>Aumento de conversão:</strong> Os vídeos ajudam os clientes a entender melhor os produtos, incentivando as compras;<br />• <strong>Melhor experiência do cliente:</strong> Demonstrar produtos em ação elimina dúvidas e constrói confiança;<br />• <strong>Identidade de marca fortalecida:</strong> Vídeos de boas-vindas ou institucionais na homepage ajudam a estabelecer conexões emocionais.</p>
+
+      <h1><strong>Passo a passo para adicionar vídeos no BAGY com a Widde</strong></h1>
+      <p>A integração da Widde com o BAGY permite adicionar vídeos de forma simples sem comprometer o desempenho do site:</p>
+      <p>1. Acesse o painel da Widde;<br />2. Clique em "Adicionar vídeos" no Menu ou na seção Páginas;<br />3. Faça upload do vídeo pelo computador ou celular;<br />4. Na etapa de "Associações", digite o nome do produto no campo "Onde aparece";<br />5. Clique em "Conectar" quando o item aparecer.<br />6. Para vídeos na homepage, cole o link da página desejada e clique em "Conectar".</p>
+
+      <h1><strong>Widde: solução de Video Commerce</strong></h1>
+      <p>A Widde é uma plataforma que transforma a experiência de compra no e-commerce por meio de soluções de vídeo interativas e inovadoras, ajudando lojas online a se destacar competitivamente.</p>
+      <p>• <strong>Integração simplificada:</strong> Compatível com todas as plataformas de e-commerce, incluindo o BAGY;<br />• <strong>Alta performance:</strong> Os vídeos integrados não comprometem a velocidade do site;<br />• <strong>Interatividade:</strong> Botões de comentários, medidas de modelos, carrinho de compras e produtos dentro do vídeo;<br />• <strong>Inovação no e-commerce:</strong> Evolução contínua das soluções seguindo as tendências globais.</p>
+
+      <h1><strong>Feed interativo de vídeos</strong></h1>
+      <p>Cria uma experiência imersiva estilo redes sociais onde os clientes navegam pelos vídeos disponíveis. Aumenta o ticket médio ao expor os clientes a mais produtos, aumentando o engajamento e as chances de conversão.</p>
+
+      <h1><strong>Carrinho integrado no vídeo</strong></h1>
+      <p>Permite que os clientes adicionem produtos ao carrinho enquanto assistem aos vídeos, sem precisar navegar para outra página, simplificando o processo de compra.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

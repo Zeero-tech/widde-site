@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como configurar o Google Analytics 4 no seu ecommerce" description="Guia de configuração do Google Analytics 4 no e-commerce para Nuvemshop, Shopify, VTEX, Tray, Loja Integrada e mais, com integração à Widde para medir Video Commerce." canonical="https://widde.io/blog/como-configurar-o-google-analytics-4-no-seu-ecommerce">
+  <BlogArticle client:load title="Como configurar o Google Analytics 4 no seu ecommerce" category="Tendências e-commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d01aa066b57aefdb5e75c_ga4.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Google Analytics é uma das ferramentas mais eficazes para analisar dados que suportam o sucesso do e-commerce. Com o GA4 configurado, é possível acompanhar dentro da Widde quanto o Video Commerce está impactando suas vendas — uma informação valiosa para otimizar a estratégia de conteúdo.</p>
+
+      <h1><strong>O que é o GA4 e qual a importância para um e-commerce</strong></h1>
+      <p>O GA4 pode parecer complexo inicialmente, mas serve como infraestrutura fundamental para as operações online. Diferentemente de seu predecessor, o GA4 integra informações de múltiplos canais, proporcionando uma visão ampla de toda a jornada que o cliente percorreu. O sistema rastreia conversões a partir de visualizações de vídeo no YouTube junto com canais pagos do Google, redes sociais, e-mail e outras fontes. Ele identifica os canais de descoberta e o comportamento subsequente dos clientes, oferecendo insights de otimização de marketing.</p>
+      <p>Para o Video Commerce especificamente, o GA4 permite medir a eficácia dos vídeos e a atribuição de conversões ao conteúdo em vídeo.</p>
+
+      <h1><strong>Passo a passo para configurar o GA4 no seu e-commerce</strong></h1>
+      <p>Cada plataforma de e-commerce requer abordagens diferentes de configuração do GA4. Os principais guias de configuração estão disponíveis para as seguintes plataformas:<br />• Nuvemshop;<br />• Shopify (opções de migração ou nova configuração);<br />• VTEX;<br />• Tray (migração ou instalação nova);<br />• Loja Integrada;<br />• WooCommerce;<br />• Vnda;<br />• Dooca Commerce;<br />• Wbuy;<br />• Bagy.</p>
+      <p>Após a configuração específica da plataforma, conecte o GA4 dentro do dashboard da Widde para monitorar as métricas de impacto dos vídeos.</p>
+
+      <h1><strong>O que você poderá medir com o GA4 + Widde</strong></h1>
+      <p>Com a integração configurada, você terá acesso a dados como: taxa de conversão comparativa entre espectadores de vídeo e visitantes que não assistiram; impacto direto na receita gerada pelos vídeos; tempo de retenção no site antes e depois da implementação dos vídeos; comportamento dos usuários nas páginas com Video Commerce. Esses dados permitem tomar decisões baseadas em evidências para otimizar sua estratégia de conteúdo e maximizar o retorno sobre o investimento em Video Commerce.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

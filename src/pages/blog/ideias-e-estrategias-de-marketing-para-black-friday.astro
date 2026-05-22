@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Ideias e estratégias de marketing para Black Friday 2024" description="Prepare seu e-commerce para a Black Friday com as melhores estratégias: promoções personalizadas, Video Commerce, remarketing e muito mais." canonical="https://widde.io/blog/ideias-e-estrategias-de-marketing-para-black-friday">
+  <BlogArticle client:load title="Ideias e estratégias de marketing para Black Friday 2024" category="Marketing" date="12.05.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6716bcb17a861750ea2a2f9b_Estrat%C3%A9gias%20para%20a%20Black%20Friday.avif" recentPosts={recentPosts}>
+    <div>
+      <p>A Black Friday é um dos momentos mais competitivos do ano para o e-commerce. O planejamento antecipado ajuda a garantir visibilidade e aquisição de clientes durante esse período de alta concorrência. Com as estratégias certas, é possível se destacar, conquistar novos clientes e fidelizar os já existentes.</p>
+
+      <h1><strong>1. Promoções exclusivas e personalizadas</strong></h1>
+      <p>A personalização é cada vez mais valorizada pelos consumidores. Usar dados do CRM permite segmentar os clientes e entregar ofertas que correspondam a perfis específicos, melhorando as taxas de conversão. Promoções personalizadas demonstram que a marca conhece e valoriza cada cliente.</p>
+
+      <h1><strong>2. Vídeos interativos no e-commerce</strong></h1>
+      <p>Vídeos interativos nas páginas de produto representam uma grande tendência, pois demonstram os produtos em ação e aumentam a confiança do cliente. A solução de Video Commerce da Widde facilita a integração sem comprometer a performance do site. Durante a Black Friday, quando os consumidores estão mais exigentes, os vídeos ajudam a eliminar dúvidas e acelerar a decisão de compra.</p>
+
+      <h1><strong>3. Cupons progressivos</strong></h1>
+      <p>Essa estratégia oferece descontos maiores conforme o valor da compra aumenta, incentivando os clientes a adicionar mais itens e elevar o ticket médio. Por exemplo: 10% de desconto em compras acima de R$150, 20% acima de R$300 e assim por diante.</p>
+
+      <h1><strong>4. Remarketing para reengajamento de visitantes</strong></h1>
+      <p>O remarketing exibe anúncios personalizados para visitantes anteriores que abandonaram seus carrinhos, maximizando o retorno sobre o investimento em publicidade ao focar em públicos já interessados e familiarizados com a marca.</p>
+
+      <h1><strong>5. Parcerias com influenciadores digitais</strong></h1>
+      <p>Parcerias estratégicas com influenciadores alinhados expandem o alcance da marca e criam um senso de urgência e aprovação da marca por meio de recomendações confiáveis. Escolha influenciadores com audiência genuinamente alinhada ao seu público-alvo.</p>
+
+      <h1><strong>6. Frete grátis e condições especiais de pagamento</strong></h1>
+      <p>Frete grátis e opções de pagamento flexíveis — parcelamento sem juros, carteiras digitais — abordam as principais preocupações que levam ao abandono do carrinho durante a Black Friday.</p>
+
+      <h1><strong>7. Contadores regressivos para criar urgência</strong></h1>
+      <p>Contadores regressivos criam pressão psicológica por meio da percepção de escassez, motivando decisões de compra imediatas. É fundamental que esses contadores sejam autênticos para não comprometer a credibilidade da marca.</p>
+
+      <h1><strong>8. Otimização da performance do site</strong></h1>
+      <p>Sites com carregamento rápido e infraestrutura robusta evitam o abandono dos usuários durante picos de tráfego, melhorando diretamente as taxas de conversão. Invista em otimizações técnicas antes do evento para garantir uma experiência fluida.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

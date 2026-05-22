@@ -1,12 +1,8 @@
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import gsap from "gsap";
-import AnimatedButton from "@/components/AnimatedButton";
+import { gsap } from "@/lib/gsap";
+import AnimatedButton from "@/components/core/AnimatedButton";
 
 export default function VCHero() {
-  const navigate = useNavigate();
-  const { t } = useTranslation();
   const contentRef = useRef<HTMLDivElement>(null);
   const mockInnerRef = useRef<HTMLDivElement>(null);
 
@@ -27,8 +23,16 @@ export default function VCHero() {
 
   function handleViewPlans(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
-    navigate("/?scrollTo=planos");
+    window.location.href = "/?scrollTo=planos";
   }
+
+  const features = [
+    "Carrosséis, Destaques, Stories e Explorar",
+    "Integração sem desenvolvimento",
+    "Carrinho dentro do vídeo, sem interromper a experiência",
+  ];
+
+  const ctaPlans = "Ver planos";
 
   return (
     <section
@@ -40,10 +44,10 @@ export default function VCHero() {
         <div className="w-full max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6 flex">
           <div className="text-xs md:text-sm text-[#aaa]">
             <a href="/" className="text-brand no-underline">
-              {t("vc.breadcrumb.home")}
+              Home
             </a>
             <span className="mx-[6px]">/</span>
-            <strong className="text-[#ccc]">{t("vc.breadcrumb.page")}</strong>
+            <strong className="text-[#ccc]">Video Commerce</strong>
           </div>
         </div>
       </div>
@@ -62,21 +66,17 @@ export default function VCHero() {
             className="flex-1 w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col justify-center md:justify-start py-20 md:py-16 lg:py-20"
           >
             <h1 className="text-4xl sm:text-[2.625rem] md:text-[2.5rem] lg:text-5xl font-black leading-[1.15] mb-6 sm:mb-8 md:mb-6 text-white">
-              {t("vc.hero.title")}{" "}
-              <span className="text-brand">{t("vc.hero.titleHighlight")}</span>
+              Acelere a decisão de compra com{" "}
+              <span className="text-brand">vídeo.</span>
             </h1>
             <p className="hidden md:block text-base md:text-base lg:text-lg text-[#aaa] leading-[1.7] mb-3 max-w-full md:max-w-[560px]">
-              {t("vc.hero.description")}
+              Seu produto tem diferenciais. Seu e-commerce precisa mostrar isso.
             </p>
             <p className="text-base sm:text-lg md:text-base lg:text-lg text-[#aaa] leading-[1.7] mb-4 sm:mb-6 md:mb-6 lg:mb-8 max-w-full md:max-w-[560px]">
-              {t("vc.hero.description2")}
+              Transforme seu conteúdo de vídeo em uma experiência de compra que passa confiança, como um vendedor 24h dentro do site.
             </p>
             <ul className="list-none flex flex-col gap-[8px] sm:gap-[12px] md:gap-[10px] mb-8 sm:mb-10 md:mb-8 lg:mb-10 p-0">
-              {[
-                t("vc.hero.feature1"),
-                t("vc.hero.feature2"),
-                t("vc.hero.feature3"),
-              ].map((item) => (
+              {features.map((item) => (
                 <li
                   key={item}
                   className="text-base sm:text-lg md:text-base lg:text-lg text-[#ccc] flex items-start gap-[10px]"
@@ -90,10 +90,10 @@ export default function VCHero() {
             </ul>
             <div className="mt-6 sm:mt-8 md:mt-0  flex flex-col items-stretch md:flex-row md:items-center gap-3 sm:gap-4 md:gap-3">
               <AnimatedButton
-                href="https://widde.io/contato-vendas?utm_medium=cpc&utm_source=google&utm_campaign=01"
+                href="/contato-vendas"
                 className="inline-block text-center bg-brand text-white font-bold text-base sm:text-lg md:text-base lg:text-lg px-5 md:px-5 lg:px-7 py-[10px] sm:py-[12px] md:py-[11px] lg:py-[13px] rounded-full no-underline"
               >
-                {t("vc.hero.ctaSales")}
+                Falar com vendas
               </AnimatedButton>
               <a
                 href="/#planos"
@@ -104,7 +104,7 @@ export default function VCHero() {
                   data-button-animate-chars=""
                   className="btn-animate-chars__text"
                 >
-                  {t("vc.hero.ctaPlans")
+                  {ctaPlans
                     .split("")
                     .map((char, i) => (
                       <span

@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  {
+    slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento",
+    title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png",
+  },
+  {
+    slug: "report-video-commerce-brasil-2025",
+    title: "Report Video Commerce Brasil 2025",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png",
+  },
+  {
+    slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva",
+    title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png",
+  },
+  {
+    slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026",
+    title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png",
+  },
+  {
+    slug: "guia-estrategico-do-video-commerce-as-tendencias-que-vao-permear-em-2026",
+    title: "Guia estratégico do Video Commerce: as tendências que vão permear em 2026",
+    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696141384fe221769b9e530a_Thumbnail.png",
+  },
+]
+---
+
+<BaseLayout
+  title="Como fidelizar os clientes no e-commerce"
+  description="Fidelização no e-commerce vai além do preço e da logística. Entenda como conteúdo, experiência e Video Commerce criam relacionamentos duradouros com o consumidor."
+  canonical="https://widde.io/blog/como-fidelizar-os-clientes-no-e-commerce"
+>
+  <BlogArticle
+    client:load
+    title="Como fidelizar os clientes no e-commerce"
+    category="Tendências e-commerce"
+    date="23.01.2026"
+    readingTime="6 minutos de leitura"
+    coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png"
+    recentPosts={recentPosts}
+  >
+    <div>
+      <p>Durante anos, a fidelização no e-commerce foi construída a partir de pilares operacionais bem definidos: preço competitivo, logística eficiente e um pós-venda funcional. Esses elementos continuam importantes, mas hoje atuam mais como requisitos básicos do que como diferenciais reais.</p>
+      <p>O que mudou não foi apenas o consumidor, mas como a decisão de compra acontece. As pessoas não seguem mais um caminho previsível entre descobrir uma marca, avaliar opções e comprar. Conteúdo, influência, experiência e conveniência passaram a acontecer de forma simultânea, fragmentada e contínua.</p>
+      <p>Na prática, isso significa que o e-commerce deixou de ser apenas o ponto final da jornada. Ele se tornou um espaço ativo de descoberta, validação e relacionamento. Fidelizar, portanto, já não depende apenas do que acontece depois da compra, mas da qualidade da experiência construída em cada interação.</p>
+      <p>É a partir dessa lógica que marcas mais maduras estão repensando conteúdo, narrativa e tecnologia dentro do próprio site, transformando a experiência de compra em um fator central de recorrência e confiança.</p>
+
+      <h1><strong>O novo consumidor não segue mais o funil</strong></h1>
+      <p>O modelo clássico de funil pressupõe que o consumidor avança de forma previsível até a conversão. No entanto, o comportamento atual mostra o oposto: o cliente descobre um produto em um vídeo, pesquisa avaliações em outra plataforma, abandona o carrinho, retorna semanas depois por influência de um creator e finaliza a compra após consumir mais conteúdo.</p>
+      <p>Nesse cenário, a decisão de compra não é um ponto final, é parte de uma relação contínua.</p>
+      <p>Para fidelizar, o e-commerce precisa estar presente em todos esses momentos, oferecendo contexto, informação e inspiração, não apenas produtos.</p>
+
+      <h1><strong>Conteúdo como pilar de fidelização</strong></h1>
+      <p>Se antes o conteúdo tinha um papel majoritariamente institucional ou educativo, hoje ele é parte central da experiência de compra. O consumidor espera encontrar respostas rápidas, demonstrações reais, provas sociais e narrativas consistentes dentro do próprio e-commerce.</p>
+      <p>Isso explica por que formatos visuais e dinâmicos ganharam tanta relevância. Vídeos não apenas informam, mas reduzem fricções, aumentam a confiança e aproximam a marca da linguagem que o consumidor já consome diariamente em redes sociais.</p>
+      <p>Mais do que atrair, o conteúdo certo ajuda o cliente a comprar melhor, e clientes que compram com segurança tendem a voltar.</p>
+
+      <h1><strong>A experiência no site precisa acompanhar a experiência fora dele</strong></h1>
+      <p>Um erro comum das marcas é investir fortemente em conteúdo para redes sociais, campanhas e influenciadores, mas não refletir essa mesma narrativa dentro do site. O resultado é uma quebra de expectativa: o consumidor chega ao e-commerce motivado, mas encontra uma experiência fria, técnica e distante.</p>
+      <p>Fidelização acontece quando há continuidade na jornada.</p>
+      <p>Quando o cliente encontra no site os mesmos vídeos, explicações visuais e abordagens que já o convenceram em outros canais, a experiência se torna fluida. Ele reconhece a marca, entende o produto com mais clareza e se sente mais confiante para avançar, não só na primeira compra, mas nas próximas.</p>
+
+      <h1><strong>Video Commerce como resposta ao novo comportamento de consumo</strong></h1>
+      <p>É nesse contexto que o Video Commerce ganha relevância estratégica. Não como uma tendência isolada, mas como uma resposta direta às mudanças no comportamento do consumidor.</p>
+      <p>Vídeos aplicados de forma inteligente no e-commerce ajudam a:<br />• Explicar produtos complexos de forma simples;<br />• Reduzir dúvidas que impedem a conversão;<br />• Humanizar a experiência digital;<br />• Manter o cliente engajado por mais tempo;<br />• Reforçar a narrativa da marca dentro do site.</p>
+      <p>Para grandes operações, isso significa escalar conteúdo sem perder proximidade. O vídeo deixa de ser apenas uma ferramenta de atração e passa a atuar diretamente na fidelização, criando experiências mais completas e memoráveis.</p>
+
+      <h1><strong>Fidelizar é construir relação, não apenas recompra</strong></h1>
+      <p>No novo cenário do e-commerce, fidelização não acontece apenas após a compra. Ela começa antes, durante e continua muito depois. Cada interação conta: o conteúdo exibido, a forma de apresentar o produto, a clareza das informações e a experiência visual oferecida.</p>
+      <p>Marcas que entendem esse movimento deixam de tratar o site como um simples canal de conversão e passam a enxergá-lo como um ponto central de relacionamento.</p>
+      <p>Ao alinhar conteúdo, tecnologia e comportamento de consumo, o e-commerce se torna mais do que um local de compra, torna-se um espaço onde o cliente confia, aprende e escolhe voltar.</p>
+      <p>E, no fim, fidelizar é exatamente isso: estar presente de forma relevante em todas as etapas, mesmo quando elas já não seguem um funil definido.</p>
+      <p>Na Widde, acompanhamos de perto a evolução do consumo digital e desenvolvemos soluções que ajudam grandes e-commerces a responder a esse novo cenário.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

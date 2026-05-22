@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Integração facilitada, resultados do Video Commerce e interatividade" description="Conheça a integração facilitada da Widde, os resultados mensuráveis do Video Commerce e como a interatividade dos vídeos transforma a experiência de compra." canonical="https://widde.io/blog/integracao-facilitada-resultados-do-video-commerce-e-interatividade">
+  <BlogArticle client:load title="Integração facilitada, resultados do Video Commerce e interatividade" category="Video Commerce" date="15.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6644f6b6a5060320c7f29dff_Integra%C3%A7%C3%A3o%20facilitada%2C%20resultados%20do%20Video%20Commerce%20e%20interatividade.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O Video Commerce oferece integração simples e usabilidade intuitiva, funcionando como um formato ideal para a interação com os clientes dentro das lojas online, aumentando as taxas de conversão e retenção.</p>
+
+      <h1><strong>Integração simplificada ao e-commerce</strong></h1>
+      <p>A plataforma agiliza a implementação do Video Commerce em qualquer plataforma de e-commerce. Para usuários da Nuvemshop, a instalação requer apenas um clique. Em outras plataformas, a configuração ocorre por meio do Google Tag Manager com instruções completas fornecidas no mesmo dia. O suporte ao cliente permanece disponível para assistência durante todo o processo.</p>
+
+      <h1><strong>Processo eficiente de upload de vídeo</strong></h1>
+      <p>O sistema prioriza a eficiência ao permitir uploads diretos de vídeo por meio de dispositivos móveis. Os usuários podem gravar, aprovar e vincular o conteúdo aos produtos em segundos. Essa abordagem atende às restrições de tempo enfrentadas pelos empreendedores e gerentes de e-commerce que precisam de uma solução ágil.</p>
+
+      <h1><strong>Métricas de performance e analytics</strong></h1>
+      <p>Um dashboard integrado ao Google Analytics fornece acesso a dados cruciais: taxas de conversão, retenção de clientes, localizações de comentários e impacto na receita. Isso permite que as partes interessadas meçam o retorno sobre o investimento e entendam a performance dos vídeos dentro de suas lojas com precisão.</p>
+
+      <h1><strong>Feedback dos clientes e crescimento das vendas</strong></h1>
+      <p>A plataforma exibe os comentários dos clientes nos vídeos, fornecendo feedback valioso para o refinamento do conteúdo. Depoimentos de proprietários de lojas relatam aumento nas vendas por meio da interação com os clientes, com compradores sugerindo melhorias que anteriormente não haviam sido notadas. Essa interatividade transforma os vídeos em canais bidirecionais de comunicação com o cliente.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

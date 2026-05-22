@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="As principais dicas para alavancar suas vendas com vídeos em 2024!" description="5 dicas principais para alavancar vendas com vídeos no e-commerce em 2024: planejar tópicos, múltiplos ângulos, feedbacks, interatividade e vídeos curtos." canonical="https://widde.io/blog/principais-dicas-para-alavancar-suas-vendas-com-videos-2024">
+  <BlogArticle client:load title="As principais dicas para alavancar suas vendas com vídeos em 2024!" category="Video Commerce" date="12.05.2025" readingTime="3 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/65b28b0f5b5a0f4becfbbcbd_2024.avif" recentPosts={recentPosts}>
+    <div>
+      <p>O uso de vídeos no e-commerce continua crescendo, com os lojistas online investindo cada vez mais em funcionalidades aprimoradas do site e atendimento ao cliente por meio de estratégias mobile-first. Confira as principais dicas para alavancar suas vendas com vídeos.</p>
+
+      <h1><strong>1. Planeje seus tópicos</strong></h1>
+      <p>Crie uma lista antes de filmar, cobrindo demonstrações, perguntas frequentes e opções de personalização. O planejamento antecipado garante que o vídeo responda às principais dúvidas dos clientes e mostre os diferenciais do produto de forma organizada e clara.</p>
+
+      <h1><strong>2. Mostre múltiplos ângulos</strong></h1>
+      <p>Exiba os produtos de várias perspectivas para construir a confiança dos clientes durante as decisões de compra. Ângulos frontais, traseiros e laterais, além de close-ups de detalhes, eliminam dúvidas sobre o produto e reduzem a probabilidade de devoluções por produto diferente do esperado.</p>
+
+      <h1><strong>3. Solicite feedback e responda às perguntas</strong></h1>
+      <p>Use vídeos interativos para responder às preocupações dos clientes, potencialmente reduzindo trocas e devoluções. Incentive os comentários nos vídeos e use esse feedback para criar novos conteúdos que abordem as dúvidas mais frequentes. Isso cria um ciclo virtuoso de melhoria contínua do conteúdo.</p>
+
+      <h1><strong>4. Aumente a interatividade</strong></h1>
+      <p>Guie os clientes pelo site comparando produtos e destacando variações em diferentes cores ou estilos. Vídeos que mostram múltiplas opções e como escolher entre elas ajudam os clientes indecisos a tomar decisões mais rapidamente, aumentando o ticket médio ao apresentar produtos complementares.</p>
+
+      <h1><strong>5. Mantenha o conteúdo breve</strong></h1>
+      <p>Mantenha os vídeos entre 30 segundos a 1 minuto. Para informações mais longas, divida o conteúdo em segmentos menores. Vídeos curtos respeitam o tempo do espectador, mantêm a atenção e aumentam a probabilidade de visualização completa — o que resulta em melhor compreensão do produto e maior intenção de compra.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

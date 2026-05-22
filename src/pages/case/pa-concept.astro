@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CaseArticle from '../../components/pages/CaseArticle'
+import type { CaseArticleData } from '../../components/pages/CaseArticle'
+
+const data: CaseArticleData = {
+  heroImage: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e157501d9ccc3cad72f62_capa%20PA.avif",
+  tag: "Case de Sucesso",
+  title: "Experiência de Loja Física no E-commerce",
+  representanteNome: "Felipe Kim",
+  representanteCargo: "Gerente Comercial, Marketing e Comunicação",
+  cliente: "PA Concept",
+  youtubeUrl: "https://www.youtube.com/watch?v=w5DTQIcHwOI",
+
+  conhecaLogo: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e109fbf969a01082e3187_paconcept.avif",
+  conhecaTitle: "Conheça a PA Concept",
+  conhecaBody: `<p>A PA Concept é uma empresa familiar com mais de 50 anos de história. Com um DNA marcado pela alfaiataria feminina, vem expandindo sua atuação com criações cada vez mais versáteis, pensadas para diferentes momentos. Hoje, opera em três frentes: varejo, atacado e e-commerce, este último sendo o principal canal de vendas da marca. Felipe Kim, atual Gerente Comercial, de Marketing e Comunicação, representa a terceira geração da família à frente do negócio.</p>`,
+  conhecaNumbers: [
+    { value: "50 anos", label: "No mercado" },
+    { value: "3 canais", label: "E-commerce, varejo e atacado" },
+  ],
+
+  depoimento1Img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e0ff22989832e41f861f3_Kim%20Depoimento.avif",
+  depoimento1Quote: "No final é tudo sobre resultados e para mim resultados é através de números. O resultado da PA que eu estou tendo está sendo muito bom, somado a uma integração super fácil em questão de 10 minutos, e muito fácil de usar. Testa e vê os números, eu fortemente recomendo para qualquer marca que trabalhe em uma área parecida com a PA testar.",
+  depoimento1Nome: "Felipe Kim",
+  depoimento1Cargo: "Gerente Comercial, Marketing e Comunicação",
+
+  desafioGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e5dcc5df2405fb222c53d_682e5d53ca7159e899800b8f_P.A%20CONCEPT%20%20Loja%20Online%20Oficial%20P.A%20CONCEPT.avif",
+  desafioBody: `<p>O e-commerce tem um papel essencial nas vendas da marca, e existe um esforço constante para tornar a experiência do consumidor mais completa, tanto na loja física quanto no ambiente digital. Na loja física, a decisão de compra costuma ser mais fácil. A consumidora pode experimentar a peça, sentir o tecido, observar o caimento e entender melhor como ela se comporta no corpo. Já no e-commerce, isso é limitado.</p><p>Nesse contexto, a Widde entrou para transformar a experiência de compra online. Com o Video Commerce, a cliente visualiza melhor o produto, entende o caimento e os detalhes, e se sente mais segura para tomar uma decisão consciente — reduzindo arrependimentos e aumentando a confiança na marca.</p><p>Além disso, a Widde se conecta com a estratégia de mídia paga do negócio. A PA investe fortemente em tráfego e, para garantir performance, precisa de vídeos de produto com alta qualidade. O conteúdo criado para os anúncios também é aproveitado no Video Commerce, integrando as estratégias e dando continuidade à jornada de compra da cliente, com conteúdos harmônicos.</p>`,
+
+  numeros: [
+    { value: "28%", label: "Receita impactada pelos vídeos" },
+    { value: "16,67%", label: "Aumento do ticket médio" },
+    { value: "8min 12s", label: "Tempo de retenção com os vídeos" },
+  ],
+
+  resultadosGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e6048c5310854fd2ea1ef_case-imagem2-paconcept.avif",
+
+  resultadosBody: `<p>A PA começou a utilizar a Widde em 2025 e, em apenas três meses, já observou resultados expressivos após integrar os vídeos ao seu e-commerce. Entre os principais impactos:</p><p><strong>- 28% da receita foi impactada por vídeos;</strong></p><p><strong>- A taxa de conversão mais que dobrou;</strong></p><p><strong>- O tempo médio de retenção sem assistir aos vídeos é de 3min48s, enquanto, com os vídeos, sobe para 8min12s;</strong></p><p><strong>- O ticket médio aumentou em 16,67%.</strong></p><p>À medida que os resultados apareceram, a marca percebeu ainda mais o valor de incorporar vídeos estratégicos à jornada de compra.</p>`,
+
+  depoimento2Quote: "Sendo bem honesto, o que eu gosto na Widde são os resultados. Os números não mentem. O resultado em ganho de taxa de conversão, retenção e ticket médio, para mim no final, é o mais importante. Vem dando muito certo para a gente e eu vejo um valor gigantesco nisso.",
+  depoimento2Nome: "Felipe Kim",
+  depoimento2Cargo: "Gerente Comercial, Marketing e Comunicação",
+  depoimento2ImgVertical: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e6048c5310854fd2ea1ef_case-imagem2-paconcept.avif",
+  depoimento2YoutubeUrl: "https://www.youtube.com/watch?v=w5DTQIcHwOI",
+
+  greyStickyBody: `<h2><strong>Conteúdos: E-commerce x Redes Sociais</strong></h2><p>Os conteúdos desenvolvidos para o site têm foco direto no produto, como um catálogo interativo, pois o objetivo é oferecer ao cliente o máximo de informação possível para auxiliar na tomada de decisão de compra. Nas redes sociais, a estratégia é destacar a personalidade da marca. Por isso, há um equilíbrio entre postagens comerciais e campanhas mais conceituais, que ajudam a construir a imagem da PA e apresentar seu ecossistema. São conteúdos que revelam quem é a persona da marca e fortalecem sua identidade. Já no site, o Video Commerce da Widde é utilizado com um propósito mais comercial, trazendo detalhes visuais que complementam as informações do produto e aumentam a confiança do cliente na hora da compra.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e1194eafc8ce76236e168_68250c5205d58495fd09fd9b_Marketingsvideo1-ezgif.com-optimize.gif" loading="lazy" /></div></figure><h2><strong>Fator de sucesso comum no uso do Video Commerce</strong></h2><p>Antes de iniciar o uso da Widde, Felipe analisou todos os Cases de Sucesso anteriores envolvendo o Video Commerce. A partir dessa análise, percebeu um padrão claro: independentemente do formato, as marcas que alcançavam resultados expressivos tinham um ponto em comum: ofereciam o máximo de informação possível ao cliente.</p><p>Com esse insight, a equipe estruturou um processo padrão para as gravações: cada vídeo apresenta a parte da frente do produto com o look completo, as costas, detalhes, diferenciais da peça, além de informações sobre o tecido e a modelagem. Algumas marcas apostam em vídeos mais espontâneos, mas no caso da PA, optaram por uma abordagem com qualidade profissional, alinhada ao posicionamento da marca. Apesar da proximidade que os vídeos orgânicos podem trazer, entenderam que o maior ganho para a PA estaria em conteúdos mais institucionais, reforçando a imagem e os valores da marca com mais sofisticação e credibilidade.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e11e25ed05b59f2fabe10_68250b1a513b3359987683fc_Marketingsvideo-ezgif.com-speed.gif" loading="lazy" /></div></figure>`,
+  greyStickyYoutubeUrl: "https://www.youtube.com/watch?v=w5DTQIcHwOI",
+
+  outrosCases: [
+    { href: "/case/mamo", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2d0b1016c8df8923096d_capa%20youtube%201.png", title: "Construindo narrativas com Video Commerce" },
+    { href: "/case/john-john", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png", title: "Agregando valor ao produto com o Video Commerce" },
+    { href: "/case/maximum-boxing", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png", title: "Mais vendas, menos demanda para o SAC" },
+    { href: "/case/majeste", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif", title: "Desafios da Moda Festa no E-commerce" },
+  ],
+}
+---
+
+<BaseLayout
+  title="PA Concept: Experiência de Loja Física no E-commerce | Widde"
+  description="Veja como a PA Concept usou o Video Commerce da Widde para impactar 28% da receita, aumentar 16,67% o ticket médio e dobrar a taxa de conversão."
+  canonical="https://widde.io/case/pa-concept"
+>
+  <CaseArticle client:load data={data} />
+</BaseLayout>

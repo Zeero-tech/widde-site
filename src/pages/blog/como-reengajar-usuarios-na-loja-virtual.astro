@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como reengajar usuários na loja virtual | As 12 dicas" description="Como reengajar usuários na loja virtual? Confira 12 estratégias práticas para recuperar visitantes que não converteram e aumentar suas vendas no e-commerce." canonical="https://widde.io/blog/como-reengajar-usuarios-na-loja-virtual">
+  <BlogArticle client:load title="Como reengajar usuários na loja virtual | As 12 dicas" category="Tendências e-commerce" date="17.06.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68516655ad9c7c37d698f890_Reengaje%20usuarios%20na%20loja%20virtual.png" recentPosts={recentPosts}>
+    <div>
+      <p>Reengajar usuários na loja virtual é a estratégia de recuperar visitantes que navegaram pelo site, demonstraram interesse, mas não concluíram a compra. O sucesso depende da coleta de dados comportamentais — histórico de visualizações, tempo gasto e ações do usuário — o que permite criar campanhas personalizadas.</p>
+      <p>Táticas como e-mails de recuperação de carrinho, notificações push com ofertas exclusivas, anúncios de remarketing nas redes sociais e pop-ups segmentados são fundamentais. Depoimentos de clientes, vídeos explicativos e provas sociais ajudam a superar objeções e aumentar as conversões. O objetivo é relembrar o consumidor sobre os produtos abandonados e demonstrar o valor da compra. Quando bem executado, o reengajamento aumenta as taxas de conversão, reduz o custo de aquisição de clientes e melhora a receita da loja.</p>
+
+      <h1><strong>1. Envie e-mails de recuperação de carrinho</strong></h1>
+      <p>O abandono de carrinho representa ao mesmo tempo um desafio e uma oportunidade. E-mails automatizados enviados dentro de 24 horas — personalizados com o nome do cliente e imagens dos produtos, idealmente com ofertas especiais ou opções de entrega simplificadas — recuperam vendas perdidas de forma eficaz.</p>
+
+      <h1><strong>2. Utilize anúncios de remarketing nas redes sociais</strong></h1>
+      <p>O remarketing no Facebook, Instagram e TikTok impacta usuários que visitaram, mas não converteram. O uso estratégico de visuais atraentes e mensagens personalizadas reforça o recall da marca e a memória do produto, transformando visitantes hesitantes em clientes.</p>
+
+      <h1><strong>3. Ative notificações push com ofertas exclusivas</strong></h1>
+      <p>As notificações push funcionam como lembretes instantâneos e diretos. Quando personalizadas de forma eficaz, alcançam altas taxas de abertura e engajamento, mantendo a presença da marca e incentivando o retorno ao site sem ser intrusivas.</p>
+
+      <h1><strong>4. Ofereça cupons de desconto personalizados</strong></h1>
+      <p>Códigos de desconto exclusivos e com prazo limitado motivam visitas de retorno. A personalização com base no comportamento do usuário — produtos visualizados, valor do carrinho, tempo de inatividade — aumenta a conversão e cria a percepção de cuidado e valorização individuais.</p>
+
+      <h1><strong>5. Envie lembretes por e-mail sobre produtos visualizados</strong></h1>
+      <p>E-mails de remarketing com produtos visualizados, sugestões de uso, recomendações similares e depoimentos de clientes demonstram compreensão dos interesses do cliente e oferecem soluções personalizadas por meio de comunicação mais relevante.</p>
+
+      <h1><strong>6. Mostre depoimentos e avaliações de outros clientes</strong></h1>
+      <p>Depoimentos reais e avaliações positivas eliminam dúvidas e constroem credibilidade para a loja. Incluir esses conteúdos em e-mails de reengajamento, páginas de produtos e anúncios de remarketing ajuda os clientes a se sentirem mais confiantes para concluir a compra.</p>
+
+      <h1><strong>7. Crie campanhas de escassez (tempo limitado ou estoque reduzido)</strong></h1>
+      <p>Campanhas orientadas por urgência impactando visitantes que não converteram usam frases como "últimas unidades", "oferta por 24 horas" ou "frete grátis hoje". Combinadas com alertas visuais ou e-mails automatizados, as mensagens de escassez aceleram as decisões de compra.</p>
+
+      <h1><strong>8. Personalize a vitrine com base no histórico de navegação</strong></h1>
+      <p>Mostrar aos usuários exatamente o que os interessa aumenta a relevância. Se um visitante navegou por tênis esportivos, exibir essa categoria de forma destacada no retorno facilita a reconexão com seus interesses, aumentando o tempo no site e a probabilidade de conversão.</p>
+
+      <h1><strong>9. Use pop-ups de reengajamento com benefícios</strong></h1>
+      <p>Pop-ups estratégicos que detectam intenção de saída ou inatividade apresentam benefícios — códigos exclusivos, brindes na primeira compra ou informações sobre frete grátis. Essas são tentativas finais de engajamento antes da saída, gerando conversões por meio de ofertas atraentes.</p>
+
+      <h1><strong>10. Reforce benefícios como frete grátis ou troca facilitada</strong></h1>
+      <p>Enfatizar as vantagens da loja — frete grátis, primeira troca gratuita, parcelamento sem juros, entrega rápida — por meio de banners, pop-ups, e-mails e títulos de produtos endereça preocupações dos clientes sobre processos complexos, e não sobre a qualidade do produto em si.</p>
+
+      <h1><strong>11. Disponibilize vídeos explicativos ou demonstrativos</strong></h1>
+      <p>Os vídeos impulsionam o reengajamento de forma poderosa ao ajudar os consumidores a visualizar os produtos, entender o uso e reconhecer os diferenciais. O conteúdo demonstrativo reduz a hesitação, avança as decisões de compra, constrói confiança e aumenta o tempo de permanência no site.</p>
+
+      <h1><strong>12. Crie fluxos de e-mails com conteúdo de valor e novidades</strong></h1>
+      <p>Além de promoções, fluxos de e-mail eficazes combinam ofertas com conteúdo útil, novidades da loja, lançamentos de produtos e dicas de uso. Segmentados com base no comportamento anterior do usuário, essa abordagem fortalece o relacionamento com o cliente e mantém a presença da loja.</p>
+
+      <h1><strong>Widde: Video Commerce para reengajar e converter</strong></h1>
+      <p>A Widde permite integrar vídeos interativos em todas as páginas do e-commerce. Com comentários com resposta da loja, carrinhos integrados dentro dos vídeos, feeds estilo redes sociais e vídeos em destaque na homepage e páginas de categoria, você cria uma navegação envolvente e personalizada que retém a atenção, resolve dúvidas por meio do vídeo e aumenta as conversões com soluções integradas.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

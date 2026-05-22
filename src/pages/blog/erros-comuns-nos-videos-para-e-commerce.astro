@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Erros comuns nos vídeos para e-commerce" description="Conheça os erros mais comuns nos vídeos de e-commerce: mostrar pouco do produto, não capturar a atenção e não responder as dúvidas dos clientes." canonical="https://widde.io/blog/erros-comuns-nos-videos-para-e-commerce">
+  <BlogArticle client:load title="Erros comuns nos vídeos para e-commerce" category="Video Commerce" date="12.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/663be2502198d8dcc35223b5_Erros%20comuns%20nos%20v%C3%ADdeos%20para%20e-commerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Os vídeos são uma forte ferramenta de vendas, mas eles não vendem por si só. Erros comuns de gravação frequentemente passam despercebidos pelos criadores, mas são percebidos pelos clientes e podem comprometer a confiança e a conversão da loja.</p>
+
+      <h1><strong>Erro 1: Mostrar pouco do produto</strong></h1>
+      <p>Os vídeos não devem mostrar os produtos superficialmente com informações mínimas, pois isso não consegue reter a atenção do consumidor. A estratégia deve focar em abordar as dúvidas e objeções dos clientes para construir a confiança na compra.</p>
+      <p>Se os vídeos ultrapassarem 45 segundos a um minuto, divida-os em múltiplos segmentos mais curtos. Para o varejo de moda, demonstre cada detalhe do vestuário — tecido interno, caimento da manga, transparência, opções de cores — filmando de todos os ângulos. Inclua sugestões de estilo combinando produtos e exemplos de uso situacional.</p>
+
+      <h1><strong>Erro 2: Não capturar a atenção do cliente</strong></h1>
+      <p>O sucesso no e-commerce requer que o cliente passe mais tempo no site, aumentando a probabilidade de compra. O Video Commerce proporciona vantagem competitiva sobre as abordagens tradicionais de foto e texto.</p>
+      <p>Evite vídeos virais no estilo dança, enfatizando em vez disso que o que vai fazer seu cliente ficar tranquilo sobre uma compra é tirar todas as possíveis dúvidas. Os criadores devem converter as consultas dos clientes em conteúdo de vídeo. Use as perguntas frequentes do SAC como roteiro para criar vídeos que respondam as objeções mais comuns.</p>
+
+      <h1><strong>Erro 3: Ignorar os comentários e o feedback</strong></h1>
+      <p>Não monitorar os comentários nos vídeos significa perder insights valiosos sobre o que os clientes precisam saber antes de comprar. Os comentários revelam lacunas no conteúdo e oportunidades para criar novos vídeos que aumentem a conversão.</p>
+
+      <h1><strong>Erro 4: Vídeos sem estratégia de posicionamento</strong></h1>
+      <p>Publicar vídeos sem considerar onde eles aparecerão no e-commerce reduz seu impacto. Vídeos na homepage devem ser de boas-vindas e gerais; vídeos em páginas de categoria devem apresentar o portfólio de produtos; vídeos em páginas de produto devem ser focados em vendas e quebrar objeções específicas do item.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

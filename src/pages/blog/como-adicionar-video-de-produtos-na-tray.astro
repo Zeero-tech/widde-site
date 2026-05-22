@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como adicionar vídeo de produtos na TRAY?" description="Adicionar vídeos nas páginas de produtos, home e categorias da TRAY oferece um diferencial para aumentar conversões e engajamento. Veja o passo a passo com a Widde." canonical="https://widde.io/blog/como-adicionar-video-de-produtos-na-tray">
+  <BlogArticle client:load title="Como adicionar vídeo de produtos na TRAY?" category="Video Commerce" date="10.02.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67aa2e1820a39d2beb042d0e_como%20adicionar%20vi%CC%81deo%20de%20produtos%20na%20tray.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Ter vídeos nas páginas inicial, de produtos ou categoria de um e-commerce oferece um diferencial para melhorar as taxas de conversão e engajamento.</p>
+
+      <h1><strong>Passo a passo para adicionar vídeos na TRAY com a Widde</strong></h1>
+      <p>1. Acesse o painel da Widde;<br />2. Clique em "Adicionar vídeos" no menu ou na seção Páginas;<br />3. Faça upload do vídeo pelo computador ou dispositivo móvel;<br />4. Na etapa de Associações, insira o nome do produto no campo "Onde aparece";<br />5. Clique em "Conectar" quando o item aparecer.</p>
+      <p>Para vídeos na homepage, cole o link da página desejada no campo "Onde aparece".</p>
+
+      <h1><strong>Funcionalidades da plataforma Widde para a TRAY</strong></h1>
+      <p>• <strong>Otimização de performance:</strong> A plataforma exibe os vídeos somente após o carregamento completo do site, evitando queda de velocidade.<br />• <strong>Vídeos interativos:</strong> Os usuários podem adicionar produtos diretamente ao carrinho enquanto o cliente assiste ao vídeo, encurtando o tempo de decisão de compra.<br />• <strong>Feed de Vídeos:</strong> Um recurso de scroll infinito expõe os clientes a mais produtos, aumentando a duração no site e o ticket médio.<br />• <strong>Dashboard de análise:</strong> Rastreia visualizações, impacto na receita, interações e taxas de conversão.</p>
+
+      <h1><strong>Benefícios do vídeo de produto</strong></h1>
+      <p>• <strong>Aumento de conversão:</strong> Os vídeos ajudam os consumidores a entender melhor os produtos mostrando o uso real;<br />• <strong>Maior engajamento:</strong> O conteúdo captura atenção e aumenta a duração da navegação;<br />• <strong>Redução de devoluções:</strong> A visualização clara do produto leva a decisões de compra mais informadas;<br />• <strong>Diferenciação competitiva:</strong> As experiências de vídeo interativo distinguem as lojas dos concorrentes.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

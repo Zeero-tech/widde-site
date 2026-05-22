@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Técnicas de persuasão e gravação para vídeos que vendem" description="Aprenda as melhores técnicas de persuasão e gravação para criar vídeos que vendem no e-commerce: gatilhos emocionais, storytelling, CTA e qualidade de produção." canonical="https://widde.io/blog/tecnicas-de-persuasao-e-gravacao-para-videos-que-vendem">
+  <BlogArticle client:load title="Técnicas de persuasão e gravação para vídeos que vendem" category="Video Commerce" date="22.10.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66d5d71fdd59a9a3fdd4982c_T%C3%A9cnicas%20de%20persuas%C3%A3o%20e%20grava%C3%A7%C3%A3o%20para%20v%C3%ADdeos%20que%20vendem.avif" recentPosts={recentPosts}>
+    <div>
+      <p>As técnicas de persuasão para gravação de vídeos são necessárias para aumentar os resultados das estratégias de marketing e conversão. A persuasão envolve storytelling, gatilhos emocionais e chamadas para ação que guiam o público em direção às decisões de compra. A qualidade do vídeo — incluindo iluminação, áudio e edição profissional — reforça a credibilidade da marca e a atenção dos espectadores.</p>
+
+      <h1><strong>Use gatilhos emocionais</strong></h1>
+      <p>Os gatilhos emocionais evocam sentimentos e reações que influenciam as decisões de compra. A estratégia envolve conectar-se emocionalmente por meio de emoções como alegria, nostalgia, medo de perder (FOMO) ou desejo de pertencimento. Grande parte das pessoas compra com base em emoções e justifica suas decisões com lógica, tornando o engajamento emocional uma estratégia de vendas poderosa.</p>
+
+      <h1><strong>Inclua chamadas para ação claras</strong></h1>
+      <p>Uma chamada para ação (CTA) clara e direta guia os espectadores para o próximo passo. Frases como "Compre agora", "Saiba mais" ou "Assine hoje" devem aparecer em momentos estratégicos, especialmente perto do final do vídeo ou após apresentar os principais benefícios. O reforço visual por meio de botões clicáveis facilita a ação do espectador.</p>
+
+      <h1><strong>Utilize storytelling</strong></h1>
+      <p>O storytelling cria conexões mais profundas, tornando o conteúdo mais envolvente e memorável. Histórias baseadas em casos reais de clientes, processos de criação do produto ou origens da empresa ressoam quando autênticas. Essa abordagem transforma os vídeos em experiências em vez de simples argumentos de vendas.</p>
+
+      <h1><strong>Destaque os benefícios, não os recursos</strong></h1>
+      <p>As empresas frequentemente se concentram nas especificações técnicas, ignorando o que os consumidores realmente valorizam: os benefícios práticos. Em vez de listar megapixels, explique como uma câmera captura momentos especiais com detalhes impressionantes. Essa abordagem ajuda os espectadores a visualizar o valor prático e emocional do produto.</p>
+
+      <h1><strong>Mantenha os vídeos curtos e objetivos</strong></h1>
+      <p>Em uma era de tempos de atenção curtos, vídeos concisos têm melhor desempenho do que os longos. O conteúdo deve focar nas mensagens principais enquanto elimina informações não essenciais. Os vídeos devem ser suficientemente detalhados para cobrir os principais benefícios e incluir uma CTA sem comprimento desnecessário.</p>
+
+      <h1><strong>Use prova social</strong></h1>
+      <p>A prova social aproveita as experiências dos clientes para influenciar novos consumidores. Depoimentos e avaliações autênticas constroem credibilidade e confiança, mostrando aos clientes em potencial que outros tiveram experiências positivas. Isso demonstra que a marca atende com sucesso às necessidades dos consumidores.</p>
+
+      <h1><strong>Grave com boa iluminação e áudio claro</strong></h1>
+      <p>A qualidade profissional de gravação é muito importante. Boa iluminação faz os produtos parecerem claros e atraentes, enquanto o áudio claro sem ruídos garante a transmissão da mensagem. Mesmo iluminação natural e ambientes silenciosos funcionam sem equipamentos profissionais. Qualidade ruim cria uma impressão amadora e repele clientes em potencial.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

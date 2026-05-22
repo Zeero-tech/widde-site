@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "como-adicionar-video-de-produtos-no-woocommerce", title: "Como adicionar vídeo de produtos no WooCommerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6871206746bc57b16a1cb8fd_Como%20adicionar%20v%C3%ADdeos%20na%20woocommerce.png" },
+  { slug: "video-explicativo-de-produto-como-fazer-e-implementar", title: "Vídeo explicativo de produto: como fazer e implementar?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68d699f6dcb3f438b1cae87c_V%C3%ADdeo%20explicativo%20de%20produto_%20como%20fazer%20e%20implementar_.png" },
+  { slug: "solucao-de-video-para-e-commerce-video-commerce", title: "Solução de vídeo para e-commerce | Video Commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226b3bc37dbc7c14054d59_Solu%C3%A7%C3%A3o%20de%20v%C3%ADdeo%20para%20e-commerce%20(2).avif" },
+  { slug: "como-otimizar-videos-no-e-commerce-para-seo", title: "Como otimizar vídeos no e-commerce para SEO?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68595057fb551be3f2fd1ffa_Otimize%20v%C3%ADdeos%20no%20e-commerce%20para%20%20SEO.png" },
+  { slug: "videos-para-e-commerce-b2b", title: "Vídeos para e-commerce B2B: como usar e implementar?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/687e7aaae0fa3511417ae78b_V%C3%ADdeos%20para%20e-commerce%20B2B%20(1).png" },
+]
+---
+<BaseLayout title="Como adicionar vídeo de produtos no Magento?" description="Como adicionar vídeo de produtos no Magento? Um guia completo para integrar vídeos com a Widde, aumentar conversão e melhorar a experiência do cliente." canonical="https://widde.io/blog/como-adicionar-video-de-produtos-no-magento">
+  <BlogArticle client:load title="Como adicionar vídeo de produtos no Magento?" category="Video Commerce" date="30.06.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68628e467e5a7b11c65be81c_Como%20adicionar%20v%C3%ADdeo%20no%20Magento.png" recentPosts={recentPosts}>
+    <div>
+      <p>Afinal, como adicionar vídeo de produtos no Magento? O Magento é conhecido por sua capacidade de personalização. Ele é a escolha de milhares de e-commerces que trabalham com grandes catálogos, múltiplas integrações e alto volume de vendas.</p>
+      <p>Mas em meio a tantas possibilidades, uma integração que precisa ser explorada por lojistas é a inclusão estratégica de vídeos nas páginas de produto.</p>
+      <p>O comportamento do consumidor mudou. Hoje, o vídeo é o conteúdo mais persuasivo para quem está em dúvida entre comprar ou não. Ele explica, demonstra, conecta. E o melhor: converte mais e possibilita decisões de compra mais assertivas.</p>
+
+      <h1><strong>Passo a passo para adicionar vídeo de produto no Magento</strong></h1>
+      <p>A integração da Widde com o Magento permite adicionar vídeos às páginas de produtos de forma simples e sem prejudicar o desempenho do site.</p>
+      <p>O passo a passo é:</p>
+      <p>• Entre no painel da Widde;<br />• Clique no botão "Adicionar vídeos", que aparece no Menu ou dentro da seção Páginas;<br />• Faça upload do vídeo, pelo computador ou celular;<br />• Na segunda etapa, em "Associações", no campo "Onde aparece", digite o nome do produto que queira colocar na página;<br />• Clique em "Conectar" quando o item aparecer.</p>
+      <p>Para adicionar vídeos na Home, também é bem simples. Na etapa de "Associações" após fazer o upload de seus vídeos, no campo "Onde aparece", cole o link da página que deseja (Home, Categoria, ou qualquer outra página que não seja de produto) e clique em "Conectar".</p>
+
+      <h1><strong>Vídeo de produto no Magento: faz sentido?</strong></h1>
+      <p>Se você vende para um público que exige mais informações — seja B2C ou B2B —, sabe que nem sempre uma foto dá conta do recado. Um vídeo permite mostrar:</p>
+      <p>• O produto em uso;<br />• O tamanho real, com escala;<br />• Os detalhes de acabamento;<br />• O funcionamento, no caso de itens técnicos;<br />• Aplicações práticas no cotidiano ou ambiente profissional.</p>
+      <p>Isso significa menos dúvidas, menos perguntas para o atendimento e menos devoluções. E claro, mais conversões.</p>
+      <p>Com a tecnologia certa, é possível adicionar vídeos em qualquer página sem pesar o carregamento. A solução? Widde.</p>
+
+      <h1><strong>O que é a Widde e por que ela resolve o problema?</strong></h1>
+      <p>A Widde Video Commerce é uma plataforma especializada em integrar vídeos ao e-commerce. Nossa plataforma foi pensada para lojistas que querem usar vídeos como alavanca de vendas, mas sem complicar o processo nem comprometer a experiência do cliente.</p>
+      <p>No Magento, a Widde atua como uma ponte: você faz o upload do vídeo na plataforma da Widde, associa ao produto desejado e ele aparece diretamente na página — com carregamento rápido, visual atrativo e funcionalidades avançadas, como comentários no vídeo, botões clicáveis, carrinho integrado e Feed visual estilo redes sociais.</p>
+      <p>Tudo isso sem alterar o código da sua loja, sem precisar de desenvolvedor e sem instalar plugins pesados.</p>
+
+      <h1><strong>E quanto ao desempenho?</strong></h1>
+      <p>Essa é uma das maiores vantagens da Widde: os vídeos são otimizados para carregamento inteligente. Eles não travam, não pesam a página e são adaptados ao dispositivo do cliente. Ou seja: funcionam perfeitamente no desktop, no tablet e no mobile.</p>
+      <p>A tecnologia da Widde faz com que o vídeo apareça após o carregamento total da página do site, ou seja, não atrapalha em nada.</p>
+      <p>Deste modo, preserva a performance da página, mantém o SEO da loja saudável e melhora até o tempo de permanência, sendo excelente para o ranqueamento no Google.</p>
+
+      <h1><strong>A diferença real na experiência do cliente</strong></h1>
+      <p>Adicionar vídeos no Magento com a Widde é uma mudança na experiência da sua loja. Veja como isso impacta diretamente o comportamento do consumidor:</p>
+      <p>• <strong>Mais confiança:</strong> o cliente visualiza o produto em uso, entende os detalhes, vê como aplicar. Deste modo, elimina objeções e aumenta a segurança para comprar.<br />• <strong>Mais tempo de navegação:</strong> vídeos mantêm a atenção do usuário por mais tempo. Assim, eleva as chances de ele ver outros produtos.<br />• <strong>Menos devoluções:</strong> quando o cliente entende o que está comprando, ele erra menos — e devolve menos.<br />• <strong>Mais interação:</strong> com comentários e avaliações dentro do vídeo, a loja mostra que está presente e responde rapidamente.</p>
+
+      <h1><strong>Casos de sucesso no uso da Widde</strong></h1>
+      <p>Lojas como PA Concept, Shop Emme e Majesté já usam a Widde no dia a dia para transformar a jornada de compra com vídeos. Os resultados incluem:</p>
+      <p>• Aumento de até 4x na taxa de conversão<br />• Retenção até 5x maior nas páginas de produto<br />• Redução de trocas e reclamações por dúvida na escolha<br />• Maior conexão emocional com a marca</p>
+      <p>Se essas marcas estão colhendo os frutos do Video Commerce, sua loja no Magento também pode — com muito mais facilidade do que você imagina.</p>
+
+      <h1><strong>Pronto para adicionar vídeos no Magento?</strong></h1>
+      <p>Não existe momento melhor para começar. O consumidor já espera encontrar vídeos nas páginas. Se você entrega isso de forma interativa e com leveza, está à frente de grande parte do mercado.</p>
+      <p>A Widde é a forma mais prática e segura de integrar vídeos ao Magento sem complicações técnicas. Conosco, sua loja ganha em performance, experiência, engajamento e conversão.</p>
+      <p>Você não precisa de desenvolvedor, nem de hospedagens externas complicadas. Basta integrar, subir seus vídeos e associar aos produtos — e pronto!</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

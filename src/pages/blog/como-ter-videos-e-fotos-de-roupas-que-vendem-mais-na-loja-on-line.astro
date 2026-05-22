@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como ter vídeos e fotos de roupas que vendem mais na loja on-line" description="23 dicas para criar vídeos e fotos de roupas que vendem mais: iluminação, modelos reais, ângulos, prova d'água, CTA e muito mais para lojas de moda online." canonical="https://widde.io/blog/como-ter-videos-e-fotos-de-roupas-que-vendem-mais-na-loja-on-line">
+  <BlogArticle client:load title="Como ter vídeos e fotos de roupas que vendem mais na loja on-line" category="Video Commerce" date="12.05.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/669fc8baa76fbcde4c2b1e91_Como%20ter%20v%C3%ADdeos%20e%20fotos%20de%20roupas%20para%20vender%20mais%20na%20loja%20online.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Vídeos e fotos são elementos muito necessários para a conversão no e-commerce de roupas, eletrônicos e acessórios. Segundo dados da Widde, empresas que usam vídeos alcançam 4 vezes mais conversão de vendas, 63% dos consumidores procuram vídeos antes de fazer uma compra, e os vídeos aumentam o tempo de retenção no site em até 5 vezes.</p>
+
+      <h1><strong>1. Use iluminação natural</strong></h1>
+      <p>A luz suave da manhã ou do final da tarde proporciona iluminação uniforme e reduz sombras duras. Posicione os produtos próximos a janelas durante o dia para aproveitar a luz natural sem custos adicionais.</p>
+
+      <h1><strong>2. Use um tripé</strong></h1>
+      <p>Garante estabilidade e consistência, eliminando tremores e desfoque. Um tripé simples já faz grande diferença na qualidade percebida dos vídeos e fotos.</p>
+
+      <h1><strong>3. Use câmera de alta qualidade</strong></h1>
+      <p>Câmeras DSLR ou mirrorless com lentes macro ou prime capturam imagens detalhadas e vídeos em alta resolução. Smartphones modernos também produzem resultados excelentes.</p>
+
+      <h1><strong>4. Edite as imagens para clareza</strong></h1>
+      <p>Ferramentas de edição ajustam iluminação, contraste e saturação para remover sombras indesejadas e realçar as cores reais dos produtos.</p>
+
+      <h1><strong>5. Use fundos brancos</strong></h1>
+      <p>Cria uma aparência profissional e elimina distrações, colocando o foco totalmente no produto.</p>
+
+      <h1><strong>6. Inclua fotos 360°</strong></h1>
+      <p>Fotografia em plataforma giratória fornece vistas completas do produto e aumenta a transparência, reduzindo dúvidas sobre o item.</p>
+
+      <h1><strong>7. Use modelos reais</strong></h1>
+      <p>Demonstra o caimento, o drape e a versatilidade das peças enquanto cria uma conexão emocional com os clientes. Inclua modelos com diferentes tipos de corpo para que os clientes possam se identificar.</p>
+
+      <h1><strong>8. Capture fotos macro</strong></h1>
+      <p>Close-ups detalhados de costuras, textura, botões e estampas mostram a qualidade do produto e eliminam dúvidas sobre o acabamento.</p>
+
+      <h1><strong>9. Adicione música aos vídeos</strong></h1>
+      <p>Melhora a experiência de visualização e torna o conteúdo mais envolvente, mantendo o espectador assistindo por mais tempo.</p>
+
+      <h1><strong>10. Inclua narração</strong></h1>
+      <p>Fornece informações detalhadas sobre materiais, caimento e características do design que o espectador não conseguiria perceber apenas visualmente.</p>
+
+      <h1><strong>11. Mostre o produto em diferentes contextos</strong></h1>
+      <p>Exiba as roupas em ambientes de escritório, social e casual para inspirar ideias de combinações e demonstrar versatilidade.</p>
+
+      <h1><strong>12. Crie vídeos de comparação de produtos</strong></h1>
+      <p>Destaque as diferenças entre peças, abordando preocupações dos clientes sobre material, caimento, estilo e preço.</p>
+
+      <h1><strong>13. Inclua chamada para ação</strong></h1>
+      <p>Guie os clientes em direção à compra ou engajamento com frases como "Compre agora" em momentos estratégicos do vídeo.</p>
+
+      <h1><strong>14. Crie vídeos de prova social de clientes</strong></h1>
+      <p>Depoimentos autênticos de clientes satisfeitos constroem credibilidade e ajudam novos compradores a tomar decisões com mais confiança.</p>
+
+      <h1><strong>15. Realize testes A/B</strong></h1>
+      <p>Teste diferentes ângulos, estilos de iluminação e formatos para otimizar a estratégia de marketing com base em dados reais de performance.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

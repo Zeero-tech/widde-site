@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Como colocar vídeo na Nuvemshop? Página de produto, home e categorias" description="Vídeos na Nuvemshop aumentam a visibilidade da loja e impulsionam as vendas. Veja como adicionar em páginas de produto, home e categorias com a Widde." canonical="https://widde.io/blog/como-colocar-video-na-nuvemsho">
+  <BlogArticle client:load title="Como colocar vídeo na Nuvemshop? Página de produto, home e categorias" category="Video Commerce" date="25.02.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67bdd8dc0e0e7364b212f296_como%20adicionar%20vi%CC%81deo%20de%20produtos%20na%20nuvemshop.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Os vídeos na Nuvemshop representam uma abordagem estratégica para aumentar a visibilidade da loja e impulsionar as vendas. Esse formato permite que os consumidores vejam os produtos em ação, entendam sua funcionalidade e estabeleçam conexões mais fortes com a marca. Os vídeos impactam diretamente as taxas de conversão ao eliminar as dúvidas dos clientes e construir confiança.</p>
+
+      <h1><strong>Passo a passo para adicionar vídeos na Nuvemshop</strong></h1>
+      <p>A integração da Widde com a Nuvemshop possibilita uma integração de vídeo simples e sem comprometer a performance do site:</p>
+      <p>1. Acesse o painel da Widde;<br />2. Clique em "Adicionar vídeos" no Menu ou na seção Páginas;<br />3. Faça upload do vídeo pelo computador ou dispositivo móvel;<br />4. Na etapa de "Associações", insira o nome do produto no campo "Onde aparece";<br />5. Clique em "Conectar" quando o item aparecer.</p>
+      <p>Para vídeos na homepage: cole o link da página desejada no campo "Onde aparece" e clique em "Conectar".</p>
+
+      <h1><strong>Benefícios de usar vídeos na Nuvemshop</strong></h1>
+      <p>• <strong>Aumenta a conversão:</strong> Os vídeos engajam os consumidores, facilitando as decisões de compra;<br />• <strong>Reduz a incerteza:</strong> As demonstrações de produto eliminam dúvidas e minimizam devoluções;<br />• <strong>Enriquece a experiência:</strong> Cria uma navegação dinâmica.</p>
+
+      <h1><strong>Benefícios do Video Commerce com a Widde</strong></h1>
+      <p>• <strong>Aumento da taxa de conversão:</strong> O Video Commerce aumenta a conversão em até 4 vezes;<br />• <strong>Maior retenção no site:</strong> O tempo de retenção pode crescer até 5 vezes com as funcionalidades interativas da Widde;<br />• <strong>Humanização da marca:</strong> Demonstrações e depoimentos de clientes criam conexões emocionais;<br />• <strong>Redução de devoluções:</strong> A exibição detalhada do produto alinha as expectativas dos clientes;<br />• <strong>Análise e insights:</strong> A Widde fornece dados de engajamento para refinar as estratégias.</p>
+
+      <h1><strong>Tendências do Video Commerce para 2025</strong></h1>
+      <p>• Vídeos interativos com botões clicáveis para compra sem sair do vídeo;<br />• Feeds de vídeos imersivos estilo Instagram/TikTok diretamente nas plataformas de e-commerce;<br />• Acessibilidade com legendas para alcançar públicos diversos.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>

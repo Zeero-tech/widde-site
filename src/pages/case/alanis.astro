@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CaseArticle from '../../components/pages/CaseArticle'
+import type { CaseArticleData } from '../../components/pages/CaseArticle'
+
+const data: CaseArticleData = {
+  heroImage: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f47b93d9c5f901231e51b_Capa%20-%20Case%20Alanis.avif",
+  tag: "Case de Sucesso",
+  title: "Impacto do Video Commerce na categoria Plus Size",
+  representanteNome: "Larissa Cavalcante",
+  representanteCargo: "Gestora de E-commerce",
+  cliente: "Alanis Brand",
+  youtubeUrl: "https://youtu.be/QPJb4mBQr-k",
+
+  conhecaLogo: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f479b70d52b90c08a0a9e_alanis%20logo.avif",
+  conhecaTitle: "Conheça a Alanis Brand",
+  conhecaBody: `<p>Alanis Brand é uma marca autoral de moda feminina que começou sua trajetória no atacado há cerca de quatro anos. Há um ano, expandiu sua presença para o varejo por meio do e-commerce. A Larissa é especialista em varejo e atual Gestora do E-commerce da Alanis. Ela assumiu esse desafio justamente no momento em que a marca deu seus primeiros passos no universo on-line.</p>`,
+  conhecaNumbers: [
+    { value: "1 ano", label: "No mercado de varejo" },
+    { value: "4 anos", label: "No mercado de atacado" },
+  ],
+
+  depoimento1Img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f47743d9c5f901231b31d_larissa-cavalcante.avif",
+  depoimento1Quote: "Minha taxa de troca e devolução diminuiu muito. Tive que entrar na plataforma para ver se estava tudo certo, porque anteriormente a escolha dos tamanhos era uma dificuldade no site. A nossa modelagem realmente é grande e depois que adicionamos a Widde no nosso e-commerce, principalmente a Tabela de Medidas das modelos nos vídeos, a taxa de troca diminuiu muito.",
+  depoimento1Nome: "Larissa Cavalcante",
+  depoimento1Cargo: "Gestora de E-commerce da Alanis Brand",
+
+  desafioGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f488aa2519c5307e90f5e_ALANIS%20-%20Conforto%20e%20elega%CC%82ncia.avif",
+  desafioBody: `<p>Durante reuniões de mídia, ao analisar os conteúdos que estavam em circulação, a equipe identificou uma necessidade das clientes e também uma oportunidade estratégica: explorar a categoria de moda plus size, que são os tamanhos acima do 44. Foi nesse momento que conheceram a Widde. Ao verem cases reais, os resultados alcançados por outras marcas e o potencial de impacto, decidiram contratar a Widde para impulsionar essa nova frente com mais relevância e conversão.</p>`,
+
+  numeros: [
+    { value: "11%", label: "Receita impactada logo no 2º mês de uso" },
+    { value: "25,9%", label: "Aumento do ticket médio" },
+    { value: "8min 12s", label: "Tempo de retenção com os vídeos" },
+  ],
+
+  resultadosGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f488d00b8c1e2d36f77ac_Bermuda%20Alfaiataria%20Marselha%20Marinho%20%20Alanis%20Brand.avif",
+
+  resultadosBody: `<p>Os números conquistados já no segundo mês de uso da Widde na Alanis Brand impressionam:</p><p><strong>- O tempo de retenção na página, que antes era de 3 minutos e 8 segundos, passou para 8 minutos e 12 segundos</strong> com a inserção dos vídeos.</p><p><strong>- O ticket médio aumentou 25,9%,</strong> mostrando que os conteúdos impactam diretamente no comportamento de compra.</p><p><strong>- A marca começou a usar a plataforma em janeiro e, já em fevereiro, 11% da receita foi gerada</strong> a partir de interações com os vídeos.</p><p>Além dos dados, Larissa também percebeu mudanças no comportamento das consumidoras: os vídeos influenciaram não apenas nas vendas, mas também na hora de organizar a produção das peças. Antes, a grade mais vendida era equilibrada entre P, M e G. Hoje, os tamanhos que mais saem são G, GG e XG. Isso fez com que a equipe tivesse que sinalizar com mais frequência a necessidade de reposição. Em alguns casos, a reposição é diária.</p>`,
+
+  depoimento2Quote: "A nossa modelo hoje veste 34/36 e uma cliente que veste acima do 44, precisava passar todas as fotos até encontrar um vídeo que se identificasse. Quando inserimos a Widde no nosso site ficou muito mais fácil, inclusive a gente recebeu comentários e directs de clientes que se identificaram e gostaram muito. A gente adicionou a Tabela de Medidas do vídeo e a cliente conseguia ver as medidas da modelo e isso fez total diferença.",
+  depoimento2Nome: "Larissa Cavalcante",
+  depoimento2Cargo: "Gestora de E-commerce da Alanis Brand",
+  depoimento2ImgVertical: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f47743d9c5f901231b31d_larissa-cavalcante.avif",
+  depoimento2YoutubeUrl: "https://youtu.be/QPJb4mBQr-k",
+
+  greyStickyBody: `<h2><strong>Conteúdos para o e-commerce</strong></h2><p>Os conteúdos publicados no Instagram são frequentemente reaproveitados no site, mas a Alanis também investe em vídeos exclusivos para o e-commerce, com informações e detalhes que não teriam o mesmo impacto nas redes sociais. Uma das estratégias que mais se destaca é a presença da fundadora da marca, Thais Cazallas, nos vídeos. Por estar à frente da Alanis desde o início, Thais consegue compartilhar percepções únicas e destacar detalhes especiais das peças, criando uma conexão mais próxima com as clientes. Além de gerar engajamento, esses conteúdos ajudam a transmitir confiança e reforçar o posicionamento da marca no ambiente digital.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f46f2f1f6c89370f41082_Alanis-Fundadora.gif" loading="lazy" /></div></figure><h2><strong>Uma das primeiras a usar o novo formato: Carrossel de Vídeos</strong></h2><p>Larissa contou que amou o Carrossel, tanto pelo aspecto visual, que lembra a experiência do Instagram, quanto pelo impacto direto nas vendas, comprovado por meio das análises realizadas. Uma das estratégias que adota é a troca semanal dos vídeos, trazendo dinamismo ao site e mantendo o conteúdo sempre atualizado. Além disso, utiliza o espaço para inserir vídeos que não se encaixariam nas páginas de produto, como influenciadoras interagindo com a marca, o que contribui para o reforço da identidade da Alanis.</p><p>Ela também destaca a importância de vincular os produtos mostrados nos vídeos diretamente às páginas dos itens, facilitando a jornada de compra. O Carrossel torna a navegação mais imersiva, pela forma como está integrado ao layout, oferecendo uma experiência fluida e envolvente para quem acessa o site.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f4731c0600269e1908a79_CarrosselAlanis1.gif" loading="lazy" /></div></figure>`,
+  greyStickyYoutubeUrl: "https://youtu.be/QPJb4mBQr-k",
+
+  outrosCases: [
+    { href: "/case/mamo", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2d0b1016c8df8923096d_capa%20youtube%201.png", title: "Construindo narrativas com Video Commerce" },
+    { href: "/case/john-john", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png", title: "Agregando valor ao produto com o Video Commerce" },
+    { href: "/case/maximum-boxing", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png", title: "Mais vendas, menos demanda para o SAC" },
+    { href: "/case/majeste", img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif", title: "Desafios da Moda Festa no E-commerce" },
+  ],
+}
+---
+
+<BaseLayout
+  title="Alanis Brand: Impacto do Video Commerce na categoria Plus Size | Widde"
+  description="Veja como a Alanis Brand usou o Video Commerce da Widde para impactar 11% da receita no 2º mês, aumentar 25,9% o ticket médio e reduzir trocas e devoluções."
+  canonical="https://widde.io/case/alanis"
+>
+  <CaseArticle client:load data={data} />
+</BaseLayout>

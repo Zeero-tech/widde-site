@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogArticle from '../../components/pages/BlogArticle'
+import type { RecentPost } from '../../components/pages/BlogArticle'
+
+const recentPosts: RecentPost[] = [
+  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
+  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
+  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
+  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
+  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
+]
+---
+<BaseLayout title="Dicas para gravar seus vídeos sozinho para o e-commerce" description="Aprenda a gravar vídeos para o e-commerce sozinho com dicas de planejamento, iluminação, equipamento, edição e legendas para criar conteúdo de qualidade." canonical="https://widde.io/blog/dicas-para-gravar-seus-videos-sozinho-para-o-e-commerce">
+  <BlogArticle client:load title="Dicas para gravar seus vídeos sozinho para o e-commerce" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/663bb5ea97cb93cf47bc9bae_Dicas%20para%20gravar%20seus%20v%C3%ADdeos%20sozinho%20para%20o%20e-commerce.avif" recentPosts={recentPosts}>
+    <div>
+      <p>Criar conteúdo em vídeo de qualidade de forma independente é desafiador para muitos proprietários de e-commerce. Seja produzindo para plataformas sociais ou por meio da solução da Widde, manter-se atualizado com a criação autônoma de conteúdo ajuda a abordar as preocupações dos clientes e construir confiança. As gravações pessoais humanizam as operações do varejo e fortalecem os relacionamentos com os clientes.</p>
+
+      <h1><strong>Como organizar a produção de vídeo</strong></h1>
+      <p>Uma gravação bem-sucedida requer planejamento antecipado. Em vez de filmar aleatoriamente, esboce sua abordagem cuidadosamente:</p>
+      <p><strong>Passo 1 — Defina o foco do conteúdo:</strong> Determine os temas dos vídeos — novas coleções, itens mais vendidos ou instruções de montagem de produto. Prepare os materiais e antecipe as perguntas dos clientes antes de otimizar seu cronograma de produção.</p>
+      <p><strong>Passo 2 — Mostre a versatilidade do produto:</strong> Além dos detalhes básicos do produto, demonstre como os clientes podem usar os itens de forma criativa. Para varejistas de moda, crie variações de looks para que os compradores possam imaginar como usar peças específicas com seu guarda-roupa atual. Faça referências cruzadas de produtos complementares para potencialmente aumentar o ticket médio.</p>
+      <p><strong>Passo 3 — Teste tudo antes:</strong> Teste tudo ao seu redor: iluminação, cenário, som antes de gravar a sério. Verifique se todos os elementos técnicos funcionam corretamente para evitar desperdiçar tempo de produção.</p>
+      <p><strong>Passo 4 — Agende as sessões de gravação:</strong> Crie um cronograma de gravação dedicado no seu calendário, tratando-o como uma reunião de negócios em vez de uma tarefa opcional.</p>
+
+      <h1><strong>Gravando vídeos sozinho</strong></h1>
+      <p>• <strong>Acessibilidade do equipamento:</strong> Use seu smartphone — câmeras profissionais não são necessárias. Posicione-se perto de janelas para luz solar natural. Para gravações noturnas, utilize equipamentos de iluminação suave como ring lights ou lâmpadas domésticas. Microfones lavalier básicos reduzem o ruído indesejado. Mantenha um fundo limpo e organizado;</p>
+      <p>• <strong>Edição:</strong> Aplicativos móveis como CapCut e InShot oferecem recursos de edição acessíveis para usuários não familiarizados com produção avançada de vídeo;</p>
+      <p>• <strong>Legendas:</strong> Muita gente assiste aos vídeos sem nenhum som, portanto adicionar legendas aumenta as taxas de retenção dos espectadores. As legendas também melhoram a acessibilidade e garantem que a mensagem chegue a todos;</p>
+      <p>• <strong>Estabilização:</strong> Evite imagens tremidas usando tripés ou suportes improvisados (livros, por exemplo) para posicionar o telefone com segurança.</p>
+    </div>
+  </BlogArticle>
+</BaseLayout>
