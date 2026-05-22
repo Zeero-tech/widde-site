@@ -215,6 +215,9 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
 
   useEffect(() => {
     ScrollTrigger.defaults({ markers: false });
+    const alreadyAnimated = sessionStorage.getItem("logo-animated");
+    if (alreadyAnimated) return;
+    sessionStorage.setItem("logo-animated", "1");
     gsap.set(".logo-path", { y: 50 });
     gsap.to(".logo-path", {
       y: 0,
