@@ -177,6 +177,7 @@ export default function Plans() {
 
       {/* Live Commerce & Provador IA banner */}
       <div
+        className="justify-center md:justify-between"
         style={{
           background: "#E3ECFF",
           border: "1.5px solid #79A2FF",
@@ -184,14 +185,13 @@ export default function Plans() {
           padding: "36px 40px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
           gap: "32px",
           marginTop: "24px",
           flexWrap: "wrap",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-          <div style={{ display: "flex", gap: "10px", flexShrink: 0 }}>
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-6">
+          <div className="flex gap-[10px] flex-shrink-0 self-center md:self-auto">
             <div
               style={{
                 borderRadius: "12px",
@@ -319,42 +319,22 @@ export default function Plans() {
             >
               Live Commerce · Provador IA
             </div>
-            <div
-              style={{
-                fontSize: "19px",
-                fontWeight: 900,
-                color: "#000",
-                marginBottom: "6px",
-              }}
-            >
+            <div className="text-[18px] font-black text-black mb-[6px]">
               Quer saber como contratar nossas outras soluções?
             </div>
-            <div
-              style={{
-                fontSize: "13px",
-                color: "#6B7280",
-                lineHeight: 1.6,
-                maxWidth: "480px",
-              }}
-            >
+            <div className="text-[16px] text-[#6B7280] leading-[1.6]">
               Live Commerce e Provador IA estão disponíveis para clientes da
               Widde.
             </div>
-            <div
-              style={{
-                fontSize: "13px",
-                color: "#6B7280",
-                lineHeight: 1.6,
-                maxWidth: "480px",
-              }}
-            >
+            <div className="text-[16px] text-[#6B7280] leading-[1.6]">
               Converse com nosso time Comercial.
             </div>
           </div>
         </div>
-        <div style={{ flexShrink: 0 }}>
+        <div className="w-full md:w-auto flex-shrink-0">
           <AnimatedButton
             href="/contato-vendas"
+            className="w-full md:w-auto text-center"
             style={{
               fontFamily: "'Lato', sans-serif",
               fontSize: "18px",
