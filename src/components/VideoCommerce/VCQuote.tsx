@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedButton from "@/components/AnimatedButton";
+import AnimatedButton from "@/components/core/AnimatedButton";
 
 export default function VCQuote() {
   return (

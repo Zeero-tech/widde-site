@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-import AnimatedButton from "./AnimatedButton";
+import { gsap, ScrollTrigger } from '@/lib/gsap'
+import AnimatedButton from "@/components/core/AnimatedButton";
 import { getLenis } from "@/lib/lenis";
 import {
   Dialog,
@@ -11,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "./ui/dialog";
+} from "@/components/ui/dialog";
 
 function MapImage() {
   return (

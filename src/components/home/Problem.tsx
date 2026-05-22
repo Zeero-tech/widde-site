@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import AnimatedButton from "./AnimatedButton";
-import CountUp from "./CountUp";
+import AnimatedButton from "@/components/core/AnimatedButton";
+import CountUp from "@/components/core/CountUp";
 
 export default function Problem() {
   const [inView, setInView] = useState(false);

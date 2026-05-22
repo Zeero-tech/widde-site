@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionTitle from "@/components/SectionTitle";
+import SectionTitle from "@/components/core/SectionTitle";
 import { vcFormatVideos } from "@/data/vcFormats";
 
 const formats = [

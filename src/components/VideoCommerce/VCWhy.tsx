@@ -1,5 +1,5 @@
-import CountUp from "@/components/CountUp";
-import SectionTitle from "@/components/SectionTitle";
+import CountUp from "@/components/core/CountUp";
+import SectionTitle from "@/components/core/SectionTitle";
 
 const stats = [
   {

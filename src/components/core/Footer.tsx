@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "@/components/core/Logo";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
 

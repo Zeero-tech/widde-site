@@ -1,6 +1,6 @@
 import React from "react";
-import AnimatedButton from "@/components/AnimatedButton";
-import SectionTitle from "@/components/SectionTitle";
+import AnimatedButton from "@/components/core/AnimatedButton";
+import SectionTitle from "@/components/core/SectionTitle";
 import { getLenis } from "@/lib/lenis";
 import { easeOutQuint } from "@/lib/easing";
 

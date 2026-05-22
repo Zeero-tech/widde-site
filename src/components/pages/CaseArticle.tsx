@@ -1,7 +1,8 @@
-import { lazy, Suspense, useState } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry"
+import { Suspense, useState } from "react";
 import { useLenis } from "@/lib/useLenis";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
-import Nav from "@/components/Nav";
+import Nav from "@/components/core/Nav";
 
 export interface CaseArticleData {
   // Hero
@@ -51,21 +52,9 @@ export interface CaseArticleData {
   outrosCases: { href: string; img: string; title: string }[];
 }
 
-function lazyWithRetry(factory: () => Promise<any>) {
-  return lazy(() =>
-    factory().catch(() => {
-      if (!sessionStorage.getItem("chunk-reloaded")) {
-        sessionStorage.setItem("chunk-reloaded", "1");
-        window.location.reload();
-      }
-      return { default: () => null };
-    }),
-  );
-}
-
 const VCCta = lazyWithRetry(() => import("@/components/VideoCommerce/VCCta"));
-const Newsletter = lazyWithRetry(() => import("@/components/Newsletter"));
-const Footer = lazyWithRetry(() => import("@/components/Footer"));
+const Newsletter = lazyWithRetry(() => import("@/components/core/Newsletter"));
+const Footer = lazyWithRetry(() => import("@/components/core/Footer"));
 
 interface Props {
   data: CaseArticleData;

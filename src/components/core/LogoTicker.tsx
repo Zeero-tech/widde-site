@@ -1,18 +1,15 @@
 import * as HoverCard from "@radix-ui/react-hover-card";
 import { useState, useRef, useEffect } from "react";
 import { tickerLogos } from "@/data/logos";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-  return mobile;
-}
+const doubled = [
+  ...tickerLogos,
+  ...tickerLogos,
+  ...tickerLogos,
+  ...tickerLogos,
+  ...tickerLogos,
+];
 
 export default function LogoTicker() {
   const [paused, setPaused] = useState(true); // start paused until visible
@@ -40,14 +37,6 @@ export default function LogoTicker() {
     openCards.current = Math.max(0, openCards.current - 1);
     if (openCards.current === 0) setPaused(false);
   }
-
-  const doubled = [
-    ...tickerLogos,
-    ...tickerLogos,
-    ...tickerLogos,
-    ...tickerLogos,
-    ...tickerLogos,
-  ];
 
   return (
     <section

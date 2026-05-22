@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import AnimatedButton from "./AnimatedButton";
-import { getLenis } from "../lib/lenis";
-import { easeOutQuint } from "../lib/easing";
+import { gsap } from "@/lib/gsap";
+import AnimatedButton from "@/components/core/AnimatedButton";
+import { getLenis } from "@/lib/lenis";
+import { easeOutQuint } from "@/lib/easing";
 
 export default function Hero() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -33,23 +33,13 @@ export default function Hero() {
   }
 
   return (
-    <section
-      className="bg-surface overflow-hidden relative"
-      style={{ minHeight: "calc(100vh - 120px)" }}
-    >
-      <div
-        className="mx-auto px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl h-full flex items-center"
-        style={{ minHeight: "inherit" }}
-      >
-        <div
-          className="relative flex flex-col md:flex-row items-stretch w-full"
-          style={{ minHeight: "inherit" }}
-        >
+    <section className="bg-surface overflow-hidden relative min-h-[calc(100vh-120px)]">
+      <div className="mx-auto px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl h-full flex items-center min-h-[inherit]">
+        <div className="relative flex flex-col md:flex-row items-stretch w-full min-h-[inherit]">
           {/* Content */}
           <div
             ref={contentRef}
-            className="flex-1 w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col py-10 md:py-16 lg:py-20"
-            style={{ justifyContent: "center" }}
+            className="flex-1 w-full md:flex-[0_0_60%] lg:flex-[0_0_55%] z-[2] flex flex-col justify-center py-10 md:py-16 lg:py-20"
           >
             <span className="block text-xs sm:text-sm md:text-sm font-bold text-brand uppercase tracking-[2px] mb-4 sm:mb-5 md:mb-5">
               A experiência do físico para o online
@@ -107,7 +97,9 @@ export default function Hero() {
                 muted
                 loop
                 playsInline
-                preload="auto"
+                preload="metadata"
+                width="1280"
+                height="720"
               >
                 <source src="/root/Video-inicio-site.mp4" type="video/mp4" />
               </video>

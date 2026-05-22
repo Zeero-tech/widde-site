@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import HighlightText from "./ui/highlight-text";
+import { gsap } from "@/lib/gsap";
+import HighlightText from "@/components/ui/highlight-text";
 
 export default function Newsletter() {
   const circleRef = useRef<HTMLImageElement>(null);

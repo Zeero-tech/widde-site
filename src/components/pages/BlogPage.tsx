@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Nav from "./Nav";
-import VCCta from "./VideoCommerce/VCCta";
-import Newsletter from "./Newsletter";
-import Footer from "./Footer";
+import Nav from "@/components/core/Nav";
+import VCCta from "@/components/VideoCommerce/VCCta";
+import Newsletter from "@/components/core/Newsletter";
+import Footer from "@/components/core/Footer";
 import { useLenis } from "@/lib/useLenis";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 

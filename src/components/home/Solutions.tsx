@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import CountUp from "./CountUp";
-import SolutionArticle from "./SolutionArticle";
-import SectionTitle from "./SectionTitle";
+import CountUp from "@/components/core/CountUp";
+import SolutionArticle from "@/components/pages/SolutionArticle";
+import SectionTitle from "@/components/core/SectionTitle";
 import { useInViewVideo } from "@/hooks/useInViewVideo";
 
 export default function Solutions() {

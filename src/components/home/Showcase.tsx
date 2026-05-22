@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, Component, type ReactNode } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { showcaseVideos } from "@/data/showcase";
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: boolean }> {
@@ -8,8 +7,6 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: boolean 
   static getDerivedStateFromError() { return { error: true }; }
   render() { return this.state.error ? null : this.props.children; }
 }
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Cap simultaneous playing <video> elements — iOS Safari limits concurrent
 // decoders to ~16 per page; Android/Chrome tolerate more but still throttle.

@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from './ui/dialog'
+} from '@/components/ui/dialog'
 
 interface BannerProps {
   id: string

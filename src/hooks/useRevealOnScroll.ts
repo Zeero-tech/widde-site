@@ -1,10 +1,7 @@
 import { useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap, ScrollTrigger } from '@/lib/gsap'
 
-gsap.registerPlugin(ScrollTrigger)
-
-function revealEl(el: HTMLElement) {
+function revealEl(el: HTMLElement, triggers: ScrollTrigger[]) {
   gsap.fromTo(
     el,
     { scale: 0.98, opacity: 0, filter: 'blur(3px)' },
@@ -18,6 +15,7 @@ function revealEl(el: HTMLElement) {
         trigger: el,
         start: 'top 96%',
         once: true,
+        onToggle: (self) => triggers.push(self),
       },
     }
   )
@@ -25,16 +23,20 @@ function revealEl(el: HTMLElement) {
 
 export function useRevealOnScroll(selector = '[data-reveal]') {
   useEffect(() => {
-    // Observe elements already in the DOM
-    document.querySelectorAll<HTMLElement>(selector).forEach(revealEl)
+    const triggers: ScrollTrigger[] = []
 
-    // Watch for lazy-loaded components adding new [data-reveal] elements
+    document.querySelectorAll<HTMLElement>(selector).forEach((el) =>
+      revealEl(el, triggers)
+    )
+
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (!(node instanceof HTMLElement)) return
-          if (node.matches(selector)) revealEl(node)
-          node.querySelectorAll<HTMLElement>(selector).forEach(revealEl)
+          if (node.matches(selector)) revealEl(node, triggers)
+          node.querySelectorAll<HTMLElement>(selector).forEach((el) =>
+            revealEl(el, triggers)
+          )
         })
       })
     })
@@ -43,7 +45,7 @@ export function useRevealOnScroll(selector = '[data-reveal]') {
 
     return () => {
       observer.disconnect()
-      ScrollTrigger.getAll().forEach((t) => t.kill())
+      triggers.forEach((t) => t.kill())
     }
   }, [selector])
 }

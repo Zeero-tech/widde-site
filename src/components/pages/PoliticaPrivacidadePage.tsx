@@ -1,20 +1,9 @@
-import { lazy, Suspense } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry"
+import { Suspense } from "react";
 import { useLenis } from "@/lib/useLenis";
-import Nav from "@/components/Nav";
+import Nav from "@/components/core/Nav";
 
-function lazyWithRetry(factory: () => Promise<any>) {
-  return lazy(() =>
-    factory().catch(() => {
-      if (!sessionStorage.getItem("chunk-reloaded")) {
-        sessionStorage.setItem("chunk-reloaded", "1");
-        window.location.reload();
-      }
-      return { default: () => null };
-    }),
-  );
-}
-
-const Footer = lazyWithRetry(() => import("@/components/Footer"));
+const Footer = lazyWithRetry(() => import("@/components/core/Footer"));
 
 export default function PoliticaPrivacidadePage() {
   useLenis();

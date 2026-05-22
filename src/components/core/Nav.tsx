@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LetterButton from "./LetterButton";
-import { getLenis } from "../lib/lenis";
-import { easeOutQuint } from "../lib/easing";
-import Logo from "./Logo";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import LetterButton from "@/components/core/LetterButton";
+import { getLenis } from "@/lib/lenis";
+import { easeOutQuint } from "@/lib/easing";
+import Logo from "@/components/core/Logo";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,10 +12,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "./ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-
-gsap.registerPlugin(ScrollTrigger);
 
 type Solution = {
   label: string;
@@ -167,43 +164,44 @@ function TryOnIcon() {
   );
 }
 
+const solutions: Solution[] = [
+  {
+    label: "Video Commerce",
+    elementId: "#video-commerce",
+    href: "/video-commerce",
+    tag: null,
+    desc: "Carrossel, Destaques, Stories e Explorar. Vídeos interativos em todas as páginas do seu e-commerce.",
+    video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+    icon: <VideoCommerceIcon />,
+  },
+  {
+    label: "Live Commerce",
+    elementId: "#live-commerce",
+    tag: "Novo",
+    desc: "Transmissão ao vivo dentro do site, onde o cliente engaja, tira dúvidas e compra o produto com confiança.",
+    video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+    icon: <LiveCommerceIcon />,
+  },
+  {
+    label: "Provador IA",
+    elementId: "#provador-ia",
+    tag: "Novo",
+    desc: "Provador para Vestuário e Calçados, para seu cliente ver o produto no corpo sem sair de casa.",
+    video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
+    icon: <TryOnIcon />,
+  },
+];
+
 export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(isDarkProp ?? false);
 
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : "/";
-  const isDark =
-    isDarkProp ?? pathname.replace(/\/$/, "") === "/video-commerce";
-
-  const solutions: Solution[] = [
-    {
-      label: "Video Commerce",
-      elementId: "#video-commerce",
-      href: "/video-commerce",
-      tag: null,
-      desc: "Carrossel, Destaques, Stories e Explorar. Vídeos interativos em todas as páginas do seu e-commerce.",
-      video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
-      icon: <VideoCommerceIcon />,
-    },
-    {
-      label: "Live Commerce",
-      elementId: "#live-commerce",
-      tag: "Novo",
-      desc: "Transmissão ao vivo dentro do site, onde o cliente engaja, tira dúvidas e compra o produto com confiança.",
-      video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
-      icon: <LiveCommerceIcon />,
-    },
-    {
-      label: "Provador IA",
-      elementId: "#provador-ia",
-      tag: "Novo",
-      desc: "Provador para Vestuário e Calçados, para seu cliente ver o produto no corpo sem sair de casa.",
-      video: "https://bambuser.com/webflow/Desktop-Hero-Video-dimmed_x2.mp4",
-      icon: <TryOnIcon />,
-    },
-  ];
+  useEffect(() => {
+    if (isDarkProp !== undefined) return;
+    setIsDark(window.location.pathname.replace(/\/$/, "") === "/video-commerce");
+  }, [isDarkProp]);
 
   useEffect(() => {
     function onScroll() {

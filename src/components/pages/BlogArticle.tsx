@@ -1,9 +1,9 @@
 import { Suspense, useState, useRef } from "react";
-import Nav from "./Nav";
-import VCCta from "./VideoCommerce/VCCta";
-import Newsletter from "./Newsletter";
-import Footer from "./Footer";
-import { allBlogPosts } from "../data/blogPosts";
+import Nav from "@/components/core/Nav";
+import VCCta from "@/components/VideoCommerce/VCCta";
+import Newsletter from "@/components/core/Newsletter";
+import Footer from "@/components/core/Footer";
+import { allBlogPosts } from "@/data/blogPosts";
 
 export type RecentPost = {
   slug: string;

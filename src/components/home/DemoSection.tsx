@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import MuxPlayer from "@mux/mux-player-react";
-import AnimatedButton from "./AnimatedButton";
+import AnimatedButton from "@/components/core/AnimatedButton";
 
 export default function DemoSection() {
   const containerRef = useRef<HTMLDivElement>(null);

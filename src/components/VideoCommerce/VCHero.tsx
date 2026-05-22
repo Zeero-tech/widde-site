@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import AnimatedButton from "@/components/AnimatedButton";
+import { gsap } from "@/lib/gsap";
+import AnimatedButton from "@/components/core/AnimatedButton";
 
 export default function VCHero() {
   const contentRef = useRef<HTMLDivElement>(null);

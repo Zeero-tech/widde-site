@@ -1,5 +1,5 @@
-import AnimatedButton from "./AnimatedButton";
-import SectionTitle from "./SectionTitle";
+import AnimatedButton from "@/components/core/AnimatedButton";
+import SectionTitle from "@/components/core/SectionTitle";
 
 export default function Plans() {
   return (

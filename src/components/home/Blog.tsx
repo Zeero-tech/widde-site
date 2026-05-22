@@ -1,5 +1,5 @@
 import { blogPosts } from "@/data/blog";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "@/components/core/SectionTitle";
 import { useRef, useEffect } from "react";
 
 export default function Blog() {

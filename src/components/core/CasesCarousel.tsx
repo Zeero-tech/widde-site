@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { cases } from "@/data/cases";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "@/components/core/SectionTitle";
 
 export default function CasesCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
