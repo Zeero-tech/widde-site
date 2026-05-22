@@ -23,6 +23,8 @@ export default function CasesCarousel() {
     const el = scrollRef.current;
     if (!section || !el) return;
 
+    if (window.innerWidth >= 768) return;
+
     section.style.opacity = "0";
 
     function triggerPeek() {

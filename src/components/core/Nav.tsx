@@ -200,7 +200,9 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
 
   useEffect(() => {
     if (isDarkProp !== undefined) return;
-    setIsDark(window.location.pathname.replace(/\/$/, "") === "/video-commerce");
+    setIsDark(
+      window.location.pathname.replace(/\/$/, "") === "/video-commerce",
+    );
   }, [isDarkProp]);
 
   useEffect(() => {
@@ -281,11 +283,8 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
           <a
             href="/"
             aria-current="page"
-            className="no-underline"
-            style={{
-              color: isDark ? "white" : "black",
-              alignSelf: "center",
-            }}
+            className="no-underline self-center"
+            style={{ color: isDark ? "white" : "black" }}
             onClick={(e) => {
               e.preventDefault();
               if (window.location.pathname === "/") {
@@ -295,7 +294,12 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
               }
             }}
           >
-            <Logo />
+            <span
+              className="block overflow-hidden"
+              style={{ paddingBottom: 7 }}
+            >
+              <Logo />
+            </span>
           </a>
 
           {/* Mobile hamburger */}

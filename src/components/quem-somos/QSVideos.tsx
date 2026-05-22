@@ -57,6 +57,8 @@ export default function QSVideos() {
     const el = gridRef.current;
     if (!el) return;
 
+    if (window.innerWidth >= 768) return;
+
     el.style.opacity = "0";
 
     function triggerPeek() {
