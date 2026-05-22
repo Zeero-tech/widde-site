@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 import CountUp from "./CountUp";
 import SolutionArticle from "./SolutionArticle";
 import SectionTitle from "./SectionTitle";
@@ -16,33 +15,39 @@ export default function Solutions() {
     const el = carouselRef.current;
     if (!section || !el) return;
 
-    gsap.set(section, { y: 40, opacity: 0, filter: "blur(10px)" });
+    section.style.opacity = "0";
 
-    const proxy = { val: 0 };
+    function triggerPeek() {
+      el!.classList.add("carousel-peek");
+      el!.addEventListener(
+        "animationend",
+        () => {
+          el!.classList.remove("carousel-peek");
+        },
+        { once: true },
+      );
+    }
+
+    function triggerSequence() {
+      section!.style.opacity = "";
+      void section!.offsetWidth; // force reflow
+      section!.classList.add("carousel-reveal");
+      section!.addEventListener(
+        "animationend",
+        (e) => {
+          if ((e as AnimationEvent).animationName !== "revealFadeSlide") return;
+          section!.classList.remove("carousel-reveal");
+          section!.style.opacity = "1";
+          setTimeout(triggerPeek, 500);
+        },
+        { once: true },
+      );
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          gsap.timeline()
-            .to(section, {
-              y: 0,
-              opacity: 1,
-              filter: "blur(0px)",
-              duration: 0.75,
-              ease: "power3.out",
-            })
-            .to(proxy, {
-              val: 80,
-              duration: 0.5,
-              ease: "power2.out",
-              delay: 2,
-              onUpdate: () => { el.scrollLeft = proxy.val; },
-            })
-            .to(proxy, {
-              val: 0,
-              duration: 0.55,
-              ease: "power2.inOut",
-              onUpdate: () => { el.scrollLeft = proxy.val; },
-            });
+          setTimeout(triggerSequence, 300);
           observer.disconnect();
         }
       },
@@ -69,7 +74,10 @@ export default function Solutions() {
       />
 
       {/* Mobile: carrossel horizontal */}
-      <div ref={carouselRef} className="flex md:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
+      <div
+        ref={carouselRef}
+        className="flex md:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+      >
         {/* VIDEO COMMERCE */}
         <SolutionArticle direction="left" id="video-commerce" mobileCarousel>
           <div

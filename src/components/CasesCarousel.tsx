@@ -4,6 +4,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function CasesCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -17,8 +18,55 @@ export default function CasesCarousel() {
     return () => el.removeEventListener("wheel", handleWheel);
   }, []);
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    const el = scrollRef.current;
+    if (!section || !el) return;
+
+    section.style.opacity = "0";
+
+    function triggerPeek() {
+      el!.classList.add("carousel-peek");
+      el!.addEventListener(
+        "animationend",
+        () => {
+          el!.classList.remove("carousel-peek");
+        },
+        { once: true },
+      );
+    }
+
+    function triggerSequence() {
+      section!.style.opacity = "";
+      void section!.offsetWidth;
+      section!.classList.add("carousel-reveal");
+      section!.addEventListener(
+        "animationend",
+        (e) => {
+          if ((e as AnimationEvent).animationName !== "revealFadeSlide") return;
+          section!.classList.remove("carousel-reveal");
+          section!.style.opacity = "1";
+          setTimeout(triggerPeek, 500);
+        },
+        { once: true },
+      );
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(triggerSequence, 300);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="max-w-screen-xl mx-auto -mr-5 md:mr-0">
+    <section ref={sectionRef} className="max-w-screen-xl mx-auto -mr-5 md:mr-0">
       <SectionTitle
         label="Cases"
         title="Histórias de sucesso a Widde"
