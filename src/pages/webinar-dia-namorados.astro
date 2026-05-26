@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import WebinarDiaNamoradosPage from "../components/pages/WebinarDiaNamoradosPage";
+---
+
+<BaseLayout
+  title="Webinar Dia dos Namorados: O cupido tem dúvida (e seu cliente também)"
+  description="Aprenda a usar o Video Commerce, Live Commerce e Provador IA para vender mais no Dia dos Namorados, dentro da janela certa. Webinar ao vivo, sem gravação."
+  canonical="https://widde.io/webinar-dia-namorados"
+  ogTitle="Webinar Dia dos Namorados: O cupido tem dúvida (e seu cliente também)"
+  ogDescription="Aprenda a usar o Video Commerce, Live Commerce e Provador IA para vender mais no Dia dos Namorados, dentro da janela certa. Webinar ao vivo, sem gravação."
+>
+  <WebinarDiaNamoradosPage client:load />
+</BaseLayout>
+
+<style is:global>
+  body {
+    background-color: rgb(115, 11, 0);
+  }
+  [data-form-reveal] {
+    opacity: 0;
+  }
+</style>

@@ -4,7 +4,7 @@ export default function MasterclassConfirmacaoContent() {
   return (
     <div
       id="subscription-webinar"
-      className="flex flex-col md:flex-row justify-center items-center w-full gap-16 px-8 md:px-16 py-15 md:py-0"
+      className="flex flex-col min-[880px]:flex-row justify-center items-center w-full gap-16 px-8 md:px-16 py-15 md:py-0"
       style={{
         minHeight: "calc(100svh - var(--nav-height, 64px))",
         backgroundColor: "rgb(115, 11, 0)",
