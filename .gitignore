@@ -79,3 +79,5 @@ dist/
 
 # Original unoptimized videos (backup)
 public/video-originals/
+
+*.mhtml
