@@ -1,134 +1,134 @@
 - generic [ref=e3]:
-  - banner [ref=e4]:
-    - navigation [ref=e6]:
-      - link [ref=e7] [cursor=pointer]:
-        - /url: /
-        - img [ref=e9]
-      - navigation "Main" [ref=e16]:
-        - list [ref=e18]:
-          - listitem [ref=e19]:
-            - button "Soluções" [ref=e20]:
-              - text: Soluções
-              - img [ref=e21]
-          - listitem [ref=e23]:
-            - link "Como funciona" [ref=e24] [cursor=pointer]:
-              - /url: "#demo2"
-          - listitem [ref=e25]:
-            - link "Cases" [ref=e26] [cursor=pointer]:
-              - /url: /cases
-          - listitem [ref=e27]:
-            - link "Planos" [ref=e28] [cursor=pointer]:
-              - /url: "#planos"
-          - listitem [ref=e29]:
-            - link "Blog" [ref=e30] [cursor=pointer]:
-              - /url: /blog
-      - link "C o m e ç a r a g o r a" [ref=e32] [cursor=pointer]:
-        - /url: /quero-comecar
-        - generic [ref=e34]:
-          - generic [ref=e35]: C
-          - generic [ref=e36]: C
-        - generic [ref=e38]:
-          - generic [ref=e39]: o
-          - generic [ref=e40]: o
-        - generic [ref=e42]:
-          - generic [ref=e43]: m
-          - generic [ref=e44]: m
-        - generic [ref=e46]:
-          - generic [ref=e47]: e
-          - generic [ref=e48]: e
-        - generic [ref=e50]:
-          - generic [ref=e51]: ç
-          - generic [ref=e52]: ç
-        - generic [ref=e54]:
-          - generic [ref=e55]: a
-          - generic [ref=e56]: a
-        - generic [ref=e58]:
-          - generic [ref=e59]: r
-          - generic [ref=e60]: r
-        - generic [ref=e66]:
-          - generic [ref=e67]: a
-          - generic [ref=e68]: a
-        - generic [ref=e70]:
-          - generic [ref=e71]: g
-          - generic [ref=e72]: g
-        - generic [ref=e74]:
-          - generic [ref=e75]: o
-          - generic [ref=e76]: o
-        - generic [ref=e78]:
-          - generic [ref=e79]: r
-          - generic [ref=e80]: r
-        - generic [ref=e82]:
-          - generic [ref=e83]: a
-          - generic [ref=e84]: a
-  - generic [ref=e85]:
-    - generic [ref=e86]:
-      - heading "Dia dos Namorados:" [level=1] [ref=e87]
-      - emphasis [ref=e89]: O cupido tem dúvida (e seu cliente também)
-      - paragraph [ref=e93]:
-        - strong [ref=e94]: 28 de maio (quinta-feira), às 11:00
-    - generic:
-      - main
-  - contentinfo [ref=e95]:
-    - generic [ref=e96]:
-      - link [ref=e97] [cursor=pointer]:
-        - /url: /
-        - img [ref=e98]
-      - generic [ref=e104]:
-        - generic [ref=e105]:
-          - heading "Produto" [level=4] [ref=e106]
-          - list [ref=e107]:
-            - listitem [ref=e108]:
-              - link "Video Commerce" [ref=e109] [cursor=pointer]:
-                - /url: /video-commerce
-            - listitem [ref=e110]:
-              - link "Live Commerce" [ref=e111] [cursor=pointer]:
-                - /url: "#live-commerce"
-            - listitem [ref=e112]:
-              - link "Provador IA" [ref=e113] [cursor=pointer]:
-                - /url: "#provador-ia"
-            - listitem [ref=e114]:
-              - link "Planos" [ref=e115] [cursor=pointer]:
-                - /url: "#planos"
-        - generic [ref=e116]:
-          - heading "Empresa" [level=4] [ref=e117]
-          - list [ref=e118]:
-            - listitem [ref=e119]:
-              - link "Sobre nós" [ref=e120] [cursor=pointer]:
-                - /url: /quem-somos
-            - listitem [ref=e121]:
-              - link "Carreiras" [ref=e122] [cursor=pointer]:
-                - /url: https://carreirawidde.lovable.app/
-        - generic [ref=e123]:
-          - heading "Recursos" [level=4] [ref=e124]
-          - list [ref=e125]:
-            - listitem [ref=e126]:
-              - link "Blog" [ref=e127] [cursor=pointer]:
-                - /url: /blog
-            - listitem [ref=e128]:
-              - link "Cases" [ref=e129] [cursor=pointer]:
-                - /url: /cases
-            - listitem [ref=e130]:
-              - link "Central de Ajuda" [ref=e131] [cursor=pointer]:
-                - /url: https://intercom.help/widde/pt-BR/
-        - generic [ref=e132]:
-          - heading "Social" [level=4] [ref=e133]
-          - list [ref=e134]:
-            - listitem [ref=e135]:
-              - link "YouTube" [ref=e136] [cursor=pointer]:
-                - /url: https://www.youtube.com/channel/UCjCWd1RNzStYUU5IKJ4DRdA
-            - listitem [ref=e137]:
-              - link "Instagram" [ref=e138] [cursor=pointer]:
-                - /url: https://www.instagram.com/widde.io/
-            - listitem [ref=e139]:
-              - link "LinkedIn" [ref=e140] [cursor=pointer]:
-                - /url: https://www.linkedin.com/company/widde/
-            - listitem [ref=e141]:
-              - link "TikTok" [ref=e142] [cursor=pointer]:
-                - /url: https://www.tiktok.com/@widde.io
-        - generic [ref=e143]:
-          - heading "Legal" [level=4] [ref=e144]
-          - list [ref=e145]:
-            - listitem [ref=e146]:
-              - link "Privacidade" [ref=e147] [cursor=pointer]:
-                - /url: /politica-de-privacidade
-      - paragraph [ref=e149]: ©2026 Widde. Todos os direitos reservados.
+    - banner [ref=e4]:
+        - navigation [ref=e6]:
+            - link [ref=e7] [cursor=pointer]:
+                - /url: /
+                - img [ref=e9]
+            - navigation "Main" [ref=e16]:
+                - list [ref=e18]:
+                    - listitem [ref=e19]:
+                        - button "Soluções" [ref=e20]:
+                            - text: Soluções
+                            - img [ref=e21]
+                    - listitem [ref=e23]:
+                        - link "Como funciona" [ref=e24] [cursor=pointer]:
+                            - /url: "#demo2"
+                    - listitem [ref=e25]:
+                        - link "Cases" [ref=e26] [cursor=pointer]:
+                            - /url: /cases
+                    - listitem [ref=e27]:
+                        - link "Planos" [ref=e28] [cursor=pointer]:
+                            - /url: "#planos"
+                    - listitem [ref=e29]:
+                        - link "Blog" [ref=e30] [cursor=pointer]:
+                            - /url: /blog
+            - link "C o m e ç a r a g o r a" [ref=e32] [cursor=pointer]:
+                - /url: /quero-comecar
+                - generic [ref=e34]:
+                    - generic [ref=e35]: C
+                    - generic [ref=e36]: C
+                - generic [ref=e38]:
+                    - generic [ref=e39]: o
+                    - generic [ref=e40]: o
+                - generic [ref=e42]:
+                    - generic [ref=e43]: m
+                    - generic [ref=e44]: m
+                - generic [ref=e46]:
+                    - generic [ref=e47]: e
+                    - generic [ref=e48]: e
+                - generic [ref=e50]:
+                    - generic [ref=e51]: ç
+                    - generic [ref=e52]: ç
+                - generic [ref=e54]:
+                    - generic [ref=e55]: a
+                    - generic [ref=e56]: a
+                - generic [ref=e58]:
+                    - generic [ref=e59]: r
+                    - generic [ref=e60]: r
+                - generic [ref=e66]:
+                    - generic [ref=e67]: a
+                    - generic [ref=e68]: a
+                - generic [ref=e70]:
+                    - generic [ref=e71]: g
+                    - generic [ref=e72]: g
+                - generic [ref=e74]:
+                    - generic [ref=e75]: o
+                    - generic [ref=e76]: o
+                - generic [ref=e78]:
+                    - generic [ref=e79]: r
+                    - generic [ref=e80]: r
+                - generic [ref=e82]:
+                    - generic [ref=e83]: a
+                    - generic [ref=e84]: a
+    - generic [ref=e85]:
+        - generic [ref=e86]:
+            - heading "Dia dos Namorados:" [level=1] [ref=e87]
+            - emphasis [ref=e89]: O cupido tem dúvida (e seu cliente também)
+            - paragraph [ref=e93]:
+                - strong [ref=e94]: 28 de maio (quinta-feira), às 11:00
+        - generic:
+            - main
+    - contentinfo [ref=e95]:
+        - generic [ref=e96]:
+            - link [ref=e97] [cursor=pointer]:
+                - /url: /
+                - img [ref=e98]
+            - generic [ref=e104]:
+                - generic [ref=e105]:
+                    - heading "Produto" [level=4] [ref=e106]
+                    - list [ref=e107]:
+                        - listitem [ref=e108]:
+                            - link "Video Commerce" [ref=e109] [cursor=pointer]:
+                                - /url: /video-commerce
+                        - listitem [ref=e110]:
+                            - link "Live Commerce" [ref=e111] [cursor=pointer]:
+                                - /url: "#live-commerce"
+                        - listitem [ref=e112]:
+                            - link "Provador IA" [ref=e113] [cursor=pointer]:
+                                - /url: "#provador-ia"
+                        - listitem [ref=e114]:
+                            - link "Planos" [ref=e115] [cursor=pointer]:
+                                - /url: "#planos"
+                - generic [ref=e116]:
+                    - heading "Empresa" [level=4] [ref=e117]
+                    - list [ref=e118]:
+                        - listitem [ref=e119]:
+                            - link "Sobre nós" [ref=e120] [cursor=pointer]:
+                                - /url: /quem-somos
+                        - listitem [ref=e121]:
+                            - link "Carreiras" [ref=e122] [cursor=pointer]:
+                                - /url: https://carreirawidde.lovable.app/
+                - generic [ref=e123]:
+                    - heading "Recursos" [level=4] [ref=e124]
+                    - list [ref=e125]:
+                        - listitem [ref=e126]:
+                            - link "Blog" [ref=e127] [cursor=pointer]:
+                                - /url: /blog
+                        - listitem [ref=e128]:
+                            - link "Cases" [ref=e129] [cursor=pointer]:
+                                - /url: /cases
+                        - listitem [ref=e130]:
+                            - link "Central de Ajuda" [ref=e131] [cursor=pointer]:
+                                - /url: https://intercom.help/widde/pt-BR/
+                - generic [ref=e132]:
+                    - heading "Social" [level=4] [ref=e133]
+                    - list [ref=e134]:
+                        - listitem [ref=e135]:
+                            - link "YouTube" [ref=e136] [cursor=pointer]:
+                                - /url: https://www.youtube.com/channel/UCjCWd1RNzStYUU5IKJ4DRdA
+                        - listitem [ref=e137]:
+                            - link "Instagram" [ref=e138] [cursor=pointer]:
+                                - /url: https://www.instagram.com/widde.io/
+                        - listitem [ref=e139]:
+                            - link "LinkedIn" [ref=e140] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/company/widde/
+                        - listitem [ref=e141]:
+                            - link "TikTok" [ref=e142] [cursor=pointer]:
+                                - /url: https://www.tiktok.com/@widde.io
+                - generic [ref=e143]:
+                    - heading "Legal" [level=4] [ref=e144]
+                    - list [ref=e145]:
+                        - listitem [ref=e146]:
+                            - link "Política de Privacidade" [ref=e147] [cursor=pointer]:
+                                - /url: /politica-de-privacidade
+            - paragraph [ref=e149]: ©2026 Widde. Todos os direitos reservados.

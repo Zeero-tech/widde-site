@@ -7,7 +7,11 @@ const footerColumns = [
     title: "Produto",
     links: [
       { label: "Video Commerce", href: "/video-commerce" },
-      { label: "Live Commerce", href: "#live-commerce", scrollTo: "live-commerce" },
+      {
+        label: "Live Commerce",
+        href: "#live-commerce",
+        scrollTo: "live-commerce",
+      },
       { label: "Provador IA", href: "#provador-ia", scrollTo: "provador-ia" },
       { label: "Planos", href: "#planos", scrollTo: "planos" },
     ],
@@ -30,7 +34,10 @@ const footerColumns = [
   {
     title: "Social",
     links: [
-      { label: "YouTube", href: "https://www.youtube.com/channel/UCjCWd1RNzStYUU5IKJ4DRdA" },
+      {
+        label: "YouTube",
+        href: "https://www.youtube.com/channel/UCjCWd1RNzStYUU5IKJ4DRdA",
+      },
       { label: "Instagram", href: "https://www.instagram.com/widde.io/" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/widde/" },
       { label: "TikTok", href: "https://www.tiktok.com/@widde.io" },
@@ -39,13 +46,16 @@ const footerColumns = [
   {
     title: "Legal",
     links: [
-      { label: "Privacidade", href: "/politica-de-privacidade" }
+      { label: "Política de Privacidade", href: "/politica-de-privacidade" },
     ],
   },
 ];
 
 export default function Footer() {
-  function handleClick(e: React.MouseEvent<HTMLAnchorElement>, link: { href: string; scrollTo?: string }) {
+  function handleClick(
+    e: React.MouseEvent<HTMLAnchorElement>,
+    link: { href: string; scrollTo?: string },
+  ) {
     if (!link.scrollTo) return;
     e.preventDefault();
 
@@ -64,10 +74,7 @@ export default function Footer() {
     <footer className="bg-ink text-white" role="contentinfo">
       <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto pt-16 pb-8">
         {/* Logo */}
-        <a
-          href="/"
-          className="no-underline inline-flex mb-10 text-white"
-        >
+        <a href="/" className="no-underline inline-flex mb-10 text-white">
           <Logo />
         </a>
 
@@ -75,17 +82,21 @@ export default function Footer() {
         <div className="grid grid-cols-3 md:grid-cols-5 gap-6 md:gap-6 lg:gap-8 pt-4 pb-10 md:py-10">
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-bold text-white mb-4">
-                {col.title}
-              </h4>
+              <h4 className="text-sm font-bold text-white mb-4">{col.title}</h4>
               <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
                       className="text-sm text-white/50 no-underline hover:text-white transition-colors"
-                      target={link.href.startsWith("http") ? "_blank" : undefined}
-                      rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      target={
+                        link.href.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel={
+                        link.href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       onClick={(e) => handleClick(e, link)}
                     >
                       {link.label}
