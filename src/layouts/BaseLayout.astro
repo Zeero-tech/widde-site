@@ -87,5 +87,142 @@ const {
 <body>
   <slot />
   <script defer src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+  <script is:inline>
+    (function () {
+      // ===== CONFIGURAÇÃO =====
+      const YOUTUBE_VIDEO_ID = 'GaM07iLj4_Q';
+      const GOOGLE_MEET_URL = 'https://meet.google.com/pap-qfjc-kry';
+      const TITLE = 'Dia dos Namorados — O cupido tem dúvida<br>(e seu cliente também)';
+      const BUTTON_COLOR = '#2767f8';
+      const STORAGE_KEY = 'live_modal_dismissed';
+      // Janela de exibição: hoje (28/05/2026) das 11:00 às 12:00
+      const SHOW_FROM = new Date('2026-05-28T11:00:00');
+      const SHOW_UNTIL = new Date('2026-05-28T12:00:00');
+      // =========================
+
+      const now = new Date();
+      if (now < SHOW_FROM || now >= SHOW_UNTIL) return;
+
+      if (localStorage.getItem(STORAGE_KEY) === 'true') return;
+
+      if (document.getElementById('live-modal-container')) return;
+
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'stylesheet';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap';
+      document.head.appendChild(fontLink);
+
+      const style = document.createElement('style');
+      style.textContent = `
+        #live-modal-container {
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          width: 420px;
+          max-width: calc(100vw - 40px);
+          background: #1a1a1a;
+          border-radius: 12px;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+          z-index: 999999;
+          font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          overflow: hidden;
+          animation: live-modal-slide-in 0.3s ease-out;
+        }
+        @media (max-width: 480px) {
+          #live-modal-container {
+            width: 100vw;
+            max-width: 100vw;
+            bottom: 0;
+            left: 0;
+            border-radius: 12px 12px 0 0;
+          }
+        }
+        @keyframes live-modal-slide-in {
+          from { transform: translateY(20px); opacity: 0; }
+          to   { transform: translateY(0);    opacity: 1; }
+        }
+        #live-modal-close {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background: rgba(0,0,0,0.6);
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          transition: background 0.2s;
+        }
+        #live-modal-close:hover { background: rgba(0,0,0,0.9); }
+        #live-modal-title {
+          padding: 12px 40px;
+          background: #1a1a1a;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 1.35;
+          text-align: center;
+        }
+        #live-modal-video {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          background: #000;
+        }
+        #live-modal-video iframe {
+          width: 100%;
+          height: 100%;
+          border: 0;
+          display: block;
+        }
+        #live-modal-meet-btn {
+          display: block;
+          width: 100%;
+          padding: 12px 16px;
+          background: #2767f8;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: filter 0.2s;
+        }
+        #live-modal-meet-btn:hover { filter: brightness(0.9); }
+      `;
+      document.head.appendChild(style);
+
+      const container = document.createElement('div');
+      container.id = 'live-modal-container';
+      container.innerHTML = `
+        <button id="live-modal-close" aria-label="Fechar">✕</button>
+        <div id="live-modal-title">${TITLE}</div>
+        <div id="live-modal-video">
+          <iframe
+            src="https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <a id="live-modal-meet-btn" href="${GOOGLE_MEET_URL}" target="_blank" rel="noopener">
+          Acompanhar no Google Meet
+        </a>
+      `;
+      document.body.appendChild(container);
+
+      document.getElementById('live-modal-close').addEventListener('click', function () {
+        localStorage.setItem(STORAGE_KEY, 'true');
+        container.remove();
+      });
+    })();
+  </script>
 </body>
 </html>
