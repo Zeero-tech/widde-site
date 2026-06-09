@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "optimize:videos": "bash scripts/optimize-videos.sh"
+    "optimize:videos": "bash scripts/optimize-videos.sh",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",
@@ -32,6 +33,7 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
-    "playwright": "^1.60.0"
+    "playwright": "^1.60.0",
+    "sharp": "^0.34.5"
   }
 }
