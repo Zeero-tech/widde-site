@@ -9,7 +9,7 @@ export default function QSHero() {
             className="flex flex-col md:flex-row gap-10 md:gap-20 justify-start items-start md:items-center mt-[60px]"
           >
             <img
-              src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/681ca182c50c42c2115d5905_3f73365573698d2d21a17349832dc53c_fundadores-widde.avif"
+              src="/assets/components/quem-somos/681ca182c50c42c2115d5905_3f73365573698d2d21a17349832dc53c_fundadores-widde.avif"
               loading="eager"
               alt=""
               className="aspect-square object-cover rounded-2xl flex-none w-full md:w-[40vw] overflow-hidden"

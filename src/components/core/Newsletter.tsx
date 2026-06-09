@@ -150,7 +150,7 @@ export default function Newsletter() {
         {/* Widde circle — rotating, bottom-right */}
         <img
           ref={circleRef}
-          src="https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/680a51736c23104ce2446416_widde%20circle%20white.avif"
+          src="/assets/components/core/680a51736c23104ce2446416_widde-circle-white.avif"
           alt=""
           aria-hidden="true"
           className="widde-cicle is--large absolute z-[3] object-contain pointer-events-none"

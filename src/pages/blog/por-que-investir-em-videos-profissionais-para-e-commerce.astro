@@ -1,57 +1,77 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "video-explicativo-de-produto-como-fazer-e-implementar", title: "Vídeo explicativo de produto: como fazer e implementar?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68d699f6dcb3f438b1cae87c_V%C3%ADdeo%20explicativo%20de%20produto_%20como%20fazer%20e%20implementar_.png" },
-  { slug: "insights-para-criar-um-video-para-loja-on-line", title: "Insights para criar um vídeo para loja on-line", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68bad74ae4345ad77e5e8e31_Blog_%20Insights%20para%20criar%20um%20v%C3%ADdeo%20para%20loja%20on-line%20(1).png" },
-  { slug: "video-para-e-commerce-de-moda-como-fazer-2", title: "Vídeo para e-commerce de moda: como fazer?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68a488f476190fd295973d7d_Blog_%20V%C3%ADdeo%20para%20e-commerce%20de%20moda_%20como%20fazer_%20(3).png" },
-  { slug: "solucao-de-video-para-e-commerce-video-commerce", title: "Solução de vídeo para e-commerce | Video Commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226b3bc37dbc7c14054d59_Solu%C3%A7%C3%A3o%20de%20v%C3%ADdeo%20para%20e-commerce%20(2).avif" },
-  { slug: "como-converter-visitantes-em-clientes-no-e-commerce", title: "Como converter visitantes em clientes no e-commerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6835f16eb833c7821f92e564_Converta%20visitantes%20em%20clientes%20no%20e-commerce.avif" },
-]
 ---
-<BaseLayout title="Por que investir em vídeos profissionais para e-commerce?" description="Investir em vídeos profissionais para e-commerce é uma necessidade estratégica. Entenda como vídeos de qualidade impactam conversão, retenção e experiência do cliente." canonical="https://widde.io/blog/por-que-investir-em-videos-profissionais-para-e-commerce">
-  <BlogArticle client:load title="Por que investir em vídeos profissionais para e-commerce?" category="Video Commerce" date="27.08.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68af0c75cff4353f2393c176_Blog_%20Por%20que%20investir%20em%20v%C3%ADdeos%20profissionais_.png" recentPosts={recentPosts}>
+<BaseLayout
+  title="Por que investir em vídeos profissionais para e-commerce?"
+  description="Afinal, por que investir em fotos e vídeos profissionais para e-commerce? Com o crescimento acelerado das vendas online, a experiência do cliente se tornou um dos principais fatores de decisão de compra."
+  canonical="https://widde.io/blog/por-que-investir-em-videos-profissionais-para-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/por-que-investir-em-videos-profissionais-para-e-commerce/68af0c75cff4353f2393c176_Blog_-Por-que-investir-em-v-deos-profissionais_.png"
+  datePublished="2025-08-27"
+>
+  <BlogArticle
+    client:load
+    title="Por que investir em vídeos profissionais para e-commerce?"
+    category="Video Commerce"
+    date="27.08.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/por-que-investir-em-videos-profissionais-para-e-commerce/68af0c75cff4353f2393c176_Blog_-Por-que-investir-em-v-deos-profissionais_.png"
+    currentSlug="por-que-investir-em-videos-profissionais-para-e-commerce"
+  >
     <div>
       <p>Afinal, por que investir em fotos e vídeos profissionais para e-commerce? Com o crescimento acelerado das vendas online, a experiência do cliente se tornou um dos principais fatores de decisão de compra no e-commerce.</p>
       <p>Em um cenário onde o consumidor não pode tocar, experimentar ou testar o produto fisicamente, vídeos são os maiores responsáveis por transmitir confiança, credibilidade e desejo.</p>
       <p>Investir em vídeos profissionais vai muito além de uma escolha estética ou um "diferencial opcional". É uma necessidade estratégica.</p>
       <p>Afinal, são esses recursos visuais que substituem a experiência tátil e sensorial do ambiente físico. Um e-commerce bem-apresentado, com vídeos de qualidade, gera mais confiança, reduz devoluções e impulsiona conversões.</p>
-
-      <h1><strong>Vídeos: o novo ponto de contato com o consumidor</strong></h1>
+      <h2><strong>Vídeos: o novo ponto de contato com o consumidor</strong></h2>
       <p>Apesar do seu papel na exposição de produtos, as fotos já não são mais suficientes para mostrar a usabilidade e o diferencial do produto. O vídeo, no entanto, tem o poder de exibir detalhes e tirar receios que impossibilitem o cliente a finalizar a compra. Ele é o único formato que consegue mostrar ao mesmo tempo: o item, sua aplicação, diferenciais e proposta de valor.</p>
-      <p>Com vídeos profissionais, sua loja pode:<br />• Demonstrar o uso real do produto<br />• Mostrar variações de tamanho, cor e textura<br />• Destacar funcionalidades técnicas<br />• Apresentar o produto de forma comparativa (modelo A x modelo B)<br />• Criar uma conexão emocional com a marca</p>
+      <p>Com vídeos profissionais, sua loja pode:</p>
+      <ul>
+        <li>Demonstrar o uso real do produto</li>
+        <li>Mostrar variações de tamanho, cor e textura</li>
+        <li>Destacar funcionalidades técnicas</li>
+        <li>Apresentar o produto de forma comparativa (modelo A x modelo B)</li>
+        <li>Criar uma conexão emocional com a marca</li>
+      </ul>
       <p>Esse processo é interessante para produtos com mais complexidade, como eletrônicos, equipamentos, móveis, cosméticos, vestuário ou itens técnicos.</p>
       <p>Além disso, vídeos prolongam o tempo de permanência no site, melhoram o SEO e facilitam a tomada de decisão.</p>
-
-      <h1><strong>Aumento da conversão de vendas</strong></h1>
+      <h2><strong>Aumento da conversão de vendas</strong></h2>
       <p>O impacto direto mais perceptível ao investir em vídeos de qualidade é o aumento na taxa de conversão. Um produto bem-apresentado vende mais — simples assim.</p>
       <p>Afinal, o conteúdo visual qualificado diminui a insegurança, elimina dúvidas comuns e reduz a necessidade de o cliente procurar outras fontes externas (como avaliações no YouTube ou em marketplaces concorrentes).</p>
       <p>Estudos apontam que 63% dos consumidores buscam vídeos antes da compra, o que mostra que apenas as fotos e as descrições não sanam todas as dúvidas e passam confiança para comprar.</p>
-
-      <h1><strong>Redução de devoluções e reclamações</strong></h1>
+      <h2><strong>Redução de devoluções e reclamações</strong></h2>
       <p>Muitas devoluções no e-commerce acontecem por expectativas frustradas: o cliente imaginava que o produto era maior, menor, mais brilhante, mais escuro ou funcionava de forma diferente.</p>
       <p>Vídeos demonstrativos, com diferentes ângulos, comparações visuais ajudam o cliente a entender o que está comprando, reduzindo o número de devoluções, trocas e reclamações.</p>
       <p>Menos devoluções significam economia logística e mais satisfação do cliente e menos impacto negativo na reputação da loja.</p>
-
-      <h1><strong>Mais autoridade e diferencial competitivo</strong></h1>
+      <h2><strong>Mais autoridade e diferencial competitivo</strong></h2>
       <p>No ambiente digital, marca forte é aquela que sabe se comunicar com consistência. A identidade visual é um dos pilares dessa construção, e investir em vídeos profissionais fortalece essa presença.</p>
       <p>Lojas que apresentam seus produtos com conteúdo visual de qualidade criam uma percepção de marca premium, organizada, confiável e atenta aos detalhes.</p>
       <p>Dessa forma, reflete na venda direta e também na memória do consumidor, que tende a lembrar da marca quando tiver uma nova necessidade. Num mercado tão saturado, o investimento em vídeo é uma das formas de diferenciar sua loja da concorrência.</p>
-
-      <h1><strong>Adequação às novas formas de consumo</strong></h1>
+      <h2><strong>Adequação às novas formas de consumo</strong></h2>
       <p>Com a popularização de plataformas como Instagram, TikTok e YouTube, os consumidores estão cada vez mais acostumados a conteúdos visuais curtos, diretos e interativos.</p>
       <p>O cliente moderno não quer mais ler parágrafos longos para entender um produto. Ele quer assistir, ver alguém usando, ouvir depoimentos, entender rapidamente se aquilo serve para ele — e decidir.</p>
       <p>Oferecer esse tipo de experiência no e-commerce é atender a expectativa do novo consumidor, se mantendo relevante no mercado e alinhado às tendências de consumo.</p>
-
-      <h1><strong>Como a Widde pode ajudar sua loja a vender mais com vídeos?</strong></h1>
+      <h2><strong>Como a Widde pode ajudar sua loja a vender mais com vídeos?</strong></h2>
       <p>A Widde Video Commerce é uma plataforma desenvolvida para integrar vídeos de produtos no e-commerce com interatividade.</p>
       <p>Diferente de soluções improvisadas (como links de YouTube ou vídeos hospedados de forma pesada no próprio servidor), a Widde oferece uma tecnologia pensada para e-commerce:</p>
-      <p>• Integração com qualquer plataforma, como Shopify, Tray, Nuvemshop, VTEX, Loja Integrada, entre outras<br />• Vídeos otimizados, com carregamento rápido, compressão automática e compatibilidade com todos os dispositivos<br />• Carrossel de Vídeos, para exibir múltiplos vídeos em um formato dinâmico parecido com o das redes sociais<br />• Carrinho integrado ao vídeo, permitindo que o cliente compre diretamente enquanto assiste<br />• Comentários nos vídeos, para gerar interação, responder dúvidas e quebrar objeções em tempo real<br />• Dashboard de performance, para acompanhar visualizações, cliques, engajamento e conversões nos vídeos da sua loja</p>
-
-      <h1><strong>Resultados reais: conversão, retenção e experiência</strong></h1>
-      <p>Lojas que utilizam a Widde relatam:<br />• Aumento de até 4x nas conversões quando os clientes assistem os vídeos<br />• Tempo de permanência até 5x maior nas páginas que têm conteúdo visual imersivo<br />• Redução de devoluções por erros de expectativa do cliente<br />• Feedback mais ativo dos consumidores, por meio dos comentários nos vídeos<br />• Melhoria na navegação e retenção geral dentro da loja</p>
+      <ul>
+        <li>Integração com qualquer plataforma, como Shopify, Tray, Nuvemshop, VTEX, Loja Integrada, entre outras</li>
+        <li>Vídeos otimizados, com carregamento rápido, compressão automática e compatibilidade com todos os dispositivos</li>
+        <li>Carrossel de Vídeos, para exibir múltiplos vídeos em um formato dinâmico parecido com o das redes sociais</li>
+        <li>Carrinho integrado ao vídeo, permitindo que o cliente compre diretamente enquanto assiste</li>
+        <li>Comentários nos vídeos, para gerar interação, responder dúvidas e quebrar objeções em tempo real</li>
+        <li>Dashboard de performance, para acompanhar visualizações, cliques, engajamento e conversões nos vídeos da sua loja</li>
+      </ul>
+      <h2><strong>Resultados reais: conversão, retenção e experiência</strong></h2>
+      <p>Lojas que utilizam a Widde relatam:</p>
+      <ul>
+        <li>Aumento de até 4x nas conversões quando os clientes assistem os vídeos</li>
+        <li>Tempo de permanência até 5x maior nas páginas que têm conteúdo visual imersivo</li>
+        <li>Redução de devoluções por erros de expectativa do cliente</li>
+        <li>Feedback mais ativo dos consumidores, por meio dos comentários nos vídeos</li>
+        <li>Melhoria na navegação e retenção geral dentro da loja</li>
+      </ul>
       <p>Esses números são resultados do uso de vídeos de qualidade e da forma estratégica como eles são inseridos na jornada de compra — algo que a Widde permite sem exigir conhecimento técnico da sua equipe.</p>
     </div>
   </BlogArticle>

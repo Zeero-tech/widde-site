@@ -1,46 +1,43 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como diminuir trocas e devoluções no e-commerce?" description="Devoluções e trocas são desafios operacionais significativos no e-commerce. Descubra estratégias práticas para reduzir esse problema e melhorar a satisfação do cliente." canonical="https://widde.io/blog/como-diminuir-trocas-e-devolucoes-no-e-commerce">
-  <BlogArticle client:load title="Como diminuir trocas e devoluções no e-commerce?" category="Tendências e-commerce" date="12.03.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67d1b19b542d1b9da2ec4559_Diminua%20trocas%20e%20devoluc%CC%A7o%CC%83es%20no%20e-commercev.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como diminuir trocas e devoluções no e-commerce?"
+  description="As devoluções e trocas representam desafios operacionais significativos no e-commerce, gerando custos com logística reversa, reembolsos e perda de mercadoria."
+  canonical="https://widde.io/blog/como-diminuir-trocas-e-devolucoes-no-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-diminuir-trocas-e-devolucoes-no-e-commerce/67d1b19b542d1b9da2ec4559_Diminua-trocas-e-devoluc-o-es-no-e-commercev.avif"
+  datePublished="2025-03-12"
+>
+  <BlogArticle
+    client:load
+    title="Como diminuir trocas e devoluções no e-commerce?"
+    category="Tendências e-commerce"
+    date="12.03.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/como-diminuir-trocas-e-devolucoes-no-e-commerce/67d1b19b542d1b9da2ec4559_Diminua-trocas-e-devoluc-o-es-no-e-commercev.avif"
+    currentSlug="como-diminuir-trocas-e-devolucoes-no-e-commerce"
+  >
     <div>
       <p>As devoluções e trocas representam desafios operacionais significativos no e-commerce, gerando custos com logística reversa, reembolsos e perda de mercadoria. Além do impacto financeiro, a insatisfação dos clientes prejudica a reputação da loja e reduz as taxas de recompra.</p>
-
-      <h1><strong>1. Ofereça descrições detalhadas dos produtos</strong></h1>
+      <h2><strong>1. Ofereça descrições detalhadas dos produtos</strong></h2>
       <p>Descrições completas devem incluir tamanho, cor, material, funcionalidade e diferenciais. Especificar medidas exatas, detalhes de compatibilidade e limitações ajuda os consumidores a fazer escolhas informadas.</p>
-
-      <h1><strong>2. Use imagens e vídeos reais de alta qualidade</strong></h1>
+      <h2><strong>2. Use imagens e vídeos reais de alta qualidade</strong></h2>
       <p>Utilize imagens reais, bem iluminadas e em alta resolução para construir credibilidade. Vídeos curtos demonstrando os produtos em uso cotidiano alinham as expectativas do consumidor e reduzem as devoluções motivadas por frustração.</p>
-
-      <h1><strong>3. Implemente a plataforma de Video Commerce (Widde)</strong></h1>
+      <h2><strong>3. Implemente a plataforma de Video Commerce (Widde)</strong></h2>
       <p>Os vídeos interativos permitem que os clientes visualizem o produto em diferentes ângulos, entendam seu uso e verifiquem detalhes que as imagens estáticas não capturam, reduzindo as compras por impulso e as expectativas irrealistas.</p>
-
-      <h1><strong>4. Exiba avaliações e feedbacks de clientes</strong></h1>
+      <h2><strong>4. Exiba avaliações e feedbacks de clientes</strong></h2>
       <p>Publicar avaliações, comentários e fotos de clientes que já compraram reduz a incerteza e aumenta a credibilidade da loja.</p>
-
-      <h1><strong>5. Invista em chatbots e suporte humanizado</strong></h1>
+      <h2><strong>5. Invista em chatbots e suporte humanizado</strong></h2>
       <p>O atendimento em tempo real que responde dúvidas sobre tamanho, funcionalidade e compatibilidade reduz as compras incorretas antes da conclusão do checkout.</p>
-
-      <h1><strong>6. Verifique a qualidade do produto antes do envio</strong></h1>
+      <h2><strong>6. Verifique a qualidade do produto antes do envio</strong></h2>
       <p>A implementação de controle de qualidade e embalagem adequada evita devoluções relacionadas a defeitos.</p>
-
-      <h1><strong>7. Envie notificações detalhadas sobre o status do pedido</strong></h1>
+      <h2><strong>7. Envie notificações detalhadas sobre o status do pedido</strong></h2>
       <p>O rastreamento transparente reduz a ansiedade do consumidor e melhora a experiência de compra, evitando cancelamentos desnecessários.</p>
-
-      <h1><strong>8. Simplifique a comunicação da política de troca</strong></h1>
+      <h2><strong>8. Simplifique a comunicação da política de troca</strong></h2>
       <p>Políticas claras e objetivas, acessíveis a todos os clientes, evitam solicitações de troca evitáveis e reduzem os custos operacionais.</p>
-
-      <h1><strong>9. Ofereça suporte pós-venda</strong></h1>
+      <h2><strong>9. Ofereça suporte pós-venda</strong></h2>
       <p>Múltiplos canais de suporte (WhatsApp, e-mail, chat) com tutoriais automatizados e dicas de uso melhoram a satisfação e a fidelização dos clientes.</p>
     </div>
   </BlogArticle>

@@ -1,40 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como elaborar uma página de produto de alta conversão" description="Aprenda os 7 pilares de uma página de produto de alta conversão: nomenclatura, imagens, variações, prova virtual, descrições, depoimentos e vídeos." canonical="https://widde.io/blog/como-elaborar-uma-pagina-de-produto-de-alta-conversao">
-  <BlogArticle client:load title="Como elaborar uma página de produto de alta conversão" category="Tendências e-commerce" date="12.05.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6672db5abd3718b21562ec32_P%C3%A1gina%20de%20produtos%20de%20alta%20convers%C3%A3o.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como elaborar uma página de produto de alta conversão"
+  description="As vendas no seu e-commerce são fortemente influenciadas pela qualidade da página de produto. Toda venda necessariamente passa pela página de produto"
+  canonical="https://widde.io/blog/como-elaborar-uma-pagina-de-produto-de-alta-conversao"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-elaborar-uma-pagina-de-produto-de-alta-conversao/6672db5abd3718b21562ec32_P-gina-de-produtos-de-alta-convers-o.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Como elaborar uma página de produto de alta conversão"
+    category="Tendências e-commerce"
+    date="12.05.2025"
+    readingTime="8 minutos de leitura"
+    coverImage="/assets/blog/como-elaborar-uma-pagina-de-produto-de-alta-conversao/6672db5abd3718b21562ec32_P-gina-de-produtos-de-alta-convers-o.avif"
+    currentSlug="como-elaborar-uma-pagina-de-produto-de-alta-conversao"
+  >
     <div>
       <p>As vendas no seu e-commerce são fortemente influenciadas pela qualidade da página de produto. Toda venda necessariamente passa pela página de produto, tornando-a crítica para o sucesso. O site funciona como um ecossistema onde a homepage atrai clientes e todos os elementos devem guiá-los em direção aos produtos.</p>
-
-      <h1><strong>1º Pilar: Nomenclatura do produto</strong></h1>
+      <h2><strong>1º Pilar: Nomenclatura do produto</strong></h2>
       <p>A nomenclatura genérica como "camiseta preta" não agrega valor e prejudica o SEO. Em vez disso, use "camiseta preta modal malha com gola alta" para transferir valor por meio da especificidade. Nomes detalhados de produto nas URLs ajudam os clientes a encontrar você por meio de buscas precisas. Inclua: tipo de produto, modelo e principais características.</p>
-
-      <h1><strong>2º Pilar: Imagens</strong></h1>
+      <h2><strong>2º Pilar: Imagens</strong></h2>
       <p>Como as compras online dependem exclusivamente da visão, as imagens são cruciais. Use imagens anotadas com setas destacando recursos para agregar valor além das fotos padrão do produto. Mostre o produto de múltiplos ângulos para eliminar dúvidas sobre o item.</p>
-
-      <h1><strong>3º Pilar: Variações de produto</strong></h1>
+      <h2><strong>3º Pilar: Variações de produto</strong></h2>
       <p>Quando os clientes selecionam diferentes cores ou tamanhos, as imagens devem mudar de acordo. Mantenha todas as variações em uma página — páginas separadas desencorajam as compras. Mantenha a variedade completa de tamanhos e despriorize os itens sem estoque para evitar a perda de vendas.</p>
-
-      <h1><strong>4º Pilar: Prova virtual</strong></h1>
+      <h2><strong>4º Pilar: Prova virtual</strong></h2>
       <p>Os padrões de tamanho variam entre os lojistas, criando dúvidas nos clientes. Vídeos mostrando múltiplos tipos de corpo usando os produtos reduzem as taxas de abandono e os problemas de devolução. Sempre inclua as especificações do modelo: altura, tamanhos usados, peso.</p>
-
-      <h1><strong>5º Pilar: Descrições completas</strong></h1>
+      <h2><strong>5º Pilar: Descrições completas</strong></h2>
       <p>Descrições detalhadas abordam as objeções dos clientes antes que elas surjam. Especifique camadas, instruções de cuidado, durabilidade e compatibilidade de estilo. Informações abrangentes mantêm os clientes engajados e reduzem o abandono do carrinho.</p>
-
-      <h1><strong>6º Pilar: Depoimentos</strong></h1>
+      <h2><strong>6º Pilar: Depoimentos</strong></h2>
       <p>A prova social constrói credibilidade. Os depoimentos dos clientes sobre produtos, serviço, entrega e qualidade influenciam significativamente as decisões de compra. Vídeos de depoimentos de clientes satisfeitos são especialmente poderosos.</p>
-
-      <h1><strong>7º Pilar: Vídeos nas páginas de produto</strong></h1>
+      <h2><strong>7º Pilar: Vídeos nas páginas de produto</strong></h2>
       <p>93% dos consumidores dizem que os vídeos são importantes para as decisões de compra, e 71% assistiram conteúdo online antes de comprar. Vídeos curtos no estilo TikTok funcionam melhor, especialmente tutoriais "Como fazer" e conteúdo em formato de lista como "5 formas de usar esta peça". Os vídeos interativos na Widde aumentam as taxas de conversão de 4 a 7 vezes e o tempo de retenção em 5 vezes.</p>
     </div>
   </BlogArticle>

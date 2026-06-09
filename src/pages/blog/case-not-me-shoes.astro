@@ -1,30 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Case Not-me Shoes - Video Commerce em Calçados" description="Como a Not-me Shoes aumentou 188% a conversão e gerou quase R$2 milhões com Video Commerce em apenas 8 meses usando a plataforma Widde." canonical="https://widde.io/blog/case-not-me-shoes">
-  <BlogArticle client:load title="Case Not-me Shoes - Video Commerce em Calçados" category="Cases" date="28.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/660202bab280f05b2e3e3221_not-me-shoes-case-2%20(1).avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Case Not-me Shoes - Video Commerce em Calçados"
+  description="A Not-me Shoes, uma varejista de calçados femininos fundada por Ana Carina em 2018 com foco na produção nacional, adotou o Video Commerce por meio da Widde"
+  canonical="https://widde.io/blog/case-not-me-shoes"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/case-not-me-shoes/660202bab280f05b2e3e3221_not-me-shoes-case-2-1).avif"
+  datePublished="2025-05-28"
+>
+  <BlogArticle
+    client:load
+    title="Case Not-me Shoes - Video Commerce em Calçados"
+    category="Cases"
+    date="28.05.2025"
+    readingTime="4 minutos de leitura"
+    coverImage="/assets/blog/case-not-me-shoes/660202bab280f05b2e3e3221_not-me-shoes-case-2-1).avif"
+    currentSlug="case-not-me-shoes"
+  >
     <div>
       <p>A Not-me Shoes, uma varejista de calçados femininos fundada por Ana Carina em 2018 com foco na produção nacional, adotou o Video Commerce por meio da Widde para criar interações mais humanizadas com os clientes. Este case documenta os resultados dos primeiros oito meses de uso da plataforma.</p>
-
-      <h1><strong>Os desafios</strong></h1>
+      <h2><strong>Os desafios</strong></h2>
       <p>A marca tinha dificuldade em manter a conexão pessoal estabelecida no Instagram quando os clientes visitavam o site. Nas palavras de Ana Carina: "A gente sempre foi muito presente na rede social", mas os visitantes provenientes de anúncios pagos não tinham acesso aos detalhes do produto e informações de experimentação disponíveis nas plataformas sociais. Elas também enfrentavam dificuldade para encontrar ferramentas que não prejudicassem a performance do site.</p>
-
-      <h1><strong>A solução</strong></h1>
+      <h2><strong>A solução</strong></h2>
       <p>A plataforma de vídeo em formato de story da Widde permitiu que a Not-me Shoes integrasse o conteúdo das redes sociais diretamente em sua experiência de e-commerce. Essa estratégia permitiu que os clientes provenientes de anúncios ou buscas acessassem informações detalhadas sobre os produtos. O feedback coletado pelos clientes nos vídeos informou a criação de conteúdo adicional.</p>
       <p>Ana Carina explicou: "A Widde foi uma solução que a gente encontrou pra se comunicar de maneira mais humana."</p>
-
-      <h1><strong>Resultados nos primeiros 8 meses</strong></h1>
-      <p>• <strong>Conversão de vendas:</strong> Taxa 188% maior nos produtos com Video Commerce;<br />• <strong>Impacto no usuário:</strong> Mais de 100.000 usuários acessaram o conteúdo em vídeo;<br />• <strong>Impacto na receita:</strong> Quase R$ 2 milhões atribuídos à Widde;<br />• <strong>Satisfação dos clientes:</strong> 97% relataram que os vídeos auxiliaram nas decisões de compra;<br />• <strong>Retenção no site:</strong> 3x maior tempo de engajamento com os vídeos.</p>
+      <h2><strong>Resultados nos primeiros 8 meses</strong></h2>
+      <ul>
+        <li><strong>Conversão de vendas:</strong> Taxa 188% maior nos produtos com Video Commerce;</li>
+        <li><strong>Impacto no usuário:</strong> Mais de 100.000 usuários acessaram o conteúdo em vídeo;</li>
+        <li><strong>Impacto na receita:</strong> Quase R$ 2 milhões atribuídos à Widde;</li>
+        <li><strong>Satisfação dos clientes:</strong> 97% relataram que os vídeos auxiliaram nas decisões de compra;</li>
+        <li><strong>Retenção no site:</strong> 3x maior tempo de engajamento com os vídeos.</li>
+      </ul>
       <p>Os dados demonstraram que o vídeo humanizou a jornada de compra, construiu a confiança dos clientes e reduziu as taxas de devolução.</p>
     </div>
   </BlogArticle>

@@ -1,18 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
 
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como adicionar vídeo de produtos na TRAY?" description="Adicionar vídeos nas páginas de produtos, home e categorias da TRAY oferece um diferencial para aumentar conversões e engajamento. Veja o passo a passo com a Widde." canonical="https://widde.io/blog/como-adicionar-video-de-produtos-na-tray">
-  <BlogArticle client:load title="Como adicionar vídeo de produtos na TRAY?" category="Video Commerce" date="10.02.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67aa2e1820a39d2beb042d0e_como%20adicionar%20vi%CC%81deo%20de%20produtos%20na%20tray.avif" recentPosts={recentPosts}>
+<BaseLayout title="Como adicionar vídeo de produtos na TRAY?" description="Ter vídeos nas páginas inicial, de produtos ou categoria de um e-commerce oferece um diferencial para melhorar as taxas de conversão e engajamento." canonical="https://widde.io/blog/como-adicionar-video-de-produtos-na-tray" ogType="article" ogImage="https://widde.io/assets/blog/como-adicionar-video-de-produtos-na-tray/67aa2e1820a39d2beb042d0e_como-adicionar-vi-deo-de-produtos-na-tray.avif" datePublished="2025-02-10">
+  <BlogArticle client:load title="Como adicionar vídeo de produtos na TRAY?" category="Video Commerce" date="10.02.2025" readingTime="5 minutos de leitura" coverImage="/assets/blog/como-adicionar-video-de-produtos-na-tray/67aa2e1820a39d2beb042d0e_como-adicionar-vi-deo-de-produtos-na-tray.avif" currentSlug="como-adicionar-video-de-produtos-na-tray">
     <div>
       <p>Ter vídeos nas páginas inicial, de produtos ou categoria de um e-commerce oferece um diferencial para melhorar as taxas de conversão e engajamento.</p>
 

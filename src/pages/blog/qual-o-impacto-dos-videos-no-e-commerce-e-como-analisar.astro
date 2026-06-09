@@ -1,34 +1,51 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Qual o impacto dos vídeos no e-commerce e como analisar?" description="O Video Commerce pode aumentar a taxa de conversão em até 4 vezes. Saiba como medir o impacto dos vídeos no seu e-commerce com as métricas certas." canonical="https://widde.io/blog/qual-o-impacto-dos-videos-no-e-commerce-e-como-analisar">
-  <BlogArticle client:load title="Qual o impacto dos vídeos no e-commerce e como analisar?" category="Dados no E-commerce" date="03.02.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67a143e7dd41f078e4db0bf3_Impacto%20e%20an%C3%A1lise%20dos%20v%C3%ADdeos%20(1).avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Qual o impacto dos vídeos no e-commerce e como analisar?"
+  description="O Video Commerce — a integração de vídeos interativos nas páginas de produto — transformou o varejo online, permitindo decisões de compra mais rápidas e co"
+  canonical="https://widde.io/blog/qual-o-impacto-dos-videos-no-e-commerce-e-como-analisar"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/qual-o-impacto-dos-videos-no-e-commerce-e-como-analisar/67a143e7dd41f078e4db0bf3_Impacto-e-an-lise-dos-v-deos-1).avif"
+  datePublished="2025-02-03"
+>
+  <BlogArticle
+    client:load
+    title="Qual o impacto dos vídeos no e-commerce e como analisar?"
+    category="Dados no E-commerce"
+    date="03.02.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/qual-o-impacto-dos-videos-no-e-commerce-e-como-analisar/67a143e7dd41f078e4db0bf3_Impacto-e-an-lise-dos-v-deos-1).avif"
+    currentSlug="qual-o-impacto-dos-videos-no-e-commerce-e-como-analisar"
+  >
     <div>
       <p>O Video Commerce — a integração de vídeos interativos nas páginas de produto — transformou o varejo online, permitindo decisões de compra mais rápidas e confiantes. A Widde, plataforma especializada em Video Commerce, ajuda os lojistas a medir a eficácia da estratégia de vídeo.</p>
-
-      <h1><strong>O impacto dos vídeos no e-commerce</strong></h1>
+      <h2><strong>O impacto dos vídeos no e-commerce</strong></h2>
       <p>93% dos consumidores afirmam que os vídeos são um fator decisivo na hora de comprar online (estudo da Animoto). Os vídeos proporcionam uma visualização realista do produto além das imagens e descrições estáticas.</p>
-      <p>• <strong>Compras realizadas:</strong> O Video Commerce pode aumentar a taxa de conversão de vendas em até 3 a 4 vezes. O vídeo elimina as objeções dos consumidores ao demonstrar os produtos em ação e responder às perguntas com clareza.<br />• <strong>Períodos mais longos no site:</strong> Os vídeos aumentam em 4 a 5 vezes o tempo de permanência de um visitante. O maior engajamento se traduz em maior probabilidade de conversão.<br />• <strong>Devolução e trocas:</strong> A compreensão baseada em vídeo dos produtos reduz as taxas de devolução por meio de demonstração transparente dos recursos e definição precisa de expectativas.</p>
-
-      <h1><strong>Análise do impacto do Video Commerce</strong></h1>
+      <ul>
+        <li><strong>Compras realizadas:</strong> O Video Commerce pode aumentar a taxa de conversão de vendas em até 3 a 4 vezes. O vídeo elimina as objeções dos consumidores ao demonstrar os produtos em ação e responder às perguntas com clareza.</li>
+        <li><strong>Períodos mais longos no site:</strong> Os vídeos aumentam em 4 a 5 vezes o tempo de permanência de um visitante. O maior engajamento se traduz em maior probabilidade de conversão.</li>
+        <li><strong>Devolução e trocas:</strong> A compreensão baseada em vídeo dos produtos reduz as taxas de devolução por meio de demonstração transparente dos recursos e definição precisa de expectativas.</li>
+      </ul>
+      <h2><strong>Análise do impacto do Video Commerce</strong></h2>
       <p>O dashboard da Widde fornece análises que permitem aos lojistas entender o impacto dos vídeos nas vendas e na experiência do cliente.</p>
-      <p>• <strong>Taxa de conversão:</strong> Compara a conversão geral do site com as taxas de conversão quando os clientes assistem a vídeos;<br />• <strong>Receita impactada:</strong> Receita total gerada por visitantes que assistiram a vídeos; a Widde cria audiências no GA4 rastreando sessões de vídeo e valor de conversão;<br />• <strong>Tempo de retenção:</strong> Duração média da sessão durante a visualização de vídeos, demonstrando a captura de atenção do público;<br />• <strong>Interação e feedback dos consumidores:</strong> Percentuais de engajamento e comentários de feedback dos usuários para melhoria do conteúdo;<br />• <strong>Taxa de retorno dos usuários:</strong> A frequência de visitas de retorno aumenta, indicando maior confiança e proximidade com a marca.</p>
-
-      <h1><strong>O Video Commerce como tendência crescente no Brasil</strong></h1>
+      <ul>
+        <li><strong>Taxa de conversão:</strong> Compara a conversão geral do site com as taxas de conversão quando os clientes assistem a vídeos;</li>
+        <li><strong>Receita impactada:</strong> Receita total gerada por visitantes que assistiram a vídeos; a Widde cria audiências no GA4 rastreando sessões de vídeo e valor de conversão;</li>
+        <li><strong>Tempo de retenção:</strong> Duração média da sessão durante a visualização de vídeos, demonstrando a captura de atenção do público;</li>
+        <li><strong>Interação e feedback dos consumidores:</strong> Percentuais de engajamento e comentários de feedback dos usuários para melhoria do conteúdo;</li>
+        <li><strong>Taxa de retorno dos usuários:</strong> A frequência de visitas de retorno aumenta, indicando maior confiança e proximidade com a marca.</li>
+      </ul>
+      <h2><strong>O Video Commerce como tendência crescente no Brasil</strong></h2>
       <p>O comportamento do consumidor brasileiro favorece cada vez mais o consumo de conteúdo em vídeo no YouTube, TikTok e Instagram. Lojistas que evitam a adoção de vídeos arriscam desvantagem competitiva. Os vídeos shoppable interativos — que permitem adicionar itens ao carrinho dentro do vídeo — demonstram um impacto de conversão particularmente forte.</p>
-
-      <h1><strong>Como criar vídeos que vendem?</strong></h1>
-      <p>1. <strong>Seja objetivo nos primeiros segundos:</strong> Capture a atenção nos primeiros 2 a 5 segundos ou arrisque o abandono do espectador;<br />2. <strong>Combine razão e emoção:</strong> Equilibre argumentos lógicos sobre o produto com apelos emocionais que abordam as necessidades do consumidor;<br />3. <strong>Facilidade de compreensão:</strong> Apresente explicações claras e simples sobre a funcionalidade do produto;<br />4. <strong>Use formatos curtos e dinâmicos:</strong> Tutoriais em formato curto e vídeos de dicas mostram alto engajamento.</p>
+      <h2><strong>Como criar vídeos que vendem?</strong></h2>
+      <ol>
+        <li><strong>Seja objetivo nos primeiros segundos:</strong> Capture a atenção nos primeiros 2 a 5 segundos ou arrisque o abandono do espectador;</li>
+        <li><strong>Combine razão e emoção:</strong> Equilibre argumentos lógicos sobre o produto com apelos emocionais que abordam as necessidades do consumidor;</li>
+        <li><strong>Facilidade de compreensão:</strong> Apresente explicações claras e simples sobre a funcionalidade do produto;</li>
+        <li><strong>Use formatos curtos e dinâmicos:</strong> Tutoriais em formato curto e vídeos de dicas mostram alto engajamento.</li>
+      </ol>
     </div>
   </BlogArticle>
 </BaseLayout>

@@ -2,9 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import CaseArticle from '../../components/pages/CaseArticle'
 import type { CaseArticleData } from '../../components/pages/CaseArticle'
+import { getOtherCases } from '../../data/caseArticles'
 
 const data: CaseArticleData = {
-  heroImage: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2d0b1016c8df8923096d_capa%20youtube%201.png",
+  heroImage: "/assets/cases/mamo/695d2d0b1016c8df8923096d_capa-youtube-1.png",
   heroImageAlt: "Construindo narrativas com Video Commerce",
   tag: "Case de Sucesso",
   title: "Construindo narrativas com Video Commerce",
@@ -13,7 +14,7 @@ const data: CaseArticleData = {
   cliente: "Mamô",
   youtubeUrl: "https://youtu.be/OnB9tYJbPVc",
 
-  conhecaLogo: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d2ff7e265e149012e952a_logo%20mamo%20redondo%20preto.png",
+  conhecaLogo: "/assets/cases/mamo/695d2ff7e265e149012e952a_logo-mamo-redondo-preto.png",
   conhecaLogoAlt: "Logo Mamô",
   conhecaTitle: "Conheça a Mamô",
   conhecaBody: `<p>Desde 2008, a <strong>Mamô</strong> se consolida como uma marca de moda feminina que representa a mulher brasileira em toda a sua pluralidade. Atualmente presente em 7 estados, com 9 lojas de atacado e 25 lojas de varejo, a marca realiza lançamentos quinzenais de coleções cápsulas, garantindo uma <strong>variedade</strong> constante de produtos e <strong>novidades</strong> ao longo do ano.</p><p>Nos últimos 8 anos, a <strong>Mamô</strong> tem fortalecido sua presença no e-commerce como um canal estratégico para contar suas histórias e se conectar com o público. <strong>Jéssica Machado</strong>, Gerente de E-commerce, que acompanhou de perto essa evolução, recebeu a <strong>Widde</strong> na sede da <strong>Mamô</strong> para compartilhar os impactos do <strong>Video Commerce</strong> na trajetória da marca.</p>`,
@@ -22,12 +23,12 @@ const data: CaseArticleData = {
     { value: "2 canais", label: "Site, 9 lojas de atacado e +25 lojas de varejo" },
   ],
 
-  depoimento1Img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d363c249a54b8b4590792_foto%20redonda%20jessica.png",
+  depoimento1Img: "/assets/cases/mamo/695d363c249a54b8b4590792_foto-redonda-jessica.png",
   depoimento1Quote: "O que mais me surpreendeu foi a quantidade de visualização. Eu não esperava que as clientes fossem gostar tanto assim dos vídeos, as visualizações foram muito boas.",
   depoimento1Nome: "Jéssica Machado",
   depoimento1Cargo: "Gerente de E-commerce",
 
-  desafioGif: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d5728ce1554b697478572_gif%20mamo.gif",
+  desafioGif: "/assets/cases/mamo/695d5728ce1554b697478572_gif-mamo.gif",
   desafioBody: `<p>Com lançamentos de coleções cápsula duas vezes por mês, a Mamô opera um amplo portfólio, com muitos SKUs ativos simultaneamente. No entanto, esse volume não se refletia na <strong>experiência de navegação:</strong> em média, as visitantes permaneciam cerca de dois minutos no site, o que limitava o contato com a variedade real de peças disponíveis. Grande parte do catálogo não era <strong>descoberta.</strong></p><p>Esse comportamento estava diretamente ligado à forma tradicional de navegação no e-commerce, baseada em listas, categorias e imagens estáticas, que exige uma intenção clara de busca e pouco estimula a <strong>exploração.</strong></p><p>Ao implementar o <strong>Video Commerce</strong> da <strong>Widde,</strong> a lógica da experiência mudou. O Carrossel de Vídeos na home passou a funcionar como um ponto de atração e descoberta, capturando a atenção logo na entrada do site. A partir dali, as pessoas passam mais tempo navegando, consumindo conteúdo em vídeo, aprofundando o interesse pela marca e explorando mais produtos de forma natural.</p><p>O vídeo transforma a navegação em uma experiência mais fluida, prolonga o tempo de permanência e amplia significativamente o contato com o portfólio da marca.</p>`,
 
   numeros: [
@@ -42,34 +43,13 @@ const data: CaseArticleData = {
   depoimento2Quote: "A Mamô sempre investiu muito nas coleções e nas campanhas. A cada quinzena a gente faz o lançamento de uma coleção cápsula, conta o storytelling daquele lançamento, e esses vídeos eram utilizados apenas nas redes sociais. Hoje a gente consegue trazer os vídeos para o site, trazer mais vida para o site e contar toda a história na home e nas páginas de produtos.",
   depoimento2Nome: "Jéssica Machado",
   depoimento2Cargo: "Gerente de E-commerce",
-  depoimento2ImgVertical: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d58cd4e08c49751ce55fa_foto%20vertical%20jessica%202.png",
+  depoimento2ImgVertical: "/assets/cases/mamo/695d58cd4e08c49751ce55fa_foto-vertical-jessica-2.png",
   depoimento2YoutubeUrl: "https://youtu.be/OnB9tYJbPVc",
 
-  greyStickyBody: `<h2><strong>Mais informação, menos incerteza</strong></h2><p>Além dos desafios relacionados à descoberta de um portfólio amplo, a Mamô também identificava uma oportunidade clara de evoluir a experiência da tomada de decisão dentro do e-commerce. No ambiente digital, informações essenciais para a decisão de compra, como modelagem, caimento, tecido e adaptação a diferentes corpos e tamanhos, nem sempre eram percebidas com clareza apenas por meio de imagens estáticas e descrições.</p><p>Embora a marca já produzisse vídeos ricos em conteúdo e contexto, esse material permanecia concentrado nas redes sociais, afastado do momento mais crítico da jornada: a decisão de compra no site.</p><p>Com o <strong>Video Commerce</strong> da <strong>Widde</strong>, esses vídeos passaram a fazer parte da navegação de forma integrada e estratégica. O conteúdo foi incorporado ao site, permitindo que as clientes visualizassem as peças em movimento, no contexto certo e no momento certo. Essa evolução contribuiu para reduzir incertezas, minimizar objeções e tornar a experiência de compra mais informativa e segura, complementando a estratégia de crescimento da marca no digital.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/695d3486b88804be473ba9b1_mam%C3%B4%20carrossel%20mais%20curto.gif" loading="lazy" /></div></figure><h2><strong>O e-commerce como extensão da narrativa da marca</strong></h2><p>Outra estratégia adotada para ampliar a exposição de SKUs, e consequentemente o ticket médio, foi o <strong>Compre Junto</strong>. Com essa solução, as clientes conseguem adicionar múltiplos produtos ao carrinho diretamente do vídeo, incluindo peças que compõem o look ou itens destacados no conteúdo, sem sair da experiência. Esse fluxo reduz fricções na jornada de compra e favorece a venda de mais de um produto por pedido, um diferencial importante especialmente para marcas com grandes portfólios e lançamentos frequentes.</p><p>A partir da implementação do <strong>Video Commerce</strong> da <strong>Widde</strong>, a Mamô conseguiu evoluir a experiência do usuário no e-commerce e dar continuidade, dentro do site, à narrativa que já vinha sendo construída nas redes sociais. O vídeo passou a conectar conteúdo, produto e descoberta, criando uma jornada mais coerente, envolvente e alinhada à forma como as clientes se relacionam com a marca.</p>`,
+  greyStickyBody: `<h2><strong>Mais informação, menos incerteza</strong></h2><p>Além dos desafios relacionados à descoberta de um portfólio amplo, a Mamô também identificava uma oportunidade clara de evoluir a experiência da tomada de decisão dentro do e-commerce. No ambiente digital, informações essenciais para a decisão de compra, como modelagem, caimento, tecido e adaptação a diferentes corpos e tamanhos, nem sempre eram percebidas com clareza apenas por meio de imagens estáticas e descrições.</p><p>Embora a marca já produzisse vídeos ricos em conteúdo e contexto, esse material permanecia concentrado nas redes sociais, afastado do momento mais crítico da jornada: a decisão de compra no site.</p><p>Com o <strong>Video Commerce</strong> da <strong>Widde</strong>, esses vídeos passaram a fazer parte da navegação de forma integrada e estratégica. O conteúdo foi incorporado ao site, permitindo que as clientes visualizassem as peças em movimento, no contexto certo e no momento certo. Essa evolução contribuiu para reduzir incertezas, minimizar objeções e tornar a experiência de compra mais informativa e segura, complementando a estratégia de crescimento da marca no digital.</p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="" src="/assets/cases/mamo/695d3486b88804be473ba9b1_mam-carrossel-mais-curto.gif" loading="lazy" /></div></figure><h2><strong>O e-commerce como extensão da narrativa da marca</strong></h2><p>Outra estratégia adotada para ampliar a exposição de SKUs, e consequentemente o ticket médio, foi o <strong>Compre Junto</strong>. Com essa solução, as clientes conseguem adicionar múltiplos produtos ao carrinho diretamente do vídeo, incluindo peças que compõem o look ou itens destacados no conteúdo, sem sair da experiência. Esse fluxo reduz fricções na jornada de compra e favorece a venda de mais de um produto por pedido, um diferencial importante especialmente para marcas com grandes portfólios e lançamentos frequentes.</p><p>A partir da implementação do <strong>Video Commerce</strong> da <strong>Widde</strong>, a Mamô conseguiu evoluir a experiência do usuário no e-commerce e dar continuidade, dentro do site, à narrativa que já vinha sendo construída nas redes sociais. O vídeo passou a conectar conteúdo, produto e descoberta, criando uma jornada mais coerente, envolvente e alinhada à forma como as clientes se relacionam com a marca.</p>`,
   greyStickyYoutubeUrl: "https://youtu.be/OnB9tYJbPVc",
 
-  outrosCases: [
-    {
-      href: "/case/john-john",
-      img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png",
-      title: "Agregando valor ao produto com o Video Commerce",
-    },
-    {
-      href: "/case/maximum-boxing",
-      img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png",
-      title: "Mais vendas, menos demanda para o SAC",
-    },
-    {
-      href: "/case/majeste",
-      img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif",
-      title: "Desafios da Moda Festa no E-commerce",
-    },
-    {
-      href: "/case/lv-store",
-      img: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f79295c6f9c8a6fa9eeaa_lvstore.avif",
-      title: "Video Commerce em Moda Feminina",
-    },
-  ],
+  outrosCases: getOtherCases("/case/mamo"),
 }
 ---
 

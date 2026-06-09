@@ -1,52 +1,47 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como fazer um vídeo review de produtos? As 11 dicas para e-commerce" description="Aprenda a fazer vídeo reviews de produtos que aumentam conversão e retenção no e-commerce. 11 dicas sobre roteiro, equipamento, gravação, edição e publicação." canonical="https://widde.io/blog/como-fazer-um-video-review-de-produtos">
-  <BlogArticle client:load title="Como fazer um vídeo review de produtos? As 11 dicas para e-commerce" category="Video Commerce" date="22.10.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66ba1d24a8afaac491151981_11%20dicas%20para%20v%C3%ADdeo%20review.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como fazer um vídeo review de produtos? As 11 dicas para e-commerce"
+  description="Os vídeos de review de produto servem como uma poderosa ferramenta de e-commerce, oferecendo perspectivas detalhadas sobre os produtos em uso real."
+  canonical="https://widde.io/blog/como-fazer-um-video-review-de-produtos"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-fazer-um-video-review-de-produtos/66ba1d24a8afaac491151981_11-dicas-para-v-deo-review.avif"
+  datePublished="2025-10-22"
+>
+  <BlogArticle
+    client:load
+    title="Como fazer um vídeo review de produtos? As 11 dicas para e-commerce"
+    category="Video Commerce"
+    date="22.10.2025"
+    readingTime="7 minutos de leitura"
+    coverImage="/assets/blog/como-fazer-um-video-review-de-produtos/66ba1d24a8afaac491151981_11-dicas-para-v-deo-review.avif"
+    currentSlug="como-fazer-um-video-review-de-produtos"
+  >
     <div>
       <p>Os vídeos de review de produto servem como uma poderosa ferramenta de e-commerce, oferecendo perspectivas detalhadas sobre os produtos em uso real. Ao contrário das fotografias e descrições de texto, os vídeos mostram dinamicamente a funcionalidade, a qualidade e os benefícios. A implementação de reviews em vídeo nas páginas de produto aumenta as taxas de conversão em até 4 vezes, pois os clientes confiam mais nas avaliações visuais. Além disso, os vídeos mantêm os visitantes do site 5 vezes mais tempo, aumentando o engajamento e a probabilidade de compra.</p>
-
-      <h1><strong>1. Conheça bem o produto</strong></h1>
+      <h2><strong>1. Conheça bem o produto</strong></h2>
       <p>Teste os produtos exaustivamente para entender todas as funcionalidades, vantagens e limitações. O conhecimento profundo permite a entrega de informações precisas e ajuda a responder às perguntas comuns dos espectadores.</p>
-
-      <h1><strong>2. Planeje o roteiro do vídeo</strong></h1>
+      <h2><strong>2. Planeje o roteiro do vídeo</strong></h2>
       <p>Estruture os reviews com um plano claro: introdução apresentando o produto, pontos principais organizados cobrindo características, benefícios, performance e preço, e uma conclusão resumindo as impressões com uma chamada para ação.</p>
-
-      <h1><strong>3. Use soluções de integração</strong></h1>
+      <h2><strong>3. Use soluções de integração</strong></h2>
       <p>Plataformas como a Widde permitem a integração direta de vídeos nas páginas do e-commerce, mostrando detalhes do material e a funcionalidade do produto enquanto otimiza a performance para manter a velocidade do site.</p>
-
-      <h1><strong>4. Use equipamentos de câmera de qualidade</strong></h1>
+      <h2><strong>4. Use equipamentos de câmera de qualidade</strong></h2>
       <p>A qualidade da imagem importa significativamente. Smartphones modernos como o iPhone capturam excelentes vídeos. Garanta configurações adequadas de foco e exposição, e use tripés para estabilidade.</p>
-
-      <h1><strong>5. Capture múltiplos ângulos do produto</strong></h1>
+      <h2><strong>5. Capture múltiplos ângulos do produto</strong></h2>
       <p>Filme planos gerais mostrando o produto inteiro junto com close-ups destacando detalhes específicos. Mover a câmera ao redor do produto revela diferentes partes e funcionalidades, criando experiências visuais mais ricas e conteúdo mais dinâmico.</p>
-
-      <h1><strong>6. Destaque os principais recursos</strong></h1>
+      <h2><strong>6. Destaque os principais recursos</strong></h2>
       <p>Ao longo do vídeo, enfatize as principais características e demonstre sua funcionalidade prática. Mencione os diferenciais em relação aos concorrentes e use sobreposições visuais como setas ou texto para chamar a atenção para os pontos importantes.</p>
-
-      <h1><strong>7. Demonstre o produto em uso</strong></h1>
+      <h2><strong>7. Demonstre o produto em uso</strong></h2>
       <p>Mostre o uso diário no mundo real com explicações passo a passo. Isso ajuda os espectadores a imaginar como os produtos se encaixam em suas vidas. Demonstrações detalhadas cobrindo todas as funções revelam limitações, adicionando credibilidade.</p>
-
-      <h1><strong>8. Seja honesto e objetivo</strong></h1>
+      <h2><strong>8. Seja honesto e objetivo</strong></h2>
       <p>A transparência sobre problemas e limitações é essencial. Evite exagerar os benefícios ou fazer afirmações enganosas. Baseie as opiniões em experiências e fatos reais, evitando emoção excessiva ou viés.</p>
-
-      <h1><strong>9. Mantenha os vídeos curtos e diretos</strong></h1>
+      <h2><strong>9. Mantenha os vídeos curtos e diretos</strong></h2>
       <p>Mantenha a concisão enquanto fornece informações essenciais. Evite demorar excessivamente em aspectos únicos. Divida o conteúdo em seções e faça transições fluidas entre os pontos. Mire entre 30 a 60 segundos dependendo da complexidade do produto.</p>
-
-      <h1><strong>10. Edite com qualidade</strong></h1>
+      <h2><strong>10. Edite com qualidade</strong></h2>
       <p>Remova seções desnecessárias ou redundantes, adicione transições de cena e inclua gráficos ou texto destacando pontos importantes. Garanta áudio limpo sem ruídos de fundo. Ferramentas básicas de edição para correção de cor e luz melhoram a qualidade visual.</p>
-
-      <h1><strong>11. Adicione legendas ou anotações</strong></h1>
+      <h2><strong>11. Adicione legendas ou anotações</strong></h2>
       <p>Inclua legendas melhorando a acessibilidade para espectadores com deficiência auditiva e aqueles que assistem em ambientes barulhentos sem som. As anotações adicionam especificações técnicas e destacam pontos importantes.</p>
     </div>
   </BlogArticle>

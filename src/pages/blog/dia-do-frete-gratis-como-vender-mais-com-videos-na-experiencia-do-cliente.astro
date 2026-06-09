@@ -1,31 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Dia do Frete Grátis: Como vender mais com vídeos na experiência do cliente" description="Estratégias para o Dia do Frete Grátis: planejamento, comunicação com vídeos, clareza sobre os produtos e como documentar resultados para crescer mais." canonical="https://widde.io/blog/dia-do-frete-gratis-como-vender-mais-com-videos-na-experiencia-do-cliente">
-  <BlogArticle client:load title="Dia do Frete Grátis: Como vender mais com vídeos na experiência do cliente" category="Tendências e-commerce" date="12.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6627d4f55f9e5a130585cb2c_frete%20(1).avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Dia do Frete Grátis: Como vender mais com vídeos na experiência do cliente"
+  description="O Dia do Frete Grátis, realizado no último domingo de abril no Brasil, é uma oportunidade valiosa para os lojistas de e-commerce aumentarem as vendas e conquistarem novos clientes."
+  canonical="https://widde.io/blog/dia-do-frete-gratis-como-vender-mais-com-videos-na-experiencia-do-cliente"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/dia-do-frete-gratis-como-vender-mais-com-videos-na-experiencia-do-cliente/6627d4f55f9e5a130585cb2c_frete-1).avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Dia do Frete Grátis: Como vender mais com vídeos na experiência do cliente"
+    category="Tendências e-commerce"
+    date="12.05.2025"
+    readingTime="4 minutos de leitura"
+    coverImage="/assets/blog/dia-do-frete-gratis-como-vender-mais-com-videos-na-experiencia-do-cliente/6627d4f55f9e5a130585cb2c_frete-1).avif"
+    currentSlug="dia-do-frete-gratis-como-vender-mais-com-videos-na-experiencia-do-cliente"
+  >
     <div>
       <p>O Dia do Frete Grátis, realizado no último domingo de abril no Brasil, é uma oportunidade valiosa para os lojistas de e-commerce aumentarem as vendas e conquistarem novos clientes. Com as estratégias certas e o uso de vídeos, é possível se destacar e maximizar os resultados dessa data especial.</p>
-
-      <h1><strong>Planejamento fundamental</strong></h1>
+      <h2><strong>Planejamento fundamental</strong></h2>
       <p>Os lojistas devem estabelecer um checklist completo antes de lançar as promoções. Isso inclui determinar quais regiões do Brasil se qualificam para o frete grátis, selecionar os produtos participantes, calcular as despesas de logística e estabelecer valores mínimos de compra. O agendamento do conteúdo deve ocorrer antes do início da implementação para garantir uma comunicação coerente e oportuna.</p>
-
-      <h1><strong>Comunicação com vídeos</strong></h1>
+      <h2><strong>Comunicação com vídeos</strong></h2>
       <p>O conteúdo em vídeo é essencial para os anúncios do Dia do Frete Grátis. O vídeo precisa estar nas principais páginas: na Home e nas Categorias. As mensagens devem ser concisas e diretas, aparecendo nas plataformas sociais e em todo o e-commerce onde as decisões de compra ocorrem. Vídeos de anúncio que explicam claramente a promoção, as condições e o período de validade reduzem as dúvidas e aumentam a conversão.</p>
-
-      <h1><strong>Clareza sobre os produtos</strong></h1>
+      <h2><strong>Clareza sobre os produtos</strong></h2>
       <p>As descrições detalhadas de produto são importantes, mas a maioria dos clientes não vai ler textos longos. Os vídeos demonstrativos mostram os produtos em ação de forma eficaz, construindo confiança e credibilidade enquanto diferenciam as ofertas em mercados competitivos. Use os vídeos para destacar os produtos mais relevantes para a promoção.</p>
-
-      <h1><strong>Documentação de resultados</strong></h1>
+      <h2><strong>Documentação de resultados</strong></h2>
       <p>Os lojistas devem capturar e compartilhar o feedback dos clientes, as métricas de vendas e as estatísticas de engajamento. Essa prova social incentiva compras adicionais por meio de depoimentos e visibilidade de performance. Analise os dados de conversão antes, durante e após o evento para otimizar as estratégias nas próximas edições do Dia do Frete Grátis.</p>
     </div>
   </BlogArticle>

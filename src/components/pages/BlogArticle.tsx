@@ -3,13 +3,7 @@ import Nav from "@/components/core/Nav";
 import VCCta from "@/components/VideoCommerce/VCCta";
 import Newsletter from "@/components/core/Newsletter";
 import Footer from "@/components/core/Footer";
-import { allBlogPosts } from "@/data/blogPosts";
-
-export type RecentPost = {
-  slug: string;
-  title: string;
-  image: string;
-};
+import { allBlogPosts, getRecentPosts } from "@/data/blogPosts";
 
 export type BlogArticleProps = {
   title: string;
@@ -19,7 +13,9 @@ export type BlogArticleProps = {
   coverImage: string;
   coverImageAlt?: string;
   children: React.ReactNode;
-  recentPosts: RecentPost[];
+  currentSlug?: string;
+  author?: string;
+  authorUrl?: string;
 };
 
 export default function BlogArticle({
@@ -30,10 +26,14 @@ export default function BlogArticle({
   coverImage,
   coverImageAlt,
   children,
-  recentPosts,
+  currentSlug,
+  author,
+  authorUrl,
 }: BlogArticleProps) {
   const [query, setQuery] = useState("");
   const articleRef = useRef<HTMLDivElement>(null);
+
+  const recentPosts = getRecentPosts(currentSlug);
 
   const filtered = query.trim()
     ? allBlogPosts
@@ -54,6 +54,19 @@ export default function BlogArticle({
                   {category}
                 </span>
                 <span className="text-xs text-[#888]">{date}</span>
+                <span className="text-xs text-[#888]">·</span>
+                {authorUrl ? (
+                  <a
+                    href={authorUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-[#888] no-underline hover:text-brand transition-colors"
+                  >
+                    Por {author ?? "Widde"}
+                  </a>
+                ) : (
+                  <span className="text-xs text-[#888]">Por {author ?? "Widde"}</span>
+                )}
               </div>
               <h1
                 className="text-black font-normal leading-[1.2] mb-4"
@@ -129,13 +142,13 @@ export default function BlogArticle({
                     <a
                       key={post.slug}
                       href={`/blog/${post.slug}`}
-                      className="flex gap-3 no-underline group"
+                      className="flex flex-col gap-2 no-underline group"
                     >
                       <img
                         src={post.image}
                         alt={post.title}
                         loading="lazy"
-                        className="w-20 h-14 object-cover rounded-lg flex-shrink-0"
+                        className="w-full h-24 object-cover rounded-lg"
                       />
                       <h4 className="text-sm text-black leading-[1.4] group-hover:text-brand transition-colors m-0">
                         {post.title}

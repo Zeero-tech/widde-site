@@ -1,41 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  {
-    slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento",
-    title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento",
-    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png",
-  },
-  {
-    slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva",
-    title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva",
-    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png",
-  },
-  {
-    slug: "como-fidelizar-os-clientes-no-e-commerce",
-    title: "Como fidelizar os clientes no e-commerce",
-    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png",
-  },
-  {
-    slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026",
-    title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026",
-    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png",
-  },
-  {
-    slug: "guia-estrategico-do-video-commerce-as-tendencias-que-vao-permear-em-2026",
-    title: "Guia estratégico do Video Commerce: as tendências que vão permear em 2026",
-    image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696141384fe221769b9e530a_Thumbnail.png",
-  },
-]
 ---
-
 <BaseLayout
   title="Report Video Commerce Brasil 2025"
-  description="O e-commerce brasileiro vive uma fase de maturidade operacional. Conheça o Report Video Commerce Brasil 2025 com dados reais de operações brasileiras."
+  description="O e-commerce brasileiro vive uma fase de maturidade operacional. Crescer com eficiência, em um ambiente de tráfego mais caro e concorrência mais sofisticada"
   canonical="https://widde.io/blog/report-video-commerce-brasil-2025"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/report-video-commerce-brasil-2025/69a5dc73c9b53384264daa9a_Capa-do-blog-report.png"
+  datePublished="2026-03-03"
 >
   <BlogArticle
     client:load
@@ -43,27 +16,23 @@ const recentPosts: RecentPost[] = [
     category="Video Commerce"
     date="03.03.2026"
     readingTime="6 minutos de leitura"
-    coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png"
-    recentPosts={recentPosts}
+    coverImage="/assets/blog/report-video-commerce-brasil-2025/69a5dc73c9b53384264daa9a_Capa-do-blog-report.png"
+    currentSlug="report-video-commerce-brasil-2025"
   >
     <div>
       <p>O e-commerce brasileiro vive uma fase de maturidade operacional. Crescer com eficiência, em um ambiente de tráfego mais caro e concorrência mais sofisticada, exige repensar não apenas como atrair visitantes, mas o que acontece depois que eles chegam. É nessa camada, a da experiência e da decisão, que o Video Commerce passou a atuar de forma determinante.</p>
       <p>Para mapear esse movimento no mercado nacional, a Widde produziu o Report Video Commerce Brasil 2025: um documento construído a partir de dados reais de operações brasileiras, cases de marcas que já aplicam o Video Commerce na prática e projeções sobre o papel do vídeo na jornada de compra nos próximos anos.</p>
-
-      <h1><strong>Escala e comportamento no e-commerce brasileiro</strong></h1>
+      <h2><strong>Escala e comportamento no e-commerce brasileiro</strong></h2>
       <p>Em 2025, mais de 18 milhões de usuários tiveram contato com vídeos integrados a lojas virtuais, com mais de 54 milhões de visualizações registradas ao longo do período. Esses números mostram que o vídeo deixou de ser um experimento pontual e passou a operar em escala dentro da experiência de compra brasileira.</p>
       <p>Mais do que exposição, os dados indicam consumo efetivo de conteúdo. O consumidor utiliza o vídeo como fonte ativa de informação, especialmente nas PDPs, onde atributos, diferenciais e aplicações do produto influenciam diretamente a decisão de compra.</p>
       <p>O indicador que mais chama atenção é o crescimento de <strong>119,9% no tempo de retenção</strong> em sessões com presença de vídeo. Sessões mais longas, associadas à interação com conteúdo audiovisual, refletem maior envolvimento com o produto e menor incerteza antes da decisão. Ao suprir limitações naturais do ambiente online, como a impossibilidade de tocar ou testar o produto, o vídeo aproxima a experiência digital de uma demonstração prática.</p>
-
-      <h1><strong>O que as marcas estão resolvendo na prática</strong></h1>
+      <h2><strong>O que as marcas estão resolvendo na prática</strong></h2>
       <p>Os dados ganham ainda mais significado quando observados junto aos cases que integram o Report. Marcas como <strong>John John, Mamô, PA Concept e Maximum Boxing</strong> chegaram ao Video Commerce a partir de desafios concretos: agregar valor percebido ao produto, aumentar o tempo de retenção nas páginas, comunicar diferenciais que apenas texto e foto não conseguiam transmitir, reduzir o volume de dúvidas no SAC e mostrar o produto em uso real.</p>
       <p>O que esses cases revelam é que o Video Commerce não é uma solução genérica. Ele responde a problemas específicos da operação, com impacto direto nos indicadores que mais importam para quem lidera um e-commerce. É exatamente essa aplicabilidade que torna os aprendizados do Report tão relevantes para o mercado.</p>
-
-      <h1><strong>O que vem pela frente</strong></h1>
+      <h2><strong>O que vem pela frente</strong></h2>
       <p>Se os dados de 2025 já mostram escala, as projeções apontam para uma transformação ainda mais profunda. O consumidor caminha para um modelo de prova social mais real, distribuído e cada vez menos controlado pelas marcas.</p>
       <p>O avanço do checkout fora do site reforça uma jornada de compra cada vez mais fluida, na qual o consumidor quer que a compra aconteça com menos fricção, independentemente do canal. Nesse cenário, o vídeo se consolida como a principal camada de descoberta e confiança da jornada. As marcas que se anteciparem, estruturando seus e-commerces para operar com vídeos de forma distribuída, estarão mais preparadas para um ambiente de compra cada vez menos linear.</p>
-
-      <h1><strong>Por que este Report é leitura essencial para líderes de e-commerce</strong></h1>
+      <h2><strong>Por que este Report é leitura essencial para líderes de e-commerce</strong></h2>
       <p>O Report Video Commerce Brasil 2025 foi desenvolvido pela Widde com um objetivo claro: oferecer ao mercado uma visão ao mesmo tempo quantitativa e qualitativa sobre o uso do vídeo nas operações digitais brasileiras. O documento foi construído a partir de dados reais, cases concretos e análise de tendências com impacto direto na operação.</p>
       <p>Para quem lidera um e-commerce, o Report entrega três camadas de valor. A primeira é entender onde o mercado está hoje: qual o nível de adoção, como o consumidor se comporta e quais métricas já são impactadas pelo vídeo. A segunda é aprender com quem já resolveu problemas reais através de cases que mostram caminhos aplicáveis para diversos segmentos. Por último, o Report apresenta as mudanças na jornada de compra que já estão em movimento e vão exigir adaptação das operações.</p>
       <p>Em um setor onde decisões precisam ser tomadas com velocidade e embasamento, ter acesso a esse conjunto de informações é parte fundamental da construção de estratégias sustentadas por evidências, e não por intuição.</p>

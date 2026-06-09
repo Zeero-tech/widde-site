@@ -1,52 +1,85 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "insights-para-criar-um-video-para-loja-on-line", title: "Insights para criar um vídeo para loja on-line", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68bad74ae4345ad77e5e8e31_Blog_%20Insights%20para%20criar%20um%20v%C3%ADdeo%20para%20loja%20on-line%20(1).png" },
-  { slug: "por-que-investir-em-videos-profissionais-para-e-commerce", title: "Por que investir em vídeos profissionais para e-commerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68af0c75cff4353f2393c176_Blog_%20Por%20que%20investir%20em%20v%C3%ADdeos%20profissionais_.png" },
-  { slug: "video-para-e-commerce-de-moda-como-fazer-2", title: "Vídeo para e-commerce de moda: como fazer?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68a488f476190fd295973d7d_Blog_%20V%C3%ADdeo%20para%20e-commerce%20de%20moda_%20como%20fazer_%20(3).png" },
-  { slug: "solucao-de-video-para-e-commerce-video-commerce", title: "Solução de vídeo para e-commerce | Video Commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226b3bc37dbc7c14054d59_Solu%C3%A7%C3%A3o%20de%20v%C3%ADdeo%20para%20e-commerce%20(2).avif" },
-  { slug: "como-converter-visitantes-em-clientes-no-e-commerce", title: "Como converter visitantes em clientes no e-commerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6835f16eb833c7821f92e564_Converta%20visitantes%20em%20clientes%20no%20e-commerce.avif" },
-]
 ---
-<BaseLayout title="Vídeo explicativo de produto: como fazer e implementar?" description="Um vídeo explicativo de produto é criado para apresentar, demonstrar e esclarecer o funcionamento, as vantagens e os diferenciais de um produto. Saiba como fazer." canonical="https://widde.io/blog/video-explicativo-de-produto-como-fazer-e-implementar">
-  <BlogArticle client:load title="Vídeo explicativo de produto: como fazer e implementar?" category="Video Commerce" date="26.09.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68d699f6dcb3f438b1cae87c_V%C3%ADdeo%20explicativo%20de%20produto_%20como%20fazer%20e%20implementar_.png" recentPosts={recentPosts}>
+<BaseLayout
+  title="Vídeo explicativo de produto: como fazer e implementar?"
+  description="Um vídeo explicativo de produto é um conteúdo audiovisual criado para apresentar, demonstrar e esclarecer o funcionamento, as vantagens e os diferenciais de um produto."
+  canonical="https://widde.io/blog/video-explicativo-de-produto-como-fazer-e-implementar"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/video-explicativo-de-produto-como-fazer-e-implementar/68d699f6dcb3f438b1cae87c_V-deo-explicativo-de-produto_-como-fazer-e-implementar_.png"
+  datePublished="2025-09-26"
+>
+  <BlogArticle
+    client:load
+    title="Vídeo explicativo de produto: como fazer e implementar?"
+    category="Video Commerce"
+    date="26.09.2025"
+    readingTime="7 minutos de leitura"
+    coverImage="/assets/blog/video-explicativo-de-produto-como-fazer-e-implementar/68d699f6dcb3f438b1cae87c_V-deo-explicativo-de-produto_-como-fazer-e-implementar_.png"
+    currentSlug="video-explicativo-de-produto-como-fazer-e-implementar"
+  >
     <div>
       <p>Um vídeo explicativo de produto é um conteúdo audiovisual criado para apresentar, demonstrar e esclarecer o funcionamento, as vantagens e os diferenciais de um produto.</p>
       <p>Ele vai além da estética visual: sua missão é informar com objetividade, aproximando o cliente da experiência de uso real.</p>
       <p>Esse tipo de vídeo é interessante em e-commerces, onde o consumidor não pode tocar, testar ou experimentar o produto fisicamente. Em poucos segundos, o vídeo precisa mostrar o que é, para quem serve, como funciona e por que o cliente deveria comprá-lo.</p>
       <p>O vídeo explicativo pode ser técnico, emocional, demonstrativo ou educativo — tudo depende do público e do posicionamento da marca. O importante é que ele resolva dúvidas, reforce a proposta de valor e estimule a decisão de compra.</p>
-
-      <h1><strong>Por que criar vídeos explicativos para produtos?</strong></h1>
+      <h2><strong>Por que criar vídeos explicativos para produtos?</strong></h2>
       <p>Com o avanço do comportamento digital, o consumidor valoriza escolhas rápidas, informações objetivas e segurança no processo. Ele não quer ler páginas e mais páginas de texto. Ele quer ver.</p>
-      <p>O conteúdo audiovisual faz toda a diferença no seu e-commerce, pois:<br />• <strong>Aumenta a taxa de conversão:</strong> ao ver o produto funcionando, o cliente se sente mais confiante para comprar;<br />• <strong>Reduz devoluções:</strong> vídeos detalhados diminuem erros de expectativa e evitam trocas;<br />• <strong>Ajuda no SEO:</strong> vídeos aumentam o tempo de permanência na página, o que melhora o ranqueamento do site;<br />• <strong>Facilita a compreensão de produtos técnicos ou inovadores:</strong> demonstrações visuais tornam a explicação mais clara, eliminam dúvidas e aceleram a decisão de compra;<br />• <strong>Constrói autoridade e posiciona a marca como referência:</strong> ao oferecer conteúdos relevantes e bem produzidos, a empresa reforça sua credibilidade, diferencia-se da concorrência e conquista a confiança do consumidor.</p>
+      <p>O conteúdo audiovisual faz toda a diferença no seu e-commerce, pois:</p>
+      <ul>
+        <li><strong>Aumenta a taxa de conversão:</strong> ao ver o produto funcionando, o cliente se sente mais confiante para comprar;</li>
+        <li><strong>Reduz devoluções:</strong> vídeos detalhados diminuem erros de expectativa e evitam trocas;</li>
+        <li><strong>Ajuda no SEO:</strong> vídeos aumentam o tempo de permanência na página, o que melhora o ranqueamento do site;</li>
+        <li><strong>Facilita a compreensão de produtos técnicos ou inovadores:</strong> demonstrações visuais tornam a explicação mais clara, eliminam dúvidas e aceleram a decisão de compra;</li>
+        <li><strong>Constrói autoridade e posiciona a marca como referência:</strong> ao oferecer conteúdos relevantes e bem produzidos, a empresa reforça sua credibilidade, diferencia-se da concorrência e conquista a confiança do consumidor.</li>
+      </ul>
       <p>Na prática, um bom vídeo explicativo pode substituir dezenas de perguntas no atendimento e encurtar o funil de vendas.</p>
-
-      <h1><strong>Como planejar um vídeo explicativo de produto?</strong></h1>
+      <h2><strong>Como planejar um vídeo explicativo de produto?</strong></h2>
       <p>Antes de ligar a câmera, você precisa definir alguns pontos que servirão de base para o roteiro e para a gravação:</p>
-      <p>1. <strong>Conheça seu público:</strong> entenda quais são as principais dúvidas, dores e desejos do seu cliente. Quanto mais personalizado for o conteúdo, mais relevante ele será;<br />2. <strong>Estabeleça o objetivo do vídeo:</strong> você quer demonstrar um recurso? Mostrar um diferencial? Ensinar como usar? Focar em benefícios?<br />3. <strong>Escolha o formato:</strong> demonstração prática, depoimento, tutorial, etc;<br />4. <strong>Defina a duração:</strong> vídeos entre 15 segundos e 1 minuto funcionam bem para e-commerce.</p>
-
-      <h1><strong>Estrutura básica de um bom vídeo explicativo</strong></h1>
+      <ol>
+        <li><strong>Conheça seu público:</strong> entenda quais são as principais dúvidas, dores e desejos do seu cliente. Quanto mais personalizado for o conteúdo, mais relevante ele será;</li>
+        <li><strong>Estabeleça o objetivo do vídeo:</strong> você quer demonstrar um recurso? Mostrar um diferencial? Ensinar como usar? Focar em benefícios?</li>
+        <li><strong>Escolha o formato:</strong> demonstração prática, depoimento, tutorial, etc;</li>
+        <li><strong>Defina a duração:</strong> vídeos entre 15 segundos e 1 minuto funcionam bem para e-commerce.</li>
+      </ol>
+      <h2><strong>Estrutura básica de um bom vídeo explicativo</strong></h2>
       <p>Um vídeo explicativo precisa ter uma estrutura lógica que acompanhe a jornada de decisão do cliente:</p>
       <p><strong>1. Introdução:</strong> Chame a atenção com uma pergunta ou afirmação direta. Mostre que o vídeo vai responder uma dúvida real do cliente. Exemplo: "Você sabe qual é o melhor jeito de usar o seu smartwatch com economia de bateria?"</p>
       <p><strong>2. Apresentação do produto:</strong> Mostre o produto, diga o nome e mostre visualmente seus principais aspectos.</p>
       <p><strong>3. Demonstração:</strong> Mostre o produto em uso real, se possível com consumidores reais. Destaque funções, facilidades e diferenciais.</p>
       <p><strong>4. Benefícios práticos:</strong> Foque no que muda na vida do cliente. Exemplo: "Com esse adaptador, você carrega dois dispositivos ao mesmo tempo sem perder velocidade."</p>
       <p><strong>5. Chamada para ação:</strong> Convide o usuário a comprar, experimentar, assistir outros vídeos ou explorar o site. Exemplo: "Clique no botão abaixo para ver todos os modelos disponíveis!"</p>
-
-      <h1><strong>Dicas para gravar vídeos explicativos que geram resultado</strong></h1>
-      <p>1. <strong>Use boa iluminação</strong> – vídeos escuros ou com sombras atrapalham a visualização. Se possível, utilize luz natural ou softbox.<br />2. <strong>Mostre detalhes em close</strong> – use cortes de câmera mais próximos para focar em texturas, botões, conectores, embalagens e diferenciais.<br />3. <strong>Grave com estabilidade</strong> – evite vídeos tremidos. Tripé faz toda a diferença. Se for com celular, use suporte.<br />4. <strong>Invista em boa captação de áudio</strong> – se houver narração, prefira microfone de lapela ou direcional. Ruídos comprometem a clareza da explicação.<br />5. <strong>Tenha um roteiro ensaiado</strong> – mesmo vídeos mais naturais devem seguir uma sequência lógica. Improvisos demais deixam o conteúdo confuso.<br />6. <strong>Mantenha identidade visual da marca</strong> – desde a vinheta inicial, uso de cores, logotipo e tipografia, tudo precisa estar alinhado à comunicação da loja.</p>
-
-      <h1><strong>Onde usar vídeos explicativos no e-commerce?</strong></h1>
-      <p>O vídeo explicativo de produto pode ser utilizado em diversos pontos estratégicos do e-commerce:<br />• <strong>Na página do produto:</strong> como destaque principal ou complemento da galeria de imagens.<br />• <strong>Na página de categoria:</strong> para explicar como escolher entre modelos similares.<br />• <strong>Na home:</strong> destacando uma coleção, linha ou novidade.<br />• <strong>No blog:</strong> embutido em conteúdos de dicas e tutoriais.<br />• <strong>Em e-mails ou mensagens de recuperação de carrinho e pós-venda.</strong></p>
+      <h2><strong>Dicas para gravar vídeos explicativos que geram resultado</strong></h2>
+      <ol>
+        <li><strong>Use boa iluminação</strong> – vídeos escuros ou com sombras atrapalham a visualização. Se possível, utilize luz natural ou softbox.</li>
+        <li><strong>Mostre detalhes em close</strong> – use cortes de câmera mais próximos para focar em texturas, botões, conectores, embalagens e diferenciais.</li>
+        <li><strong>Grave com estabilidade</strong> – evite vídeos tremidos. Tripé faz toda a diferença. Se for com celular, use suporte.</li>
+        <li><strong>Invista em boa captação de áudio</strong> – se houver narração, prefira microfone de lapela ou direcional. Ruídos comprometem a clareza da explicação.</li>
+        <li><strong>Tenha um roteiro ensaiado</strong> – mesmo vídeos mais naturais devem seguir uma sequência lógica. Improvisos demais deixam o conteúdo confuso.</li>
+        <li><strong>Mantenha identidade visual da marca</strong> – desde a vinheta inicial, uso de cores, logotipo e tipografia, tudo precisa estar alinhado à comunicação da loja.</li>
+      </ol>
+      <h2><strong>Onde usar vídeos explicativos no e-commerce?</strong></h2>
+      <p>O vídeo explicativo de produto pode ser utilizado em diversos pontos estratégicos do e-commerce:</p>
+      <ul>
+        <li><strong>Na página do produto:</strong> como destaque principal ou complemento da galeria de imagens.</li>
+        <li><strong>Na página de categoria:</strong> para explicar como escolher entre modelos similares.</li>
+        <li><strong>Na home:</strong> destacando uma coleção, linha ou novidade.</li>
+        <li><strong>No blog:</strong> embutido em conteúdos de dicas e tutoriais.</li>
+        <li><strong>Em e-mails ou mensagens de recuperação de carrinho e pós-venda.</strong></li>
+      </ul>
       <p>A chave é integrar o vídeo à jornada de compra, colocando o conteúdo certo, no momento certo e no canal mais efetivo.</p>
-
-      <h1><strong>Como a Widde pode te ajudar a usar vídeos explicativos no e-commerce</strong></h1>
+      <h2><strong>Como a Widde pode te ajudar a usar vídeos explicativos no e-commerce</strong></h2>
       <p>Você já sabe como planejar, gravar e estruturar um vídeo explicativo de produto. Agora, vem a etapa decisiva: como integrar esse conteúdo ao seu e-commerce de forma profissional, rápida e sem pesar o site?</p>
       <p>A Widde permite que você adicione vídeos diretamente nas páginas de produto, categoria, home ou qualquer outra página da sua loja, com carregamento otimizado, visual integrado e soluções interativas.</p>
-      <p>Dessa forma, com a Widde, você pode:<br />• <strong>Incluir vídeos</strong> sem prejudicar a performance da loja;<br />• <strong>Ativar carrinho de compra dentro do vídeo</strong>, permitindo que o cliente compre enquanto assiste;<br />• <strong>Receber comentários nos vídeos</strong>, para esclarecer dúvidas e eliminar objeções em tempo real;<br />• <strong>Acompanhar métricas de desempenho</strong>, como visualizações, taxa de abertura, conversão e tempo de retenção;<br />• <strong>Integrar facilmente com plataformas como Shopify, VTEX, Wake e outras.</strong></p>
+      <p>Dessa forma, com a Widde, você pode:</p>
+      <ul>
+        <li><strong>Incluir vídeos</strong> sem prejudicar a performance da loja;</li>
+        <li><strong>Ativar carrinho de compra dentro do vídeo</strong>, permitindo que o cliente compre enquanto assiste;</li>
+        <li><strong>Receber comentários nos vídeos</strong>, para esclarecer dúvidas e eliminar objeções em tempo real;</li>
+        <li><strong>Acompanhar métricas de desempenho</strong>, como visualizações, taxa de abertura, conversão e tempo de retenção;</li>
+        <li><strong>Integrar facilmente com plataformas como Shopify, VTEX, Wake e outras.</strong></li>
+      </ul>
       <p>Com a Widde, seus vídeos explicativos deixam de ser apenas um recurso visual e se tornam estratégias efetivas de venda, relacionamento e diferenciação.</p>
     </div>
   </BlogArticle>

@@ -1,30 +1,51 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como adicionar vídeo de produtos na Wake?" description="Adicionar vídeos de produtos na Wake é uma forma de aumentar a interação do cliente e melhorar a experiência de compra. Veja como fazer com a Widde." canonical="https://widde.io/blog/como-adicionar-video-de-produtos-na-wake">
-  <BlogArticle client:load title="Como adicionar vídeo de produtos na Wake?" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67fd4081885c2a48a6f766ae_adicionar%20video%20waje.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como adicionar vídeo de produtos na Wake?"
+  description="Adicionar vídeos de produtos em seu e-commerce é uma maneira de aumentar a interação do cliente e melhorar a experiência de compra."
+  canonical="https://widde.io/blog/como-adicionar-video-de-produtos-na-wake"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-adicionar-video-de-produtos-na-wake/67fd4081885c2a48a6f766ae_adicionar-video-waje.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Como adicionar vídeo de produtos na Wake?"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/como-adicionar-video-de-produtos-na-wake/67fd4081885c2a48a6f766ae_adicionar-video-waje.avif"
+    currentSlug="como-adicionar-video-de-produtos-na-wake"
+  >
     <div>
       <p>Adicionar vídeos de produtos em seu e-commerce é uma maneira de aumentar a interação do cliente e melhorar a experiência de compra. Para quem usa a plataforma Wake, integrar vídeos é simples e impacta significativamente a taxa de conversão. A integração da Widde com a Wake permite adicionar vídeos às páginas de produtos, Categorias e Home de forma simples e sem prejudicar o desempenho do site.</p>
-
-      <h1><strong>Passo a passo para adicionar vídeos na Wake</strong></h1>
-      <p>1. Acesse o painel da Widde;<br />2. Clique no botão "Adicionar vídeos", que aparece no Menu ou dentro da seção Páginas;<br />3. Faça upload do vídeo, pelo computador ou celular;<br />4. Na etapa de "Associações", no campo "Onde aparece", digite o nome do produto;<br />5. Clique em "Conectar" quando o item aparecer.</p>
+      <h2><strong>Passo a passo para adicionar vídeos na Wake</strong></h2>
+      <ol>
+        <li>Acesse o painel da Widde;</li>
+        <li>Clique no botão "Adicionar vídeos", que aparece no Menu ou dentro da seção Páginas;</li>
+        <li>Faça upload do vídeo, pelo computador ou celular;</li>
+        <li>Na etapa de "Associações", no campo "Onde aparece", digite o nome do produto;</li>
+        <li>Clique em "Conectar" quando o item aparecer.</li>
+      </ol>
       <p>Para adicionar vídeos na Home: cole o link da página no campo "Onde aparece" e clique em "Conectar".</p>
-
-      <h1><strong>Funcionalidades da plataforma Widde</strong></h1>
-      <p>• <strong>Integração rápida sem impacto na performance:</strong> A Widde garante uma integração ágil com a Wake e outras plataformas de e-commerce, garantindo um carregamento rápido, mesmo em lojas com muitos vídeos ou produtos.<br />• <strong>Vídeos interativos:</strong> Os consumidores podem adicionar itens diretamente ao carrinho enquanto assistem, reduzindo as barreiras entre a visualização e a compra.<br />• <strong>Feed de Vídeos:</strong> Uma página dedicada que exibe todos os vídeos da loja no formato de scroll infinito, aumentando o engajamento no site e o ticket médio.<br />• <strong>Dashboard de análise:</strong> Ferramentas de monitoramento fornecem dados de visualizações, retenção e conversões para otimização.<br />• <strong>Carrinho integrado no vídeo:</strong> Permite que o cliente adicione produtos ao Carrinho enquanto assiste ao conteúdo.</p>
-
-      <h1><strong>Benefícios para o e-commerce</strong></h1>
-      <p>• <strong>Aumento de conversão:</strong> Os vídeos demonstram funcionalidades e benefícios dos produtos;<br />• <strong>Maior engajamento no site:</strong> Os vídeos mantêm os visitantes por mais tempo;<br />• <strong>Redução de devoluções:</strong> Alinha as expectativas do consumidor com os produtos reais;<br />• <strong>Vantagem competitiva:</strong> Experiências de vídeo interativo diferenciam as marcas;<br />• <strong>Experiência humanizada:</strong> Constrói conexões emocionais entre a marca e o consumidor.</p>
+      <h2><strong>Funcionalidades da plataforma Widde</strong></h2>
+      <ul>
+        <li><strong>Integração rápida sem impacto na performance:</strong> A Widde garante uma integração ágil com a Wake e outras plataformas de e-commerce, garantindo um carregamento rápido, mesmo em lojas com muitos vídeos ou produtos.</li>
+        <li><strong>Vídeos interativos:</strong> Os consumidores podem adicionar itens diretamente ao carrinho enquanto assistem, reduzindo as barreiras entre a visualização e a compra.</li>
+        <li><strong>Feed de Vídeos:</strong> Uma página dedicada que exibe todos os vídeos da loja no formato de scroll infinito, aumentando o engajamento no site e o ticket médio.</li>
+        <li><strong>Dashboard de análise:</strong> Ferramentas de monitoramento fornecem dados de visualizações, retenção e conversões para otimização.</li>
+        <li><strong>Carrinho integrado no vídeo:</strong> Permite que o cliente adicione produtos ao Carrinho enquanto assiste ao conteúdo.</li>
+      </ul>
+      <h2><strong>Benefícios para o e-commerce</strong></h2>
+      <ul>
+        <li><strong>Aumento de conversão:</strong> Os vídeos demonstram funcionalidades e benefícios dos produtos;</li>
+        <li><strong>Maior engajamento no site:</strong> Os vídeos mantêm os visitantes por mais tempo;</li>
+        <li><strong>Redução de devoluções:</strong> Alinha as expectativas do consumidor com os produtos reais;</li>
+        <li><strong>Vantagem competitiva:</strong> Experiências de vídeo interativo diferenciam as marcas;</li>
+        <li><strong>Experiência humanizada:</strong> Constrói conexões emocionais entre a marca e o consumidor.</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

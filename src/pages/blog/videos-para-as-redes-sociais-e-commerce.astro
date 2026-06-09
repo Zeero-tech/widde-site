@@ -1,26 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Vídeos para as redes sociais: como utilizá-los no seu e-commerce?" description="A Widde permite reutilizar vídeos das redes sociais diretamente no e-commerce, convertendo-os em ferramentas de venda nas páginas de produtos e categorias." canonical="https://widde.io/blog/videos-para-as-redes-sociais-e-commerce">
-  <BlogArticle client:load title="Vídeos para as redes sociais: como utilizá-los no seu e-commerce?" category="Video Commerce" date="17.02.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67b363c9448bc97111f958bd_Vi%CC%81deos%20das%20redes%20sociais%20%20no%20seu%20e-commerce.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Vídeos para as redes sociais: como utilizá-los no seu e-commerce?"
+  description="A plataforma de Video Commerce da Widde permite que lojas de e-commerce reutilizem vídeos criados para as redes sociais diretamente em suas lojas online"
+  canonical="https://widde.io/blog/videos-para-as-redes-sociais-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/videos-para-as-redes-sociais-e-commerce/67b363c9448bc97111f958bd_Vi-deos-das-redes-sociais-no-seu-e-commerce.avif"
+  datePublished="2025-02-17"
+>
+  <BlogArticle
+    client:load
+    title="Vídeos para as redes sociais: como utilizá-los no seu e-commerce?"
+    category="Video Commerce"
+    date="17.02.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/videos-para-as-redes-sociais-e-commerce/67b363c9448bc97111f958bd_Vi-deos-das-redes-sociais-no-seu-e-commerce.avif"
+    currentSlug="videos-para-as-redes-sociais-e-commerce"
+  >
     <div>
       <p>A plataforma de Video Commerce da Widde permite que lojas de e-commerce reutilizem vídeos criados para as redes sociais diretamente em suas lojas online, convertendo-os em ferramentas de venda. Em vez de direcionar os clientes para plataformas externas, os vídeos podem ser exibidos nas páginas de produtos, categorias ou feeds interativos dentro do próprio site.</p>
-
-      <h1><strong>Como usar vídeos das redes sociais no e-commerce</strong></h1>
+      <h2><strong>Como usar vídeos das redes sociais no e-commerce</strong></h2>
       <p>A Widde permite que os lojistas aproveitem vídeos originalmente produzidos para as plataformas sociais. Por meio de uma interface intuitiva, os comerciantes podem adicionar vídeos a páginas de produtos, categorias ou seções da homepage. Essa abordagem aumenta o engajamento dos clientes e permite a descoberta interativa de produtos. A plataforma inclui funcionalidades como feeds de vídeos com scroll infinito que replicam a experiência familiar das redes sociais, ajudando os consumidores a descobrir mais produtos do que a navegação página a página tradicional.</p>
-
-      <h1><strong>Benefícios de usar vídeos das redes sociais no e-commerce</strong></h1>
-      <p>1. <strong>Maior engajamento do consumidor:</strong> Vídeos curtos e dinâmicos capturam atenção e incentivam maior interação com o site.<br />2. <strong>Maior retenção no site:</strong> Vídeos interativos aumentam em média o tempo de retenção em até 5 vezes.<br />3. <strong>Redução do abandono de carrinho:</strong> As demonstrações em vídeo respondem às dúvidas dos consumidores e constroem confiança na compra.<br />4. <strong>Melhor ROI do conteúdo:</strong> Reutilizar conteúdo social existente maximiza o retorno sobre o investimento em produção.<br />5. <strong>Reforço da identidade da marca:</strong> Os vídeos sociais transmitem a personalidade da marca e criam conexões emocionais com os consumidores.<br />6. <strong>Maiores taxas de conversão:</strong> Vídeos interativos aumentam a conversão em até 4 vezes.<br />7. <strong>Demonstrações práticas do produto:</strong> Formatos de vídeo curto familiares aos consumidores (Reels, estilo TikTok) mostram os produtos em contextos cotidianos.<br />8. <strong>Prova social por depoimentos:</strong> Os depoimentos em vídeo fornecem prova autêntica da satisfação dos clientes e constroem credibilidade da marca.</p>
+      <h2><strong>Benefícios de usar vídeos das redes sociais no e-commerce</strong></h2>
+      <ol>
+        <li><strong>Maior engajamento do consumidor:</strong> Vídeos curtos e dinâmicos capturam atenção e incentivam maior interação com o site.</li>
+        <li><strong>Maior retenção no site:</strong> Vídeos interativos aumentam em média o tempo de retenção em até 5 vezes.</li>
+        <li><strong>Redução do abandono de carrinho:</strong> As demonstrações em vídeo respondem às dúvidas dos consumidores e constroem confiança na compra.</li>
+        <li><strong>Melhor ROI do conteúdo:</strong> Reutilizar conteúdo social existente maximiza o retorno sobre o investimento em produção.</li>
+        <li><strong>Reforço da identidade da marca:</strong> Os vídeos sociais transmitem a personalidade da marca e criam conexões emocionais com os consumidores.</li>
+        <li><strong>Maiores taxas de conversão:</strong> Vídeos interativos aumentam a conversão em até 4 vezes.</li>
+        <li><strong>Demonstrações práticas do produto:</strong> Formatos de vídeo curto familiares aos consumidores (Reels, estilo TikTok) mostram os produtos em contextos cotidianos.</li>
+        <li><strong>Prova social por depoimentos:</strong> Os depoimentos em vídeo fornecem prova autêntica da satisfação dos clientes e constroem credibilidade da marca.</li>
+      </ol>
     </div>
   </BlogArticle>
 </BaseLayout>

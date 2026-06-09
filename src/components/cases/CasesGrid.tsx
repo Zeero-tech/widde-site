@@ -13,49 +13,49 @@ const cases: Case[] = [
     title: "Agregando valor ao produto com o Video Commerce",
     href: "/case/john-john",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68c2cc161322055b66b7b9b9_Capa%20John%20John.png",
+      "/assets/components/cases/68c2cc161322055b66b7b9b9_Capa-John-John.png",
   },
   {
     client: "Majesté",
     title: "Desafios da Moda Festa no E-commerce",
     href: "/case/majeste",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6836d7610a4f73f81a121f54_capa%20majeste%CC%81.avif",
+      "/assets/components/cases/6836d7610a4f73f81a121f54_capa-majeste-.avif",
   },
   {
     client: "Maximum Boxing",
     title: "Mais vendas, menos demanda para o SAC",
     href: "/case/maximum-boxing",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/689de10eed3215b5ef778578_Maximum%20Boxing%20capa%20case.png",
+      "/assets/components/cases/689de10eed3215b5ef778578_Maximum-Boxing-capa-case.png",
   },
   {
     client: "PA Concept",
     title: "Experiência de Loja Física no E-commerce",
     href: "/case/pa-concept",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682e157501d9ccc3cad72f62_capa%20PA.avif",
+      "/assets/components/cases/682e157501d9ccc3cad72f62_capa-PA.avif",
   },
   {
     client: "Alanis Brand",
     title: "Impacto do Video Commerce na categoria Plus Size",
     href: "/case/alanis",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f47b93d9c5f901231e51b_Capa%20-%20Case%20Alanis.avif",
+      "/assets/components/cases/682f47b93d9c5f901231e51b_Capa-Case-Alanis.avif",
   },
   {
     client: "Shop Emme",
     title: "Mais de R$ 1 milhão em vendas com o Video Commerce na Black Friday",
     href: "/case/shop-emme",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f71f1302a909a7f79efe8_Case%20Shop%20Emme.avif",
+      "/assets/components/cases/682f71f1302a909a7f79efe8_Case-Shop-Emme.avif",
   },
   {
     client: "LV Store",
     title: "Video Commerce em Moda Feminina",
     href: "/case/lv-store",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682f79295c6f9c8a6fa9eeaa_lvstore.avif",
+      "/assets/components/cases/682f79295c6f9c8a6fa9eeaa_lvstore.avif",
   },
 ];
 

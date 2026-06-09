@@ -1,32 +1,40 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Por que é importante ter vídeos dos produtos?" description="Entenda por que ter vídeos dos produtos é fundamental para o e-commerce: conexão emocional, personalidade de marca e como começar sem grandes produções." canonical="https://widde.io/blog/por-que-e-importante-ter-videos-dos-produtos">
-  <BlogArticle client:load title="Por que é importante ter vídeos dos produtos?" category="Video Commerce" date="12.05.2025" readingTime="3 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655cfeb2afd625fe728b4aaf_post-4.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Por que é importante ter vídeos dos produtos?"
+  description="As intenções de compra variam dependendo do contexto — seja comprando presentes, itens sazonais ou produtos comemorativos. Consequentemente, os clientes buscam"
+  canonical="https://widde.io/blog/por-que-e-importante-ter-videos-dos-produtos"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/por-que-e-importante-ter-videos-dos-produtos/655cfeb2afd625fe728b4aaf_post-4.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Por que é importante ter vídeos dos produtos?"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="3 minutos de leitura"
+    coverImage="/assets/blog/por-que-e-importante-ter-videos-dos-produtos/655cfeb2afd625fe728b4aaf_post-4.avif"
+    currentSlug="por-que-e-importante-ter-videos-dos-produtos"
+  >
     <div>
       <p>As intenções de compra variam dependendo do contexto — seja comprando presentes, itens sazonais ou produtos comemorativos. Consequentemente, os clientes buscam diferentes tipos de conteúdo visual para embasar suas decisões de compra.</p>
-
-      <h1><strong>Os vídeos não devem ter sempre o mesmo conceito</strong></h1>
+      <h2><strong>Os vídeos não devem ter sempre o mesmo conceito</strong></h2>
       <p>Assim como as fotografias exigem múltiplos ângulos para transmitir um produto de forma completa, os vídeos também devem variar em abordagem e formato. Vídeos de demonstração, tutoriais, bastidores, depoimentos de clientes e conteúdo de unboxing servem a propósitos diferentes na jornada de compra. Diversificar o conteúdo mantém o engajamento e atende a diferentes momentos de decisão do cliente.</p>
-
-      <h1><strong>Conexão emocional, não super produções</strong></h1>
+      <h2><strong>Conexão emocional, não super produções</strong></h2>
       <p>Os vídeos são excelentes para criar conexões emocionais com os clientes. No entanto, isso não é sobre vídeos super produzidos, mas sim vídeos que reforçam o diferencial e a personalidade da sua marca. Autenticidade e genuinidade superam a produção polida na maioria dos contextos de e-commerce — os clientes querem ver a realidade do produto.</p>
-
-      <h1><strong>Como começar</strong></h1>
+      <h2><strong>Como começar</strong></h2>
       <p>Selecione abordagens de vídeo alinhadas com a identidade da sua marca e comece a implementação. Deixe o feedback dos clientes e as métricas guiarem o refinamento posterior da estratégia. Os resultados do negócio indicarão a abordagem mais eficaz para o seu contexto específico. Não espere a produção perfeita — comece com o que você tem e evolua com base nos dados.</p>
-
-      <h1><strong>Benefícios comprovados dos vídeos de produto</strong></h1>
-      <p>• Clientes entendem melhor o produto antes de comprar, reduzindo devoluções;<br />• Maior tempo de permanência no site, melhorando o SEO;<br />• Maior taxa de conversão em comparação com páginas apenas com fotos;<br />• Diferenciação competitiva em um mercado saturado;<br />• Prova social quando os vídeos incluem depoimentos de clientes reais.</p>
+      <h2><strong>Benefícios comprovados dos vídeos de produto</strong></h2>
+      <ul>
+        <li>Clientes entendem melhor o produto antes de comprar, reduzindo devoluções;</li>
+        <li>Maior tempo de permanência no site, melhorando o SEO;</li>
+        <li>Maior taxa de conversão em comparação com páginas apenas com fotos;</li>
+        <li>Diferenciação competitiva em um mercado saturado;</li>
+        <li>Prova social quando os vídeos incluem depoimentos de clientes reais.</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

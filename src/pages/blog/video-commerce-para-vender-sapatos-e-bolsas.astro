@@ -1,31 +1,40 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Video Commerce para vender Sapatos e Bolsas" description="Guia de Video Commerce para sapatos e bolsas: como filmar conforto, caimento, capacidade e detalhes que eliminam dúvidas e aumentam conversão no e-commerce." canonical="https://widde.io/blog/video-commerce-para-vender-sapatos-e-bolsas">
-  <BlogArticle client:load title="Video Commerce para vender Sapatos e Bolsas" category="Video Commerce" date="13.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6632346488db562548ee081c_sapato-bolsas%20(1).avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Video Commerce para vender Sapatos e Bolsas"
+  description="O Video Commerce é extremamente útil para quem quer ver as vendas aumentarem em categorias de sapatos e bolsas. As fotos nem sempre conseguem transmitir as"
+  canonical="https://widde.io/blog/video-commerce-para-vender-sapatos-e-bolsas"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/video-commerce-para-vender-sapatos-e-bolsas/6632346488db562548ee081c_sapato-bolsas-1).avif"
+  datePublished="2025-05-13"
+>
+  <BlogArticle
+    client:load
+    title="Video Commerce para vender Sapatos e Bolsas"
+    category="Video Commerce"
+    date="13.05.2025"
+    readingTime="4 minutos de leitura"
+    coverImage="/assets/blog/video-commerce-para-vender-sapatos-e-bolsas/6632346488db562548ee081c_sapato-bolsas-1).avif"
+    currentSlug="video-commerce-para-vender-sapatos-e-bolsas"
+  >
     <div>
       <p>O Video Commerce é extremamente útil para quem quer ver as vendas aumentarem em categorias de sapatos e bolsas. As fotos nem sempre conseguem transmitir as informações mais importantes que os clientes precisam para se sentir seguros na compra — e é aí que os vídeos fazem a diferença.</p>
-
-      <h1><strong>Video Commerce para Bolsas</strong></h1>
+      <h2><strong>Video Commerce para Bolsas</strong></h2>
       <p><strong>Tamanho e espaço interno:</strong> Os clientes querem saber o que cabe dentro de uma bolsa. Como as fotos não conseguem transmitir as dimensões reais, os vídeos devem mostrar o interior, as alças adicionais, a ajustabilidade e a capacidade. Demonstrar o caimento com um smartphone ou outros itens do dia a dia ajuda os espectadores a entender a verdadeira capacidade da bolsa.</p>
       <p><strong>Formas de usar e caimento no corpo:</strong> Os vídeos devem mostrar como a bolsa fica em diferentes tipos de corpo e alturas. Os espectadores precisam de respostas sobre tipos de fechamento, fivelas magnéticas, zíperes e ajustabilidade da alça para construir confiança. Adicionar itens comuns como cadernos ajuda os consumidores a entender as proporções sem depender de medidas exatas.</p>
-
-      <h1><strong>Video Commerce para Sapatos</strong></h1>
+      <h2><strong>Video Commerce para Sapatos</strong></h2>
       <p><strong>Conforto:</strong> Como o conforto é primordial, as imagens devem mostrar o sapato sendo usado enquanto caminha. Os recursos elásticos, os pontos de pressão e o acolchoamento devem ser demonstrados com peso aplicado para que o espectador possa entender como o calçado se comporta no uso real.</p>
       <p><strong>Diferentes ângulos:</strong> Vídeos combinando imagens em mão (mostrando detalhes, costuras, elasticidade, material e cores) com imagens de uso (andando, demonstrando diversas ocasiões de estilo) proporcionam uma compreensão abrangente do produto. Mostre o salto de perto, a plataforma, a palmilha e qualquer detalhe construtivo relevante.</p>
-
-      <h1><strong>Dicas gerais para sapatos e bolsas</strong></h1>
-      <p>• Mostre o produto sendo usado por modelos reais, não apenas estático;<br />• Demonstre diferentes looks e ocasiões de uso para ampliar o apelo;<br />• Inclua close-ups de materiais, costuras e acabamentos;<br />• Responda as dúvidas mais comuns do SAC nos vídeos;<br />• Adicione legendas para visualização sem áudio.</p>
+      <h2><strong>Dicas gerais para sapatos e bolsas</strong></h2>
+      <ul>
+        <li>Mostre o produto sendo usado por modelos reais, não apenas estático;</li>
+        <li>Demonstre diferentes looks e ocasiões de uso para ampliar o apelo;</li>
+        <li>Inclua close-ups de materiais, costuras e acabamentos;</li>
+        <li>Responda as dúvidas mais comuns do SAC nos vídeos;</li>
+        <li>Adicione legendas para visualização sem áudio.</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

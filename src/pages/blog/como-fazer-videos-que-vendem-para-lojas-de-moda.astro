@@ -1,32 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como fazer vídeos que vendem para lojas de Moda" description="Guia prático para criar vídeos que vendem em lojas de moda online: como abordar dúvidas dos clientes, humanizar o conteúdo e mostrar diferentes tipos de corpo." canonical="https://widde.io/blog/como-fazer-videos-que-vendem-para-lojas-de-moda">
-  <BlogArticle client:load title="Como fazer vídeos que vendem para lojas de Moda" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/663151f051c5468bf97512fb_Como%20fazer%20v%C3%ADdeos%20que%20vendem%20para%20lojas%20de%20Moda.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como fazer vídeos que vendem para lojas de Moda"
+  description="As plataformas de e-commerce de moda exigem engajamento altamente personalizado com os clientes. Os clientes exigem cada vez mais uma compreensão detalhada"
+  canonical="https://widde.io/blog/como-fazer-videos-que-vendem-para-lojas-de-moda"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-fazer-videos-que-vendem-para-lojas-de-moda/663151f051c5468bf97512fb_Como-fazer-v-deos-que-vendem-para-lojas-de-Moda.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Como fazer vídeos que vendem para lojas de Moda"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/como-fazer-videos-que-vendem-para-lojas-de-moda/663151f051c5468bf97512fb_Como-fazer-v-deos-que-vendem-para-lojas-de-Moda.avif"
+    currentSlug="como-fazer-videos-que-vendem-para-lojas-de-moda"
+  >
     <div>
       <p>As plataformas de e-commerce de moda exigem engajamento altamente personalizado com os clientes. Os clientes exigem cada vez mais uma compreensão detalhada do produto antes de comprar. Com a crescente concorrência online, mostrar como as peças ficam no corpo, as medidas do modelo, sugestões de estilo e outros detalhes tornou-se essencial para converter visitantes em compradores.</p>
-
-      <h1><strong>1. Aborde as preocupações dos clientes</strong></h1>
+      <h2><strong>1. Aborde as preocupações dos clientes</strong></h2>
       <p>Identificar e responder às objeções dos clientes forma a base do conteúdo eficaz de vídeo. Perguntas comuns incluem detalhes de caimento, especificações do tecido, transparência e propriedades de elasticidade. Essas e muitas outras dúvidas sempre estarão presentes na mente dos clientes. Coletar feedback por meio de plataformas de Video Commerce ajuda os criadores a antecipar essas preocupações e criar conteúdo que as responda antes mesmo de serem feitas.</p>
-
-      <h1><strong>2. Abordagem de conteúdo humanizado</strong></h1>
+      <h2><strong>2. Abordagem de conteúdo humanizado</strong></h2>
       <p>Evite produções de estúdio excessivamente polidas que distanciam os espectadores da experiência autêntica. As demonstrações filmadas no espelho e os ambientes naturais se mostram mais eficazes. Os clientes querem ver a realidade do produto. Exemplos de clientes incluem a abordagem de duplo formato da Inti Brand (estúdio + provador) e a técnica da LV Store de mostrar três opções distintas de combinação por peça.</p>
-
-      <h1><strong>3. Múltiplos tipos de corpo e tamanhos</strong></h1>
+      <h2><strong>3. Múltiplos tipos de corpo e tamanhos</strong></h2>
       <p>Apresentar os mesmos produtos em diferentes tipos de corpo com diferentes combinações de estilo aumenta a identificação dos clientes. Essa diversidade eleva os valores médios das transações, pois os clientes descobrem múltiplas peças coordenadas que correspondem às suas preferências e tamanhos. Quando os compradores se veem representados nos vídeos, a confiança na compra aumenta significativamente.</p>
-
-      <h1><strong>Dicas práticas de produção</strong></h1>
-      <p>• Mostre o tecido por dentro e por fora para evidenciar a qualidade;<br />• Demonstre o caimento de frente, de costas e de perfil;<br />• Indique as medidas do modelo e os tamanhos que está usando;<br />• Mostre a transparência do tecido com luz de fundo;<br />• Apresente combinações de looks com outras peças da loja para aumentar o ticket médio;<br />• Grave em ambientes limpos com boa iluminação, mesmo que seja natural.</p>
+      <h2><strong>Dicas práticas de produção</strong></h2>
+      <ul>
+        <li>Mostre o tecido por dentro e por fora para evidenciar a qualidade;</li>
+        <li>Demonstre o caimento de frente, de costas e de perfil;</li>
+        <li>Indique as medidas do modelo e os tamanhos que está usando;</li>
+        <li>Mostre a transparência do tecido com luz de fundo;</li>
+        <li>Apresente combinações de looks com outras peças da loja para aumentar o ticket médio;</li>
+        <li>Grave em ambientes limpos com boa iluminação, mesmo que seja natural.</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

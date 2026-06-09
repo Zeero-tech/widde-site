@@ -1,31 +1,48 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Conteúdo gerado pelo usuário nos canais da marca" description="Saiba como usar o conteúdo gerado pelo usuário (UGC) nos canais da sua marca para aumentar a autenticidade, o engajamento e as conversões no e-commerce." canonical="https://widde.io/blog/conteudo-gerado-pelo-usuario-nos-canais-da-marca">
-  <BlogArticle client:load title="Conteúdo gerado pelo usuário nos canais da marca" category="Marketing" date="12.05.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66c37d62066fa45ddee0609e_Conte%C3%BAdo%20do%20usu%C3%A1rio%20nos%20canais%20da%20marca.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Conteúdo gerado pelo usuário nos canais da marca"
+  description="O conteúdo gerado pelo usuário (UGC) representa uma estratégia de marketing envolvente onde os clientes participam ativamente na criação de conteúdo sobre os produtos ou serviços de uma empresa."
+  canonical="https://widde.io/blog/conteudo-gerado-pelo-usuario-nos-canais-da-marca"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/conteudo-gerado-pelo-usuario-nos-canais-da-marca/66c37d62066fa45ddee0609e_Conte-do-do-usu-rio-nos-canais-da-marca.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Conteúdo gerado pelo usuário nos canais da marca"
+    category="Marketing"
+    date="12.05.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/conteudo-gerado-pelo-usuario-nos-canais-da-marca/66c37d62066fa45ddee0609e_Conte-do-do-usu-rio-nos-canais-da-marca.avif"
+    currentSlug="conteudo-gerado-pelo-usuario-nos-canais-da-marca"
+  >
     <div>
       <p>O conteúdo gerado pelo usuário (UGC) representa uma estratégia de marketing envolvente onde os clientes participam ativamente na criação de conteúdo sobre os produtos ou serviços de uma empresa. Isso engloba avaliações, fotos, vídeos, postagens em redes sociais e blogs. O valor reside na autenticidade e credibilidade — os consumidores confiam nas experiências dos pares mais do que na publicidade tradicional.</p>
-
-      <h1><strong>Tipos de conteúdo gerado pelo usuário</strong></h1>
-      <p>• <strong>Avaliações e depoimentos:</strong> Opiniões detalhadas dos clientes em sites de e-commerce e plataformas de avaliação oferecem avaliações genuínas da qualidade do produto;<br />• <strong>Conteúdo visual:</strong> Fotos e vídeos mostrando o uso diário do produto — incluindo unboxings, tutoriais e demonstrações de antes e depois — capturam a atenção de forma eficaz;<br />• <strong>Posts nas redes sociais:</strong> Publicações no Facebook, Instagram, Twitter e TikTok com hashtags possibilitam potencial viral e maior alcance;<br />• <strong>Conteúdo escrito:</strong> Blogs detalhados oferecendo análises aprofundadas, comparações com concorrentes e recomendações pessoais;<br />• <strong>Vídeos no e-commerce:</strong> A integração na plataforma permite colocação direta de vídeos nas páginas de produto, melhorando a confiança do consumidor e as taxas de conversão.</p>
-
-      <h1><strong>Por que as marcas priorizam o UGC</strong></h1>
-      <p>• <strong>Autenticidade:</strong> O UGC é percebido como imparcial e honesto em comparação com o conteúdo criado pela marca;<br />• <strong>Engajamento:</strong> O reconhecimento motiva a fidelidade e a interação contínua dos clientes;<br />• <strong>Visibilidade:</strong> O compartilhamento orgânico alcança públicos significativamente maiores do que as campanhas pagas.</p>
-
-      <h1><strong>Estratégias para incentivar a criação de UGC</strong></h1>
-      <p>• <strong>Concursos e desafios:</strong> Competições nas redes sociais oferecendo prêmios atrativos para envios de conteúdo;<br />• <strong>Reconhecimento:</strong> Destacar o melhor conteúdo nos canais oficiais serve como motivação poderosa;<br />• <strong>Campanhas com hashtags:</strong> Hashtags de marca melhoram a descoberta e a visibilidade do conteúdo;<br />• <strong>Incentivos para avaliações:</strong> E-mails pós-compra oferecendo descontos incentivam feedback detalhado sobre o produto.</p>
-
-      <h1><strong>UGC no e-commerce com a Widde</strong></h1>
+      <h2><strong>Tipos de conteúdo gerado pelo usuário</strong></h2>
+      <ul>
+        <li><strong>Avaliações e depoimentos:</strong> Opiniões detalhadas dos clientes em sites de e-commerce e plataformas de avaliação oferecem avaliações genuínas da qualidade do produto;</li>
+        <li><strong>Conteúdo visual:</strong> Fotos e vídeos mostrando o uso diário do produto — incluindo unboxings, tutoriais e demonstrações de antes e depois — capturam a atenção de forma eficaz;</li>
+        <li><strong>Posts nas redes sociais:</strong> Publicações no Facebook, Instagram, Twitter e TikTok com hashtags possibilitam potencial viral e maior alcance;</li>
+        <li><strong>Conteúdo escrito:</strong> Blogs detalhados oferecendo análises aprofundadas, comparações com concorrentes e recomendações pessoais;</li>
+        <li><strong>Vídeos no e-commerce:</strong> A integração na plataforma permite colocação direta de vídeos nas páginas de produto, melhorando a confiança do consumidor e as taxas de conversão.</li>
+      </ul>
+      <h2><strong>Por que as marcas priorizam o UGC</strong></h2>
+      <ul>
+        <li><strong>Autenticidade:</strong> O UGC é percebido como imparcial e honesto em comparação com o conteúdo criado pela marca;</li>
+        <li><strong>Engajamento:</strong> O reconhecimento motiva a fidelidade e a interação contínua dos clientes;</li>
+        <li><strong>Visibilidade:</strong> O compartilhamento orgânico alcança públicos significativamente maiores do que as campanhas pagas.</li>
+      </ul>
+      <h2><strong>Estratégias para incentivar a criação de UGC</strong></h2>
+      <ul>
+        <li><strong>Concursos e desafios:</strong> Competições nas redes sociais oferecendo prêmios atrativos para envios de conteúdo;</li>
+        <li><strong>Reconhecimento:</strong> Destacar o melhor conteúdo nos canais oficiais serve como motivação poderosa;</li>
+        <li><strong>Campanhas com hashtags:</strong> Hashtags de marca melhoram a descoberta e a visibilidade do conteúdo;</li>
+        <li><strong>Incentivos para avaliações:</strong> E-mails pós-compra oferecendo descontos incentivam feedback detalhado sobre o produto.</li>
+      </ul>
+      <h2><strong>UGC no e-commerce com a Widde</strong></h2>
       <p>A Widde permite a integração perfeita de vídeos em todas as páginas do e-commerce — homepage, categoria, páginas de produto. A plataforma permite capturar e moderar vídeos de clientes enquanto facilita a coleta de UGC por meio de convites e programas de incentivo, aumentando a retenção de clientes e as vendas. Integrar o UGC diretamente nas páginas de produto proporciona a prova social que os consumidores buscam no momento da decisão de compra.</p>
     </div>
   </BlogArticle>

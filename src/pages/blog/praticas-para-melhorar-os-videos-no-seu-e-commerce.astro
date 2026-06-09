@@ -1,40 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="7 práticas para melhorar os vídeos no seu e-commerce" description="O Video Commerce é uma estratégia indispensável para engajar clientes e aumentar vendas. Conheça as 7 práticas para melhorar os seus vídeos no e-commerce." canonical="https://widde.io/blog/praticas-para-melhorar-os-videos-no-seu-e-commerce">
-  <BlogArticle client:load title="7 práticas para melhorar os vídeos no seu e-commerce" category="Video Commerce" date="06.01.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/676973a03facb734dd83c9a9_pr%C3%A1ticas%20para%20v%C3%ADdeos%20no%20e-commerce%20.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="7 práticas para melhorar os vídeos no seu e-commerce"
+  description="O Video Commerce é uma estratégia indispensável para engajar clientes e aumentar vendas. Veja as práticas recomendadas para melhorar a performance dos vídeos no seu e-commerce."
+  canonical="https://widde.io/blog/praticas-para-melhorar-os-videos-no-seu-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/praticas-para-melhorar-os-videos-no-seu-e-commerce/676973a03facb734dd83c9a9_pr-ticas-para-v-deos-no-e-commerce-.avif"
+  datePublished="2025-01-06"
+>
+  <BlogArticle
+    client:load
+    title="7 práticas para melhorar os vídeos no seu e-commerce"
+    category="Video Commerce"
+    date="06.01.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/praticas-para-melhorar-os-videos-no-seu-e-commerce/676973a03facb734dd83c9a9_pr-ticas-para-v-deos-no-e-commerce-.avif"
+    currentSlug="praticas-para-melhorar-os-videos-no-seu-e-commerce"
+  >
     <div>
       <p>O Video Commerce é uma estratégia indispensável para engajar clientes e aumentar vendas. Veja as práticas recomendadas para melhorar a performance dos vídeos no seu e-commerce, capturando a atenção dos visitantes desde os primeiros segundos com uma mensagem objetiva.</p>
-
-      <h1><strong>1. Direto ao ponto</strong></h1>
+      <h2><strong>1. Direto ao ponto</strong></h2>
       <p>O tempo é crítico no e-commerce. Os públicos não têm paciência para vídeos longos e confusos. O conteúdo deve captar imediatamente a atenção do espectador com mensagens que destacam a diferenciação e os benefícios principais do produto. As demonstrações práticas devem começar imediatamente, sem demoras. As ofertas promocionais merecem ênfase imediata. Introduções profissionais mantêm o interesse do cliente de forma eficaz.</p>
-
-      <h1><strong>2. Racionalidade</strong></h1>
+      <h2><strong>2. Racionalidade</strong></h2>
       <p>Combinar emoção com argumentação lógica cria decisões de compra eficazes. Inclua especificações técnicas, indicadores de qualidade, certificações e resultados comprovados. Eletrônicos requerem discussão de funcionalidade, durabilidade e garantias. Roupas exigem atenção a materiais, tamanhos e possíveis combinações. Os argumentos racionais consolidam a decisão de compra assertiva enquanto reduzem devoluções e reclamações futuras.</p>
-
-      <h1><strong>3. Seja fácil de entender</strong></h1>
+      <h2><strong>3. Seja fácil de entender</strong></h2>
       <p>A simplicidade é fundamental. A mensagem precisa ser acessível independentemente do público-alvo. Evite jargões técnicos, explicações complicadas e conteúdo desnecessário. Use linguagem direta combinada com elementos visuais. Legendas e gráficos reforçam os pontos principais. Produtos complexos se beneficiam de explicações segmentadas. Conteúdo fácil de entender resolve as dúvidas dos consumidores e constrói confiança na marca.</p>
-
-      <h1><strong>4. Levante tópicos</strong></h1>
+      <h2><strong>4. Levante tópicos</strong></h2>
       <p>O conteúdo estruturado mantém o engajamento do espectador. A organização clara por tópicos ajuda os públicos a acompanhar as apresentações e absorver as mensagens principais. Vídeos de eletrodomésticos podem dividir em "funcionalidade", "vantagens" e "dicas de uso". Conteúdo de roupas inclui "materiais", "tamanhos" e "combinações". Essa abordagem aumenta a memorabilidade e destaca informações importantes de forma prática.</p>
-
-      <h1><strong>5. Feedbacks e dúvidas</strong></h1>
+      <h2><strong>5. Feedbacks e dúvidas</strong></h2>
       <p>Os vídeos devem ser interativos, não apenas informativos. Convidar comentários dos clientes demonstra a disposição da marca em ouvir e engajar. Prompts ao final do vídeo solicitando perguntas e feedbacks atendem a esse propósito. As respostas dos consumidores melhoram o desenvolvimento de conteúdo futuro e o refinamento da estratégia.</p>
-
-      <h1><strong>6. Conteúdos interativos</strong></h1>
+      <h2><strong>6. Conteúdos interativos</strong></h2>
       <p>Os vídeos interativos representam tendências crescentes no e-commerce, transformando as experiências de compra online. Elementos clicáveis permitem que os consumidores acessem informações adicionais ou adicionem itens ao carrinho diretamente. Os botões podem redirecionar para páginas de compra ou revelar detalhes do produto. Essa abordagem simplifica o processo de compra e prolonga o tempo de atenção dos espectadores.</p>
-
-      <h1><strong>7. Conheça a Widde para Video Commerce</strong></h1>
+      <h2><strong>7. Conheça a Widde para Video Commerce</strong></h2>
       <p>A Widde é uma plataforma de Video Commerce que transforma as experiências de compra no e-commerce. O serviço integra vídeos interativos — incluindo demonstrações, tutoriais e promoções — diretamente nas páginas de produto sem afetar a velocidade do site. As funcionalidades incluem carrinhos de compras incorporados e feeds de vídeo. Os dashboards de análise rastreiam o impacto dos vídeos, permitindo a otimização da estratégia.</p>
     </div>
   </BlogArticle>

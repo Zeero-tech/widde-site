@@ -1,61 +1,53 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como fazer vídeo para e-commerce? As 14 dicas para gravar!" description="Aprenda como fazer vídeos para e-commerce com 14 dicas práticas: depoimentos, áudio, iluminação, storytelling, CTA, A/B testing e integração com a Widde." canonical="https://widde.io/blog/como-fazer-video-para-e-commerce">
-  <BlogArticle client:load title="Como fazer vídeo para e-commerce? As 14 dicas para gravar!" category="Video Commerce" date="22.10.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/669910b64575a0fb15facfbd_8%20dicas%20para%20gravar%20v%C3%ADdeos%20no%20e-commerce%20(4).avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como fazer vídeo para e-commerce? As 14 dicas para gravar!"
+  description="O Video Commerce combina os benefícios dos vídeos com a conveniência das compras online, criando experiências interativas e humanizadas."
+  canonical="https://widde.io/blog/como-fazer-video-para-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-fazer-video-para-e-commerce/669910b64575a0fb15facfbd_8-dicas-para-gravar-v-deos-no-e-commerce-4).avif"
+  datePublished="2025-10-22"
+>
+  <BlogArticle
+    client:load
+    title="Como fazer vídeo para e-commerce? As 14 dicas para gravar!"
+    category="Video Commerce"
+    date="22.10.2025"
+    readingTime="7 minutos de leitura"
+    coverImage="/assets/blog/como-fazer-video-para-e-commerce/669910b64575a0fb15facfbd_8-dicas-para-gravar-v-deos-no-e-commerce-4).avif"
+    currentSlug="como-fazer-video-para-e-commerce"
+  >
     <div>
       <p>O Video Commerce combina os benefícios dos vídeos com a conveniência das compras online, criando experiências interativas e humanizadas. Os consumidores ganham confiança ao ver os produtos em ação e ouvir depoimentos de clientes. Os vídeos criam mais conexão e aumentam as vendas — os consumidores passam 5 vezes mais tempo em lojas que usam vídeos, e as taxas de conversão podem ser 4 a 7 vezes maiores.</p>
-
-      <h1><strong>1. Inclua depoimentos de clientes</strong></h1>
+      <h2><strong>1. Inclua depoimentos de clientes</strong></h2>
       <p>Avaliações autênticas e genuínas constroem credibilidade e confiança. Depoimentos reais de clientes satisfeitos são uma das formas mais poderosas de influenciar a decisão de compra de novos consumidores.</p>
-
-      <h1><strong>2. Mantenha um áudio claro</strong></h1>
+      <h2><strong>2. Mantenha um áudio claro</strong></h2>
       <p>Invista em microfones de qualidade; um áudio ruim afasta os espectadores rapidamente. Grave em ambientes silenciosos e verifique a qualidade do som antes de publicar.</p>
-
-      <h1><strong>3. Mostre o uso real do produto</strong></h1>
+      <h2><strong>3. Mostre o uso real do produto</strong></h2>
       <p>Demonstre a funcionalidade em vários cenários e ângulos. Os clientes querem ver o produto sendo usado na prática para se sentirem seguros na compra.</p>
-
-      <h1><strong>4. Destaque os benefícios do produto</strong></h1>
+      <h2><strong>4. Destaque os benefícios do produto</strong></h2>
       <p>Explique de forma concisa como os produtos resolvem problemas. Foque no valor prático para o cliente, não apenas nas características técnicas.</p>
-
-      <h1><strong>5. Adicione uma chamada para ação clara</strong></h1>
+      <h2><strong>5. Adicione uma chamada para ação clara</strong></h2>
       <p>Guie os espectadores para os próximos passos — compra, inscrição na newsletter ou seguir nas redes sociais. A CTA deve aparecer em momentos estratégicos do vídeo.</p>
-
-      <h1><strong>6. Mantenha os vídeos curtos</strong></h1>
+      <h2><strong>6. Mantenha os vídeos curtos</strong></h2>
       <p>O comprimento ideal é entre 1 a 2 minutos. Vídeos concisos mantêm o engajamento e respeitam o tempo limitado do espectador.</p>
-
-      <h1><strong>7. Use iluminação adequada</strong></h1>
+      <h2><strong>7. Use iluminação adequada</strong></h2>
       <p>A iluminação profissional melhora a visibilidade do produto e a credibilidade da marca. Boa iluminação é um dos fatores que mais impactam a qualidade percebida dos vídeos.</p>
-
-      <h1><strong>8. Utilize storytelling</strong></h1>
+      <h2><strong>8. Utilize storytelling</strong></h2>
       <p>Conecte-se emocionalmente mostrando como os produtos melhoram a vida dos clientes. Histórias reais e autênticas criam conexões mais profundas do que simples descrições de produto.</p>
-
-      <h1><strong>9. Crie séries de vídeos</strong></h1>
+      <h2><strong>9. Crie séries de vídeos</strong></h2>
       <p>Conteúdo em múltiplos episódios aumenta o engajamento e a retenção. Séries de vídeos incentivam os clientes a retornar ao site regularmente para assistir ao próximo episódio.</p>
-
-      <h1><strong>10. Incorpore animações e gráficos</strong></h1>
+      <h2><strong>10. Incorpore animações e gráficos</strong></h2>
       <p>Simplifique visualmente informações complexas. Animações são especialmente eficazes para explicar funcionalidades técnicas ou processos de múltiplas etapas.</p>
-
-      <h1><strong>11. Personalize para segmentos</strong></h1>
+      <h2><strong>11. Personalize para segmentos</strong></h2>
       <p>Crie conteúdo relevante direcionado a grupos específicos do seu público. Diferentes segmentos de clientes têm necessidades e preocupações diferentes que seu vídeo deve abordar.</p>
-
-      <h1><strong>12. Realize testes A/B</strong></h1>
+      <h2><strong>12. Realize testes A/B</strong></h2>
       <p>Teste diferentes elementos para otimizar a performance. Experimente variações de thumbnails, durações, abordagens de roteiro e posicionamento de CTA para descobrir o que funciona melhor.</p>
-
-      <h1><strong>13. Adicione legendas</strong></h1>
+      <h2><strong>13. Adicione legendas</strong></h2>
       <p>Muitas pessoas assistem vídeos sem som, especialmente em dispositivos móveis. As legendas aumentam a acessibilidade e garantem que a mensagem chegue a todos os espectadores.</p>
-
-      <h1><strong>14. Use a plataforma Widde</strong></h1>
+      <h2><strong>14. Use a plataforma Widde</strong></h2>
       <p>Acompanhe métricas como tempo de engajamento do usuário para otimizar continuamente sua estratégia de Video Commerce. O dashboard da Widde fornece dados sobre conversão, retenção e comentários dos clientes para orientar a produção de conteúdo.</p>
     </div>
   </BlogArticle>

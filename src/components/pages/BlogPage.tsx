@@ -22,7 +22,7 @@ const featuredPost = {
   title:
     "Alta performance em e-commerce: o que realmente funciona em qualquer segmento",
   image:
-    "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png",
+    "/assets/components/pages/69bdb59cfdad17b6dc8d144e_Blog-artigo-FG.png",
 };
 
 const posts: Post[] = [
@@ -34,7 +34,7 @@ const posts: Post[] = [
     description:
       "Dados reais de operações brasileiras, cases de marcas que já aplicam o Video Commerce na prática e projeções sobre o papel do vídeo na jornada de compra.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png",
+      "/assets/components/pages/69a5dc73c9b53384264daa9a_Capa-do-blog-report.png",
     imageW: 361,
     imageH: 233,
   },
@@ -47,7 +47,7 @@ const posts: Post[] = [
     description:
       "Em 2026, crescer não será apenas uma questão de tráfego, mas de experiência, narrativa e eficiência na conversão.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png",
+      "/assets/components/pages/698b673c48ba63b42f2c37f6_Blog-Checklist-copiar.png",
     imageW: 361,
     imageH: 233,
   },
@@ -59,7 +59,7 @@ const posts: Post[] = [
     description:
       "As pessoas não seguem mais um caminho previsível entre descobrir uma marca, avaliar opções e comprar.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png",
+      "/assets/components/pages/69736a5d3653bac3dde3eef9_Blog-como-fidelizar-no-e-commerce.png",
     imageW: 363,
     imageH: 234,
   },
@@ -72,7 +72,7 @@ const posts: Post[] = [
     description:
       "Em um cenário em que a atenção do consumidor é cada vez mais disputada e a jornada de compra se torna menos linear.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png",
+      "/assets/components/pages/696a4136d272a14015d442ea_capa-shoppable-videos-2.png",
     imageW: 361,
     imageH: 233,
   },
@@ -85,7 +85,7 @@ const posts: Post[] = [
     description:
       "O vídeo deixou de ser apenas um formato de comunicação para se consolidar como um canal relevante de descoberta, engajamento e conversão no e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696141384fe221769b9e530a_Thumbnail.png",
+      "/assets/components/pages/696141384fe221769b9e530a_Thumbnail.png",
     imageW: 361,
     imageH: 233,
   },
@@ -110,7 +110,7 @@ const posts: Post[] = [
     description:
       "Entenda por que o TikTok Shop está redefinindo o e-commerce. Um guia completo para quem deseja crescer utilizando o maior canal de descoberta da atualidade.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6932f3e08775eaf14aea5fcf_Coolab%20com%20Flavio%20B%201.png",
+      "/assets/components/pages/6932f3e08775eaf14aea5fcf_Coolab-com-Flavio-B-1.png",
     imageW: 361,
     imageH: 233,
   },
@@ -122,7 +122,7 @@ const posts: Post[] = [
     description:
       "Em um cenário de anúncios disputados, carrinhos abandonados e consumidores indecisos, até mesmo lojas de segmentos diferentes se tornam competidoras.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69137f6f444d325befaefe49_Como%20o%20v%C3%ADdeo%20se%20tornou%20o%20motor%20das%20convers%C3%B5es.png",
+      "/assets/components/pages/69137f6f444d325befaefe49_Como-o-v-deo-se-tornou-o-motor-das-convers-es.png",
     imageW: 361,
     imageH: 233,
   },
@@ -135,7 +135,7 @@ const posts: Post[] = [
     description:
       "A lógica do Discovery Commerce virou o motor de plataformas como o TikTok Shop e começa a redefinir também o e-commerce tradicional.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68e675e24e75460b85777d33_Blog_%20Sua%20loja%20online%20est%C3%A1%20pronta%20para%20o%20Discovery%20Commerce.png",
+      "/assets/components/pages/68e675e24e75460b85777d33_Blog_-Sua-loja-online-est-pronta-para-o-Discovery-Commerce.png",
     imageW: 363,
     imageH: 234,
   },
@@ -148,7 +148,7 @@ const posts: Post[] = [
     description:
       "Como utilizar a Widde como estratégia nas campanhas, estruturando e distribuindo os vídeos no site e integrando-os à jornada do cliente.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68ffb38b43f0c6c0cecd6986_Como%20usar%20o%20Video%20para%20vender%20mais%20na%20Blakc.png",
+      "/assets/components/pages/68ffb38b43f0c6c0cecd6986_Como-usar-o-Video-para-vender-mais-na-Blakc.png",
     imageW: 361,
     imageH: 233,
   },
@@ -161,7 +161,7 @@ const posts: Post[] = [
     description:
       "A Black Friday é, para muitas marcas, uma verdadeira corrida para se destacar da concorrência, por vezes oferecendo o maior desconto, e tentar bater metas.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68de6f277536e98cfc531e6e_Capa%20blog%20Como%20fazer%20uma%20Black%20Friday%20lucrativa%20com%20v%C3%ADdeo.png",
+      "/assets/components/pages/68de6f277536e98cfc531e6e_Capa-blog-Como-fazer-uma-Black-Friday-lucrativa-com-v-deo.png",
     imageW: 361,
     imageH: 233,
   },
@@ -173,7 +173,7 @@ const posts: Post[] = [
     description:
       "Um vídeo explicativo de produto é criado para apresentar, demonstrar e esclarecer o funcionamento, as vantagens e os diferenciais de um produto.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68d699f6dcb3f438b1cae87c_V%C3%ADdeo%20explicativo%20de%20produto_%20como%20fazer%20e%20implementar_.png",
+      "/assets/components/pages/68d699f6dcb3f438b1cae87c_V-deo-explicativo-de-produto_-como-fazer-e-implementar_.png",
     imageW: 363,
     imageH: 234,
   },
@@ -197,7 +197,7 @@ const posts: Post[] = [
     description:
       "Afinal, por que investir em fotos e vídeos profissionais para e-commerce?",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68af0c75cff4353f2393c176_Blog_%20Por%20que%20investir%20em%20v%C3%ADdeos%20profissionais_.png",
+      "/assets/components/pages/68af0c75cff4353f2393c176_Blog_-Por-que-investir-em-v-deos-profissionais_.png",
     imageW: 361,
     imageH: 233,
   },
@@ -221,7 +221,7 @@ const posts: Post[] = [
     description:
       "Se em 2024 os vídeos já foram um dos grandes responsáveis por impulsionar as vendas no e-commerce, imagina o que vem por aí em 2025.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6893724a1859fac0f2cfc1b6_Artigo%20Black%20Friday%202025.png",
+      "/assets/components/pages/6893724a1859fac0f2cfc1b6_Artigo-Black-Friday-2025.png",
     imageW: 361,
     imageH: 233,
   },
@@ -245,7 +245,7 @@ const posts: Post[] = [
     description:
       "Como adicionar vídeo de produtos no WooCommerce? Um guia completo com tudo o que precisa saber.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6871206746bc57b16a1cb8fd_Como%20adicionar%20v%C3%ADdeos%20na%20woocommerce.png",
+      "/assets/components/pages/6871206746bc57b16a1cb8fd_Como-adicionar-v-deos-na-woocommerce.png",
     imageW: 363,
     imageH: 234,
   },
@@ -257,7 +257,7 @@ const posts: Post[] = [
     description:
       "Como adicionar vídeo de produtos no Magento? Um guia completo para adicionar vídeos nas páginas de produtos etc.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68628e467e5a7b11c65be81c_Como%20adicionar%20v%C3%ADdeo%20no%20Magento.png",
+      "/assets/components/pages/68628e467e5a7b11c65be81c_Como-adicionar-v-deo-no-Magento.png",
     imageW: 361,
     imageH: 233,
   },
@@ -269,7 +269,7 @@ const posts: Post[] = [
     description:
       "Como otimizar vídeos no e-commerce para SEO? Um guia completo com tudo o que precisa saber.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68595057fb551be3f2fd1ffa_Otimize%20v%C3%ADdeos%20no%20e-commerce%20para%20%20SEO.png",
+      "/assets/components/pages/68595057fb551be3f2fd1ffa_Otimize-v-deos-no-e-commerce-para-SEO.png",
     imageW: 361,
     imageH: 233,
   },
@@ -281,7 +281,7 @@ const posts: Post[] = [
     description:
       "Como reengajar usuários na loja virtual | As 12 dicas para começar a aplicar agora mesmo.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68516655ad9c7c37d698f890_Reengaje%20usuarios%20na%20loja%20virtual.png",
+      "/assets/components/pages/68516655ad9c7c37d698f890_Reengaje-usuarios-na-loja-virtual.png",
     imageW: 363,
     imageH: 234,
   },
@@ -294,7 +294,7 @@ const posts: Post[] = [
     description:
       "Widde confirma presença no Fórum E-commerce Brasil 2025 com soluções inéditas em Video Commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6848554ca0eb76998d83728b_Widde%20no%20f%C3%B3rum%20e-commerce%20brasil.png",
+      "/assets/components/pages/6848554ca0eb76998d83728b_Widde-no-f-rum-e-commerce-brasil.png",
     imageW: 361,
     imageH: 233,
   },
@@ -306,7 +306,7 @@ const posts: Post[] = [
     description:
       "Como converter visitantes em clientes no e-commerce? Um guia completo.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6835f16eb833c7821f92e564_Converta%20visitantes%20em%20clientes%20no%20e-commerce.avif",
+      "/assets/components/pages/6835f16eb833c7821f92e564_Converta-visitantes-em-clientes-no-e-commerce.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -318,7 +318,7 @@ const posts: Post[] = [
     description:
       "A Widde estará no VTEX Day 2025. Confira tudo sobre o evento conosco.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/682c7d31d90bd3f4ab5aa7a3_Widde%20no%20VTEX%20Day%202025%5B1%5D.avif",
+      "/assets/components/pages/682c7d31d90bd3f4ab5aa7a3_Widde-no-VTEX-Day-2025-1-.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -330,7 +330,7 @@ const posts: Post[] = [
     description:
       "Widde Pro | Um guia completo sobre as principais soluções e diferenciais.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226c9cc37dbc7c1406b50a_conhe%C3%A7a%20o%20widde%20pro.avif",
+      "/assets/components/pages/68226c9cc37dbc7c1406b50a_conhe-a-o-widde-pro.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -354,7 +354,7 @@ const posts: Post[] = [
     description:
       "Confira um guia completo com tudo o que você precisa saber sobre gestão de e-commerce, o que é, como funciona e dicas para fazer.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68126eaf9dbe4f1f6708afa6_Gest%C3%A3o%20de%20e-commerce.avif",
+      "/assets/components/pages/68126eaf9dbe4f1f6708afa6_Gest-o-de-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -366,7 +366,7 @@ const posts: Post[] = [
     description:
       "Um guia completo com tudo o que você precisa saber sobre o marketing de influência para e-commerce. Vem com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68090029d32c737a32f68cd7_Marketing%20de%20influ%C3%AAncia%20no%20e-commerce.avif",
+      "/assets/components/pages/68090029d32c737a32f68cd7_Marketing-de-influ-ncia-no-e-commerce.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -378,7 +378,7 @@ const posts: Post[] = [
     description:
       "Adicionar vídeos de produtos na Wake é uma forma de aumentar a interação do cliente e melhorar a experiência de compra. Veja como fazer com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67fd4081885c2a48a6f766ae_adicionar%20video%20waje.avif",
+      "/assets/components/pages/67fd4081885c2a48a6f766ae_adicionar-video-waje.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -390,7 +390,7 @@ const posts: Post[] = [
     description:
       "As plataformas sociais transformam fundamentalmente o e-commerce, mudando a descoberta de produtos e os comportamentos de compra. Saiba como usar isso a seu favor.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67fd3f6a05a2b256749e4a64_impacto%20de%20redes%20sociais%20ecommerce.avif",
+      "/assets/components/pages/67fd3f6a05a2b256749e4a64_impacto-de-redes-sociais-ecommerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -415,7 +415,7 @@ const posts: Post[] = [
     description:
       "Adicionar vídeos de produtos no BAGY é uma estratégia para aumentar conversões e melhorar a experiência do consumidor. Veja o passo a passo com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67f3dc1390bbbc1638f02e9a_Como%20adicionar%20v%C3%ADdeo%20na%20bagy.avif",
+      "/assets/components/pages/67f3dc1390bbbc1638f02e9a_Como-adicionar-v-deo-na-bagy.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -427,7 +427,7 @@ const posts: Post[] = [
     description:
       "A experiência háptica no e-commerce simula sensações táteis nas compras online. Saiba como essa tendência transforma a jornada do cliente e reduz devoluções.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67ec536ad97c8dd90306b576_IMG_3256.avif",
+      "/assets/components/pages/67ec536ad97c8dd90306b576_IMG_3256.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -439,7 +439,7 @@ const posts: Post[] = [
     description:
       "Saiba como adicionar vídeos de produtos na Loja Integrada de forma simples e sem comprometer a performance do site com a Widde Video Commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67e5878473e435b3211ba082_Como%20adicionar%20v%C3%ADdeo%20loja%20integrada.avif",
+      "/assets/components/pages/67e5878473e435b3211ba082_Como-adicionar-v-deo-loja-integrada.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -451,7 +451,7 @@ const posts: Post[] = [
     description:
       "O mercado brasileiro de e-commerce está em constante transformação. Descubra as principais tendências para os próximos anos e como se manter competitivo.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67e19ebe63e73c18552da636_Tend%C3%AAncias%20do%20e-commerce%20para%20os%20pr%C3%B3ximos%20anos.avif",
+      "/assets/components/pages/67e19ebe63e73c18552da636_Tend-ncias-do-e-commerce-para-os-pr-ximos-anos.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -463,7 +463,7 @@ const posts: Post[] = [
     description:
       "Incorporar vídeos na homepage do e-commerce melhora o engajamento, aumenta as conversões e fortalece a presença da marca. Conheça os formatos e benefícios.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67d98d9e7ca3d36cdc09bedb_Conhe%C3%A7a%20os%20v%C3%ADdeos%20na%20Home.avif",
+      "/assets/components/pages/67d98d9e7ca3d36cdc09bedb_Conhe-a-os-v-deos-na-Home.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -475,7 +475,7 @@ const posts: Post[] = [
     description:
       "Devoluções e trocas são desafios operacionais significativos no e-commerce. Descubra estratégias práticas para reduzir esse problema e melhorar a satisfação do cliente.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67d1b19b542d1b9da2ec4559_Diminua%20trocas%20e%20devoluc%CC%A7o%CC%83es%20no%20e-commercev.avif",
+      "/assets/components/pages/67d1b19b542d1b9da2ec4559_Diminua-trocas-e-devoluc-o-es-no-e-commercev.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -488,7 +488,7 @@ const posts: Post[] = [
     description:
       "Vídeos na Nuvemshop aumentam a visibilidade da loja e impulsionam as vendas. Veja como adicionar em páginas de produto, home e categorias com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67bdd8dc0e0e7364b212f296_como%20adicionar%20vi%CC%81deo%20de%20produtos%20na%20nuvemshop.avif",
+      "/assets/components/pages/67bdd8dc0e0e7364b212f296_como-adicionar-vi-deo-de-produtos-na-nuvemshop.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -500,7 +500,7 @@ const posts: Post[] = [
     description:
       "A Widde permite reutilizar vídeos das redes sociais diretamente no e-commerce, convertendo-os em ferramentas de venda nas páginas de produtos e categorias.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67b363c9448bc97111f958bd_Vi%CC%81deos%20das%20redes%20sociais%20%20no%20seu%20e-commerce.avif",
+      "/assets/components/pages/67b363c9448bc97111f958bd_Vi-deos-das-redes-sociais-no-seu-e-commerce.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -512,7 +512,7 @@ const posts: Post[] = [
     description:
       "Adicionar vídeos nas páginas de produtos, home e categorias da TRAY oferece um diferencial para aumentar conversões e engajamento. Veja o passo a passo com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67aa2e1820a39d2beb042d0e_como%20adicionar%20vi%CC%81deo%20de%20produtos%20na%20tray.avif",
+      "/assets/components/pages/67aa2e1820a39d2beb042d0e_como-adicionar-vi-deo-de-produtos-na-tray.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -536,7 +536,7 @@ const posts: Post[] = [
     description:
       "O Video Commerce está mudando a forma como os consumidores interagem com produtos no e-commerce. Conheça os formatos e opções de personalização disponíveis na Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6798dce37777b8c419262fb1_Formatos%20e%20personaliza%C3%A7%C3%A3o%20dos%20v%C3%ADdeos.avif",
+      "/assets/components/pages/6798dce37777b8c419262fb1_Formatos-e-personaliza-o-dos-v-deos.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -548,7 +548,7 @@ const posts: Post[] = [
     description:
       "Descubra os 9 maiores benefícios do Video Commerce para o seu e-commerce: mais conversão, maior retenção, menos devoluções e uma experiência humanizada.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/678f9758461fdc7d4733fb6b_Maiores%20benef%C3%ADcios%20do%20Video%20Commerce.avif",
+      "/assets/components/pages/678f9758461fdc7d4733fb6b_Maiores-benef-cios-do-Video-Commerce.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -560,7 +560,7 @@ const posts: Post[] = [
     description:
       "Conheça os 4 principais formatos de vídeo para o seu e-commerce: bastidores, comparativos, unboxing e demonstrativos. Veja como cada um contribui para as vendas.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/678537faf754913ec29091a0_formatos%20de%20v%C3%ADdeos%20para%20e-commerce.avif",
+      "/assets/components/pages/678537faf754913ec29091a0_formatos-de-v-deos-para-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -572,7 +572,7 @@ const posts: Post[] = [
     description:
       "Adicionar vídeos no Shopify aumenta a confiança do consumidor, reduz dúvidas e diminui as taxas de devolução. Veja o passo a passo com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/677c46504cee25d6d4933403_Como%20adicionar%20v%C3%ADdeos%20na%20shopify.avif",
+      "/assets/components/pages/677c46504cee25d6d4933403_Como-adicionar-v-deos-na-shopify.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -584,7 +584,7 @@ const posts: Post[] = [
     description:
       "O Video Commerce é uma estratégia indispensável para engajar clientes e aumentar vendas. Conheça as 7 práticas para melhorar os seus vídeos no e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/676973a03facb734dd83c9a9_pr%C3%A1ticas%20para%20v%C3%ADdeos%20no%20e-commerce%20.avif",
+      "/assets/components/pages/676973a03facb734dd83c9a9_pr-ticas-para-v-deos-no-e-commerce-.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -608,7 +608,7 @@ const posts: Post[] = [
     description:
       "Construir confiança no e-commerce é essencial para o crescimento de vendas e a fidelização de clientes. Descubra 9 estratégias comprovadas para transmitir mais segurança.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6762d0d26a07c8b25506d020_Como%20passar%20mais%20confian%C3%A7a%20no%20e-commerce_.avif",
+      "/assets/components/pages/6762d0d26a07c8b25506d020_Como-passar-mais-confian-a-no-e-commerce_.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -620,7 +620,7 @@ const posts: Post[] = [
     description:
       "Adicionar descrições e vídeos aos produtos no e-commerce melhora a experiência do cliente e aumenta as vendas. Veja 11 dicas práticas com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/675731a95e6b121c8b63ad90_Descri%C3%A7%C3%B5es%20e%20v%C3%ADdeos%20dos%20produtos.avif",
+      "/assets/components/pages/675731a95e6b121c8b63ad90_Descri-es-e-v-deos-dos-produtos.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -632,7 +632,7 @@ const posts: Post[] = [
     description:
       "Aprenda a aumentar as vendas no e-commerce com vídeos. Conheça as melhores estratégias de Video Commerce para converter mais clientes e aumentar o engajamento.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6744a9f607317c15f40f9424_Converta%20mais%20vendas%20usando%20v%C3%ADdeos%20no%20e-commerce.avif",
+      "/assets/components/pages/6744a9f607317c15f40f9424_Converta-mais-vendas-usando-v-deos-no-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -645,7 +645,7 @@ const posts: Post[] = [
     description:
       "O Feed de Vídeos da Widde traz o formato de scroll infinito do TikTok para o e-commerce. Saiba como aumentar retenção, engajamento e conversão na sua loja.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/673f7859716e425bdee537b2_Feed%20de%20V%C3%ADdeos.avif",
+      "/assets/components/pages/673f7859716e425bdee537b2_Feed-de-V-deos.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -657,7 +657,7 @@ const posts: Post[] = [
     description:
       "Conheça as 8 melhores estratégias de marketing para e-commerce: Video Commerce, SEO, email marketing, influenciadores e mais. Aumente vendas e engajamento.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67326ddc5a4b9f310b1d38fd_8%20estrat%C3%A9gias%20de%20marketing%20para%20e-commerce.avif",
+      "/assets/components/pages/67326ddc5a4b9f310b1d38fd_8-estrat-gias-de-marketing-para-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -669,7 +669,7 @@ const posts: Post[] = [
     description:
       "Descubra 8 estratégias para diferenciar seu e-commerce pela experiência do cliente: personalização, vídeos, checkout simplificado, frete rápido e muito mais.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6729213f5bfa90e4e787f40a_Diferencie%20o%20seu%20e-commerce.avif",
+      "/assets/components/pages/6729213f5bfa90e4e787f40a_Diferencie-o-seu-e-commerce.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -693,7 +693,7 @@ const posts: Post[] = [
     description:
       "Prepare seu e-commerce para a Black Friday com as melhores estratégias: promoções personalizadas, Video Commerce, remarketing e muito mais.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6716bcb17a861750ea2a2f9b_Estrat%C3%A9gias%20para%20a%20Black%20Friday.avif",
+      "/assets/components/pages/6716bcb17a861750ea2a2f9b_Estrat-gias-para-a-Black-Friday.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -705,7 +705,7 @@ const posts: Post[] = [
     description:
       "Aprenda como adicionar vídeos ao seu e-commerce sem comprometer a velocidade do site. Conheça a solução da Widde para Video Commerce com alta performance.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/670d623cdaadc6b5b6694159_Como%20adicionar%20v%C3%ADdeos%20no%20e-commerce%20sem%20pesar.avif",
+      "/assets/components/pages/670d623cdaadc6b5b6694159_Como-adicionar-v-deos-no-e-commerce-sem-pesar.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -717,7 +717,7 @@ const posts: Post[] = [
     description:
       "Conheça as tendências de Video Commerce no Brasil: dados, casos de sucesso e estratégias para impulsionar vendas com vídeos interativos no e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67057f68532f408663d7ea83_Tend%C3%AAncias%20de%20Video%20Commerce%20Brasil.avif",
+      "/assets/components/pages/67057f68532f408663d7ea83_Tend-ncias-de-Video-Commerce-Brasil.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -729,7 +729,7 @@ const posts: Post[] = [
     description:
       "Saiba como diferenciar a experiência do cliente na Black Friday com Video Commerce, prova social, análise de dados e estratégias que aumentam conversão e confiança.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/670434f95b6d840f6c461653_Como%20vender%20mais%20e%20diferenciar%20a%20experi%C3%AAncia%20do%20cliente.avif",
+      "/assets/components/pages/670434f95b6d840f6c461653_Como-vender-mais-e-diferenciar-a-experi-ncia-do-cliente.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -741,7 +741,7 @@ const posts: Post[] = [
     description:
       "Prepare seu e-commerce para a Black Friday com estratégias de performance: definição de metas, cupons, remarketing, vídeos e otimização de estoque.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66fd841aa501540934b7c8c6_Performance%20para%20e-commerces%20na%20Black%20Friday%202024.avif",
+      "/assets/components/pages/66fd841aa501540934b7c8c6_Performance-para-e-commerces-na-Black-Friday-2024.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -753,7 +753,7 @@ const posts: Post[] = [
     description:
       "Aprenda a diversificar os tipos de vídeos no seu e-commerce: demonstrações, depoimentos, tutoriais, unboxing, bastidores, comparativos e animações para vender mais.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66f1dfdb0ee5a9e9bcf41af1_Como%20diversificar%20seus%20v%C3%ADdeos%20para%20vender%20mais_.avif",
+      "/assets/components/pages/66f1dfdb0ee5a9e9bcf41af1_Como-diversificar-seus-v-deos-para-vender-mais_.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -765,7 +765,7 @@ const posts: Post[] = [
     description:
       "Descubra ideias criativas de vídeos para divulgar seus produtos no e-commerce: demonstrações, depoimentos, tutoriais, unboxing, comparativos e colaborações.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66e86b894c2433b39166cd4f_Ideias%20criativas%20para%20v%C3%ADdeos%20de%20produtos.avif",
+      "/assets/components/pages/66e86b894c2433b39166cd4f_Ideias-criativas-para-v-deos-de-produtos.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -777,7 +777,7 @@ const posts: Post[] = [
     description:
       "Conheça os 8 erros mais comuns no Video Commerce e saiba como evitá-los: iluminação ruim, áudio de baixa qualidade, falta de roteiro, vídeos longos e mais.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66df2871f132d504b0b062a4_8%20erros%20com%20o%20Video%20Commerce.avif",
+      "/assets/components/pages/66df2871f132d504b0b062a4_8-erros-com-o-Video-Commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -789,7 +789,7 @@ const posts: Post[] = [
     description:
       "Aprenda as melhores técnicas de persuasão e gravação para criar vídeos que vendem no e-commerce: gatilhos emocionais, storytelling, CTA e qualidade de produção.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66d5d71fdd59a9a3fdd4982c_T%C3%A9cnicas%20de%20persuas%C3%A3o%20e%20grava%C3%A7%C3%A3o%20para%20v%C3%ADdeos%20que%20vendem.avif",
+      "/assets/components/pages/66d5d71fdd59a9a3fdd4982c_T-cnicas-de-persuas-o-e-grava-o-para-v-deos-que-vendem.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -801,7 +801,7 @@ const posts: Post[] = [
     description:
       "Guia completo de produção de conteúdo para e-commerce: palavras-chave, descrições, visuais, blog, tutoriais, depoimentos e UGC para atrair e converter mais clientes.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66ccb54fc18e6b3010fde95c_Conte%C3%BAdo%20para%20e-commerce.avif",
+      "/assets/components/pages/66ccb54fc18e6b3010fde95c_Conte-do-para-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -813,7 +813,7 @@ const posts: Post[] = [
     description:
       "Saiba como usar o conteúdo gerado pelo usuário (UGC) nos canais da sua marca para aumentar a autenticidade, o engajamento e as conversões no e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66c37d62066fa45ddee0609e_Conte%C3%BAdo%20do%20usu%C3%A1rio%20nos%20canais%20da%20marca.avif",
+      "/assets/components/pages/66c37d62066fa45ddee0609e_Conte-do-do-usu-rio-nos-canais-da-marca.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -826,7 +826,7 @@ const posts: Post[] = [
     description:
       "Aprenda a fazer vídeo reviews de produtos que aumentam conversão e retenção no e-commerce. 11 dicas sobre roteiro, equipamento, gravação, edição e publicação.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66ba1d24a8afaac491151981_11%20dicas%20para%20v%C3%ADdeo%20review.avif",
+      "/assets/components/pages/66ba1d24a8afaac491151981_11-dicas-para-v-deo-review.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -838,7 +838,7 @@ const posts: Post[] = [
     description:
       "Entenda o que é retenção de clientes no e-commerce e aprenda estratégias práticas: programas de fidelidade, personalização, vídeos, atendimento e comunicação.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66b220c9a19de38e7a2598c5_Reten%C3%A7%C3%A3o%20de%20clientes.avif",
+      "/assets/components/pages/66b220c9a19de38e7a2598c5_Reten-o-de-clientes.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -850,7 +850,7 @@ const posts: Post[] = [
     description:
       "Entenda o que é UGC (conteúdo gerado pelo usuário) e como implementar no e-commerce para aumentar autenticidade, engajamento, SEO e conversões.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66a8146ea28bd9c550c8d719_Conte%C3%BAdo%20UGC%20no%20e-commerce.avif",
+      "/assets/components/pages/66a8146ea28bd9c550c8d719_Conte-do-UGC-no-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -862,7 +862,7 @@ const posts: Post[] = [
     description:
       "23 dicas para criar vídeos e fotos de roupas que vendem mais: iluminação, modelos reais, ângulos, prova d'água, CTA e muito mais para lojas de moda online.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/669fc8baa76fbcde4c2b1e91_Como%20ter%20v%C3%ADdeos%20e%20fotos%20de%20roupas%20para%20vender%20mais%20na%20loja%20online.avif",
+      "/assets/components/pages/669fc8baa76fbcde4c2b1e91_Como-ter-v-deos-e-fotos-de-roupas-para-vender-mais-na-loja-online.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -898,7 +898,7 @@ const posts: Post[] = [
     description:
       "Aprenda os 7 pilares de uma página de produto de alta conversão: nomenclatura, imagens, variações, prova virtual, descrições, depoimentos e vídeos.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6672db5abd3718b21562ec32_P%C3%A1gina%20de%20produtos%20de%20alta%20convers%C3%A3o.avif",
+      "/assets/components/pages/6672db5abd3718b21562ec32_P-gina-de-produtos-de-alta-convers-o.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -910,7 +910,7 @@ const posts: Post[] = [
     description:
       "Guia prático de Video Commerce para beachwear e acessórios: como filmar biquínis, maiôs, joias e bolsas para aumentar conversão e confiança na compra.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6661c67e8971405057739e30_Video%20Commerce%20-%20Beachwear%20e%20Acess%C3%B3rios.avif",
+      "/assets/components/pages/6661c67e8971405057739e30_Video-Commerce-Beachwear-e-Acess-rios.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -922,7 +922,7 @@ const posts: Post[] = [
     description:
       "Estratégias práticas para melhorar os vídeos do seu e-commerce: mostrar o que os clientes querem ver, criar identificação, iluminação e humanizar a marca.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6654f0bc75826213c844ac6c_Tenha%20bons%20v%C3%ADdeos%20no%20seu%20e-commerce.avif",
+      "/assets/components/pages/6654f0bc75826213c844ac6c_Tenha-bons-v-deos-no-seu-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -947,7 +947,7 @@ const posts: Post[] = [
     description:
       "Conheça a integração facilitada da Widde, os resultados mensuráveis do Video Commerce e como a interatividade dos vídeos transforma a experiência de compra.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6644f6b6a5060320c7f29dff_Integra%C3%A7%C3%A3o%20facilitada%2C%20resultados%20do%20Video%20Commerce%20e%20interatividade.avif",
+      "/assets/components/pages/6644f6b6a5060320c7f29dff_Integra-o-facilitada-resultados-do-Video-Commerce-e-interatividade.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -959,7 +959,7 @@ const posts: Post[] = [
     description:
       "Conheça os erros mais comuns nos vídeos de e-commerce: mostrar pouco do produto, não capturar a atenção e não responder as dúvidas dos clientes.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/663be2502198d8dcc35223b5_Erros%20comuns%20nos%20v%C3%ADdeos%20para%20e-commerce.avif",
+      "/assets/components/pages/663be2502198d8dcc35223b5_Erros-comuns-nos-v-deos-para-e-commerce.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -971,7 +971,7 @@ const posts: Post[] = [
     description:
       "Aprenda a gravar vídeos para o e-commerce sozinho com dicas de planejamento, iluminação, equipamento, edição e legendas para criar conteúdo de qualidade.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/663bb5ea97cb93cf47bc9bae_Dicas%20para%20gravar%20seus%20v%C3%ADdeos%20sozinho%20para%20o%20e-commerce.avif",
+      "/assets/components/pages/663bb5ea97cb93cf47bc9bae_Dicas-para-gravar-seus-v-deos-sozinho-para-o-e-commerce.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -983,7 +983,7 @@ const posts: Post[] = [
     description:
       "Guia prático para criar vídeos que vendem em lojas de moda online: como abordar dúvidas dos clientes, humanizar o conteúdo e mostrar diferentes tipos de corpo.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/663151f051c5468bf97512fb_Como%20fazer%20v%C3%ADdeos%20que%20vendem%20para%20lojas%20de%20Moda.avif",
+      "/assets/components/pages/663151f051c5468bf97512fb_Como-fazer-v-deos-que-vendem-para-lojas-de-Moda.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1008,7 +1008,7 @@ const posts: Post[] = [
     description:
       "Insights do Vtex Day 2024: vídeo representa 82% do consumo de internet, UGC é tendência, atenção humana cai para 8 segundos e como adaptar seu e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6627f39b8fd5d9dde68760f1_vtex-day.avif",
+      "/assets/components/pages/6627f39b8fd5d9dde68760f1_vtex-day.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1033,7 +1033,7 @@ const posts: Post[] = [
     description:
       "O guia definitivo do Video Commerce em 2024: o que é, benefícios, como funciona, cases de sucesso, melhores práticas e como medir resultados com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66202315047334ba57bd646f_guia.avif",
+      "/assets/components/pages/66202315047334ba57bd646f_guia.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1045,7 +1045,7 @@ const posts: Post[] = [
     description:
       "Como a LV Store usou Video Commerce para aumentar 2,5x a conversão e 300% o tempo de retenção em uma semana, integrando conteúdo das redes sociais no e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/660af4b4ac1296cf294d6c23_lvstore-case-2.avif",
+      "/assets/components/pages/660af4b4ac1296cf294d6c23_lvstore-case-2.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -1069,7 +1069,7 @@ const posts: Post[] = [
     description:
       "Como a JJ Modas aumentou 300% a conversão e 354% a retenção em 3 meses usando as próprias fundadoras como influenciadoras no Video Commerce com a Widde.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/657509d47f832e848a0359af_case--jj.avif",
+      "/assets/components/pages/657509d47f832e848a0359af_case-jj.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -1081,7 +1081,7 @@ const posts: Post[] = [
     description:
       "5 dicas práticas de lojistas reais que vendem mais com vídeos no e-commerce: como se comunicar, simplificar a produção, organizar demonstrações e posicionar os vídeos.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d0641db995befe3302f36_post-4-1.avif",
+      "/assets/components/pages/655d0641db995befe3302f36_post-4-1.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1093,7 +1093,7 @@ const posts: Post[] = [
     description:
       "Guia de configuração do Google Analytics 4 no e-commerce para Nuvemshop, Shopify, VTEX, Tray, Loja Integrada e mais, com integração à Widde para medir Video Commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d01aa066b57aefdb5e75c_ga4.avif",
+      "/assets/components/pages/655d01aa066b57aefdb5e75c_ga4.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -1105,7 +1105,7 @@ const posts: Post[] = [
     description:
       "Widde Talks com Sara Lanzini, cofundadora da Vinci Shoes: estratégias de inovação em e-commerce, modelo sem estoque, experiência de unboxing e Video Commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d00ebfac62d0e3c5535a0_LIVE-SARA.avif",
+      "/assets/components/pages/655d00ebfac62d0e3c5535a0_LIVE-SARA.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1117,7 +1117,7 @@ const posts: Post[] = [
     description:
       "Widde Talks com Letícia Vaz, fundadora da LV Store: estratégias de e-commerce, Video Commerce, conteúdo, tráfego pago e como crescer vendas online.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d009e8a48dfd0cadfe99f_LIVE-LETICIA-1.avif",
+      "/assets/components/pages/655d009e8a48dfd0cadfe99f_LIVE-LETICIA-1.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -1129,7 +1129,7 @@ const posts: Post[] = [
     description:
       "Widde Talks com Luísa Morato, fundadora da Camys Brand: posicionamento de marca, construção de comunidade, Video Commerce e controle de estoque no e-commerce.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d001cc986ee07dd37872d_LIVE-LUISA-2.avif",
+      "/assets/components/pages/655d001cc986ee07dd37872d_LIVE-LUISA-2.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1141,7 +1141,7 @@ const posts: Post[] = [
     description:
       "Saiba como avaliar se seus vídeos de e-commerce estão sendo efetivos: o que funciona, o que melhorar e como criar conexão real com os clientes.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655cff93abf528f373d104c7_post-5-1.avif",
+      "/assets/components/pages/655cff93abf528f373d104c7_post-5-1.avif",
     imageW: 363,
     imageH: 234,
   },
@@ -1153,7 +1153,7 @@ const posts: Post[] = [
     description:
       "Entenda por que ter vídeos dos produtos é fundamental para o e-commerce: conexão emocional, personalidade de marca e como começar sem grandes produções.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655cfeb2afd625fe728b4aaf_post-4.avif",
+      "/assets/components/pages/655cfeb2afd625fe728b4aaf_post-4.avif",
     imageW: 361,
     imageH: 233,
   },
@@ -1189,7 +1189,7 @@ const posts: Post[] = [
     description:
       "5 dicas principais para alavancar vendas com vídeos no e-commerce em 2024: planejar tópicos, múltiplos ângulos, feedbacks, interatividade e vídeos curtos.",
     image:
-      "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/65b28b0f5b5a0f4becfbbcbd_2024.avif",
+      "/assets/components/pages/65b28b0f5b5a0f4becfbbcbd_2024.avif",
     imageW: 363,
     imageH: 234,
   },

@@ -1,34 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Evolução dos comentários no vídeo: solução para tirar mais objeções de compra e vender mais" description="A Widde agora permite responder comentários de clientes nos vídeos de produto. Saiba como essa funcionalidade ajuda a tirar objeções e aumentar as conversões." canonical="https://widde.io/blog/evolucao-dos-comentarios-no-video">
-  <BlogArticle client:load title="Evolução dos comentários no vídeo: solução para tirar mais objeções de compra e vender mais" category="Video Commerce" date="12.05.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67fd10410088192a1ab696c5_Imagem%20do%20WhatsApp%20de%202025-04-07%20%C3%A0(s)%2017.35.50_3ea5ff71.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Evolução dos comentários no vídeo: solução para tirar mais objeções de compra e vender mais"
+  description="A Widde lançou uma nova funcionalidade que permite responder comentários de clientes nos vídeos de produto. Essa capacidade possibilita a interação direta"
+  canonical="https://widde.io/blog/evolucao-dos-comentarios-no-video"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/evolucao-dos-comentarios-no-video/67fd10410088192a1ab696c5_Imagem-do-WhatsApp-de-2025-04-07-s)%2017.35.50_3ea5ff71.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Evolução dos comentários no vídeo: solução para tirar mais objeções de compra e vender mais"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/evolucao-dos-comentarios-no-video/67fd10410088192a1ab696c5_Imagem-do-WhatsApp-de-2025-04-07-s)%2017.35.50_3ea5ff71.avif"
+    currentSlug="evolucao-dos-comentarios-no-video"
+  >
     <div>
       <p>A Widde lançou uma nova funcionalidade que permite responder comentários de clientes nos vídeos de produto. Essa capacidade possibilita a interação direta com o cliente dentro da própria experiência do vídeo.</p>
-
-      <h1><strong>O vídeo é essencial no e-commerce</strong></h1>
+      <h2><strong>O vídeo é essencial no e-commerce</strong></h2>
       <p>93% dos consumidores consideram vídeos fundamentais para a tomada de decisão de compra, e 84% abandonam as compras por incerteza em relação ao produto. Os vídeos aumentam o engajamento na página e as taxas de conversão em comparação com outros formatos.</p>
-
-      <h1><strong>Funcionalidade de comentários nos vídeos</strong></h1>
+      <h2><strong>Funcionalidade de comentários nos vídeos</strong></h2>
       <p>Os clientes agora podem fazer perguntas diretamente nos vídeos — sobre tamanho, durabilidade do material, prazos de entrega. As respostas da loja aparecem diretamente no vídeo, ajudando a resolver objeções para visitantes futuros.</p>
-
-      <h1><strong>5 vantagens principais</strong></h1>
-      <p>1. <strong>Proximidade com o cliente:</strong> As respostas criam a sensação de ser ouvido e valorizado.<br />2. <strong>Resolução de objeções em tempo real:</strong> Esclarecer dúvidas impacta diretamente as taxas de conversão.<br />3. <strong>Economia de tempo:</strong> Perguntas frequentes respondidas publicamente reduzem as consultas repetitivas ao atendimento.<br />4. <strong>Conteúdo gerado pelo usuário:</strong> Os feedbacks dos clientes funcionam como prova social.<br />5. <strong>Melhoria contínua:</strong> Os comentários revelam informações ausentes nas descrições.</p>
-
-      <h1><strong>Sobre a plataforma Widde</strong></h1>
+      <h2><strong>5 vantagens principais</strong></h2>
+      <ol>
+        <li><strong>Proximidade com o cliente:</strong> As respostas criam a sensação de ser ouvido e valorizado.</li>
+        <li><strong>Resolução de objeções em tempo real:</strong> Esclarecer dúvidas impacta diretamente as taxas de conversão.</li>
+        <li><strong>Economia de tempo:</strong> Perguntas frequentes respondidas publicamente reduzem as consultas repetitivas ao atendimento.</li>
+        <li><strong>Conteúdo gerado pelo usuário:</strong> Os feedbacks dos clientes funcionam como prova social.</li>
+        <li><strong>Melhoria contínua:</strong> Os comentários revelam informações ausentes nas descrições.</li>
+      </ol>
+      <h2><strong>Sobre a plataforma Widde</strong></h2>
       <p>A Widde oferece uma plataforma de integração de vídeos ao e-commerce com formatos estilo stories, feeds de vídeos interativos, carrinhos de compras dentro do vídeo e respostas a comentários. As funcionalidades incluem dashboards de análise que rastreiam visualizações, engajamento, conversões e perguntas.</p>
-
-      <h1><strong>Impacto nas vendas</strong></h1>
+      <h2><strong>Impacto nas vendas</strong></h2>
       <p>Responder comentários demonstra cuidado com o cliente, afetando diretamente: conversões de vendas, fidelização de clientes, autoridade de marca e redução de devoluções pela maior confiança do consumidor.</p>
       <p>Marcas como Not-me Shoes, Shop Emme e Brinquedos Estrela alcançaram maior tempo de permanência na página, redução de devoluções e melhoras significativas nas taxas de conversão usando a Widde. Os comentários nos vídeos representam um marco na evolução da experiência de compra no e-commerce.</p>
     </div>

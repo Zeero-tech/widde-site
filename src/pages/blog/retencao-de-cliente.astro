@@ -1,43 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Retenção de clientes: o que é e dicas para melhorar a taxa!" description="Entenda o que é retenção de clientes no e-commerce e aprenda estratégias práticas: programas de fidelidade, personalização, vídeos, atendimento e comunicação." canonical="https://widde.io/blog/retencao-de-cliente">
-  <BlogArticle client:load title="Retenção de clientes: o que é e dicas para melhorar a taxa!" category="Tendências e-commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66b220c9a19de38e7a2598c5_Reten%C3%A7%C3%A3o%20de%20clientes.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Retenção de clientes: o que é e dicas para melhorar a taxa!"
+  description="A retenção de clientes no e-commerce envolve manter os clientes existentes e incentivá-los a fazer compras repetidas. Adquirir novos clientes é mais"
+  canonical="https://widde.io/blog/retencao-de-cliente"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/retencao-de-cliente/66b220c9a19de38e7a2598c5_Reten-o-de-clientes.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Retenção de clientes: o que é e dicas para melhorar a taxa!"
+    category="Tendências e-commerce"
+    date="12.05.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/retencao-de-cliente/66b220c9a19de38e7a2598c5_Reten-o-de-clientes.avif"
+    currentSlug="retencao-de-cliente"
+  >
     <div>
       <p>A retenção de clientes no e-commerce envolve manter os clientes existentes e incentivá-los a fazer compras repetidas. Adquirir novos clientes é mais caro do que manter os existentes. Clientes fiéis tendem a gastar mais e gerar marketing boca a boca, tornando a retenção crítica para o sucesso empresarial a longo prazo.</p>
-
-      <h1><strong>O que é retenção de clientes nas lojas online?</strong></h1>
+      <h2><strong>O que é retenção de clientes nas lojas online?</strong></h2>
       <p>A retenção de clientes difere da aquisição — ela foca em incentivar os compradores anteriores a retornar em vez de atrair novos consumidores. O objetivo é criar uma experiência de compra satisfatória que compele os clientes a fazer compras repetidas, fortalecendo o relacionamento cliente-marca e aumentando o valor do tempo de vida do cliente.</p>
-
-      <h1><strong>Importância da retenção de clientes</strong></h1>
+      <h2><strong>Importância da retenção de clientes</strong></h2>
       <p>Os clientes retidos fazem compras recorrentes em volumes maiores e têm mais probabilidade de experimentar novos produtos. Eles desenvolvem confiança na marca ao longo do tempo e recomendam as lojas para amigos e familiares. Além disso, a retenção fornece bases de clientes estáveis e previsíveis, possibilitando previsões de vendas mais precisas e melhor planejamento de estoque.</p>
-
-      <h1><strong>Programas de fidelidade</strong></h1>
+      <h2><strong>Programas de fidelidade</strong></h2>
       <p>Sistemas baseados em recompensas incentivam compras repetidas por meio de pontos resgatáveis por descontos ou produtos gratuitos. Os programas de fidelidade criam um motivo concreto para os clientes retornarem e preferirem sua loja à concorrência.</p>
-
-      <h1><strong>Atendimento ao cliente excepcional</strong></h1>
+      <h2><strong>Atendimento ao cliente excepcional</strong></h2>
       <p>Suporte rápido e amigável diferencia a experiência de compra. Clientes valorizados e bem atendidos demonstram fidelidade mais forte à marca, transformando situações de insatisfação em oportunidades de conquista.</p>
-
-      <h1><strong>Personalização</strong></h1>
+      <h2><strong>Personalização</strong></h2>
       <p>Usar dados de compras para fornecer recomendações direcionadas e ofertas exclusivas faz os clientes se sentirem valorizados. E-mails personalizados, sugestões direcionadas e homepages customizadas melhoram a experiência e aumentam o engajamento.</p>
-
-      <h1><strong>Comunicação regular</strong></h1>
+      <h2><strong>Comunicação regular</strong></h2>
       <p>Manter o engajamento por meio de newsletters, ofertas especiais e atualizações de produto via e-mail e redes sociais mantém a presença da marca na mente dos clientes, fortalecendo a fidelidade por meio de relacionamentos contínuos.</p>
-
-      <h1><strong>Vídeos para engajamento e retenção</strong></h1>
+      <h2><strong>Vídeos para engajamento e retenção</strong></h2>
       <p>Os vídeos engajam e retêm clientes ao demonstrar produtos, destacar vantagens e responder a perguntas comuns. Eles criam conexões emocionais e mantêm os clientes no site por mais tempo, aumentando a probabilidade de compra. A plataforma da Widde permite que os e-commerces integrem vídeos nas páginas de produto, melhorando a confiança e a satisfação do cliente — com aumento de 5x no tempo de retenção e 4x mais chances de conversão.</p>
-
-      <h1><strong>Coleta e ação sobre o feedback dos clientes</strong></h1>
+      <h2><strong>Coleta e ação sobre o feedback dos clientes</strong></h2>
       <p>Agir com base no feedback demonstra o compromisso da empresa com a melhoria, aumentando significativamente a satisfação e a probabilidade de compras repetidas. Solicitando e implementando as sugestões dos clientes, a marca mostra que valoriza suas opiniões.</p>
     </div>
   </BlogArticle>

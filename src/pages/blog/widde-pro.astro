@@ -1,48 +1,59 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Widde Pro: o que é e como funciona?" description="Conheça o Widde Pro, o plano premium para e-commerces de alto volume que querem implementar Video Commerce com recursos avançados, IA e suporte VIP." canonical="https://widde.io/blog/widde-pro">
-  <BlogArticle client:load title="Widde Pro: o que é e como funciona?" category="Novidades" date="09.10.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226c9cc37dbc7c1406b50a_conhe%C3%A7a%20o%20widde%20pro.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Widde Pro: o que é e como funciona?"
+  description="Conheça o Widde Pro, o plano premium para e-commerces de alto volume que querem implementar Video Commerce com recursos avançados, IA e suporte VIP."
+  canonical="https://widde.io/blog/widde-pro"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/widde-pro/68226c9cc37dbc7c1406b50a_conhe-a-o-widde-pro.avif"
+  datePublished="2025-10-09"
+>
+  <BlogArticle
+    client:load
+    title="Widde Pro: o que é e como funciona?"
+    category="Novidades"
+    date="09.10.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/widde-pro/68226c9cc37dbc7c1406b50a_conhe-a-o-widde-pro.avif"
+    currentSlug="widde-pro"
+  >
     <div>
       <p>O sucesso no e-commerce depende de entregar experiências diferenciadas. Os consumidores exigem clareza, agilidade e conexões autênticas com as marcas. O Video Commerce não é mais uma tendência — é uma necessidade. E o Widde Pro é a solução definitiva para implementá-lo em alto nível.</p>
-
-      <h1><strong>O que é o Widde Pro?</strong></h1>
+      <h2><strong>O que é o Widde Pro?</strong></h2>
       <p>O Widde Pro é o plano premium desenvolvido para e-commerces que possuem um grande volume de acessos e precisam de suporte especializado. Os benefícios incluem acesso à infraestrutura de vídeo interativo, personalização avançada, suporte VIP e análise de comentários por inteligência artificial.</p>
-
-      <h1><strong>Widde AI: Filtragem de Comentários</strong></h1>
+      <h2><strong>Widde AI: Filtragem de Comentários</strong></h2>
       <p>Classifica automaticamente os comentários dos vídeos de produto por categoria, permitindo:</p>
-      <p>• Separação de feedbacks positivos e negativos<br />• Filtragem de perguntas frequentes<br />• Coleta de insights sobre o comportamento dos clientes<br />• Identificação de interações prioritárias</p>
-
-      <h1><strong>Carrossel de Vídeos</strong></h1>
+      <ul>
+        <li>Separação de feedbacks positivos e negativos</li>
+        <li>Filtragem de perguntas frequentes</li>
+        <li>Coleta de insights sobre o comportamento dos clientes</li>
+        <li>Identificação de interações prioritárias</li>
+      </ul>
+      <h2><strong>Carrossel de Vídeos</strong></h2>
       <p>Exibe múltiplos vídeos de forma dinâmica, oferecendo maior engajamento, ênfase em promoções, aumento do ticket médio e espaço para conteúdo de influenciadores (até 2 carrosséis por homepage).</p>
-
-      <h1><strong>Destaques da Home e de Categorias</strong></h1>
+      <h2><strong>Destaques da Home e de Categorias</strong></h2>
       <p>Seções estilo stories de redes sociais que endereçam objeções de compra, direcionam atenção para produtos prioritários e enfatizam ofertas flash e promoções.</p>
-
-      <h1><strong>Destaques do Produto</strong></h1>
+      <h2><strong>Destaques do Produto</strong></h2>
       <p>Organiza vídeos por tema nas páginas de produto (materiais, guias de tamanho, uso, desempenho, garantias). Formatos personalizáveis (retangular, redondo, ondulado, coração) com as cores da sua marca.</p>
-
-      <h1><strong>Página Explorar</strong></h1>
+      <h2><strong>Página Explorar</strong></h2>
       <p>Uma página dedicada à descoberta de vídeos com divisão por categorias, pré-visualização na homepage e navegação dinâmica alinhada aos padrões de consumo das redes sociais.</p>
-
-      <h1><strong>Links de Compartilhamento</strong></h1>
+      <h2><strong>Links de Compartilhamento</strong></h2>
       <p>Gera links compartilháveis de vídeos direcionando para páginas de produto, ideais para recuperação de carrinho abandonado, campanhas no WhatsApp e e-mail, e estratégias de CRM.</p>
-
-      <h1><strong>Benefícios adicionais</strong></h1>
-      <p>• <strong>Gerenciamento de conta VIP:</strong> Account manager dedicado para implementação, interpretação de métricas e otimização contínua<br />• <strong>Acesso antecipado:</strong> Funcionalidades beta exclusivas para assinantes Pro<br />• <strong>Personalização total:</strong> Controle completo sobre layout, interações, CTAs e posicionamento dos vídeos</p>
-
-      <h1><strong>Quem deve escolher o Widde Pro?</strong></h1>
-      <p>• E-commerces de alto tráfego que querem maximizar o valor de cada sessão<br />• Empresas que reduzem dúvidas e devoluções com conteúdo educativo<br />• Quem investe em soluções focadas em conversão<br />• Quem prioriza experiências de compra memoráveis</p>
+      <h2><strong>Benefícios adicionais</strong></h2>
+      <ul>
+        <li><strong>Gerenciamento de conta VIP:</strong> Account manager dedicado para implementação, interpretação de métricas e otimização contínua</li>
+        <li><strong>Acesso antecipado:</strong> Funcionalidades beta exclusivas para assinantes Pro</li>
+        <li><strong>Personalização total:</strong> Controle completo sobre layout, interações, CTAs e posicionamento dos vídeos</li>
+      </ul>
+      <h2><strong>Quem deve escolher o Widde Pro?</strong></h2>
+      <ul>
+        <li>E-commerces de alto tráfego que querem maximizar o valor de cada sessão</li>
+        <li>Empresas que reduzem dúvidas e devoluções com conteúdo educativo</li>
+        <li>Quem investe em soluções focadas em conversão</li>
+        <li>Quem prioriza experiências de compra memoráveis</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

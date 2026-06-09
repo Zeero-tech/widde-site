@@ -1,43 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como diferenciar seu e-commerce na experiência do cliente" description="Descubra 8 estratégias para diferenciar seu e-commerce pela experiência do cliente: personalização, vídeos, checkout simplificado, frete rápido e muito mais." canonical="https://widde.io/blog/como-diferenciar-seu-e-commerce-na-experiencia-do-cliente">
-  <BlogArticle client:load title="Como diferenciar seu e-commerce na experiência do cliente" category="Tendências e-commerce" date="12.05.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6729213f5bfa90e4e787f40a_Diferencie%20o%20seu%20e-commerce.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como diferenciar seu e-commerce na experiência do cliente"
+  description="Diferenciar seu e-commerce pela experiência do cliente é fundamental para o sucesso. Experiências positivas aumentam a satisfação, incentivam compras repetidas e geram crescimento orgânico"
+  canonical="https://widde.io/blog/como-diferenciar-seu-e-commerce-na-experiencia-do-cliente"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-diferenciar-seu-e-commerce-na-experiencia-do-cliente/6729213f5bfa90e4e787f40a_Diferencie-o-seu-e-commerce.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Como diferenciar seu e-commerce na experiência do cliente"
+    category="Tendências e-commerce"
+    date="12.05.2025"
+    readingTime="7 minutos de leitura"
+    coverImage="/assets/blog/como-diferenciar-seu-e-commerce-na-experiencia-do-cliente/6729213f5bfa90e4e787f40a_Diferencie-o-seu-e-commerce.avif"
+    currentSlug="como-diferenciar-seu-e-commerce-na-experiencia-do-cliente"
+  >
     <div>
       <p>Diferenciar seu e-commerce pela experiência do cliente é fundamental para o sucesso. Experiências positivas aumentam a satisfação, incentivam compras repetidas e geram crescimento orgânico por recomendações boca a boca. Elementos-chave incluem navegação fácil, informações acessíveis, atendimento de qualidade e processos de checkout simplificados. Quando os clientes se sentem valorizados e suas expectativas são atendidas, a fidelidade aumenta, impulsionando as vendas e construindo uma reputação confiável para a marca.</p>
-
-      <h1><strong>1. Personalize a experiência de compra</strong></h1>
+      <h2><strong>1. Personalize a experiência de compra</strong></h2>
       <p>A personalização impulsiona o engajamento ao aproveitar o histórico de compras, preferências e comportamento de navegação para oferecer recomendações de produtos e promoções relevantes. E-mails personalizados, sugestões direcionadas e homepages customizadas exemplificam essa abordagem.</p>
-
-      <h1><strong>2. Integre vídeos nas páginas de produto</strong></h1>
+      <h2><strong>2. Integre vídeos nas páginas de produto</strong></h2>
       <p>O Video Commerce enriquece a experiência do usuário ao mostrar os detalhes do produto e suas aplicações no mundo real. Os vídeos aumentam o engajamento, a retenção de visitantes e as taxas de conversão, tornando as experiências mais dinâmicas e informativas.</p>
-
-      <h1><strong>3. Simplifique o processo de checkout</strong></h1>
+      <h2><strong>3. Simplifique o processo de checkout</strong></h2>
       <p>Um checkout simplificado previne o abandono do carrinho. Checkouts de página única solicitando apenas as informações necessárias reduzem o atrito e aumentam a probabilidade de conversão.</p>
-
-      <h1><strong>4. Ofereça frete rápido e rastreamento de pedidos</strong></h1>
+      <h2><strong>4. Ofereça frete rápido e rastreamento de pedidos</strong></h2>
       <p>O rastreamento em tempo real oferece transparência e segurança, reduzindo as consultas ao atendimento ao cliente e atendendo às expectativas de velocidade — uma vantagem competitiva importante no mercado atual.</p>
-
-      <h1><strong>5. Crie programas de fidelidade e recompensas</strong></h1>
+      <h2><strong>5. Crie programas de fidelidade e recompensas</strong></h2>
       <p>Benefícios exclusivos como descontos e frete grátis incentivam compras repetidas e transformam clientes ocasionais em defensores da marca.</p>
-
-      <h1><strong>6. Solicite e valorize o feedback dos clientes</strong></h1>
+      <h2><strong>6. Solicite e valorize o feedback dos clientes</strong></h2>
       <p>Buscar ativamente avaliações, pesquisas e comentários demonstra comprometimento com a melhoria contínua e fortalece o relacionamento com os clientes.</p>
-
-      <h1><strong>7. Ofereça atendimento ao cliente excepcional</strong></h1>
+      <h2><strong>7. Ofereça atendimento ao cliente excepcional</strong></h2>
       <p>Suporte de qualidade por múltiplos canais — chat ao vivo, e-mail, telefone, redes sociais — cria experiências memoráveis e converte clientes insatisfeitos em defensores da marca.</p>
-
-      <h1><strong>8. Ofereça opções de pagamento flexíveis</strong></h1>
+      <h2><strong>8. Ofereça opções de pagamento flexíveis</strong></h2>
       <p>Múltiplos métodos de pagamento — cartões de crédito e débito, carteiras digitais, parcelamento — acomodam as preferências dos clientes, reduzindo a frustração e aumentando as taxas de conversão.</p>
     </div>
   </BlogArticle>

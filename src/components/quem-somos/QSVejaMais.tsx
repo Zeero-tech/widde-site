@@ -4,7 +4,7 @@ const cards = [
     external: true,
     bg: "#1a1a1a",
     bgImage:
-      "https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2efad48b0def4f7206e_widde-youtube.avif",
+      "/assets/components/quem-somos/682df2efad48b0def4f7206e_widde-youtube.avif",
     title: "Widde no YouTube",
     cta: "Nosso canal no YouTube \u00a0→",
     imgAlt: "Widde no YouTube",
@@ -14,7 +14,7 @@ const cards = [
     external: false,
     bg: "#1a1a1a",
     bgImage:
-      "https://cdn.prod.website-files.com/654ec481f224407ac998cfbe/682df2ef3ac13dad2197206f_84047ca2255bb7ac52e62eae0892e17a_widde-blog.avif",
+      "/assets/components/quem-somos/682df2ef3ac13dad2197206f_84047ca2255bb7ac52e62eae0892e17a_widde-blog.avif",
     title: "Conheça o Blog da Widde",
     cta: "Ir para o blog \u00a0→",
     imgAlt: "Blog da Widde",

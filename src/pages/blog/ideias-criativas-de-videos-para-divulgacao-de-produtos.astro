@@ -1,43 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Ideias criativas de vídeos para divulgação de produtos" description="Descubra ideias criativas de vídeos para divulgar seus produtos no e-commerce: demonstrações, depoimentos, tutoriais, unboxing, comparativos e colaborações." canonical="https://widde.io/blog/ideias-criativas-de-videos-para-divulgacao-de-produtos">
-  <BlogArticle client:load title="Ideias criativas de vídeos para divulgação de produtos" category="Video Commerce" date="22.10.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66e86b894c2433b39166cd4f_Ideias%20criativas%20para%20v%C3%ADdeos%20de%20produtos.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Ideias criativas de vídeos para divulgação de produtos"
+  description="O Video Commerce permite a apresentação dinâmica de produtos que constrói conexões com os consumidores e aumenta as taxas de conversão."
+  canonical="https://widde.io/blog/ideias-criativas-de-videos-para-divulgacao-de-produtos"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/ideias-criativas-de-videos-para-divulgacao-de-produtos/66e86b894c2433b39166cd4f_Ideias-criativas-para-v-deos-de-produtos.avif"
+  datePublished="2025-10-22"
+>
+  <BlogArticle
+    client:load
+    title="Ideias criativas de vídeos para divulgação de produtos"
+    category="Video Commerce"
+    date="22.10.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/ideias-criativas-de-videos-para-divulgacao-de-produtos/66e86b894c2433b39166cd4f_Ideias-criativas-para-v-deos-de-produtos.avif"
+    currentSlug="ideias-criativas-de-videos-para-divulgacao-de-produtos"
+  >
     <div>
       <p>O Video Commerce permite a apresentação dinâmica de produtos que constrói conexões com os consumidores e aumenta as taxas de conversão. Em vez de fotos e descrições estáticas, essa abordagem ajuda os clientes a visualizar os produtos em ação, entender a funcionalidade e reconhecer o valor agregado. A estratégia cria engajamento emocional ao mesmo tempo que reduz as hesitações de compra.</p>
-
-      <h1><strong>Demonstrações do produto em uso</strong></h1>
+      <h2><strong>Demonstrações do produto em uso</strong></h2>
       <p>Esses vídeos mostram exatamente como os produtos funcionam e seus benefícios. Apresentam os itens em ação, enfatizando os principais recursos e características. O objetivo é permitir que os espectadores visualizem como os produtos resolvem problemas ou melhoram o dia a dia. Essa abordagem constrói confiança por meio de expectativas transparentes e mantém a atenção do espectador, facilitando as decisões de compra.</p>
-
-      <h1><strong>Depoimentos reais de clientes</strong></h1>
+      <h2><strong>Depoimentos reais de clientes</strong></h2>
       <p>Experiências autênticas de clientes criam credibilidade para a marca. Vídeos com clientes satisfeitos compartilhando avaliações positivas influenciam as decisões de compra de clientes em potencial. Depoimentos não roteirizados que capturam opiniões genuínas se mostram mais persuasivos do que as mensagens da marca. Os consumidores confiam nas avaliações dos pares mais do que nas afirmações da empresa.</p>
-
-      <h1><strong>Tutoriais passo a passo</strong></h1>
+      <h2><strong>Tutoriais passo a passo</strong></h2>
       <p>Vídeos educativos guiam os clientes sobre como usar os produtos — especialmente valiosos para itens com múltiplos recursos ou configuração complexa. Conduzir os espectadores por cada etapa facilita a adoção do produto e demonstra compromisso com o sucesso do cliente, melhorando a satisfação e fomentando a fidelidade.</p>
-
-      <h1><strong>Vídeos de unboxing</strong></h1>
+      <h2><strong>Vídeos de unboxing</strong></h2>
       <p>O conteúdo de unboxing envolve efetivamente o público e gera antecipação pelo produto. Esses vídeos capturam a experiência de desembalagem, mostrando como os produtos chegam. A novidade e a surpresa criam experiências de visualização atraentes que inspiram o desejo imediato. Além do produto em si, demonstram a qualidade da embalagem e os padrões de cuidado da marca.</p>
-
-      <h1><strong>Comparações de produtos</strong></h1>
+      <h2><strong>Comparações de produtos</strong></h2>
       <p>Os vídeos comparativos ajudam os consumidores indecisos a escolher entre alternativas. Destacam as principais diferenças, vantagens e desvantagens por meio de análises equilibradas. Comparações honestas demonstram transparência e constroem confiança, mostrando que a marca prioriza as soluções para os clientes acima das vendas.</p>
-
-      <h1><strong>Animações explicativas</strong></h1>
+      <h2><strong>Animações explicativas</strong></h2>
       <p>Os vídeos animados simplificam conceitos complexos de produto por meio de narrativas visuais. Descrevem funcionalidades, benefícios e diferenciais de forma eficaz, especialmente para produtos de tecnologia ou serviços com múltiplas etapas. Roteiros bem estruturados combinados com gráficos transformam informações complicadas em conteúdo acessível.</p>
-
-      <h1><strong>Conteúdo de bastidores</strong></h1>
+      <h2><strong>Conteúdo de bastidores</strong></h2>
       <p>O conteúdo de bastidores fornece informações autênticas sobre a empresa, mostrando membros da equipe, processos de produção e cultura organizacional. Isso humaniza as marcas e fomenta conexões emocionais mais profundas. Vídeos com momentos casuais da equipe, passeios pelas instalações e desafios superados ajudam o público a se sentir investido nas narrativas da marca.</p>
-
-      <h1><strong>Colaborações com influenciadores</strong></h1>
+      <h2><strong>Colaborações com influenciadores</strong></h2>
       <p>As parcerias com influenciadores atingem efetivamente novos públicos e melhoram a credibilidade. Os influenciadores têm seguidores fiéis que confiam em suas recomendações, impactando diretamente as decisões de compra dos seguidores. Selecionar influenciadores alinhados com os valores, o público e a estética da marca garante autenticidade.</p>
     </div>
   </BlogArticle>

@@ -1,35 +1,46 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="5 Dicas valiosas de lojas que vendem mais no Ecommerce com Vídeos" description="5 dicas práticas de lojistas reais que vendem mais com vídeos no e-commerce: como se comunicar, simplificar a produção, organizar demonstrações e posicionar os vídeos." canonical="https://widde.io/blog/5-dicas-valiosas-de-lojas-que-vendem-mais-no-ecommerce-com-videos">
-  <BlogArticle client:load title="5 Dicas valiosas de lojas que vendem mais no Ecommerce com Vídeos" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655d0641db995befe3302f36_post-4-1.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="5 Dicas valiosas de lojas que vendem mais no Ecommerce com Vídeos"
+  description="Proprietários de pequenas empresas enfrentam desafios reais ao criar vídeos de produto. Veja dicas práticas de usuários da plataforma Widde sobre como gravar"
+  canonical="https://widde.io/blog/5-dicas-valiosas-de-lojas-que-vendem-mais-no-ecommerce-com-videos"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/5-dicas-valiosas-de-lojas-que-vendem-mais-no-ecommerce-com-videos/655d0641db995befe3302f36_post-4-1.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="5 Dicas valiosas de lojas que vendem mais no Ecommerce com Vídeos"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/5-dicas-valiosas-de-lojas-que-vendem-mais-no-ecommerce-com-videos/655d0641db995befe3302f36_post-4-1.avif"
+    currentSlug="5-dicas-valiosas-de-lojas-que-vendem-mais-no-ecommerce-com-videos"
+  >
     <div>
       <p>Proprietários de pequenas empresas enfrentam desafios reais ao criar vídeos de produto. Veja dicas práticas de usuários da plataforma Widde sobre como gravar conteúdo de vídeo de forma eficaz para impulsionar a conversão de vendas e o engajamento dos clientes.</p>
-
-      <h1><strong>1. Como cativar clientes através da comunicação em vídeo</strong></h1>
-      <p><strong>Loja: Soul de Verão (Moda Feminina)</strong><br />Conselho de Natália (fundadora): "Expresse-se naturalmente sem deixar a vergonha ou a insegurança interferirem na comunicação", criando conexões genuínas com os espectadores. Em vez de simplesmente elogiar os itens, discuta as características únicas e demonstre combinações de estilo para gerar desejo de compra.</p>
-
-      <h1><strong>2. Simplifique a produção de vídeo para e-commerce</strong></h1>
-      <p><strong>Loja: Zip Shoes (Calçados Femininos)</strong><br />Conselho de Iana (fundadora): Aborde as preocupações dos clientes — altura do salto, características de caimento, durabilidade e peso. "Não crio vídeos de alta produção nem sequer tenho um tripé" — use gravação com smartphone com iluminação natural. Adicione narração em áudio guiada explicando os detalhes do produto para obter resultados profissionais.</p>
-
-      <h1><strong>3. Organizando vídeos de demonstração de produto de qualidade</strong></h1>
-      <p><strong>Loja: It's Isa (Moda Plus Size)</strong><br />Conselho de Isabela (fundadora): Crie roteiros detalhados do produto com informações relevantes. Grave várias tomadas e sobreponha narração em áudio descrevendo os detalhes e o caimento da peça. "Os clientes precisam sentir como se estivessem em uma loja física."</p>
-
-      <h1><strong>4. Quais perguntas os vídeos devem responder</strong></h1>
-      <p><strong>Loja: Antoliê (Calçados Femininos)</strong><br />Conselho de Gabrielle (gerente de marketing): Estude os canais de comunicação com os clientes para identificar as preocupações que impedem as compras. Concentre-se nas perguntas específicas do nicho que os clientes fazem ao comprar produtos similares. "Vá além do óbvio e explique cada detalhe do produto" — materiais, construção, conforto e durabilidade.</p>
-
-      <h1><strong>5. Posicionamentos estratégicos para vídeos de e-commerce</strong></h1>
-      <p><strong>Loja: Bia Aloi (Acessórios)</strong><br />Posicionamentos principais:<br />• <strong>Páginas de informação:</strong> Esclareça processos, descontos e detalhes do atacado;<br />• <strong>Homepage:</strong> Vídeo de boas-vindas apresentando os valores e os produtos da marca.<br />Os vídeos interativos maximizam as taxas de conversão entre os visitantes existentes do site, oferecendo vantagem competitiva para as lojas que implementam estratégias de Video Commerce.</p>
+      <h2><strong>1. Como cativar clientes através da comunicação em vídeo</strong></h2>
+      <p><strong>Loja: Soul de Verão (Moda Feminina)</strong></p>
+      <p>Conselho de Natália (fundadora): "Expresse-se naturalmente sem deixar a vergonha ou a insegurança interferirem na comunicação", criando conexões genuínas com os espectadores. Em vez de simplesmente elogiar os itens, discuta as características únicas e demonstre combinações de estilo para gerar desejo de compra.</p>
+      <h2><strong>2. Simplifique a produção de vídeo para e-commerce</strong></h2>
+      <p><strong>Loja: Zip Shoes (Calçados Femininos)</strong></p>
+      <p>Conselho de Iana (fundadora): Aborde as preocupações dos clientes — altura do salto, características de caimento, durabilidade e peso. "Não crio vídeos de alta produção nem sequer tenho um tripé" — use gravação com smartphone com iluminação natural. Adicione narração em áudio guiada explicando os detalhes do produto para obter resultados profissionais.</p>
+      <h2><strong>3. Organizando vídeos de demonstração de produto de qualidade</strong></h2>
+      <p><strong>Loja: It's Isa (Moda Plus Size)</strong></p>
+      <p>Conselho de Isabela (fundadora): Crie roteiros detalhados do produto com informações relevantes. Grave várias tomadas e sobreponha narração em áudio descrevendo os detalhes e o caimento da peça. "Os clientes precisam sentir como se estivessem em uma loja física."</p>
+      <h2><strong>4. Quais perguntas os vídeos devem responder</strong></h2>
+      <p><strong>Loja: Antoliê (Calçados Femininos)</strong></p>
+      <p>Conselho de Gabrielle (gerente de marketing): Estude os canais de comunicação com os clientes para identificar as preocupações que impedem as compras. Concentre-se nas perguntas específicas do nicho que os clientes fazem ao comprar produtos similares. "Vá além do óbvio e explique cada detalhe do produto" — materiais, construção, conforto e durabilidade.</p>
+      <h2><strong>5. Posicionamentos estratégicos para vídeos de e-commerce</strong></h2>
+      <p><strong>Loja: Bia Aloi (Acessórios)</strong></p>
+      <p>Posicionamentos principais:</p>
+      <ul>
+        <li><strong>Páginas de informação:</strong> Esclareça processos, descontos e detalhes do atacado;</li>
+        <li><strong>Homepage:</strong> Vídeo de boas-vindas apresentando os valores e os produtos da marca.</li>
+      </ul>
+      <p>Os vídeos interativos maximizam as taxas de conversão entre os visitantes existentes do site, oferecendo vantagem competitiva para as lojas que implementam estratégias de Video Commerce.</p>
     </div>
   </BlogArticle>
 </BaseLayout>

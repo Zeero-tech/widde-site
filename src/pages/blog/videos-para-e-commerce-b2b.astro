@@ -1,49 +1,61 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "video-explicativo-de-produto-como-fazer-e-implementar", title: "Vídeo explicativo de produto: como fazer e implementar?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68d699f6dcb3f438b1cae87c_V%C3%ADdeo%20explicativo%20de%20produto_%20como%20fazer%20e%20implementar_.png" },
-  { slug: "solucao-de-video-para-e-commerce-video-commerce", title: "Solução de vídeo para e-commerce | Video Commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68226b3bc37dbc7c14054d59_Solu%C3%A7%C3%A3o%20de%20v%C3%ADdeo%20para%20e-commerce%20(2).avif" },
-  { slug: "como-adicionar-video-de-produtos-no-woocommerce", title: "Como adicionar vídeo de produtos no WooCommerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/6871206746bc57b16a1cb8fd_Como%20adicionar%20v%C3%ADdeos%20na%20woocommerce.png" },
-  { slug: "como-adicionar-video-de-produtos-no-magento", title: "Como adicionar vídeo de produtos no Magento?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68628e467e5a7b11c65be81c_Como%20adicionar%20v%C3%ADdeo%20no%20Magento.png" },
-  { slug: "por-que-investir-em-videos-profissionais-para-e-commerce", title: "Por que investir em vídeos profissionais para e-commerce?", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68af0c75cff4353f2393c176_Blog_%20Por%20que%20investir%20em%20v%C3%ADdeos%20profissionais_.png" },
-]
 ---
-<BaseLayout title="Vídeos para e-commerce B2B: como usar e implementar?" description="O uso de vídeos no e-commerce B2B representa uma oportunidade estratégica pouco explorada. Descubra como transformar a experiência do cliente e acelerar decisões de compra." canonical="https://widde.io/blog/videos-para-e-commerce-b2b">
-  <BlogArticle client:load title="Vídeos para e-commerce B2B: como usar e implementar?" category="Tendências e-commerce" date="21.07.2025" readingTime="7 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/687e7aaae0fa3511417ae78b_V%C3%ADdeos%20para%20e-commerce%20B2B%20(1).png" recentPosts={recentPosts}>
+<BaseLayout
+  title="Vídeos para e-commerce B2B: como usar e implementar?"
+  description="Pensando em começar a produzir vídeos para e-commerce B2B? O uso de vídeos no e-commerce já é uma realidade consolidada no B2C, com marcas utilizando esse formato para mostrar produtos, tirar dúvidas e converter mais."
+  canonical="https://widde.io/blog/videos-para-e-commerce-b2b"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/videos-para-e-commerce-b2b/687e7aaae0fa3511417ae78b_V-deos-para-e-commerce-B2B-1).png"
+  datePublished="2025-07-21"
+>
+  <BlogArticle
+    client:load
+    title="Vídeos para e-commerce B2B: como usar e implementar?"
+    category="Tendências e-commerce"
+    date="21.07.2025"
+    readingTime="7 minutos de leitura"
+    coverImage="/assets/blog/videos-para-e-commerce-b2b/687e7aaae0fa3511417ae78b_V-deos-para-e-commerce-B2B-1).png"
+    currentSlug="videos-para-e-commerce-b2b"
+  >
     <div>
       <p>Pensando em começar a produzir vídeos para e-commerce B2B? O uso de vídeos no e-commerce já é uma realidade consolidada no B2C, com marcas utilizando esse formato para mostrar produtos, tirar dúvidas e converter mais.</p>
       <p>No entanto, no universo B2B, o cenário ainda é pouco explorado — e justamente por isso, representa uma oportunidade estratégica. Adotar vídeos no e-commerce B2B transforma completamente a experiência do cliente, acelera o processo de decisão e posiciona a empresa como referência no setor.</p>
       <p>Ao contrário do que muitos imaginam, o comprador B2B também busca praticidade, clareza e confiança na jornada de compra. Ele quer entender o produto, verificar especificações, ver aplicações práticas e ter segurança antes de investir.</p>
-
-      <h1><strong>Por que vídeos são tão importantes no e-commerce B2B?</strong></h1>
+      <h2><strong>Por que vídeos são tão importantes no e-commerce B2B?</strong></h2>
       <p>Empresas que vendem para outras empresas normalmente lidam com processos mais técnicos e decisões mais criteriosas. Ou seja, o cliente B2B precisa de informações detalhadas para avançar no funil. O vídeo, por sua natureza visual e explicativa, ajuda a resolver essas duas frentes ao mesmo tempo.</p>
       <p>Enquanto uma ficha técnica pode ser extensa e pouco acessível, um vídeo explicativo mostra as aplicações reais do produto, demonstra como ele resolve uma dor e ajuda o comprador a se visualizar utilizando a solução.</p>
       <p>Além disso, a humanização que o vídeo proporciona é necessária no B2B. Mostrar o rosto de quem está por trás da empresa, apresentar processos de produção, depoimentos de clientes e bastidores da operação ajuda a criar uma relação de confiança entre empresas.</p>
-
-      <h1><strong>A experiência do usuário no B2B precisa evoluir</strong></h1>
+      <h2><strong>A experiência do usuário no B2B precisa evoluir</strong></h2>
       <p>Durante muito tempo, o e-commerce B2B manteve uma comunicação mais fria, objetiva e baseada apenas em dados. No entanto, o comportamento do comprador mudou. A nova geração de decisores já está acostumada com experiências fluídas e visuais no B2C e espera o mesmo padrão no B2B.</p>
       <p>Se o seu e-commerce B2B oferece apenas fotos estáticas, PDFs de catálogos e descrições técnicas genéricas, ele está ficando para trás. A experiência de compra também é fator decisivo entre fechar ou não uma venda.</p>
       <p>Vídeos ajudam a criar uma jornada mais fluida, intuitiva e informativa, onde o usuário sente que tem tudo o que precisa para tomar a melhor decisão. Eles também são necessários para reduzir a necessidade de contato comercial inicial, poupando tempo e recursos de ambos os lados.</p>
-
-      <h1><strong>Tipos de vídeos para usar no e-commerce B2B</strong></h1>
+      <h2><strong>Tipos de vídeos para usar no e-commerce B2B</strong></h2>
       <p>Existem diferentes tipos de vídeos aplicados em lojas B2B:</p>
-      <p>• <strong>Vídeos demonstrativos:</strong> mostram o funcionamento de um equipamento, ferramenta, plataforma ou insumo. Esse tipo de vídeo responde dúvidas frequentes e reforça diferenciais técnicos do produto.<br />• <strong>Depoimentos de clientes:</strong> ajudam a construir prova social e mostrar resultados reais. Um vídeo de um cliente relatando como aquele produto otimizou seus processos tem um poder de persuasão enorme.<br />• <strong>Explicativos animados:</strong> ideais para produtos mais complexos ou técnicos. Com animações, é possível ilustrar processos internos, funcionamento de sistemas e outros detalhes difíceis de mostrar fisicamente.<br />• <strong>Bastidores e fabricação:</strong> vídeos mostrando como o produto é feito, os processos de qualidade, o ambiente de trabalho e os cuidados com logística reforçam a credibilidade da empresa.<br />• <strong>Tutoriais:</strong> indicados para produtos que exigem montagem, configuração ou uso técnico. Um tutorial evita erros e aumenta a satisfação do cliente logo após a compra.</p>
-
-      <h1><strong>Vídeo e SEO no B2B: impacto direto no tráfego qualificado</strong></h1>
+      <ul>
+        <li><strong>Vídeos demonstrativos:</strong> mostram o funcionamento de um equipamento, ferramenta, plataforma ou insumo. Esse tipo de vídeo responde dúvidas frequentes e reforça diferenciais técnicos do produto.</li>
+        <li><strong>Depoimentos de clientes:</strong> ajudam a construir prova social e mostrar resultados reais. Um vídeo de um cliente relatando como aquele produto otimizou seus processos tem um poder de persuasão enorme.</li>
+        <li><strong>Explicativos animados:</strong> ideais para produtos mais complexos ou técnicos. Com animações, é possível ilustrar processos internos, funcionamento de sistemas e outros detalhes difíceis de mostrar fisicamente.</li>
+        <li><strong>Bastidores e fabricação:</strong> vídeos mostrando como o produto é feito, os processos de qualidade, o ambiente de trabalho e os cuidados com logística reforçam a credibilidade da empresa.</li>
+        <li><strong>Tutoriais:</strong> indicados para produtos que exigem montagem, configuração ou uso técnico. Um tutorial evita erros e aumenta a satisfação do cliente logo após a compra.</li>
+      </ul>
+      <h2><strong>Vídeo e SEO no B2B: impacto direto no tráfego qualificado</strong></h2>
       <p>Outro ponto importante é o SEO. O uso de vídeos nas páginas do e-commerce B2B contribui diretamente para o ranqueamento orgânico.</p>
       <p>O Google valoriza os sites com maior tempo de permanência do usuário. Os conteúdos são grandes aliados nessa tarefa por manterem os visitantes engajados, além de ajudarem a reduzir a taxa de rejeição.</p>
-
-      <h1><strong>Widde: a solução para implementar vídeos no e-commerce B2B</strong></h1>
+      <h2><strong>Widde: a solução para implementar vídeos no e-commerce B2B</strong></h2>
       <p>Apesar de todos os benefícios, muitas empresas hesitam em usar vídeos no B2B por medo de comprometer a performance do site ou enfrentar dificuldades técnicas na integração. E é exatamente nesse ponto que a Widde se destaca.</p>
       <p>A Widde é uma plataforma de Video Commerce desenvolvida para integrar vídeos ao e-commerce de forma rápida, leve e efetiva, sem prejudicar o carregamento do site.</p>
       <p>Para o e-commerce B2B, a Widde oferece funcionalidades que fazem toda a diferença:</p>
-      <p>1. Comentários nos vídeos com resposta da loja, permitindo tirar dúvidas diretamente no conteúdo e melhorar o atendimento ao cliente técnico.<br />2. Carrinho de compras dentro do vídeo, agilizando a conversão de clientes que já entenderam o valor do produto.<br />3. Explorar, uma solução estilo redes sociais, que aumenta o tempo de permanência no site e a descoberta de outros produtos.<br />4. Layout personalizável, adaptado ao branding da sua empresa e ao estilo do seu público.<br />5. Dashboard de métricas, para acompanhar visualizações, engajamento, conversões e perguntas mais frequentes.</p>
+      <ol>
+        <li>Comentários nos vídeos com resposta da loja, permitindo tirar dúvidas diretamente no conteúdo e melhorar o atendimento ao cliente técnico.</li>
+        <li>Carrinho de compras dentro do vídeo, agilizando a conversão de clientes que já entenderam o valor do produto.</li>
+        <li>Explorar, uma solução estilo redes sociais, que aumenta o tempo de permanência no site e a descoberta de outros produtos.</li>
+        <li>Layout personalizável, adaptado ao branding da sua empresa e ao estilo do seu público.</li>
+        <li>Dashboard de métricas, para acompanhar visualizações, engajamento, conversões e perguntas mais frequentes.</li>
+      </ol>
       <p>E tudo isso sem pesar o site. A tecnologia da Widde é projetada com foco em desempenho, utilizando carregamento inteligente e integração com todas as plataformas de e-commerce, como Shopify, Tray, Nuvemshop, VTEX e muito mais.</p>
-
-      <h1><strong>Uma vantagem competitiva ainda pouco explorada</strong></h1>
+      <h2><strong>Uma vantagem competitiva ainda pouco explorada</strong></h2>
       <p>Investir em vídeos no e-commerce B2B vai muito além de uma questão de acompanhar tendências — é uma forma de diferenciar sua empresa no mercado.</p>
       <p>Enquanto seus concorrentes ainda estão presos a modelos antigos e tradicionais de apresentação de produtos, sua marca oferece uma experiência visual, interativa e muito mais convincente.</p>
       <p>Vídeos no B2B são ainda mais efetivos porque não são esperados. Ou seja, quando o comprador acessa sua loja e encontra um vídeo claro, objetivo e profissional, ele é positivamente surpreendido.</p>

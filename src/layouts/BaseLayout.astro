@@ -8,6 +8,10 @@ interface Props {
   ogTitle?: string
   ogDescription?: string
   ogUrl?: string
+  ogImage?: string
+  ogType?: string
+  datePublished?: string
+  author?: string
 }
 
 const {
@@ -17,7 +21,37 @@ const {
   ogTitle,
   ogDescription,
   ogUrl,
+  ogImage,
+  ogType,
+  datePublished,
+  author,
 } = Astro.props
+
+const resolvedOgImage = ogImage ?? 'https://widde.io/assets/logo_cover.jpeg'
+const resolvedOgType = ogType ?? 'website'
+
+const blogPostingSchema = resolvedOgType === 'article' ? {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": resolvedOgImage,
+  "datePublished": datePublished,
+  "author": {
+    "@type": "Organization",
+    "name": author ?? "Widde",
+    "url": "https://widde.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Widde",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://widde.io/logo.png"
+    }
+  },
+  "mainEntityOfPage": canonical
+} : null
 ---
 
 <!DOCTYPE html>
@@ -31,18 +65,19 @@ const {
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={canonical} />
 
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={resolvedOgType} />
   <meta property="og:title" content={ogTitle ?? title} />
   <meta property="og:description" content={ogDescription ?? description} />
   <meta property="og:url" content={ogUrl ?? canonical} />
-  <meta property="og:image" content="https://widde.io/assets/logo_cover.jpeg" />
+  <meta property="og:image" content={resolvedOgImage} />
   <meta property="og:site_name" content="Widde" />
   <meta property="og:locale" content="pt_BR" />
+  {datePublished && <meta property="article:published_time" content={datePublished} />}
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={ogTitle ?? title} />
   <meta name="twitter:description" content={ogDescription ?? description} />
-  <meta name="twitter:image" content="https://widde.io/assets/logo_cover.jpeg" />
+  <meta name="twitter:image" content={resolvedOgImage} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,6 +118,7 @@ const {
     "url": "https://widde.io"
   }
   </script>
+  {blogPostingSchema && <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />}
 </head>
 <body>
   <slot />

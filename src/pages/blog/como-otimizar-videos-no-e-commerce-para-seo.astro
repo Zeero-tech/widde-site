@@ -1,41 +1,55 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como otimizar vídeos no e-commerce para SEO?" description="Os vídeos são fortes aliados para o SEO quando bem otimizados. Descubra como otimizar vídeos no e-commerce para melhorar seu ranqueamento e aumentar conversões." canonical="https://widde.io/blog/como-otimizar-videos-no-e-commerce-para-seo">
-  <BlogArticle client:load title="Como otimizar vídeos no e-commerce para SEO?" category="Video Commerce" date="22.10.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/68595057fb551be3f2fd1ffa_Otimize%20v%C3%ADdeos%20no%20e-commerce%20para%20%20SEO.png" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como otimizar vídeos no e-commerce para SEO?"
+  description="Os vídeos no e-commerce são muito mais do que um recurso para engajar consumidores. Quando bem otimizados, os vídeos também são fortes aliados para o SEO."
+  canonical="https://widde.io/blog/como-otimizar-videos-no-e-commerce-para-seo"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-otimizar-videos-no-e-commerce-para-seo/68595057fb551be3f2fd1ffa_Otimize-v-deos-no-e-commerce-para-SEO.png"
+  datePublished="2025-10-22"
+>
+  <BlogArticle
+    client:load
+    title="Como otimizar vídeos no e-commerce para SEO?"
+    category="Video Commerce"
+    date="22.10.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/como-otimizar-videos-no-e-commerce-para-seo/68595057fb551be3f2fd1ffa_Otimize-v-deos-no-e-commerce-para-SEO.png"
+    currentSlug="como-otimizar-videos-no-e-commerce-para-seo"
+  >
     <div>
       <p>Os vídeos no e-commerce são muito mais do que um recurso para engajar consumidores. Quando bem otimizados, os vídeos também são <strong>fortes aliados para o SEO</strong>. Muitos lojistas criam conteúdos de qualidade, mas deixam de capturar os benefícios de ranqueamento orgânico por não aplicar técnicas básicas de otimização.</p>
-
-      <h1><strong>Por que os vídeos no e-commerce potencializam o SEO?</strong></h1>
+      <h2><strong>Por que os vídeos no e-commerce potencializam o SEO?</strong></h2>
       <p>O Video Commerce melhora o SEO ao aumentar o engajamento e o tempo de permanência na página — métricas que o Google considera para ranqueamento. Quando um visitante assiste a um vídeo, está sinalizando ao algoritmo que a página é relevante e oferece uma experiência positiva.</p>
-
-      <h1><strong>Coloque vídeos que realmente ajudem seu cliente a comprar</strong></h1>
+      <h2><strong>Coloque vídeos que realmente ajudem seu cliente a comprar</strong></h2>
       <p>O primeiro passo para otimizar vídeos no e-commerce é garantir que eles realmente guiem a jornada de compra de forma estratégica. Foque em utilidade: demonstre uso, estilo, combinações e diferenciais do produto. Inclua formatos variados como depoimentos, tutoriais e avaliações. Mantenha uma linguagem visual envolvente com ritmo e estética alinhados à marca.</p>
       <p>O resultado direto é o aumento do tempo de permanência na página, o que sinaliza ao Google que o conteúdo é relevante — e isso impacta positivamente o ranqueamento.</p>
-
-      <h1><strong>Insira os vídeos nas páginas mais relevantes</strong></h1>
+      <h2><strong>Insira os vídeos nas páginas mais relevantes</strong></h2>
       <p>Os vídeos precisam estar visíveis na primeira dobra da página do produto ou próximos aos botões de compra — não escondidos no rodapé. Podem ser distribuídos também em páginas de categoria, conteúdo de blog e homepage quando houver relevância temática.</p>
-
-      <h1><strong>Monitore as métricas de engajamento e SEO</strong></h1>
+      <h2><strong>Monitore as métricas de engajamento e SEO</strong></h2>
       <p>Use o Google Analytics, o Google Search Console e o dashboard da Widde (com integração ao GA) para acompanhar:</p>
-      <p>• Duração de visualização<br />• Taxa de cliques<br />• Taxa de rejeição da página<br />• Engajamento geral com o conteúdo<br />• Tempo de retenção do vídeo<br />• Impacto nas conversões</p>
-
-      <h1><strong>Atualize vídeos com base em mudanças e feedbacks</strong></h1>
+      <ul>
+        <li>Duração de visualização</li>
+        <li>Taxa de cliques</li>
+        <li>Taxa de rejeição da página</li>
+        <li>Engajamento geral com o conteúdo</li>
+        <li>Tempo de retenção do vídeo</li>
+        <li>Impacto nas conversões</li>
+      </ul>
+      <h2><strong>Atualize vídeos com base em mudanças e feedbacks</strong></h2>
       <p>Sempre que um produto muda ou surgem novas dúvidas de clientes, regrave ou complemente o conteúdo original. Os comentários dos clientes nos vídeos revelam lacunas, perguntas não respondidas e sugestões de melhoria — o que beneficia tanto o vídeo quanto a experiência geral do site.</p>
-
-      <h1><strong>Widde: vídeos otimizados no e-commerce sem pesar o site</strong></h1>
+      <h2><strong>Widde: vídeos otimizados no e-commerce sem pesar o site</strong></h2>
       <p>A Widde transforma a experiência visual da sua loja em uma aliada do SEO, melhorando engajamento, tempo no site e conversões. A plataforma oferece:</p>
-      <p>• Carregamento inteligente e rápido dos vídeos<br />• Comentários dentro dos vídeos com resposta da loja<br />• Carrinho de compras dentro do vídeo<br />• Feed de vídeos estilo redes sociais<br />• Métricas completas de engajamento e conversão<br />• Integração com Shopify, Tray, Nuvemshop, VTEX, Loja Integrada e mais</p>
+      <ul>
+        <li>Carregamento inteligente e rápido dos vídeos</li>
+        <li>Comentários dentro dos vídeos com resposta da loja</li>
+        <li>Carrinho de compras dentro do vídeo</li>
+        <li>Feed de vídeos estilo redes sociais</li>
+        <li>Métricas completas de engajamento e conversão</li>
+        <li>Integração com Shopify, Tray, Nuvemshop, VTEX, Loja Integrada e mais</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

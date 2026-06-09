@@ -1,52 +1,47 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Descrição e vídeos do produto | Como fazer para e-commerce?" description="Adicionar descrições e vídeos aos produtos no e-commerce melhora a experiência do cliente e aumenta as vendas. Veja 11 dicas práticas com a Widde." canonical="https://widde.io/blog/descricao-e-videos-do-produto">
-  <BlogArticle client:load title="Descrição e vídeos do produto | Como fazer para e-commerce?" category="Video Commerce" date="12.05.2025" readingTime="5 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/675731a95e6b121c8b63ad90_Descri%C3%A7%C3%B5es%20e%20v%C3%ADdeos%20dos%20produtos.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Descrição e vídeos do produto | Como fazer para e-commerce?"
+  description="Adicionar descrições e vídeos aos produtos no e-commerce são estratégias para melhorar a experiência do cliente e aumentar as vendas."
+  canonical="https://widde.io/blog/descricao-e-videos-do-produto"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/descricao-e-videos-do-produto/675731a95e6b121c8b63ad90_Descri-es-e-v-deos-dos-produtos.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Descrição e vídeos do produto | Como fazer para e-commerce?"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="5 minutos de leitura"
+    coverImage="/assets/blog/descricao-e-videos-do-produto/675731a95e6b121c8b63ad90_Descri-es-e-v-deos-dos-produtos.avif"
+    currentSlug="descricao-e-videos-do-produto"
+  >
     <div>
       <p>Adicionar descrições e vídeos aos produtos no e-commerce são estratégias para melhorar a experiência do cliente e aumentar as vendas. As descrições fornecem informações sobre as características e benefícios do item, enquanto os vídeos demonstram o produto em ação, ajudando os consumidores a visualizá-lo de forma prática e realista. Essa combinação facilita a compreensão do produto e elimina dúvidas, aumentando a confiança do consumidor na compra. Dados da Widde mostram que vídeos podem aumentar as taxas de conversão em até 4 vezes e prolongar o tempo de retenção no site, com consumidores passando até 5 vezes mais tempo navegando.</p>
-
-      <h1><strong>1. Use títulos objetivos</strong></h1>
+      <h2><strong>1. Use títulos objetivos</strong></h2>
       <p>Os títulos são a porta de entrada para captar a atenção do consumidor e precisam ser claros e diretos. Um bom título deve informar rapidamente o que é o produto e destacar um diferencial. Por exemplo, em vez de "Tênis Esportivo", opte por algo como "Tênis Esportivo Leve e Respirável para Corridas". Essa abordagem ajuda o cliente a identificar rapidamente o produto que procura, enquanto destaca características que podem ser decisivas na escolha.</p>
-
-      <h1><strong>2. Destaque os benefícios do produto</strong></h1>
+      <h2><strong>2. Destaque os benefícios do produto</strong></h2>
       <p>Os benefícios do produto são o que realmente convencem o consumidor a comprar. Em vez de focar apenas nas características, mostre como elas trazem vantagens práticas para o cliente. Por exemplo, ao descrever uma cafeteira, não basta dizer que ela tem "reservatório de 1,5L"; explique que esse tamanho permite fazer determinada quantidade de xícaras de café sem reabastecer. Benefícios objetivos, como "economia de tempo" ou "conforto ao usar", tornam a descrição mais atraente para o consumidor, aumentando as chances de conversão.</p>
-
-      <h1><strong>3. Inclua especificações técnicas importantes</strong></h1>
+      <h2><strong>3. Inclua especificações técnicas importantes</strong></h2>
       <p>As especificações técnicas são necessárias para produtos que exigem informações detalhadas, como eletrônicos, móveis ou itens de vestuário. Liste as dimensões, materiais, voltagem, capacidade e outras características técnicas para ajudar o consumidor a tomar uma decisão. Essas informações transmitem confiança e reduzem as chances de devoluções ou trocas devido a expectativas mal alinhadas.</p>
-
-      <h1><strong>4. Adicione palavras-chave para SEO</strong></h1>
+      <h2><strong>4. Adicione palavras-chave para SEO</strong></h2>
       <p>Palavras-chave otimizam a descrição do produto para motores de busca como Google, aumentando a visibilidade do e-commerce. Identifique os termos que os consumidores usam para pesquisar o produto e integre-os de forma natural na descrição. O uso estratégico de palavras-chave melhora o ranqueamento do site e aumenta a probabilidade de atrair clientes qualificados.</p>
-
-      <h1><strong>5. Utilize uma linguagem acessível e atraente</strong></h1>
+      <h2><strong>5. Utilize uma linguagem acessível e atraente</strong></h2>
       <p>A linguagem utilizada na descrição deve ser acessível e atraente para o público-alvo. Evite jargões técnicos ou termos complicados que possam confundir o consumidor. Prefira uma comunicação que seja de fácil entendimento e destaque os aspectos positivos do produto.</p>
-
-      <h1><strong>6. Mostre o produto em uso nos vídeos</strong></h1>
+      <h2><strong>6. Mostre o produto em uso nos vídeos</strong></h2>
       <p>Os consumidores querem visualizar como o produto funciona na prática. Vídeos que mostram o item em uso ajudam a criar uma conexão mais forte com o cliente, permitindo que ele entenda melhor suas funcionalidades e aplicações. Por exemplo, ao vender um liquidificador, demonstre-o preparando receitas, destacando a potência e praticidade. Você pode olhar as dúvidas no SAC da sua loja para entender as maiores objeções dos seus clientes e produzir conteúdos estratégicos.</p>
-
-      <h1><strong>7. Crie vídeos curtos e diretos ao ponto</strong></h1>
+      <h2><strong>7. Crie vídeos curtos e diretos ao ponto</strong></h2>
       <p>Vídeos longos podem perder o interesse do consumidor, por isso é necessário criar conteúdos curtos e objetivos. Foque nos pontos principais, como funcionalidades e benefícios do produto, e mantenha o vídeo entre 30 segundos e 1 minuto. Se o item for muito complexo de ser explicado, prefira dividir os conteúdos em mais de um vídeo. Vídeos curtos mantêm o espectador engajado, aumentam a retenção e incentivam ações rápidas, como adicionar ao carrinho ou concluir a compra.</p>
-
-      <h1><strong>8. Adicione legendas aos vídeos para acessibilidade</strong></h1>
+      <h2><strong>8. Adicione legendas aos vídeos para acessibilidade</strong></h2>
       <p>Muitos consumidores assistem a vídeos sem som, principalmente em dispositivos móveis. Adicionar legendas torna o conteúdo acessível para quem prefere assistir sem áudio e para pessoas com deficiência auditiva. Além disso, legendas reforçam a mensagem e ajudam a reter informações importantes.</p>
-
-      <h1><strong>9. Use imagens e gráficos para complementar a descrição</strong></h1>
+      <h2><strong>9. Use imagens e gráficos para complementar a descrição</strong></h2>
       <p>Imagens de qualidade e gráficos bem elaborados são complementos para as descrições de produtos. Gráficos como tabelas de tamanhos, comparações de funcionalidades ou especificações técnicas tornam a descrição mais rica e fácil de entender. Por exemplo, ao vender uma câmera fotográfica, inclua gráficos que destaquem diferenças entre os modos de captura ou uma tabela comparativa com outros modelos.</p>
-
-      <h1><strong>10. Inclua chamadas para ação claras, como "Compre agora"</strong></h1>
+      <h2><strong>10. Inclua chamadas para ação claras, como "Compre agora"</strong></h2>
       <p>Chamadas para ação (CTAs) são indispensáveis para guiar o consumidor no próximo passo da jornada de compra. Use frases diretas e imperativas, como "Compre agora", "Garanta o seu" ou "Adicione ao carrinho", para incentivar a conversão. Posicione essas CTAs estrategicamente no final da descrição ou no vídeo, alinhadas com elementos visuais que chamem atenção.</p>
-
-      <h1><strong>11. Use a Widde para Video Commerce</strong></h1>
+      <h2><strong>11. Use a Widde para Video Commerce</strong></h2>
       <p>A Widde é uma plataforma de Video Commerce que torna possível integrar vídeos interativos em qualquer página do e-commerce, permitindo que os consumidores vejam demonstrações práticas, adicionem itens ao carrinho durante o vídeo, deixem comentários e explorem conteúdos sem comprometer a velocidade do site. Com dashboard para analisar o impacto dos vídeos, os lojistas conseguem entender o comportamento do cliente e otimizar estratégias de produção de conteúdo.</p>
     </div>
   </BlogArticle>

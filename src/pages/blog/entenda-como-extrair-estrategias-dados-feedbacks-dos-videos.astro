@@ -1,33 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Entenda como extrair estratégias dos dados e feedbacks dos vídeos" description="Aprenda a extrair estratégias dos dados e feedbacks dos vídeos no e-commerce: monitorar visualizações, agir nos comentários e analisar métricas de performance." canonical="https://widde.io/blog/entenda-como-extrair-estrategias-dados-feedbacks-dos-videos">
-  <BlogArticle client:load title="Entenda como extrair estratégias dos dados e feedbacks dos vídeos" category="Video Commerce" date="12.05.2025" readingTime="4 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655cfcc7d46f2bde130ba0fc_post-2%20(1).avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Entenda como extrair estratégias dos dados e feedbacks dos vídeos"
+  description="Os dados representam inteligência de negócios inestimável. Eles ajudam as organizações a compreender as preferências e os pontos de dor dos clientes."
+  canonical="https://widde.io/blog/entenda-como-extrair-estrategias-dados-feedbacks-dos-videos"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/entenda-como-extrair-estrategias-dados-feedbacks-dos-videos/655cfcc7d46f2bde130ba0fc_post-2-1.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Entenda como extrair estratégias dos dados e feedbacks dos vídeos"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="4 minutos de leitura"
+    coverImage="/assets/blog/entenda-como-extrair-estrategias-dados-feedbacks-dos-videos/655cfcc7d46f2bde130ba0fc_post-2-1.avif"
+    currentSlug="entenda-como-extrair-estrategias-dados-feedbacks-dos-videos"
+  >
     <div>
       <p>Os dados representam inteligência de negócios inestimável. Eles ajudam as organizações a compreender as preferências e os pontos de dor dos clientes, identificando oportunidades de melhoria. O conteúdo em vídeo requer análise similar para medir seu impacto na performance do e-commerce.</p>
-
-      <h1><strong>1. Monitore as visualizações da coleção de vídeos</strong></h1>
+      <h2><strong>1. Monitore as visualizações da coleção de vídeos</strong></h2>
       <p>Acompanhe quantos vídeos os espectadores assistem em cada página. Essa métrica de engajamento revela a eficácia do conteúdo. Por exemplo: imagine que você tem 5 vídeos em uma página, e as pessoas assistem a 2 em média. Pequenos ajustes — reordenar os vídeos, reduzir a duração ou melhorar a relevância para as decisões de compra — podem ser testados e medidos. A ordem e a qualidade dos primeiros vídeos influenciam fortemente quantos o espectador assistirá.</p>
-
-      <h1><strong>2. Aja com base no feedback dos clientes</strong></h1>
+      <h2><strong>2. Aja com base no feedback dos clientes</strong></h2>
       <p>Colete e analise o feedback para identificar áreas de melhoria e implementar mudanças que aumentem a satisfação dos clientes e as vendas. Identificar padrões no feedback revela tendências. Por exemplo: se compradores de sapatos solicitam consistentemente vídeos mostrando o calçado sendo usado em modelos, produzir esse conteúdo ajuda os clientes a visualizar o caimento e auxilia nas decisões de compra.</p>
       <p>Considere produzir conteúdo adicional quando os clientes solicitarem vídeos de produtos ainda não filmados. Uma loja de joias lançando novas coleções pode receber comentários de clientes pedindo conteúdo em vídeo de peças novas, criando oportunidades para impulsionar o entusiasmo de vendas.</p>
-
-      <h1><strong>3. Monitore as métricas de performance</strong></h1>
+      <h2><strong>3. Monitore as métricas de performance</strong></h2>
       <p>A plataforma Widde fornece dados de performance incluindo visualizações, cliques e conversões. Analisar essas métricas revela como os clientes interagem com os vídeos e destaca oportunidades de melhoria. Compare a taxa de conversão entre espectadores e não-espectadores para quantificar o impacto real do Video Commerce em suas vendas.</p>
-
-      <h1><strong>Ciclo de melhoria contínua</strong></h1>
-      <p>Dados + feedback + ação = melhoria contínua. Use os insights dos vídeos para:<br />• Identificar quais produtos precisam de mais conteúdo;<br />• Entender quais dúvidas dos clientes ainda não estão sendo respondidas;<br />• Testar diferentes formatos e durações de vídeo;<br />• Otimizar a sequência de vídeos nas páginas para maximizar o engajamento.</p>
+      <h2><strong>Ciclo de melhoria contínua</strong></h2>
+      <p>Dados + feedback + ação = melhoria contínua. Use os insights dos vídeos para:</p>
+      <ul>
+        <li>Identificar quais produtos precisam de mais conteúdo;</li>
+        <li>Entender quais dúvidas dos clientes ainda não estão sendo respondidas;</li>
+        <li>Testar diferentes formatos e durações de vídeo;</li>
+        <li>Otimizar a sequência de vídeos nas páginas para maximizar o engajamento.</li>
+      </ul>
     </div>
   </BlogArticle>
 </BaseLayout>

@@ -103,12 +103,12 @@ export default function CasesCarousel() {
                 <img
                   src={c.image}
                   srcSet={
-                    c.image?.endsWith(".avif")
+                    (c.image?.endsWith(".avif") || c.image?.startsWith("/assets/"))
                       ? undefined
                       : `${c.image?.replace(/(\.[^.]+)$/, "-p-500$1")} 500w, ${c.image?.replace(/(\.[^.]+)$/, "-p-800$1")} 800w, ${c.image?.replace(/(\.[^.]+)$/, "-p-1080$1")} 1080w, ${c.image} 2560w`
                   }
                   sizes={
-                    c.image?.endsWith(".avif")
+                    (c.image?.endsWith(".avif") || c.image?.startsWith("/assets/"))
                       ? undefined
                       : "(max-width: 640px) 85vw, 600px"
                   }

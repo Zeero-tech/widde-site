@@ -1,46 +1,43 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Os 9 maiores benefícios do Video Commerce" description="Descubra os 9 maiores benefícios do Video Commerce para o seu e-commerce: mais conversão, maior retenção, menos devoluções e uma experiência humanizada." canonical="https://widde.io/blog/beneficios-do-video-commerce">
-  <BlogArticle client:load title="Os 9 maiores benefícios do Video Commerce" category="Video Commerce" date="21.01.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/678f9758461fdc7d4733fb6b_Maiores%20benef%C3%ADcios%20do%20Video%20Commerce.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Os 9 maiores benefícios do Video Commerce"
+  description="O Video Commerce representa uma estratégia essencial para lojistas online que buscam oferecer experiências de compra mais envolventes e interativas."
+  canonical="https://widde.io/blog/beneficios-do-video-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/beneficios-do-video-commerce/678f9758461fdc7d4733fb6b_Maiores-benef-cios-do-Video-Commerce.avif"
+  datePublished="2025-01-21"
+>
+  <BlogArticle
+    client:load
+    title="Os 9 maiores benefícios do Video Commerce"
+    category="Video Commerce"
+    date="21.01.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/beneficios-do-video-commerce/678f9758461fdc7d4733fb6b_Maiores-benef-cios-do-Video-Commerce.avif"
+    currentSlug="beneficios-do-video-commerce"
+  >
     <div>
       <p>O Video Commerce representa uma estratégia essencial para lojistas online que buscam oferecer experiências de compra mais envolventes e interativas. Os vídeos permitem que os clientes visualizem os produtos em ação, entendam melhor a funcionalidade e se sintam com maior confiança nas decisões de compra. Essa abordagem aumenta as taxas de conversão ao eliminar dúvidas e agilizar as decisões de compra. Além disso, os vídeos capturam a atenção dos visitantes, aumentando o tempo de navegação no site e impulsionando as oportunidades de vendas adicionais. Os vídeos também reduzem as taxas de devolução ao proporcionar maior visibilidade do produto antes da compra.</p>
-
-      <h1><strong>1. Aumento da taxa de conversão</strong></h1>
+      <h2><strong>1. Aumento da taxa de conversão</strong></h2>
       <p>A integração de vídeos interativos permite que os consumidores examinem melhor os produtos e entendam suas características. De acordo com dados da Widde, lojas que utilizam essa estratégia conseguem em média até 4 vezes mais conversões em comparação com lojas que utilizam apenas fotos e textos. A abordagem também permite carrinhos de compras totalmente integrados dentro dos vídeos.</p>
-
-      <h1><strong>2. Maior tempo de retenção no site</strong></h1>
+      <h2><strong>2. Maior tempo de retenção no site</strong></h2>
       <p>As análises da Widde indicam que lojas que utilizam vídeos registram em média até 5 vezes mais tempo de permanência dos clientes. O conteúdo interativo, especialmente os feeds de vídeo, engaja os consumidores enquanto os mantém na página.</p>
-
-      <h1><strong>3. Redução de devoluções e trocas</strong></h1>
+      <h2><strong>3. Redução de devoluções e trocas</strong></h2>
       <p>A apresentação detalhada e realista dos produtos em vídeo resolve os desafios de devolução. Pesquisas da Animoto revelaram que 93% dos consumidores consideram os vídeos para ajudar a tomar decisões de compra, pois permitem uma melhor visualização do item antes da compra.</p>
-
-      <h1><strong>4. Experiência de compra humanizada</strong></h1>
+      <h2><strong>4. Experiência de compra humanizada</strong></h2>
       <p>Vídeos com pessoas reais usando os produtos ou mostrando as equipes das lojas criam conexões emocionais. Essa abordagem melhora a percepção da marca e constrói a confiança do consumidor na qualidade e autenticidade do produto.</p>
-
-      <h1><strong>5. Prova social por vídeos de clientes</strong></h1>
+      <h2><strong>5. Prova social por vídeos de clientes</strong></h2>
       <p>Depoimentos reais de clientes e demonstrações de uso constroem confiança imediata para novos visitantes, transmitindo credibilidade e segurança por meio da validação entre pares.</p>
-
-      <h1><strong>6. Demonstração prática do produto</strong></h1>
+      <h2><strong>6. Demonstração prática do produto</strong></h2>
       <p>Enquanto as imagens estáticas mostram aspectos visuais, os vídeos permitem que os consumidores observem os produtos em ação, entendam a funcionalidade e visualizem aplicações no mundo real.</p>
-
-      <h1><strong>7. Maior engajamento com conteúdo interativo</strong></h1>
+      <h2><strong>7. Maior engajamento com conteúdo interativo</strong></h2>
       <p>Os vídeos interativos permitem que os visitantes adicionem produtos aos carrinhos, comentem, vejam produtos relacionados e compartilhem via WhatsApp. Lojas que utilizam vídeos interativos registram em média até 5 vezes mais tempo de retenção, aumentando a probabilidade de conversão e o ticket médio.</p>
-
-      <h1><strong>8. Maior confiança do consumidor</strong></h1>
+      <h2><strong>8. Maior confiança do consumidor</strong></h2>
       <p>Demonstrações reais e vídeos explicativos constroem confiança sobre a qualidade e usabilidade do produto. Vídeos de depoimentos de clientes e produtos em ação fornecem uma visualização mais realista.</p>
-
-      <h1><strong>9. Diferenciação competitiva no mercado</strong></h1>
+      <h2><strong>9. Diferenciação competitiva no mercado</strong></h2>
       <p>Em mercados de e-commerce saturados, investimentos em vídeos de qualidade criam experiências memoráveis e distintivas que fortalecem as conexões emocionais com a marca — uma área que muitos concorrentes ainda não exploraram plenamente.</p>
     </div>
   </BlogArticle>

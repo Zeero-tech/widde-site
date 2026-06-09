@@ -1,47 +1,44 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Tendências do e-commerce para os próximos anos no Brasil" description="O mercado brasileiro de e-commerce está em constante transformação. Descubra as principais tendências para os próximos anos e como se manter competitivo." canonical="https://widde.io/blog/tendencias-do-e-commerce">
-  <BlogArticle client:load title="Tendências do e-commerce para os próximos anos no Brasil" category="Tendências e-commerce" date="24.03.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/67e19ebe63e73c18552da636_Tend%C3%AAncias%20do%20e-commerce%20para%20os%20pr%C3%B3ximos%20anos.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Tendências do e-commerce para os próximos anos no Brasil"
+  description="O mercado brasileiro de e-commerce passa por transformação constante. Manter-se atualizado com as tendências é essencial para manter a competitividade e o crescimento sustentável."
+  canonical="https://widde.io/blog/tendencias-do-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/tendencias-do-e-commerce/67e19ebe63e73c18552da636_Tend-ncias-do-e-commerce-para-os-pr-ximos-anos.avif"
+  datePublished="2025-03-24"
+>
+  <BlogArticle
+    client:load
+    title="Tendências do e-commerce para os próximos anos no Brasil"
+    category="Tendências e-commerce"
+    date="24.03.2025"
+    readingTime="8 minutos de leitura"
+    coverImage="/assets/blog/tendencias-do-e-commerce/67e19ebe63e73c18552da636_Tend-ncias-do-e-commerce-para-os-pr-ximos-anos.avif"
+    currentSlug="tendencias-do-e-commerce"
+  >
     <div>
       <p>O mercado brasileiro de e-commerce passa por transformação constante. Manter-se atualizado com as tendências é essencial para manter a competitividade e o crescimento sustentável. À medida que a tecnologia avança e o comportamento do consumidor muda, as empresas precisam se adaptar para oferecer experiências de compra personalizadas.</p>
-
-      <h1><strong>Inteligência Artificial e Automação</strong></h1>
+      <h2><strong>Inteligência Artificial e Automação</strong></h2>
       <p>A IA e a automação revolucionam os processos de e-commerce. Chatbots, assistentes virtuais e recomendações personalizadas otimizam o atendimento ao cliente e impulsionam as vendas. A automação gerencia estoque, precificação e análises preditivas, permitindo decisões estratégicas baseadas em dados.</p>
-
-      <h1><strong>Personalização da Experiência do Cliente</strong></h1>
+      <h2><strong>Personalização da Experiência do Cliente</strong></h2>
       <p>A competição exige experiências diferenciadas. Aproveitar dados de histórico de navegação e compras permite campanhas segmentadas com ofertas e produtos alinhados. Suporte personalizado e comunicações direcionadas via e-mail, SMS ou notificações push aumentam o engajamento e a fidelização.</p>
-
-      <h1><strong>Social Commerce</strong></h1>
+      <h2><strong>Social Commerce</strong></h2>
       <p>O social commerce transforma as interações entre marca e consumidor. Plataformas como Instagram, TikTok e Facebook se integram diretamente ao e-commerce, permitindo compras dentro da plataforma. O marketing de conteúdo continua fundamental, gerando materiais de valor que constroem autenticidade e confiança.</p>
       <p>A popularidade do UGC (User Generated Content) cresceu recentemente. A pesquisa E-commerce Trends 2025 revelou que "86% dos consumidores preferem interagir com humanos". Avaliações autênticas de clientes fornecem credibilidade e segurança essenciais.</p>
-
-      <h1><strong>Video Commerce com a Widde</strong></h1>
+      <h2><strong>Video Commerce com a Widde</strong></h2>
       <p>O Video Commerce aumenta as taxas de conversão e o engajamento. A plataforma da Widde incorpora vídeos diretamente nas páginas de produto, criando experiências interativas para o consumidor. Com o aumento dos custos de tráfego pago, a otimização da conversão é crítica. Essa solução captura atenção sem aumentar o CAC, esclarece as características do produto, reduz a hesitação na compra e diminui as taxas de devolução.</p>
-
-      <h1><strong>Pagamentos Digitais e E-wallets</strong></h1>
+      <h2><strong>Pagamentos Digitais e E-wallets</strong></h2>
       <p>A digitalização dos pagamentos se fortalece consideravelmente. Métodos como Pix, carteiras digitais (Google Pay, Apple Pay) e criptomoedas aumentam a segurança, velocidade e conveniência. Soluções "Compre Agora, Pague Depois" (BNPL) e planos de parcelamento inteligentes aumentam a flexibilidade nas compras.</p>
-
-      <h1><strong>Sustentabilidade e Consumo Consciente</strong></h1>
+      <h2><strong>Sustentabilidade e Consumo Consciente</strong></h2>
       <p>A sustentabilidade influencia cada vez mais as decisões de compra. Os consumidores priorizam empresas que implementam práticas ecológicas: embalagens biodegradáveis, logística sustentável, redução de resíduos. Conceitos de economia circular e práticas ESG fornecem vantagens competitivas, atraindo compradores conscientes do meio ambiente.</p>
-
-      <h1><strong>Logística Rápida e Flexível</strong></h1>
+      <h2><strong>Logística Rápida e Flexível</strong></h2>
       <p>A agilidade na entrega continua crítica. Entrega no mesmo dia, pontos de coleta estratégicos e frete flexível representam inovações importantes. A logística reversa ganha atenção para devoluções sem complicações. Centros de distribuição estratégicos e parcerias logísticas reduzem prazos e custos.</p>
-
-      <h1><strong>Expansão Omnichannel</strong></h1>
+      <h2><strong>Expansão Omnichannel</strong></h2>
       <p>A estratégia omnichannel se torna essencial para o varejo online e offline. Os consumidores esperam experiências integradas em todos os canais de venda sem fricção. Isso inclui compras online com retirada na loja, suporte multicanal e acesso unificado ao estoque. Essa abordagem aumenta o engajamento e as taxas de conversão.</p>
-
-      <h1><strong>Atendimento com Chatbots e Assistentes Virtuais</strong></h1>
+      <h2><strong>Atendimento com Chatbots e Assistentes Virtuais</strong></h2>
       <p>A automação do atendimento ao cliente melhora a eficiência e a capacidade de resposta. Chatbots e assistentes virtuais com IA lidam com consultas frequentes, sugerem produtos e concluem transações, exigindo intervenção humana apenas para casos complexos.</p>
     </div>
   </BlogArticle>

@@ -1,32 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Entenda se seus vídeos estão sendo efetivos" description="Saiba como avaliar se seus vídeos de e-commerce estão sendo efetivos: o que funciona, o que melhorar e como criar conexão real com os clientes." canonical="https://widde.io/blog/entenda-se-seus-videos-estao-sendo-efetivos">
-  <BlogArticle client:load title="Entenda se seus vídeos estão sendo efetivos" category="Video Commerce" date="12.05.2025" readingTime="3 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/655cff93abf528f373d104c7_post-5-1.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Entenda se seus vídeos estão sendo efetivos"
+  description="Os vídeos se tornaram fundamentais para as vendas online. Demonstrações de produto de qualidade impulsionam conversões — mas apenas se forem criadas da forma certa."
+  canonical="https://widde.io/blog/entenda-se-seus-videos-estao-sendo-efetivos"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/entenda-se-seus-videos-estao-sendo-efetivos/655cff93abf528f373d104c7_post-5-1.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="Entenda se seus vídeos estão sendo efetivos"
+    category="Video Commerce"
+    date="12.05.2025"
+    readingTime="3 minutos de leitura"
+    coverImage="/assets/blog/entenda-se-seus-videos-estao-sendo-efetivos/655cff93abf528f373d104c7_post-5-1.avif"
+    currentSlug="entenda-se-seus-videos-estao-sendo-efetivos"
+  >
     <div>
       <p>Os vídeos se tornaram fundamentais para as vendas online. Demonstrações de produto de qualidade impulsionam conversões — mas apenas se forem criadas da forma certa. Para varejistas de moda, simplesmente exibir mercadorias ou gravar brevemente com música de fundo é insuficiente. Destacar-se requer criar conteúdo envolvente que capture a atenção e conquiste os clientes.</p>
-
-      <h1><strong>O elemento humano é essencial</strong></h1>
+      <h2><strong>O elemento humano é essencial</strong></h2>
       <p>Imagine-se como cliente pesquisando e comparando opções. A marca deve prender a atenção e conquistar essas pessoas antes que elas fechem a aba. A abordagem recomendada centra-se em vídeos de demonstração com uma pessoa discutindo o produto e demonstrando sua aplicação prática. Pessoas se conectam com pessoas — esse elemento humano constrói conexão emocional, empatia e confiança, motivando decisões de compra mais efetivamente do que conteúdo focado apenas no produto.</p>
-
-      <h1><strong>Exemplos práticos por categoria</strong></h1>
+      <h2><strong>Exemplos práticos por categoria</strong></h2>
       <p><strong>Roupas:</strong> Crie vídeos mostrando looks completos com estilo e movimento, potencialmente incluindo depoimentos de clientes sobre o caimento e a satisfação com o produto.</p>
       <p><strong>Eletrônicos:</strong> Apresente demonstrações especializadas da funcionalidade em vários cenários de uso, com depoimentos de clientes validando a qualidade e a performance do produto.</p>
-
-      <h1><strong>Sinais de que os vídeos não estão funcionando</strong></h1>
-      <p>• Taxa de abandono alta nas páginas com vídeo — o conteúdo não está retendo os espectadores;<br />• Poucos comentários ou interações nos vídeos — falta de conexão emocional;<br />• Taxa de conversão entre espectadores de vídeo similar aos não-espectadores — o vídeo não está influenciando a decisão de compra;<br />• Clientes ainda fazendo as mesmas perguntas ao SAC que poderiam ser respondidas nos vídeos.</p>
-
-      <h1><strong>O que fazer para melhorar</strong></h1>
+      <h2><strong>Sinais de que os vídeos não estão funcionando</strong></h2>
+      <ul>
+        <li>Taxa de abandono alta nas páginas com vídeo — o conteúdo não está retendo os espectadores;</li>
+        <li>Poucos comentários ou interações nos vídeos — falta de conexão emocional;</li>
+        <li>Taxa de conversão entre espectadores de vídeo similar aos não-espectadores — o vídeo não está influenciando a decisão de compra;</li>
+        <li>Clientes ainda fazendo as mesmas perguntas ao SAC que poderiam ser respondidas nos vídeos.</li>
+      </ul>
+      <h2><strong>O que fazer para melhorar</strong></h2>
       <p>Teste diferentes abordagens: mais humanas versus mais técnicas, mais curtas versus mais detalhadas. Analise os comentários para identificar o que os clientes ainda precisam saber. Use os dados da plataforma para comparar a taxa de conversão de espectadores e não-espectadores. Itere com base nos dados reais — os resultados do negócio indicarão a abordagem mais eficaz para o seu contexto específico.</p>
     </div>
   </BlogArticle>

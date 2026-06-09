@@ -416,7 +416,7 @@ export default function CaseArticle({ data }: Props) {
                     placeholder="Buscar cases"
                     value={caseSearch}
                     onChange={(e) => setCaseSearch(e.target.value)}
-                    className="text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full mt-3 mb-2"
+                    className="text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full mt-1 mb-2"
                   />
                   <div className="w-dyn-list">
                     <div
@@ -472,7 +472,7 @@ export default function CaseArticle({ data }: Props) {
                   placeholder="Buscar cases"
                   value={caseSearch}
                   onChange={(e) => setCaseSearch(e.target.value)}
-                  className="text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full mt-3 mb-2"
+                  className="text-sm border border-black/20 rounded-full px-4 py-[7px] outline-none focus:border-black transition-colors bg-transparent w-full mt-1 mb-2"
                 />
                 <div className="w-dyn-list">
                   <div

@@ -1,37 +1,71 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="O que é UGC e como implementar no e-commerce?" description="Entenda o que é UGC (conteúdo gerado pelo usuário) e como implementar no e-commerce para aumentar autenticidade, engajamento, SEO e conversões." canonical="https://widde.io/blog/ugc-e-commerce">
-  <BlogArticle client:load title="O que é UGC e como implementar no e-commerce?" category="Marketing" date="12.05.2025" readingTime="8 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/66a8146ea28bd9c550c8d719_Conte%C3%BAdo%20UGC%20no%20e-commerce.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="O que é UGC e como implementar no e-commerce?"
+  description="UGC é a sigla para &quot;User-Generated Content&quot;, que em português significa &quot;Conteúdo Gerado pelo Usuário&quot;. Esse conteúdo colaborativo — incluindo avaliações, comentários, fotos e vídeos"
+  canonical="https://widde.io/blog/ugc-e-commerce"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/ugc-e-commerce/66a8146ea28bd9c550c8d719_Conte-do-UGC-no-e-commerce.avif"
+  datePublished="2025-05-12"
+>
+  <BlogArticle
+    client:load
+    title="O que é UGC e como implementar no e-commerce?"
+    category="Marketing"
+    date="12.05.2025"
+    readingTime="8 minutos de leitura"
+    coverImage="/assets/blog/ugc-e-commerce/66a8146ea28bd9c550c8d719_Conte-do-UGC-no-e-commerce.avif"
+    currentSlug="ugc-e-commerce"
+  >
     <div>
       <p>UGC é a sigla para "User-Generated Content", que em português significa "Conteúdo Gerado pelo Usuário". Esse conteúdo colaborativo — incluindo avaliações, comentários, fotos e vídeos criados pelos consumidores — proporciona autenticidade e confiança, aumentando a credibilidade da marca, o engajamento e as conversões. As pessoas tendem a confiar mais nas recomendações de outros consumidores do que nas mensagens tradicionais das marcas.</p>
-
-      <h1><strong>Como o UGC funciona</strong></h1>
-      <p>• Avaliações e comentários dos clientes nas plataformas de e-commerce;<br />• Fotos e vídeos compartilhados nas redes sociais;<br />• Hashtags de campanha incentivando conteúdo relacionado à marca;<br />• Concursos e sorteios incentivando a participação.</p>
-
-      <h1><strong>Tipos de conteúdo UGC</strong></h1>
-      <p>• Avaliações e depoimentos de produtos;<br />• Fotos e vídeos de unboxing de clientes;<br />• Hashtags de campanhas e desafios de marca;<br />• Posts de blog e análises detalhadas de produtos;<br />• Stories e lives em tempo real;<br />• Memes criativos e conteúdo de marca.</p>
-
-      <h1><strong>Benefícios do UGC</strong></h1>
-      <p>• <strong>Autenticidade e credibilidade:</strong> As pessoas tendem a confiar mais nas recomendações de outros consumidores;<br />• <strong>Engajamento e conexão:</strong> Clientes valorizados tornam-se defensores da marca;<br />• <strong>Eficiência de recursos:</strong> Conteúdo autêntico contínuo sem grandes orçamentos de produção;<br />• <strong>Melhoria de SEO:</strong> Conteúdo fresco e diversificado melhora a visibilidade nas buscas;<br />• <strong>Prova social:</strong> Demonstra a popularidade e aceitação do produto;<br />• <strong>Insights de mercado:</strong> Revela as preferências e os padrões de uso dos clientes.</p>
-
-      <h1><strong>Estratégias práticas de implementação</strong></h1>
-      <p>• Integrar vídeos UGC nas páginas de produto;<br />• Criar hashtags de campanha de marca;<br />• Repostar o conteúdo dos clientes com a devida atribuição;<br />• Organizar concursos incentivando envios;<br />• Destacar vídeos de depoimentos de forma proeminente;<br />• Incorporar UGC nas campanhas de e-mail marketing;<br />• Usar o conteúdo dos clientes em publicidade paga;<br />• Aproveitar Stories e lives.</p>
-
-      <h1><strong>Como gerar mais UGC</strong></h1>
-      <p>• Incentivar os clientes a compartilhar experiências com os produtos;<br />• Oferecer recompensas e pontos de fidelidade;<br />• Destacar o UGC nas plataformas sociais;<br />• Engajar diretamente com os criadores de conteúdo;<br />• Fazer parcerias com influenciadores alinhados à marca.</p>
-
-      <h1><strong>UGC no e-commerce com a Widde</strong></h1>
+      <h2><strong>Como o UGC funciona</strong></h2>
+      <ul>
+        <li>Avaliações e comentários dos clientes nas plataformas de e-commerce;</li>
+        <li>Fotos e vídeos compartilhados nas redes sociais;</li>
+        <li>Hashtags de campanha incentivando conteúdo relacionado à marca;</li>
+        <li>Concursos e sorteios incentivando a participação.</li>
+      </ul>
+      <h2><strong>Tipos de conteúdo UGC</strong></h2>
+      <ul>
+        <li>Avaliações e depoimentos de produtos;</li>
+        <li>Fotos e vídeos de unboxing de clientes;</li>
+        <li>Hashtags de campanhas e desafios de marca;</li>
+        <li>Posts de blog e análises detalhadas de produtos;</li>
+        <li>Stories e lives em tempo real;</li>
+        <li>Memes criativos e conteúdo de marca.</li>
+      </ul>
+      <h2><strong>Benefícios do UGC</strong></h2>
+      <ul>
+        <li><strong>Autenticidade e credibilidade:</strong> As pessoas tendem a confiar mais nas recomendações de outros consumidores;</li>
+        <li><strong>Engajamento e conexão:</strong> Clientes valorizados tornam-se defensores da marca;</li>
+        <li><strong>Eficiência de recursos:</strong> Conteúdo autêntico contínuo sem grandes orçamentos de produção;</li>
+        <li><strong>Melhoria de SEO:</strong> Conteúdo fresco e diversificado melhora a visibilidade nas buscas;</li>
+        <li><strong>Prova social:</strong> Demonstra a popularidade e aceitação do produto;</li>
+        <li><strong>Insights de mercado:</strong> Revela as preferências e os padrões de uso dos clientes.</li>
+      </ul>
+      <h2><strong>Estratégias práticas de implementação</strong></h2>
+      <ul>
+        <li>Integrar vídeos UGC nas páginas de produto;</li>
+        <li>Criar hashtags de campanha de marca;</li>
+        <li>Repostar o conteúdo dos clientes com a devida atribuição;</li>
+        <li>Organizar concursos incentivando envios;</li>
+        <li>Destacar vídeos de depoimentos de forma proeminente;</li>
+        <li>Incorporar UGC nas campanhas de e-mail marketing;</li>
+        <li>Usar o conteúdo dos clientes em publicidade paga;</li>
+        <li>Aproveitar Stories e lives.</li>
+      </ul>
+      <h2><strong>Como gerar mais UGC</strong></h2>
+      <ul>
+        <li>Incentivar os clientes a compartilhar experiências com os produtos;</li>
+        <li>Oferecer recompensas e pontos de fidelidade;</li>
+        <li>Destacar o UGC nas plataformas sociais;</li>
+        <li>Engajar diretamente com os criadores de conteúdo;</li>
+        <li>Fazer parcerias com influenciadores alinhados à marca.</li>
+      </ul>
+      <h2><strong>UGC no e-commerce com a Widde</strong></h2>
       <p>A Widde permite a integração fácil de vídeos UGC — depoimentos de clientes, conteúdo de influenciadores — diretamente nas páginas de produto do e-commerce, melhorando a experiência do usuário e as taxas de conversão. A plataforma facilita a coleta e moderação de conteúdo gerado pelos usuários, criando uma experiência de compra mais autêntica e confiável.</p>
     </div>
   </BlogArticle>

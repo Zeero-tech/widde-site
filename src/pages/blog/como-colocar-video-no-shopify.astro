@@ -1,37 +1,64 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogArticle from '../../components/pages/BlogArticle'
-import type { RecentPost } from '../../components/pages/BlogArticle'
-
-const recentPosts: RecentPost[] = [
-  { slug: "alta-performance-em-e-commerce-o-que-realmente-funciona-em-qualquer-segmento", title: "Alta performance em e-commerce: o que realmente funciona em qualquer segmento", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69bdb59cfdad17b6dc8d144e_Blog%20artigo%20FG.png" },
-  { slug: "report-video-commerce-brasil-2025", title: "Report Video Commerce Brasil 2025", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69a5dc73c9b53384264daa9a_Capa%20do%20blog%20report.png" },
-  { slug: "checklist-de-preparacao-5-ajustes-no-seu-e-commerce-ganhar-vantagem-competitiva", title: "Checklist de preparação: 5 ajustes no seu e-commerce ganhar vantagem competitiva", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/698b673c48ba63b42f2c37f6_Blog%20Checklist%20copiar.png" },
-  { slug: "como-fidelizar-os-clientes-no-e-commerce", title: "Como fidelizar os clientes no e-commerce", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/69736a5d3653bac3dde3eef9_Blog%20como%20fidelizar%20no%20e-commerce.png" },
-  { slug: "shoppable-videos-a-estrategia-que-vai-invadir-o-video-commerce-em-2026", title: "Shoppable videos: A estratégia que vai invadir o Video Commerce em 2026", image: "https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/696a4136d272a14015d442ea_capa%20shoppable%20videos%202.png" },
-]
 ---
-<BaseLayout title="Como colocar vídeo no Shopify?" description="Adicionar vídeos no Shopify aumenta a confiança do consumidor, reduz dúvidas e diminui as taxas de devolução. Veja o passo a passo com a Widde." canonical="https://widde.io/blog/como-colocar-video-no-shopify">
-  <BlogArticle client:load title="Como colocar vídeo no Shopify?" category="Video Commerce" date="06.01.2025" readingTime="6 minutos de leitura" coverImage="https://cdn.prod.website-files.com/65596f4cd628c3fb6449f35f/677c46504cee25d6d4933403_Como%20adicionar%20v%C3%ADdeos%20na%20shopify.avif" recentPosts={recentPosts}>
+<BaseLayout
+  title="Como colocar vídeo no Shopify?"
+  description="Adicionar vídeos às páginas de produto, categorias ou homepage cria uma experiência de compra mais envolvente e aumenta as conversões."
+  canonical="https://widde.io/blog/como-colocar-video-no-shopify"
+  ogType="article"
+  ogImage="https://widde.io/assets/blog/como-colocar-video-no-shopify/677c46504cee25d6d4933403_Como-adicionar-v-deos-na-shopify.avif"
+  datePublished="2025-01-06"
+>
+  <BlogArticle
+    client:load
+    title="Como colocar vídeo no Shopify?"
+    category="Video Commerce"
+    date="06.01.2025"
+    readingTime="6 minutos de leitura"
+    coverImage="/assets/blog/como-colocar-video-no-shopify/677c46504cee25d6d4933403_Como-adicionar-v-deos-na-shopify.avif"
+    currentSlug="como-colocar-video-no-shopify"
+  >
     <div>
       <p>Adicionar vídeos às páginas de produto, categorias ou homepage cria uma experiência de compra mais envolvente e aumenta as conversões. Os vídeos permitem que os clientes visualizem os produtos em ação, entendam a funcionalidade e obtenham detalhes que imagens ou textos não conseguem transmitir. Essa abordagem aumenta a confiança do consumidor, reduz dúvidas e diminui as taxas de devolução.</p>
 
-      <h1><strong>Passo a passo: adicionando vídeos de produto ao Shopify</strong></h1>
+      <h2><strong>Passo a passo: adicionando vídeos de produto ao Shopify</strong></h2>
       <p>A integração da Widde com o Shopify permite uma integração simples de vídeos sem prejudicar a performance do site:</p>
-      <p>1. Acesse o painel da Widde;<br />2. Clique em "Adicionar vídeos" no Menu ou na seção Páginas;<br />3. Faça upload do vídeo pelo computador ou dispositivo móvel;<br />4. Em "Associações", insira o nome do produto no campo "Onde aparece";<br />5. Clique em "Conectar" quando o item aparecer.</p>
+      <ol>
+        <li>Acesse o painel da Widde;</li>
+        <li>Clique em "Adicionar vídeos" no Menu ou na seção Páginas;</li>
+        <li>Faça upload do vídeo pelo computador ou dispositivo móvel;</li>
+        <li>Em "Associações", insira o nome do produto no campo "Onde aparece";</li>
+        <li>Clique em "Conectar" quando o item aparecer.</li>
+      </ol>
       <p>Para vídeos na homepage, cole o link da página desejada no lugar do nome do produto.</p>
 
-      <h1><strong>Benefícios dos vídeos de produto</strong></h1>
-      <p>• <strong>Visualização:</strong> Os clientes veem os produtos em uso, construindo confiança;<br />• <strong>Retenção:</strong> O conteúdo em vídeo captura e mantém a atenção dos visitantes;<br />• <strong>Menos devoluções:</strong> As demonstrações claras do produto reduzem a insatisfação pós-compra;<br />• <strong>Vantagem competitiva:</strong> Páginas de produto com vídeo distinguem as lojas dos concorrentes.</p>
+      <h2><strong>Benefícios dos vídeos de produto</strong></h2>
+      <ul>
+        <li><strong>Visualização:</strong> Os clientes veem os produtos em uso, construindo confiança;</li>
+        <li><strong>Retenção:</strong> O conteúdo em vídeo captura e mantém a atenção dos visitantes;</li>
+        <li><strong>Menos devoluções:</strong> As demonstrações claras do produto reduzem a insatisfação pós-compra;</li>
+        <li><strong>Vantagem competitiva:</strong> Páginas de produto com vídeo distinguem as lojas dos concorrentes.</li>
+      </ul>
 
-      <h1><strong>Diretrizes para conteúdo de vídeo</strong></h1>
-      <p>• Seja breve e objetivo para capturar atenção imediatamente;<br />• Demonstre os produtos em casos de uso prático;<br />• Inclua CTAs claros incentivando a compra imediata;<br />• Adicione legendas para visualização sem áudio.</p>
+      <h2><strong>Diretrizes para conteúdo de vídeo</strong></h2>
+      <ul>
+        <li>Seja breve e objetivo para capturar atenção imediatamente;</li>
+        <li>Demonstre os produtos em casos de uso prático;</li>
+        <li>Inclua CTAs claros incentivando a compra imediata;</li>
+        <li>Adicione legendas para visualização sem áudio.</li>
+      </ul>
 
-      <h1><strong>Solução de Video Commerce da Widde para o Shopify</strong></h1>
+      <h2><strong>Solução de Video Commerce da Widde para o Shopify</strong></h2>
       <p>A Widde permite a integração de vídeos interativos em qualquer página sem impactar a velocidade do site. Principais funcionalidades:</p>
-      <p>• <strong>Carrinho integrado no vídeo:</strong> Os clientes adicionam produtos enquanto assistem;<br />• <strong>Feed de Vídeos:</strong> Scroll infinito de vídeos da loja no estilo redes sociais;<br />• <strong>Dashboard de análise:</strong> Rastreie interações e otimize o conteúdo;<br />• <strong>Integração fácil:</strong> Configuração e setup simples.</p>
+      <ul>
+        <li><strong>Carrinho integrado no vídeo:</strong> Os clientes adicionam produtos enquanto assistem;</li>
+        <li><strong>Feed de Vídeos:</strong> Scroll infinito de vídeos da loja no estilo redes sociais;</li>
+        <li><strong>Dashboard de análise:</strong> Rastreie interações e otimize o conteúdo;</li>
+        <li><strong>Integração fácil:</strong> Configuração e setup simples.</li>
+      </ul>
 
-      <h1><strong>Tendências do Video Commerce em 2025</strong></h1>
+      <h2><strong>Tendências do Video Commerce em 2025</strong></h2>
       <p>Segundo o E-commerce Trends 2025, "26% dos consumidores ainda têm receio de comprar online". O conteúdo em vídeo gerado por usuários serve cada vez mais como prova social para novos clientes, oferecendo oportunidades autênticas de engajamento para as lojas que incentivam o conteúdo criado pelos clientes.</p>
     </div>
   </BlogArticle>
