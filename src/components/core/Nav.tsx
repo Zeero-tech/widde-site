@@ -575,6 +575,12 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
                   Começar agora
                 </a>
                 <a
+                  href="https://app.widde.io"
+                  className="w-full text-center bg-transparent text-black font-medium text-lg px-5 py-0 h-[38px] flex items-center justify-center no-underline"
+                >
+                  Entrar
+                </a>
+                <a
                   href="#demo2"
                   onClick={(e) => {
                     setMobileOpen(false);
@@ -588,7 +594,16 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
             </div>
           )}
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://app.widde.io"
+              className={cn(
+                "text-base font-medium no-underline transition-opacity hover:opacity-70",
+                isDark ? "text-white" : "text-black",
+              )}
+            >
+              Entrar
+            </a>
             <LetterButton
               href="/quero-comecar"
               className="bg-brand text-white text-lg font-bold px-5 py-[10px] rounded-full"
