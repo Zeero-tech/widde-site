@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",
+    "@astrojs/sitemap": "^3.7.3",
     "@google/genai": "^2.8.0",
     "@mux/mux-player-react": "^3.11.7",
     "@radix-ui/react-dialog": "^1.1.15",

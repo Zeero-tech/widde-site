@@ -1,0 +1,66 @@
+# Widde
+
+> Widde é uma plataforma brasileira de Video Commerce, Live Commerce e Provador IA para e-commerces. Ajuda lojas online a aumentar conversão e reduzir devoluções ao trazer a experiência do varejo físico para o ambiente digital.
+
+## Soluções
+
+- [Video Commerce](https://widde.io/video-commerce): Carrosséis, Destaques, Stories e Explorar — vídeos interativos em todas as páginas do e-commerce.
+- Live Commerce: Transmissão ao vivo dentro do site, com engajamento em tempo real e compra direta.
+- Provador IA: Provador virtual para vestuário e calçados, permitindo o cliente ver o produto no próprio corpo.
+
+## Páginas principais
+
+- [Home](https://widde.io/)
+- [Blog](https://widde.io/blog)
+- [Cases](https://widde.io/cases)
+- [Quem somos](https://widde.io/quem-somos)
+- [Falar com vendas](https://widde.io/contato-vendas)
+
+## Cases de clientes
+
+- [Mamo](https://widde.io/case/mamo) — Marca de moda feminina. Resultados: 18% da receita impactada por vídeos, taxa de conversão 3x maior, taxa de retorno 2x maior, aumento de 148,7% em páginas visitadas por sessão.
+
+- [John John](https://widde.io/case/john-john) — Marca de moda denim (Grupo Veste S/A, VTEX). Resultados: 3x mais conversão, 40% de aumento no ticket médio, 4x mais engajamento, 2x mais novos compradores. Teste A/B mostrou 47% a mais de conversão com Video Commerce na home.
+
+- [Majeste](https://widde.io/case/majeste) — Marca de moda festa com 5 lojas físicas. Taxa de devolução era 25%. Resultados: 20% da receita impactada, 4x mais conversão, tempo de retenção de 3min18s subiu para 11min36s com vídeos.
+
+- [Maximum Boxing](https://widde.io/case/maximum-boxing) — E-commerce de equipamentos de boxe e esporte. Resultados: 20% da receita impactada, tempo de retenção aumentou de 4min39s para 8min04s, 9% dos usuários retornam ao site após assistir vídeos. Reduziu demandas ao SAC.
+
+- [PA Concept](https://widde.io/case/pa-concept) — Marca de moda feminina com 50 anos de mercado (VTEX). Resultados em 3 meses: 28% da receita impactada, taxa de conversão mais que dobrou, ticket médio aumentou 16,67%, retenção de 3min48s subiu para 8min12s.
+
+- [Alanis](https://widde.io/case/alanis) — Marca de moda plus size (tamanhos acima do 44). Resultados no 2º mês de uso: 11% da receita impactada, ticket médio aumentou 25,9%, retenção subiu de 3min08s para 8min12s. Impacto nas vendas de tamanhos G, GG e XG com reposição diária.
+
+- [Shop Emme](https://widde.io/case/shop-emme) — Marca de moda feminina com faturamento mensal em 6 dígitos. Resultados na Black Friday: R$ 1.072.854,35 de receita impactada pelos vídeos, taxa de conversão de 4,42%, retenção de 8min40s.
+
+- [LV Store](https://widde.io/case/lv-store) — Loja de moda feminina fundada em 2015 com R$500, hoje com R$10MM de faturamento anual. Resultados na primeira semana: conversão 2,5x maior, retenção no site aumentou 300% (de 2 para 8 minutos).
+
+## Blog — tópicos principais
+
+Video Commerce, Live Commerce, estratégias de e-commerce, SEO para e-commerce, Black Friday, conversão, retenção de clientes, UGC, influenciadores, produção de vídeos para loja virtual.
+
+- [Blog completo](https://widde.io/blog)
+
+## Marcas que usam a Widde
+
+Grupo Hope (Moda Íntima, VTEX), Charth (Moda Feminina, VTEX), Boca Rosa (Beleza, Shopify), Bagaggio (Malas e Acessórios, VTEX), Dermage (Skincare, VTEX), Speedo (Natação e Esporte, VTEX), Liz Lingerie (Moda Íntima e Praia, VTEX), Lola Cosmetics (Cosméticos Capilares, Linx Commerce), Brooksfield (Moda Masculina, Linx Commerce), Sallve (Skincare, Shopify), Cléa Store (Moda Feminina, Vnda), Mascavo (Beleza e Maquiagem, VTEX), John John (Moda Denim, VTEX), Estrela (Brinquedos, VTEX), Elements (Móveis, Shopify).
+
+## Integrações
+
+VTEX, Shopify, Nuvemshop, WooCommerce, Magento, Tray, Bagy, Wake, Loja Integrada.
+
+## Founders
+
+### Raísa Bresolin, Co-Fundadora
+- Fundou a Widde em 2021
+- LinkedIn: https://www.linkedin.com/in/raisabresolin/
+
+### Pedro Ferreira, Co-Fundador
+- Fundou a Widde em 2021
+- LinkedIn: https://www.linkedin.com/in/pedrovaferreira/
+
+## Contato
+
+- Site: https://widde.io
+- Instagram: https://www.instagram.com/widde.io
+- LinkedIn: https://www.linkedin.com/company/widde
+- YouTube: https://www.youtube.com/@widde
