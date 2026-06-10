@@ -15,7 +15,7 @@ function pathToUrl(path: string): string | null {
   return path
     .replace(/^\.\//, '/')
     .replace(/\/index\.astro$/, '/')
-    .replace(/\.astro$/, '/')
+    .replace(/\.astro$/, '')
 }
 
 function urlToFilePath(url: string): string {
@@ -28,10 +28,25 @@ function normalizeUrl(url: string): string {
   return url.replace(/\/$/, '').replace(/^https?:\/\/[^/]+/, '')
 }
 
+function youtubeEmbedUrl(url: string): string {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([A-Za-z0-9_-]+)/)
+  return match ? `https://www.youtube.com/embed/${match[1]}` : url
+}
+
+function absoluteImageUrl(src: string): string {
+  if (src.startsWith('http')) return src
+  return `${site}${src}`
+}
+
 interface PageMeta {
   noindex: boolean
   canonicalIsExternal: boolean
   datePublished: string | null
+  ogImage: string | null
+  ogTitle: string | null
+  ogDescription: string | null
+  youtubeUrl: string | null
+  heroImage: string | null
 }
 
 function getPageMeta(filePath: string, pageUrl: string): PageMeta {
@@ -40,6 +55,11 @@ function getPageMeta(filePath: string, pageUrl: string): PageMeta {
     const noindex = /noindex=\{true\}/.test(content)
     const canonicalMatch = content.match(/canonical="([^"]+)"/)
     const dateMatch = content.match(/datePublished="(\d{4}-\d{2}-\d{2})"/)
+    const ogImageMatch = content.match(/ogImage="([^"]+)"/)
+    const titleMatch = content.match(/title="([^"]+)"/)
+    const descMatch = content.match(/description="([^"]+)"/)
+    const youtubeMatch = content.match(/youtubeUrl:\s*["']([^"']+)["']/)
+    const heroImageMatch = content.match(/heroImage:\s*["']([^"']+)["']/)
 
     let canonicalIsExternal = false
     if (canonicalMatch) {
@@ -52,9 +72,14 @@ function getPageMeta(filePath: string, pageUrl: string): PageMeta {
       noindex,
       canonicalIsExternal,
       datePublished: dateMatch?.[1] ?? null,
+      ogImage: ogImageMatch?.[1] ?? null,
+      ogTitle: titleMatch?.[1] ?? null,
+      ogDescription: descMatch?.[1] ?? null,
+      youtubeUrl: youtubeMatch?.[1] ?? null,
+      heroImage: heroImageMatch?.[1] ?? null,
     }
   } catch {
-    return { noindex: false, canonicalIsExternal: false, datePublished: null }
+    return { noindex: false, canonicalIsExternal: false, datePublished: null, ogImage: null, ogTitle: null, ogDescription: null, youtubeUrl: null, heroImage: null }
   }
 }
 
@@ -71,7 +96,7 @@ function getGitLastMod(filePath: string): string {
 }
 
 export const GET: APIRoute = async () => {
-  const urls = Object.keys(pages)
+  const entries = Object.keys(pages)
     .map(pathToUrl)
     .filter((url): url is string => url !== null)
     .sort()
@@ -87,13 +112,36 @@ export const GET: APIRoute = async () => {
         ? (meta.datePublished ?? getGitLastMod(filePath))
         : getGitLastMod(filePath)
 
-      return [`  <url><loc>${fullUrl}</loc><lastmod>${lastmod}</lastmod></url>`]
+      const imageTags = meta.ogImage
+        ? `\n    <image:image><image:loc>${absoluteImageUrl(meta.ogImage)}</image:loc></image:image>`
+        : ''
+
+      let videoTag = ''
+      if (meta.youtubeUrl) {
+        const thumbnail = meta.heroImage
+          ? absoluteImageUrl(meta.heroImage)
+          : (meta.ogImage ? absoluteImageUrl(meta.ogImage) : '')
+        const title = (meta.ogTitle ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        const desc = (meta.ogDescription ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        videoTag = `
+    <video:video>
+      <video:thumbnail_loc>${thumbnail}</video:thumbnail_loc>
+      <video:title>${title}</video:title>
+      <video:description>${desc}</video:description>
+      <video:player_loc>${youtubeEmbedUrl(meta.youtubeUrl)}</video:player_loc>
+    </video:video>`
+      }
+
+      return [`  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>${imageTags}${videoTag}\n  </url>`]
     })
     .join('\n')
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+${entries}
 </urlset>`
 
   return new Response(xml, {

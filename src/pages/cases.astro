@@ -1,15 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import CasesPage from '../components/pages/CasesPage'
+import { cases } from '../data/cases'
 ---
 
 <BaseLayout
   title="Cases de Sucesso | Widde"
-  description="Veja como tem sido os resultados de quem usa as soluções de Video Commerce da Widde."
+  description="John John, Mamô, PA Concept e mais: veja métricas reais de Video Commerce no e-commerce brasileiro. Retenção, conversão e crescimento com vídeo."
   canonical="https://widde.io/cases"
   ogTitle="Cases de Sucesso | Widde"
-  ogDescription="Veja como tem sido os resultados de quem usa as soluções de Video Commerce da Widde."
+  ogDescription="John John, Mamô, PA Concept e mais: veja métricas reais de Video Commerce no e-commerce brasileiro. Retenção, conversão e crescimento com vídeo."
   ogUrl="https://widde.io/cases"
 >
+  <nav aria-label="Cases de sucesso" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+    {cases.map(c => <a href={c.link}>{c.title}</a>)}
+  </nav>
   <CasesPage client:load />
 </BaseLayout>

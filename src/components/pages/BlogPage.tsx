@@ -1243,10 +1243,17 @@ export default function BlogPage() {
             <h1
               data-reveal
               className="font-normal text-black text-center leading-[1.15]"
-              style={{ fontSize: "3rem", marginBottom: "24px" }}
+              style={{ fontSize: "3rem", marginBottom: "12px" }}
             >
-              Nosso Blog
+              Blog de Video Commerce
             </h1>
+            <h2
+              data-reveal
+              className="font-normal text-center text-[#888] mb-8"
+              style={{ fontSize: "1.05rem" }}
+            >
+              Dicas, tendências e estratégias de Video Commerce, Live Commerce e e-commerce para vender mais.
+            </h2>
 
             {/* Featured post card — two halves, no gap */}
             <a

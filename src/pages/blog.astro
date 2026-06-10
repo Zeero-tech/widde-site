@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPage from '../components/pages/BlogPage'
+import { allBlogPosts } from '../data/blogPosts'
 ---
 
 <BaseLayout
@@ -8,5 +9,8 @@ import BlogPage from '../components/pages/BlogPage'
   description="Artigos com insights, dicas e tendências sobre e-commerce para ajudar você a vender mais e se destacar nesse mercado."
   canonical="https://widde.io/blog"
 >
+  <nav aria-label="Posts do blog" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+    {allBlogPosts.map(p => <a href={`/blog/${p.slug}`}>{p.title}</a>)}
+  </nav>
   <BlogPage client:load />
 </BaseLayout>

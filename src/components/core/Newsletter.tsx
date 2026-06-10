@@ -48,17 +48,20 @@ export default function Newsletter() {
       new window.RDStationForms(containerId, "null").createForm();
     };
 
-    // Script loaded in index.html — may already be ready or still loading
     // @ts-ignore
     if (typeof window.RDStationForms === "function") {
       tryInit();
     } else {
-      const script = document.querySelector(
+      let script = document.querySelector<HTMLScriptElement>(
         `script[src*="rdstation-forms"]`
       );
-      if (script) {
-        script.addEventListener("load", tryInit, { once: true });
+      if (!script) {
+        script = document.createElement("script");
+        script.src = "https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js";
+        script.defer = true;
+        document.body.appendChild(script);
       }
+      script.addEventListener("load", tryInit, { once: true });
     }
   }, []);
 
