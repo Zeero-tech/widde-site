@@ -27,7 +27,7 @@ export default function CasesHero() {
               className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.08] blur-sm scale-[1.05]"
               style={{
                 backgroundImage:
-                  "url('/assets/components/cases/695d2d0b1016c8df8923096d_capa-youtube-1.png')",
+                  "url('/assets/cases/mamo/695d2d0b1016c8df8923096d_capa-youtube-1.png')",
                 backgroundPosition: "50% 50%",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -37,7 +37,7 @@ export default function CasesHero() {
             <div className="absolute inset-0 flex items-center justify-center p-8 z-[2]">
               <img
                 loading="lazy"
-                src="/assets/components/cases/695d2d0b1016c8df8923096d_capa-youtube-1.png"
+                src="/assets/cases/mamo/695d2d0b1016c8df8923096d_capa-youtube-1.png"
                 alt="Construindo narrativas com Video Commerce"
                 className="aspect-video object-cover object-center rounded-2xl w-full relative"
               />
