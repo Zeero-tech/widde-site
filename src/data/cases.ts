@@ -3,7 +3,7 @@ import type { CasePost } from "@/types";
 export const cases: CasePost[] = [
   {
     bg: "",
-    image: "/assets/cases/mamo/695d2d0b1016c8df8923096d_capa-youtube-1.png",
+    image: "/assets/cases/mamo/695d2d0b1016c8df8923096d_capa-youtube-1.webp",
     category: "Construindo narrativas com Video Commerce",
     title: "Mamo: Construindo narrativas",
     desc: "O que mais me surpreendeu foi a quantidade de visualizacao. Eu nao esperava que as clientes fossem gostar tanto assim dos videos, as visualizacoes foram muito boas.",
@@ -11,7 +11,7 @@ export const cases: CasePost[] = [
   },
   {
     bg: "",
-    image: "/assets/cases/john-john/68c2cc161322055b66b7b9b9_Capa-John-John.png",
+    image: "/assets/cases/john-john/68c2cc161322055b66b7b9b9_Capa-John-John.webp",
     category: "Agregando valor ao produto com o Video Commerce",
     title: "John John: Agregando valor ao produto",
     desc: "Com a Widde nos recebemos os comentarios dos clientes e usuarios do site. A partir deles a gente foi formatando o nosso tipo de conteudo que trazia mais engajamento.",

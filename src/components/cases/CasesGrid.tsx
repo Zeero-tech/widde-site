@@ -13,7 +13,7 @@ const cases: Case[] = [
     title: "Agregando valor ao produto com o Video Commerce",
     href: "/case/john-john",
     image:
-      "/assets/cases/john-john/68c2cc161322055b66b7b9b9_Capa-John-John.png",
+      "/assets/cases/john-john/68c2cc161322055b66b7b9b9_Capa-John-John.webp",
   },
   {
     client: "Majesté",
@@ -27,7 +27,7 @@ const cases: Case[] = [
     title: "Mais vendas, menos demanda para o SAC",
     href: "/case/maximum-boxing",
     image:
-      "/assets/cases/maximum-boxing/689de10eed3215b5ef778578_Maximum-Boxing-capa-case.png",
+      "/assets/cases/maximum-boxing/689de10eed3215b5ef778578_Maximum-Boxing-capa-case.webp",
   },
   {
     client: "PA Concept",

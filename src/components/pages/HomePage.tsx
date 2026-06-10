@@ -62,7 +62,7 @@ export default function HomePage() {
         </Suspense>
       </main>
       <Suspense>
-        <div data-reveal className="pb-15 md:pb-30">
+        <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
           <DemoSection />
         </div>
       </Suspense>
