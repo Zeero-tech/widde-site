@@ -56,7 +56,7 @@ export default function HomePage() {
       </Suspense>
       <main className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <Suspense>
-          <div data-reveal className="pb-15 md:pb-30">
+          <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
             <Solutions />
           </div>
         </Suspense>
@@ -68,27 +68,27 @@ export default function HomePage() {
       </Suspense>
       <div className="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-12 xl:px-6">
         <Suspense>
-          <div data-reveal className="pb-15 md:pb-30">
+          <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
             <Problem />
           </div>
         </Suspense>
         <Suspense>
-          <div data-reveal className="pb-15 md:pb-30">
+          <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
             <CasesCarousel />
           </div>
         </Suspense>
         <Suspense>
-          <div data-reveal className="pb-15 md:pb-30">
+          <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
             <Integrations />
           </div>
         </Suspense>
         <Suspense>
-          <div data-reveal className="pb-15 md:pb-30">
+          <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
             <Plans />
           </div>
         </Suspense>
         <Suspense>
-          <div data-reveal className="pb-15 md:pb-30">
+          <div data-reveal suppressHydrationWarning className="pb-15 md:pb-30">
             <Blog />
           </div>
         </Suspense>

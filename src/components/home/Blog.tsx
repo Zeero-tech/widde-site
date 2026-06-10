@@ -91,12 +91,9 @@ export default function Blog() {
               <p className="text-base md:text-lg text-text-muted leading-[1.5]">
                 {post.desc}
               </p>
-              <a
-                href={post.link}
-                className="font-bold text-navy no-underline hover:underline mt-auto pt-3"
-              >
+              <span className="font-bold text-navy mt-auto pt-3">
                 Saiba mais →
-              </a>
+              </span>
             </div>
           </a>
         ))}
@@ -147,12 +144,9 @@ export default function Blog() {
             <p className="text-sm md:text-base lg:text-lg text-text-muted leading-[1.5] px-4 pt-1">
               {post.desc}
             </p>
-            <a
-              href={post.link}
-              className="text-base md:text-base lg:text-lg font-bold text-navy no-underline hover:underline px-4 py-4 self-end"
-            >
+            <span className="text-base md:text-base lg:text-lg font-bold text-navy px-4 py-4 self-end">
               Saiba mais →
-            </a>
+            </span>
           </a>
         ))}
       </div>

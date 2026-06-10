@@ -3,9 +3,10 @@ import CountUp from "@/components/core/CountUp";
 import SolutionArticle from "@/components/pages/SolutionArticle";
 import SectionTitle from "@/components/core/SectionTitle";
 import { useInViewVideo } from "@/hooks/useInViewVideo";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function Solutions() {
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const isMobile = useIsMobile();
   const carouselRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
 

@@ -240,6 +240,39 @@ function ShowcaseInner() {
   );
 }
 
+function LazySectionMount({ children, minHeight }: { children: ReactNode; minHeight: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMounted(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "500px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} style={mounted ? undefined : { minHeight }}>
+      {mounted && children}
+    </div>
+  );
+}
+
 export default function Showcase() {
-  return <ErrorBoundary><ShowcaseInner /></ErrorBoundary>;
+  return (
+    <ErrorBoundary>
+      <LazySectionMount minHeight={460}>
+        <ShowcaseInner />
+      </LazySectionMount>
+    </ErrorBoundary>
+  );
 }

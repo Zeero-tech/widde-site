@@ -197,6 +197,7 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(isDarkProp ?? false);
+  const navLogoRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     if (isDarkProp !== undefined) return;
@@ -218,8 +219,10 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
     const alreadyAnimated = sessionStorage.getItem("logo-animated");
     if (alreadyAnimated) return;
     sessionStorage.setItem("logo-animated", "1");
-    gsap.set(".logo-path", { y: 50 });
-    gsap.to(".logo-path", {
+    const paths = navLogoRef.current?.querySelectorAll(".logo-path");
+    if (!paths?.length) return;
+    gsap.set(paths, { y: 50 });
+    gsap.to(paths, {
       y: 0,
       stagger: 0.07,
       delay: 0.2,
@@ -298,6 +301,7 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
             }}
           >
             <span
+              ref={navLogoRef}
               className="block overflow-hidden"
               style={{ paddingBottom: 7 }}
             >
