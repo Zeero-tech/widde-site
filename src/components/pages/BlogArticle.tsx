@@ -108,6 +108,26 @@ export default function BlogArticle({
                 style={{ objectFit: "contain", height: "auto" }}
               />
               <div className="blog-richtext">{children}</div>
+
+              {/* In-article CTA */}
+              <div className="mt-12 rounded-2xl bg-black p-8 md:p-10 text-center">
+                <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-3">Widde</p>
+                <h3
+                  className="text-white font-normal text-xl md:text-2xl leading-snug mb-3"
+                  style={{ letterSpacing: "-0.02em" }}
+                >
+                  Quer esses resultados na sua loja?
+                </h3>
+                <p className="text-white/70 text-sm md:text-base mb-6 leading-relaxed">
+                  Milhares de e-commerces brasileiros já vendem mais com Video Commerce, Live Commerce e Provador IA.
+                </p>
+                <a
+                  href="/contato-vendas"
+                  className="inline-block bg-white text-black font-bold text-sm md:text-base px-6 py-3 rounded-full no-underline hover:bg-white/90 transition-colors"
+                >
+                  Falar com vendas
+                </a>
+              </div>
             </article>
 
             {/* Aside */}
