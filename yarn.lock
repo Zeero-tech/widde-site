@@ -689,6 +689,18 @@
   resolved "https://registry.npmjs.org/@oslojs/encoding/-/encoding-1.1.0.tgz"
   integrity sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==
 
+"@posthog/core@1.30.14":
+  version "1.30.14"
+  resolved "https://registry.yarnpkg.com/@posthog/core/-/core-1.30.14.tgz#ade8a93a0539cb36e1c5293acadfe1ecf8f7fd52"
+  integrity sha512-cC0che/17kP6qMIMgdmxsoz3h8Jar8knQfDM8WqQwVacSeWXkrwkemoV7S5tCGmgTuRTTsdigirs9HiBXHQ/dA==
+  dependencies:
+    "@posthog/types" "1.383.3"
+
+"@posthog/types@1.383.3":
+  version "1.383.3"
+  resolved "https://registry.yarnpkg.com/@posthog/types/-/types-1.383.3.tgz#d451a3ae9223ec06834d5024f32ef9fa6da4576f"
+  integrity sha512-N4jtmLaJxzjQ/C0UHnF0igQPSwUqwScPDv9ePGjKCfDomIEUcO3+c6pBrjTp7woxuMQ49BmyM/pV4/SOBPpe0Q==
+
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@protobufjs/aspromise/-/aspromise-1.1.2.tgz#9b8b0cc663d669a7d8f6f5d0893a14d348f30fbf"
@@ -1407,6 +1419,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/trusted-types@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"
+  integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
+
 "@types/unist@*", "@types/unist@^3.0.0":
   version "3.0.3"
   resolved "https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz"
@@ -1662,6 +1679,11 @@ cookie@^1.1.1:
   resolved "https://registry.npmjs.org/cookie/-/cookie-1.1.1.tgz"
   integrity sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==
 
+core-js@^3.38.1:
+  version "3.49.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.49.0.tgz#8b4d520ac034311fa21aa616f017ada0e0dbbddd"
+  integrity sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==
+
 crossws@^0.3.5:
   version "0.3.5"
   resolved "https://registry.npmjs.org/crossws/-/crossws-0.3.5.tgz"
@@ -1800,6 +1822,13 @@ domhandler@^5.0.2, domhandler@^5.0.3:
   dependencies:
     domelementtype "^2.3.0"
 
+dompurify@^3.3.2:
+  version "3.4.8"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-3.4.8.tgz#6c54f8c207160e7f83fcb7f4fd05a82ac36b1cdc"
+  integrity sha512-yb1cEmaOum7wFvOCSQxyfgVlv5D47Rc30iZWoMpbDIWTnJ6grDDQyu2KFJzB2k7u0pMuJcQ1zphH//fFnw2tjQ==
+  optionalDependencies:
+    "@types/trusted-types" "^2.0.7"
+
 domutils@^3.0.1:
   version "3.2.2"
   resolved "https://registry.npmjs.org/domutils/-/domutils-3.2.2.tgz"
@@ -1937,6 +1966,11 @@ fetch-blob@^3.1.2, fetch-blob@^3.1.4:
   dependencies:
     node-domexception "^1.0.0"
     web-streams-polyfill "^3.0.3"
+
+fflate@^0.4.8:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/fflate/-/fflate-0.4.8.tgz#f90b82aefbd8ac174213abb338bd7ef848f0f5ae"
+  integrity sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==
 
 flattie@^1.1.1:
   version "1.1.1"
@@ -3087,6 +3121,25 @@ postcss@^8.5.6:
     picocolors "^1.1.1"
     source-map-js "^1.2.1"
 
+posthog-js@^1.383.3:
+  version "1.383.3"
+  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.383.3.tgz#0a35ed489e3d33446a011aa19051b9242a123206"
+  integrity sha512-caH+lSELdgqaS2uxmBiJT22/cr3epuMKSqBsO8QYQgORehokwdWB/Q4LIh3Dgyjy26B2yhprcAAqmuKMf4s3Nw==
+  dependencies:
+    "@posthog/core" "1.30.14"
+    "@posthog/types" "1.383.3"
+    core-js "^3.38.1"
+    dompurify "^3.3.2"
+    fflate "^0.4.8"
+    preact "^10.28.2"
+    query-selector-shadow-dom "^1.0.1"
+    web-vitals "^5.1.0"
+
+preact@^10.28.2:
+  version "10.29.2"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.29.2.tgz#3e6069c471718b8d124d1cd67565114532e88d70"
+  integrity sha512-7tNmwg/7mzzAoB/8kSg6Hl37JraAZw3Z3A0JSY7VXlZwo82Xn0G7wKbNNs2qoF4ZEEsQGTwDAroNdqKs1ofJxQ==
+
 prismjs@^1.30.0:
   version "1.30.0"
   resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.30.0.tgz"
@@ -3123,6 +3176,11 @@ protobufjs@^7.5.4:
     "@protobufjs/utf8" "^1.1.1"
     "@types/node" ">=13.7.0"
     long "^5.3.2"
+
+query-selector-shadow-dom@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/query-selector-shadow-dom/-/query-selector-shadow-dom-1.0.1.tgz#1c7b0058eff4881ac44f45d8f84ede32e9a2f349"
+  integrity sha512-lT5yCqEBgfoMYpf3F2xQRK7zEr1rhIIZuceDK6+xRkJQ4NMbHTwXqk4NkwDwQMNqXgG9r9fyHnzwNVs6zV5KRw==
 
 radix3@^1.1.2:
   version "1.1.2"
@@ -3776,6 +3834,11 @@ web-streams-polyfill@^3.0.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz#2073b91a2fdb1fbfbd401e7de0ac9f8214cecb4b"
   integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
+
+web-vitals@^5.1.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-5.3.0.tgz#a67f57f229fdf68be99eb99d3725946def284ff3"
+  integrity sha512-q6LWsLatGYZp5VGBIOvbTj6JBV2nOmC8KvWztXBmwJcfFAzhwKwbOxhUH306XY3CcaZDUlSmSuNPBsCn0bFu+g==
 
 which-pm-runs@^1.1.0:
   version "1.1.0"

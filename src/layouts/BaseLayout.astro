@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import { ClientRouter } from 'astro:transitions'
+import PostHog from '../components/posthog.astro'
 
 interface Props {
   title: string
@@ -119,6 +120,7 @@ const breadcrumbSchema = breadcrumbs ? {
   <link rel="apple-touch-icon" href="/assets/ico.png" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <ClientRouter />
+  <PostHog />
   <script is:inline>
     document.addEventListener('astro:after-swap', () => {
       const lenis = window.__lenis;
