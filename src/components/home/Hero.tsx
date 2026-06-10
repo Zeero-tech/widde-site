@@ -9,7 +9,7 @@ export default function Hero() {
   const videoInnerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
     tl.fromTo(
       contentRef.current,
       { x: -160, opacity: 0 },

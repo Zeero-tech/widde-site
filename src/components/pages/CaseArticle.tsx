@@ -60,6 +60,23 @@ interface Props {
   data: CaseArticleData;
 }
 
+function MediaAsset({ src, className }: { src: string; className?: string }) {
+  if (/\.(webm|mp4|gif)$/i.test(src)) {
+    return (
+      <video
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={className}
+        style={{ display: "block", width: "100%" }}
+      />
+    );
+  }
+  return <img src={src} loading="lazy" alt="" className={className} />;
+}
+
 function splitToSpans(text: string) {
   return Array.from(text).map((char, i) => (
     <span
@@ -236,12 +253,7 @@ export default function CaseArticle({ data }: Props) {
             <div className="px-5 md:px-10 lg:px-12 xl:px-6 max-w-screen-xl mx-auto">
               <div className="case_grid">
                 <div className="case_side-image-wrapper">
-                  <img
-                    src={data.desafioGif}
-                    loading="lazy"
-                    alt=""
-                    className="case_side-image"
-                  />
+                  <MediaAsset src={data.desafioGif} className="case_side-image" />
                 </div>
                 <div
                   className="richt-text_cases w-richtext"
@@ -277,12 +289,7 @@ export default function CaseArticle({ data }: Props) {
               <div className="case_grid is-reverse">
                 <div className="case_side-image-wrapper">
                   {data.resultadosGif && (
-                    <img
-                      src={data.resultadosGif}
-                      loading="lazy"
-                      alt=""
-                      className="case_side-image"
-                    />
+                    <MediaAsset src={data.resultadosGif} className="case_side-image" />
                   )}
                 </div>
                 <div>

@@ -242,7 +242,7 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
       return;
     }
     if (window.location.pathname !== "/") {
-      window.location.href = `/?scrollTo=${elementId.replace("#", "")}`;
+      window.location.href = `/${elementId}`;
     } else {
       getLenis().scrollTo(elementId, {
         duration: 3,
@@ -264,7 +264,7 @@ export default function Nav({ isDark: isDarkProp }: { isDark?: boolean } = {}) {
     e.preventDefault();
     setMobileOpen(false);
     if (window.location.pathname !== "/") {
-      window.location.href = `/?scrollTo=${href.replace("#", "")}`;
+      window.location.href = `/${href}`;
       return;
     }
     getLenis().scrollTo(href, {

@@ -23,7 +23,7 @@ export default function VCHero() {
 
   function handleViewPlans(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
-    window.location.href = "/?scrollTo=planos";
+    window.location.href = "/#planos";
   }
 
   const features = [

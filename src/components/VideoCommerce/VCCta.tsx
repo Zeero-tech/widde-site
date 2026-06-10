@@ -25,7 +25,7 @@ export default function VCCta() {
         easing: easeOutQuint,
       });
     } else {
-      window.location.href = "/?scrollTo=demo2";
+      window.location.href = "/#demo2";
     }
   }
 

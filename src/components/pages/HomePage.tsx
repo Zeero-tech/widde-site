@@ -29,18 +29,15 @@ export default function HomePage() {
   useRevealOnScroll();
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const scrollTo = params.get("scrollTo");
-    if (!scrollTo) return;
+    const hash = window.location.hash;
+    if (!hash) return;
     const timer = setTimeout(() => {
-      getLenis().scrollTo(`#${scrollTo}`, {
+      getLenis().scrollTo(hash, {
         duration: 3.5,
         offset: -70,
         easing: easeOutQuint,
       });
-      const url = new URL(window.location.href);
-      url.searchParams.delete("scrollTo");
-      window.history.replaceState({}, "", url.toString());
+      window.history.replaceState({}, "", window.location.pathname);
     }, 300);
     return () => clearTimeout(timer);
   }, []);

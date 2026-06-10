@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { ClientRouter } from 'astro:transitions'
 
 interface Props {
   title: string
@@ -87,6 +88,17 @@ const blogPostingSchema = resolvedOgType === 'article' ? {
   <link rel="icon" href="/assets/ico.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/ico.png" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <ClientRouter />
+  <script is:inline>
+    document.addEventListener('astro:after-swap', () => {
+      const lenis = window.__lenis;
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo(0, 0);
+      }
+    });
+  </script>
 
   <script type="application/ld+json">
   {

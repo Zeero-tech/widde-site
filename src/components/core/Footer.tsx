@@ -66,7 +66,7 @@ export default function Footer() {
         easing: easeOutQuint,
       });
     } else {
-      window.location.href = `/?scrollTo=${link.scrollTo}`;
+      window.location.href = `/#${link.scrollTo}`;
     }
   }
 

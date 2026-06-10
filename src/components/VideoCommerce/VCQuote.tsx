@@ -36,10 +36,10 @@ export default function VCQuote() {
           Coordenadora de E-commerce no Grupo Elian
         </div>
         <AnimatedButton
-          href="/?scrollTo=demo2"
+          href="/#demo2"
           onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
             e.preventDefault();
-            window.location.href = "/?scrollTo=demo2";
+            window.location.href = "/#demo2";
           }}
           className="inline-block w-full md:w-auto text-center bg-brand text-white font-bold text-base md:text-base lg:text-lg px-6 py-3 rounded-full no-underline hover:opacity-90 transition-opacity"
         >
