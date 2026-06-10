@@ -1,13 +1,12 @@
 import { defineConfig } from 'astro/config'
 import react from '@astrojs/react'
-import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
   site: 'https://widde.io',
   output: 'static',
-  integrations: [react(), sitemap()],
+  integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
     resolve: {
